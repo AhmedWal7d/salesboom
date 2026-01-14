@@ -1,0 +1,1686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    
+    <!-- Primary Meta Tags -->
+    <title>AI Agents That Work: Governed AI CRM by Salesboom</title>
+    <meta name="description" content="Deploy AI Agents safely with Salesboom's Promptuit Ecosystem. Governed, auditable, and revenue-driving AI integrated into your CRM workflows. See it live.">
+    <meta name="keywords" content="AI Agents for business, Governed AI CRM, Promptuit ecosystem, AI Agent management, Auditable AI systems, Revenue-driving AI, Enterprise AI governance, Prompt-to-Revenue platform">
+    <link rel="canonical" href="https://www.salesboom.com/ai-agents-promptuit-ecosystem.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.salesboom.com/ai-agents-promptuit-ecosystem.html">
+    <meta property="og:title" content="AI Agents That Work: Governed AI CRM by Salesboom">
+    <meta property="og:description" content="Deploy AI Agents safely with Salesboom's Promptuit Ecosystem. Governed, auditable, and revenue-driving AI integrated into your CRM workflows. See it live.">
+    <meta property="og:image" content="https://www.salesboom.com/img/ai-agents-promptuit-ecosystem-og.jpg">
+    <meta property="og:site_name" content="Salesboom CRM">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.salesboom.com/ai-agents-promptuit-ecosystem.html">
+    <meta name="twitter:title" content="AI Agents That Work: Governed AI CRM by Salesboom">
+    <meta name="twitter:description" content="Deploy AI Agents safely with Salesboom's Promptuit Ecosystem. Governed, auditable, and revenue-driving AI integrated into your CRM workflows. See it live.">
+    <meta name="twitter:image" content="https://www.salesboom.com/img/ai-agents-promptuit-ecosystem-og.jpg">
+    <meta name="twitter:site" content="@SalesboomCloud">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Salesboom Promptuit Ecosystem",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web-based, Cloud",
+      "offers": {
+        "@type": "Offer",
+        "price": "14.00",
+        "priceCurrency": "USD",
+        "priceValidUntil": "2026-12-31"
+      },
+      "featureList": [
+        "Triple-audit architecture for complete AI transparency",
+        "Real-time contextual intelligence from CRM data",
+        "Governed AI Agents with human-in-the-loop workflows",
+        "Prompting-as-a-Service expert management",
+        "Live demonstration capabilities with real workflows",
+        "Model-agnostic design supporting GPT-4, Claude, and Gemini"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.5",
+        "ratingCount": "3500"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Salesboom",
+        "url": "https://www.salesboom.com",
+        "logo": "https://www.salesboom.com/img/salesboom-logo-252x67.png",
+        "foundingDate": "2003",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+1-855-229-2043",
+          "contactType": "Customer Service"
+        }
+      }
+    }
+    </script>
+    
+    <link rel="shortcut icon" href="https://www.salesboom.com/favicon.ico">
+    
+    <link rel="stylesheet" href="content/css/bootstrap.min.css">
+    <link rel="stylesheet" href="content/css/salesboom-common.css">
+    <link rel="shortcut icon" href="content/image/salesboom-logo-252x67.png" type="image/x-icon"> 
+    
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #002f6c;
+            --secondary-color: #0052b4;
+            --accent-color: #00a8e8;
+            --success-color: #28a745;
+            --warning-color: #ffc107;
+            --danger-color: #dc3545;
+            --text-dark: #1a1a1a;
+            --text-light: #666;
+            --bg-light: #f8f9fa;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Loading Screen */
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease-out;
+        }
+        
+        #loading-screen.fade-out {
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        .loader {
+            width: 60px;
+            height: 60px;
+            border: 6px solid rgba(255, 255, 255, 0.2);
+            border-top-color: #fff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Scroll to Top Button */
+        #scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 20px;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0, 47, 108, 0.3);
+        }
+        
+        #scroll-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        #scroll-top:hover {
+            background: var(--secondary-color);
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0, 47, 108, 0.4);
+        }
+        
+        /* Hero Section with Centered Title */
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 120px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-section h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 25px;
+            line-height: 1.2;
+        }
+        
+        .hero-section .subtitle {
+            font-size: 1.4rem;
+            opacity: 0.95;
+            max-width: 950px;
+            margin: 0 auto 40px;
+            line-height: 1.6;
+        }
+        
+        .hero-cta {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+        
+        .btn-primary-custom {
+            background: white;
+            color: var(--primary-color);
+            padding: 16px 40px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn-primary-custom:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            color: var(--primary-color);
+        }
+        
+        .btn-outline-custom {
+            background: transparent;
+            color: white;
+            padding: 16px 40px;
+            border: 2px solid white;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-outline-custom:hover {
+            background: white;
+            color: var(--primary-color);
+        }
+        
+        /* Stats Section */
+        .stats-section {
+            background: var(--primary-color);
+            color: white;
+            padding: 60px 0;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .stat-item h3 {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--accent-color);
+            margin-bottom: 10px;
+        }
+        
+        .stat-item p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        /* Content Sections */
+        .content-section {
+            padding: 80px 0;
+        }
+        
+        .content-section.bg-light {
+            background: var(--bg-light);
+        }
+        
+        .section-header {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto 60px;
+        }
+        
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .section-header p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+        }
+        
+        /* Feature Cards */
+        .feature-card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            height: 100%;
+            border-top: 4px solid var(--primary-color);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 30px rgba(0, 47, 108, 0.15);
+        }
+        
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            color: white;
+            margin-bottom: 25px;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .feature-card h4 {
+            font-size: 1.2rem;
+            color: var(--secondary-color);
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        
+        .feature-card p {
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+        
+        .feature-card ul {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 15px;
+        }
+        
+        .feature-card ul li {
+            padding-left: 30px;
+            position: relative;
+            margin-bottom: 12px;
+            color: var(--text-light);
+        }
+        
+        .feature-card ul li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--success-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        /* Audit Layer Cards */
+        .audit-card {
+            background: white;
+            border-left: 5px solid var(--accent-color);
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+        }
+        
+        .audit-card:hover {
+            transform: translateX(10px);
+            box-shadow: 0 6px 25px rgba(0, 47, 108, 0.12);
+        }
+        
+        .audit-card h4 {
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .audit-card .badge {
+            background: var(--accent-color);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        
+        /* Problem/Solution Cards */
+        .problem-list {
+            background: rgba(220, 53, 69, 0.05);
+            border-left: 5px solid var(--danger-color);
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        
+        .problem-list h4 {
+            color: var(--danger-color);
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .problem-list ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .problem-list ul li {
+            padding-left: 35px;
+            position: relative;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+            line-height: 1.7;
+        }
+        
+        .problem-list ul li::before {
+            content: "✗";
+            position: absolute;
+            left: 0;
+            color: var(--danger-color);
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+        
+        /* Benefits Grid */
+        .benefit-item {
+            text-align: center;
+            padding: 35px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        
+        .benefit-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 25px rgba(0, 47, 108, 0.12);
+        }
+        
+        .benefit-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            color: white;
+            margin: 0 auto 20px;
+        }
+        
+        .benefit-item h4 {
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        
+        .benefit-item p {
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+        
+        /* Governance Section */
+        .governance-card {
+            background: linear-gradient(135deg, rgba(0, 47, 108, 0.05) 0%, rgba(0, 168, 232, 0.05) 100%);
+            border: 2px solid var(--primary-color);
+            padding: 40px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+        }
+        
+        .governance-card h4 {
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .governance-card p {
+            color: var(--text-dark);
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+        
+        /* Risk Cards */
+        .risk-card {
+            background: rgba(255, 193, 7, 0.1);
+            border-left: 5px solid var(--warning-color);
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .risk-card h5 {
+            color: var(--warning-color);
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .risk-card p {
+            color: var(--text-dark);
+            margin-bottom: 0;
+        }
+        
+        /* Architecture Diagram */
+        .architecture-layer {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            margin-bottom: 25px;
+            border-top: 4px solid var(--accent-color);
+            transition: all 0.3s ease;
+        }
+        
+        .architecture-layer:hover {
+            transform: scale(1.02);
+            box-shadow: 0 6px 25px rgba(0, 47, 108, 0.12);
+        }
+        
+        .architecture-layer h4 {
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .architecture-layer .layer-number {
+            width: 40px;
+            height: 40px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: var(--primary-color);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .cta-section p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Quote Box */
+        .quote-box {
+            background: linear-gradient(135deg, var(--success-color) 0%, #20914a 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 6px 25px rgba(40, 167, 69, 0.3);
+            margin: 40px 0;
+        }
+        
+        .quote-box h4 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        
+        .quote-box p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            margin-bottom: 0;
+        }
+        
+        /* Highlight Box */
+        .highlight-box {
+            background: rgba(0, 168, 232, 0.1);
+            border-left: 5px solid var(--accent-color);
+            padding: 25px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+        
+        .highlight-box strong {
+            color: var(--primary-color);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero-section .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .section-header h2 {
+                font-size: 2rem;
+            }
+            
+            .hero-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn-primary-custom,
+            .btn-outline-custom {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .stat-item h3 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+
+    <!-- Top Bar -->
+<div class="top-bar">
+  <div class="container">
+    <div class="top-bar-left text-color">
+      <span>✓ Award-Winning Cloud CRM Software Since 2003</span>
+    </div>
+    <ul class="top-bar-nav">
+      <li><a href="https://www.salesboom.com/crm_supportcenter/overview/index.html">Support Center</a></li>
+      <li><a href="https://www.salesboom.com/crm_trial.html">Free Trial</a></li>
+      <li><a href="https://www.salesboom.com/login.html">Login</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Main Header -->
+<header>
+  <div class="main-header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <a href="https://www.salesboom.com" aria-label="Salesboom CRM Home">
+            <img src="https://www.salesboom.com/img/salesboom-logo-252x67.png" alt="Salesboom Cloud CRM Logo" width="252" height="67">
+          </a>
+        </div>
+        <div class="header-phone">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          <a href="tel:+18552292043">1-855-229-2043</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+    <!-- Hero Section with Centered Title -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Turn AI Agents Into Auditable Revenue Engines</h1>
+                <p class="subtitle">Deploy production-grade AI Agents inside your CRM with full governance, triple-audit trails, and real-time context—transforming prompts into profitable, traceable business actions.</p>
+                <a href="enterprise-ai-agents-crm.html" class="text-white  border-bottom border-white">Back to AI Agents Overview<i class="fa-solid fa-arrow-right mx-3"></i></a>
+               
+                <div class="hero-cta mt-3">
+                    <a href="https://www.salesboom.com/request-crm-demo.html" class="btn-primary-custom">Book Live Demo</a>
+                    <a href="https://www.salesboom.com/crm_trial.html" class="btn-outline-custom">Start Free Trial</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-6">
+                    <div class="stat-item">
+                        <h3>22+</h3>
+                        <p>Years of CRM Innovation</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-item">
+                        <h3>3</h3>
+                        <p>Audit Layers</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-item">
+                        <h3>100%</h3>
+                        <p>AI Traceability</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-item">
+                        <h3>3,500+</h3>
+                        <p>Businesses Powered</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 1: The AI Agent Problem -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Most Enterprise AI Initiatives Fail</h2>
+                <p>Understanding the governance crisis preventing AI adoption</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <p class="lead mb-4">AI Agents are rapidly reshaping how businesses sell, support, operate, and grow. Yet despite advances in large language models, most enterprises struggle to deploy AI Agents safely and profitably. The challenge is not intelligence—it is control, context, governance, and execution.</p>
+                    
+                    <div class="problem-list">
+                        <h4><i class="fas fa-exclamation-triangle me-2"></i>Systemic Barriers to AI Adoption</h4>
+                        <ul>
+                            <li>AI responses cannot be traced, audited, or explained to stakeholders</li>
+                            <li>Prompts drift, decay, or hallucinate over time without oversight</li>
+                            <li>AI cannot safely execute real business actions without human verification</li>
+                            <li>Teams lack the specialized expertise to maintain prompt quality as models evolve</li>
+                            <li>Governance is retrofitted after incidents occur rather than built-in from the start</li>
+                            <li>Traditional CRM platforms were never designed to manage agentic intelligence</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="alert alert-danger" role="alert">
+                        <i class="fas fa-ban me-2"></i>
+                        <strong>The Result:</strong> Millions invested in AI technology that sits idle, untrusted, and disconnected from revenue-generating workflows. Businesses need a fundamentally different approach—one that treats AI governance as a first-class operational requirement, not an afterthought.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Introducing Promptuit -->
+    <section class="content-section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Promptuit: The Missing Operating System for AI Agents</h2>
+                <p>Production-grade AI governance built from the ground up</p>
+            </div>
+            
+            <div class="row mb-5">
+                <div class="col-lg-10 mx-auto">
+                    <div class="quote-box">
+                        <h4>The Prompt-to-Revenue Platform</h4>
+                        <p>Salesboom's Promptuit Ecosystem transforms generative AI from an experimental tool into a governed operating system, enabling businesses to configure, integrate, govern, and demonstrate AI Agents live—inside real workflows, against real data, with full auditability and safety controls.</p>
+                    </div>
+                    
+                    <p class="lead text-center mb-5">Promptuit is not a prompt library or template collection. It is a <strong>regulatory and execution layer</strong> that sits between humans, AI models, and business systems, managing the complete lifecycle of generative AI—from context assembly to execution and audit recovery.</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>What Promptuit Does</h3>
+                        <ul>
+                            <li>Prevents AI hallucinations before they reach customers or prospects</li>
+                            <li>Enforces business rules and compliance policies automatically at the prompt level</li>
+                            <li>Preserves institutional knowledge as AI models and versions evolve</li>
+                            <li>Converts AI output into revenue-generating actions with human oversight</li>
+                            <li>Maintains complete audit trails across all AI interactions and decisions</li>
+                            <li>Provides real-time context from CRM data to ensure AI accuracy</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-times-circle"></i>
+                        </div>
+                        <h3>Why Traditional Approaches Fail</h3>
+                        <p>Most organizations attempt to bolt AI onto existing systems without addressing fundamental governance requirements. They use generic ChatGPT interfaces, unaudited API calls, or custom scripts that lack enterprise controls.</p>
+                        <p class="mt-3">This creates liability exposure, compliance risk, and ultimately erodes trust in AI-driven processes.</p>
+                        <div class="highlight-box mt-4">
+                            <strong>Promptuit was architected specifically to solve these problems</strong>—treating AI governance as the foundation rather than an add-on feature.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Triple-Audit Architecture -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Triple-Audit Architecture: Eliminating AI Black-Box Risk</h2>
+                <p>The "Legislative Branch of AI" governing every decision</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <p class="lead text-center mb-5">Promptuit functions as the "Legislative Branch of AI," governing how AI Agents can reason, communicate, and act within your organization. This governance model is enforced through a breakthrough architecture: the <strong>Triple-Audit System</strong>.</p>
+                    
+                    <div class="audit-card">
+                        <h4>
+                            <div class="layer-number">1</div>
+                            CRM Audit
+                            <span class="badge">Business Context</span>
+                        </h4>
+                        <p>Every AI-generated prompt is logged against the exact account, opportunity, case, or contact that triggered it. This creates a permanent record linking AI actions to specific business contexts. Sales managers can review exactly what AI recommended during deal negotiations. Support leaders can trace AI-suggested solutions back to individual customer tickets.</p>
+                        <p class="mt-3"><strong>The CRM audit ensures accountability at the business-logic level</strong>—connecting AI decisions to revenue outcomes and customer satisfaction metrics.</p>
+                    </div>
+                    
+                    <div class="audit-card">
+                        <h4>
+                            <div class="layer-number">2</div>
+                            Data Engine Audit
+                            <span class="badge">Data Provenance</span>
+                        </h4>
+                        <p>All raw data inputs used to construct prompt context are recorded with timestamps and version tracking. This includes customer records, product catalogs, pricing matrices, historical interactions, and any external data sources.</p>
+                        <p class="mt-3">When an AI Agent makes a recommendation, teams can reconstruct the exact data state that informed that decision. This is critical for compliance, dispute resolution, and continuous improvement of AI accuracy.</p>
+                    </div>
+                    
+                    <div class="audit-card">
+                        <h4>
+                            <div class="layer-number">3</div>
+                            AMS (Agent Management System) Audit
+                            <span class="badge">Reasoning Path</span>
+                        </h4>
+                        <p>The Agent Management System captures the AI's complete reasoning path—the chain of logic, decisions, and actions taken by the agent. This includes which prompts were executed, in what sequence, with what parameters, and what results were produced.</p>
+                        <p class="mt-3">When AI outputs need investigation, the AMS audit reveals the exact decision tree followed, allowing teams to identify and correct prompt logic errors immediately.</p>
+                    </div>
+                    
+                    <div class="quote-box mt-5">
+                        <h4>The Power of Triple-Audit</h4>
+                        <p>This synchronized three-layer audit architecture allows organizations to rewind any AI failure, identify the precise cause at the business, data, or reasoning level, and correct it immediately—something traditional AI implementations cannot do.</p>
+                    </div>
+                    
+                    <div class="row g-3 mt-4">
+                        <div class="col-md-6">
+                            <div class="governance-card">
+                                <h4>Critical Questions You Can Answer:</h4>
+                                <p>✓ Why did the AI recommend this pricing strategy?</p>
+                                <p>✓ What customer data influenced this renewal forecast?</p>
+                                <p>✓ How did the AI conclude this lead was qualified?</p>
+                                <p>✓ Which business rules were applied during quote generation?</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="governance-card">
+                                <h4>Every Answer Is:</h4>
+                                <p><i class="fas fa-check-circle text-success me-2"></i>Traceable to exact data sources</p>
+                                <p><i class="fas fa-check-circle text-success me-2"></i>Auditable with timestamp precision</p>
+                                <p><i class="fas fa-check-circle text-success me-2"></i>Explainable in business terms</p>
+                                <p><i class="fas fa-check-circle text-success me-2"></i>Recoverable for compliance review</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="container">
+        <img src="content/image/ai-sales-assistants-powered-by-autonomous-agents-crm.png" class="mx-auto" alt="">
+    </div>
+
+    <!-- Section 4: Real-Time Contextual Intelligence -->
+    <section class="content-section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Real-Time Contextual Intelligence From Your CRM</h2>
+                <p>AI that knows your business, customers, and history</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h4>Dynamic Context Assembly</h4>
+                        <p>Promptuit pulls real-time customer data, interaction history, product details, and business rules from Salesboom's Data Engine, ensuring AI always operates with current, accurate information.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h4>Contextual Awareness</h4>
+                        <p>AI Agents understand deal stages, customer health scores, support ticket history, and relationship dynamics—generating responses that reflect actual business context, not generic templates.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-sync-alt"></i>
+                        </div>
+                        <h4>Continuous Synchronization</h4>
+                        <p>As CRM data updates, AI context refreshes automatically. No stale information, no outdated recommendations—every AI interaction reflects the current state of your business.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-filter"></i>
+                        </div>
+                        <h4>Intelligent Filtering</h4>
+                        <p>Context Engine prioritizes relevant data and filters noise, ensuring AI receives precisely what it needs without overwhelming token limits or introducing confusion.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <h4>Privacy Protection</h4>
+                        <p>Role-based access controls ensure AI only accesses data the current user is authorized to see, maintaining data security and compliance with privacy regulations.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="benefit-item">
+                        <div class="benefit-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4>Performance Optimization</h4>
+                        <p>Context caching and intelligent retrieval reduce API costs by up to 90% while improving response times, making AI economically sustainable at scale.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Human-in-the-Loop -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Human-in-the-Loop: The Safety Net for AI Actions</h2>
+                <p>Balancing automation with human judgment</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <p class="lead text-center mb-5">Promptuit enforces approval workflows for high-stakes AI actions, ensuring human oversight where it matters most while allowing full automation for routine, low-risk tasks.</p>
+                    
+                    <div class="row g-4 mb-5">
+                        <div class="col-md-6">
+                            <div class="architecture-layer">
+                                <h4>
+                                    <i class="fas fa-user-check text-success"></i>
+                                    Automatic Approval
+                                </h4>
+                                <p><strong>For routine, low-risk actions:</strong></p>
+                                <ul class="mt-3">
+                                    <li>Lead enrichment and data entry</li>
+                                    <li>Calendar scheduling and reminders</li>
+                                    <li>Standard email responses</li>
+                                    <li>Data validation and cleanup</li>
+                                    <li>Report generation and distribution</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <div class="architecture-layer">
+                                <h4>
+                                    <i class="fas fa-hand-paper text-warning"></i>
+                                    Requires Human Review
+                                </h4>
+                                <p><strong>For high-stakes decisions:</strong></p>
+                                <ul class="mt-3">
+                                    <li>Pricing negotiations and discounts</li>
+                                    <li>Contract terms and commitments</li>
+                                    <li>Customer escalations and resolutions</li>
+                                    <li>Large financial transactions</li>
+                                    <li>Policy exceptions and overrides</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="highlight-box">
+                        <p><i class="fas fa-info-circle me-2"></i><strong>Configurable Thresholds:</strong> Organizations define their own approval rules based on risk tolerance, deal size, customer tier, and compliance requirements. The system enforces these policies automatically, flagging exceptions for human review.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Blogs -->
+<section class="container py-5">
+  <h2 class="text-center mb-5 text-color">AI & CRM Insights — Salesboom Blog</h2>
+
+  <div class="row g-4">
+
+    <!-- Card 1 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-robot text-color fa-2x mb-3"></i>
+        <h4>AI Agent Overview</h4>
+        <p>
+          Understand how AI agents transform workflow efficiency and CRM usage in
+          <a href="https://blog.salesboom.com/AI-Agent" class="text-color fw-bold">
+            AI Agent
+          </a> blog.
+        </p>
+      </div>
+    </div>
+
+
+
+    <!-- Card 3 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-chart-line text-color fa-2x mb-3"></i>
+        <h4>AI Agent for Sales</h4>
+        <p>
+          Learn how AI agents boost sales productivity and pipeline performance in
+          <a href="https://blog.salesboom.com/AI-Agent-Sales" class="text-color fw-bold">
+            AI Agent Sales
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-bullhorn text-color fa-2x mb-3"></i>
+        <h4>AI Agent for Marketing</h4>
+        <p>
+          Discover how AI agents automate campaigns and audience segmentation in
+          <a href="https://blog.salesboom.com/AI-Agent-Marketing" class="text-color fw-bold">
+            AI Agent Marketing
+          </a>.
+        </p>
+      </div>
+    </div>
+
+   
+
+
+  </div>
+</section>
+
+
+    <!-- Section 6: Prompting-as-a-Service -->
+    <section class="content-section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Prompting-as-a-Service: Expert Management Built-In</h2>
+                <p>Sustainable AI without in-house expertise</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-users-cog"></i>
+                        </div>
+                        <h3>The Prompt Engineering Challenge</h3>
+                        <p>Effective AI requires sophisticated prompt engineering—a specialized skill that combines technical understanding, domain expertise, and continuous optimization. Most organizations lack this expertise and cannot afford to build it in-house.</p>
+                        <p class="mt-3"><strong>Typical challenges include:</strong></p>
+                        <ul>
+                            <li>Prompts degrade as models evolve</li>
+                            <li>Business requirements change faster than prompts can be updated</li>
+                            <li>No internal expertise to troubleshoot AI failures</li>
+                            <li>Difficulty maintaining consistency across multiple use cases</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <h3>Salesboom's Solution</h3>
+                        <p>Promptuit includes <strong>Prompting-as-a-Service</strong>—ongoing expert management of your AI Agent prompts, workflows, and governance policies. Our specialized team handles:</p>
+                        <ul>
+                            <li><strong>Initial Configuration:</strong> Custom prompts designed for your business processes</li>
+                            <li><strong>Continuous Optimization:</strong> Regular refinement based on performance data</li>
+                            <li><strong>Model Migration:</strong> Seamless transitions as AI technology evolves</li>
+                            <li><strong>Incident Response:</strong> Rapid troubleshooting when issues arise</li>
+                            <li><strong>Best Practice Updates:</strong> Quarterly improvements incorporating latest techniques</li>
+                        </ul>
+                        <div class="quote-box mt-4 text-white">
+                            <p class="text-white"><strong>Result:</strong> You get enterprise AI without needing to become AI experts</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: Live Demonstrations -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>See It Live: Transparent AI in Action</h2>
+                <p>No vaporware—watch governed AI Agents work with your data</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="quote-box mb-5">
+                        <h4>The Salesboom Difference</h4>
+                        <p>Unlike vendors showing pre-recorded demos or sanitized test environments, Salesboom demonstrates Promptuit live—inside real CRM workflows, with actual business data, showing complete audit trails and governance controls in real-time.</p>
+                    </div>
+                    
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-play-circle"></i>
+                                </div>
+                                <h4>Live Workflows</h4>
+                                <p>Watch AI Agents enrich leads, generate quotes, analyze deals, and recommend actions—not in slides, but in functioning CRM screens.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-clipboard-check"></i>
+                                </div>
+                                <h4>Full Audit Visibility</h4>
+                                <p>See the triple-audit system capture every AI decision, data source, and reasoning step—proving complete transparency.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <div class="benefit-item">
+                                <div class="benefit-icon">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <h4>Prompt Transparency</h4>
+                                <p>Review actual prompts, context assembly logic, and governance rules—understanding exactly how AI operates.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="highlight-box mt-5">
+                        <p><i class="fas fa-lightbulb me-2"></i><strong>Why This Matters:</strong> Live demonstrations prove capabilities and build trust. You see exactly what you're buying—no surprises after signing contracts, no discovering limitations post-implementation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-2">
+      <h3 class="fw-bold text-color">
+        <i class="fa-solid fa-layer-group me-2"></i>
+        Explore Salesboom Editions
+      </h3>
+      <p class="text-muted">Discover powerful CRM editions to scale your business efficiently.</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-briefcase fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Professional Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              A complete CRM suite with Marketing Automation, ERP integration, and Support tools — built for performance and value.
+            </p>
+            <a href="https://www.salesboom.com/editions/professional-edition.html" class="btn btn-color mt-auto">
+              Explore Professional <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-building fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Enterprise Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              For large enterprises — automate workflows, unify data, and leverage analytics to drive strategic growth.
+            </p>
+            <a href="https://www.salesboom.com/editions/enterprise-edition.html" class="btn btn-color mt-auto">
+              View Enterprise <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-users fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Team Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              Perfect for small teams starting with CRM — manage leads, track sales, and boost productivity with simplicity.
+            </p>
+            <a href="https://www.salesboom.com/editions/team-edition.html" class="btn btn-color mt-auto">
+           Discover Team<i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Section 8: Risk Mitigation -->
+    <section class="content-section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Mitigating Enterprise AI Risks</h2>
+                <p>Addressing what keeps executives awake at night</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="risk-card">
+                        <h5><i class="fas fa-exclamation-triangle me-2"></i>Reputational Damage</h5>
+                        <p>Uncontrolled AI can generate offensive, inaccurate, or embarrassing communications sent to customers, partners, or prospects—damaging brand reputation and customer relationships.</p>
+                        <p class="mt-2"><strong>Promptuit Protection:</strong> Triple-audit trails + human approval for customer-facing content</p>
+                    </div>
+                    
+                    <div class="risk-card">
+                        <h5><i class="fas fa-balance-scale me-2"></i>Compliance Exposure</h5>
+                        <p>Regulated industries face heavy penalties for AI-driven decisions that violate privacy laws, fair lending practices, healthcare regulations, or financial disclosure requirements.</p>
+                        <p class="mt-2"><strong>Promptuit Protection:</strong> Complete audit trails proving compliance + policy enforcement at prompt level</p>
+                    </div>
+                    
+                    <div class="risk-card">
+                        <h5><i class="fas fa-dollar-sign me-2"></i>Revenue Leakage</h5>
+                        <p>Uncontrolled AI can approve unprofitable deals, apply excessive discounts, or generate quotes with pricing errors—each instance eroding margins and compounding financial losses.</p>
+                        <p class="mt-2"><strong>Promptuit Protection:</strong> Business rule enforcement + approval workflows for financial decisions</p>
+                    </div>
+                    
+                    <div class="risk-card">
+                        <h5><i class="fas fa-book-dead me-2"></i>Knowledge Decay</h5>
+                        <p>Teams become dependent on AI without understanding its logic or limitations. When models change or prompts degrade, organizations lose institutional knowledge needed to recover.</p>
+                        <p class="mt-2"><strong>Promptuit Protection:</strong> Prompting-as-a-Service + knowledge preservation in prompt libraries</p>
+                    </div>
+                    
+                    <div class="risk-card">
+                        <h5><i class="fas fa-user-times me-2"></i>Trust Erosion</h5>
+                        <p>After experiencing AI failures, employees and customers lose confidence in automation. The organization's ability to innovate with AI diminishes as skepticism replaces enthusiasm.</p>
+                        <p class="mt-2"><strong>Promptuit Protection:</strong> Governance-first architecture prevents failures before they occur</p>
+                    </div>
+                    
+                    <div class="quote-box mt-5">
+                        <h4>Governance-First Philosophy</h4>
+                        <p>Promptuit was architected with governance as the foundation—not an afterthought. Every capability, integration, and workflow includes built-in controls that prevent failures before they occur. Organizations can move fast with confidence when governance protects every interaction.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 9: Scalability -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Building AI Infrastructure That Evolves With Your Business</h2>
+                <p>Future-proof architecture for sustainable growth</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-exchange-alt"></i>
+                        </div>
+                        <h3>Model Agnostic Design</h3>
+                        <p>Promptuit integrates with multiple AI models—GPT-4, Claude, Gemini, and future successors—through unified interfaces. When new models offer superior performance, Salesboom's experts migrate prompts and workflows transparently.</p>
+                        <p class="mt-3"><strong>Your team experiences improved results without retraining or reconfiguration.</strong></p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-puzzle-piece"></i>
+                        </div>
+                        <h3>Modular Expansion</h3>
+                        <p>Start with specific use cases (quote generation, lead enrichment) and expand systematically as value is proven. The platform scales from 5 users to 5,000 without architectural changes or performance degradation.</p>
+                        <p class="mt-3">New departments, regions, or business units can adopt AI capabilities using proven templates customized to their needs.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <h3>Workflow Evolution</h3>
+                        <p>As business processes mature, AI workflows evolve in parallel. Simple automations become sophisticated agent chains. Manual approval steps transition to automated governance rules as confidence grows.</p>
+                        <p class="mt-3">The platform supports this maturity curve without forcing wholesale replacements.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h3>Knowledge Preservation</h3>
+                        <p>Industry expertise, regulatory requirements, and competitive intelligence accumulate within Promptuit's prompt libraries and workflow rules.</p>
+                        <p class="mt-3"><strong>This institutional knowledge persists through employee turnover, model changes, and organizational restructuring</strong>—becoming a strategic asset rather than tribal knowledge at risk of loss.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="highlight-box mt-5">
+                <p><i class="fas fa-rocket me-2"></i><strong>Innovation Pipeline:</strong> Salesboom's in-house development team delivers quarterly updates with new AI capabilities, expanded integrations, and enhanced governance features. These innovations deploy automatically without disrupting existing workflows.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Deploy AI Agents You Can Trust?</h2>
+            <p>See Salesboom's Promptuit Ecosystem in action during a live demonstration. Watch governed AI Agents operate inside real CRM workflows, with full audit trails and contextual intelligence displayed in real-time.</p>
+            <div class="hero-cta">
+                <a href="https://www.salesboom.com/request-crm-demo.html" class="btn-primary-custom">Book Live Demo Today</a>
+                <a href="https://www.salesboom.com/crm_trial.html" class="btn-outline-custom">Start Free Trial</a>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- Old Content -->
+<section class="container py-5">
+  <h2 class="text-center mb-5 text-color">AI Workforce & CRM Services Overview</h2>
+
+  <div class="row g-4">
+
+    <!-- Card 1 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-robot text-color fa-2x mb-3"></i>
+        <h4>AI Work for You</h4>
+        <p>
+          Discover how AI can perform tasks on your behalf with
+          <a href="https://www.salesboom.com/products/new/AI-work-for-you.html" class="text-color fw-bold">
+            AI Work For You
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-users-cog text-color fa-2x mb-3"></i>
+        <h4>Agentic Workforce</h4>
+        <p>
+          Learn about AI-powered teams that think and act autonomously via
+          <a href="https://www.salesboom.com/products/new/Agentic-Workforce.html" class="text-color fw-bold">
+            Agentic Workforce
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-handshake-angle text-color fa-2x mb-3"></i>
+        <h4>AI & The People Economy</h4>
+        <p>
+          Understand the evolving role of AI in work and human productivity on
+          <a href="https://www.salesboom.com/products/new/AI-People-Economy.html" class="text-color fw-bold">
+            AI People Economy
+          </a>.
+        </p>
+      </div>
+    </div>
+
+ 
+
+    <!-- Card 5 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-rocket text-color fa-2x mb-3"></i>
+        <h4>FastTrack CRM Implementation</h4>
+        <p>
+          Deploy and configure your CRM quickly using the
+          <a href="https://www.salesboom.com/services/fasttrack.html" class="text-color fw-bold">
+            FastTrack program
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-chalkboard-user text-color fa-2x mb-3"></i>
+        <h4>CRM Training Services</h4>
+        <p>
+          Increase user adoption and expertise through
+          <a href="https://www.salesboom.com/services/training.html" class="text-color fw-bold">
+            CRM training services
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 7 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-archive text-color fa-2x mb-3"></i>
+        <h4>CRM Services Archive (Backup)</h4>
+        <p>
+          Explore historical CRM service details in the
+          <a href="https://www.salesboom.com/services/index_bkp.html" class="text-color fw-bold">
+            services backup
+          </a>.
+        </p>
+      </div>
+    </div>
+
+
+  </div>
+</section>
+
+    
+<!--Loacal page -->
+<section class="container py-5">
+  <h2 class="text-center mb-5 text-color">
+    Enterprise AI & Agentic Workforce Platform
+  </h2>
+
+  <div class="row g-4">
+
+
+
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-network-wired fa-3x mb-3 text-color"></i>
+        <h4>Agent-to-Agent Protocol</h4>
+        <p>
+          Learn how autonomous AI agents collaborate securely using the
+          <a href="agent2agent-a2a-protocol.html" class="text-color fw-bold">
+            A2A Protocol
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-sliders fa-3x mb-3 text-color"></i>
+        <h4>Agent Management System</h4>
+        <p>
+          Manage, deploy and control AI agents at scale through the
+          <a href="agent-management-system-ams.html" class="text-color fw-bold">
+            AMS Platform
+          </a>.
+        </p>
+      </div>
+    </div>
+
+
+
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-layer-group fa-3x mb-3 text-color"></i>
+        <h4>Salesboom Autonomous Enterprise Stack</h4>
+        <p>
+          See how Salesboom powers a fully autonomous enterprise using AI-driven automation with
+          <a href="salesboom-stack-autonomous-enterprise.html" class="text-color fw-bold">
+            Salesboom Stack
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-chart-line fa-3x mb-3 text-color"></i>
+        <h4>AI for Sales Automation</h4>
+        <p>
+          Automate sales processes, deal execution and team productivity with
+          <a href="ai-agents-service-sales-automation.html" class="text-color fw-bold">
+            AI Sales Automation
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-file-signature fa-3x mb-3 text-color"></i>
+        <h4>AI Document Workflow Automation</h4>
+        <p>
+          Streamline approvals, documents and compliance using
+          <a href="ai-document-workflow-automation.html" class="text-color fw-bold">
+            AI Document Automation
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-diagram-project fa-3x mb-3 text-color"></i>
+        <h4>AI Workflow Management</h4>
+        <p>
+          Orchestrate intelligent business workflows and real-time execution via
+          <a href="ai-workflow-management-solutions.html" class="text-color fw-bold">
+            AI Workflow Solutions
+          </a>.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+<!-- Footer -->
+<footer class="mt-5 footer">
+  <div class="container mt-5 pt-5">
+    <div class="footer-grid">
+      <div class="footer-section">
+        <h3>Products</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/products/tools-sfa.html">Sales Force Automation</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-marketing.html">Marketing Automation</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-casemanagement.html">Case Management</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-reporting.html">Business Intelligence</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-emailintegration.html">Email Integration</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Solutions</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/products/edition-team.html">Team Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/edition-professional.html">Professional Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/edition-enterprise.html">Enterprise Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/industry-solutions.html">Industry Solutions</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/company/index.html">About Us</a></li>
+          <li><a href="https://www.salesboom.com/company/company-contact.html">Contact Us</a></li>
+          <li><a href="https://www.salesboom.com/customers/index.html">Customers</a></li>
+          <li><a href="https://www.salesboom.com/partners/index.html">Partners</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/support/index.html">Support Center</a></li>
+          <li><a href="https://www.salesboom.com/crm_supportcenter/overview/index.html">Documentation</a></li>
+          <li><a href="https://www.salesboom.com/whitepapers/index.html">White Papers</a></li>
+          <li><a href="https://www.salesboom.com/pop-privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="bg-color">
+    <div class="container">
+     <div class="footer-bottom pb-3 mt-3">
+      <p>&copy; 2003-2025 <a class="text-white fw-bold" href="https://www.salesboom.com">Salesboom.com</a> Inc. All rights reserved. | Call: 1-855-229-2043</p>
+      <p style="margin-top: 10px;">Salesboom's color-coded CRM lead management software helps businesses visually prioritize sales opportunities with automated workflow rules. Contact us to learn how color coding can transform your lead management process and increase sales productivity.</p>
+    </div>
+    </div>
+  </div>
+ 
+</footer>
+
+<!-- Common JavaScript -->
+<script src="content/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+    <script>
+        // Loading Screen
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.getElementById('loading-screen').classList.add('fade-out');
+            }, 500);
+        });
+        
+        // Scroll to Top Button
+        const scrollTopBtn = document.getElementById('scroll-top');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                scrollTopBtn.classList.add('visible');
+            } else {
+                scrollTopBtn.classList.remove('visible');
+            }
+        });
+        
+        scrollTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>

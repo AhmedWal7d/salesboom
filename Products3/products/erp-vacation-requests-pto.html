@@ -1,0 +1,1480 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+<!-- Primary Meta Tags -->
+<title>Vacation & PTO Tracking Software | Salesboom HR CRM</title>
+<meta name="description" content="Streamline vacation requests and PTO tracking with Salesboom's automated HR solution. Real-time approvals, calendar integration, and data-driven insights.">
+<meta name="keywords" content="PTO tracking software, Vacation request management, Paid time off system, HR automation software, Employee leave management, Vacation tracking CRM, Time-off management system">
+<link rel="canonical" href="https://www.salesboom.com/erp-vacation-requests-pto.html">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.salesboom.com/erp-vacation-requests-pto.html">
+<meta property="og:title" content="Vacation & PTO Tracking Software | Salesboom HR CRM">
+<meta property="og:description" content="Streamline vacation requests and PTO tracking with Salesboom's automated HR solution. Real-time approvals, calendar integration, and data-driven insights.">
+<meta property="og:image" content="https://www.salesboom.com/img/erp-vacation-requests-pto-og.jpg">
+<meta property="og:site_name" content="Salesboom CRM">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://www.salesboom.com/erp-vacation-requests-pto.html">
+<meta name="twitter:title" content="Vacation & PTO Tracking Software | Salesboom HR CRM">
+<meta name="twitter:description" content="Streamline vacation requests and PTO tracking with Salesboom's automated HR solution. Real-time approvals, calendar integration, and data-driven insights.">
+<meta name="twitter:image" content="https://www.salesboom.com/img/erp-vacation-requests-pto-og.jpg">
+<meta name="twitter:site" content="@SalesboomCloud">
+
+<!-- Schema.org structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Salesboom Vacation & PTO Tracking Software",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web-based, Cloud",
+  "offers": {
+    "@type": "Offer",
+    "price": "14.00",
+    "priceCurrency": "USD",
+    "priceValidUntil": "2026-12-31"
+  },
+  "featureList": [
+    "Automated vacation request and approval workflows",
+    "Real-time PTO balance tracking and accrual management",
+    "Integrated calendar synchronization with Outlook",
+    "Comprehensive analytics and workforce planning tools",
+    "Mobile-responsive employee self-service portal",
+    "Centralized data repository with audit trails"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.5",
+    "ratingCount": "3500"
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "Salesboom",
+    "url": "https://www.salesboom.com",
+    "logo": "https://www.salesboom.com/img/salesboom-logo-252x67.png",
+    "foundingDate": "2003",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-855-229-2043",
+      "contactType": "Customer Service"
+    }
+  }
+}
+</script>
+
+<link rel="shortcut icon" href="https://www.salesboom.com/favicon.ico">
+    <link rel="stylesheet" href="content/css/bootstrap.min.css">
+    <link rel="stylesheet" href="content/css/salesboom-common.css">
+    <link rel="shortcut icon" href="content/image/salesboom-logo-252x67.png" type="image/x-icon"> 
+    
+    
+<!-- Font Awesome 6 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #002f6c;
+  --secondary-color: #0047ab;
+  --accent-color: #3498db;
+  --success-color: #27ae60;
+  --text-color: #333;
+  --text-light: #666;
+  --border-color: #e0e0e0;
+  --bg-light: #f8f9fa;
+  --bg-white: #ffffff;
+  --shadow: 0 2px 10px rgba(0,0,0,0.1);
+  --shadow-hover: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background: var(--bg-white);
+  overflow-x: hidden;
+}
+
+/* Loading Screen */
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#loading-screen.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader {
+  width: 60px;
+  height: 60px;
+  border: 5px solid rgba(255, 255, 255, 0.2);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Scroll to Top Button */
+#scrollTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 47, 108, 0.3);
+}
+
+#scrollTopBtn.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+#scrollTopBtn:hover {
+  background: var(--secondary-color);
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 47, 108, 0.4);
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: white;
+  padding: 100px 0 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+  opacity: 0.3;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 25px;
+  line-height: 1.2;
+}
+
+.hero .subtitle {
+  font-size: 1.3rem;
+  margin-bottom: 35px;
+  opacity: 0.95;
+  line-height: 1.5;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Buttons */
+.btn-custom {
+  padding: 16px 40px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.btn-primary-custom {
+  background: #e74c3c;
+  color: white;
+  box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
+}
+
+.btn-primary-custom:hover {
+  background: #c0392b;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(231, 76, 60, 0.4);
+  color: white;
+}
+
+.btn-outline-custom {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-outline-custom:hover {
+  background: white;
+  color: var(--primary-color);
+}
+
+/* Stats Section */
+.stats-section {
+  background: var(--primary-color);
+  color: white;
+  padding: 60px 0;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-item h3 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #e74c3c;
+  margin-bottom: 10px;
+}
+
+.stat-item p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* Content Sections */
+.content-section {
+  padding: 80px 0;
+}
+
+.content-section.bg-light {
+  background: var(--bg-light);
+}
+
+.section-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 60px;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.section-header p {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  line-height: 1.8;
+}
+
+/* Feature Cards */
+.feature-card {
+  background: var(--bg-white);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  transition: all 0.3s;
+  border-top: 4px solid var(--primary-color);
+  height: 100%;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.feature-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.feature-card h3 {
+  font-size: 1.4rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.feature-card p {
+  color: var(--text-light);
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.feature-card ul {
+  list-style: none;
+  margin-top: 15px;
+  padding-left: 0;
+}
+
+.feature-card li {
+  padding-left: 25px;
+  position: relative;
+  margin-bottom: 10px;
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+.feature-card li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--success-color);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Two Column Layout */
+.two-column-content {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  margin-bottom: 60px;
+}
+
+.two-column-content.reverse {
+  flex-direction: row-reverse;
+}
+
+.column-text h3 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.column-text h4 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin: 25px 0 15px 0;
+}
+
+.column-text p {
+  color: var(--text-light);
+  margin-bottom: 15px;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.column-text ul {
+  list-style: none;
+  margin-top: 20px;
+  padding-left: 0;
+}
+
+.column-text li {
+  padding-left: 30px;
+  position: relative;
+  margin-bottom: 15px;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+.column-text li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--success-color);
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.column-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+/* Benefits Section */
+.benefits-section {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: white;
+  padding: 80px 0;
+  position: relative;
+}
+
+.benefit-item {
+  text-align: center;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s;
+  height: 100%;
+}
+
+.benefit-item:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-5px);
+}
+
+.benefit-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.benefit-item p {
+  opacity: 0.9;
+  line-height: 1.7;
+}
+
+/* Process Steps */
+.process-step {
+  position: relative;
+  padding: 40px 30px;
+  background: var(--bg-white);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  text-align: center;
+  height: 100%;
+}
+
+.step-number {
+  width: 50px;
+  height: 50px;
+  background: var(--primary-color);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0 auto 20px;
+}
+
+.process-step h3 {
+  font-size: 1.3rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.process-step p {
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+/* CTA Section */
+.cta-section {
+  background: var(--primary-color);
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.cta-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.cta-content p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  opacity: 0.9;
+  line-height: 1.6;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .hero .subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .section-header h2 {
+    font-size: 2rem;
+  }
+  
+  .two-column-content {
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .two-column-content.reverse {
+    flex-direction: column;
+  }
+  
+  .stat-item h3 {
+    font-size: 2.5rem;
+  }
+  
+  #scrollTopBtn {
+    width: 45px;
+    height: 45px;
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    padding: 60px 0;
+  }
+  
+  .hero h1 {
+    font-size: 1.75rem;
+  }
+  
+  .content-section {
+    padding: 60px 0;
+  }
+  
+  .btn-custom {
+    padding: 14px 30px;
+    font-size: 15px;
+    width: 100%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Loading Screen -->
+<div id="loading-screen">
+  <div class="loader"></div>
+</div>
+
+<!-- Scroll to Top Button -->
+<button id="scrollTopBtn" aria-label="Scroll to top">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+
+    <!-- Top Bar -->
+<div class="top-bar">
+  <div class="container">
+    <div class="top-bar-left text-color">
+      <span>✓ Award-Winning Cloud CRM Software Since 2003</span>
+    </div>
+    <ul class="top-bar-nav">
+      <li><a href="https://www.salesboom.com/crm_supportcenter/overview/index.html">Support Center</a></li>
+      <li><a href="https://www.salesboom.com/crm_trial.html">Free Trial</a></li>
+      <li><a href="https://www.salesboom.com/login.html">Login</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Main Header -->
+<header>
+  <div class="main-header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <a href="https://www.salesboom.com" aria-label="Salesboom CRM Home">
+            <img src="https://www.salesboom.com/img/salesboom-logo-252x67.png" alt="Salesboom Cloud CRM Logo" width="252" height="67">
+          </a>
+        </div>
+        <div class="header-phone">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          <a href="tel:+18552292043">1-855-229-2043</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <h1>Automate Vacation Requests and PTO Tracking Instantly</h1>
+      <p class="subtitle">Eliminate paper-based processes and spreadsheet chaos with intelligent PTO management. Real-time approvals, automated workflows, and centralized tracking that keeps your business running smoothly.</p>
+      <div class="hero-cta">
+        <a href="https://www.salesboom.com/request-crm-demo.html" class="btn-custom btn-primary-custom">Book a Demo</a>
+        <a href="https://www.salesboom.com/crm_trial.html" class="btn-custom btn-outline-custom">Start Free Trial</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Section -->
+<section class="stats-section">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-6 col-md-3">
+        <div class="stat-item">
+          <h3>22+</h3>
+          <p>Years of CRM Innovation</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="stat-item">
+          <h3>3,500+</h3>
+          <p>Businesses Transformed</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="stat-item">
+          <h3>159</h3>
+          <p>Countries Served</p>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="stat-item">
+          <h3>24/7</h3>
+          <p>Customer Support</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Problem Statement Section -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Why Traditional Vacation Management Fails Modern Businesses</h2>
+      <p>Time-honored methods of managing vacation requests and paid-time-off through paper forms, email chains, and disconnected spreadsheets create operational chaos for HR departments. These outdated processes lead to lost requests, approval bottlenecks, scheduling conflicts, and frustrated employees who lack visibility into their PTO balances and request status.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-clock"></i>
+          </div>
+          <h3>Wasted Time</h3>
+          <p>HR teams waste hours manually tracking PTO balances and updating spreadsheets, taking time away from strategic initiatives.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-eye-slash"></i>
+          </div>
+          <h3>No Visibility</h3>
+          <p>Managers lack real-time visibility into team availability for project planning, leading to scheduling conflicts and missed deadlines.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-users-slash"></i>
+          </div>
+          <h3>Staffing Issues</h3>
+          <p>Vacation conflicts cause unexpected understaffing and productivity disruptions that impact customer service and operations.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-exclamation-triangle"></i>
+          </div>
+          <h3>Payroll Errors</h3>
+          <p>Paper-based processes increase errors in payroll calculations, creating compliance risks and employee dissatisfaction.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-hourglass-half"></i>
+          </div>
+          <h3>Approval Delays</h3>
+          <p>Employees experience delays and uncertainty waiting for approval responses, damaging morale and creating frustration.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3>No Analytics</h3>
+          <p>No centralized data for analyzing time-off patterns or planning ahead, preventing strategic workforce decisions.</p>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-5">
+      <p class="lead text-muted">Modern businesses need intelligent automation that eliminates these pain points while providing the data insights necessary to optimize workforce planning and maintain productivity year-round.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Solution Overview Section -->
+<section class="content-section bg-light">
+  <div class="container">
+    <div class="section-header">
+      <h2>Centralized PTO Management That Works for Everyone</h2>
+      <p>Salesboom's vacation and PTO tracking solution transforms time-off management from an administrative burden into a streamlined, data-driven process. The centralized data repository connects employees, managers, and HR teams on a single platform where vacation requests are submitted, reviewed, and approved in real-time.</p>
+    </div>
+    
+    <div class="two-column-content mb-5">
+      <div class="column-text col-md-6 shadow-lg p-4 rounded-2">
+        <h3>Employee Self-Service Portal</h3>
+        <p>Employees can request vacations and PTOs online through an intuitive self-service portal accessible from any device. The system provides instant visibility into current PTO balances, accrual rates, and request history. Employees receive automated notifications when their requests are approved or require additional information, eliminating uncertainty and reducing follow-up emails to HR.</p>
+        <ul>
+          <li>Submit vacation and PTO requests instantly from desktop or mobile</li>
+          <li>View real-time PTO balance and accrual schedules</li>
+          <li>Track request status from submission through approval</li>
+          <li>Access complete history of past time-off requests</li>
+          <li>Receive automatic notifications for approvals and rejections</li>
+          <li>View team calendars to avoid scheduling conflicts</li>
+        </ul>
+      </div>
+      <div class="column-text col-md-6 shadow-lg p-4 rounded-2">
+        <h3>Real-Time Manager Approvals</h3>
+        <p>HR managers and department supervisors can approve or reject requests in real-time from anywhere, streamlining workflow processes and eliminating approval delays. The system automatically routes requests to the appropriate approvers based on organizational hierarchy and provides complete context including employee PTO balances, team schedules, and historical patterns.</p>
+        <ul>
+          <li>Instant notifications when new requests are submitted</li>
+          <li>One-click approval or rejection with optional comments</li>
+          <li>Visual team calendar showing all approved time-off</li>
+          <li>PTO balance verification before approval</li>
+          <li>Bulk approval capabilities for efficiency</li>
+          <li>Delegation options when managers are unavailable</li>
+        </ul>
+      </div>
+    </div>
+    
+  
+  </div>
+</section>
+
+<!-- Data Analytics Section -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Data-Driven Workforce Planning Through PTO Analytics</h2>
+      <p>Stop guessing and start analyzing data about vacation requests in real-time. Salesboom provides comprehensive analytics that reveal time-off patterns across your entire organization, enabling proactive workforce planning that minimizes disruption to productivity.</p>
+    </div>
+    <div class="row align-items-center mb-5">
+
+      <div class="col-lg-8 mx-auto shadow-lg p-4 rounded-2">
+        <p class="lead mb-4">With a complete view of your company's processes in one centralized program, you gain the resources to identify optimal vacation periods, predict staffing needs, and ensure consistent coverage. Never wonder "why are we always understaffed?" again when data shows exactly when peak vacation periods occur and how to plan accordingly.</p>
+        <h4>The system tracks and analyzes:</h4>
+        <ul class="list-unstyled">
+          <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Time-off patterns by department, team, and individual employee</li>
+          <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Peak vacation periods and potential understaffing risks</li>
+          <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>PTO accrual rates and liability forecasting</li>
+          <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Average response times for approval workflows</li>
+          <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Utilization rates compared to company policies</li>
+          <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Year-over-year trends for strategic planning</li>
+          <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Compliance with labor laws and company policies</li>
+          <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i>Cost analysis of PTO liability and usage patterns</li>
+        </ul>
+        <p class="mt-4">Customizable dashboards provide executives and HR leaders with real-time visibility into organizational time-off metrics, enabling data-driven decisions about staffing, hiring, and policy adjustments.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Calendar Integration Section -->
+<section class="content-section bg-light">
+  <div class="container">
+    <div class="section-header">
+      <h2>Seamless Integration with Your Business Operations</h2>
+      <p>Approved PTOs are automatically incorporated into your company's shared calendar system, ensuring on-vacation employees are excluded from task assignments, event invitations, and service queues. This integration eliminates scheduling conflicts and ensures customer service issues and critical tasks are completed promptly without delays.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-calendar-alt"></i>
+          </div>
+          <h3>Automatic Calendar Updates</h3>
+          <p>When vacation requests are approved, the system instantly updates shared calendars across the organization. Project managers, team leads, and colleagues gain immediate visibility into team availability, preventing double-booking and ensuring realistic project timelines. Calendar integration works seamlessly with Microsoft Outlook and other business calendar systems.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-tasks"></i>
+          </div>
+          <h3>Smart Task Assignment</h3>
+          <p>The system automatically prevents task assignments to employees who are on approved vacation or PTO. Project management tools and customer service queues are updated in real-time to route work only to available team members, ensuring seamless operations and preventing the frustration of tasks being assigned to out-of-office employees.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-bell"></i>
+          </div>
+          <h3>Automated Notifications</h3>
+          <p>Relevant stakeholders receive automatic notifications about upcoming vacations and approved time-off requests. Department managers, project leads, and team members stay informed about availability changes, enabling proactive planning and resource allocation to maintain productivity during vacation periods.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-sync-alt"></i>
+          </div>
+          <h3>Workflow Automation</h3>
+          <p>Beyond calendar updates, the system triggers automated workflows when vacations are approved. This includes updating project timelines, reassigning responsibilities, activating out-of-office email responses, and notifying backup personnel. Automation ensures nothing falls through the cracks when team members are away.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Benefits Section -->
+<section class="benefits-section">
+  <div class="container">
+    <div class="section-header" style="color: white;">
+      <h2 style="color: white;">Key Benefits of Automated PTO Management</h2>
+      <p style="color: rgba(255,255,255,0.9);">Transform your HR operations with intelligent automation that saves time, reduces errors, and provides strategic insights for workforce planning.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3">
+        <div class="benefit-item">
+          <i class="fas fa-stopwatch fa-3x mb-3"></i>
+          <h3>Save Time</h3>
+          <p>Eliminate hours of manual PTO tracking and spreadsheet management, freeing HR teams to focus on strategic initiatives that drive business value.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="benefit-item">
+          <i class="fas fa-check-double fa-3x mb-3"></i>
+          <h3>Reduce Errors</h3>
+          <p>Automated calculations and centralized data eliminate the payroll errors and inconsistencies common with manual PTO tracking systems.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="benefit-item">
+          <i class="fas fa-chart-bar fa-3x mb-3"></i>
+          <h3>Data Insights</h3>
+          <p>Comprehensive analytics reveal time-off patterns and trends, enabling proactive workforce planning and strategic decision-making.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="benefit-item">
+          <i class="fas fa-smile-beam fa-3x mb-3"></i>
+          <h3>Better Experience</h3>
+          <p>Employees gain transparency and control over their time-off, while managers receive the tools needed for efficient approval workflows.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="benefit-item">
+          <i class="fas fa-shield-alt fa-3x mb-3"></i>
+          <h3>Ensure Compliance</h3>
+          <p>Built-in compliance tools help organizations meet federal and state labor law requirements with complete audit trails and documentation.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="benefit-item">
+          <i class="fas fa-dollar-sign fa-3x mb-3"></i>
+          <h3>Control Costs</h3>
+          <p>Accurate PTO liability tracking and forecasting enable better financial planning and prevent unexpected budget impacts from accrued time-off.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="benefit-item">
+          <i class="fas fa-expand-arrows-alt fa-3x mb-3"></i>
+          <h3>Scale Easily</h3>
+          <p>The system grows with your organization, supporting complex approval hierarchies and multiple policies without requiring reimplementation.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="benefit-item">
+          <i class="fas fa-mobile-alt fa-3x mb-3"></i>
+          <h3>Mobile Access</h3>
+          <p>Employees and managers can submit and approve requests from any device, ensuring business continuity even when away from the office.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Payroll Integration Section -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Seamless Payroll Integration and Accuracy</h2>
+      <p>Eliminate payroll errors and manual data entry through direct integration with your payroll systems. Approved PTO is automatically synchronized, ensuring accurate compensation calculations and reducing administrative overhead.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-calculator"></i>
+          </div>
+          <h3>Automated Calculations</h3>
+          <p>The system automatically calculates PTO accruals, balances, and payouts based on company policies and employee work schedules, eliminating manual calculation errors and ensuring policy compliance.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-link"></i>
+          </div>
+          <h3>QuickBooks Integration</h3>
+          <p>Native integration with QuickBooks ensures approved time-off is automatically reflected in payroll processing, reducing data entry time and preventing the errors that occur when manually transferring PTO information between systems.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-file-invoice-dollar"></i>
+          </div>
+          <h3>Accurate Payouts</h3>
+          <p>When employees terminate or require PTO payouts, the system provides accurate balance calculations including accrued but unused time-off, ensuring compliance with state laws and company policies regarding terminal pay.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Centralized Data Section -->
+<section class="content-section bg-light">
+  <div class="container">
+    <div class="section-header">
+      <h2>Centralized Data Repository for Complete Visibility</h2>
+      <p>Salesboom's central data repository ensures all vacation and PTO information is stored securely in one location with complete audit trails and historical records. This centralization eliminates data silos, reduces errors, and provides the foundation for accurate reporting and compliance.</p>
+    </div>
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <img src="content/image/image2.jpg" alt="Centralized data repository interface showing complete PTO history" class="img-fluid rounded shadow" loading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <h4 class="mb-4">Benefits of centralized PTO data:</h4>
+        <ul class="list-unstyled">
+          <li class="mb-3"><i class="fas fa-database text-primary me-2"></i>Complete historical record of all time-off requests and approvals</li>
+          <li class="mb-3"><i class="fas fa-history text-primary me-2"></i>Audit trails showing who approved requests and when</li>
+          <li class="mb-3"><i class="fas fa-user-tie text-primary me-2"></i>Integration with employee records for comprehensive HR profiles</li>
+          <li class="mb-3"><i class="fas fa-lock text-primary me-2"></i>Secure access controls ensuring data privacy and compliance</li>
+          <li class="mb-3"><i class="fas fa-sync text-primary me-2"></i>Real-time synchronization across all departments and locations</li>
+          <li class="mb-3"><i class="fas fa-cloud-upload-alt text-primary me-2"></i>Backup and disaster recovery for critical HR data</li>
+          <li class="mb-3"><i class="fas fa-clipboard-check text-primary me-2"></i>Compliance documentation for labor law requirements</li>
+          <li class="mb-3"><i class="fas fa-file-export text-primary me-2"></i>Easy data export for external reporting or audits</li>
+        </ul>
+        <p class="mt-4 lead">The centralized approach ensures data consistency across your organization while providing the security and reliability critical HR data demands.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Scalability Section -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>PTO Management That Grows With Your Business</h2>
+      <p>Whether managing PTO for 10 employees or 10,000, Salesboom's solution scales seamlessly to meet your needs. The flexible architecture supports complex approval hierarchies, multiple accrual policies, and diverse organizational structures without requiring customization or additional implementation.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3">
+        <div class="process-step">
+          <div class="step-number"><i class="fas fa-infinity"></i></div>
+          <h3>Unlimited Users</h3>
+          <p>Unlimited employee accounts with no per-user restrictions, supporting organizations of any size without additional fees.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="process-step">
+          <div class="step-number"><i class="fas fa-building"></i></div>
+          <h3>Multi-Location</h3>
+          <p>Support for multiple locations, departments, and divisions with location-specific policies and approval workflows.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="process-step">
+          <div class="step-number"><i class="fas fa-cogs"></i></div>
+          <h3>Flexible Policies</h3>
+          <p>Configurable PTO policies by employee type, location, or role with automatic accrual calculation and enforcement.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="process-step">
+          <div class="step-number"><i class="fas fa-globe"></i></div>
+          <h3>Global Ready</h3>
+          <p>Multi-language support and international compliance features for organizations with global workforces.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Compliance Section -->
+<section class="content-section bg-light">
+  <div class="container">
+    <div class="section-header">
+      <h2>Ensure Compliance With Labor Laws and Company Policies</h2>
+      <p>Maintaining compliance with federal and state labor laws, union agreements, and internal company policies is critical for avoiding legal issues and maintaining employee trust. Salesboom's PTO tracking system includes built-in compliance tools that help HR teams enforce policies consistently while maintaining required documentation.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-gavel"></i>
+          </div>
+          <h3>Regulatory Compliance</h3>
+          <p>Configurable accrual rules matching federal and state requirements ensure your PTO policies comply with labor laws across all jurisdictions where you operate.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-notes-medical"></i>
+          </div>
+          <h3>FMLA Tracking</h3>
+          <p>Automatic tracking of FMLA and other protected leave categories with integrated documentation to ensure compliance with federal leave requirements.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-calendar-times"></i>
+          </div>
+          <h3>Policy Enforcement</h3>
+          <p>Carryover and expiration rules enforced automatically, preventing policy violations while ensuring employees receive their entitled benefits.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-file-alt"></i>
+          </div>
+          <h3>Audit Reports</h3>
+          <p>Compliance reporting for audits and regulatory reviews with complete documentation of policy acknowledgments and changes over time.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-exclamation-circle"></i>
+          </div>
+          <h3>Policy Alerts</h3>
+          <p>Alerts for approaching policy limits or violations enable proactive management before compliance issues arise.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-clipboard-list"></i>
+          </div>
+          <h3>Multiple Leave Types</h3>
+          <p>Support for multiple PTO types including sick leave, personal days, and sabbaticals with category-specific accrual and usage rules.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Integration Section -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Seamless Connection With Your Existing Business Tools</h2>
+      <p>Salesboom's PTO management solution integrates seamlessly with the tools your business already uses, eliminating data silos and reducing duplicate data entry. Native integrations and open APIs ensure your vacation tracking system works harmoniously with your broader business ecosystem.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fab fa-microsoft"></i>
+          </div>
+          <h3>Microsoft Outlook</h3>
+          <p>Automatic calendar synchronization and email notifications ensure approved time-off appears in shared calendars and employee schedules instantly.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-file-invoice-dollar"></i>
+          </div>
+          <h3>QuickBooks</h3>
+          <p>Direct payroll integration for accurate PTO compensation calculations with automatic data synchronization between systems.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-users-cog"></i>
+          </div>
+          <h3>HRIS Systems</h3>
+          <p>Bidirectional sync with enterprise HR platforms ensures employee data remains consistent across all systems.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-money-check-alt"></i>
+          </div>
+          <h3>Payroll Providers</h3>
+          <p>Automated data transfer to payroll systems eliminates manual entry and ensures accurate time-off compensation.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fab fa-google"></i>
+          </div>
+          <h3>Calendar Systems</h3>
+          <p>Integration with Google Calendar and other scheduling tools for organization-wide visibility into approved time-off.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-plug"></i>
+          </div>
+          <h3>Open API</h3>
+          <p>Open API for building custom integrations with your unique business applications and workflow tools.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-content">
+      <h2>Ready to Automate Your Vacation and PTO Management?</h2>
+      <p>Transform your HR operations with intelligent PTO tracking that saves time, reduces errors, and provides the data insights you need for strategic workforce planning. See how Salesboom can streamline your time-off management today.</p>
+      <div class="hero-cta">
+        <a href="https://www.salesboom.com/request-crm-demo.html" class="btn-custom btn-primary-custom">Book a Demo Today</a>
+        <a href="https://www.salesboom.com/crm_trial.html" class="btn-custom btn-outline-custom" style="background: white; color: var(--primary-color);">Start Free Trial</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="container py-5">
+  <h2 class="text-center mb-5 text-color">CRM & ERP Employee Management Tools</h2>
+  <div class="row g-4">
+
+    <!-- Card 1 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-user-shield text-color fa-3x mb-3"></i>
+        <h4>ERP HR Policy Tracking</h4>
+        <p>
+          Track and enforce employee HR policies reliably with the <a href="https://www.salesboom.com/products/erp-hr-policy-tracking.html" class="text-color fw-bold">ERP HR Policy Tracking</a> feature.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-wallet text-color fa-3x mb-3"></i>
+        <h4>ERP Expense Tracking</h4>
+        <p>
+          Monitor and control employee expenses and reimbursements using <a href="https://www.salesboom.com/products/erp-expense-tracking.html" class="text-color fw-bold">ERP Expense Tracking</a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-users-cog text-color fa-3x mb-3"></i>
+        <h4>ERP Employee Management</h4>
+        <p>
+          Manage employee records, positions, and HR data integrated with CRM via <a href="https://www.salesboom.com/products/erp-employee-management.html" class="text-color fw-bold">ERP Employee Management</a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-images text-color fa-3x mb-3"></i>
+        <h4>Employee Management Screenshots</h4>
+        <p>
+          Preview the employee management interface with <a href="https://www.salesboom.com/products/CRM-Employee-management-software-screenshots.html" class="text-color fw-bold">Employee Management Screenshots</a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-gears text-color fa-3x mb-3"></i>
+        <h4>Interface Customization Tools</h4>
+        <p>
+          Custom tailor your CRM and ERP user experience with <a href="https://www.salesboom.com/products/tools-interface.html" class="text-color fw-bold">Interface Tools</a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-clock text-color fa-3x mb-3"></i>
+        <h4>User Login Hours Control</h4>
+        <p>
+          Monitor access patterns and login times using <a href="https://www.salesboom.com/products/feature-user-login-hours.html" class="text-color fw-bold">User Login Hours Control</a> features.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 7 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-link text-color fa-3x mb-3"></i>
+        <h4>ERP Integration with Epicor / Bistrack</h4>
+        <p>
+          Connect your CRM to external ERP systems like Epicor or Bistrack via <a href="https://www.salesboom.com/products/new/Epicor-ERP-Bistrack.html" class="text-color fw-bold">ERP Integration Tools</a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 8 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-chart-pie text-color fa-3x mb-3"></i>
+        <h4>Sales Intelligence & Analytics</h4>
+        <p>
+          Get actionable insights and reporting using the <a href="https://www.salesboom.com/integrated-crm/sales_intelligence_content.html" class="text-color fw-bold">Sales Intelligence Tools</a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 9 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-layer-group text-color fa-3x mb-3"></i>
+        <h4>Comprehensive CRM Platform</h4>
+        <p>
+          Leverage a unified, end-to-end CRM and ERP platform with the <a href="https://www.salesboom.com/unified-crm/comprehensive-crm-platform.html" class="text-color fw-bold">Comprehensive CRM Platform</a>.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-2">
+      <h3 class="fw-bold text-color">
+        <i class="fa-solid fa-layer-group me-2"></i>
+        Explore Salesboom Editions
+      </h3>
+      <p class="text-muted">Discover powerful CRM editions to scale your business efficiently.</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-briefcase fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Professional Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              A complete CRM suite with Marketing Automation, ERP integration, and Support tools — built for performance and value.
+            </p>
+            <a href="https://www.salesboom.com/editions/professional-edition.html" class="btn btn-color mt-auto">
+              Explore Professional <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-building fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Enterprise Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              For large enterprises — automate workflows, unify data, and leverage analytics to drive strategic growth.
+            </p>
+            <a href="https://www.salesboom.com/editions/enterprise-edition.html" class="btn btn-color mt-auto">
+              View Enterprise <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-users fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Team Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              Perfect for small teams starting with CRM — manage leads, track sales, and boost productivity with simplicity.
+            </p>
+            <a href="https://www.salesboom.com/editions/team-edition.html" class="btn btn-color mt-auto">
+           Discover Team<i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="mt-5 footer">
+  <div class="container mt-5 pt-5">
+    <div class="footer-grid">
+      <div class="footer-section">
+        <h3>Products</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/products/tools-sfa.html">Sales Force Automation</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-marketing.html">Marketing Automation</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-casemanagement.html">Case Management</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-reporting.html">Business Intelligence</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-emailintegration.html">Email Integration</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Solutions</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/products/edition-team.html">Team Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/edition-professional.html">Professional Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/edition-enterprise.html">Enterprise Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/industry-solutions.html">Industry Solutions</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/company/index.html">About Us</a></li>
+          <li><a href="https://www.salesboom.com/company/company-contact.html">Contact Us</a></li>
+          <li><a href="https://www.salesboom.com/customers/index.html">Customers</a></li>
+          <li><a href="https://www.salesboom.com/partners/index.html">Partners</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/support/index.html">Support Center</a></li>
+          <li><a href="https://www.salesboom.com/crm_supportcenter/overview/index.html">Documentation</a></li>
+          <li><a href="https://www.salesboom.com/whitepapers/index.html">White Papers</a></li>
+          <li><a href="https://www.salesboom.com/pop-privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="bg-color">
+    <div class="container">
+     <div class="footer-bottom pb-3 mt-3">
+      <p>&copy; 2003-2025 <a class="text-white fw-bold" href="https://www.salesboom.com">Salesboom.com</a> Inc. All rights reserved. | Call: 1-855-229-2043</p>
+      <p style="margin-top: 10px;">Salesboom's color-coded CRM lead management software helps businesses visually prioritize sales opportunities with automated workflow rules. Contact us to learn how color coding can transform your lead management process and increase sales productivity.</p>
+    </div>
+    </div>
+  </div>
+ 
+</footer>
+
+<!-- Common JavaScript -->
+<script src="content/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+
+
+
+
+<script>
+// Loading Screen
+window.addEventListener('load', function() {
+  const loadingScreen = document.getElementById('loading-screen');
+  setTimeout(function() {
+    loadingScreen.classList.add('hidden');
+  }, 800);
+});
+
+// Scroll to Top Button
+const scrollTopBtn = document.getElementById('scrollTopBtn');
+
+window.addEventListener('scroll', function() {
+  if (window.pageYOffset > 300) {
+    scrollTopBtn.classList.add('show');
+  } else {
+    scrollTopBtn.classList.remove('show');
+  }
+});
+
+scrollTopBtn.addEventListener('click', function() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  });
+});
+</script>
+
+</body>
+</html>

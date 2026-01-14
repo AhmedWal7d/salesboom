@@ -1,0 +1,1531 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    
+    <!-- Primary Meta Tags -->
+    <title>POP3 Email Integration for CRM | Salesboom Email Support</title>
+    <meta name="description" content="Manage POP3 email accounts directly within Salesboom CRM. Fully integrated email support with simple setup for seamless customer communication tracking.">
+    <meta name="keywords" content="POP3 email CRM, Email integration CRM, CRM email support, Integrated email management, POP3 email accounts, CRM communication tools, Email tracking CRM">
+    <link rel="canonical" href="https://www.salesboom.com/feature-pop3-email-support.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.salesboom.com/feature-pop3-email-support.html">
+    <meta property="og:title" content="POP3 Email Integration for CRM | Salesboom Email Support">
+    <meta property="og:description" content="Manage POP3 email accounts directly within Salesboom CRM. Fully integrated email support with simple setup for seamless customer communication tracking.">
+    <meta property="og:image" content="https://www.salesboom.com/img/feature-pop3-email-support-og.jpg">
+    <meta property="og:site_name" content="Salesboom CRM">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.salesboom.com/feature-pop3-email-support.html">
+    <meta name="twitter:title" content="POP3 Email Integration for CRM | Salesboom Email Support">
+    <meta name="twitter:description" content="Manage POP3 email accounts directly within Salesboom CRM. Fully integrated email support with simple setup for seamless customer communication tracking.">
+    <meta name="twitter:image" content="https://www.salesboom.com/img/feature-pop3-email-support-og.jpg">
+    <meta name="twitter:site" content="@SalesboomCloud">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Salesboom POP3 Email Integration",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web-based, Cloud",
+      "offers": {
+        "@type": "Offer",
+        "price": "14.00",
+        "priceCurrency": "USD",
+        "priceValidUntil": "2026-12-31"
+      },
+      "featureList": [
+        "POP3 and IMAP email protocol support",
+        "Web-based point-and-click configuration",
+        "Automatic email-to-customer record linking",
+        "Complete communication history tracking",
+        "Secure SSL/TLS encrypted connections",
+        "Universal email provider compatibility"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.5",
+        "ratingCount": "3500"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Salesboom",
+        "url": "https://www.salesboom.com",
+        "logo": "https://www.salesboom.com/img/salesboom-logo-252x67.png",
+        "foundingDate": "2003",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+1-855-229-2043",
+          "contactType": "Customer Service"
+        }
+      }
+    }
+    </script>
+    
+    <link rel="shortcut icon" href="https://www.salesboom.com/favicon.ico">
+
+    <link rel="stylesheet" href="content/css/bootstrap.min.css">
+    <link rel="stylesheet" href="content/css/salesboom-common.css">
+    <link rel="shortcut icon" href="content/image/salesboom-logo-252x67.png" type="image/x-icon"> 
+
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #002f6c;
+            --secondary-color: #0056b3;
+            --accent-color: #17a2b8;
+            --success-color: #28a745;
+            --text-dark: #212529;
+            --text-light: #6c757d;
+            --bg-light: #f8f9fa;
+            --border-color: #dee2e6;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Loading Screen */
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--primary-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease-out;
+        }
+        
+        #loading-screen.fade-out {
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        .loader {
+            width: 60px;
+            height: 60px;
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            border-top: 5px solid white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* Scroll to Top Button */
+        #scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 20px;
+            cursor: pointer;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 12px rgba(0, 47, 108, 0.3);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        
+        #scroll-top:hover {
+            background: var(--secondary-color);
+            transform: translateY(-5px);
+            box-shadow: 0 6px 16px rgba(0, 47, 108, 0.4);
+        }
+        
+        #scroll-top.show {
+            display: flex;
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #004080 100%);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-section h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 25px;
+            line-height: 1.2;
+        }
+        
+        .hero-section .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 35px;
+            opacity: 0.95;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        /* Buttons */
+        .btn-primary-custom {
+            background: white;
+            color: var(--primary-color);
+            padding: 16px 40px;
+            font-weight: 600;
+            border-radius: 8px;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            border: 2px solid white;
+        }
+        
+        .btn-primary-custom:hover {
+            background: transparent;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+        }
+        
+        .btn-outline-custom {
+            background: transparent;
+            color: white;
+            padding: 16px 40px;
+            font-weight: 600;
+            border-radius: 8px;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            border: 2px solid white;
+        }
+        
+        .btn-outline-custom:hover {
+            background: white;
+            color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+        
+        /* Stats Section */
+        .stats-section {
+            background: var(--text-dark);
+            color: white;
+            padding: 60px 0;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .stat-item h3 {
+            font-size: 3rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 10px;
+        }
+        
+        .stat-item p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        /* Content Sections */
+        .content-section {
+            padding: 80px 0;
+        }
+        
+        .content-section.bg-light-custom {
+            background: var(--bg-light);
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .section-header p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+        }
+        
+        /* Feature Cards */
+        .feature-card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            height: 100%;
+            border-top: 4px solid var(--primary-color);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 24px rgba(0, 47, 108, 0.15);
+        }
+        
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 32px;
+            margin-bottom: 25px;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .feature-card p {
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 0;
+        }
+        
+        .feature-card ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 15px;
+        }
+        
+        .feature-card li {
+            padding-left: 30px;
+            position: relative;
+            margin-bottom: 10px;
+            color: var(--text-light);
+        }
+        
+        .feature-card li::before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--success-color);
+        }
+        
+        /* Two Column Layout */
+        .two-column-section {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+        
+        .two-column-section.reverse {
+            flex-direction: row-reverse;
+        }
+        
+        .column-content h3 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .column-content h4 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .column-content p {
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+        
+        .column-content ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        
+        .column-content li {
+            padding-left: 30px;
+            position: relative;
+            margin-bottom: 15px;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+        
+        .column-content li::before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--success-color);
+        }
+        
+        .column-image img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Process Steps */
+        .process-step {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            height: 100%;
+            transition: all 0.3s ease;
+        }
+        
+        .process-step:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 16px rgba(0, 47, 108, 0.15);
+        }
+        
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin: 0 auto 25px;
+        }
+        
+        .process-step h3 {
+            font-size: 1.4rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .process-step p {
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+        
+        /* Benefits Section */
+        .benefits-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #004080 100%);
+            color: white;
+            padding: 80px 0;
+            position: relative;
+        }
+        
+        .benefit-item {
+            text-align: center;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        
+        .benefit-item:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-5px);
+        }
+        
+        .benefit-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .benefit-item p {
+            opacity: 0.95;
+            line-height: 1.7;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: var(--text-dark);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .cta-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+        
+        .cta-content p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Info Box */
+        .info-box {
+            background: #e8f4fd;
+            border-left: 4px solid var(--primary-color);
+            padding: 25px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+        
+        .info-box h4 {
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        
+        .info-box p {
+            color: var(--text-dark);
+            margin-bottom: 0;
+        }
+        
+        /* Use Case Cards */
+        .use-case-card {
+            background: white;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            height: 100%;
+            border-left: 5px solid var(--primary-color);
+            transition: all 0.3s ease;
+        }
+        
+        .use-case-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 6px 16px rgba(0, 47, 108, 0.15);
+        }
+        
+        .use-case-card h4 {
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero-section h1 {
+                font-size: 2.2rem;
+            }
+            
+            .section-header h2 {
+                font-size: 2rem;
+            }
+            
+            .two-column-section {
+                flex-direction: column !important;
+            }
+            
+            .stat-item h3 {
+                font-size: 2.5rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 60px 0;
+            }
+            
+            .hero-section h1 {
+                font-size: 1.8rem;
+            }
+            
+            .hero-section .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .content-section {
+                padding: 60px 0;
+            }
+            
+            .section-header h2 {
+                font-size: 1.8rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+            }
+            
+            .btn-primary-custom,
+            .btn-outline-custom {
+                width: 100%;
+                text-align: center;
+            }
+            
+            #scroll-top {
+                bottom: 20px;
+                right: 20px;
+                width: 45px;
+                height: 45px;
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+
+       <!-- Top Bar -->
+<div class="top-bar">
+  <div class="container">
+    <div class="top-bar-left text-color">
+      <span>✓ Award-Winning Cloud CRM Software Since 2003</span>
+    </div>
+    <ul class="top-bar-nav">
+      <li><a href="https://www.salesboom.com/crm_supportcenter/overview/index.html">Support Center</a></li>
+      <li><a href="https://www.salesboom.com/crm_trial.html">Free Trial</a></li>
+      <li><a href="https://www.salesboom.com/login.html">Login</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Main Header -->
+<header>
+  <div class="main-header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <a href="https://www.salesboom.com" aria-label="Salesboom CRM Home">
+            <img src="https://www.salesboom.com/img/salesboom-logo-252x67.png" alt="Salesboom Cloud CRM Logo" width="252" height="67">
+          </a>
+        </div>
+        <div class="header-phone">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          <a href="tel:+18552292043">1-855-229-2043</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Manage All Customer Emails Directly Within Your CRM</h1>
+                <p class="subtitle">Salesboom delivers fully integrated POP3 and IMAP email support, enabling seamless customer communication tracking without switching between platforms or losing critical context.</p>
+                <div class="hero-buttons">
+                    <a href="https://www.salesboom.com/request-crm-demo.html" class="btn-primary-custom">Book a Demo</a>
+                    <a href="https://www.salesboom.com/crm_trial.html" class="btn-outline-custom">Start Free Trial</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <div class="stat-item">
+                        <h3>2</h3>
+                        <p>Email Protocols Supported</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <div class="stat-item">
+                        <h3>22+</h3>
+                        <p>Years of Email Integration</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <div class="stat-item">
+                        <h3>100%</h3>
+                        <p>Native Integration</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-item">
+                        <h3>$0</h3>
+                        <p>Additional Cost</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 1: Problem Statement -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Email Integration is Critical for Modern CRM</h2>
+                <p>Email remains the dominant business communication medium</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 mx-auto">
+                    <p class="lead text-center mb-4">Email remains the dominant business communication medium, making it impossible to discuss effective Customer Relationship Management without robust email capabilities. Yet many CRM systems force teams to constantly switch between their email client and CRM platform, creating inefficiencies and data gaps.</p>
+                    
+                    <div class="row g-4 mt-4">
+                        <div class="col-md-6">
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-random"></i>
+                                </div>
+                                <h3>Lost Context</h3>
+                                <p>Customer conversations happening outside the CRM create disconnected data and incomplete interaction history</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-keyboard"></i>
+                                </div>
+                                <h3>Manual Data Entry</h3>
+                                <p>Time wasted manually logging email communications instead of focusing on customer relationships</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <h3>Productivity Loss</h3>
+                                <p>Constant application switching wastes hours weekly and disrupts workflow efficiency</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                </div>
+                                <h3>Missed Communications</h3>
+                                <p>Risk of missing important customer emails and follow-up commitments when systems are disconnected</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="info-box mt-5">
+                        <h4><i class="fas fa-lightbulb"></i> The Solution</h4>
+                        <p>Without integrated email, your CRM becomes just another database instead of a true command center for customer relationships.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Solution Overview -->
+    <section class="content-section bg-light-custom">
+        <div class="container">
+            <div class="section-header">
+                <h2>Fully Integrated Email Management Within Salesboom CRM</h2>
+                <p>The only On-Demand CRM with truly integrated email</p>
+            </div>
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6">
+                    <h3 class="mb-4" style="color: var(--primary-color); font-weight: 700;">True Integration, Not Add-Ons</h3>
+                    <p>Salesboom is the only On-Demand CRM that provides email fully integrated with your customer relationship management platform. We've eliminated the need to toggle between separate applications by bringing your email directly into the CRM workspace.</p>
+                    <p>Our comprehensive email integration supports both POP3 and IMAP protocols, giving you flexibility to manage virtually any email account directly within Salesboom. Whether you use standard business email, domain-specific accounts, or multiple email addresses across your organization, Salesboom centralizes all customer communications in one unified platform.</p>
+                </div>
+                <div class="col-lg-6">
+                    <img src="content/image/image1.jpg" alt="Integrated email management within CRM interface" class="img-fluid rounded shadow" loading="lazy">
+                </div>
+            </div>
+            
+            <div class="row g-4 mt-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                        <h3>Unified Workspace</h3>
+                        <p>Access and manage email without leaving the CRM interface—everything in one place</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-link"></i>
+                        </div>
+                        <h3>Automatic Association</h3>
+                        <p>Emails automatically link to customer records for complete communication history</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3>Seamless Workflow</h3>
+                        <p>From email to action items without switching applications or losing context</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: POP3 Email Support -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Comprehensive POP3 Email Account Management</h2>
+                <p>Maximum flexibility with dual protocol support</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <p class="lead text-center mb-5">Salesboom users can now manage their POP3 email accounts directly within the CRM platform, expanding our already robust IMAP support to provide maximum flexibility for diverse email infrastructure needs. POP3 (Post Office Protocol version 3) is one of the most widely-used email protocols, ensuring compatibility with virtually any email system your business uses.</p>
+                </div>
+            </div>
+            
+            <!-- Simple Setup -->
+            <div class="row align-items-center mb-5 pb-5">
+                <div class="col-lg-6">
+                    <h3 style="color: var(--primary-color); font-weight: 700; margin-bottom: 20px;">Simple Setup Process</h3>
+                    <p>Configuring your POP3 email accounts within Salesboom is remarkably straightforward, requiring no technical expertise or IT department involvement. Our web-based point-and-click interface guides you through the entire setup process in minutes.</p>
+                    
+                    <h4 style="color: var(--primary-color); font-weight: 600; margin-top: 25px; margin-bottom: 15px;">Configuration Steps:</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-3" style="padding-left: 30px; position: relative;">
+                            <i class="fas fa-check" style="position: absolute; left: 0; color: var(--success-color);"></i>
+                            Enter your POP3 email server details (provided by your email host)
+                        </li>
+                        <li class="mb-3" style="padding-left: 30px; position: relative;">
+                            <i class="fas fa-check" style="position: absolute; left: 0; color: var(--success-color);"></i>
+                            Input your email account credentials securely
+                        </li>
+                        <li class="mb-3" style="padding-left: 30px; position: relative;">
+                            <i class="fas fa-check" style="position: absolute; left: 0; color: var(--success-color);"></i>
+                            Configure synchronization preferences and folder management
+                        </li>
+                        <li class="mb-3" style="padding-left: 30px; position: relative;">
+                            <i class="fas fa-check" style="position: absolute; left: 0; color: var(--success-color);"></i>
+                            Set automatic email-to-CRM linking rules
+                        </li>
+                        <li class="mb-3" style="padding-left: 30px; position: relative;">
+                            <i class="fas fa-check" style="position: absolute; left: 0; color: var(--success-color);"></i>
+                            Test the connection to verify successful integration
+                        </li>
+                    </ul>
+                </div>
+                   <div class="col-lg-6">
+                    <h3 style="color: var(--primary-color); font-weight: 700; margin-bottom: 20px;">Universal Compatibility</h3>
+                    <p>Our POP3 email support works with email providers across the spectrum, from major platforms like Gmail, Outlook, and Yahoo to custom domain email hosted on private servers. This universal compatibility ensures Salesboom adapts to your existing email infrastructure rather than forcing you to change providers or create new accounts.</p>
+                    
+                    <h4 style="color: var(--primary-color); font-weight: 600; margin-top: 25px; margin-bottom: 15px;">Works With:</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2" style="padding-left: 30px; position: relative;">
+                            <i class="fas fa-check" style="position: absolute; left: 0; color: var(--success-color);"></i>
+                            Corporate email servers with POP3 enabled
+                        </li>
+                        <li class="mb-2" style="padding-left: 30px; position: relative;">
+                            <i class="fas fa-check" style="position: absolute; left: 0; color: var(--success-color);"></i>
+                            Small business email hosting services
+                        </li>
+                        <li class="mb-2" style="padding-left: 30px; position: relative;">
+                            <i class="fas fa-check" style="position: absolute; left: 0; color: var(--success-color);"></i>
+                            Personal email accounts for small teams
+                        </li>
+                        <li class="mb-2" style="padding-left: 30px; position: relative;">
+                            <i class="fas fa-check" style="position: absolute; left: 0; color: var(--success-color);"></i>
+                            Multiple email addresses across departments
+                        </li>
+                        <li class="mb-2" style="padding-left: 30px; position: relative;">
+                            <i class="fas fa-check" style="position: absolute; left: 0; color: var(--success-color);"></i>
+                            Legacy email systems requiring POP3 protocol
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 style="color: white;">Transform Email from Inbox Chaos to Strategic Asset</h2>
+                <p style="color: rgba(255,255,255,0.9);">When email integrates with CRM, it drives relationships and intelligence</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="benefit-item">
+                        <h3><i class="fas fa-history mb-3"></i><br>Complete Communication History</h3>
+                        <p>Every email automatically attaches to customer records, creating a comprehensive timeline that eliminates "Can you forward me that email?" requests.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="benefit-item">
+                        <h3><i class="fas fa-comments mb-3"></i><br>Contextual Interactions</h3>
+                        <p>Access complete context before responding—purchase history, support tickets, opportunities, and past communications in one unified view.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="benefit-item">
+                        <h3><i class="fas fa-ban mb-3"></i><br>No Manual Data Entry</h3>
+                        <p>Eliminate tedious copying of information from emails into the CRM—automatic integration saves hours weekly and prevents errors.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="benefit-item">
+                        <h3><i class="fas fa-stopwatch mb-3"></i><br>Time Savings</h3>
+                        <p>Stop switching between applications. Everything you need is in one place, dramatically improving productivity and workflow efficiency.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="benefit-item">
+                        <h3><i class="fas fa-users mb-3"></i><br>Team Collaboration</h3>
+                        <p>Shared access to customer email history enables seamless handoffs and consistent communication across your entire team.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="benefit-item">
+                        <h3><i class="fas fa-chart-line mb-3"></i><br>Better Insights</h3>
+                        <p>Analyze communication patterns, response times, and engagement levels to optimize customer relationship strategies.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Email Features Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Powerful Email Features Built Into Your CRM</h2>
+                <p>Everything you need for professional customer communication</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="process-step">
+                        <div class="step-number"><i class="fas fa-paper-plane"></i></div>
+                        <h3>Send & Receive</h3>
+                        <p>Full email functionality directly within the CRM interface</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="process-step">
+                        <div class="step-number"><i class="fas fa-file-alt"></i></div>
+                        <h3>Email Templates</h3>
+                        <p>Pre-built templates for consistent professional communication</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="process-step">
+                        <div class="step-number"><i class="fas fa-paperclip"></i></div>
+                        <h3>Attachments</h3>
+                        <p>Send and receive file attachments with automatic document linking</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="process-step">
+                        <div class="step-number"><i class="fas fa-search"></i></div>
+                        <h3>Advanced Search</h3>
+                        <p>Find any email instantly with powerful search and filtering</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="process-step">
+                        <div class="step-number"><i class="fas fa-user-tag"></i></div>
+                        <h3>Auto-Linking</h3>
+                        <p>Intelligent algorithms automatically associate emails with customer records</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="process-step">
+                        <div class="step-number"><i class="fas fa-tasks"></i></div>
+                        <h3>Task Creation</h3>
+                        <p>Convert emails to tasks with one click for follow-up tracking</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="process-step">
+                        <div class="step-number"><i class="fas fa-folder"></i></div>
+                        <h3>Organization</h3>
+                        <p>Folders and labels for systematic email management</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="process-step">
+                        <div class="step-number"><i class="fas fa-cogs"></i></div>
+                        <h3>Automation Rules</h3>
+                        <p>Auto-route emails and trigger actions based on content or sender</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Section -->
+    <section class="content-section bg-light-custom">
+        <div class="container">
+            <div class="section-header">
+                <h2>Enterprise-Grade Security for Business Email</h2>
+                <p>Comprehensive protection for sensitive communications</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <h3>Encrypted Connections</h3>
+                        <p>All email communications use SSL/TLS encryption to protect data in transit between servers and your browser.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Secure Authentication</h3>
+                        <p>Strong password requirements and optional two-factor authentication protect account access from unauthorized users.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <h3>Role-Based Permissions</h3>
+                        <p>Control which team members can access specific email accounts and customer communications based on their role.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-clipboard-list"></i>
+                        </div>
+                        <h3>Audit Trails</h3>
+                        <p>Complete logs of who accessed what emails and when, ensuring accountability and compliance support.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3>Data Backup</h3>
+                        <p>Regular automated backups protect against data loss and enable recovery if needed.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <h3>Compliance Support</h3>
+                        <p>Meet regulatory requirements for email retention and data protection with built-in compliance features.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Competitive Advantages -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Salesboom Leads in Email-CRM Integration</h2>
+                <p>Native integration built from the ground up</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-puzzle-piece"></i>
+                        </div>
+                        <h3>Native Integration</h3>
+                        <p>Built directly into Salesboom platform, not third-party plugins that break during updates</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h3>Dual Protocol Support</h3>
+                        <p>Both IMAP and POP3 protocols for unmatched flexibility and compatibility</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <h3>Zero Additional Cost</h3>
+                        <p>Email integration included in your subscription—no per-mailbox fees or integration costs</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-mouse-pointer"></i>
+                        </div>
+                        <h3>Simple Setup</h3>
+                        <p>Web-based point-and-click configuration—any user can set up without IT involvement</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-link"></i>
+                        </div>
+                        <h3>Automatic Linking</h3>
+                        <p>Intelligent algorithms automatically associate emails with correct customer records</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3>22+ Years Proven</h3>
+                        <p>Pioneers in On-Demand CRM with over two decades of continuous innovation</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section class="content-section bg-light-custom">
+        <div class="container">
+            <div class="section-header">
+                <h2>Real-World Applications Across Industries</h2>
+                <p>Value delivered across diverse business scenarios</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="use-case-card">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4>Sales Teams</h4>
+                        <p>Sales professionals manage all prospect and customer communications within the CRM, ensuring every conversation is captured and accessible. They can review complete email history before calls, create opportunities from email inquiries, and collaborate with colleagues on complex deals—all without leaving Salesboom.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="use-case-card">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h4>Customer Support</h4>
+                        <p>Support teams handle customer inquiries via email directly within the CRM, automatically creating support tickets and linking them to customer accounts. They access complete customer history and previous support interactions, enabling faster, more informed responses.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="use-case-card">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h4>Account Management</h4>
+                        <p>Account managers maintain ongoing client relationships through email while keeping complete communication records within customer accounts. They can track engagement levels, identify at-risk accounts based on communication patterns, and ensure consistent service delivery.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="use-case-card">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-store"></i>
+                        </div>
+                        <h4>Small Business Owners</h4>
+                        <p>Entrepreneurs and small business owners manage all customer communications in one place, eliminating the chaos of scattered emails across multiple platforms. They can quickly find any customer conversation and track all interactions without complex filing systems.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-12">
+                    <div class="use-case-card">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h4>Distributed Teams</h4>
+                        <p>Remote and distributed teams collaborate effectively with shared access to customer emails within the CRM. Team members in different locations and time zones can seamlessly hand off conversations and provide consistent customer experiences, all while maintaining complete communication visibility.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Unify Your Email and CRM?</h2>
+                <p>Stop switching between your inbox and CRM. Experience truly integrated email management that keeps all customer communications in one place with complete context and history.</p>
+                <div class="hero-buttons">
+                    <a href="https://www.salesboom.com/request-crm-demo.html" class="btn-primary-custom">Book a Demo Today</a>
+                    <a href="https://www.salesboom.com/crm_trial.html" class="btn-outline-custom" style="border-color: white; color: white;">Start Free Trial</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-2">
+      <h3 class="fw-bold text-color">
+        <i class="fa-solid fa-layer-group me-2"></i>
+        Explore Salesboom Editions
+      </h3>
+      <p class="text-muted">Discover powerful CRM editions to scale your business efficiently.</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-briefcase fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Professional Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              A complete CRM suite with Marketing Automation, ERP integration, and Support tools — built for performance and value.
+            </p>
+            <a href="https://www.salesboom.com/editions/professional-edition.html" class="btn btn-color mt-auto">
+              Explore Professional <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-building fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Enterprise Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              For large enterprises — automate workflows, unify data, and leverage analytics to drive strategic growth.
+            </p>
+            <a href="https://www.salesboom.com/editions/enterprise-edition.html" class="btn btn-color mt-auto">
+              View Enterprise <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-users fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Team Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              Perfect for small teams starting with CRM — manage leads, track sales, and boost productivity with simplicity.
+            </p>
+            <a href="https://www.salesboom.com/editions/team-edition.html" class="btn btn-color mt-auto">
+           Discover Team<i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="container py-5">
+  <h2 class="text-center mb-5">CRM Email, Integration & Automation Features</h2>
+  <div class="row g-4">
+
+    <!-- Card 1 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-envelope text-color fa-3x mb-3"></i>
+        <h4>Email Tools</h4>
+        <p>
+          Use built-in email tools to manage communications directly from the CRM — <a href="https://www.salesboom.com/products/tools-email.html" class="text-color fw-bold">Explore Email Tools</a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-inbox text-color fa-3x mb-3"></i>
+        <h4>CRM Email Integration</h4>
+        <p>
+          Integrate email workflows into your CRM for seamless communication — check <a href="https://www.salesboom.com/products/crm-with-email.html" class="text-color fw-bold">CRM with Email Integration</a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-inbox text-color fa-3x mb-3"></i>
+        <h4>Outlook Integration</h4>
+        <p>
+          Connect with Outlook to sync contacts and emails — follow the <a href="https://www.salesboom.com/products/crm-outlook-integration-instructions.html" class="text-color fw-bold">Outlook Integration Instructions</a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-chart-pie text-color fa-3x mb-3"></u></i>
+        <h4>Sales Intelligence & Analytics</h4>
+        <p>
+          Gain insights, analytics, and reporting tools to improve decision-making — view <a href="https://www.salesboom.com/integrated-crm/sales_intelligence_content.html" class="text-color fw-bold">Sales Intelligence Features</a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-rocket text-color fa-3x mb-3"></i>
+        <h4>Sales Automation Tools</h4>
+        <p>
+          Automate leads, sales pipeline, and follow-ups for better efficiency — explore <a href="https://www.salesboom.com/sales-automation/sales_automation_content.html" class="text-color fw-bold">Sales Automation Tools</a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-headset text-color fa-3x mb-3"></i>
+        <h4>Self-Service Portal</h4>
+        <p>
+          Provide customers with a self-service portal for support and service management — check <a href="https://www.salesboom.com/service-management/web-based_self_service_portal_software.html" class="text-color fw-bold">Self-Service Portal Software</a>.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="mt-5 footer">
+  <div class="container mt-5 pt-5">
+    <div class="footer-grid">
+      <div class="footer-section">
+        <h3>Products</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/products/tools-sfa.html">Sales Force Automation</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-marketing.html">Marketing Automation</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-casemanagement.html">Case Management</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-reporting.html">Business Intelligence</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-emailintegration.html">Email Integration</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Solutions</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/products/edition-team.html">Team Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/edition-professional.html">Professional Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/edition-enterprise.html">Enterprise Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/industry-solutions.html">Industry Solutions</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/company/index.html">About Us</a></li>
+          <li><a href="https://www.salesboom.com/company/company-contact.html">Contact Us</a></li>
+          <li><a href="https://www.salesboom.com/customers/index.html">Customers</a></li>
+          <li><a href="https://www.salesboom.com/partners/index.html">Partners</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/support/index.html">Support Center</a></li>
+          <li><a href="https://www.salesboom.com/crm_supportcenter/overview/index.html">Documentation</a></li>
+          <li><a href="https://www.salesboom.com/whitepapers/index.html">White Papers</a></li>
+          <li><a href="https://www.salesboom.com/pop-privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="bg-color">
+    <div class="container">
+     <div class="footer-bottom pb-3 mt-3">
+      <p>&copy; 2003-2025 <a class="text-white fw-bold" href="https://www.salesboom.com">Salesboom.com</a> Inc. All rights reserved. | Call: 1-855-229-2043</p>
+      <p style="margin-top: 10px;">Salesboom's color-coded CRM lead management software helps businesses visually prioritize sales opportunities with automated workflow rules. Contact us to learn how color coding can transform your lead management process and increase sales productivity.</p>
+    </div>
+    </div>
+  </div>
+ 
+</footer>
+
+<!-- Common JavaScript -->
+<script src="content/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+
+
+    <script>
+        // Loading screen fade out
+        window.addEventListener('load', function() {
+            const loadingScreen = document.getElementById('loading-screen');
+            setTimeout(function() {
+                loadingScreen.classList.add('fade-out');
+                setTimeout(function() {
+                    loadingScreen.style.display = 'none';
+                }, 500);
+            }, 500);
+        });
+        
+        // Scroll to top button
+        const scrollTopBtn = document.getElementById('scroll-top');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                scrollTopBtn.classList.add('show');
+            } else {
+                scrollTopBtn.classList.remove('show');
+            }
+        });
+        
+        scrollTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

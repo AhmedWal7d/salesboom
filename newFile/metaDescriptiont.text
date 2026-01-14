@@ -1,0 +1,93 @@
+
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+<!-- Primary Meta Tags - TO BE FILLED BY AI -->
+<title>[PAGE_TITLE]</title>
+<meta name="description" content="[META_DESCRIPTION]">
+<meta name="keywords" content="[KEYWORDS]">
+<link rel="canonical" href="https://www.salesboom.com/[URL_SLUG].html">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.salesboom.com/[URL_SLUG].html">
+<meta property="og:title" content="[PAGE_TITLE]">
+<meta property="og:description" content="[META_DESCRIPTION]">
+<meta property="og:image" content="https://www.salesboom.com/img/[URL_SLUG]-og.jpg">
+<meta property="og:site_name" content="Salesboom CRM">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://www.salesboom.com/[URL_SLUG].html">
+<meta name="twitter:title" content="[PAGE_TITLE]">
+<meta name="twitter:description" content="[META_DESCRIPTION]">
+<meta name="twitter:image" content="https://www.salesboom.com/img/[URL_SLUG]-og.jpg">
+<meta name="twitter:site" content="@SalesboomCloud">
+
+<!-- Schema.org structured data - TO BE FILLED BY AI -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "[PRODUCT_NAME]",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web-based, Cloud",
+  "offers": {
+    "@type": "Offer",
+    "price": "14.00",
+    "priceCurrency": "USD",
+    "priceValidUntil": "2026-12-31"
+  },
+  "featureList": [
+    "[FEATURE_1]",
+    "[FEATURE_2]",
+    "[FEATURE_3]"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.5",
+    "ratingCount": "3500"
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "Salesboom",
+    "url": "https://www.salesboom.com",
+    "logo": "https://www.salesboom.com/img/salesboom-logo-252x67.png",
+    "foundingDate": "2003",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-855-229-2043",
+      "contactType": "Customer Service"
+    }
+  }
+}
+</script>
+
+<link rel="shortcut icon" href="https://www.salesboom.com/favicon.ico">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+</head>
+
+
+
+  I will give you an text file.
+  Please rebuild it using Bootstrap following these rules:
+
+  The header name should be: [  name_file  ].
+
+  Replace every URL_SLUG in the meta tags with [name_file ].
+
+  Add a loading screen before the content appears.
+
+  Include a scroll-to-top button.
+
+  title section center in page
+
+  Use the color #002f6c as the main theme color for the website.
+
+  Do not include a navbar or a footer and top-navbar in the layout.
+
+  used font awesome library the icon 

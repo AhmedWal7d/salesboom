@@ -1,0 +1,1603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    
+    <!-- Primary Meta Tags -->
+    <title>Salesboom A2A Protocol: Interoperable AI Agents</title>
+    <meta name="description" content="Salesboom adopts Agent2Agent Protocol for autonomous AI agent interoperability. Enable dynamic agent discovery, secure negotiations, and seamless integrations.">
+    <meta name="keywords" content="Agent2Agent protocol, A2A protocol, AI agent interoperability, autonomous AI agents, agent discovery, AI integration, Model Context Protocol, agentic AI, AI agent ecosystem">
+    <link rel="canonical" href="https://www.salesboom.com/agent2agent-a2a-protocol.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.salesboom.com/agent2agent-a2a-protocol.html">
+    <meta property="og:title" content="Salesboom A2A Protocol: Interoperable AI Agents">
+    <meta property="og:description" content="Salesboom adopts Agent2Agent Protocol for autonomous AI agent interoperability. Enable dynamic agent discovery, secure negotiations, and seamless integrations.">
+    <meta property="og:image" content="https://www.salesboom.com/img/agent2agent-a2a-protocol-og.jpg">
+    <meta property="og:site_name" content="Salesboom CRM">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.salesboom.com/agent2agent-a2a-protocol.html">
+    <meta name="twitter:title" content="Salesboom A2A Protocol: Interoperable AI Agents">
+    <meta name="twitter:description" content="Salesboom adopts Agent2Agent Protocol for autonomous AI agent interoperability. Enable dynamic agent discovery, secure negotiations, and seamless integrations.">
+    <meta name="twitter:image" content="https://www.salesboom.com/img/agent2agent-a2a-protocol-og.jpg">
+    <meta name="twitter:site" content="@SalesboomCloud">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Salesboom Agent2Agent Protocol Platform",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web-based, Cloud",
+      "offers": {
+        "@type": "Offer",
+        "price": "14.00",
+        "priceCurrency": "USD",
+        "priceValidUntil": "2026-12-31"
+      },
+      "featureList": [
+        "Dynamic agent discovery and registration",
+        "Secure agent-to-agent negotiations with mTLS",
+        "Autonomous task execution without custom integrations",
+        "Vectorized data engine for semantic understanding",
+        "Agent orchestration and state management",
+        "Pre-built Universal Agent catalog"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.5",
+        "ratingCount": "3500"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Salesboom",
+        "url": "https://www.salesboom.com",
+        "logo": "https://www.salesboom.com/img/salesboom-logo-252x67.png",
+        "foundingDate": "2003",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+1-855-229-2043",
+          "contactType": "Customer Service"
+        }
+      }
+    }
+    </script>
+    
+    <link rel="shortcut icon" href="https://www.salesboom.com/favicon.ico">
+    
+
+    <link rel="stylesheet" href="content/css/bootstrap.min.css">
+    <link rel="stylesheet" href="content/css/salesboom-common.css">
+    <link rel="shortcut icon" href="content/image/salesboom-logo-252x67.png" type="image/x-icon"> 
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #002f6c;
+            --secondary-color: #0052b4;
+            --accent-color: #00a8e8;
+            --text-dark: #1a1a1a;
+            --text-light: #666;
+            --bg-light: #f8f9fa;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Loading Screen */
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease-out;
+        }
+        
+        #loading-screen.fade-out {
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        .loader {
+            width: 60px;
+            height: 60px;
+            border: 6px solid rgba(255, 255, 255, 0.2);
+            border-top-color: #fff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Scroll to Top Button */
+        #scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 20px;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0, 47, 108, 0.3);
+        }
+        
+        #scroll-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        #scroll-top:hover {
+            background: var(--secondary-color);
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0, 47, 108, 0.4);
+        }
+        
+        /* Hero Section with Centered Title */
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 120px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-section h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 25px;
+            line-height: 1.2;
+        }
+        
+        .hero-section .subtitle {
+            font-size: 1.4rem;
+            opacity: 0.95;
+            max-width: 900px;
+            margin: 0 auto 40px;
+        }
+        
+        .hero-cta {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+        
+        .btn-primary-custom {
+            background: white;
+            color: var(--primary-color);
+            padding: 16px 40px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn-primary-custom:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            color: var(--primary-color);
+        }
+        
+        .btn-outline-custom {
+            background: transparent;
+            color: white;
+            padding: 16px 40px;
+            border: 2px solid white;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-outline-custom:hover {
+            background: white;
+            color: var(--primary-color);
+        }
+        
+        /* Stats Section */
+        .stats-section {
+            background: var(--primary-color);
+            color: white;
+            padding: 60px 0;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .stat-item h3 {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--accent-color);
+            margin-bottom: 10px;
+        }
+        
+        .stat-item p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        /* Content Sections */
+        .content-section {
+            padding: 80px 0;
+        }
+        
+        .content-section.bg-light {
+            background: var(--bg-light);
+        }
+        
+        .section-header {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto 60px;
+        }
+        
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .section-header p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+        }
+        
+        /* Feature Cards */
+        .feature-card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            height: 100%;
+            border-top: 4px solid var(--primary-color);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 30px rgba(0, 47, 108, 0.15);
+        }
+        
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            color: white;
+            margin-bottom: 25px;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .feature-card p, .feature-card ul {
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+        
+        .feature-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .feature-card ul li {
+            padding-left: 30px;
+            position: relative;
+            margin-bottom: 12px;
+        }
+        
+        .feature-card ul li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        /* Architecture Layers */
+        .layer-card {
+            background: white;
+            border-left: 5px solid var(--primary-color);
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+        }
+        
+        .layer-card h4 {
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        .layer-card .role {
+            color: var(--secondary-color);
+            font-weight: 600;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+        
+        /* Use Cases */
+        .use-case-card {
+            background: linear-gradient(135deg, var(--bg-light) 0%, white 100%);
+            padding: 35px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(0, 47, 108, 0.1);
+        }
+        
+        .use-case-card h4 {
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .before-after {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .before, .after {
+            padding: 20px;
+            border-radius: 8px;
+        }
+        
+        .before {
+            background: rgba(220, 53, 69, 0.1);
+            border-left: 4px solid #dc3545;
+        }
+        
+        .after {
+            background: rgba(40, 167, 69, 0.1);
+            border-left: 4px solid #28a745;
+        }
+        
+        .before h5, .after h5 {
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        /* Timeline */
+        .timeline-section {
+            padding: 40px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+        
+        .timeline-item {
+            padding: 25px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--primary-color);
+            background: var(--bg-light);
+            border-radius: 8px;
+        }
+        
+        .timeline-item h4 {
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        
+        .timeline-item ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .timeline-item ul li {
+            padding-left: 25px;
+            position: relative;
+            margin-bottom: 10px;
+            color: var(--text-light);
+        }
+        
+        .timeline-item ul li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: var(--primary-color);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .cta-section p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero-section .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .section-header h2 {
+                font-size: 2rem;
+            }
+            
+            .before-after {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn-primary-custom,
+            .btn-outline-custom {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+
+
+    
+    <!-- Top Bar -->
+<div class="top-bar">
+  <div class="container">
+    <div class="top-bar-left text-color">
+      <span>✓ Award-Winning Cloud CRM Software Since 2003</span>
+    </div>
+    <ul class="top-bar-nav">
+      <li><a href="https://www.salesboom.com/crm_supportcenter/overview/index.html">Support Center</a></li>
+      <li><a href="https://www.salesboom.com/crm_trial.html">Free Trial</a></li>
+      <li><a href="https://www.salesboom.com/login.html">Login</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Main Header -->
+<header>
+  <div class="main-header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <a href="https://www.salesboom.com" aria-label="Salesboom CRM Home">
+            <img src="https://www.salesboom.com/img/salesboom-logo-252x67.png" alt="Salesboom Cloud CRM Logo" width="252" height="67">
+          </a>
+        </div>
+        <div class="header-phone">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          <a href="tel:+18552292043">1-855-229-2043</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+
+
+    <!-- Hero Section with Centered Title -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1>From Siloed Automation to Intelligent Agent Ecosystems</h1>
+                <p class="subtitle">Salesboom adopts the Agent2Agent Protocol, enabling autonomous AI agents to discover, negotiate, and execute tasks without human intervention or custom integrations.</p>
+               
+                
+                
+                <a href="enterprise-ai-agents-crm.html" class="text-white  border-bottom border-white">Back to AI Agents Overview<i class="fa-solid fa-arrow-right mx-3"></i></a>
+                <div class="hero-cta pt-0 mt-3">
+                    <a href="https://www.salesboom.com/request-crm-demo.html" class="btn-primary-custom">Book a Demo</a>
+                    <a href="https://www.salesboom.com/crm_trial.html" class="btn-outline-custom">Start Free Trial</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-6">
+                    <div class="stat-item">
+                        <h3>22+</h3>
+                        <p>Years of CRM Innovation</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-item">
+                        <h3>3,500+</h3>
+                        <p>Businesses Transformed</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-item">
+                        <h3>159</h3>
+                        <p>Countries Served</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-item">
+                        <h3>24/7</h3>
+                        <p>Agent Monitoring</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 1: Strategic Shift -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Agent2Agent Protocol Matters for Modern Business</h2>
+                <p>A fundamental transformation in how AI agents communicate and collaborate</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <p class="lead mb-4">Salesboom is adopting the Agent2Agent (A2A) Protocol, backed by Google, Anthropic, and other leading SaaS and AI vendors. This represents a fundamental shift from "siloed automation" to an interoperable agent ecosystem, complemented by Model Context Protocol (MCP) support.</p>
+                    
+                    <p class="mb-4">This transformation ensures your AI agents aren't just powerful in isolation—they are now "socially compliant" and able to negotiate with external agents across supply chain, procurement, HR systems, and more, without brittle custom API integrations.</p>
+                    
+                    <p class="mb-4">The A2A standard (JSON-RPC over HTTP with Agent Cards for discovery) solves the biggest bottleneck in agentic AI: Discovery and Handshake.</p>
+                    
+                    <div class="row mt-5">
+                        <div class="col-md-6 mb-4">
+                            <div class="before">
+                                <h5><i class="fas fa-times-circle text-danger me-2"></i>Before (Legacy Approach)</h5>
+                                <p>Organizations had to hard-code integrations between systems. For example: "If lead score exceeds 80, POST to X endpoint." Every connection required custom development, ongoing maintenance, and broke when schemas changed.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="after">
+                                <h5><i class="fas fa-check-circle text-success me-2"></i>Now (A2A Protocol)</h5>
+                                <p>Your agents broadcast an Agent Card. External agents—or other internal Salesboom agents—can discover your agent's capabilities dynamically ("I can update pricing," "I can schedule meetings") and negotiate tasks autonomously without human intervention.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Core Platform Transformation -->
+    <section class="content-section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>How A2A Protocol Transforms Salesboom's Core Infrastructure</h2>
+                <p>Deep integration across every layer of the platform</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                  <i class="fa-solid fa-cloud"></i>
+                        </div>
+                        <h3>Integration Station: Agent Gateway</h3>
+                        <p>The Integration Station has evolved from a simple field-mapping tool into a sophisticated Translation Layer and Agent Gateway.</p>
+                        <ul class="mt-3">
+                            <li>Acts as HTTP Server for JSON-RPC messages</li>
+                            <li>Routes requests to appropriate internal agents</li>
+                            <li>Validates handshakes using mTLS for security</li>
+                            <li>Eliminates traditional field mapping</li>
+                            <li>Enables secure external agent communication</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3>CRM & Data Engine: System of Record</h3>
+                        <p>The CRM and Data Engine serve as the "Ground Truth" that agents consult with secure, opaque, and fully auditable interactions.</p>
+                        <ul class="mt-3">
+                            <li>Automatic Vectorization for semantic searches</li>
+                            <li>Context Window Management for optimal performance</li>
+                            <li>Hybrid Architecture (SQL + vector capabilities)</li>
+                            <li>Retrieval Augmented Generation (RAG)</li>
+                            <li>Grounding Against Hallucination</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-traffic-light"></i>
+                        </div>
+                        <h3>Agent Management System: Air Traffic Control</h3>
+                        <p>The AMS tracks the state of conversations between agents, acting as the runtime environment and orchestrator.</p>
+                        <ul class="mt-3">
+                            <li>State Machine Management for all interactions</li>
+                            <li>Long-Running Task Monitoring</li>
+                            <li>Policy Enforcement before execution</li>
+                            <li>Confidence-Based Flagging for human review</li>
+                            <li>Reinforcement Learning Integration (RLHF)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Blogs -->
+<section class="container py-5">
+  <h2 class="text-center mb-5 text-color">AI & CRM Insights — Salesboom Blog</h2>
+
+  <div class="row g-4">
+
+    <!-- Card 1 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-robot text-color fa-2x mb-3"></i>
+        <h4>AI Agent Overview</h4>
+        <p>
+          Understand how AI agents transform workflow efficiency and CRM usage in
+          <a href="https://blog.salesboom.com/AI-Agent" class="text-color fw-bold">
+            AI Agent
+          </a> blog.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-robot text-color fa-2x mb-3"></i>
+        <h4>AI Agent vs Chatbot</h4>
+        <p>
+          Explore differences between autonomous AI agents and chatbots in
+          <a href="https://blog.salesboom.com/AI-Agent-vs-Chatbot" class="text-color fw-bold">
+            AI Agent vs Chatbot
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-chart-line text-color fa-2x mb-3"></i>
+        <h4>AI Agent for Sales</h4>
+        <p>
+          Learn how AI agents boost sales productivity and pipeline performance in
+          <a href="https://blog.salesboom.com/AI-Agent-Sales" class="text-color fw-bold">
+            AI Agent Sales
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-bullhorn text-color fa-2x mb-3"></i>
+        <h4>AI Agent for Marketing</h4>
+        <p>
+          Discover how AI agents automate campaigns and audience segmentation in
+          <a href="https://blog.salesboom.com/AI-Agent-Marketing" class="text-color fw-bold">
+            AI Agent Marketing
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-headset text-color fa-2x mb-3"></i>
+        <h4>AI Customer Support</h4>
+        <p>
+          See how AI accelerates support and reduces ticket handling time in
+          <a href="https://blog.salesboom.com/AI-Agent-Customer-Support" class="text-color fw-bold">
+            AI Agent Customer Support
+          </a>.
+        </p>
+      </div>
+    </div>
+
+ 
+
+    <!-- Card 8 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-gear text-color fa-2x mb-3"></i>
+        <h4>AI & CRM Features</h4>
+        <p>
+          Deep dive into AI-powered CRM capabilities in
+          <a href="https://blog.salesboom.com/AI-CRM-Features" class="text-color fw-bold">
+            AI CRM Features
+          </a>.
+        </p>
+      </div>
+    </div>
+
+
+
+  </div>
+</section>
+
+
+    <!-- Section 3: Four-Layer Architecture -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>The Four-Layer Architecture Powering Agent Intelligence</h2>
+                <p>A complete autonomous agent ecosystem working in unison</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="layer-card">
+                        <h4><i class="fas fa-brain me-2"></i>Layer 1: The "Brain" Layer - AMS + Promptuit</h4>
+                        <p class="role">Role: Cognitive Processing & Governance</p>
+                        <ul>
+                            <li><strong>Promptuit (The SOP Library):</strong> Stores the "personality" and "rules" of agents. Instead of hard-coding logic, Promptuit manages system prompts with specific behavioral guidelines.</li>
+                            <li><strong>Gemini Integration:</strong> The AMS pipes these prompts into Google Gemini models via API to generate reasoning and responses.</li>
+                            <li><strong>State Management:</strong> Maintains memory and context across interactions, ensuring agents don't "forget" mid-conversation.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="layer-card">
+                        <h4><i class="fas fa-network-wired me-2"></i>Layer 2: The "Nervous System" - Integration Station</h4>
+                        <p class="role">Role: Communication & Translation</p>
+                        <ul>
+                            <li><strong>Protocol Translation:</strong> Acts as HTTP Server for JSON-RPC messages, listening for incoming Agent Cards.</li>
+                            <li><strong>Standardized Handshake:</strong> When external agents announce capabilities, Integration Station validates using mTLS, then registers capabilities dynamically.</li>
+                            <li><strong>Semantic Understanding:</strong> Eliminates traditional field mapping—agents understand intent rather than requiring exact schema matches.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="layer-card">
+                        <h4><i class="fas fa-memory me-2"></i>Layer 3: The "Memory" Layer - Data Engine</h4>
+                        <p class="role">Role: Context & Grounding</p>
+                        <ul>
+                            <li><strong>Addresses Hallucination:</strong> Provides factual grounding so agents work with real data, not fabricated information.</li>
+                            <li><strong>Vectorization:</strong> Stores not just "John Doe bought a shed" but vectorizes context ("John Doe is a high-value DIY customer").</li>
+                            <li><strong>Efficient Retrieval:</strong> Retrieves only relevant context slices, keeping token counts manageable while maintaining accuracy.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="layer-card">
+                        <h4><i class="fas fa-hands-helping me-2"></i>Layer 4: The "Hands" Layer - IFTTTAOE</h4>
+                        <p class="role">Role: Task Execution</p>
+                        <ul>
+                            <li><strong>Action Execution:</strong> When an agent decides "Send Invoice to customer@example.com," the IFTTTAOE layer actually performs the action.</li>
+                            <li><strong>Workflow Orchestration:</strong> Manages complex multi-step processes and ensures proper sequencing of actions.</li>
+                            <li><strong>Error Handling:</strong> Provides robust error handling and rollback capabilities for failed operations.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="container">
+      <img src="content/image/A2A-agent-to-agent-image.png" class="mx-auto rounded-3" alt="">
+    </div>
+
+    <!-- Section 4: Universal Agents Catalog -->
+    <section class="content-section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Pre-Built Universal Agents: Deploy Intelligence in Minutes</h2>
+                <p>No training required—just activate and configure</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-money-check-alt"></i>
+                        </div>
+                        <h3>Collections Agent</h3>
+                        <p>Autonomously contacts overdue customers, negotiates payment plans, and escalates based on risk scores.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <h3>Meeting Scheduler</h3>
+                        <p>Finds optimal meeting times across multiple calendars and handles all scheduling communications.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h3>Lead Qualifier</h3>
+                        <p>Engages inbound leads with intelligent conversations to assess fit and routing priority.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shipping-fast"></i>
+                        </div>
+                        <h3>Procurement Agent</h3>
+                        <p>Negotiates with supplier agents for pricing, delivery, and inventory without manual RFPs.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3>Support Triage</h3>
+                        <p>Routes support tickets to appropriate experts based on content analysis and sentiment.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-file-contract"></i>
+                        </div>
+                        <h3>Contract Reviewer</h3>
+                        <p>Analyzes contracts for risk factors, compliance issues, and unfavorable terms before signing.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Forecast Agent</h3>
+                        <p>Analyzes pipeline data, historical patterns, and market signals to generate revenue predictions.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email Responder</h3>
+                        <p>Drafts contextual email responses based on sender history and company policies.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Real-World Use Cases -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Real-World Use Cases: Autonomous Agents in Action</h2>
+                <p>See how A2A Protocol transforms business operations</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="use-case-card">
+                        <h4><i class="fas fa-industry me-2"></i>Manufacturing: Supply Chain Coordination</h4>
+                        <div class="before-after">
+                            <div class="before">
+                                <h5>Before A2A</h5>
+                                <p>Procurement manager manually emails 5 suppliers, waits for quotes, compares in spreadsheets, negotiates via phone, creates PO in ERP system. Timeline: 3-5 days.</p>
+                            </div>
+                            <div class="after">
+                                <h5>With A2A Protocol</h5>
+                                <p>Procurement Agent detects low inventory, broadcasts RFQ to supplier agents via A2A, receives quotes in minutes, selects best option based on policy, generates PO automatically. Timeline: 15 minutes.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="use-case-card">
+                        <h4><i class="fas fa-dollar-sign me-2"></i>Professional Services: Collections Automation</h4>
+                        <div class="before-after">
+                            <div class="before">
+                                <h5>Before A2A</h5>
+                                <p>AR clerk reviews aging report, sends generic reminder emails, manually follows up with calls, escalates to management for payment plans. Success rate: 45% within 30 days.</p>
+                            </div>
+                            <div class="after">
+                                <h5>With A2A Protocol</h5>
+                                <p>Collections Agent analyzes payment history and sentiment, sends personalized messages, negotiates payment plans within policy limits, escalates only high-risk cases. Success rate: 72% within 30 days.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="use-case-card">
+                        <h4><i class="fas fa-building me-2"></i>Real Estate: Property Management</h4>
+                        <div class="before-after">
+                            <div class="before">
+                                <h5>Before A2A</h5>
+                                <p>Tenant submits maintenance request via email, office manager assigns to maintenance vendor, vendor schedules via phone, tenant asks for updates. Timeline: 3-7 days to resolution.</p>
+                            </div>
+                            <div class="after">
+                                <h5>With A2A Protocol</h5>
+                                <p>Tenant submits request via portal, Support Agent triages urgency, Procurement Agent negotiates with vendor agents for fastest response, tenant receives real-time updates. Timeline: 4-24 hours.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Security Architecture -->
+    <section class="content-section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Zero-Trust Security Architecture</h2>
+                <p>Enterprise-grade protection for agent communications</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <h3>mTLS Authentication</h3>
+                        <p>Mutual TLS ensures both parties verify identities before any data exchange. No unauthorized agents can communicate with your systems.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Granular Scopes</h3>
+                        <p>OAuth-style scopes limit what each agent can access. "Read leads" doesn't grant "Delete accounts" permissions.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-user-check"></i>
+                        </div>
+                        <h3>Human-in-the-Loop</h3>
+                        <p>Critical decisions require human approval. Agents flag high-risk actions and wait for confirmation before proceeding.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-clipboard-list"></i>
+                        </div>
+                        <h3>Complete Audit Trails</h3>
+                        <p>Every agent action is logged with timestamps, rationale, and outcomes for compliance and forensic analysis.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-eye-slash"></i>
+                        </div>
+                        <h3>Opaque Architecture</h3>
+                        <p>External agents never see internal database schemas or business logic—only the capabilities you choose to expose.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-ban"></i>
+                        </div>
+                        <h3>Policy Enforcement</h3>
+                        <p>Built-in governance prevents agents from exceeding approval limits, violating compliance rules, or making unauthorized decisions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-2">
+      <h3 class="fw-bold text-color">
+        <i class="fa-solid fa-layer-group me-2"></i>
+        Explore Salesboom Editions
+      </h3>
+      <p class="text-muted">Discover powerful CRM editions to scale your business efficiently.</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-briefcase fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Professional Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              A complete CRM suite with Marketing Automation, ERP integration, and Support tools — built for performance and value.
+            </p>
+            <a href="https://www.salesboom.com/editions/professional-edition.html" class="btn btn-color mt-auto">
+              Explore Professional <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-building fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Enterprise Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              For large enterprises — automate workflows, unify data, and leverage analytics to drive strategic growth.
+            </p>
+            <a href="https://www.salesboom.com/editions/enterprise-edition.html" class="btn btn-color mt-auto">
+              View Enterprise <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-users fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Team Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              Perfect for small teams starting with CRM — manage leads, track sales, and boost productivity with simplicity.
+            </p>
+            <a href="https://www.salesboom.com/editions/team-edition.html" class="btn btn-color mt-auto">
+           Discover Team<i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Section 7: Competitive Advantages -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>The Salesboom Advantage: Why Businesses Choose Our A2A Implementation</h2>
+                <p>Comprehensive platform capabilities backed by 22+ years of CRM innovation</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-plug"></i>
+                        </div>
+                        <h3>Industry-Standard A2A Protocol</h3>
+                        <p>Built on open standards backed by Google and Anthropic—not proprietary technology. This ensures:</p>
+                        <ul class="mt-3">
+                            <li>Compatibility with the broader AI ecosystem</li>
+                            <li>Future-proof architecture that evolves with standards</li>
+                            <li>No vendor lock-in for agent communications</li>
+                            <li>Access to expanding ecosystem of third-party agents</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+                        <h3>Complete Platform Integration</h3>
+                        <p>Unlike bolt-on agent solutions, A2A is deeply integrated across:</p>
+                        <ul class="mt-3">
+                            <li>Integration Station (gateway layer)</li>
+                            <li>CRM and Data Engine (knowledge layer)</li>
+                            <li>AMS (orchestration layer)</li>
+                            <li>IFTTTAOE (execution layer)</li>
+                        </ul>
+                        <p class="mt-2">This unified architecture eliminates data silos and ensures agents have complete context for decision-making.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <h3>Security-First Design</h3>
+                        <p>Zero-trust architecture with comprehensive protection:</p>
+                        <ul class="mt-3">
+                            <li>mTLS authentication and granular scopes</li>
+                            <li>Human-in-the-Loop for critical decisions</li>
+                            <li>Complete audit trails for compliance</li>
+                            <li>Protection of intellectual property and business logic</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-concierge-bell"></i>
+                        </div>
+                        <h3>Service-Wrapped Delivery</h3>
+                        <p>Rather than just providing tools, Salesboom offers complete services:</p>
+                        <ul class="mt-3">
+                            <li>Prompt Engineering as a Service for optimal configuration</li>
+                            <li>Agent NOC monitoring to ensure performance</li>
+                            <li>Universal Agent catalog for instant deployment</li>
+                            <li>Managed services options for hands-off operation</li>
+                        </ul>
+                        <p class="mt-2"><strong>Customers buy outcomes, not software complexity.</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 8: Future Roadmap -->
+    <section class="content-section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>The Evolution of Agent Intelligence at Salesboom</h2>
+                <p>Continuous innovation in autonomous agent capabilities</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="timeline-section">
+                        <div class="timeline-item">
+                            <h4><i class="fas fa-rocket me-2"></i>Near-Term Enhancements (Next 6 Months)</h4>
+                            <ul>
+                                <li>Expanded Universal Agent catalog with industry-specific agents</li>
+                                <li>Enhanced sentiment analysis and emotional intelligence in agent communications</li>
+                                <li>Multi-language support for global agent interactions</li>
+                                <li>Advanced negotiation algorithms for complex procurement scenarios</li>
+                                <li>Integration with additional AI models beyond Gemini (Claude, GPT-4, open-source options)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <h4><i class="fas fa-chart-line me-2"></i>Medium-Term Vision (6-18 Months)</h4>
+                            <ul>
+                                <li>Agent marketplace where third parties can publish certified agents</li>
+                                <li>Collaborative multi-agent problem solving (agents consulting other agents before decisions)</li>
+                                <li>Predictive agent deployment (system recommends which agents to activate based on business patterns)</li>
+                                <li>Agent performance benchmarking and optimization recommendations</li>
+                                <li>Cross-company agent collaboration within industry verticals</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <h4><i class="fas fa-star me-2"></i>Long-Term Direction (18+ Months)</h4>
+                            <ul>
+                                <li>Fully autonomous business process orchestration</li>
+                                <li>Self-improving agents that refine their own prompts based on outcomes</li>
+                                <li>Industry-specific agent ecosystems (manufacturing, healthcare, professional services)</li>
+                                <li>Agent-to-agent contract negotiation without human involvement</li>
+                                <li>Integration with physical robotics and IoT for complete automation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Deploy Autonomous AI Agents in Your Business?</h2>
+            <p>Experience the power of interoperable AI agents with Salesboom's A2A Protocol implementation. Book a personalized demo to see how autonomous agents can transform your operations, eliminate integration headaches, and deliver measurable results from day one.</p>
+            <div class="hero-cta">
+                <a href="https://www.salesboom.com/request-crm-demo.html" class="btn-primary-custom">Book a Demo Today</a>
+                <a href="https://www.salesboom.com/crm_trial.html" class="btn-outline-custom">Start Free Trial</a>
+            </div>
+        </div>
+    </section>
+
+
+    
+<!--Loacal page -->
+<section class="container py-5">
+  <h2 class="text-center mb-5 text-color">
+    Enterprise AI & Agentic Workforce Platform
+  </h2>
+
+  <div class="row g-4">
+
+
+
+    
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-sliders fa-3x mb-3 text-color"></i>
+        <h4>Agent Management System</h4>
+        <p>
+          Manage, deploy and control AI agents at scale through the
+          <a href="agent-management-system-ams.html" class="text-color fw-bold">
+            AMS Platform
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-brain fa-3x mb-3 text-color"></i>
+        <h4>Promptuit AI Ecosystem</h4>
+        <p>
+          Explore the ecosystem powering intelligent autonomous workflows in
+          <a href="ai-agents-promptuit-ecosystem.html" class="text-color fw-bold">
+            Promptuit Ecosystem
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-layer-group fa-3x mb-3 text-color"></i>
+        <h4>Salesboom Autonomous Enterprise Stack</h4>
+        <p>
+          See how Salesboom powers a fully autonomous enterprise using AI-driven automation with
+          <a href="salesboom-stack-autonomous-enterprise.html" class="text-color fw-bold">
+            Salesboom Stack
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-chart-line fa-3x mb-3 text-color"></i>
+        <h4>AI for Sales Automation</h4>
+        <p>
+          Automate sales processes, deal execution and team productivity with
+          <a href="ai-agents-service-sales-automation.html" class="text-color fw-bold">
+            AI Sales Automation
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-file-signature fa-3x mb-3 text-color"></i>
+        <h4>AI Document Workflow Automation</h4>
+        <p>
+          Streamline approvals, documents and compliance using
+          <a href="ai-document-workflow-automation.html" class="text-color fw-bold">
+            AI Document Automation
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-diagram-project fa-3x mb-3 text-color"></i>
+        <h4>AI Workflow Management</h4>
+        <p>
+          Orchestrate intelligent business workflows and real-time execution via
+          <a href="ai-workflow-management-solutions.html" class="text-color fw-bold">
+            AI Workflow Solutions
+          </a>.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+<!-- Old Content -->
+<section class="container py-5">
+  <h2 class="text-center mb-5 text-color">AI Workforce & CRM Services Overview</h2>
+
+  <div class="row g-4">
+
+    <!-- Card 1 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-robot text-color fa-2x mb-3"></i>
+        <h4>AI Work for You</h4>
+        <p>
+          Discover how AI can perform tasks on your behalf with
+          <a href="https://www.salesboom.com/products/new/AI-work-for-you.html" class="text-color fw-bold">
+            AI Work For You
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-users-cog text-color fa-2x mb-3"></i>
+        <h4>Agentic Workforce</h4>
+        <p>
+          Learn about AI-powered teams that think and act autonomously via
+          <a href="https://www.salesboom.com/products/new/Agentic-Workforce.html" class="text-color fw-bold">
+            Agentic Workforce
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-handshake-angle text-color fa-2x mb-3"></i>
+        <h4>AI & The People Economy</h4>
+        <p>
+          Understand the evolving role of AI in work and human productivity on
+          <a href="https://www.salesboom.com/products/new/AI-People-Economy.html" class="text-color fw-bold">
+            AI People Economy
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-cogs text-color fa-2x mb-3"></i>
+        <h4>AI Agent Management System</h4>
+        <p>
+          Learn how to configure, monitor and control AI agent actions with the
+          <a href="https://www.salesboom.com/ai-agent-management/ai-agent-management-system.html" class="text-color fw-bold">
+            AI agent management system
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-rocket text-color fa-2x mb-3"></i>
+        <h4>FastTrack CRM Implementation</h4>
+        <p>
+          Deploy and configure your CRM quickly using the
+          <a href="https://www.salesboom.com/services/fasttrack.html" class="text-color fw-bold">
+            FastTrack program
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-chalkboard-user text-color fa-2x mb-3"></i>
+        <h4>CRM Training Services</h4>
+        <p>
+          Increase user adoption and expertise through
+          <a href="https://www.salesboom.com/services/training.html" class="text-color fw-bold">
+            CRM training services
+          </a>.
+        </p>
+      </div>
+    </div>
+
+
+ 
+
+  </div>
+</section>
+
+
+
+
+
+
+<!-- Footer -->
+<footer class="mt-5 footer">
+  <div class="container mt-5 pt-5">
+    <div class="footer-grid">
+      <div class="footer-section">
+        <h3>Products</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/products/tools-sfa.html">Sales Force Automation</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-marketing.html">Marketing Automation</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-casemanagement.html">Case Management</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-reporting.html">Business Intelligence</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-emailintegration.html">Email Integration</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Solutions</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/products/edition-team.html">Team Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/edition-professional.html">Professional Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/edition-enterprise.html">Enterprise Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/industry-solutions.html">Industry Solutions</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/company/index.html">About Us</a></li>
+          <li><a href="https://www.salesboom.com/company/company-contact.html">Contact Us</a></li>
+          <li><a href="https://www.salesboom.com/customers/index.html">Customers</a></li>
+          <li><a href="https://www.salesboom.com/partners/index.html">Partners</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/support/index.html">Support Center</a></li>
+          <li><a href="https://www.salesboom.com/crm_supportcenter/overview/index.html">Documentation</a></li>
+          <li><a href="https://www.salesboom.com/whitepapers/index.html">White Papers</a></li>
+          <li><a href="https://www.salesboom.com/pop-privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="bg-color">
+    <div class="container">
+     <div class="footer-bottom pb-3 mt-3">
+      <p>&copy; 2003-2025 <a class="text-white fw-bold" href="https://www.salesboom.com">Salesboom.com</a> Inc. All rights reserved. | Call: 1-855-229-2043</p>
+      <p style="margin-top: 10px;">Salesboom's color-coded CRM lead management software helps businesses visually prioritize sales opportunities with automated workflow rules. Contact us to learn how color coding can transform your lead management process and increase sales productivity.</p>
+    </div>
+    </div>
+  </div>
+ 
+</footer>
+
+<!-- Common JavaScript -->
+<script src="content/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+    <script>
+        // Loading Screen
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.getElementById('loading-screen').classList.add('fade-out');
+            }, 500);
+        });
+        
+        // Scroll to Top Button
+        const scrollTopBtn = document.getElementById('scroll-top');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                scrollTopBtn.classList.add('visible');
+            } else {
+                scrollTopBtn.classList.remove('visible');
+            }
+        });
+        
+        scrollTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>

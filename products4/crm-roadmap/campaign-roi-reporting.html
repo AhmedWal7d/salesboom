@@ -1,0 +1,1382 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+<!-- Primary Meta Tags -->
+<title>Campaign ROI Reporting Tools | Real-Time Marketing Analytics</title>
+<meta name="description" content="Track marketing campaign ROI in real-time with Salesboom's Campaign ROI Reporting tools. Measure campaign performance, optimize on-the-fly, and maximize marketing ROI.">
+<meta name="keywords" content="Campaign ROI reporting, Marketing ROI tools, Campaign performance tracking, Real-time marketing analytics, Marketing campaign management, ROI forecasting, Marketing accountability, Campaign tracking software">
+<link rel="canonical" href="https://www.salesboom.com/campaign-roi-reporting.html">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.salesboom.com/campaign-roi-reporting.html">
+<meta property="og:title" content="Campaign ROI Reporting Tools | Real-Time Marketing Analytics">
+<meta property="og:description" content="Track marketing campaign ROI in real-time with Salesboom's Campaign ROI Reporting tools. Measure campaign performance, optimize on-the-fly, and maximize marketing ROI.">
+<meta property="og:image" content="https://www.salesboom.com/img/campaign-roi-reporting-og.jpg">
+<meta property="og:site_name" content="Salesboom CRM">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://www.salesboom.com/campaign-roi-reporting.html">
+<meta name="twitter:title" content="Campaign ROI Reporting Tools | Real-Time Marketing Analytics">
+<meta name="twitter:description" content="Track marketing campaign ROI in real-time with Salesboom's Campaign ROI Reporting tools. Measure campaign performance, optimize on-the-fly, and maximize marketing ROI.">
+<meta name="twitter:image" content="https://www.salesboom.com/img/campaign-roi-reporting-og.jpg">
+<meta name="twitter:site" content="@SalesboomCloud">
+
+<!-- Schema.org structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Salesboom Campaign ROI Reporting Tools",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web-based, Cloud",
+  "offers": {
+    "@type": "Offer",
+    "price": "14.00",
+    "priceCurrency": "USD",
+    "priceValidUntil": "2026-12-31"
+  },
+  "featureList": [
+    "Real-time campaign performance tracking and ROI reporting",
+    "On-the-fly campaign optimization and budget reallocation",
+    "Accurate ROI calculation with comprehensive variable analysis",
+    "Marketing accountability through transparent reporting",
+    "CRM integration connecting campaigns to sales revenue",
+    "Predictive ROI modeling and campaign forecasting"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.5",
+    "ratingCount": "3500"
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "Salesboom",
+    "url": "https://www.salesboom.com",
+    "logo": "https://www.salesboom.com/img/salesboom-logo-252x67.png",
+    "foundingDate": "2003",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-855-229-2043",
+      "contactType": "Customer Service"
+    }
+  }
+}
+</script>
+
+<link rel="shortcut icon" href="https://www.salesboom.com/favicon.ico">
+
+ <link rel="stylesheet" href="../content/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../content/css/salesboom-common.css">
+    <link rel="shortcut icon" href="../content/image/salesboom-logo-252x67.png" type="image/x-icon"> 
+
+    
+<!-- Font Awesome 6 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+/* CSS Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #002f6c;
+  --secondary-color: #004a9f;
+  --accent-color: #0066cc;
+  --success-color: #27ae60;
+  --text-color: #333;
+  --text-light: #666;
+  --border-color: #e0e0e0;
+  --bg-light: #f8f9fa;
+  --bg-white: #ffffff;
+  --shadow: 0 2px 10px rgba(0,0,0,0.1);
+  --shadow-hover: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background: var(--bg-white);
+  overflow-x: hidden;
+}
+
+/* Loading Screen */
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#loading-screen.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader {
+  width: 60px;
+  height: 60px;
+  border: 6px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Scroll to Top Button */
+#scroll-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 47, 108, 0.3);
+}
+
+#scroll-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+#scroll-top:hover {
+  background: var(--secondary-color);
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 47, 108, 0.4);
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: white;
+  padding: 100px 0 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+  opacity: 0.3;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 25px;
+  line-height: 1.2;
+}
+
+.hero .subtitle {
+  font-size: 1.3rem;
+  margin-bottom: 35px;
+  opacity: 0.95;
+  line-height: 1.5;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Button Styles */
+.btn-custom {
+  padding: 16px 40px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.btn-primary-custom {
+  background: white;
+  color: var(--primary-color);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+}
+
+.btn-primary-custom:hover {
+  background: var(--bg-light);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 255, 255, 0.4);
+  color: var(--primary-color);
+}
+
+.btn-outline-custom {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-outline-custom:hover {
+  background: white;
+  color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+/* Badge */
+.badge-top {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  margin-bottom: 20px;
+  display: inline-block;
+  backdrop-filter: blur(10px);
+}
+
+/* Content Sections */
+.content-section {
+  padding: 80px 0;
+}
+
+.content-section.bg-light {
+  background: var(--bg-light);
+}
+
+.section-title-center {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 60px;
+}
+
+.section-title-center h2 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.section-title-center p {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  line-height: 1.8;
+}
+
+/* Stats Section */
+.stats-section {
+  background: var(--primary-color);
+  color: white;
+  padding: 60px 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+  text-align: center;
+}
+
+.stat-item h3 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.stat-item p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* Feature Cards */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 60px;
+}
+
+.feature-card {
+  background: var(--bg-white);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  transition: all 0.3s;
+  border-top: 4px solid var(--primary-color);
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.feature-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.feature-card h3 {
+  font-size: 1.4rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.feature-card p {
+  color: var(--text-light);
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.feature-card ul {
+  list-style: none;
+  margin-top: 15px;
+}
+
+.feature-card li {
+  padding-left: 25px;
+  position: relative;
+  margin-bottom: 10px;
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+.feature-card li::before {
+  content: "•";
+  position: absolute;
+  left: 8px;
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Info Section */
+.info-section {
+  background: var(--bg-white);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  margin-top: 40px;
+}
+
+.info-section h3 {
+  color: var(--primary-color);
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.info-section p {
+  color: var(--text-light);
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.info-section ul {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.info-section li {
+  padding-left: 30px;
+  position: relative;
+  margin-bottom: 12px;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+.info-section li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--success-color);
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+/* Benefits Grid */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.benefit-card {
+  background: var(--bg-white);
+  padding: 35px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  transition: all 0.3s;
+  text-align: center;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.benefit-icon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: white;
+  margin: 0 auto 20px;
+}
+
+.benefit-card h3 {
+  font-size: 1.3rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.benefit-card p {
+  color: var(--text-light);
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+/* CTA Section */
+.cta-section {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid2" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid2)"/></svg>');
+  opacity: 0.3;
+}
+
+.cta-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.cta-content p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  opacity: 0.95;
+  line-height: 1.6;
+}
+
+.cta-contact {
+  margin-top: 30px;
+  font-size: 1.1rem;
+  opacity: 0.95;
+}
+
+.cta-contact a {
+  color: white;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.cta-contact a:hover {
+  opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  
+  .section-title-center h2 {
+    font-size: 2rem;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 60px 0;
+  }
+  
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+  
+  .hero .subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .hero-cta {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .btn-custom {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .content-section {
+    padding: 60px 0;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .section-title-center h2 {
+    font-size: 1.8rem;
+  }
+  
+  #scroll-top {
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .cta-content h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Utility Classes */
+.text-center { text-align: center; }
+.mt-40 { margin-top: 40px; }
+.mb-40 { margin-bottom: 40px; }
+</style>
+</head>
+
+<body>
+
+<!-- Loading Screen -->
+<div id="loading-screen">
+  <div class="loader"></div>
+</div>
+
+<!-- Scroll to Top Button -->
+<button id="scroll-top" aria-label="Scroll to top">
+  <i class="fas fa-arrow-up"></i>
+</button>
+    <!-- Top Bar -->
+<div class="top-bar">
+  <div class="container">
+    <div class="top-bar-left text-color">
+      <span>✓ Award-Winning Cloud CRM Software Since 2003</span>
+    </div>
+    <ul class="top-bar-nav">
+      <li><a href="https://www.salesboom.com/crm_supportcenter/overview/index.html">Support Center</a></li>
+      <li><a href="https://www.salesboom.com/crm_trial.html">Free Trial</a></li>
+      <li><a href="https://www.salesboom.com/login.html">Login</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Main Header -->
+<header>
+  <div class="main-header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <a href="https://www.salesboom.com" aria-label="Salesboom CRM Home">
+            <img src="https://www.salesboom.com/img/salesboom-logo-252x67.png" alt="Salesboom Cloud CRM Logo" width="252" height="67">
+          </a>
+        </div>
+        <div class="header-phone">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          <a href="tel:+18552292043">1-855-229-2043</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="badge-top">
+        <i class="fas fa-chart-line"></i> Real-Time Campaign ROI Reporting Since 2003
+      </div>
+      <h1>Know Your Marketing ROI Before the Campaign Ends</h1>
+      <p class="subtitle">Track campaign performance in real-time, adjust strategies on-the-fly, and prove marketing value with accurate ROI reporting that shows exactly what's working and what's not.</p>
+      <div class="hero-cta">
+        <a href="https://www.salesboom.com/crm_trial.html" class="btn-custom btn-primary-custom">Start Free 30-Day Trial</a>
+        <a href="https://www.salesboom.com/request-crm-demo.html" class="btn-custom btn-outline-custom">Request Demo</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Section -->
+<section class="stats-section">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <h3>22+</h3>
+        <p>Years of CRM Innovation</p>
+      </div>
+      <div class="stat-item">
+        <h3>Real-Time</h3>
+        <p>ROI Reporting</p>
+      </div>
+      <div class="stat-item">
+        <h3>OnTheFly</h3>
+        <p>Campaign Optimization</p>
+      </div>
+      <div class="stat-item">
+        <h3>30 Days</h3>
+        <p>Free Trial</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Problem Statement Section -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-title-center">
+      <h2>The Marketing Accountability Challenge</h2>
+      <p>Every small business knows that launching a marketing campaign is just the beginning. The real challenge comes when you try to answer the critical question: "What was our return on investment?" Without accurate Campaign ROI Reporting tools, marketing departments operate in the dark, unable to determine which campaigns drive revenue and which waste budget.</p>
+    </div>
+    
+    <div class="info-section">
+      <h3>The consequences of poor campaign tracking include:</h3>
+      <ul>
+        <li>Marketing budgets allocated based on gut feelings rather than data</li>
+        <li>No visibility into which campaigns generate actual sales dollars</li>
+        <li>Inability to optimize campaigns while they're still running</li>
+        <li>Marketing teams unaccountable for their spending and results</li>
+        <li>Repeated investment in underperforming channels and strategies</li>
+        <li>Missing insights on what resonates with your target audience</li>
+      </ul>
+      
+      <p>Traditional marketing analytics provide surface-level metrics like impressions and clicks, but fail to connect campaign activities to actual sales revenue. This disconnect leaves businesses guessing about their true marketing ROI and unable to make informed decisions about future campaigns.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Solution Overview Section -->
+<section class="content-section bg-light">
+  <div class="container">
+    <div class="section-title-center">
+      <h2>Real-Time Campaign ROI Reporting That Delivers Answers</h2>
+      <p>Salesboom's Campaign ROI Reporting tool eliminates the guesswork from marketing performance by providing accurate, real-time visibility into campaign results. The system automatically tracks every dollar spent on marketing campaigns and connects it directly to sales revenue generated, giving you a complete picture of campaign profitability.</p>
+    </div>
+    
+    <div class="info-section">
+      <h3>What makes our Campaign ROI Reporting tool different:</h3>
+      <ul>
+        <li>Real-time reporting from the moment your campaign launches</li>
+        <li>Direct connection between marketing spend and sales dollars</li>
+        <li>On-the-fly campaign adjustments based on live performance data</li>
+        <li>Accurate ROI forecasting that replaces guesswork with data</li>
+        <li>Complete transparency that holds marketing teams accountable</li>
+        <li>Automated variable adjustments for precise ROI calculations</li>
+        <li>Integration with your complete CRM system for end-to-end visibility</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Real-Time Tracking Section -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-title-center">
+      <h2>Monitor Campaign Performance as It Happens</h2>
+      <p>The most powerful feature of Salesboom's Campaign ROI Reporting tool is real-time visibility. Unlike traditional analytics that require waiting weeks or months to assess campaign performance, our system provides immediate insights from the moment your campaign goes live.</p>
+    </div>
+    
+    <div class="info-section">
+      <p>As soon as your marketing campaign launches, your marketing department gains instant access to:</p>
+      <ul>
+        <li>Live tracking of campaign responses and engagement metrics</li>
+        <li>Real-time revenue attribution showing which campaigns drive sales</li>
+        <li>Immediate visibility into cost-per-acquisition and conversion rates</li>
+        <li>Up-to-the-minute ROI calculations that update continuously</li>
+        <li>Performance comparisons across multiple campaigns simultaneously</li>
+        <li>Channel-specific metrics showing which platforms perform best</li>
+        <li>Geographic and demographic breakdowns of campaign responses</li>
+      </ul>
+      
+      <p>This real-time visibility empowers marketing teams to make data-driven decisions immediately rather than waiting for post-campaign analysis. If a campaign underperforms, you can adjust messaging, targeting, or budget allocation while the campaign is still active, maximizing your marketing investment.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Optimization Section -->
+<section class="content-section bg-light">
+  <div class="container">
+    <div class="section-title-center">
+      <h2>Adjust Campaign Parameters While They're Running</h2>
+      <p>Real-time reporting means real-time optimization. When you identify what's working and what's not as campaigns unfold, you can make strategic adjustments immediately to improve results and reduce wasted spend.</p>
+    </div>
+    
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-sync-alt"></i>
+        </div>
+        <h3>Dynamic Budget Allocation</h3>
+        <p>Reallocate budget from underperforming channels to high-performers in real-time. Stop wasting money on campaigns that aren't delivering and double down on what's working.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-bullseye"></i>
+        </div>
+        <h3>Targeting Refinement</h3>
+        <p>Modify targeting parameters to reach more responsive audiences based on actual performance data. Adjust demographics, interests, and behaviors on-the-fly.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-pause-circle"></i>
+        </div>
+        <h3>Campaign Control</h3>
+        <p>Pause ineffective campaigns before burning through budget, or scale up successful campaigns while performance is strong. You're always in control.</p>
+      </div>
+    </div>
+    
+    <div class="info-section mt-40">
+      <p>The ability to optimize campaigns in real-time transforms marketing from a "launch and hope" approach into an agile, responsive strategy that continuously improves performance. This responsiveness can dramatically increase overall campaign ROI by eliminating waste and amplifying what works.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ROI Calculation Section -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-title-center">
+      <h2>Calculate True Marketing ROI with Precision</h2>
+      <p>At the heart of effective campaign management is accurate ROI calculation. Salesboom's Campaign ROI Reporting tool analyzes the total cost of running each campaign against the actual sales dollars generated, factoring in all relevant variables to provide precise profitability metrics.</p>
+    </div>
+    
+    <div class="info-section">
+      <h3>The system calculates comprehensive ROI by considering:</h3>
+      <ul>
+        <li>Total campaign costs including creative, media spend, and labor</li>
+        <li>Direct sales revenue attributed to campaign responses</li>
+        <li>Customer lifetime value for long-term ROI assessment</li>
+        <li>Cost-per-acquisition and cost-per-conversion metrics</li>
+        <li>Multi-touch attribution across different marketing touchpoints</li>
+        <li>Time-to-conversion and sales cycle considerations</li>
+        <li>Variable factors like seasonality, market conditions, and competitive activity</li>
+      </ul>
+      
+      <p>By analyzing all these factors, the ROI Reporting tool delivers accurate campaign ROI forecasts that replace guesswork with data-driven projections. You'll know exactly how profitable your marketing dollars are, enabling smarter budget allocation and strategic planning for future campaigns.</p>
+      
+      <p>The tool presents ROI data in clear, visual dashboards that make complex analytics easy to understand and share with stakeholders. Whether you're reporting to leadership or planning your next campaign, you'll have concrete numbers that demonstrate marketing value.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Accountability Section -->
+<section class="content-section bg-light">
+  <div class="container">
+    <div class="section-title-center">
+      <h2>Marketing Accountability Through Transparency</h2>
+      <p>One of the most valuable benefits of Campaign ROI Reporting is the accountability it creates within marketing departments. When every campaign's performance is visible and measurable, marketing teams become accountable for results, not just activities.</p>
+    </div>
+    
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <i class="fas fa-chart-pie"></i>
+        </div>
+        <h3>Data-Driven Decisions</h3>
+        <p>Replace opinions and hunches with hard data. Campaign decisions are based on actual performance metrics, not subjective preferences or past experience.</p>
+      </div>
+      
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <i class="fas fa-trophy"></i>
+        </div>
+        <h3>Performance Standards</h3>
+        <p>Establish clear performance benchmarks based on historical data. Teams know what success looks like and can be held accountable to measurable standards.</p>
+      </div>
+      
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <i class="fas fa-handshake"></i>
+        </div>
+        <h3>Stakeholder Confidence</h3>
+        <p>Build trust with leadership by demonstrating clear ROI on marketing investments. Transparent reporting shows exactly where budget goes and what results it produces.</p>
+      </div>
+      
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <i class="fas fa-lightbulb"></i>
+        </div>
+        <h3>Continuous Improvement</h3>
+        <p>Learn from every campaign with detailed performance analysis. Successful strategies are replicated, while underperforming tactics are refined or eliminated.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CRM Integration Section -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-title-center">
+      <h2>Full CRM Integration for End-to-End Visibility</h2>
+      <p>Campaign ROI Reporting isn't a standalone tool—it's fully integrated within Salesboom's comprehensive CRM platform. This integration provides complete visibility from first marketing touch through closed sale, connecting marketing activities directly to revenue outcomes.</p>
+    </div>
+    
+    <div class="info-section">
+      <h3>Integration advantages include:</h3>
+      <ul>
+        <li>Automatic lead attribution showing which campaigns generated each prospect</li>
+        <li>Sales pipeline tracking showing how campaign leads progress through stages</li>
+        <li>Revenue attribution connecting closed deals back to originating campaigns</li>
+        <li>Customer lifetime value tracking showing long-term campaign profitability</li>
+        <li>Marketing and sales alignment through shared data and metrics</li>
+        <li>Complete customer journey visibility from awareness to purchase</li>
+        <li>Long-term value tracking for customers acquired through campaigns</li>
+        <li>Cross-selling and upselling opportunities identified from campaign data</li>
+      </ul>
+      
+      <p>This unified platform eliminates data silos between marketing and sales, ensuring that campaign performance is measured not just by leads generated, but by actual revenue produced. Marketing and sales teams work from the same data, creating alignment and shared accountability for growth.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Comparison Section -->
+<section class="content-section bg-light">
+  <div class="container">
+    <div class="section-title-center">
+      <h2>Compare Campaigns to Identify Winning Strategies</h2>
+      <p>Understanding which campaigns perform best requires the ability to compare results side-by-side. Salesboom's Campaign ROI Reporting tool makes it easy to analyze multiple campaigns simultaneously, identifying patterns and insights that inform future strategy.</p>
+    </div>
+    
+    <div class="info-section">
+      <h3>Comparative analysis capabilities include:</h3>
+      <ul>
+        <li>Side-by-side campaign performance comparisons</li>
+        <li>Historical trend analysis showing performance over time</li>
+        <li>Channel effectiveness comparisons (email vs. social vs. paid ads)</li>
+        <li>Audience segment analysis revealing which groups respond best</li>
+        <li>Messaging effectiveness showing which offers drive action</li>
+        <li>Timing analysis identifying optimal campaign launch windows</li>
+        <li>Geographic performance comparisons for location-based targeting</li>
+      </ul>
+      
+      <p>These comparative insights help marketing teams replicate successful strategies while avoiding past mistakes. You'll discover which campaign elements drive the best results—whether it's specific messaging, particular audience segments, certain channels, or optimal timing—and apply those learnings to continuously improve campaign performance.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Forecasting Section -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-title-center">
+      <h2>Accurate Campaign ROI Forecasts for Better Planning</h2>
+      <p>Historical campaign data combined with real-time performance tracking enables accurate ROI forecasting for future campaigns. Salesboom's Campaign ROI Reporting tool uses proven performance data to project expected returns, helping you plan budgets and set realistic goals.</p>
+    </div>
+    
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">
+         <i class="fa-solid fa-cloud"></i>
+        </div>
+        <h3>Predictive Modeling</h3>
+        <p>Forecast campaign ROI based on historical performance data. Know what to expect before you launch, enabling confident budget commitments and realistic goal setting.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-dollar-sign"></i>
+        </div>
+        <h3>Budget Optimization</h3>
+        <p>Receive data-driven budget allocation recommendations. Invest more in high-ROI channels and campaigns while reducing spend on lower-performing tactics.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-calendar-alt"></i>
+        </div>
+        <h3>Seasonal Planning</h3>
+        <p>Identify seasonal trends and patterns from historical data. Time campaigns for maximum impact based on proven performance patterns throughout the year.</p>
+      </div>
+    </div>
+    
+    <div class="info-section mt-40">
+      <p>With accurate forecasts, marketing teams can commit to realistic performance targets and leadership can make informed investment decisions. The guesswork disappears, replaced by data-driven projections that account for real-world variables and historical results.</p>
+      
+      <p>This forecasting capability transforms marketing from a reactive function into a strategic growth driver with predictable, measurable returns on investment.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Implementation Section -->
+<section class="content-section bg-light">
+  <div class="container">
+    <div class="section-title-center">
+      <h2>Get Started Quickly with Expert Support</h2>
+      <p>Implementing Campaign ROI Reporting doesn't require complex setup or technical expertise. Salesboom's hosted CRM software is designed for quick deployment with comprehensive support to ensure your success.</p>
+    </div>
+    
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <i class="fas fa-cloud"></i>
+        </div>
+        <h3>Cloud-Based Platform</h3>
+        <p>No hardware or IT infrastructure required. Access your Campaign ROI Reporting from anywhere with just an internet connection.</p>
+      </div>
+      
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <i class="fas fa-mouse-pointer"></i>
+        </div>
+        <h3>Intuitive Interface</h3>
+        <p>Marketing teams can start using the system immediately. No coding or technical training required for basic operations.</p>
+      </div>
+      
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <i class="fas fa-file-alt"></i>
+        </div>
+        <h3>Campaign Templates</h3>
+        <p>Pre-built templates for common marketing scenarios accelerate setup. Get started faster with proven campaign structures.</p>
+      </div>
+      
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <i class="fas fa-headset"></i>
+        </div>
+        <h3>Expert Support</h3>
+        <p>Our support team guides your setup and optimization. Get help whenever you need it to maximize your investment.</p>
+      </div>
+      
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+        <h3>Training Resources</h3>
+        <p>Video tutorials, documentation, and best practices help your team get up to speed quickly and use the platform effectively.</p>
+      </div>
+      
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <i class="fas fa-puzzle-piece"></i>
+        </div>
+        <h3>Marketing Integrations</h3>
+        <p>Connect with popular marketing platforms and tools. Your existing tech stack works seamlessly with Salesboom's ROI reporting.</p>
+      </div>
+    </div>
+    
+    <div class="info-section mt-40">
+      <p>You can be tracking campaign ROI within days, not months, and start making data-driven decisions immediately. Our support team ensures you maximize the value of your Campaign ROI Reporting investment from day one.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-content">
+      <h2>Ready to Prove Your Marketing ROI?</h2>
+      <p>Take control of your marketing campaigns with accurate, real-time ROI reporting. Try Salesboom's Campaign ROI Reporting tool free for 30 days and discover exactly which campaigns drive revenue for your business.</p>
+      <div class="hero-cta">
+        <a href="https://www.salesboom.com/crm_trial.html" class="btn-custom btn-primary-custom">Start Your Free 30-Day Trial</a>
+        <a href="https://www.salesboom.com/request-crm-demo.html" class="btn-custom btn-outline-custom">Schedule a Demo</a>
+      </div>
+      <div class="cta-contact">
+        <p>Contact us directly at <a href="tel:+18552292043">1-855-229-2043</a> or <a href="mailto:sales@salesboom.com">sales@salesboom.com</a> to see how Campaign ROI Reporting tools can work for you.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-2">
+      <h3 class="fw-bold text-color">
+        <i class="fa-solid fa-layer-group me-2"></i>
+        Explore Salesboom Editions
+      </h3>
+      <p class="text-muted">Discover powerful CRM editions to scale your business efficiently.</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-lg border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-briefcase fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Professional Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              A complete CRM suite with Marketing Automation, ERP integration, and Support tools — built for performance and value.
+            </p>
+            <a href="https://www.salesboom.com/editions/professional-edition.html" class="btn btn-color mt-auto">
+              Explore Professional <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-lg border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-building fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Enterprise Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              For large enterprises — automate workflows, unify data, and leverage analytics to drive strategic growth.
+            </p>
+            <a href="https://www.salesboom.com/editions/enterprise-edition.html" class="btn btn-color mt-auto">
+              View Enterprise <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-lg border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-users fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Team Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              Perfect for small teams starting with CRM — manage leads, track sales, and boost productivity with simplicity.
+            </p>
+            <a href="https://www.salesboom.com/editions/team-edition.html" class="btn btn-color mt-auto">
+           Discover Team<i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="container py-5">
+  <h2 class="text-center mb-5 text-color">CRM Marketing & Revenue Growth Tools</h2>
+
+  <div class="row g-4">
+
+    <!-- Card 1 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-bullhorn text-color fa-2x mb-3"></i>
+        <h4>CRM Marketing Tools</h4>
+        <p>
+          Build, manage and track multi-channel marketing workflows with powerful
+          <a href="https://www.salesboom.com/products/tools-marketing.html" class="text-color fw-bold">
+            CRM marketing tools
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-stream text-color fa-2x mb-3"></i>
+        <h4>Drip Marketing Automation</h4>
+        <p>
+          Nurture prospects over time with automated engagement workflows using
+          <a href="https://www.salesboom.com/products/crm-drip-marketing.html" class="text-color fw-bold">
+            drip marketing
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-layer-group text-color fa-2x mb-3"></i>
+        <h4>Sales & Marketing Tools Overview</h4>
+        <p>
+          Explore how CRM aligns sales & marketing processes via
+          <a href="https://www.salesboom.com/products/crm-roadmap/sales-and-marketing-tools.html" class="text-color fw-bold">
+            integrated tools
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-bullseye text-color fa-2x mb-3"></i>
+        <h4>Campaign Management</h4>
+        <p>
+          Create and track marketing campaigns efficiently with
+          <a href="https://www.salesboom.com/products/tools-campaign.html" class="text-color fw-bold">
+            campaign management tools
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-image text-color fa-2x mb-3"></i>
+        <h4>Campaign UI Preview</h4>
+        <p>
+          View screenshots and real examples on
+          <a href="https://www.salesboom.com/products/CRM-Campaign-Management-Screenshot.html" class="text-color fw-bold">
+            campaign management screenshots
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-cloud text-color fa-2x mb-3"></i>
+        <h4>Email Campaign Management</h4>
+        <p>
+          Plan, automate and analyze CRM email campaigns via
+          <a href="https://www.salesboom.com/products/crm-roadmap/email-campaign-management.html" class="text-color fw-bold">
+            email campaign roadmap
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 7 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-arrow-trend-up text-color fa-2x mb-3"></i>
+        <h4>Increase Revenues</h4>
+        <p>
+          Learn how CRM helps boost business growth and profitability in
+          <a href="https://www.salesboom.com/products/crm-increase-revenues.html" class="text-color fw-bold">
+            revenue optimization insights
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 8 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-infinity text-color fa-2x mb-3"></i>
+        <h4>Revenue Lifecycle Management</h4>
+        <p>
+          Discover how to manage every revenue phase with
+          <a href="https://www.salesboom.com/ai-rlm/revenue-lifecycle-management-guide.html" class="text-color fw-bold">
+            RLM guide
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 9 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-gear text-color fa-2x mb-3"></i>
+        <h4>Revenue Operations Guide</h4>
+        <p>
+          Align sales, marketing & operations through
+          <a href="https://www.salesboom.com/revenue-operations/revenue-operations-guide-for-smes.html" class="text-color fw-bold">
+            revenue operations best practices
+          </a>.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="mt-5 footer">
+  <div class="container mt-5 pt-5">
+    <div class="footer-grid">
+      <div class="footer-section">
+        <h3>Products</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/products/tools-sfa.html">Sales Force Automation</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-marketing.html">Marketing Automation</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-casemanagement.html">Case Management</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-reporting.html">Business Intelligence</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-emailintegration.html">Email Integration</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Solutions</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/products/edition-team.html">Team Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/edition-professional.html">Professional Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/edition-enterprise.html">Enterprise Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/industry-solutions.html">Industry Solutions</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/company/index.html">About Us</a></li>
+          <li><a href="https://www.salesboom.com/company/company-contact.html">Contact Us</a></li>
+          <li><a href="https://www.salesboom.com/customers/index.html">Customers</a></li>
+          <li><a href="https://www.salesboom.com/partners/index.html">Partners</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/support/index.html">Support Center</a></li>
+          <li><a href="https://www.salesboom.com/crm_supportcenter/overview/index.html">Documentation</a></li>
+          <li><a href="https://www.salesboom.com/whitepapers/index.html">White Papers</a></li>
+          <li><a href="https://www.salesboom.com/pop-privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="bg-color">
+    <div class="container">
+     <div class="footer-bottom pb-3 mt-3">
+      <p>&copy; 2003-2025 <a class="text-white fw-bold" href="https://www.salesboom.com">Salesboom.com</a> Inc. All rights reserved. | Call: 1-855-229-2043</p>
+      <p style="margin-top: 10px;">Salesboom's color-coded CRM lead management software helps businesses visually prioritize sales opportunities with automated workflow rules. Contact us to learn how color coding can transform your lead management process and increase sales productivity.</p>
+    </div>
+    </div>
+  </div>
+ 
+</footer>
+
+<!-- Common JavaScript -->
+<script src="content/js/bootstrap.bundle.min.js"></script>
+
+
+
+<!-- Custom JavaScript -->
+<script>
+// Loading Screen
+window.addEventListener('load', function() {
+  setTimeout(function() {
+    document.getElementById('loading-screen').classList.add('fade-out');
+  }, 500);
+});
+
+// Scroll to Top Button
+const scrollTopBtn = document.getElementById('scroll-top');
+
+window.addEventListener('scroll', function() {
+  if (window.pageYOffset > 300) {
+    scrollTopBtn.classList.add('show');
+  } else {
+    scrollTopBtn.classList.remove('show');
+  }
+});
+
+scrollTopBtn.addEventListener('click', function() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  });
+});
+</script>
+
+</body>
+</html>

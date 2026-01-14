@@ -1,0 +1,1720 @@
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    
+    <!-- Primary Meta Tags -->
+    <title>Mobile CRM Solutions | Work Anywhere with Salesboom</title>
+    <meta name="description" content="Access your CRM anywhere with Salesboom's mobile solutions. Work offline, sync seamlessly, and manage customer relationships on-the-go from any device.">
+    <meta name="keywords" content="Mobile CRM, Wireless CRM solutions, Offline CRM software, Mobile business software, Field sales CRM, CRM for traveling executives, Portable CRM platform, Mobile customer management">
+    <link rel="canonical" href="https://www.salesboom.com/mobile-crm-solutions.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.salesboom.com/mobile-crm-solutions.html">
+    <meta property="og:title" content="Mobile CRM Solutions | Work Anywhere with Salesboom">
+    <meta property="og:description" content="Access your CRM anywhere with Salesboom's mobile solutions. Work offline, sync seamlessly, and manage customer relationships on-the-go from any device.">
+    <meta property="og:image" content="https://www.salesboom.com/img/mobile-crm-solutions-og.jpg">
+    <meta property="og:site_name" content="Salesboom CRM">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.salesboom.com/mobile-crm-solutions.html">
+    <meta name="twitter:title" content="Mobile CRM Solutions | Work Anywhere with Salesboom">
+    <meta name="twitter:description" content="Access your CRM anywhere with Salesboom's mobile solutions. Work offline, sync seamlessly, and manage customer relationships on-the-go from any device.">
+    <meta name="twitter:image" content="https://www.salesboom.com/img/mobile-crm-solutions-og.jpg">
+    <meta name="twitter:site" content="@SalesboomCloud">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Salesboom Mobile CRM Solutions",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "iOS, Android, Windows, Web-based, Cloud",
+      "offers": {
+        "@type": "Offer",
+        "price": "14.00",
+        "priceCurrency": "USD",
+        "priceValidUntil": "2026-12-31"
+      },
+      "featureList": [
+        "Real-time wireless CRM access from any device",
+        "Offline CRM functionality without internet connectivity",
+        "Automatic data synchronization across all devices",
+        "Enterprise-grade mobile security with encryption",
+        "Universal device compatibility (iOS, Android, Windows)",
+        "Mobile field service management with GPS tracking"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.5",
+        "ratingCount": "3500"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Salesboom",
+        "url": "https://www.salesboom.com",
+        "logo": "https://www.salesboom.com/img/salesboom-logo-252x67.png",
+        "foundingDate": "2003",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+1-855-229-2043",
+          "contactType": "Customer Service"
+        }
+      }
+    }
+    </script>
+    
+    <link rel="shortcut icon" href="https://www.salesboom.com/favicon.ico">
+    
+ <link rel="stylesheet" href="../content/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../content/css/salesboom-common.css">
+    <link rel="shortcut icon" href="../content/image/salesboom-logo-252x67.png" type="image/x-icon"> 
+
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #002f6c;
+            --secondary-color: #0052cc;
+            --accent-color: #00a3e0;
+            --text-dark: #1a1a1a;
+            --text-light: #6c757d;
+            --bg-light: #f8f9fa;
+            --white: #ffffff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+        
+        /* Loading Screen */
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--primary-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease-out;
+        }
+        
+        #loading-screen.fade-out {
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        .loader {
+            width: 60px;
+            height: 60px;
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            border-top: 5px solid var(--white);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* Scroll to Top Button */
+        #scrollTopBtn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            color: var(--white);
+            border: none;
+            border-radius: 50%;
+            font-size: 20px;
+            cursor: pointer;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 15px rgba(0, 47, 108, 0.3);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        
+        #scrollTopBtn:hover {
+            background: var(--secondary-color);
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0, 47, 108, 0.4);
+        }
+        
+        #scrollTopBtn.show {
+            display: flex;
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--white);
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .hero-section h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 25px;
+            line-height: 1.2;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        .hero-section .subtitle {
+            font-size: 1.4rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            line-height: 1.6;
+        }
+        
+        .hero-cta {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn-primary-custom {
+            background: var(--white);
+            color: var(--primary-color);
+            padding: 16px 40px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn-primary-custom:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            color: var(--primary-color);
+        }
+        
+        .btn-outline-custom {
+            background: transparent;
+            color: var(--white);
+            padding: 16px 40px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border: 2px solid var(--white);
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-outline-custom:hover {
+            background: var(--white);
+            color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+        
+        /* Section Styling */
+        .content-section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .section-title p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .bg-light-custom {
+            background: var(--bg-light);
+        }
+        
+        /* Feature Cards */
+        .feature-card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            height: 100%;
+            border-top: 4px solid var(--primary-color);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            color: var(--white);
+            margin-bottom: 25px;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        .feature-card p, .feature-card ul {
+            color: var(--text-light);
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+        
+        .feature-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .feature-card ul li {
+            padding-left: 30px;
+            position: relative;
+            margin-bottom: 12px;
+        }
+        
+        .feature-card ul li::before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-size: 14px;
+        }
+        
+        /* Stats Section */
+        .stats-section {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 60px 0;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .stat-item h3 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            color: var(--accent-color);
+        }
+        
+        .stat-item p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        /* Two Column Section */
+        .two-column-section {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            margin-bottom: 60px;
+        }
+        
+        .two-column-section.reverse {
+            flex-direction: row-reverse;
+        }
+        
+        .column-content h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .column-content h4 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--secondary-color);
+            margin: 25px 0 15px;
+        }
+        
+        .column-content p {
+            color: var(--text-light);
+            font-size: 1.05rem;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+        
+        .column-content ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .column-content ul li {
+            padding-left: 30px;
+            position: relative;
+            margin-bottom: 12px;
+            color: var(--text-light);
+        }
+        
+        .column-content ul li::before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+        }
+        
+        .column-image img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        /* Process Steps */
+        .process-step {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        
+        .process-step:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin: 0 auto 25px;
+        }
+        
+        .process-step h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        .process-step p {
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+        
+        /* Benefits Grid */
+        .benefits-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--white);
+            padding: 80px 0;
+        }
+        
+        .benefit-item {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        
+        .benefit-item:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-10px);
+        }
+        
+        .benefit-item h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .benefit-item p {
+            opacity: 0.95;
+            line-height: 1.7;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+        }
+        
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+        
+        /* Industry Card */
+        .industry-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            margin-bottom: 25px;
+            transition: all 0.3s ease;
+        }
+        
+        .industry-card:hover {
+            transform: translateX(10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .industry-card h4 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .industry-card p {
+            color: var(--text-light);
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+        }
+        
+        .industry-card strong {
+            color: var(--primary-color);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero-section h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-section .subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .two-column-section,
+            .two-column-section.reverse {
+                flex-direction: column;
+            }
+            
+            .column-content h3 {
+                font-size: 1.7rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 60px 0;
+            }
+            
+            .hero-section h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-section .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .content-section {
+                padding: 60px 0;
+            }
+            
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+            
+            .btn-primary-custom,
+            .btn-outline-custom {
+                padding: 14px 30px;
+                font-size: 1rem;
+            }
+            
+            .stat-item h3 {
+                font-size: 2.5rem;
+            }
+            
+            #scrollTopBtn {
+                bottom: 20px;
+                right: 20px;
+                width: 45px;
+                height: 45px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader"></div>
+    </div>
+    
+    <!-- Scroll to Top Button -->
+    <button id="scrollTopBtn" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+
+    <!-- Top Bar -->
+<div class="top-bar">
+  <div class="container">
+    <div class="top-bar-left text-color">
+      <span>✓ Award-Winning Cloud CRM Software Since 2003</span>
+    </div>
+    <ul class="top-bar-nav">
+      <li><a href="https://www.salesboom.com/crm_supportcenter/overview/index.html">Support Center</a></li>
+      <li><a href="https://www.salesboom.com/crm_trial.html">Free Trial</a></li>
+      <li><a href="https://www.salesboom.com/login.html">Login</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Main Header -->
+<header>
+  <div class="main-header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <a href="https://www.salesboom.com" aria-label="Salesboom CRM Home">
+            <img src="https://www.salesboom.com/img/salesboom-logo-252x67.png" alt="Salesboom Cloud CRM Logo" width="252" height="67">
+          </a>
+        </div>
+        <div class="header-phone">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          <a href="tel:+18552292043">1-855-229-2043</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Your CRM Goes Wherever Your Business Takes You</h1>
+                <p class="subtitle">Never miss a deal or customer interaction again. Salesboom's mobile CRM solutions keep your entire business connected, whether you're online, offline, or on-the-go.</p>
+                <div class="hero-cta">
+                    <a href="https://www.salesboom.com/request-crm-demo.html" class="btn-primary-custom">Book a Demo</a>
+                    <a href="https://www.salesboom.com/crm_trial.html" class="btn-outline-custom">Start Free Trial</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <div class="stat-item">
+                        <h3>20+</h3>
+                        <p>Years of Mobile CRM Innovation</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <div class="stat-item">
+                        <h3>100%</h3>
+                        <p>Offline Functionality</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <div class="stat-item">
+                        <h3>24/7</h3>
+                        <p>Seamless Synchronization</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-item">
+                        <h3>All</h3>
+                        <p>Devices Supported</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Problem Statement Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Mobile Businesses Can't Rely on Desktop-Only CRM</h2>
+                <p>Modern business doesn't happen in an office. Field sales representatives close deals at client sites. Traveling executives make decisions from airports and hotels. Service technicians diagnose problems on location. Yet traditional desktop-bound CRM systems trap critical business data behind office walls, creating frustrating barriers to productivity.</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-ban"></i>
+                        </div>
+                        <h3>Lost Sales Opportunities</h3>
+                        <p>Representatives can't access customer data during client meetings, forcing them to promise to "check back at the office" and losing the momentum of the moment.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>Delayed Decision-Making</h3>
+                        <p>Executives lack real-time visibility into business performance, slowing down critical decisions and creating competitive disadvantages.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <h3>Disconnected Processes</h3>
+                        <p>Field teams forced to rely on memory, paper notes, or disconnected spreadsheets, creating data entry backlogs and wasting valuable selling time.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <h3>Data Entry Backlogs</h3>
+                        <p>Hours spent on manual administrative work instead of customer engagement, reducing overall productivity and efficiency.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Competitive Disadvantage</h3>
+                        <p>Rivals who empower teams with mobile access close deals faster and provide better customer experiences.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-frown"></i>
+                        </div>
+                        <h3>Poor Customer Experience</h3>
+                        <p>Team members can't access interaction history on-site, leading to frustrated customers and missed service opportunities.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <p class="lead text-muted">In today's fast-paced business environment, being tethered to a desk means being left behind. Your CRM should travel with your team, not hold them back.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Solution Overview Section -->
+    <section class="content-section bg-light-custom">
+        <div class="container">
+            <div class="section-title">
+                <h2>Mobile CRM Solutions Built for Business on the Move</h2>
+                <p>Salesboom delivers comprehensive mobile CRM solutions that liberate your team from the desktop without sacrificing functionality or security. Whether you need always-connected wireless access or robust offline capabilities, our mobile platform ensures your team has complete business intelligence wherever work takes them.</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Full-Featured Mobile Access</h3>
+                        <p>Complete access to contacts, accounts, opportunities, and service tickets from any mobile device with intuitive touch-optimized interfaces.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-sync"></i>
+                        </div>
+                        <h3>Real-Time Synchronization</h3>
+                        <p>Automatic data synchronization keeps every team member working with current information, ensuring everyone has the latest updates instantly.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-wifi"></i>
+                        </div>
+                        <h3>True Offline Functionality</h3>
+                        <p>Maintain full productivity even without internet connectivity, with automatic sync when connection is restored.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                       <i class="fa-solid fa-cloud"></i>
+                        </div>
+                        <h3>Universal Compatibility</h3>
+                        <p>Native mobile optimization for smartphones, tablets, and laptops supporting iOS, Android, Windows, and web browsers.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Enterprise-Grade Security</h3>
+                        <p>Secure encryption, multi-factor authentication, and advanced security protocols protecting sensitive business data on every device.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-plug"></i>
+                        </div>
+                        <h3>Seamless Integration</h3>
+                        <p>Works perfectly with your existing Salesboom CRM deployment, maintaining a single unified view of customer relationships.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Wireless Edition Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Wireless Edition: Real-Time CRM Access From Anywhere</h2>
+                <p>Salesboom's Wireless Edition delivers the complete power of your CRM system through any internet-connected device. Perfect for field sales representatives, traveling executives, and remote teams, Wireless Edition ensures you're always working with real-time data no matter where business takes you.</p>
+            </div>
+            
+            <div class="two-column-section">
+                <div class="col-lg-6 column-content">
+                    <h3>Instant Access to Complete Customer Intelligence</h3>
+                    <p>Field sales representatives gain immediate access to comprehensive customer information during client meetings. View complete interaction history, review pricing and contracts, check inventory availability, and access sales collateral—all from your mobile device. No more promising to "check back at the office" or making decisions without complete information.</p>
+                    
+                    <ul>
+                        <li>Complete customer profiles with contact information, purchase history, and communication records</li>
+                        <li>Real-time opportunity pipeline visibility with deal status and probability ratings</li>
+                        <li>Instant quote generation with current pricing, available inventory, and approval workflows</li>
+                        <li>Mobile task management with reminders, follow-up scheduling, and activity logging</li>
+                        <li>Document access including contracts, presentations, and product specifications</li>
+                        <li>Calendar integration showing appointments, meetings, and travel schedules</li>
+                    </ul>
+                </div>
+            <div class="col-lg-6 column-content">
+                    <h3>Empowering Traveling Executives with Decision-Making Data</h3>
+                    <p>Executive leadership requires constant awareness of business performance regardless of location. Wireless Edition provides traveling executives with real-time dashboards, analytics, and reporting that enable informed decision-making from anywhere in the world.</p>
+                    
+                    <ul>
+                        <li>Monitor sales pipeline and forecast accuracy in real-time</li>
+                        <li>Review team performance metrics and productivity analytics</li>
+                        <li>Approve deals, quotes, and expense reports instantly</li>
+                        <li>Access financial reports and key performance indicators</li>
+                        <li>Communicate with team members through integrated messaging</li>
+                        <li>View market trends and competitive intelligence updates</li>
+                        <li>Make strategic decisions backed by current data, not outdated reports</li>
+                    </ul>
+                </div>
+            </div>
+            
+            
+            
+            <div class="row mt-5 g-4">
+                <div class="col-12">
+                    <h3 class="text-center mb-4" style="color: var(--primary-color); font-weight: 700;">Technical Advantages of Wireless Edition</h3>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-expand"></i>
+                        </div>
+                        <h3>Responsive Design</h3>
+                        <p>Automatically adjusts seamlessly to any screen size, providing optimized experiences on smartphones, tablets, or laptops.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-hand-pointer"></i>
+                        </div>
+                        <h3>Touch-Optimized Interface</h3>
+                        <p>Intuitive mobile navigation designed for touch interactions with gesture support for efficient data entry.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <h3>Secure HTTPS Encryption</h3>
+                        <p>All data transmission protected with industry-standard encryption protocols ensuring data security in transit.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <h3>Multi-Factor Authentication</h3>
+                        <p>Advanced authentication options ensuring only authorized personnel access sensitive business information.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-signal"></i>
+                        </div>
+                        <h3>Bandwidth Optimization</h3>
+                        <p>Minimizes data usage on cellular connections through intelligent caching and compression technologies.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-save"></i>
+                        </div>
+                        <h3>Automatic Session Management</h3>
+                        <p>Prevents data loss through automatic saving and session recovery, even with interrupted connections.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Offline Edition Section -->
+    <section class="content-section bg-light-custom">
+        <div class="container">
+            <div class="section-title">
+                <h2>Offline Edition: Business Continuity Without Connectivity</h2>
+                <p>When internet access is unreliable or unavailable, Salesboom's Offline Edition ensures your team maintains full productivity. Unlike limited "cached data" solutions offered by competitors, our true offline functionality provides complete CRM capabilities without any internet connection.</p>
+            </div>
+            
+            <div class="row g-4 mb-5">
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3>Complete Local Database</h3>
+                        <p>Full CRM database stored locally on your device, providing access to all customer records, opportunities, and business data offline.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-edit"></i>
+                        </div>
+                        <h3>Full Create/Edit/Delete</h3>
+                        <p>Add new records, update existing information, and manage data with complete functionality, not just read-only access.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-sync-alt"></i>
+                        </div>
+                        <h3>Intelligent Synchronization</h3>
+                        <p>Automatic conflict resolution when reconnecting, with intelligent merge algorithms handling concurrent updates.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3>Advanced Search & Filtering</h3>
+                        <p>Complete search functionality across all fields with sophisticated filtering options working entirely offline.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                        <h3>Document Management</h3>
+                        <p>Access, view, and attach documents offline with automatic synchronization when connection is restored.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <h3>Offline Reporting</h3>
+                        <p>Generate reports and analyze data locally without requiring server connectivity, with automatic updates upon sync.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-12">
+                    <div class="feature-card" style="border-left: 5px solid var(--accent-color);">
+                        <h3 style="color: var(--primary-color); font-size: 1.8rem; margin-bottom: 20px;">Perfect for Remote and Field Operations</h3>
+                        <p style="font-size: 1.1rem; margin-bottom: 15px;">Offline Edition is essential for teams operating in locations with poor connectivity or no internet access. Field service technicians working in remote areas, sales representatives traveling through regions with spotty coverage, and international executives navigating different countries maintain complete CRM functionality regardless of connection status.</p>
+                        <p style="font-size: 1.1rem; margin-bottom: 15px;">The system seamlessly transitions between online and offline modes, automatically synchronizing when connectivity is available. Users never need to worry about connection status—the application simply works, ensuring business continuity in any environment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Security Features Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Enterprise-Grade Mobile Security That Protects Your Business</h2>
+                <p>Mobile access to business-critical data demands uncompromising security. Salesboom implements multiple layers of protection ensuring your CRM data remains secure whether accessed from corporate networks or public Wi-Fi.</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <h3>Data Encryption</h3>
+                        <p>256-bit AES encryption protects data both in transit and at rest on mobile devices, meeting compliance requirements for regulated industries.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <h3>Multi-Factor Authentication</h3>
+                        <p>Biometric authentication, PIN codes, and time-based one-time passwords ensure only authorized users access the system.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <h3>Remote Wipe Capability</h3>
+                        <p>Administrators can remotely erase CRM data from lost or stolen devices, protecting sensitive information from unauthorized access.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <h3>Role-Based Permissions</h3>
+                        <p>Granular access controls ensure users only see data relevant to their role, preventing unauthorized information exposure.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="process-step">
+                        <div class="step-number">5</div>
+                        <h3>Session Management</h3>
+                        <p>Automatic timeout and session locking protect against unauthorized access when devices are left unattended.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="process-step">
+                        <div class="step-number">6</div>
+                        <h3>Audit Trails</h3>
+                        <p>Complete logging of all mobile access and data modifications for compliance documentation and security monitoring.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="process-step">
+                        <div class="step-number">7</div>
+                        <h3>VPN Support</h3>
+                        <p>Integration with corporate VPN infrastructure for additional network-level security when accessing CRM remotely.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="process-step">
+                        <div class="step-number">8</div>
+                        <h3>Device Management</h3>
+                        <p>Compatible with enterprise mobile device management solutions for centralized security policy enforcement.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- ROI Benefits Section -->
+    <section class="benefits-section">
+        <div class="container">
+            <div class="section-title">
+                <h2 style="color: white;">Measurable Returns From Mobile CRM Investment</h2>
+                <p style="color: rgba(255,255,255,0.9);">Organizations implementing Salesboom's mobile CRM solutions typically experience significant productivity gains and revenue improvements within the first year.</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="benefit-item">
+                        <h3>22% Increase</h3>
+                        <p>Sales productivity boost through reduced administrative time and increased face-to-face selling hours.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="benefit-item">
+                        <h3>31% Faster</h3>
+                        <p>Deal closure from on-site quote generation and immediate decision-making capability.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="benefit-item">
+                        <h3>40% Reduction</h3>
+                        <p>Data entry errors through mobile forms, barcode scanning, and automated capture.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="benefit-item">
+                        <h3>18% Improvement</h3>
+                        <p>Customer satisfaction due to more responsive and informed interactions.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="benefit-item">
+                        <h3>$850 Savings</h3>
+                        <p>Average annual cost savings per user from eliminated paper processes and reduced travel waste.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="benefit-item">
+                        <h3>2.5 Hours</h3>
+                        <p>Saved per field employee per week previously spent on manual data entry and reporting.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <p style="font-size: 1.2rem; opacity: 0.95; max-width: 900px; margin: 0 auto;">The typical payback period for mobile CRM investment is 4-7 months, with ongoing benefits continuing to compound as user adoption and proficiency increase.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Industry Applications Section -->
+    <section class="content-section bg-light-custom">
+        <div class="container">
+            <div class="section-title">
+                <h2>Industry-Specific Mobile CRM Applications</h2>
+                <p>Different industries have unique mobile requirements. Salesboom's flexible platform adapts to sector-specific workflows while maintaining unified functionality.</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="industry-card">
+                        <h4><i class="fas fa-shopping-cart" style="color: var(--accent-color); margin-right: 10px;"></i>Field Sales Representatives</h4>
+                        <p><strong>Challenges:</strong> Limited office access, need for on-site quote generation, customer data access during meetings</p>
+                        <p><strong>Salesboom solution:</strong> Wireless Edition with real-time pricing, inventory checking, mobile contract generation, and digital signature capture</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4">
+                    <div class="industry-card">
+                        <h4><i class="fas fa-wrench" style="color: var(--accent-color); margin-right: 10px;"></i>Field Service Technicians</h4>
+                        <p><strong>Challenges:</strong> Remote work locations, unreliable connectivity, need for equipment history and documentation</p>
+                        <p><strong>Salesboom solution:</strong> Offline Edition with local equipment database, service history, technical documentation, and parts inventory management</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4">
+                    <div class="industry-card">
+                        <h4><i class="fas fa-plane" style="color: var(--accent-color); margin-right: 10px;"></i>Traveling Executives</h4>
+                        <p><strong>Challenges:</strong> International travel, multiple time zones, need for real-time business visibility</p>
+                        <p><strong>Salesboom solution:</strong> Wireless Edition with mobile dashboards, KPI monitoring, approval workflows, and secure global access</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4">
+                    <div class="industry-card">
+                        <h4><i class="fas fa-medkit" style="color: var(--accent-color); margin-right: 10px;"></i>Medical Device Sales</h4>
+                        <p><strong>Challenges:</strong> Hospital restrictions on devices, compliance documentation, complex product specifications</p>
+                        <p><strong>Salesboom solution:</strong> Secure mobile access with HIPAA-compliant data handling, product catalogs, regulatory documentation, and compliance tracking</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4">
+                    <div class="industry-card">
+                        <h4><i class="fas fa-building" style="color: var(--accent-color); margin-right: 10px;"></i>Commercial Real Estate</h4>
+                        <p><strong>Challenges:</strong> Property showing accessibility, immediate client feedback capture, multi-party negotiations</p>
+                        <p><strong>Salesboom solution:</strong> Mobile property database with photos, virtual tours, instant offer submission, and document management</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4">
+                    <div class="industry-card">
+                        <h4><i class="fas fa-chart-pie" style="color: var(--accent-color); margin-right: 10px;"></i>Financial Services</h4>
+                        <p><strong>Challenges:</strong> Client meeting preparation, regulatory compliance, secure document handling</p>
+                        <p><strong>Salesboom solution:</strong> Wireless Edition with calendar integration, mobile forms, GPS check-ins, and secure document storage for contracts and disclosures</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Migration Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Seamless Migration From Desktop-Only or Legacy CRM</h2>
+                <p>If your organization currently uses desktop-only CRM software or legacy mobile solutions, migrating to Salesboom's modern mobile platform is a structured, low-risk process.</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <h3>Data Assessment</h3>
+                        <p>Comprehensive audit of existing CRM data identifying migration scope, data quality issues, and cleanup requirements.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <h3>Mapping & Transformation</h3>
+                        <p>Field-by-field mapping of existing data structure to Salesboom schema with transformation rules for data normalization.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <h3>Test Migration</h3>
+                        <p>Initial migration to staging environment for validation and user acceptance testing.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <h3>Cutover Planning</h3>
+                        <p>Detailed timeline coordinating final data migration with minimal business disruption.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="process-step">
+                        <div class="step-number">5</div>
+                        <h3>Parallel Operation</h3>
+                        <p>Optional period running both systems simultaneously for risk mitigation.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="process-step">
+                        <div class="step-number">6</div>
+                        <h3>Validation & Cleanup</h3>
+                        <p>Post-migration verification ensuring data completeness and accuracy.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="feature-card" style="background: linear-gradient(135deg, var(--bg-light), white);">
+                        <h3 style="color: var(--primary-color); font-size: 1.8rem; margin-bottom: 20px; text-align: center;">We Support Migration From:</h3>
+                        <div class="row text-center">
+                            <div class="col-md-4 mb-3">
+                                <p style="font-size: 1.1rem; margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 8px;"></i>Salesforce, Microsoft Dynamics, and other major CRM platforms</p>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <p style="font-size: 1.1rem; margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 8px;"></i>Industry-specific CRM systems and vertical applications</p>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <p style="font-size: 1.1rem; margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 8px;"></i>Homegrown databases and Access applications</p>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <p style="font-size: 1.1rem; margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 8px;"></i>Excel spreadsheets and manual processes</p>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <p style="font-size: 1.1rem; margin-bottom: 10px;"><i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 8px;"></i>Legacy contact management systems</p>
+                            </div>
+                        </div>
+                        <p style="text-align: center; margin-top: 20px; font-size: 1.1rem; color: var(--text-light);">Most migrations complete within 2-4 weeks with zero data loss or business disruption.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Future Innovation Section -->
+    <section class="content-section bg-light-custom">
+        <div class="container">
+            <div class="section-title">
+                <h2>Continuous Innovation Keeping You Ahead</h2>
+                <p>Technology evolves rapidly. Salesboom's commitment to continuous innovation ensures your mobile CRM investment remains current and competitive.</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3>AI and Machine Learning</h3>
+                        <p>Predictive analytics, intelligent routing, and AI-powered insights enhancing mobile decision-making capabilities.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-microphone"></i>
+                        </div>
+                        <h3>Voice Assistants</h3>
+                        <p>Integration with Siri, Google Assistant, and Alexa for voice-controlled CRM access and hands-free operation.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-vr-cardboard"></i>
+                        </div>
+                        <h3>Augmented Reality</h3>
+                        <p>AR capabilities for field service visualization and remote expert assistance in real-time.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <h3>5G Optimization</h3>
+                        <p>Enhanced mobile experiences leveraging 5G network capabilities for faster data transfer and improved performance.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-fingerprint"></i>
+                        </div>
+                        <h3>Advanced Biometrics</h3>
+                        <p>Expanded authentication options including facial recognition, voice, and behavioral biometrics for enhanced security.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-satellite"></i>
+                        </div>
+                        <h3>IoT Integration</h3>
+                        <p>Connecting mobile CRM with Internet of Things sensors and smart devices for real-time data collection.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <p class="lead text-muted">Quarterly software releases deliver new capabilities, security updates, and platform improvements at no additional cost. You benefit from innovation without disruptive version upgrades or expensive implementation projects.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Liberate Your Team From Desktop-Bound CRM?</h2>
+            <p>Experience the freedom of complete mobile CRM access with Salesboom's Wireless and Offline Editions. Take a free 30-day trial today and discover how mobile productivity transforms your business results.</p>
+            <div class="hero-cta">
+                <a href="https://www.salesboom.com/request-crm-demo.html" class="btn-primary-custom">Book a Demo Today</a>
+                <a href="https://www.salesboom.com/crm_trial.html" class="btn-outline-custom">Start Free Trial</a>
+            </div>
+        </div>
+    </section>
+    
+
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-2">
+      <h3 class="fw-bold text-color">
+        <i class="fa-solid fa-layer-group me-2"></i>
+        Explore Salesboom Editions
+      </h3>
+      <p class="text-muted">Discover powerful CRM editions to scale your business efficiently.</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-lg border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-briefcase fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Professional Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              A complete CRM suite with Marketing Automation, ERP integration, and Support tools — built for performance and value.
+            </p>
+            <a href="https://www.salesboom.com/editions/professional-edition.html" class="btn btn-color mt-auto">
+              Explore Professional <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-lg border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-building fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Enterprise Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              For large enterprises — automate workflows, unify data, and leverage analytics to drive strategic growth.
+            </p>
+            <a href="https://www.salesboom.com/editions/enterprise-edition.html" class="btn btn-color mt-auto">
+              View Enterprise <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-lg border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-users fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Team Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              Perfect for small teams starting with CRM — manage leads, track sales, and boost productivity with simplicity.
+            </p>
+            <a href="https://www.salesboom.com/editions/team-edition.html" class="btn btn-color mt-auto">
+           Discover Team<i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="container py-5">
+  <h2 class="text-center mb-5 text-color">
+    CRM Editions, Cloud & Services
+  </h2>
+
+  <div class="row g-4">
+
+    <!-- Card 1: Wireless Edition -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-wifi text-color fs-2 mb-3"></i>
+        <h4>Wireless CRM Edition</h4>
+        <p>
+          Access CRM features on the go with wireless-friendly tools for mobile teams.  
+          <a href="https://www.salesboom.com/products/edition-wireless.html" class="text-color fw-bold">
+            View Wireless Edition
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 2: CRM Edition Comparison -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-layer-group text-color fs-2 mb-3"></i>
+        <h4>CRM Edition Comparison</h4>
+        <p>
+          Compare available editions and choose the best fit for your business.  
+          <a href="https://www.salesboom.com/products/edition-which.html" class="text-color fw-bold">
+            Compare CRM Editions
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 3: Cloud-Based CRM -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-cloud text-color fs-2 mb-3"></i>
+        <h4>Cloud-Based CRM</h4>
+        <p>
+          Discover CRM hosted in the cloud for anytime, anywhere access.  
+          <a href="https://www.salesboom.com/products/old_Cloud-Based-CRM-Software.html" class="text-color fw-bold">
+            Explore Cloud CRM
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 4: Why Salesboom -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-check-circle text-color fs-2 mb-3"></i>
+        <h4>Why Choose Salesboom</h4>
+        <p>
+          Key advantages and differentiators of Salesboom CRM.  
+          <a href="https://www.salesboom.com/products/why-salesboom.html" class="text-color fw-bold">
+            Learn Why Salesboom
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 5: Build vs Buy CRM Analysis -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-balance-scale text-color fs-2 mb-3"></i>
+        <h4>CRM Build vs Buy Guide</h4>
+        <p>
+          Evaluate costs and benefits to decide whether to build or buy CRM software.  
+          <a href="https://www.salesboom.com/cloud-crm-guide/cloud-crm-guide/crm-build-vs-buy-cost-analysis.html" class="text-color fw-bold">
+            View Cost Analysis
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 6: CRM Consulting Services -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-lightbulb text-color fs-2 mb-3"></i>
+        <h4>CRM Consulting Services</h4>
+        <p>
+          Get expert CRM strategy, planning, and implementation guidance.  
+          <a href="https://www.salesboom.com/services/business_crm_consulting_services.html" class="text-color fw-bold">
+            Explore Consulting Services
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 7: FastTrack Implementation -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-rocket text-color fs-2 mb-3"></i>
+        <h4>FastTrack CRM Services</h4>
+        <p>
+          Speed up deployment and reduce time-to-value with structured implementation.  
+          <a href="https://www.salesboom.com/services/fasttrack.html" class="text-color fw-bold">
+            View FastTrack Services
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 8: CRM Training Services -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-chalkboard-teacher text-color fs-2 mb-3"></i>
+        <h4>CRM Training Services</h4>
+        <p>
+          Train your team to use CRM effectively with expert guidance.  
+          <a href="https://www.salesboom.com/services/training.html" class="text-color fw-bold">
+            View Training Services
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 9: Sales Automation Content -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-gears text-color fs-2 mb-3"></i>
+        <h4>Sales Automation Guide</h4>
+        <p>
+          Learn how automation enhances sales workflows and boosts productivity.  
+          <a href="https://www.salesboom.com/sales-automation/sales_automation_content.html" class="text-color fw-bold">
+            Read Sales Automation Content
+          </a>
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="mt-5 footer">
+  <div class="container mt-5 pt-5">
+    <div class="footer-grid">
+      <div class="footer-section">
+        <h3>Products</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/products/tools-sfa.html">Sales Force Automation</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-marketing.html">Marketing Automation</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-casemanagement.html">Case Management</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-reporting.html">Business Intelligence</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-emailintegration.html">Email Integration</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Solutions</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/products/edition-team.html">Team Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/edition-professional.html">Professional Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/edition-enterprise.html">Enterprise Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/industry-solutions.html">Industry Solutions</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/company/index.html">About Us</a></li>
+          <li><a href="https://www.salesboom.com/company/company-contact.html">Contact Us</a></li>
+          <li><a href="https://www.salesboom.com/customers/index.html">Customers</a></li>
+          <li><a href="https://www.salesboom.com/partners/index.html">Partners</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/support/index.html">Support Center</a></li>
+          <li><a href="https://www.salesboom.com/crm_supportcenter/overview/index.html">Documentation</a></li>
+          <li><a href="https://www.salesboom.com/whitepapers/index.html">White Papers</a></li>
+          <li><a href="https://www.salesboom.com/pop-privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="bg-color">
+    <div class="container">
+     <div class="footer-bottom pb-3 mt-3">
+      <p>&copy; 2003-2025 <a class="text-white fw-bold" href="https://www.salesboom.com">Salesboom.com</a> Inc. All rights reserved. | Call: 1-855-229-2043</p>
+      <p style="margin-top: 10px;">Salesboom's color-coded CRM lead management software helps businesses visually prioritize sales opportunities with automated workflow rules. Contact us to learn how color coding can transform your lead management process and increase sales productivity.</p>
+    </div>
+    </div>
+  </div>
+ 
+</footer>
+
+<!-- Common JavaScript -->
+<script src="content/js/bootstrap.bundle.min.js"></script>
+
+
+
+    <script>
+        // Loading Screen
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.getElementById('loading-screen').classList.add('fade-out');
+            }, 800);
+        });
+        
+        // Scroll to Top Button
+        const scrollTopBtn = document.getElementById('scrollTopBtn');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                scrollTopBtn.classList.add('show');
+            } else {
+                scrollTopBtn.classList.remove('show');
+            }
+        });
+        
+        scrollTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>

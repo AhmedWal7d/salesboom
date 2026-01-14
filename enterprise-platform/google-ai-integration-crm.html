@@ -1,0 +1,1596 @@
+
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+<!-- Primary Meta Tags -->
+<title>Salesboom Google AI Integration | CRM Platform 2025</title>
+<meta name="description" content="Salesboom integrates with Google Gemini, Firebase Studio, and Antigravity for AI-powered CRM solutions. Build custom AI workflows with 23 years of expertise.">
+<meta name="keywords" content="Google Gemini CRM, Firebase Studio integration, AI-powered CRM, Agentic AI solutions, Google Cloud CRM, Salesboom Google integration, Flutter CRM apps, AI development platform">
+<link rel="canonical" href="https://www.salesboom.com/google-ai-integration-crm.html">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.salesboom.com/google-ai-integration-crm.html">
+<meta property="og:title" content="Salesboom Google AI Integration | CRM Platform 2025">
+<meta property="og:description" content="Salesboom integrates with Google Gemini, Firebase Studio, and Antigravity for AI-powered CRM solutions. Build custom AI workflows with 23 years of expertise.">
+<meta property="og:image" content="https://www.salesboom.com/img/google-ai-integration-crm-og.jpg">
+<meta property="og:site_name" content="Salesboom CRM">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://www.salesboom.com/google-ai-integration-crm.html">
+<meta name="twitter:title" content="Salesboom Google AI Integration | CRM Platform 2025">
+<meta name="twitter:description" content="Salesboom integrates with Google Gemini, Firebase Studio, and Antigravity for AI-powered CRM solutions. Build custom AI workflows with 23 years of expertise.">
+<meta name="twitter:image" content="https://www.salesboom.com/img/google-ai-integration-crm-og.jpg">
+<meta name="twitter:site" content="@SalesboomCloud">
+
+<!-- Schema.org structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Salesboom Google AI Integration CRM",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web-based, Cloud",
+  "offers": {
+    "@type": "Offer",
+    "price": "14.00",
+    "priceCurrency": "USD",
+    "priceValidUntil": "2026-12-31"
+  },
+  "featureList": [
+    "Google Gemini API integration",
+    "Firebase Studio full-stack development",
+    "Google Antigravity agentic workflows",
+    "Gmail CRM embedded integration",
+    "Flutter cross-platform mobile apps",
+    "Gemini Code Assist AI programming",
+    "Google Cloud native deployment",
+    "Agent-to-agent (A2A) architecture"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.5",
+    "ratingCount": "3500"
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "Salesboom",
+    "url": "https://www.salesboom.com",
+    "logo": "https://www.salesboom.com/img/salesboom-logo-252x67.png",
+    "foundingDate": "2003",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-855-229-2043",
+      "contactType": "Customer Service"
+    }
+  }
+}
+</script>
+
+<link rel="shortcut icon" href="https://www.salesboom.com/favicon.ico">
+
+
+    <link rel="stylesheet" href="content/css/bootstrap.min.css">
+    <link rel="stylesheet" href="content/css/salesboom-common.css">
+    <link rel="shortcut icon" href="content/image/salesboom-logo-252x67.png" type="image/x-icon"> 
+    
+    
+<!-- Font Awesome 6 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+/* CSS Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #002f6c;
+  --secondary-color: #0047ab;
+  --accent-color: #4285f4;
+  --success-color: #27ae60;
+  --text-color: #333;
+  --text-light: #666;
+  --border-color: #e0e0e0;
+  --bg-light: #f8f9fa;
+  --bg-white: #ffffff;
+  --shadow: 0 2px 10px rgba(0,0,0,0.1);
+  --shadow-hover: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background: var(--bg-white);
+  overflow-x: hidden;
+}
+
+/* Loading Screen */
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#loading-screen.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader {
+  width: 60px;
+  height: 60px;
+  border: 5px solid rgba(255, 255, 255, 0.3);
+  border-top: 5px solid #ffffff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-text {
+  color: white;
+  margin-top: 20px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* Scroll to Top Button */
+#scrollTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 47, 108, 0.3);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+#scrollTopBtn:hover {
+  background: var(--secondary-color);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 47, 108, 0.4);
+}
+
+#scrollTopBtn.show {
+  display: flex;
+}
+
+/* Hero Section - Centered Title */
+.hero {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: white;
+  padding: 120px 0 100px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+  opacity: 0.3;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 30px;
+  line-height: 1.2;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.hero .subtitle {
+  font-size: 1.4rem;
+  margin-bottom: 40px;
+  opacity: 0.95;
+  line-height: 1.6;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+/* Button Styles */
+.btn {
+  display: inline-block;
+  padding: 16px 40px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary-custom {
+  background: #e74c3c;
+  color: white;
+  box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
+}
+
+.btn-primary-custom:hover {
+  background: #c0392b;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(231, 76, 60, 0.4);
+  color: white;
+}
+
+.btn-outline-custom {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-outline-custom:hover {
+  background: white;
+  color: var(--primary-color);
+}
+
+/* Stats Section */
+.stats-section {
+  background: var(--primary-color);
+  color: white;
+  padding: 60px 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  text-align: center;
+}
+
+.stat-item h3 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #e74c3c;
+  margin-bottom: 10px;
+}
+
+.stat-item p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* Content Sections */
+.content-section {
+  padding: 80px 0;
+}
+
+.content-section.bg-light {
+  background: var(--bg-light);
+}
+
+.section-header {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 60px;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.section-header p {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  line-height: 1.8;
+}
+
+/* Feature Cards */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin-top: 60px;
+}
+
+.feature-card {
+  background: var(--bg-white);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  transition: all 0.3s;
+  border-top: 4px solid var(--primary-color);
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.feature-icon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: white;
+  margin-bottom: 25px;
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.feature-card h4 {
+  font-size: 1.2rem;
+  color: var(--secondary-color);
+  margin: 20px 0 10px 0;
+  font-weight: 600;
+}
+
+.feature-card p {
+  color: var(--text-light);
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.feature-card ul {
+  list-style: none;
+  margin-top: 15px;
+}
+
+.feature-card li {
+  padding-left: 25px;
+  position: relative;
+  margin-bottom: 10px;
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+.feature-card li::before {
+  content: "•";
+  position: absolute;
+  left: 8px;
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Highlight Box */
+.highlight-box {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  padding: 40px;
+  border-radius: 12px;
+  margin: 40px 0;
+  text-align: center;
+}
+
+.highlight-box h3 {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+.highlight-box p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  opacity: 0.95;
+}
+
+/* Process Steps */
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 60px;
+}
+
+.process-step {
+  position: relative;
+  padding: 40px 30px;
+  background: var(--bg-white);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.process-step:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.step-icon {
+  width: 70px;
+  height: 70px;
+  background: var(--primary-color);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0 auto 25px;
+}
+
+.process-step h3 {
+  font-size: 1.4rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.process-step p {
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+/* Benefits Section */
+.benefits-section {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: white;
+  padding: 80px 0;
+  position: relative;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.benefit-item {
+  text-align: center;
+  padding: 35px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s;
+}
+
+.benefit-item:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-5px);
+}
+
+.benefit-item h3 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.benefit-item h4 {
+  font-size: 1.3rem;
+  margin: 20px 0 10px 0;
+  font-weight: 600;
+}
+
+.benefit-item p {
+  opacity: 0.9;
+  line-height: 1.7;
+}
+
+/* Google Branding Elements */
+.google-badge {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(66, 133, 244, 0.1);
+  padding: 8px 16px;
+  border-radius: 20px;
+  margin: 5px;
+  font-size: 0.9rem;
+  color: var(--accent-color);
+  font-weight: 600;
+}
+
+.google-badge i {
+  margin-right: 8px;
+  color: var(--accent-color);
+}
+
+/* CTA Section */
+.cta-section {
+  background: var(--primary-color);
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.cta-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.cta-content h2 {
+  font-size: 2.8rem;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.cta-content p {
+  font-size: 1.3rem;
+  margin-bottom: 40px;
+  opacity: 0.9;
+  line-height: 1.7;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .section-header h2 {
+    font-size: 2rem;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 80px 0 60px;
+  }
+  
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .hero .subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .hero-cta {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .content-section {
+    padding: 60px 0;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .process-steps {
+    grid-template-columns: 1fr;
+  }
+  
+  .section-header h2 {
+    font-size: 1.8rem;
+  }
+  
+  #scrollTopBtn {
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+  
+  .btn {
+    padding: 14px 30px;
+    font-size: 15px;
+  }
+  
+  .feature-card,
+  .process-step {
+    padding: 30px 20px;
+  }
+  
+  .cta-content h2 {
+    font-size: 2rem;
+  }
+  
+  .stat-item h3 {
+    font-size: 2.5rem;
+  }
+}
+
+/* Utility Classes */
+.text-center { text-align: center; }
+.mb-20 { margin-bottom: 20px; }
+.mb-30 { margin-bottom: 30px; }
+.mb-40 { margin-bottom: 40px; }
+.mt-40 { margin-top: 40px; }
+</style>
+</head>
+
+<body>
+
+<!-- Loading Screen -->
+<div id="loading-screen">
+  <div class="loader"></div>
+  <div class="loading-text">Loading...</div>
+</div>
+
+<!-- Scroll to Top Button -->
+<button id="scrollTopBtn" aria-label="Scroll to top">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+    <!-- Top Bar -->
+<div class="top-bar">
+  <div class="container">
+    <div class="top-bar-left text-color">
+      <span>✓ Award-Winning Cloud CRM Software Since 2003</span>
+    </div>
+    <ul class="top-bar-nav">
+      <li><a href="https://www.salesboom.com/crm_supportcenter/overview/index.html">Support Center</a></li>
+      <li><a href="https://www.salesboom.com/crm_trial.html">Free Trial</a></li>
+      <li><a href="https://www.salesboom.com/login.html">Login</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Main Header -->
+<header>
+  <div class="main-header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <a href="https://www.salesboom.com" aria-label="Salesboom CRM Home">
+            <img src="https://www.salesboom.com/img/salesboom-logo-252x67.png" alt="Salesboom Cloud CRM Logo" width="252" height="67">
+          </a>
+        </div>
+        <div class="header-phone">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          <a href="tel:+18552292043">1-855-229-2043</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <h1>Google AI-Powered CRM Platform for Modern Businesses</h1>
+      <p class="subtitle">Leverage Google Gemini, Firebase Studio, and Antigravity with Salesboom's integrated CRM platform. Transform your workforce into AI-augmented super-humans with 23 years of proven innovation.</p>
+     <a href="intelligent-enterprise-platform.html" class="text-white border-bottom border-white">back to home page <i class="fa-solid fa-arrow-right  "></i></a>
+      <div class="hero-cta">
+        <a href="https://www.salesboom.com/request-crm-demo.html" class="btn btn-primary-custom">Book a Demo</a>
+        <a href="https://www.salesboom.com/crm_trial.html" class="btn btn-outline-custom">Start Free Trial</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Section -->
+<section class="stats-section">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <h3>23+</h3>
+        <p>Years of Google Integration</p>
+      </div>
+      <div class="stat-item">
+        <h3>3,500+</h3>
+        <p>Businesses Transformed</p>
+      </div>
+      <div class="stat-item">
+        <h3>159</h3>
+        <p>Countries Served</p>
+      </div>
+      <div class="stat-item">
+        <h3>100%</h3>
+        <p>Google AI Integration</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 1: Google Integration Overview -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Deep Integration with Google's AI Developer Ecosystem</h2>
+    </div>
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-10">
+        <p style="font-size: 1.1rem; color: var(--text-light); line-height: 1.8; margin-bottom: 25px;">
+          Salesboom Cloud CRM has been tightly integrated with Google since 2003, pioneering seamless connectivity between CRM functionality and Google's powerful ecosystem. Our Gmail CRM integration embeds your complete CRM within the Gmail user interface, creating a unified workspace where sales, service, and customer data flow naturally.
+        </p>
+        <p style="font-size: 1.1rem; color: var(--text-light); line-height: 1.8; margin-bottom: 25px;">
+          Today, we've expanded far beyond basic integration. Salesboom is now fully integrated with Google's newest AI-driven developer platforms, including Google Antigravity for agentic workflows, Firebase Studio as an AI-powered full-stack environment, and the Gemini API for advanced generative AI capabilities. These integrations transform how businesses build, deploy, and scale customer relationship solutions.
+        </p>
+      </div>
+    </div>
+
+    <div class="text-center mb-5">
+      <div class="google-badge"><i class="fab fa-google"></i> Google Gemini</div>
+      <div class="google-badge"><i class="fas fa-fire"></i> Firebase Studio</div>
+      <div class="google-badge"><i class="fas fa-rocket"></i> Antigravity</div>
+      <div class="google-badge"><i class="fas fa-cloud"></i> Google Cloud</div>
+      <div class="google-badge"><i class="fas fa-envelope"></i> Gmail CRM</div>
+      <div class="google-badge"><i class="fab fa-android"></i> Android Studio</div>
+    </div>
+
+    <div class="highlight-box">
+      <h3><i class="fas fa-sitemap" style="margin-right: 10px;"></i> Our Three-Pillar Integration Strategy</h3>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-plug"></i></div>
+        <h3>Native Google API Connectivity</h3>
+        <p>Seamless integration across all major Google platforms—from Android Studio and Google Cloud to the Gemini API and CLI tools. Your CRM data and AI capabilities work naturally within the Google ecosystem you already use.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-brain"></i></div>
+        <h3>Custom AI Solution Development</h3>
+        <p>Building custom Gems tailored to your business processes, integrating with all Google AI APIs, and creating bespoke AI solutions that address your specific challenges and opportunities using Google Gemini.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-users-cog"></i></div>
+        <h3>Agent-to-Agent Architecture</h3>
+        <p>Embracing A2A architecture for human-powered AI solutions. We develop agentic workforce capabilities that augment every worker, turning them into super-humans capable of accomplishing far more with AI assistance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 2: AI Programming and Development -->
+<section class="content-section bg-light">
+  <div class="container">
+    <div class="section-header">
+      <h2>Supercharged Development with Google AI Tools</h2>
+      <p>Salesboom leverages Google's AI programming tools in-house to supercharge the built-to-suit model we pioneered over 23 years ago. This means faster development cycles, higher quality code, and more innovative solutions delivered to customers at competitive pricing.</p>
+    </div>
+
+    <div class="row mb-5">
+      <div class="col-lg-6 mb-4">
+        <div class="feature-card" style="height: 100%;">
+          <div class="feature-icon"><i class="fas fa-gem"></i></div>
+          <h3>Custom AI Solution Development</h3>
+          <p>We build custom AI solutions on Google Gemini, creating tailored Gems that integrate directly into your workflows. Our development team uses Google's latest AI-driven platforms to accelerate delivery while maintaining the flexibility and personalization that built-to-suit solutions require.</p>
+          <h4>Our Custom AI Capabilities:</h4>
+          <ul>
+            <li>Building production-ready generative AI experiences using the Gemini API</li>
+            <li>Creating custom Gems configured for specific business processes and industry requirements</li>
+            <li>Integrating with all Google AI APIs to leverage the full power of the ecosystem</li>
+            <li>Developing agentic AI solutions that can autonomously plan, execute, and verify complex tasks</li>
+            <li>Implementing AI-powered automation that learns and improves over time</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-lg-6 mb-4">
+        <div class="feature-card" style="height: 100%;">
+          <div class="feature-icon"><i class="fas fa-layer-group"></i></div>
+          <h3>Platform as a Service Foundation</h3>
+          <p>The Salesboom Platform as a Service (PaaS) provides the foundation for building custom CRM, AI, and mobile solutions. Combined with Google's developer platforms, we deliver:</p>
+          <ul style="margin-top: 20px;">
+            <li>Rapid prototyping using Google AI Studio for quick concept validation</li>
+            <li>Full-stack development through Firebase Studio integration</li>
+            <li>Cross-platform mobile and desktop apps built with Flutter for write-once, run-anywhere efficiency</li>
+            <li>Cloud-native deployment on Google Cloud infrastructure</li>
+            <li>Continuous innovation through quarterly platform updates</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 3: Google Antigravity Integration -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Agent-First Development with Google Antigravity</h2>
+      <p>Google Antigravity represents a paradigm shift in software development—moving beyond traditional IDEs to agent-first workflows where AI agents autonomously plan, execute, and verify complex tasks across your entire development environment.</p>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-play-circle"></i></div>
+        <h3>Autonomous Task Execution</h3>
+        <p>Agents work across your editor, terminal, and browser simultaneously, coordinating complex workflows that previously required multiple manual steps and context switching. This dramatically accelerates development while reducing human error.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-user-astronaut"></i></div>
+        <h3>Agentic Workforce Augmentation</h3>
+        <p>Our A2A (agent-to-agent) architecture creates an agentic workforce that augments human capabilities. Every worker gains AI-powered assistance that handles routine tasks, surfaces insights, and enables focus on high-value strategic work.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-project-diagram"></i></div>
+        <h3>Intelligent Workflow Orchestration</h3>
+        <p>Antigravity's agents don't just execute commands—they understand intent, verify outcomes, and adapt to changing conditions. This creates self-healing workflows that maintain reliability even as requirements evolve.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 4: Firebase Studio Integration -->
+<section class="content-section bg-light">
+  <div class="container">
+    <div class="section-header">
+      <h2>AI-Powered Full-Stack Development with Firebase Studio</h2>
+      <p>Firebase Studio evolves Google's Project IDX into a comprehensive cloud-based workspace for building full-stack applications. Salesboom leverages this platform to unify frontend, backend, mobile, and API development with integrated Gemini AI assistance.</p>
+    </div>
+
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="step-icon"><i class="fas fa-code"></i></div>
+        <h3>Unified Development Environment</h3>
+        <p>Build complete applications—from user interface to database to API—in a single integrated workspace with AI-powered assistance for coding, testing, debugging, and deployment.</p>
+      </div>
+      
+      <div class="process-step">
+        <div class="step-icon"><i class="fas fa-magic"></i></div>
+        <h3>Gemini-Powered Assistance</h3>
+        <p>Context-aware AI suggestions, automated code generation, intelligent debugging, and real-time optimization recommendations accelerate development while improving code quality.</p>
+      </div>
+      
+      <div class="process-step">
+        <div class="step-icon"><i class="fas fa-mobile-alt"></i></div>
+        <h3>Multi-Platform Deployment</h3>
+        <p>Deploy to web, mobile, and desktop from a single codebase. Firebase Studio handles environment configuration, testing, and deployment pipelines automatically.</p>
+      </div>
+      
+      <div class="process-step">
+        <div class="step-icon"><i class="fas fa-sync-alt"></i></div>
+        <h3>Real-Time Collaboration</h3>
+        <p>Cloud-based development enables teams to collaborate in real-time, with AI assisting in code reviews, merge conflict resolution, and maintaining consistency across contributors.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 5: Gemini Code Assist -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Accelerated Development with Gemini Code Assist</h2>
+      <p>Google's Gemini Code Assist brings AI directly into the development process, transforming how Salesboom builds custom solutions for clients.</p>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <div class="feature-card mb-4">
+          <h3 style="color: var(--primary-color);"><i class="fas fa-code" style="margin-right: 10px;"></i> Context-Aware Code Generation</h3>
+          <p>Gemini understands your codebase context, project architecture, and coding patterns to generate relevant, high-quality code that integrates seamlessly with existing systems. This accelerates development while maintaining consistency and quality standards.</p>
+        </div>
+
+        <div class="feature-card mb-4">
+          <h3 style="color: var(--primary-color);"><i class="fas fa-bug" style="margin-right: 10px;"></i> Intelligent Debugging and Testing</h3>
+          <p>AI-powered debugging identifies issues faster, suggests fixes based on similar problems across millions of codebases, and generates comprehensive test coverage automatically. This reduces bug counts and improves software reliability.</p>
+        </div>
+
+        <div class="feature-card mb-4">
+          <h3 style="color: var(--primary-color);"><i class="fas fa-book" style="margin-right: 10px;"></i> Automated Documentation</h3>
+          <p>Gemini generates clear, comprehensive documentation as code is written—including inline comments, API documentation, and user guides. This ensures knowledge transfer and reduces onboarding time for new team members.</p>
+        </div>
+
+        <div class="feature-card">
+          <h3 style="color: var(--primary-color);"><i class="fas fa-rocket" style="margin-right: 10px;"></i> Performance Optimization</h3>
+          <p>AI analyzes code for performance bottlenecks and suggests optimizations based on best practices and real-world performance data. This results in faster, more efficient applications that scale better under load.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-2">
+      <h3 class="fw-bold text-color">
+        <i class="fa-solid fa-layer-group me-2"></i>
+        Explore Salesboom Editions
+      </h3>
+      <p class="text-muted">Discover powerful CRM editions to scale your business efficiently.</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-briefcase fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Professional Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              A complete CRM suite with Marketing Automation, ERP integration, and Support tools — built for performance and value.
+            </p>
+            <a href="https://www.salesboom.com/editions/professional-edition.html" class="btn btn-color mt-auto">
+              Explore Professional <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-building fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Enterprise Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              For large enterprises — automate workflows, unify data, and leverage analytics to drive strategic growth.
+            </p>
+            <a href="https://www.salesboom.com/editions/enterprise-edition.html" class="btn btn-color mt-auto">
+              View Enterprise <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-users fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Team Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              Perfect for small teams starting with CRM — manage leads, track sales, and boost productivity with simplicity.
+            </p>
+            <a href="https://www.salesboom.com/editions/team-edition.html" class="btn btn-color mt-auto">
+           Discover Team<i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 6: Flutter Development -->
+<section class="content-section bg-light">
+  <div class="container">
+    <div class="section-header">
+      <h2>Cross-Platform Excellence with Flutter</h2>
+      <p>Flutter enables Salesboom to build beautiful, natively compiled applications for mobile, web, and desktop from a single codebase—dramatically reducing development time and cost while maintaining exceptional user experiences.</p>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-mobile-alt"></i></div>
+        <h3>Write Once, Run Anywhere</h3>
+        <p>A single Flutter codebase deploys to iOS, Android, web, Windows, macOS, and Linux. This eliminates the need to maintain separate codebases for each platform, reducing development and maintenance costs by up to 70%.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-tachometer-alt"></i></div>
+        <h3>Native Performance</h3>
+        <p>Flutter compiles to native machine code, delivering 60fps animations and fast startup times. Users experience smooth, responsive applications that feel native on every platform.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-palette"></i></div>
+        <h3>Beautiful, Customizable UI</h3>
+        <p>Flutter's rich widget library and powerful design system enable pixel-perfect interfaces that match your brand. Create custom designs without compromising on performance or functionality.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-bolt"></i></div>
+        <h3>Hot Reload Development</h3>
+        <p>See changes instantly without losing app state. Flutter's hot reload accelerates the development cycle, enabling rapid iteration and faster time-to-market for new features and updates.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 7: Integration Benefits -->
+<section class="benefits-section">
+  <div class="container">
+    <div class="section-header" style="color: white;">
+      <h2 style="color: white;">Why Salesboom's Google Integration Matters</h2>
+      <p style="color: rgba(255,255,255,0.9);">Our deep integration with Google's AI ecosystem delivers tangible competitive advantages that transform how your business operates.</p>
+    </div>
+
+    <div class="benefits-grid">
+      <div class="benefit-item">
+        <h3><i class="fas fa-history" style="margin-right: 10px;"></i> Pioneer Integration Experience</h3>
+        <p>Integrating with Google since 2003 means we understand the ecosystem deeply and can navigate changes seamlessly—ensuring your CRM remains current with Google's evolution.</p>
+      </div>
+      
+      <div class="benefit-item">
+        <h3><i class="fas fa-robot" style="margin-right: 10px;"></i> Agent-First Architecture</h3>
+        <p>Embracing A2A workflows and agentic AI positions your business at the forefront of AI-powered automation, turning every worker into a super-human augmented by intelligent agents.</p>
+      </div>
+      
+      <div class="benefit-item">
+        <h3><i class="fas fa-gem" style="margin-right: 10px;"></i> Custom AI Solutions</h3>
+        <p>Building bespoke Gems and AI integrations tailored to your specific business needs—not generic off-the-shelf solutions that require you to adapt your processes.</p>
+      </div>
+      
+      <div class="benefit-item">
+        <h3><i class="fas fa-th-large" style="margin-right: 10px;"></i> Write-Once, Run-Anywhere Apps</h3>
+        <p>Flutter development saves time and money by deploying to all platforms simultaneously from a single codebase, while maintaining native performance and user experience.</p>
+      </div>
+      
+      <div class="benefit-item">
+        <h3><i class="fas fa-rocket" style="margin-right: 10px;"></i> In-House AI Supercharging</h3>
+        <p>Using AI programming tools internally means faster development, lower costs, and more innovation passed directly to customers through our built-to-suit model.</p>
+      </div>
+      
+      <div class="benefit-item">
+        <h3><i class="fas fa-users" style="margin-right: 10px;"></i> People-as-a-Service Model</h3>
+        <p>Expert support and managed services augment your team—you get enterprise capabilities without hiring expensive specialists or building in-house expertise.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Salesboom Products & Integrations Section -->
+<section class="container py-5">
+  <h2 class="text-center mb-5 text-color">
+    Salesboom Products & CRM Integrations
+  </h2>
+
+  <div class="row g-4">
+
+    <!-- Card 1 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-robot text-color fa-2x mb-3"></i>
+        <h4>AI Work For You</h4>
+        <p>
+          Discover how
+          <a href="https://www.salesboom.com/products/new/AI-work-for-you.html" class="text-color fw-bold">
+            AI Work For You
+          </a>
+          automates daily tasks, reduces manual effort, and enables teams to focus on high-value work.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-people-arrows text-color fa-2x mb-3"></i>
+        <h4>Agentic Workforce</h4>
+        <p>
+          Explore the concept of an
+          <a href="https://www.salesboom.com/products/new/Agentic-Workforce.html" class="text-color fw-bold">
+            Agentic Workforce
+          </a>
+          where AI agents collaborate with teams to execute workflows autonomously and intelligently.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-globe text-color fa-2x mb-3"></i>
+        <h4>AI People Economy</h4>
+        <p>
+          Learn how the
+          <a href="https://www.salesboom.com/products/new/AI-People-Economy.html" class="text-color fw-bold">
+            AI People Economy
+          </a>
+          redefines collaboration by combining human expertise with intelligent automation at scale.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-laptop-code text-color fa-2x mb-3"></i>
+        <h4>Agentic Workforce CRM</h4>
+        <p>
+          Discover how
+          <a href="https://www.salesboom.com/agentic-workforce/agentic-workforce-AI-Powered-CRM.html" class="text-color fw-bold">
+            AI-powered Agentic Workforce CRM
+          </a>
+          transforms customer engagement with predictive insights and autonomous actions.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-puzzle-piece text-color fa-2x mb-3"></i>
+        <h4>CRM Integration</h4>
+        <p>
+          Enable seamless
+          <a href="https://www.salesboom.com/crm/crm-software/crm-integration.html" class="text-color fw-bold">
+            CRM integration
+          </a>
+          across tools and platforms to ensure unified data flow and operational consistency.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-envelope text-color fa-2x mb-3"></i>
+        <h4>Outlook 365 CRM App</h4>
+        <p>
+          Bring customer data directly into your inbox with
+          <a href="https://www.salesboom.com/apps/outlook-365-CRM.html" class="text-color fw-bold">
+            Outlook 365 CRM
+          </a>
+          for faster communication and better relationship management.
+        </p>
+      </div>
+    </div>
+
+ 
+    
+
+
+  </div>
+</section>
+<!-- Section 8: Future-Proof Technology -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Built for Tomorrow's AI-Driven Business Landscape</h2>
+      <p>Google's shift toward agent-first development paradigms represents the future of business software. Salesboom's deep integration positions customers to leverage these advances immediately as they evolve.</p>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <div style="background: var(--bg-light); padding: 40px; border-radius: 12px; border-left: 5px solid var(--primary-color);">
+          <h3 style="color: var(--primary-color); margin-bottom: 25px;">Future-Ready Capabilities:</h3>
+          <ul style="list-style: none; padding: 0;">
+            <li style="padding: 10px 0; padding-left: 30px; position: relative; color: var(--text-color);"><i class="fas fa-check" style="position: absolute; left: 0; color: var(--success-color);"></i> Agent-first workflows through Antigravity integration enable autonomous task execution today and expand as agent capabilities grow</li>
+            <li style="padding: 10px 0; padding-left: 30px; position: relative; color: var(--text-color);"><i class="fas fa-check" style="position: absolute; left: 0; color: var(--success-color);"></i> Embedded AI through Gemini Code Assist and API access means continuous improvement as Google's models advance</li>
+            <li style="padding: 10px 0; padding-left: 30px; position: relative; color: var(--text-color);"><i class="fas fa-check" style="position: absolute; left: 0; color: var(--success-color);"></i> Unified Firebase Studio development environment simplifies building new capabilities as business needs evolve</li>
+            <li style="padding: 10px 0; padding-left: 30px; position: relative; color: var(--text-color);"><i class="fas fa-check" style="position: absolute; left: 0; color: var(--success-color);"></i> Cloud-native architecture on Google Cloud scales automatically as your business grows</li>
+            <li style="padding: 10px 0; padding-left: 30px; position: relative; color: var(--text-color);"><i class="fas fa-check" style="position: absolute; left: 0; color: var(--success-color);"></i> Flutter's single codebase adapts to new platforms and devices as they emerge</li>
+            <li style="padding: 10px 0; padding-left: 30px; position: relative; color: var(--text-color);"><i class="fas fa-check" style="position: absolute; left: 0; color: var(--success-color);"></i> Open API architecture enables integrations with future tools and services</li>
+            <li style="padding: 10px 0; padding-left: 30px; position: relative; color: var(--text-color);"><i class="fas fa-check" style="position: absolute; left: 0; color: var(--success-color);"></i> Quarterly platform updates deliver new Google innovations without migration or disruption</li>
+            <li style="padding: 10px 0; padding-left: 30px; position: relative; color: var(--text-color);"><i class="fas fa-check" style="position: absolute; left: 0; color: var(--success-color);"></i> A2A architecture prepares organizations for the multi-agent future of work</li>
+          </ul>
+        </div>
+
+        <div class="highlight-box mt-5">
+          <h3>By building on Google's developer platforms, Salesboom customers don't just get today's capabilities</h3>
+          <p>They're positioned to leverage tomorrow's innovations as they arrive.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 9: Industry Applications -->
+<section class="content-section bg-light">
+  <div class="container">
+    <div class="section-header">
+      <h2>Google AI-Powered Solutions Across Industries</h2>
+      <p>Salesboom's Google integration delivers value across diverse industries by adapting Google's powerful AI tools to specific business contexts.</p>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-heartbeat"></i></div>
+        <h3>Healthcare and Life Sciences</h3>
+        <p>Gemini-powered analysis of patient interactions, automated appointment scheduling with Google Calendar integration, secure document management through Google Drive, and AI-assisted treatment plan recommendations while maintaining HIPAA compliance.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-briefcase"></i></div>
+        <h3>Professional Services</h3>
+        <p>Project management integrated with Google Workspace, AI-powered resource allocation, automated time tracking and billing, intelligent client communication through Gmail CRM, and predictive analytics for project planning.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-industry"></i></div>
+        <h3>Manufacturing and Distribution</h3>
+        <p>Supply chain optimization using Vertex AI, field service management on Flutter mobile apps with real-time synchronization, inventory forecasting with Gemini analysis, and automated order processing with intelligent routing.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+        <h3>Financial Services</h3>
+        <p>Compliance-ready cloud infrastructure on Google Cloud, AI-powered lead scoring and opportunity identification, secure document handling through Google Drive integration, and automated reporting with Gemini-assisted insights.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-laptop-code"></i></div>
+        <h3>Technology and SaaS</h3>
+        <p>Developer-friendly API access, Firebase integration for product analytics, AI-assisted customer success workflows, automated onboarding sequences, and usage-based analytics with predictive churn modeling.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-content">
+      <h2>Ready to Leverage Google AI in Your CRM?</h2>
+      <p>Discover how Salesboom's deep Google integration can transform your business with AI-powered automation, agentic workflows, and custom solutions. Schedule a demo to see Google Gemini, Firebase Studio, and Antigravity in action within our CRM platform.</p>
+      <div class="hero-cta">
+        <a href="https://www.salesboom.com/request-crm-demo.html" class="btn btn-primary-custom">Schedule a Demo</a>
+        <a href="https://www.salesboom.com/crm_trial.html" class="btn btn-outline-custom">Start Free Trial</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+<!-- CRM Integrations & AI Solutions Section -->
+<section class="container py-5">
+  <h2 class="text-center mb-5 text-color">
+    CRM Integrations & AI Solutions
+  </h2>
+
+  <div class="row g-4">
+
+
+
+    <!-- Card 2 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-layer-group text-color fa-2x mb-3"></i>
+        <h4>A2UI Dynamic CRM Interface</h4>
+        <p>
+          Discover a flexible and adaptive CRM experience with
+          <a class="text-color fw-bold" href="a2ui-dynamic-interface-crm.html">dynamic UI capabilities</a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-chart-line text-color fa-2x mb-3"></i>
+        <h4>Revenue Engine CRM & ERP</h4>
+        <p>
+          Power your revenue growth using
+          <a class="text-color fw-bold" href="revenue-engine-crm-rlm-erp-integration.html">
+            CRM, RLM, and ERP integration
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-bolt text-color fa-2x mb-3"></i>
+        <h4>Ultimate Sales Enabler</h4>
+        <p>
+          Enable smarter sales workflows with
+          <a class="text-color fw-bold" href="ultimate-sales-enabler-crm-rlm-erp-ai-integration.html">
+            AI-driven CRM integration
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-arrows-spin text-color fa-2x mb-3"></i>
+        <h4>Revenue Operations Strategy</h4>
+        <p>
+          Build a scalable growth model through
+          <a class="text-color fw-bold" href="integrated-revenue-operations-strategy.html">
+            integrated revenue operations
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-brands fa-hubspot text-color fa-2x mb-3"></i>
+        <h4>Salesboom & HubSpot Integration</h4>
+        <p>
+          Seamlessly connect Salesboom with HubSpot using our
+          <a class="text-color fw-bold" href="salesboom-hubspot-integration.html">
+            CRM integration solution
+          </a>.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- Enterprise AI & CRM Blog Resources -->
+<section class="container py-5">
+  <h2 class="text-center mb-5 text-color">
+    Enterprise CRM, AI & Integration Insights
+  </h2>
+
+  <div class="row g-4">
+
+    <!-- Card 1 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-network-wired text-color fa-2x mb-3"></i>
+        <h4>Unified Enterprise Platform</h4>
+        <p>
+          Understand how a
+          <a href="https://blog.salesboom.com/unified-enterprise-platform" class="text-color fw-bold">
+            unified enterprise platform
+          </a>
+          connects CRM, AI, and core business systems into one scalable solution.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-robot text-color fa-2x mb-3"></i>
+        <h4>Salesboom AI CRM Integration</h4>
+        <p>
+          Explore how
+          <a href="https://blog.salesboom.com/salesboom-ai-crm-enterprise-integration" class="text-color fw-bold">
+            AI-powered CRM integration
+          </a>
+          enables smarter automation and enterprise-level decision making.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-database text-color fa-2x mb-3"></i>
+        <h4>Enterprise Data Engine</h4>
+        <p>
+          Learn how an
+          <a href="https://blog.salesboom.com/enterprise-data-engine" class="text-color fw-bold">
+            enterprise data engine
+          </a>
+          transforms raw data into actionable insights across platforms.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-arrows-up-down text-color fa-2x mb-3"></i>
+        <h4>CRM & ERP Unified Sales Engine</h4>
+        <p>
+          Discover how
+          <a href="https://blog.salesboom.com/crm-erp-unified-sales-engine" class="text-color fw-bold">
+            CRM and ERP unification
+          </a>
+          creates a single sales engine for faster revenue growth.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-rotate text-color fa-2x mb-3"></i>
+        <h4>Integration Hub & Real-Time Sync</h4>
+        <p>
+          See how an
+          <a href="https://blog.salesboom.com/integration-hub-crm-erp-real-time-sync" class="text-color fw-bold">
+            integration hub with real-time sync
+          </a>
+          keeps CRM and ERP data always aligned.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-brain text-color fa-2x mb-3"></i>
+        <h4>AI Agent Orchestration Platform</h4>
+        <p>
+          Learn how an
+          <a href="https://blog.salesboom.com/ai-agent-orchestration-platform-enterprise" class="text-color fw-bold">
+            AI agent orchestration platform
+          </a>
+          coordinates enterprise workflows with intelligence and scale.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+<!-- Footer -->
+<footer class="mt-5 footer">
+  <div class="container mt-5 pt-5">
+    <div class="footer-grid">
+      <div class="footer-section">
+        <h3>Products</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/products/tools-sfa.html">Sales Force Automation</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-marketing.html">Marketing Automation</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-casemanagement.html">Case Management</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-reporting.html">Business Intelligence</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-emailintegration.html">Email Integration</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Solutions</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/products/edition-team.html">Team Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/edition-professional.html">Professional Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/edition-enterprise.html">Enterprise Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/industry-solutions.html">Industry Solutions</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/company/index.html">About Us</a></li>
+          <li><a href="https://www.salesboom.com/company/company-contact.html">Contact Us</a></li>
+          <li><a href="https://www.salesboom.com/customers/index.html">Customers</a></li>
+          <li><a href="https://www.salesboom.com/partners/index.html">Partners</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/support/index.html">Support Center</a></li>
+          <li><a href="https://www.salesboom.com/crm_supportcenter/overview/index.html">Documentation</a></li>
+          <li><a href="https://www.salesboom.com/whitepapers/index.html">White Papers</a></li>
+          <li><a href="https://www.salesboom.com/pop-privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="bg-color">
+    <div class="container">
+     <div class="footer-bottom pb-3 mt-3">
+      <p>&copy; 2003-2025 <a class="text-white fw-bold" href="https://www.salesboom.com">Salesboom.com</a> Inc. All rights reserved. | Call: 1-855-229-2043</p>
+      <p style="margin-top: 10px;">Salesboom's color-coded CRM lead management software helps businesses visually prioritize sales opportunities with automated workflow rules. Contact us to learn how color coding can transform your lead management process and increase sales productivity.</p>
+    </div>
+    </div>
+  </div>
+ 
+</footer>
+
+<!-- Common JavaScript -->
+<script src="content/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+
+
+
+<script>
+// Loading Screen
+window.addEventListener('load', function() {
+  setTimeout(function() {
+    document.getElementById('loading-screen').classList.add('fade-out');
+  }, 500);
+});
+
+// Scroll to Top Button
+const scrollTopBtn = document.getElementById('scrollTopBtn');
+
+window.addEventListener('scroll', function() {
+  if (window.pageYOffset > 300) {
+    scrollTopBtn.classList.add('show');
+  } else {
+    scrollTopBtn.classList.remove('show');
+  }
+});
+
+scrollTopBtn.addEventListener('click', function() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+
+// Smooth Scroll for Anchor Links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  });
+});
+</script>
+
+</body>
+</html>
+

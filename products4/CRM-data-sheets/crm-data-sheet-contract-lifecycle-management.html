@@ -1,0 +1,1567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    
+    <!-- Primary Meta Tags -->
+    <title>Contract Lifecycle Management CRM | Salesboom CLM Software</title>
+    <meta name="description" content="Streamline contract creation, tracking, and compliance with Salesboom's Contract Lifecycle Management CRM. Automate workflows, reduce risk, and manage every contract stage seamlessly.">
+    <meta name="keywords" content="Contract lifecycle management, CLM software, Contract management CRM, Contract workflow automation, Enterprise contract management, Contract compliance tracking, Document management system">
+    <link rel="canonical" href="https://www.salesboom.com/crm-data-sheet-contract-lifecycle-management.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.salesboom.com/crm-data-sheet-contract-lifecycle-management.html">
+    <meta property="og:title" content="Contract Lifecycle Management CRM | Salesboom CLM Software">
+    <meta property="og:description" content="Streamline contract creation, tracking, and compliance with Salesboom's Contract Lifecycle Management CRM. Automate workflows, reduce risk, and manage every contract stage seamlessly.">
+    <meta property="og:image" content="https://www.salesboom.com/img/crm-data-sheet-contract-lifecycle-management-og.jpg">
+    <meta property="og:site_name" content="Salesboom CRM">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.salesboom.com/crm-data-sheet-contract-lifecycle-management.html">
+    <meta name="twitter:title" content="Contract Lifecycle Management CRM | Salesboom CLM Software">
+    <meta name="twitter:description" content="Streamline contract creation, tracking, and compliance with Salesboom's Contract Lifecycle Management CRM. Automate workflows, reduce risk, and manage every contract stage seamlessly.">
+    <meta name="twitter:image" content="https://www.salesboom.com/img/crm-data-sheet-contract-lifecycle-management-og.jpg">
+    <meta name="twitter:site" content="@SalesboomCloud">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Salesboom Contract Lifecycle Management CRM",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web-based, Cloud",
+      "offers": {
+        "@type": "Offer",
+        "price": "14.00",
+        "priceCurrency": "USD",
+        "priceValidUntil": "2026-12-31"
+      },
+      "featureList": [
+        "Complete contract lifecycle management from creation to renewal",
+        "Intelligent workflow automation with no-code customization",
+        "Secure centralized contract repository with version control",
+        "Real-time compliance tracking and risk management",
+        "Advanced analytics and reporting dashboards",
+        "Enterprise system integration via open APIs"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.5",
+        "ratingCount": "28000"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Salesboom",
+        "url": "https://www.salesboom.com",
+        "logo": "https://www.salesboom.com/img/salesboom-logo-252x67.png",
+        "foundingDate": "1999",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+1-855-229-2043",
+          "contactType": "Customer Service"
+        }
+      }
+    }
+    </script>
+    
+    <link rel="shortcut icon" href="https://www.salesboom.com/favicon.ico">
+    
+ <link rel="stylesheet" href="../content/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../content/css/salesboom-common.css">
+    <link rel="shortcut icon" href="../content/image/salesboom-logo-252x67.png" type="image/x-icon"> 
+
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #002f6c;
+            --secondary-color: #0052cc;
+            --accent-color: #00a3ff;
+            --success-color: #27ae60;
+            --text-dark: #1a1a1a;
+            --text-light: #666;
+            --bg-light: #f8f9fa;
+            --border-color: #e0e0e0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Loading Screen */
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--primary-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease-out;
+        }
+        
+        #loading-screen.fade-out {
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        .loader {
+            width: 60px;
+            height: 60px;
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-top-color: #fff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Scroll to Top Button */
+        #scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            box-shadow: 0 4px 12px rgba(0, 47, 108, 0.3);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        
+        #scroll-top:hover {
+            background: var(--secondary-color);
+            transform: translateY(-5px);
+            box-shadow: 0 6px 16px rgba(0, 47, 108, 0.4);
+        }
+        
+        #scroll-top.show {
+            display: flex;
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .hero-section h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 25px;
+            line-height: 1.2;
+        }
+        
+        .hero-section .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            line-height: 1.6;
+        }
+        
+        .hero-cta {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        /* Buttons */
+        .btn-custom {
+            padding: 16px 40px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .btn-primary-custom {
+            background: white;
+            color: var(--primary-color);
+            border: 2px solid white;
+        }
+        
+        .btn-primary-custom:hover {
+            background: transparent;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+        }
+        
+        .btn-outline-custom {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .btn-outline-custom:hover {
+            background: white;
+            color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+        
+        /* Stats Section */
+        .stats-section {
+            background: var(--text-dark);
+            color: white;
+            padding: 60px 0;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .stat-item h3 {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--accent-color);
+            margin-bottom: 10px;
+        }
+        
+        .stat-item p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        /* Content Sections */
+        .content-section {
+            padding: 80px 0;
+        }
+        
+        .content-section.bg-light {
+            background: var(--bg-light);
+        }
+        
+        .section-header {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto 60px;
+        }
+        
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .section-header p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+        
+        /* Feature Cards */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--primary-color);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0, 47, 108, 0.15);
+        }
+        
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            color: white;
+            margin-bottom: 25px;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .feature-card p {
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+        
+        .feature-card ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 15px;
+        }
+        
+        .feature-card ul li {
+            padding-left: 30px;
+            position: relative;
+            margin-bottom: 12px;
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+        
+        .feature-card ul li::before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--success-color);
+        }
+        
+        /* Two Column Layout */
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+        
+        .column-content h3 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .column-content h4 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin: 30px 0 15px 0;
+            font-weight: 600;
+        }
+        
+        .column-content p {
+            color: var(--text-light);
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+        
+        .column-content ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        
+        .column-content ul li {
+            padding-left: 35px;
+            position: relative;
+            margin-bottom: 15px;
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+        
+        .column-content ul li::before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--success-color);
+            font-size: 1.2rem;
+        }
+        
+        .column-image img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Benefits Section */
+        .benefits-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 80px 0;
+            position: relative;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .benefit-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        
+        .benefit-item:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-5px);
+        }
+        
+        .benefit-item i {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+        }
+        
+        .benefit-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .benefit-item p {
+            opacity: 0.9;
+            line-height: 1.7;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: var(--text-dark);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .cta-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .cta-content p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            line-height: 1.7;
+        }
+        
+        /* Process Steps */
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .process-step {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            transition: all 0.3s ease;
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .process-step:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0, 47, 108, 0.15);
+        }
+        
+        .step-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin: 0 auto 20px;
+        }
+        
+        .process-step h3 {
+            font-size: 1.3rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .process-step p {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero-section h1 {
+                font-size: 2.5rem;
+            }
+            
+            .two-column {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .section-header h2 {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 60px 0;
+            }
+            
+            .hero-section h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-section .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .hero-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn-custom {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .content-section {
+                padding: 60px 0;
+            }
+            
+            .stat-item h3 {
+                font-size: 2.5rem;
+            }
+            
+            #scroll-top {
+                width: 45px;
+                height: 45px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero-section h1 {
+                font-size: 1.8rem;
+            }
+            
+            .section-header h2 {
+                font-size: 1.8rem;
+            }
+            
+            .feature-card {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+
+    <!-- Top Bar -->
+<div class="top-bar">
+  <div class="container">
+    <div class="top-bar-left text-color">
+      <span>✓ Award-Winning Cloud CRM Software Since 2003</span>
+    </div>
+    <ul class="top-bar-nav">
+      <li><a href="https://www.salesboom.com/crm_supportcenter/overview/index.html">Support Center</a></li>
+      <li><a href="https://www.salesboom.com/crm_trial.html">Free Trial</a></li>
+      <li><a href="https://www.salesboom.com/login.html">Login</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Main Header -->
+<header>
+  <div class="main-header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <a href="https://www.salesboom.com" aria-label="Salesboom CRM Home">
+            <img src="https://www.salesboom.com/img/salesboom-logo-252x67.png" alt="Salesboom Cloud CRM Logo" width="252" height="67">
+          </a>
+        </div>
+        <div class="header-phone">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          <a href="tel:+18552292043">1-855-229-2043</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Master Every Contract Stage From Creation to Renewal</h1>
+                <p class="subtitle">Eliminate contract chaos with intelligent workflow automation, real-time compliance tracking, and secure document management—all within a unified CRM platform built for enterprise excellence.</p>
+                <div class="hero-cta">
+                    <a href="https://www.salesboom.com/request-crm-demo.html" class="btn-custom btn-primary-custom">Book a Demo</a>
+                    <a href="https://www.salesboom.com/crm_trial.html" class="btn-custom btn-outline-custom">Start Free Trial</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-6">
+                    <div class="stat-item">
+                        <h3>1999</h3>
+                        <p>Since Founded</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-item">
+                        <h3>28,000+</h3>
+                        <p>Global Subscribers</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-item">
+                        <h3>154</h3>
+                        <p>Countries Served</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-item">
+                        <h3>24/7</h3>
+                        <p>Cloud Access</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Statement Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>The Hidden Costs of Manual Contract Management</h2>
+                <p>Traditional contract management relies on disconnected systems, email chains, spreadsheets, and file cabinets that create operational bottlenecks and expose businesses to significant risk. Without centralized visibility, organizations struggle to track contract obligations, miss critical renewal dates, and lose negotiating leverage.</p>
+            </div>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-scale-unbalanced"></i>
+                    </div>
+                    <h3>Legal Teams</h3>
+                    <p>Waste hours searching for contract versions and clause language across disparate systems, reducing time available for strategic legal work.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-sack-dollar"></i>
+                    </div>
+                    <h3>Finance Departments</h3>
+                    <p>Struggle to validate invoice pricing against contract terms, leading to overpayments and budget inconsistencies.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-cart-shopping"></i>
+                    </div>
+                    <h3>Procurement Teams</h3>
+                    <p>Lack visibility into supplier relationships and contract performance metrics needed for strategic sourcing decisions.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-calendar-xmark"></i>
+                    </div>
+                    <h3>Operations Managers</h3>
+                    <p>Miss renewal deadlines, resulting in unfavorable auto-renewals and lost savings opportunities.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                  <i class="fa-solid fa-suitcase"></i>
+                    </div>
+                    <h3>Compliance Officers</h3>
+                    <p>Cannot efficiently audit contracts for regulatory requirements and risk exposure across the organization.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                <i class="fa-solid fa-cloud"></i>
+                    </div>
+                    <h3>Executive Leadership</h3>
+                    <p>Lack real-time visibility into contract portfolios and financial commitments needed for strategic planning.</p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <p style="font-size: 1.2rem; color: var(--text-light); max-width: 900px; margin: 0 auto;">Enterprise contract management through Salesboom's CLM software eliminates these inefficiencies by centralizing all contract data, automating complex workflows, and providing instant access to your complete contract repository from anywhere.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Overview Section -->
+    <section class="content-section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Enterprise Contract Management Built for Complex Business Needs</h2>
+                <p>Salesboom delivers a comprehensive contract lifecycle management CRM with a powerful workflow engine designed for enterprise excellence. The platform combines best-practice templates with highly customizable configurations that require no technical expertise, enabling any organization to model even the most complex contract processes.</p>
+            </div>
+            
+            <div class="two-column">
+                <div class="column-content">
+                    <h3>Rapid Access to Your Complete Contract Repository</h3>
+                    <p>Salesboom provides on-demand, on-time access to your entire contract holdings through a secure web portal that enables rapid collaboration across teams and locations. Capture, share, and build your contract repository with confidence, knowing every document is instantly searchable and properly secured.</p>
+                    
+                    <h4>Key Repository Capabilities:</h4>
+                    <ul>
+                        <li>Centralized storage with advanced search functionality</li>
+                        <li>Version control tracking every iteration with audit trails</li>
+                        <li>Secure access protocols with granular permissions</li>
+                        <li>Mobile accessibility for review and approval anywhere</li>
+                        <li>Integration with existing document management systems</li>
+                        <li>Automated metadata extraction without manual data entry</li>
+                    </ul>
+                </div>
+                 <div class="column-content">
+                    <h3>Contract and Relationship Management Across Industries</h3>
+                    <p>Salesboom integrates powerful tools to manage complex contract relationships across automotive, IT, property rental, and every industry in between. The platform links documents, clause libraries, contacts, projects, and financial systems to provide clear understanding of relationships, impacts, and opportunities.</p>
+                    
+                    <h4>Relationship Management Features:</h4>
+                    <ul>
+                        <li>Automatic linking of related contracts and amendments</li>
+                        <li>Contact relationship tracking for all stakeholders</li>
+                        <li>Project integration tying milestones to performance</li>
+                        <li>Financial system connections ensuring billing alignment</li>
+                        <li>Real-time contract renewal notifications</li>
+                        <li>Supplier and vendor performance tracking</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contract Lifecycle Stages Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Managing Contracts Through Every Lifecycle Stage</h2>
+                <p>Salesboom's CLM software supports comprehensive contract management throughout the complete lifecycle: Creation, Activation, Renewal, Modification, and Termination. Each stage features specialized workflows, automation rules, and tracking capabilities designed to ensure nothing falls through the cracks.</p>
+            </div>
+            
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="step-icon">
+                        <i class="fas fa-file-circle-plus"></i>
+                    </div>
+                    <h3>Contract Creation</h3>
+                    <p>Streamline contract creation with standardized templates and pre-approved clauses. Track negotiation iterations with version control and automated approval workflows.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-icon">
+                        <i class="fas fa-signature"></i>
+                    </div>
+                    <h3>Contract Activation</h3>
+                    <p>Transition seamlessly from negotiation to execution with digital signature integration, automated notifications, and instant activation workflows.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Performance & Compliance</h3>
+                    <p>Monitor contract performance in real-time through customizable dashboards tracking metrics, milestones, financial obligations, and compliance requirements.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-icon">
+                        <i class="fas fa-arrows-rotate"></i>
+                    </div>
+                    <h3>Contract Renewal</h3>
+                    <p>Automated renewal tracking with configurable alerts ensuring timely review and renegotiation opportunities, preventing unfavorable auto-renewals.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-icon">
+                        <i class="fas fa-pen-to-square"></i>
+                    </div>
+                    <h3>Modification Management</h3>
+                    <p>Handle amendments and changes systematically with version control, approval workflows, and complete audit trails maintaining contract integrity.</p>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-icon">
+                        <i class="fas fa-file-circle-xmark"></i>
+                    </div>
+                    <h3>Contract Termination</h3>
+                    <p>Manage contract endings professionally with automated notice periods, obligation tracking, and archival processes ensuring compliance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workflow Automation Section -->
+    <section class="content-section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Intelligent Workflow Automation</h2>
+                <p>Eliminate manual tasks and ensure critical contract milestones never slip through the cracks with Salesboom's powerful no-code workflow engine.</p>
+            </div>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-route"></i>
+                    </div>
+                    <h3>Automated Routing</h3>
+                    <p>Configure intelligent routing rules that automatically assign contracts for review and approval based on value thresholds, contract type, department, or risk level—no manual intervention required.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <h3>Smart Notifications</h3>
+                    <p>Receive real-time alerts for renewal dates, milestone deadlines, compliance requirements, and approval requests via email, SMS, or in-platform notifications.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <h3>Approval Workflows</h3>
+                    <p>Design multi-level approval processes with automatic escalation, parallel approvals, and conditional logic based on your organization's governance requirements.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Task Automation</h3>
+                    <p>Generate follow-up tasks automatically based on contract milestones, deadlines, or status changes to ensure accountability and timely action.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                    </div>
+                    <h3>Financial Integration</h3>
+                    <p>Automatically trigger billing system updates, purchase order generation, and invoice validation based on contract terms and pricing schedules.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-calendar-days"></i>
+                    </div>
+                    <h3>Milestone Tracking</h3>
+                    <p>Track contract deliverables, performance obligations, and key dates automatically with visual timelines and progress indicators.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compliance and Risk Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Comprehensive Compliance and Risk Management</h2>
+                <p>Proactively identify, assess, and mitigate contract-related risks while ensuring continuous compliance with regulatory requirements and organizational policies.</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                           <i class="fa-solid fa-cloud"></i>
+                        </div>
+                        <h3>Compliance Tracking</h3>
+                        <p>Monitor adherence to internal policies, regulatory requirements, and industry standards. Automated compliance checks flag potential issues before they become problems, with comprehensive audit trails for every contract action.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-triangle-exclamation"></i>
+                        </div>
+                        <h3>Risk Assessment</h3>
+                        <p>Evaluate contract risk using customizable scoring frameworks. Identify high-risk clauses, unfavorable terms, and potential liabilities with AI-assisted analysis and expert-defined risk parameters.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-file-shield"></i>
+                        </div>
+                        <h3>Clause Library Management</h3>
+                        <p>Maintain approved clause language in a centralized library. Ensure consistency across contracts while enabling quick identification of non-standard terms that require legal review.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-list-check"></i>
+                        </div>
+                        <h3>Audit Trail</h3>
+                        <p>Complete documentation of every contract action, change, approval, and access. Generate audit reports instantly for internal reviews, external audits, or regulatory inquiries.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Analytics Section -->
+    <section class="content-section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Advanced Analytics and Reporting</h2>
+                <p>Transform contract data into strategic insights with powerful analytics dashboards and customizable reporting capabilities.</p>
+            </div>
+            
+            <div class="two-column">
+                <div class="column-content">
+                    <h3>Real-Time Contract Intelligence</h3>
+                    <p>Monitor your contract portfolio with customizable dashboards displaying key performance indicators, financial commitments, and risk metrics in real-time.</p>
+                    
+                    <h4>Analytics Capabilities:</h4>
+                    <ul>
+                        <li>Contract value analysis by department, supplier, or category</li>
+                        <li>Renewal pipeline forecasting with revenue projections</li>
+                        <li>Compliance rate tracking across contract types</li>
+                        <li>Cycle time analysis for contract creation and approval</li>
+                        <li>Vendor performance scorecards and comparisons</li>
+                        <li>Risk exposure summaries by contract or portfolio</li>
+                        <li>Cost savings tracking from renegotiations</li>
+                        <li>Utilization metrics for contracted services</li>
+                    </ul>
+                </div>
+               <div class="column-content">
+                    <h3>Flexible Reporting Engine</h3>
+                    <p>Generate standard or custom reports on any aspect of your contract portfolio. Schedule automatic report delivery to stakeholders and export data in multiple formats for further analysis.</p>
+                    
+                    <h4>Reporting Features:</h4>
+                    <ul>
+                        <li>Pre-built report templates for common scenarios</li>
+                        <li>Custom report builder with drag-and-drop interface</li>
+                        <li>Scheduled report generation and distribution</li>
+                        <li>Multiple export formats (PDF, Excel, CSV)</li>
+                        <li>Executive summary dashboards for leadership</li>
+                        <li>Drill-down capabilities from summary to detail</li>
+                        <li>Comparative analysis across time periods</li>
+                        <li>Regulatory compliance reporting templates</li>
+                    </ul>
+                </div>
+            </div>
+            
+       
+        </div>
+    </section>
+
+    <!-- Integration Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Seamless Enterprise System Integration</h2>
+                <p>Connect Salesboom's CLM software with your existing business systems to eliminate duplicate data entry and ensure consistency across your technology ecosystem.</p>
+            </div>
+            
+            <div class="benefits-grid">
+                <div class="benefit-item" style="background: white; color: var(--text-dark); box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                    <i class="fas fa-dollar-sign" style="color: var(--primary-color);"></i>
+                    <h3 style="color: var(--primary-color);">Financial Systems</h3>
+                    <p style="color: var(--text-light);">Automatic invoice validation against contract pricing schedules and terms.</p>
+                </div>
+                
+                <div class="benefit-item" style="background: white; color: var(--text-dark); box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                    <i class="fas fa-boxes-stacked" style="color: var(--primary-color);"></i>
+                    <h3 style="color: var(--primary-color);">ERP Integration</h3>
+                    <p style="color: var(--text-light);">Ensure purchase orders align with contracted terms and approved suppliers.</p>
+                </div>
+                
+                <div class="benefit-item" style="background: white; color: var(--text-dark); box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                    <i class="fas fa-envelope" style="color: var(--primary-color);"></i>
+                    <h3 style="color: var(--primary-color);">Email Systems</h3>
+                    <p style="color: var(--text-light);">Contract-related correspondence automatically captured and filed.</p>
+                </div>
+                
+                <div class="benefit-item" style="background: white; color: var(--text-dark); box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                    <i class="fas fa-file-signature" style="color: var(--primary-color);"></i>
+                    <h3 style="color: var(--primary-color);">Digital Signature</h3>
+                    <p style="color: var(--text-light);">Legally binding electronic contract execution with major e-signature platforms.</p>
+                </div>
+                
+                <div class="benefit-item" style="background: white; color: var(--text-dark); box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                    <i class="fas fa-calendar" style="color: var(--primary-color);"></i>
+                    <h3 style="color: var(--primary-color);">Calendar Sync</h3>
+                    <p style="color: var(--text-light);">Team calendars populated with contract milestones and renewal dates.</p>
+                </div>
+                
+                <div class="benefit-item" style="background: white; color: var(--text-dark); box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                    <i class="fas fa-chart-pie" style="color: var(--primary-color);"></i>
+                    <h3 style="color: var(--primary-color);">BI Tools</h3>
+                    <p style="color: var(--text-light);">Contract data pushed to business intelligence and analytics platforms.</p>
+                </div>
+                
+                <div class="benefit-item" style="background: white; color: var(--text-dark); box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                    <i class="fas fa-folder-open" style="color: var(--primary-color);"></i>
+                    <h3 style="color: var(--primary-color);">Document Management</h3>
+                    <p style="color: var(--text-light);">Compatibility with existing document repositories and content systems.</p>
+                </div>
+                
+                <div class="benefit-item" style="background: white; color: var(--text-dark); box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                    <i class="fas fa-plug" style="color: var(--primary-color);"></i>
+                    <h3 style="color: var(--primary-color);">Open API</h3>
+                    <p style="color: var(--text-light);">Custom integrations with proprietary or industry-specific applications.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customization Section -->
+    <section class="content-section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Tailored to Your Business Without Technical Complexity</h2>
+                <p>Salesboom's highly customizable platform adapts to your specific contract management processes using intuitive configuration tools that require no programming expertise. Process wizards guide administrators through tailoring workflows to capture the fine points of each contract type.</p>
+            </div>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-sliders"></i>
+                    </div>
+                    <h3>Custom Fields</h3>
+                    <p>Track organization-specific data points unique to your industry or business requirements with unlimited custom field creation.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-diagram-project"></i>
+                    </div>
+                    <h3>Workflow Customization</h3>
+                    <p>Visual workflow designers map your actual approval hierarchies and review processes without coding or technical expertise.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-lines"></i>
+                    </div>
+                    <h3>Template Library</h3>
+                    <p>Develop template libraries with pre-approved clause language and standard terms for each contract category.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Dashboard Personalization</h3>
+                    <p>Each user views metrics and contracts most relevant to their role with personalized dashboard configurations.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bell-concierge"></i>
+                    </div>
+                    <h3>Notification Rules</h3>
+                    <p>Configure who gets alerted about what events and when with flexible notification rule configuration.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-invoice"></i>
+                    </div>
+                    <h3>Custom Reports</h3>
+                    <p>Report builder tools enable creation of custom reports without IT involvement or technical training.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Competitive Advantages Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Leading Organizations Choose Salesboom for Contract Management</h2>
+                <p>With over two decades of CRM and enterprise software innovation, Salesboom delivers distinct advantages that separate our contract lifecycle management solution from the competition.</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+                        <h3>Unified CRM and CLM Platform</h3>
+                        <p>Single platform integrating contract management with sales, service, and customer relationship data—providing complete visibility into how contracts connect to revenue, relationships, and business outcomes.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-magic-wand-sparkles"></i>
+                        </div>
+                        <h3>No-Code Customization</h3>
+                        <p>Powerful workflow engine and configuration tools that business users can tailor without IT support or programming skills, accelerating deployment and reducing ongoing maintenance costs.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-arrow-up-right-dots"></i>
+                        </div>
+                        <h3>Proven Enterprise Scalability</h3>
+                        <p>Platform supporting 28,000+ subscribers from SMB to Fortune 500 across 154 countries, proven to scale from dozens to thousands of users without performance degradation.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-industry"></i>
+                        </div>
+                        <h3>Industry-Agnostic Flexibility</h3>
+                        <p>Contract management framework adaptable to automotive, IT, property rental, government contracting, and any industry with complex contract requirements.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-halved"></i>
+                        </div>
+                        <h3>Comprehensive Security</h3>
+                        <p>Bank-level encryption, granular permissions, complete audit trails, and redundant backups ensuring your contracts remain secure and compliant.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3>Rapid Implementation</h3>
+                        <p>Best-practice templates and process wizards enabling faster deployment than custom-built solutions, with lower total cost of ownership and predictable subscription pricing.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Transform Your Contract Management Process?</h2>
+                <p>Eliminate contract chaos and reduce compliance risk with Salesboom's enterprise CLM software. See how our platform can streamline your contract workflows and provide complete visibility across every agreement.</p>
+                <div class="hero-cta">
+                    <a href="https://www.salesboom.com/request-crm-demo.html" class="btn-custom btn-primary-custom">Book a Demo Today</a>
+                    <a href="https://www.salesboom.com/crm_trial.html" class="btn-custom btn-outline-custom">Start Free Trial</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-2">
+      <h3 class="fw-bold text-color">
+        <i class="fa-solid fa-layer-group me-2"></i>
+        Explore Salesboom Editions
+      </h3>
+      <p class="text-muted">Discover powerful CRM editions to scale your business efficiently.</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-lg border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-briefcase fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Professional Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              A complete CRM suite with Marketing Automation, ERP integration, and Support tools — built for performance and value.
+            </p>
+            <a href="https://www.salesboom.com/editions/professional-edition.html" class="btn btn-color mt-auto">
+              Explore Professional <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-lg border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-building fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Enterprise Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              For large enterprises — automate workflows, unify data, and leverage analytics to drive strategic growth.
+            </p>
+            <a href="https://www.salesboom.com/editions/enterprise-edition.html" class="btn btn-color mt-auto">
+              View Enterprise <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-lg border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-users fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Team Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              Perfect for small teams starting with CRM — manage leads, track sales, and boost productivity with simplicity.
+            </p>
+            <a href="https://www.salesboom.com/editions/team-edition.html" class="btn btn-color mt-auto">
+           Discover Team<i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="container py-5">
+  <h2 class="text-center mb-5 text-color">
+    CRM Opportunity, Contract & Growth Tools
+  </h2>
+
+  <div class="row g-4">
+
+    <!-- Card 1 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-diagram-project text-color fs-1 mb-3"></i>
+        <h4>Opportunity Management</h4>
+        <p>
+          Track, prioritize, and manage sales deals from initial lead to deal closure with
+          <a href="https://www.salesboom.com/products/crm-opportunity-management-software.html" class="text-color fw-bold">
+            CRM Opportunity Management
+          </a>. Gain clear pipeline visibility, accurate forecasts, and actionable insights to improve conversion rates and revenue outcomes.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-file-contract text-color fs-1 mb-3"></i>
+        <h4>Contract Management Tools</h4>
+        <p>
+          Centralize contract creation, approvals, renewals, and compliance with
+          <a href="https://www.salesboom.com/products/tools-contract.html" class="text-color fw-bold">
+            CRM Contract Management Tools
+          </a>. Improve consistency and reduce risk by automating contract lifecycles and integrating contract activity directly into your CRM workflow.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-file-alt text-color fs-1 mb-3"></i>
+        <h4>Contract Management Details</h4>
+        <p>
+          Explore screenshots and real-world examples of how contract tools operate with
+          <a href="https://www.salesboom.com/products/crm-contract-management-screenshot.html" class="text-color fw-bold">
+            CRM Contract Management Screenshots
+          </a>. Understand interface capabilities and how users streamline contract tasks.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-chart-line text-color fs-1 mb-3"></i>
+        <h4>Contract Reporting Features</h4>
+        <p>
+          Analyze contracts, performance, and lifecycle trends with
+          <a href="https://www.salesboom.com/products/feat-contract-report.html" class="text-color fw-bold">
+            Feature Contract Reporting
+          </a>. Customize metrics, filter by key segments, and identify opportunities to optimize revenue and compliance.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-bell text-color fs-1 mb-3"></i>
+        <h4>Big Deal Alerts</h4>
+        <p>
+          Never miss high-value opportunities with
+          <a href="https://www.salesboom.com/products/feature-big-deal-alert.html" class="text-color fw-bold">
+            Big Deal Alert Features
+          </a>. Get notified of larger deals in the pipeline so your team can focus resources where they matter most.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-exclamation-triangle text-color fs-1 mb-3"></i>
+        <h4>At-Risk Deal Alerts</h4>
+        <p>
+          Identify deals that may be losing momentum with
+          <a href="https://www.salesboom.com/products/feature-at-risk-deal-alert.html" class="text-color fw-bold">
+            At-Risk Deal Alert Features
+          </a>. Early warnings allow proactive engagement before opportunities slip away.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 7 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-arrow-up text-color fs-1 mb-3"></i>
+        <h4>Increase Sales Efforts</h4>
+        <p>
+          Improve sales team output without extra spending by leveraging CRM visibility and engagement tools like
+          <a href="https://www.salesboom.com/products/increase-sales-efforts-without-spending-money.html" class="text-color fw-bold">
+            Increase Sales Efforts Tools
+          </a>. Focus on efficiency and smarter workflows.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 8 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-university text-color fs-1 mb-3"></i>
+        <h4>Unified CRM Content</h4>
+        <p>
+          Learn how unified CRM bridges sales, support, and marketing data together with
+          <a href="https://www.salesboom.com/smb-crm/unified_crm_content.html" class="text-color fw-bold">
+            Unified CRM Guide
+          </a>. Gain a 360° view of your customer lifecycle and drive cross-team collaboration.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 9 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-gears text-color fs-1 mb-3"></i>
+        <h4>Sales Automation Content</h4>
+        <p>
+          Explore CRM automation strategies with
+          <a href="https://www.salesboom.com/sales-automation/sales_automation_content.html" class="text-color fw-bold">
+            CRM Sales Automation Content
+          </a>. Automate repetitive tasks, alerts, and workflows to free up selling time and elevate productivity.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="mt-5 footer">
+  <div class="container mt-5 pt-5">
+    <div class="footer-grid">
+      <div class="footer-section">
+        <h3>Products</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/products/tools-sfa.html">Sales Force Automation</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-marketing.html">Marketing Automation</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-casemanagement.html">Case Management</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-reporting.html">Business Intelligence</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-emailintegration.html">Email Integration</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Solutions</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/products/edition-team.html">Team Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/edition-professional.html">Professional Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/edition-enterprise.html">Enterprise Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/industry-solutions.html">Industry Solutions</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/company/index.html">About Us</a></li>
+          <li><a href="https://www.salesboom.com/company/company-contact.html">Contact Us</a></li>
+          <li><a href="https://www.salesboom.com/customers/index.html">Customers</a></li>
+          <li><a href="https://www.salesboom.com/partners/index.html">Partners</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/support/index.html">Support Center</a></li>
+          <li><a href="https://www.salesboom.com/crm_supportcenter/overview/index.html">Documentation</a></li>
+          <li><a href="https://www.salesboom.com/whitepapers/index.html">White Papers</a></li>
+          <li><a href="https://www.salesboom.com/pop-privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="bg-color">
+    <div class="container">
+     <div class="footer-bottom pb-3 mt-3">
+      <p>&copy; 2003-2025 <a class="text-white fw-bold" href="https://www.salesboom.com">Salesboom.com</a> Inc. All rights reserved. | Call: 1-855-229-2043</p>
+      <p style="margin-top: 10px;">Salesboom's color-coded CRM lead management software helps businesses visually prioritize sales opportunities with automated workflow rules. Contact us to learn how color coding can transform your lead management process and increase sales productivity.</p>
+    </div>
+    </div>
+  </div>
+ 
+</footer>
+
+<!-- Common JavaScript -->
+<script src="content/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+    <script>
+        // Loading Screen
+        window.addEventListener('load', function() {
+            const loadingScreen = document.getElementById('loading-screen');
+            setTimeout(function() {
+                loadingScreen.classList.add('fade-out');
+                setTimeout(function() {
+                    loadingScreen.style.display = 'none';
+                }, 500);
+            }, 500);
+        });
+
+        // Scroll to Top Button
+        const scrollTopBtn = document.getElementById('scroll-top');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                scrollTopBtn.classList.add('show');
+            } else {
+                scrollTopBtn.classList.remove('show');
+            }
+        });
+        
+        scrollTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

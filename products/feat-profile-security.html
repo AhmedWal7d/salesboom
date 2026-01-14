@@ -1,0 +1,1384 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+<!-- Primary Meta Tags -->
+<title>Enterprise Profile-Based Security | Salesboom CRM</title>
+<meta name="description" content="Control data access with Salesboom's granular profile-based security. Set field-level permissions, IP restrictions, and role-based access for complete CRM security.">
+<meta name="keywords" content="CRM security, Profile-based security, Role-based access control, Field-level security, Record-level permissions, Data access control, Enterprise CRM security, IP-based restrictions">
+<link rel="canonical" href="https://www.salesboom.com/feat-profile-security.html">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.salesboom.com/feat-profile-security.html">
+<meta property="og:title" content="Enterprise Profile-Based Security | Salesboom CRM">
+<meta property="og:description" content="Control data access with Salesboom's granular profile-based security. Set field-level permissions, IP restrictions, and role-based access for complete CRM security.">
+<meta property="og:image" content="https://www.salesboom.com/img/feat-profile-security-og.jpg">
+<meta property="og:site_name" content="Salesboom CRM">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://www.salesboom.com/feat-profile-security.html">
+<meta name="twitter:title" content="Enterprise Profile-Based Security | Salesboom CRM">
+<meta name="twitter:description" content="Control data access with Salesboom's granular profile-based security. Set field-level permissions, IP restrictions, and role-based access for complete CRM security.">
+<meta name="twitter:image" content="https://www.salesboom.com/img/feat-profile-security-og.jpg">
+<meta name="twitter:site" content="@SalesboomCloud">
+
+<!-- Schema.org structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Profile-Based Security - Salesboom CRM",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web-based, Cloud",
+  "offers": {
+    "@type": "Offer",
+    "price": "14.00",
+    "priceCurrency": "USD",
+    "priceValidUntil": "2026-12-31"
+  },
+  "featureList": [
+    "Granular record-level and field-level security permissions",
+    "IP-based geographic access restrictions",
+    "Role-specific administrative tool controls",
+    "Real-time user permission management",
+    "Multi-profile assignment for complex security needs",
+    "Comprehensive audit trails and compliance reporting"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.5",
+    "ratingCount": "3500"
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "Salesboom",
+    "url": "https://www.salesboom.com",
+    "logo": "https://www.salesboom.com/img/salesboom-logo-252x67.png",
+    "foundingDate": "2003",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-855-229-2043",
+      "contactType": "Customer Service"
+    }
+  }
+}
+</script>
+
+<link rel="shortcut icon" href="https://www.salesboom.com/favicon.ico">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="content/css/bootstrap.min.css">
+    <link rel="stylesheet" href="content/css/salesboom-common.css">
+    <link rel="shortcut icon" href="content/image/salesboom-logo-252x67.png" type="image/x-icon"> 
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+/* Loading Screen */
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #002f6c;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#loading-screen.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader {
+  width: 60px;
+  height: 60px;
+  border: 5px solid rgba(255, 255, 255, 0.3);
+  border-top: 5px solid #fff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-text {
+  color: white;
+  font-size: 18px;
+  margin-top: 20px;
+  font-weight: 500;
+}
+
+/* Scroll to Top Button */
+#scrollToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: #002f6c;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 47, 108, 0.4);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+#scrollToTop:hover {
+  background: #004080;
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 47, 108, 0.6);
+}
+
+#scrollToTop.show {
+  display: flex;
+}
+
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #002f6c;
+  --secondary-color: #004080;
+  --accent-color: #0066cc;
+  --success-color: #28a745;
+  --warning-color: #ffc107;
+  --danger-color: #dc3545;
+  --text-color: #333;
+  --text-light: #666;
+  --border-color: #e0e0e0;
+  --bg-light: #f8f9fa;
+  --bg-white: #ffffff;
+  --shadow: 0 2px 10px rgba(0,0,0,0.1);
+  --shadow-hover: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background: var(--bg-white);
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #002f6c 0%, #004080 100%);
+  color: white;
+  padding: 100px 0 80px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+  opacity: 0.3;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 25px;
+  line-height: 1.2;
+}
+
+.hero .subtitle {
+  font-size: 1.4rem;
+  margin-bottom: 40px;
+  opacity: 0.95;
+  line-height: 1.6;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 16px 40px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #dc3545;
+  color: white;
+  box-shadow: 0 4px 12px rgba(220, 53, 69, 0.3);
+}
+
+.btn-primary:hover {
+  background: #c82333;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(220, 53, 69, 0.4);
+}
+
+.btn-outline {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-outline:hover {
+  background: white;
+  color: var(--primary-color);
+}
+
+/* Stats Section */
+.stats-section {
+  background: var(--primary-color);
+  color: white;
+  padding: 60px 0;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-item h3 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #ffc107;
+  margin-bottom: 10px;
+}
+
+.stat-item p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* Content Sections */
+.content-section {
+  padding: 80px 0;
+}
+
+.content-section.bg-light {
+  background: var(--bg-light);
+}
+
+.section-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 60px;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.section-header p {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  line-height: 1.8;
+}
+
+/* Feature Cards */
+.feature-card {
+  background: var(--bg-white);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  transition: all 0.3s;
+  border-top: 4px solid var(--primary-color);
+  height: 100%;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.feature-icon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.feature-card h4 {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  margin: 20px 0 10px 0;
+  font-weight: 600;
+}
+
+.feature-card p {
+  color: var(--text-light);
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.feature-card ul {
+  list-style: none;
+  margin-top: 15px;
+  padding-left: 0;
+}
+
+.feature-card li {
+  padding-left: 25px;
+  position: relative;
+  margin-bottom: 10px;
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+.feature-card li::before {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  color: var(--success-color);
+}
+
+/* Two Column Layout */
+.two-column-content h3 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.two-column-content h4 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin: 30px 0 15px 0;
+  font-weight: 600;
+}
+
+.two-column-content p {
+  color: var(--text-light);
+  margin-bottom: 20px;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.two-column-content ul {
+  list-style: none;
+  margin: 20px 0;
+  padding-left: 0;
+}
+
+.two-column-content li {
+  padding-left: 30px;
+  position: relative;
+  margin-bottom: 15px;
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+.two-column-content li::before {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  color: var(--success-color);
+  font-size: 1.2rem;
+}
+
+.two-column-content strong {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* Benefits Section */
+.benefits-section {
+  background: linear-gradient(135deg, #002f6c 0%, #004080 100%);
+  color: white;
+  padding: 80px 0;
+  position: relative;
+}
+
+.benefit-item {
+  text-align: center;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s;
+  height: 100%;
+}
+
+.benefit-item:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-5px);
+}
+
+.benefit-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.benefit-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.benefit-item p {
+  opacity: 0.9;
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+/* Security Box */
+.security-box {
+  background: #fff3cd;
+  border-left: 5px solid #ffc107;
+  padding: 25px;
+  border-radius: 8px;
+  margin: 30px 0;
+}
+
+.security-box h5 {
+  color: #856404;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.security-box ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.security-box li {
+  padding-left: 30px;
+  position: relative;
+  margin-bottom: 12px;
+  color: #856404;
+  line-height: 1.7;
+}
+
+.security-box li::before {
+  content: "\f023";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  color: #ffc107;
+  font-size: 1.1rem;
+}
+
+/* Info Box */
+.info-box {
+  background: #d1ecf1;
+  border-left: 5px solid #17a2b8;
+  padding: 25px;
+  border-radius: 8px;
+  margin: 30px 0;
+}
+
+.info-box h5 {
+  color: #0c5460;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.info-box p {
+  color: #0c5460;
+  margin-bottom: 0;
+  line-height: 1.7;
+}
+
+/* Best Practices Box */
+.best-practices {
+  background: #d4edda;
+  border-left: 5px solid #28a745;
+  padding: 25px;
+  border-radius: 8px;
+  margin: 30px 0;
+}
+
+.best-practices h5 {
+  color: #155724;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.best-practices p {
+  color: #155724;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+/* CTA Section */
+.cta-section {
+  background: var(--primary-color);
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.cta-content h2 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.cta-content p {
+  font-size: 1.3rem;
+  margin-bottom: 40px;
+  opacity: 0.9;
+  line-height: 1.6;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  
+  .hero .subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .section-header h2 {
+    font-size: 2rem;
+  }
+  
+  .content-section {
+    padding: 60px 0;
+  }
+  
+  .stat-item h3 {
+    font-size: 2.5rem;
+  }
+  
+  #scrollToTop {
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+  }
+  
+  .hero-cta {
+    flex-direction: column;
+  }
+  
+  .btn {
+    width: 100%;
+  }
+}
+
+/* Utility Classes */
+.text-center { text-align: center; }
+.mb-4 { margin-bottom: 1.5rem; }
+.mb-5 { margin-bottom: 3rem; }
+.mt-4 { margin-top: 1.5rem; }
+.mt-5 { margin-top: 3rem; }
+</style>
+</head>
+
+<body>
+<!-- Loading Screen -->
+<div id="loading-screen">
+  <div class="loader"></div>
+  <div class="loading-text">Loading...</div>
+</div>
+
+<!-- Scroll to Top Button -->
+<button id="scrollToTop" aria-label="Scroll to top">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+
+
+
+    <!-- Top Bar -->
+<div class="top-bar">
+  <div class="container">
+    <div class="top-bar-left text-color">
+      <span>✓ Award-Winning Cloud CRM Software Since 2003</span>
+    </div>
+    <ul class="top-bar-nav">
+      <li><a href="https://www.salesboom.com/crm_supportcenter/overview/index.html">Support Center</a></li>
+      <li><a href="https://www.salesboom.com/crm_trial.html">Free Trial</a></li>
+      <li><a href="https://www.salesboom.com/login.html">Login</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Main Header -->
+<header>
+  <div class="main-header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <a href="https://www.salesboom.com" aria-label="Salesboom CRM Home">
+            <img src="https://www.salesboom.com/img/salesboom-logo-252x67.png" alt="Salesboom Cloud CRM Logo" width="252" height="67">
+          </a>
+        </div>
+        <div class="header-phone">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          <a href="tel:+18552292043">1-855-229-2043</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <h1>Enterprise Security That Puts You in Complete Control</h1>
+      <p class="subtitle">Protect sensitive data with granular profile-based security that controls exactly who sees what, when they can access it, and from where they connect.</p>
+      <div class="hero-cta">
+        <a href="https://www.salesboom.com/request-crm-demo.html" class="btn btn-primary">
+          <i class="fas fa-calendar-check me-2"></i>Schedule Security Demo
+        </a>
+        <a href="https://www.salesboom.com/crm_trial.html" class="btn btn-outline">
+          <i class="fas fa-shield-alt me-2"></i>Explore Security Features
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Section -->
+<section class="stats-section">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-3 col-sm-6">
+        <div class="stat-item">
+          <h3>22+</h3>
+          <p>Years Secure Platform</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="stat-item">
+          <h3>3,500+</h3>
+          <p>Protected Organizations</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="stat-item">
+          <h3>159</h3>
+          <p>Countries Worldwide</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="stat-item">
+          <h3>100%</h3>
+          <p>Granular Control</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Problem Statement Section -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Why Data Security Cannot Be an Afterthought</h2>
+      <p>As organizations grow and teams become distributed, controlling who accesses sensitive business data becomes increasingly complex. Traditional CRM systems offer basic user roles that fail to address the nuanced security requirements of modern enterprises.</p>
+    </div>
+    
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-6">
+        <div class="two-column-content">
+          <h4><i class="fas fa-exclamation-triangle text-danger me-2"></i>The Risks of Inadequate Security Controls:</h4>
+          <ul>
+            <li>Sales representatives accidentally viewing or modifying pricing strategies meant only for executives</li>
+            <li>Unauthorized users accessing confidential customer financial information</li>
+            <li>Remote workers connecting from unsecured networks or compromised locations</li>
+            <li>Data breaches resulting from overly permissive access settings</li>
+            <li>Compliance violations due to inability to restrict sensitive data by role or region</li>
+            <li>Lost productivity from users overwhelmed by data and tools irrelevant to their function</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="security-box">
+          <h5><i class="fas fa-shield-alt me-2"></i>The Stakes Are High</h5>
+          <p style="color: #856404; margin: 0;">Without granular, profile-based security, organizations face operational chaos, regulatory risk, and potential data breaches that can damage customer trust and business reputation.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Solution Overview Section -->
+<section class="content-section bg-light">
+  <div class="container">
+    <div class="section-header">
+      <h2>Profile-Based Security: Precision Control Over Your CRM Data</h2>
+      <p>Salesboom's enterprise-grade profile-based security gives executives and administrators pinpoint control over data access, feature permissions, and system usage.</p>
+    </div>
+    
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-user-shield"></i>
+          </div>
+          <h3>Granular Control Framework</h3>
+          <p>Rather than applying broad permissions across all users, profiles enable customized security configurations tailored to specific roles, departments, and business requirements.</p>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-balance-scale"></i>
+          </div>
+          <h3>Optimal Access Balance</h3>
+          <p>This granular approach ensures every user has exactly the access they need—nothing more, nothing less—protecting sensitive information while maintaining operational efficiency.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row g-4 mt-4">
+      <div class="col-12">
+        <div class="feature-card">
+          <h3><i class="fas fa-users-cog me-2"></i>Tailored Permissions for Every Role</h3>
+          <p>Profiles function as comprehensive security templates that define what data a user can view, edit, or delete, and which features and tools they can access. Administrators create profiles aligned with organizational roles—such as Sales Representative, Sales Manager, Customer Service Agent, Executive, or Administrator—and assign users accordingly.</p>
+          
+          <h4>Each Profile Precisely Controls:</h4>
+          <ul>
+            <li>Which modules and records users can access (accounts, contacts, opportunities, cases, products)</li>
+            <li>What actions users can perform (view, create, edit, delete, export)</li>
+            <li>Which fields within records are visible or editable</li>
+            <li>What reports and dashboards users can view or create</li>
+            <li>Which administrative tools are available (user management, system configuration, data import/export)</li>
+          </ul>
+          
+          <p class="mt-3">This role-based approach eliminates the security gaps inherent in one-size-fits-all permission models, ensuring compliance with internal policies and external regulations.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Granular Security Controls Section -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Multi-Level Security That Adapts to Your Business Structure</h2>
+      <p>Salesboom delivers security controls at multiple levels, ensuring comprehensive protection tailored to your organizational needs.</p>
+    </div>
+    
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-database"></i>
+          </div>
+          <h3>Record-Level Security</h3>
+          <p>Record-level security determines which specific records within a module a user can access. Rather than granting blanket access to all accounts or opportunities, administrators can restrict visibility based on ownership, territory, department, or custom criteria.</p>
+          <p class="mt-3">For example, sales representatives typically see only their own accounts and opportunities, while managers view records for their entire team. Executives may have organization-wide visibility, and customer service agents might access only accounts with active support cases.</p>
+          <p class="mt-3"><strong>This layered approach protects confidential deals, prevents internal competition over accounts, and ensures users focus on records relevant to their responsibilities.</strong></p>
+        </div>
+      </div>
+      
+      <div class="col-lg-6">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-table"></i>
+          </div>
+          <h3>Field-Level Security</h3>
+          <p>Field-level security provides even more precise control by restricting access to specific fields within records that a user can otherwise view. This prevents unauthorized exposure of sensitive information embedded within broader datasets.</p>
+          
+          <h4>Common Field-Level Restrictions Include:</h4>
+          <ul>
+            <li>Hiding profit margins, costs, or discount percentages from sales representatives while allowing them to see final pricing</li>
+            <li>Concealing commission rates or compensation data from non-management users</li>
+            <li>Restricting access to social security numbers, credit card information, or other personally identifiable information (PII)</li>
+            <li>Preventing editing of inventory levels or product pricing by users who need to view but not modify this data</li>
+            <li>Limiting visibility of executive notes, legal holds, or strategic account information</li>
+          </ul>
+          
+          <p class="mt-3">Field-level security ensures that even users with legitimate access to a record cannot view or modify sensitive data beyond their authorization level.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Administrative Controls Section -->
+<section class="content-section bg-light">
+  <div class="container">
+    <div class="section-header">
+      <h2>Designating Administrative Authority with Precision</h2>
+      <p>Administrative tools provide powerful capabilities for managing the CRM system, but these tools must be restricted to authorized personnel to prevent accidental or malicious system changes.</p>
+    </div>
+    
+    <div class="row g-4">
+      <div class="col-12">
+        <div class="security-box">
+          <h5><i class="fas fa-tools me-2"></i>Profiles Control Access to Administrative Functions Including:</h5>
+          <ul>
+            <li>Adding, editing, and deleting user accounts</li>
+            <li>Modifying system configurations and workflow rules</li>
+            <li>Creating and editing custom fields, modules, and page layouts</li>
+            <li>Managing data import and export operations</li>
+            <li>Configuring integrations with external systems</li>
+            <li>Setting up automation rules, email templates, and notification workflows</li>
+            <li>Accessing audit logs and system diagnostic tools</li>
+            <li>Managing data backup and recovery operations</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="info-box mt-4">
+      <h5><i class="fas fa-info-circle me-2"></i>Separation of Duties</h5>
+      <p>By restricting administrative access to designated profiles, organizations enforce separation of duties—a critical control for compliance frameworks like SOX and preventing internal fraud. Regular users can perform their job functions without the ability to manipulate system configurations or access sensitive administrative data.</p>
+    </div>
+  </div>
+</section>
+
+<!-- IP-Based Restrictions Section -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>IP-Based Geographic Access Restrictions</h2>
+      <p>In today's distributed workforce, controlling where users access the CRM is as important as controlling what they can see.</p>
+    </div>
+    
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-6">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-globe"></i>
+          </div>
+          <h3>Location-Based Security</h3>
+          <p>Salesboom's IP-based restrictions enable administrators to limit CRM access to specific IP addresses or IP ranges associated with corporate offices, VPN connections, or approved geographic regions.</p>
+          <p class="mt-3">This capability is particularly valuable for:</p>
+          <ul>
+            <li>Preventing access from high-risk countries or regions</li>
+            <li>Requiring VPN usage for remote workers</li>
+            <li>Restricting sensitive data access to physical office locations</li>
+            <li>Complying with data residency regulations</li>
+            <li>Detecting and blocking unauthorized access attempts</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-network-wired"></i>
+          </div>
+          <h3>Flexible Configuration</h3>
+          <p>IP restrictions can be configured globally across all users or applied selectively to specific profiles. For instance, executives with highly sensitive data access might face stricter IP restrictions than general sales representatives.</p>
+          <p class="mt-3">Organizations can also implement time-based IP restrictions, allowing certain access only during business hours from approved locations, adding another layer of protection against credential theft and unauthorized access.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Benefits Section -->
+<section class="benefits-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 style="color: white;">Strategic Business Benefits Beyond Basic Security</h2>
+      <p style="color: rgba(255,255,255,0.9);">Profile-based security delivers advantages that improve organizational efficiency, compliance, and competitive positioning.</p>
+    </div>
+    
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6">
+        <div class="benefit-item">
+          <div class="benefit-icon">
+            <i class="fas fa-certificate"></i>
+          </div>
+          <h3>Regulatory Compliance</h3>
+          <p>Meet GDPR, HIPAA, SOX, and industry-specific compliance requirements through documented access controls, audit trails, and data segregation capabilities.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="benefit-item">
+          <div class="benefit-icon">
+            <i class="fas fa-tachometer-alt"></i>
+          </div>
+          <h3>Operational Efficiency</h3>
+          <p>Users see only relevant data and tools, reducing interface complexity and improving productivity by eliminating distractions and irrelevant information.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="benefit-item">
+          <div class="benefit-icon">
+            <i class="fas fa-check-double"></i>
+          </div>
+          <h3>Data Integrity</h3>
+          <p>Prevent accidental or unauthorized data modifications by restricting edit permissions to authorized roles, maintaining clean, reliable business data.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="benefit-item">
+          <div class="benefit-icon">
+            <i class="fas fa-trophy"></i>
+          </div>
+          <h3>Competitive Protection</h3>
+          <p>Safeguard pricing strategies, customer lists, and proprietary business intelligence from internal and external threats through multi-layered access controls.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="benefit-item">
+          <div class="benefit-icon">
+            <i class="fas fa-expand-arrows-alt"></i>
+          </div>
+          <h3>Scalable Security Model</h3>
+          <p>As organizations grow, profiles scale efficiently—new users inherit appropriate permissions instantly by assignment to existing profiles, eliminating manual configuration.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="benefit-item">
+          <div class="benefit-icon">
+            <i class="fas fa-clipboard-check"></i>
+          </div>
+          <h3>Audit Readiness</h3>
+          <p>Comprehensive access logs and profile assignment history provide clear audit trails demonstrating who had access to what data and when.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Integration Section -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Security That Integrates with Your Broader IT Infrastructure</h2>
+      <p>Salesboom's profile-based security doesn't operate in isolation—it integrates seamlessly with enterprise authentication systems, security monitoring tools, and compliance frameworks.</p>
+    </div>
+    
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-key"></i>
+          </div>
+          <h3>Single Sign-On (SSO)</h3>
+          <p>Integration with Active Directory, LDAP, and SAML providers for centralized credential management and seamless authentication.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-mobile-alt"></i>
+          </div>
+          <h3>Two-Factor Authentication</h3>
+          <p>2FA enforcement at the profile level for high-security roles requiring additional authentication beyond passwords.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="feature-card">
+          <div class="feature-icon">
+        <i class="fa-solid fa-inbox"></i>
+          </div>
+          <h3>SIEM Integration</h3>
+          <p>Security information and event management integration for real-time threat detection and response capabilities.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-code"></i>
+          </div>
+          <h3>API Access Controls</h3>
+          <p>Profile-based permissions extend to programmatic integrations, ensuring API access follows the same security rules.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-user-cog"></i>
+          </div>
+          <h3>Automated Provisioning</h3>
+          <p>Integration with HR systems for automatic user provisioning and deprovisioning based on employment status changes.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-desktop"></i>
+          </div>
+          <h3>Session Management</h3>
+          <p>Timeout settings, concurrent session limits, and device restrictions for comprehensive access control.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="info-box mt-5">
+      <h5><i class="fas fa-shield-check me-2"></i>Defense-in-Depth Strategy</h5>
+      <p>This enterprise-grade integration ensures that CRM security aligns with broader organizational security policies, creating a unified defense-in-depth strategy rather than isolated security silos.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Best Practices Section -->
+<section class="content-section bg-light">
+  <div class="container">
+    <div class="section-header">
+      <h2>Implementing Profile-Based Security Effectively</h2>
+      <p>Maximizing the value of profile-based security requires thoughtful implementation and ongoing management.</p>
+    </div>
+    
+    <div class="row g-4">
+      <div class="col-12">
+        <div class="best-practices">
+          <h5><i class="fas fa-lightbulb me-2"></i>Best Practices for Profile Management:</h5>
+          
+          <p><strong>Start with the principle of least privilege</strong>—grant users the minimum access required to perform their jobs effectively. It's easier to expand permissions later than to restrict access after users have become accustomed to broader visibility.</p>
+          
+          <p><strong>Create profiles aligned with job functions rather than individuals</strong>, ensuring consistency and simplifying management as the organization scales. Avoid creating unique profiles for every user, which defeats the efficiency benefits of profile-based security.</p>
+          
+          <p><strong>Document profile purposes and permissions clearly</strong> so current and future administrators understand the reasoning behind access decisions. This documentation supports compliance auditing and facilitates troubleshooting when users report access issues.</p>
+          
+          <p><strong>Review profiles quarterly</strong> to identify permission creep—the gradual accumulation of unnecessary permissions as user roles evolve. Remove outdated access rights to maintain security hygiene.</p>
+          
+          <p><strong>Test profile changes in a sandbox environment</strong> before deploying to production, particularly when modifying profiles assigned to many users. This prevents accidental disruption of business operations.</p>
+          
+          <p><strong>Establish an exception approval process</strong> for users requiring temporary elevated access, with automatic expiration dates to prevent indefinite permission escalation.</p>
+          
+          <p><strong>Monitor access logs regularly</strong> to identify unusual patterns that might indicate compromised credentials or insider threats. Profile-based security provides the framework; vigilant monitoring detects actual security events.</p>
+          
+          <p><strong>Train users on security policies</strong> and their responsibilities for protecting credentials and respecting data access boundaries. Technical controls work best when supported by security-aware organizational culture.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-content">
+      <h2>Ready to Take Control of Your CRM Security?</h2>
+      <p>Discover how Salesboom's profile-based security can protect your sensitive data while empowering your teams. Schedule a personalized demo to see granular access controls in action.</p>
+      <div class="hero-cta">
+        <a href="https://www.salesboom.com/request-crm-demo.html" class="btn btn-primary">
+          <i class="fas fa-calendar-check me-2"></i>Schedule Security Demo
+        </a>
+        <a href="https://www.salesboom.com/crm_trial.html" class="btn btn-outline">
+          <i class="fas fa-shield-alt me-2"></i>Start Secure Trial
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-2">
+      <h3 class="fw-bold text-color">
+        <i class="fa-solid fa-layer-group me-2"></i>
+        Explore Salesboom Editions
+      </h3>
+      <p class="text-muted">Discover powerful CRM editions to scale your business efficiently.</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-briefcase fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Professional Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              A complete CRM suite with Marketing Automation, ERP integration, and Support tools — built for performance and value.
+            </p>
+            <a href="https://www.salesboom.com/editions/professional-edition.html" class="btn btn-color mt-auto">
+              Explore Professional <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-building fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Enterprise Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              For large enterprises — automate workflows, unify data, and leverage analytics to drive strategic growth.
+            </p>
+            <a href="https://www.salesboom.com/editions/enterprise-edition.html" class="btn btn-color mt-auto">
+              View Enterprise <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-users fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Team Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              Perfect for small teams starting with CRM — manage leads, track sales, and boost productivity with simplicity.
+            </p>
+            <a href="https://www.salesboom.com/editions/team-edition.html" class="btn btn-color mt-auto">
+           Discover Team<i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="container py-5">
+  <h2 class="text-center mb-5 text-color">Security, Accessibility & Unified CRM Features</h2>
+  <div class="row g-4">
+
+    <!-- Card 1 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-shield text-color fa-3x mb-3"></i>
+        <h4>Security Features</h4>
+        <p>
+          Ensure your data is protected and secure — learn more about our <a href="https://www.salesboom.com/products/features-security.html" class="text-color fw-bold">security features</a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-universal-access text-color fa-3x mb-3"></i>
+        <h4>Adaptive & Assistive Accessibility</h4>
+        <p>
+          Improve usability for all users with inclusive accessibility support — explore our <a href="https://www.salesboom.com/products/crm-accessibility-adaptive-assistive.html" class="text-color fw-bold">accessibility tools</a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-universal-access text-color fa-3x mb-3"></i>
+        <h4>Enhanced Accessibility Options</h4>
+        <p>
+          Provide a smoother, more inclusive user experience with our <a href="https://www.salesboom.com/products/feature-enhanced-accessibility.html" class="text-color fw-bold">enhanced accessibility options</a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-scale-balanced text-color fa-3x mb-3"></i>
+        <h4>CRM Build vs Buy Analysis</h4>
+        <p>
+          Decide whether to build or buy your CRM solution — read our <a href="https://www.salesboom.com/cloud-crm-guide/cloud-crm-guide/crm-build-vs-buy-cost-analysis.html" class="text-color fw-bold">CRM Build vs Buy Guide</a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-layer-group text-color fa-3x mb-3"></i>
+        <h4>SMB Unified CRM Platform</h4>
+        <p>
+          A unified CRM tailored for small and medium businesses — explore the <a href="https://www.salesboom.com/smb-crm/unified_crm_content.html" class="text-color fw-bold">SMB CRM Platform</a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-rocket text-color fa-3x mb-3"></i>
+        <h4>Sales Automation & CRM Tools</h4>
+        <p>
+          Automate sales workflows and tasks to increase efficiency — check out our <a href="https://www.salesboom.com/sales-automation/sales_automation_content.html" class="text-color fw-bold">Sales Automation Tools</a>.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="mt-5 footer">
+  <div class="container mt-5 pt-5">
+    <div class="footer-grid">
+      <div class="footer-section">
+        <h3>Products</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/products/tools-sfa.html">Sales Force Automation</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-marketing.html">Marketing Automation</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-casemanagement.html">Case Management</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-reporting.html">Business Intelligence</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-emailintegration.html">Email Integration</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Solutions</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/products/edition-team.html">Team Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/edition-professional.html">Professional Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/edition-enterprise.html">Enterprise Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/industry-solutions.html">Industry Solutions</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/company/index.html">About Us</a></li>
+          <li><a href="https://www.salesboom.com/company/company-contact.html">Contact Us</a></li>
+          <li><a href="https://www.salesboom.com/customers/index.html">Customers</a></li>
+          <li><a href="https://www.salesboom.com/partners/index.html">Partners</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/support/index.html">Support Center</a></li>
+          <li><a href="https://www.salesboom.com/crm_supportcenter/overview/index.html">Documentation</a></li>
+          <li><a href="https://www.salesboom.com/whitepapers/index.html">White Papers</a></li>
+          <li><a href="https://www.salesboom.com/pop-privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="bg-color">
+    <div class="container">
+     <div class="footer-bottom pb-3 mt-3">
+      <p>&copy; 2003-2025 <a class="text-white fw-bold" href="https://www.salesboom.com">Salesboom.com</a> Inc. All rights reserved. | Call: 1-855-229-2043</p>
+      <p style="margin-top: 10px;">Salesboom's color-coded CRM lead management software helps businesses visually prioritize sales opportunities with automated workflow rules. Contact us to learn how color coding can transform your lead management process and increase sales productivity.</p>
+    </div>
+    </div>
+  </div>
+ 
+</footer>
+
+<!-- Common JavaScript -->
+<script src="content/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+
+
+
+<script>
+// Loading Screen
+window.addEventListener('load', function() {
+  const loadingScreen = document.getElementById('loading-screen');
+  setTimeout(function() {
+    loadingScreen.classList.add('fade-out');
+  }, 500);
+});
+
+// Scroll to Top Button
+const scrollToTopBtn = document.getElementById('scrollToTop');
+
+window.addEventListener('scroll', function() {
+  if (window.pageYOffset > 300) {
+    scrollToTopBtn.classList.add('show');
+  } else {
+    scrollToTopBtn.classList.remove('show');
+  }
+});
+
+scrollToTopBtn.addEventListener('click', function() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+
+// Smooth Scroll for All Links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  });
+});
+</script>
+
+</body>
+</html>

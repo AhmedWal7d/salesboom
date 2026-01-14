@@ -1,0 +1,1362 @@
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+<!-- Primary Meta Tags -->
+<title>CRM Fast Track Setup & Training | Salesboom Quick ROI</title>
+<meta name="description" content="Get your CRM running fast with Salesboom's Fast Track program. Fixed-cost setup, data migration, training & consulting. Achieve ROI in weeks, not months.">
+<meta name="keywords" content="CRM implementation, CRM setup services, CRM data migration, CRM training program, Fast CRM deployment, CRM consulting services, Quick CRM ROI, Cloud CRM implementation">
+<link rel="canonical" href="https://www.salesboom.com/fasttrack.html">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.salesboom.com/fasttrack.html">
+<meta property="og:title" content="CRM Fast Track Setup & Training | Salesboom Quick ROI">
+<meta property="og:description" content="Get your CRM running fast with Salesboom's Fast Track program. Fixed-cost setup, data migration, training & consulting. Achieve ROI in weeks, not months.">
+<meta property="og:image" content="https://www.salesboom.com/img/fasttrack-og.jpg">
+<meta property="og:site_name" content="Salesboom CRM">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://www.salesboom.com/fasttrack.html">
+<meta name="twitter:title" content="CRM Fast Track Setup & Training | Salesboom Quick ROI">
+<meta name="twitter:description" content="Get your CRM running fast with Salesboom's Fast Track program. Fixed-cost setup, data migration, training & consulting. Achieve ROI in weeks, not months.">
+<meta name="twitter:image" content="https://www.salesboom.com/img/fasttrack-og.jpg">
+<meta name="twitter:site" content="@SalesboomCloud">
+
+<!-- Schema.org structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Fast Track CRM Implementation - Salesboom",
+  "description": "Complete CRM implementation services including consulting, setup, data migration, and training at fixed cost",
+  "provider": {
+    "@type": "Organization",
+    "name": "Salesboom",
+    "url": "https://www.salesboom.com",
+    "logo": "https://www.salesboom.com/img/salesboom-logo-252x67.png",
+    "foundingDate": "2003",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-855-229-2043",
+      "contactType": "Customer Service"
+    }
+  },
+  "serviceType": "CRM Implementation",
+  "areaServed": "Worldwide"
+}
+</script>
+
+<link rel="shortcut icon" href="https://www.salesboom.com/favicon.ico">
+    <link rel="stylesheet" href="content/css/bootstrap.min.css">
+    <link rel="stylesheet" href="content/css/salesboom-common.css">
+    <link rel="shortcut icon" href="content/image/salesboom-logo-252x67.png" type="image/x-icon"> 
+    
+    
+<!-- Font Awesome 6 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+/* CSS Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #002f6c;
+  --secondary-color: #0a4a9f;
+  --accent-color: #1e88e5;
+  --success-color: #27ae60;
+  --text-color: #333;
+  --text-light: #666;
+  --border-color: #e0e0e0;
+  --bg-light: #f8f9fa;
+  --bg-white: #ffffff;
+  --shadow: 0 2px 10px rgba(0,0,0,0.1);
+  --shadow-hover: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background: var(--bg-white);
+  overflow-x: hidden;
+}
+
+/* Loading Screen */
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease-out;
+}
+
+#loading-screen.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loader {
+  width: 60px;
+  height: 60px;
+  border: 5px solid rgba(255, 255, 255, 0.3);
+  border-top: 5px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-text {
+  color: white;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+/* Scroll to Top Button */
+#scroll-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 47, 108, 0.3);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+#scroll-to-top:hover {
+  background: var(--secondary-color);
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 47, 108, 0.4);
+}
+
+#scroll-to-top.show {
+  display: flex;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: white;
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+  opacity: 0.3;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 25px;
+  line-height: 1.2;
+}
+
+.hero .subtitle {
+  font-size: 1.3rem;
+  margin-bottom: 35px;
+  opacity: 0.95;
+  line-height: 1.5;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Button Styles */
+.btn {
+  display: inline-block;
+  padding: 16px 40px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #e74c3c;
+  color: white;
+  box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
+}
+
+.btn-primary:hover {
+  background: #c0392b;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(231, 76, 60, 0.4);
+  color: white;
+}
+
+.btn-outline {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-outline:hover {
+  background: white;
+  color: var(--primary-color);
+}
+
+/* Content Sections */
+.content-section {
+  padding: 80px 0;
+}
+
+.content-section.bg-light {
+  background: var(--bg-light);
+}
+
+.section-header {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 60px;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.section-header p {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  line-height: 1.8;
+}
+
+/* Feature Cards */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.feature-card {
+  background: var(--bg-white);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  transition: all 0.3s;
+  border-top: 4px solid var(--primary-color);
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.feature-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.feature-card h3 {
+  font-size: 1.4rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.feature-card p {
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+.feature-card ul {
+  list-style: none;
+  margin-top: 15px;
+  padding-left: 0;
+}
+
+.feature-card li {
+  padding-left: 30px;
+  position: relative;
+  margin-bottom: 12px;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+.feature-card li::before {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  color: var(--success-color);
+  font-size: 1rem;
+}
+
+/* Benefits Section */
+.benefits-section {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: white;
+  padding: 80px 0;
+  position: relative;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+.benefit-item {
+  text-align: center;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s;
+}
+
+.benefit-item:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-5px);
+}
+
+.benefit-item i {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.benefit-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.benefit-item p {
+  opacity: 0.9;
+  line-height: 1.7;
+}
+
+/* CTA Section */
+.cta-section {
+  background: var(--primary-color);
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.cta-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.cta-content p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+/* Highlight Box */
+.highlight-box {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  padding: 40px;
+  border-radius: 12px;
+  color: white;
+  margin: 40px 0;
+}
+
+.highlight-box h3 {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+.highlight-box ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.highlight-box li {
+  padding-left: 30px;
+  position: relative;
+  margin-bottom: 15px;
+  color: rgba(255,255,255,0.95);
+}
+
+.highlight-box li::before {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  color: #ffd700;
+  font-size: 1.1rem;
+}
+
+/* Info Box */
+.info-box {
+  background: white;
+  padding: 35px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  border-left: 5px solid var(--primary-color);
+  margin-bottom: 30px;
+}
+
+.info-box h4 {
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+.info-box p {
+  color: var(--text-light);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Step Cards */
+.step-card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  margin-bottom: 25px;
+  display: flex;
+  align-items: start;
+  gap: 20px;
+}
+
+.step-number {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.step-content h4 {
+  color: var(--primary-color);
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+.step-content p {
+  color: var(--text-light);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  
+  .section-header h2 {
+    font-size: 2rem;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 60px 0;
+  }
+  
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+  
+  .hero .subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .hero-cta {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .content-section {
+    padding: 60px 0;
+  }
+  
+  .section-header h2 {
+    font-size: 1.8rem;
+  }
+  
+  #scroll-to-top {
+    width: 45px;
+    height: 45px;
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+  
+  .btn {
+    padding: 12px 30px;
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  .feature-card {
+    padding: 25px 20px;
+  }
+  
+  .cta-content h2 {
+    font-size: 1.8rem;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Loading Screen -->
+<div id="loading-screen">
+  <div class="loader"></div>
+  <div class="loading-text">Loading...</div>
+</div>
+
+<!-- Scroll to Top Button -->
+<button id="scroll-to-top" aria-label="Scroll to top">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+
+
+    <!-- Top Bar -->
+<div class="top-bar">
+  <div class="container">
+    <div class="top-bar-left text-color">
+      <span>✓ Award-Winning Cloud CRM Software Since 2003</span>
+    </div>
+    <ul class="top-bar-nav">
+      <li><a href="https://www.salesboom.com/crm_supportcenter/overview/index.html">Support Center</a></li>
+      <li><a href="https://www.salesboom.com/crm_trial.html">Free Trial</a></li>
+      <li><a href="https://www.salesboom.com/login.html">Login</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Main Header -->
+<header>
+  <div class="main-header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <a href="https://www.salesboom.com" aria-label="Salesboom CRM Home">
+            <img src="https://www.salesboom.com/img/salesboom-logo-252x67.png" alt="Salesboom Cloud CRM Logo" width="252" height="67">
+          </a>
+        </div>
+        <div class="header-phone">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          <a href="tel:+18552292043">1-855-229-2043</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <h1>Achieve CRM Success in Weeks, Not Months</h1>
+      <p class="subtitle">Salesboom's Fast Track program delivers complete CRM setup, data migration, and training at a fixed cost—so you can start seeing ROI immediately without implementation headaches.</p>
+      <div class="hero-cta">
+        <a href="https://www.salesboom.com/request-crm-demo.html" class="btn btn-primary">Contact Professional Services</a>
+          <a href="https://www.salesboom.com/free_trial/index.html" class="btn btn-outline">  Free Trial   </a>  
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 1: Problem Statement -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Why CRM Implementation Fails for Small and Medium Businesses</h2>
+      <p>Implementing a CRM system should transform your business operations, but for many SMBs, the reality is far different. The process becomes daunting, time-consuming, and expensive. Businesses struggle with unclear requirements, complex data migration, inadequate training, and vendors who disappear after the sale.</p>
+    </div>
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <div class="highlight-box">
+          <h3><i class="fas fa-exclamation-triangle" style="margin-right: 10px;"></i>The Consequences Are Severe</h3>
+          <ul>
+            <li>Implementation projects drag on for months, delaying ROI and frustrating stakeholders</li>
+            <li>Data migration errors lead to lost customer information and duplicate records</li>
+            <li>Teams resist adoption due to insufficient training and unclear processes</li>
+            <li>Unexpected costs spiral beyond initial budgets</li>
+            <li>The CRM becomes shelfware—purchased but never properly utilized</li>
+            <li>Multiple vendors and contracts create coordination nightmares</li>
+          </ul>
+        </div>
+        <p style="font-size: 1.1rem; color: var(--text-light); line-height: 1.8; margin-top: 30px; text-align: center; font-style: italic;">
+          Without expert guidance, many SMBs invest thousands in CRM software only to see it fail within the first year. The problem isn't the technology—it's the lack of structured implementation support designed specifically for smaller businesses with limited IT resources.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 2: Solution Overview -->
+<section class="content-section bg-light">
+  <div class="container">
+    <div class="section-header">
+      <h2>The Fast Track Advantage: Complete CRM Implementation in One Package</h2>
+      <p>Salesboom's Fast Track program solves the implementation challenge with a comprehensive, fixed-cost professional services package. Drawing on 20+ years of CRM implementation experience, we've created a streamlined approach that gets SMBs up and running quickly while ensuring long-term success.</p>
+    </div>
+    <div class="row">
+      <div class="col-lg-6">
+        <div style="background: white; padding: 40px; border-radius: 12px; box-shadow: var(--shadow); height: 100%;">
+          <h3 style="color: var(--primary-color); margin-bottom: 25px;"><i class="fas fa-box-open" style="margin-right: 10px;"></i>Our Bundled Package Includes</h3>
+          <ul style="list-style: none; padding-left: 0;">
+            <li style="padding-left: 30px; position: relative; margin-bottom: 15px; color: var(--text-light);">
+              <i class="fas fa-check" style="position: absolute; left: 0; color: var(--success-color);"></i>
+              Expert consulting to understand your unique business requirements
+            </li>
+            <li style="padding-left: 30px; position: relative; margin-bottom: 15px; color: var(--text-light);">
+              <i class="fas fa-check" style="position: absolute; left: 0; color: var(--success-color);"></i>
+              Thorough requirements analysis to align CRM capabilities with your goals
+            </li>
+            <li style="padding-left: 30px; position: relative; margin-bottom: 15px; color: var(--text-light);">
+              <i class="fas fa-check" style="position: absolute; left: 0; color: var(--success-color);"></i>
+              Complete CRM setup and configuration tailored to your workflows
+            </li>
+            <li style="padding-left: 30px; position: relative; margin-bottom: 15px; color: var(--text-light);">
+              <i class="fas fa-check" style="position: absolute; left: 0; color: var(--success-color);"></i>
+              Seamless data migration from spreadsheets, legacy systems, or other CRMs
+            </li>
+            <li style="padding-left: 30px; position: relative; margin-bottom: 15px; color: var(--text-light);">
+              <i class="fas fa-check" style="position: absolute; left: 0; color: var(--success-color);"></i>
+              Structured rollout planning to ensure smooth organizational adoption
+            </li>
+            <li style="padding-left: 30px; position: relative; margin-bottom: 15px; color: var(--text-light);">
+              <i class="fas fa-check" style="position: absolute; left: 0; color: var(--success-color);"></i>
+              Comprehensive training for administrators and end-users
+            </li>
+            <li style="padding-left: 30px; position: relative; margin-bottom: 15px; color: var(--text-light);">
+              <i class="fas fa-check" style="position: absolute; left: 0; color: var(--success-color);"></i>
+              Post-implementation support to answer questions and refine processes
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); padding: 40px; border-radius: 12px; color: white; height: 100%; display: flex; flex-direction: column; justify-content: center;">
+          <div style="text-align: center; margin-bottom: 30px;">
+            <i class="fas fa-shield-alt" style="font-size: 4rem; color: white;"></i>
+          </div>
+          <h3 style="color: white; margin-bottom: 20px; text-align: center;">Fixed-Cost Protection</h3>
+          <p style="color: rgba(255,255,255,0.95); line-height: 1.8; text-align: center; font-size: 1.1rem;">
+            The fixed-cost model means no surprise bills, no scope creep, and no budget overruns. You know exactly what you're paying upfront, allowing you to plan and budget effectively.
+          </p>
+          <p style="color: rgba(255,255,255,0.95); line-height: 1.8; text-align: center; font-size: 1.1rem; margin-top: 20px;">
+            More importantly, you're not managing multiple vendors or contracts—one team handles everything from start to finish.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 3: Two Fast Track Options -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Choose Your Fast Track Path: Setup or Streamline</h2>
+      <p>Salesboom offers two Fast Track options designed for different business needs and stages of CRM maturity.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <div class="feature-card" style="height: 100%;">
+          <div class="feature-icon">
+            <i class="fas fa-rocket"></i>
+          </div>
+          <h3>Fast Track Setup: For New CRM Users</h3>
+          <p style="margin-bottom: 20px;">Fast Track Setup is tailored for businesses implementing Cloud CRM software for the first time. Our experts guide you through the entire initial setup process, ensuring your most critical business processes are configured correctly from day one.</p>
+          <h5 style="color: var(--primary-color); margin-bottom: 15px; margin-top: 20px;">What's Included:</h5>
+          <ul>
+            <li>Initial software configuration aligned with your sales, marketing, and service processes</li>
+            <li>Priority identification workshop to focus on what matters most to your business</li>
+            <li>User role and permission structure setup for security and data access</li>
+            <li>Integration with existing tools like Outlook and QuickBooks</li>
+            <li>Data import from spreadsheets or legacy systems</li>
+            <li>Workflow automation for your primary business process</li>
+            <li>Administrator and end-user training sessions</li>
+            <li>Documentation of configurations for future reference</li>
+          </ul>
+          <p style="margin-top: 20px; font-style: italic; color: var(--text-light);">
+            Get all users productive and using the system effectively within weeks, not months. By focusing on your most important business process first, you see immediate value while building a foundation for future expansion.
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="feature-card" style="height: 100%;">
+          <div class="feature-icon">
+            <i class="fas fa-tachometer-alt"></i>
+          </div>
+          <h3>Fast Track Streamline: For Existing Salesboom Clients</h3>
+          <p style="margin-bottom: 20px;">Fast Track Streamline is designed for current Salesboom customers who know they're not leveraging the full power of their CRM investment. Many businesses start with basic functionality and never explore advanced capabilities that could deliver significant additional value.</p>
+          <h5 style="color: var(--primary-color); margin-bottom: 15px; margin-top: 20px;">What's Included:</h5>
+          <ul>
+            <li>Comprehensive review of your current CRM usage and configuration</li>
+            <li>Discovery session to identify underutilized features and capabilities</li>
+            <li>Implementation of one new key business process or workflow</li>
+            <li>Advanced feature training for your team</li>
+            <li>Dashboard and reporting enhancements</li>
+            <li>Integration of additional modules (Projects, HR, Commissions, etc.)</li>
+            <li>Optimization recommendations based on your business growth</li>
+            <li>Best practices guidance from our 20+ years of experience</li>
+          </ul>
+          <p style="margin-top: 20px; font-style: italic; color: var(--text-light);">
+            Discover capabilities you didn't know existed, implement processes that drive efficiency, and receive even more benefits from your existing Salesboom investment. It's like getting a CRM upgrade without buying new software.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 4: Benefits -->
+<section class="benefits-section">
+  <div class="container">
+    <div class="section-header" style="color: white;">
+      <h2 style="color: white;">Measurable Business Benefits from Fast Track Implementation</h2>
+      <p style="color: rgba(255,255,255,0.9);">The Fast Track program delivers concrete business outcomes that justify the investment many times over.</p>
+    </div>
+    <div class="benefits-grid">
+      <div class="benefit-item">
+        <i class="fas fa-users"></i>
+        <h3>High User Adoption</h3>
+        <p>Proper setup and comprehensive training mean your team actually uses the CRM instead of reverting to spreadsheets. When users understand the "why" and "how," adoption rates soar.</p>
+      </div>
+      <div class="benefit-item">
+        <i class="fas fa-rocket"></i>
+        <h3>Dramatic Improvements</h3>
+        <p>Unlike months-long implementation projects, Fast Track delivers visible results within weeks. You'll see streamlined processes, better customer data, and improved team collaboration almost immediately.</p>
+      </div>
+      <div class="benefit-item">
+        <i class="fas fa-file-alt"></i>
+        <h3>Documented Progress</h3>
+        <p>Every configuration decision, workflow process, and customization is documented. This creates a roadmap for future enhancements and ensures institutional knowledge isn't lost.</p>
+      </div>
+      <div class="benefit-item">
+        <i class="fas fa-dollar-sign"></i>
+        <h3>Fixed-Cost Predictability</h3>
+        <p>Know exactly what you're paying before you start. No hourly consulting fees that add up, no surprise charges, no scope creep. Budget confidently with transparent, fixed-cost pricing.</p>
+      </div>
+      <div class="benefit-item">
+        <i class="fas fa-handshake"></i>
+        <h3>Single Vendor Partnership</h3>
+        <p>One team handles software, implementation, training, and support. No finger-pointing between vendors, no coordination headaches, no contracts to manage.</p>
+      </div>
+      <div class="benefit-item">
+        <i class="fas fa-life-ring"></i>
+        <h3>Ongoing Support</h3>
+        <p>The relationship doesn't end at go-live. Ongoing support ensures you continue to maximize value as your business grows and needs evolve.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  
+    <!-- ---------------------------------------------------------------------------------------------------------------------------------- -->
+      <div class="col-md-8 mx-auto">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body d-flex flex-column">
+            <!-- Responsive iframe -->
+            <div class="ratio ratio-16x9 mb-3">
+              <iframe
+                src="https://www.youtube.com/embed/BjQP-YuIURY"
+                title="YouTube video 2"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- ---------------------------------------------------------------------------------------------------------------------------------- -->
+
+
+
+<!-- Section 5: Why 20 Years Matter -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Why 20+ Years of Experience Matters</h2>
+      <p>Fast Track isn't a new experiment—it's the culmination of over two decades of CRM implementations, refined through thousands of successful deployments.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3">
+        <div style="background: var(--bg-light); padding: 40px; border-radius: 12px; text-align: center; height: 100%;">
+          <div style="font-size: 3.5rem; font-weight: 800; color: var(--primary-color); margin-bottom: 15px;">20+</div>
+          <h4 style="color: var(--text-color); font-size: 1.2rem; margin-bottom: 10px;">Years</h4>
+          <p style="color: var(--text-light); margin: 0;">Of proven CRM implementation expertise</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div style="background: var(--bg-light); padding: 40px; border-radius: 12px; text-align: center; height: 100%;">
+          <div style="font-size: 3.5rem; font-weight: 800; color: var(--primary-color); margin-bottom: 15px;">3,500+</div>
+          <h4 style="color: var(--text-color); font-size: 1.2rem; margin-bottom: 10px;">Clients</h4>
+          <p style="color: var(--text-light); margin: 0;">Successfully implemented worldwide</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div style="background: var(--bg-light); padding: 40px; border-radius: 12px; text-align: center; height: 100%;">
+          <div style="font-size: 3.5rem; font-weight: 800; color: var(--primary-color); margin-bottom: 15px;">159</div>
+          <h4 style="color: var(--text-color); font-size: 1.2rem; margin-bottom: 10px;">Countries</h4>
+          <p style="color: var(--text-light); margin: 0;">With successful CRM deployments</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div style="background: var(--bg-light); padding: 40px; border-radius: 12px; text-align: center; height: 100%;">
+          <div style="font-size: 3.5rem; font-weight: 800; color: var(--primary-color); margin-bottom: 15px;">4-6</div>
+          <h4 style="color: var(--text-color); font-size: 1.2rem; margin-bottom: 10px;">Weeks</h4>
+          <p style="color: var(--text-light); margin: 0;">Average implementation timeline</p>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-5">
+      <p style="font-size: 1.15rem; color: var(--text-light); line-height: 1.8; max-width: 800px; margin: 0 auto; font-style: italic;">
+        You're not just buying implementation services—you're partnering with a team that's been perfecting CRM deployment for over two decades.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Section 6: Who Benefits -->
+<section class="content-section bg-light">
+  <div class="container">
+    <div class="section-header">
+      <h2>Perfect Solutions for Every Stage of CRM Maturity</h2>
+      <p>Fast Track serves two distinct audiences, each with specific needs and challenges.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <div class="info-box" style="height: 100%;">
+          <h4><i class="fas fa-star" style="margin-right: 10px; color: var(--primary-color);"></i>For New CRM Users</h4>
+          <p style="margin-bottom: 20px;">If you're implementing CRM for the first time, Fast Track Setup eliminates the intimidation and uncertainty. You're not alone trying to figure out best practices, data structure, workflow design, and user adoption strategies. Our experts guide you through every decision, explain the implications of choices, and ensure you start with a solid foundation.</p>
+          <h5 style="color: var(--primary-color); margin-bottom: 15px;">Perfect For:</h5>
+          <ul style="list-style: none; padding-left: 0;">
+            <li style="padding-left: 25px; position: relative; margin-bottom: 10px; color: var(--text-light);">
+              <i class="fas fa-angle-right" style="position: absolute; left: 0; color: var(--primary-color);"></i>
+              Growing businesses ready to graduate from spreadsheets
+            </li>
+            <li style="padding-left: 25px; position: relative; margin-bottom: 10px; color: var(--text-light);">
+              <i class="fas fa-angle-right" style="position: absolute; left: 0; color: var(--primary-color);"></i>
+              Companies with limited IT resources or no dedicated IT staff
+            </li>
+            <li style="padding-left: 25px; position: relative; margin-bottom: 10px; color: var(--text-light);">
+              <i class="fas fa-angle-right" style="position: absolute; left: 0; color: var(--primary-color);"></i>
+              Organizations that need results quickly without long implementation cycles
+            </li>
+            <li style="padding-left: 25px; position: relative; margin-bottom: 10px; color: var(--text-light);">
+              <i class="fas fa-angle-right" style="position: absolute; left: 0; color: var(--primary-color);"></i>
+              Businesses that want expert guidance without expensive hourly consulting
+            </li>
+            <li style="padding-left: 25px; position: relative; margin-bottom: 10px; color: var(--text-light);">
+              <i class="fas fa-angle-right" style="position: absolute; left: 0; color: var(--primary-color);"></i>
+              Teams that value proven methodologies over experimental approaches
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="info-box" style="height: 100%;">
+          <h4><i class="fas fa-chart-line" style="margin-right: 10px; color: var(--primary-color);"></i>For Existing Salesboom Clients</h4>
+          <p style="margin-bottom: 20px;">If you're already using Salesboom but feel you're not leveraging its full potential, Fast Track Streamline helps you discover and implement capabilities you're missing. Many businesses start with basic CRM functionality and never explore advanced features that could deliver significant additional value.</p>
+          <h5 style="color: var(--primary-color); margin-bottom: 15px;">Perfect For:</h5>
+          <ul style="list-style: none; padding-left: 0;">
+            <li style="padding-left: 25px; position: relative; margin-bottom: 10px; color: var(--text-light);">
+              <i class="fas fa-angle-right" style="position: absolute; left: 0; color: var(--primary-color);"></i>
+              Clients who started with basic functionality and are ready to expand
+            </li>
+            <li style="padding-left: 25px; position: relative; margin-bottom: 10px; color: var(--text-light);">
+              <i class="fas fa-angle-right" style="position: absolute; left: 0; color: var(--primary-color);"></i>
+              Organizations experiencing growth that requires more sophisticated processes
+            </li>
+            <li style="padding-left: 25px; position: relative; margin-bottom: 10px; color: var(--text-light);">
+              <i class="fas fa-angle-right" style="position: absolute; left: 0; color: var(--primary-color);"></i>
+              Businesses that want to automate additional workflows
+            </li>
+            <li style="padding-left: 25px; position: relative; margin-bottom: 10px; color: var(--text-light);">
+              <i class="fas fa-angle-right" style="position: absolute; left: 0; color: var(--primary-color);"></i>
+              Companies preparing for integration with new business systems
+            </li>
+            <li style="padding-left: 25px; position: relative; margin-bottom: 10px; color: var(--text-light);">
+              <i class="fas fa-angle-right" style="position: absolute; left: 0; color: var(--primary-color);"></i>
+              Teams that need to optimize existing processes for better efficiency
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 7: Getting Started -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Your Path to CRM Success Starts with One Conversation</h2>
+      <p>Starting your Fast Track journey is simple and risk-free. The process begins with a conversation about your business needs, challenges, and goals. There's no pressure, no sales pitch—just an honest discussion about whether Fast Track is the right solution for your situation.</p>
+    </div>
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h4>Initial Consultation</h4>
+            <p>Contact our Professional Services team at 1-855-229-2043 or visit www.salesboom.com. We'll discuss your business, current situation, and objectives to determine if Fast Track Setup or Streamline is the better fit.</p>
+          </div>
+        </div>
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h4>Scope Definition and Pricing</h4>
+            <p>Based on the consultation, we'll provide a clear scope of work and fixed-cost proposal. You'll know exactly what's included, what you'll receive, and what you'll pay—no surprises.</p>
+          </div>
+        </div>
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h4>Project Kickoff</h4>
+            <p>Once you're ready to proceed, we schedule the consulting session and workshop. This typically begins within 1-2 weeks of agreement.</p>
+          </div>
+        </div>
+        <div class="step-card">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <h4>Implementation Phase</h4>
+            <p>Our team handles all configuration, customization, data migration, and testing. You'll have regular check-ins to review progress and provide feedback.</p>
+          </div>
+        </div>
+        <div class="step-card">
+          <div class="step-number">5</div>
+          <div class="step-content">
+            <h4>Training and Go-Live</h4>
+            <p>Comprehensive training prepares your team for launch. We're with you during go-live to ensure a smooth transition and address any questions.</p>
+          </div>
+        </div>
+        <div class="step-card">
+          <div class="step-number">6</div>
+          <div class="step-content">
+            <h4>Ongoing Success</h4>
+            <p>After implementation, you have access to ongoing support and guidance. As your business grows, we can help with additional enhancements through future Streamline engagements.</p>
+          </div>
+        </div>
+        <div class="text-center mt-5">
+          <div style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); padding: 30px; border-radius: 12px; color: white;">
+            <p style="font-size: 1.2rem; margin: 0; color: white;">
+              <strong>Timeline:</strong> The entire process typically completes within 4-6 weeks for Setup and 2-4 weeks for Streamline, depending on your specific requirements and data complexity.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-content">
+      <h2>Ready to Implement CRM the Right Way?</h2>
+      <p>Stop struggling with complex CRM implementation. Get expert guidance, fixed-cost pricing, and results in weeks with Salesboom's Fast Track program. Contact our Professional Services team today.</p>
+      <div class="hero-cta">
+        <a href="https://www.salesboom.com/request-crm-demo.html" class="btn btn-primary">Contact Professional Services</a>
+      <a href="https://www.salesboom.com/free_trial/index.html" class="btn btn-outline">  Free Trial   </a>  
+      </div>
+ 
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-2">
+      <h3 class="fw-bold text-color">
+        <i class="fa-solid fa-layer-group me-2"></i>
+        Explore Salesboom Editions
+      </h3>
+      <p class="text-muted">Discover powerful CRM editions to scale your business efficiently.</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-briefcase fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Professional Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              A complete CRM suite with Marketing Automation, ERP integration, and Support tools — built for performance and value.
+            </p>
+            <a href="https://www.salesboom.com/editions/professional-edition.html" class="btn btn-color mt-auto">
+              Explore Professional <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-building fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Enterprise Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              For large enterprises — automate workflows, unify data, and leverage analytics to drive strategic growth.
+            </p>
+            <a href="https://www.salesboom.com/editions/enterprise-edition.html" class="btn btn-color mt-auto">
+              View Enterprise <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-users fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Team Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              Perfect for small teams starting with CRM — manage leads, track sales, and boost productivity with simplicity.
+            </p>
+            <a href="https://www.salesboom.com/editions/team-edition.html" class="btn btn-color mt-auto">
+           Discover Team<i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="container py-5">
+  <h2 class="text-center mb-5 text-color">CRM Services & Implementation</h2>
+
+  <div class="row g-4">
+
+    <!-- Card 1 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-circle-info text-color fa-3x mb-3"></i>
+        <h4>CRM Services Overview</h4>
+        <p>
+          Learn about all CRM services offered at 
+          <a href="https://www.salesboom.com/services/index.html" class="text-color fw-bold">
+            Services Overview
+          </a>.
+        </p>
+      </div>
+    </div>
+
+
+
+
+    <!-- Card 2 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-chalkboard-user text-color fa-3x mb-3"></i>
+        <h4>CRM Training Services</h4>
+        <p>
+          Empower your team with expert-led CRM training available in 
+          <a href="https://www.salesboom.com/services/training.html" class="text-color fw-bold">
+            Training Services
+          </a>.
+        </p>
+      </div>
+    </div>
+
+
+
+    <!-- Card 3 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-handshake-angle text-color fa-3x mb-3"></i>
+        <h4>Business CRM Consulting</h4>
+        <p>
+          Get expert guidance on CRM strategy and deployment via 
+          <a href="https://www.salesboom.com/services/business_crm_consulting_services.html" class="text-color fw-bold">
+            Business CRM Consulting Services
+          </a>.
+        </p>
+      </div>
+    </div>
+<!-- Card 3 -->
+<div class="col-md-4">
+  <div class="card shadow-lg border-0 text-center p-4 h-100">
+    <i class="fa-solid fa-list-check text-color fa-3x mb-3"></i>
+    <h4>CRM Integration API</h4>
+    <p>
+      Connect your CRM to any external system with fast, reliable API access via the 
+      <a href="https://www.salesboom.com/services/index_bkp.html" class="text-color fw-bold">
+        CRM Integration API Overview
+      </a>.
+    </p>
+  </div>
+</div>
+ <!-- Card 4 -->
+<div class="col-md-4">
+  <div class="card shadow-lg border-0 text-center p-4 h-100">
+    <i class="fa-solid fa-layer-group text-color fa-3x mb-3"></i>
+    <h4>Customizable CRM</h4>
+    <p>
+      Tailor fields, workflows, and layouts instantly using the 
+      <a href="https://www.salesboom.com/services/index_v7.html" class="text-color fw-bold">
+        CRM Customization 
+      </a>.
+    </p>
+  </div>
+</div>
+
+   
+
+
+
+<!-- Card 5 -->
+<div class="col-md-4">
+  <div class="card shadow-lg border-0 text-center p-4 h-100">
+    <i class="fa-solid fa-archive text-color fa-3x mb-3"></i>
+    <h4>Professional Services</h4>
+    <p>
+      Explore historical CRM service offerings and custom CRM/ERP solutions in the 
+      <a href="https://www.salesboom.com/services/index-back-10-5-07-morley.html" class="text-color fw-bold">
+        Professional Services Archive
+      </a>.
+    </p>
+  </div>
+</div>
+
+
+    <!-- Card 7 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-users-gear text-color fa-3x mb-3"></i>
+        <h4>People-as-a-Service CRM</h4>
+        <p>
+          Extend your team with expert CRM specialists via 
+          <a href="people-as-a-service-crm.html" class="text-color fw-bold">
+            People-as-a-Service CRM
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 8 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-diagram-project text-color fa-3x mb-3"></i>
+        <h4>CRM Implementation Methodology</h4>
+        <p>
+          Deploy CRM successfully using the 
+          <a href="crm-implementation-methodology.html" class="text-color fw-bold">
+            CRM Implementation Methodology
+          </a>.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+<!-- Footer -->
+<footer class="mt-5 footer">
+  <div class="container mt-5 pt-5">
+    <div class="footer-grid">
+      <div class="footer-section">
+        <h3>Products</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/products/tools-sfa.html">Sales Force Automation</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-marketing.html">Marketing Automation</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-casemanagement.html">Case Management</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-reporting.html">Business Intelligence</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-emailintegration.html">Email Integration</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Solutions</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/products/edition-team.html">Team Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/edition-professional.html">Professional Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/edition-enterprise.html">Enterprise Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/industry-solutions.html">Industry Solutions</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/company/index.html">About Us</a></li>
+          <li><a href="https://www.salesboom.com/company/company-contact.html">Contact Us</a></li>
+          <li><a href="https://www.salesboom.com/customers/index.html">Customers</a></li>
+          <li><a href="https://www.salesboom.com/partners/index.html">Partners</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/support/index.html">Support Center</a></li>
+          <li><a href="https://www.salesboom.com/crm_supportcenter/overview/index.html">Documentation</a></li>
+          <li><a href="https://www.salesboom.com/whitepapers/index.html">White Papers</a></li>
+          <li><a href="https://www.salesboom.com/pop-privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="bg-color">
+    <div class="container">
+     <div class="footer-bottom pb-3 mt-3">
+      <p>&copy; 2003-2025 <a class="text-white fw-bold" href="https://www.salesboom.com">Salesboom.com</a> Inc. All rights reserved. | Call: 1-855-229-2043</p>
+      <p style="margin-top: 10px;">Salesboom's color-coded CRM lead management software helps businesses visually prioritize sales opportunities with automated workflow rules. Contact us to learn how color coding can transform your lead management process and increase sales productivity.</p>
+    </div>
+    </div>
+  </div>
+ 
+</footer>
+
+<!-- Common JavaScript -->
+<script src="content/js/bootstrap.bundle.min.js"></script>
+
+
+<script>
+// Loading Screen
+window.addEventListener('load', function() {
+  const loadingScreen = document.getElementById('loading-screen');
+  setTimeout(function() {
+    loadingScreen.classList.add('fade-out');
+    setTimeout(function() {
+      loadingScreen.style.display = 'none';
+    }, 500);
+  }, 800);
+});
+
+// Scroll to Top Button
+const scrollToTopBtn = document.getElementById('scroll-to-top');
+
+window.addEventListener('scroll', function() {
+  if (window.pageYOffset > 300) {
+    scrollToTopBtn.classList.add('show');
+  } else {
+    scrollToTopBtn.classList.remove('show');
+  }
+});
+
+scrollToTopBtn.addEventListener('click', function() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    
+    <!-- Primary Meta Tags -->
+    <title>Account Management CRM Software | Salesboom Solutions</title>
+    <meta name="description" content="Streamline account management with Salesboom's customizable CRM. Automate workflows, track proximity, and access accounts 24/7. Trusted by 28,000+ users globally.">
+    <meta name="keywords" content="Account management CRM, Account management software, Customer account management, CRM account tracking, Account management solutions, Business account CRM, Account relationship management">
+    <link rel="canonical" href="https://www.salesboom.com/crm-data-sheet-account-management-strategies.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.salesboom.com/crm-data-sheet-account-management-strategies.html">
+    <meta property="og:title" content="Account Management CRM Software | Salesboom Solutions">
+    <meta property="og:description" content="Streamline account management with Salesboom's customizable CRM. Automate workflows, track proximity, and access accounts 24/7. Trusted by 28,000+ users globally.">
+    <meta property="og:image" content="https://www.salesboom.com/img/crm-data-sheet-account-management-strategies-og.jpg">
+    <meta property="og:site_name" content="Salesboom CRM">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.salesboom.com/crm-data-sheet-account-management-strategies.html">
+    <meta name="twitter:title" content="Account Management CRM Software | Salesboom Solutions">
+    <meta name="twitter:description" content="Streamline account management with Salesboom's customizable CRM. Automate workflows, track proximity, and access accounts 24/7. Trusted by 28,000+ users globally.">
+    <meta name="twitter:image" content="https://www.salesboom.com/img/crm-data-sheet-account-management-strategies-og.jpg">
+    <meta name="twitter:site" content="@SalesboomCloud">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Salesboom Account Management CRM",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web-based, Cloud",
+      "offers": {
+        "@type": "Offer",
+        "price": "14.00",
+        "priceCurrency": "USD",
+        "priceValidUntil": "2026-12-31"
+      },
+      "featureList": [
+        "360-degree unified account intelligence",
+        "Intelligent workflow automation with real-time alerts",
+        "Mass account management and proximity search",
+        "Customizable fields and drag-and-drop layouts",
+        "Seamless Microsoft Outlook integration",
+        "Secure cloud access 24/7/365"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.5",
+        "ratingCount": "28000"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Salesboom",
+        "url": "https://www.salesboom.com",
+        "logo": "https://www.salesboom.com/img/salesboom-logo-252x67.png",
+        "foundingDate": "2003",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+1-855-229-2043",
+          "contactType": "Customer Service"
+        }
+      }
+    }
+    </script>
+    
+    <link rel="shortcut icon" href="https://www.salesboom.com/favicon.ico">
+    
+
+
+ <link rel="stylesheet" href="../content/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../content/css/salesboom-common.css">
+    <link rel="shortcut icon" href="../content/image/salesboom-logo-252x67.png" type="image/x-icon"> 
+
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #002f6c;
+            --secondary-color: #0052cc;
+            --accent-color: #00a3ff;
+            --success-color: #27ae60;
+            --text-dark: #1a1a1a;
+            --text-light: #666;
+            --bg-light: #f8f9fa;
+            --border-color: #e0e0e0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Loading Screen */
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--primary-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease-out;
+        }
+        
+        #loading-screen.fade-out {
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        .loader {
+            width: 60px;
+            height: 60px;
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-top-color: #fff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Scroll to Top Button */
+        #scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            box-shadow: 0 4px 12px rgba(0, 47, 108, 0.3);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        
+        #scroll-top:hover {
+            background: var(--secondary-color);
+            transform: translateY(-5px);
+            box-shadow: 0 6px 16px rgba(0, 47, 108, 0.4);
+        }
+        
+        #scroll-top.show {
+            display: flex;
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .hero-section h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 25px;
+            line-height: 1.2;
+        }
+        
+        .hero-section .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            line-height: 1.6;
+        }
+        
+        .hero-cta {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        /* Buttons */
+        .btn-custom {
+            padding: 16px 40px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .btn-primary-custom {
+            background: white;
+            color: var(--primary-color);
+            border: 2px solid white;
+        }
+        
+        .btn-primary-custom:hover {
+            background: transparent;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+        }
+        
+        .btn-outline-custom {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .btn-outline-custom:hover {
+            background: white;
+            color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+        
+        /* Stats Section */
+        .stats-section {
+            background: var(--text-dark);
+            color: white;
+            padding: 60px 0;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .stat-item h3 {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--accent-color);
+            margin-bottom: 10px;
+        }
+        
+        .stat-item p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        /* Content Sections */
+        .content-section {
+            padding: 80px 0;
+        }
+        
+        .content-section.bg-light {
+            background: var(--bg-light);
+        }
+        
+        .section-header {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto 60px;
+        }
+        
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .section-header p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+        
+        /* Feature Cards */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--primary-color);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0, 47, 108, 0.15);
+        }
+        
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            color: white;
+            margin-bottom: 25px;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .feature-card h4 {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            margin: 20px 0 10px 0;
+            font-weight: 600;
+        }
+        
+        .feature-card p, .feature-card ul {
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+        
+        .feature-card ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 15px;
+        }
+        
+        .feature-card ul li {
+            padding-left: 30px;
+            position: relative;
+            margin-bottom: 12px;
+        }
+        
+        .feature-card ul li::before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--success-color);
+        }
+        
+        /* Two Column Layout */
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+        
+        .column-content h3 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .column-content h4 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin: 30px 0 15px 0;
+            font-weight: 600;
+        }
+        
+        .column-content p {
+            color: var(--text-light);
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+        
+        .column-content ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        
+        .column-content ul li {
+            padding-left: 35px;
+            position: relative;
+            margin-bottom: 15px;
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+        
+        .column-content ul li::before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--success-color);
+            font-size: 1.2rem;
+        }
+        
+        .column-image img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Benefits Section */
+        .benefits-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 80px 0;
+            position: relative;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .benefit-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        
+        .benefit-item:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-5px);
+        }
+        
+        .benefit-item i {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+        }
+        
+        .benefit-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .benefit-item p {
+            opacity: 0.9;
+            line-height: 1.7;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: var(--text-dark);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .cta-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .cta-content p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            line-height: 1.7;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero-section h1 {
+                font-size: 2.5rem;
+            }
+            
+            .two-column {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .section-header h2 {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 60px 0;
+            }
+            
+            .hero-section h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-section .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .hero-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn-custom {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .content-section {
+                padding: 60px 0;
+            }
+            
+            .stat-item h3 {
+                font-size: 2.5rem;
+            }
+            
+            #scroll-top {
+                width: 45px;
+                height: 45px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero-section h1 {
+                font-size: 1.8rem;
+            }
+            
+            .section-header h2 {
+                font-size: 1.8rem;
+            }
+            
+            .feature-card {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Top Bar -->
+<div class="top-bar">
+  <div class="container">
+    <div class="top-bar-left text-color">
+      <span>✓ Award-Winning Cloud CRM Software Since 2003</span>
+    </div>
+    <ul class="top-bar-nav">
+      <li><a href="https://www.salesboom.com/crm_supportcenter/overview/index.html">Support Center</a></li>
+      <li><a href="https://www.salesboom.com/crm_trial.html">Free Trial</a></li>
+      <li><a href="https://www.salesboom.com/login.html">Login</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Main Header -->
+<header>
+  <div class="main-header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <a href="https://www.salesboom.com" aria-label="Salesboom CRM Home">
+            <img src="https://www.salesboom.com/img/salesboom-logo-252x67.png" alt="Salesboom Cloud CRM Logo" width="252" height="67">
+          </a>
+        </div>
+        <div class="header-phone">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          <a href="tel:+18552292043">1-855-229-2043</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Master Account Management with Intelligent CRM Automation</h1>
+                <p class="subtitle">Simplify complex account relationships with customizable workflows, real-time alerts, and secure cloud access. Manage thousands of accounts effortlessly from anywhere, anytime.</p>
+                <div class="hero-cta">
+                    <a href="https://www.salesboom.com/request-crm-demo.html" class="btn-custom btn-primary-custom">Book a Demo</a>
+                    <a href="https://www.salesboom.com/crm_trial.html" class="btn-custom btn-outline-custom">Start Free Trial</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-6">
+                    <div class="stat-item">
+                        <h3>28,000+</h3>
+                        <p>Active Subscribers</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-item">
+                        <h3>154</h3>
+                        <p>Countries Worldwide</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-item">
+                        <h3>24/7</h3>
+                        <p>Cloud Access</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-item">
+                        <h3>99.9%</h3>
+                        <p>Uptime Guarantee</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Statement Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Traditional Account Management Falls Short</h2>
+                <p>Managing business accounts across spreadsheets, disconnected systems, and manual processes creates chaos that threatens customer relationships and revenue growth. Sales teams waste hours searching for account information, customer service can't access complete account histories, and managers lack visibility into account health and opportunity pipelines.</p>
+            </div>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-puzzle-piece"></i>
+                    </div>
+                    <h3>Fragmented Data</h3>
+                    <p>Account data scattered across multiple systems and departments creates inefficiencies and prevents teams from having a complete view of customer relationships.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Manual Processes</h3>
+                    <p>Time-consuming manual tasks consume valuable hours that should be spent building customer relationships and driving revenue growth.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-triangle-exclamation"></i>
+                    </div>
+                    <h3>At-Risk Accounts</h3>
+                    <p>Inability to identify accounts at risk of churning before it's too late results in lost revenue and damaged relationships.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h3>Missed Opportunities</h3>
+                    <p>Cross-sell and upsell opportunities hidden in account interactions go unnoticed without intelligent systems to surface them.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-route"></i>
+                    </div>
+                    <h3>Poor Routing</h3>
+                    <p>No systematic way to route accounts to the right representatives based on territory, expertise, or account characteristics.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-eye-slash"></i>
+                    </div>
+                    <h3>Limited Visibility</h3>
+                    <p>Lack of real-time visibility into account activity and performance metrics prevents proactive management and strategic decision-making.</p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <p style="font-size: 1.2rem; color: var(--text-light); max-width: 900px; margin: 0 auto;">Salesboom's Account Management CRM eliminates these inefficiencies through intelligent automation, unified data architecture, and customizable workflows that adapt to your unique business processes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Overview Section -->
+    <section class="content-section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Comprehensive Account Management Built for Business Growth</h2>
+                <p>Salesboom simplifies account management by leveraging CRM best practices developed through years of experience working with thousands of organizations worldwide. Our cloud-based CRM software provides streamlined account management functionality that scales with your business while maintaining simplicity for everyday users.</p>
+            </div>
+            
+            <div class="two-column">
+                <div class="column-content">
+                    <h3>Unified Account Intelligence</h3>
+                    <p>Every account becomes a complete intelligence center with Salesboom's integrated approach. The system automatically connects accounts with all related records including contacts, opportunities, cases, quotes, invoices, and communication history.</p>
+                    <p>This unified view eliminates time wasted searching multiple systems and ensures every team member has complete context before engaging with customers.</p>
+                    
+                    <h4>Key Capabilities:</h4>
+                    <ul>
+                        <li>360-degree account view with complete interaction history</li>
+                        <li>Automatic association of related records for instant access</li>
+                        <li>Hierarchical account structures for parent-subsidiary relationships</li>
+                        <li>Customizable account fields for industry-specific data</li>
+                        <li>Secure sharing with granular permission controls</li>
+                        <li>Outlook integration for seamless email and calendar sync</li>
+                    </ul>
+                </div>
+                    <div class="column-content">
+                    <h3>Intelligent Workflow Automation</h3>
+                    <p>Customizable workflow rules automate repetitive account management tasks and ensure critical actions never fall through the cracks. The system monitors account activity continuously and triggers automated responses based on your business rules.</p>
+                    
+                    <h4>Automation Capabilities:</h4>
+                    <ul>
+                        <li>Real-time alerts for account creation and status changes</li>
+                        <li>Automatic account routing based on territory or account size</li>
+                        <li>Big deal alerts when opportunities exceed thresholds</li>
+                        <li>At-risk account notifications based on activity patterns</li>
+                        <li>Automated follow-up reminders and task creation</li>
+                        <li>Mass email campaigns with personalized messaging</li>
+                    </ul>
+                </div>
+            </div>
+         
+        </div>
+    </section>
+
+    <!-- Customization Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Tailored to Your Business Without Technical Complexity</h2>
+                <p>Salesboom's highly customizable Account Management solutions adapt to your unique processes without requiring programming expertise. The intuitive AJAX drag-and-drop interface empowers even non-technical users to create personalized layouts, custom fields, and tailored views.</p>
+            </div>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-sliders"></i>
+                    </div>
+                    <h3>Customizable Account Fields and Layouts</h3>
+                    <p>Add unlimited custom fields to capture the data points that matter most to your business. Whether tracking industry certifications, renewal dates, account health scores, or custom metrics, the platform adapts to your needs.</p>
+                    <p>Drag-and-drop page layouts allow you to organize information logically for different user roles and departments.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Personalized Views and Dashboards</h3>
+                    <p>Create custom views that filter and display accounts based on any criteria including status, territory, revenue, industry, or activity level.</p>
+                    <p>Personalized dashboards provide at-a-glance visibility into key metrics with real-time updates. Each user can configure their workspace to prioritize the information most relevant to their role.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fa-brands fa-discord"></i>
+                    </div>
+                    <h3>Flexible Reporting Engine</h3>
+                    <p>Generate comprehensive reports on any account data with the flexible reporting engine. Standard reports cover common needs while custom report builders enable analysis of unique business metrics.</p>
+                    <p>Schedule automatic report delivery to stakeholders, export data for external analysis, and drill down from summary views to detailed account records with a single click.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mass Management Section -->
+    <section class="content-section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Managing Hundreds or Thousands of Accounts Efficiently</h2>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-users-gear"></i>
+                        </div>
+                        <h3>Mass Update and Assignment</h3>
+                        <p>Update multiple account records simultaneously without tedious one-by-one editing. Reassign account ownership in bulk when territories change or team members transition.</p>
+                        <p>Mass operations maintain data integrity while dramatically reducing administrative overhead for account management teams handling large portfolios.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-location-dot"></i>
+                        </div>
+                        <h3>Zip Code Proximity Search</h3>
+                        <p>The innovative Zip Code Proximity Search helps field sales teams plan efficient routes and identify nearby opportunities. Search for all accounts within a specified radius of any location.</p>
+                        <p>This location-based intelligence enables territory optimization, efficient customer visits, and identification of geographic clustering opportunities.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-envelope-open-text"></i>
+                        </div>
+                        <h3>Mass Email Communication</h3>
+                        <p>Execute targeted email campaigns to account segments with personalized messaging based on account attributes, industry, size, or custom criteria.</p>
+                        <p>Track email engagement metrics, manage opt-outs automatically, and maintain compliance with email marketing regulations—all within the integrated CRM platform.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-file-export"></i>
+                        </div>
+                        <h3>Data Import and Export</h3>
+                        <p>Import thousands of accounts from spreadsheets or legacy systems with intelligent field mapping and duplicate detection. Export account data for external analysis or integration with other business systems.</p>
+                        <p>Flexible data exchange capabilities ensure smooth transitions from old systems and ongoing interoperability with your broader technology ecosystem.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Territory Management Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Advanced Territory and Team Management</h2>
+            </div>
+            
+            <div class="two-column">
+                <div class="column-content">
+                    <h3>Intelligent Territory Assignment</h3>
+                    <p>Define territories based on geography, industry vertical, account size, or any combination of criteria that matches your business model. Automatically route new accounts to the appropriate representatives based on your territory rules.</p>
+                    <p>The system ensures balanced workload distribution while respecting existing customer relationships and strategic account assignments.</p>
+                    
+                    <h4>Territory Features:</h4>
+                    <ul>
+                        <li>Flexible territory definitions using multiple criteria</li>
+                        <li>Automated account routing to territory owners</li>
+                        <li>Territory performance analytics and dashboards</li>
+                        <li>Easy territory reassignment during reorganizations</li>
+                        <li>Support for overlapping territories and team selling</li>
+                        <li>Historical territory data for trend analysis</li>
+                    </ul>
+                </div>
+                <div class="column-image">
+                    <img src="../content/image/image2.jpg" alt="Territory management and assignment dashboard" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Integration Section -->
+    <section class="content-section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Seamless Integration with Your Business Ecosystem</h2>
+            </div>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fab fa-microsoft"></i>
+                    </div>
+                    <h3>Microsoft Outlook Integration</h3>
+                    <p>Native Outlook integration synchronizes emails, contacts, calendar events, and tasks bidirectionally. Access account information directly from your Outlook interface without switching applications.</p>
+                    <p>Email tracking automatically associates messages with the correct account records, maintaining complete communication history within the CRM.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3>QuickBooks Connectivity</h3>
+                    <p>Integrate with QuickBooks accounting software to synchronize customer account data, invoices, and payment information. Eliminate duplicate data entry between CRM and accounting systems.</p>
+                    <p>Sales teams gain visibility into account payment status and billing history to inform customer conversations and collections efforts.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-plug"></i>
+                    </div>
+                    <h3>API and Custom Integrations</h3>
+                    <p>Open API architecture enables custom integrations with ERP systems, marketing automation platforms, accounting software, and other business applications your organization depends on.</p>
+                    <p>Import/export flexibility using standard data formats ensures easy migration from legacy systems and ongoing data exchange with business intelligence tools.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security and Access Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Secure Cloud Access from Anywhere, Anytime</h2>
+                <p>In today's mobile business environment, account information must be accessible wherever work happens. Salesboom provides secure cloud access that empowers teams to manage accounts effectively whether they're in the office, working remotely, or meeting customers in the field.</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h3>True Cloud Platform</h3>
+                        <p>Access complete account information from any device with internet connectivity. No software installation or IT infrastructure required with automatic updates and security patches deployed seamlessly.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-halved"></i>
+                        </div>
+                        <h3>Enterprise Security</h3>
+                        <p>99.9% uptime guarantee with redundant data centers. Enterprise-grade security with encryption in transit and at rest. Role-based access controls protect sensitive account data.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3>Global Accessibility</h3>
+                        <p>24/7/365 availability enables global team collaboration. Comprehensive audit trails track all user activity. Regular automated backups ensure data protection.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4">
+                <p style="font-size: 1.15rem; color: var(--text-light); max-width: 900px; margin: 0 auto;">Using the Software as a Service model, Salesboom is accessed via web browser, providing secure access around the clock from anywhere in the world. This cloud-based approach eliminates costly hardware investments, reduces IT overhead, and ensures your team always has the information they need to serve customers effectively.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proven Track Record Section -->
+    <section class="content-section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Trusted by Organizations Worldwide</h2>
+                <p>Salesboom is a world leader in delivery of on-demand Customer Relationship Management and Enterprise Resource Planning solutions. Our proven platform serves a diverse global customer base spanning small businesses to Fortune 500 enterprises.</p>
+            </div>
+            
+            <div class="benefits-grid">
+                <div class="benefit-item" style="background: white; color: var(--text-dark); box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                    <i class="fas fa-users" style="color: var(--primary-color);"></i>
+                    <h3 style="color: var(--primary-color);">28,000+ Subscribers</h3>
+                    <p style="color: var(--text-light);">Active subscribers worldwide trust Salesboom to manage their critical customer relationships.</p>
+                </div>
+                
+                <div class="benefit-item" style="background: white; color: var(--text-dark); box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                    <i class="fas fa-globe-americas" style="color: var(--primary-color);"></i>
+                    <h3 style="color: var(--primary-color);">154 Countries</h3>
+                    <p style="color: var(--text-light);">Customers across six continents rely on our platform for account management excellence.</p>
+                </div>
+                
+                <div class="benefit-item" style="background: white; color: var(--text-dark); box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                    <i class="fas fa-building" style="color: var(--primary-color);"></i>
+                    <h3 style="color: var(--primary-color);">SMB to Fortune 500</h3>
+                    <p style="color: var(--text-light);">Serving organizations from small businesses to Fortune 500 enterprises across diverse industries.</p>
+                </div>
+                
+                <div class="benefit-item" style="background: white; color: var(--text-dark); box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                    <i class="fas fa-rocket" style="color: var(--primary-color);"></i>
+                    <h3 style="color: var(--primary-color);">Continuous Innovation</h3>
+                    <p style="color: var(--text-light);">Delivering continuous platform enhancements and new capabilities based on customer feedback.</p>
+                </div>
+                
+                <div class="benefit-item" style="background: white; color: var(--text-dark); box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                    <i class="fas fa-headset" style="color: var(--primary-color);"></i>
+                    <h3 style="color: var(--primary-color);">Expert Support</h3>
+                    <p style="color: var(--text-light);">Providing expert support from experienced CRM specialists who understand your business needs.</p>
+                </div>
+                
+                <div class="benefit-item" style="background: white; color: var(--text-dark); box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                    <i class="fas fa-award" style="color: var(--primary-color);"></i>
+                    <h3 style="color: var(--primary-color);">Proven Excellence</h3>
+                    <p style="color: var(--text-light);">Decades of CRM expertise and real-world best practices refined across thousands of implementations.</p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <p style="font-size: 1.2rem; color: var(--text-light); max-width: 900px; margin: 0 auto;">This extensive experience working with thousands of organizations has enabled us to refine our Account Management solutions based on real-world best practices across virtually every industry and business model. When you choose Salesboom, you benefit from decades of CRM expertise and continuous innovation driven by customer feedback and emerging business needs.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scalability Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Account Management That Grows with Your Business</h2>
+                <p>Whether managing 100 accounts or 100,000, Salesboom's architecture scales seamlessly to support your growth without requiring platform changes or costly reimplementation.</p>
+            </div>
+            
+            <div class="two-column">
+                <div class="column-image">
+                    <img src="../content/image/image1.jpg" alt="Scalable cloud architecture for growing businesses" loading="lazy">
+                </div>
+                <div class="column-content">
+                    <h3>Built for Enterprise Scale</h3>
+                    <p>Start with the account management features you need today, then expand capabilities as your business grows. The platform adapts to your evolving requirements without disrupting existing processes or requiring expensive migrations to new systems.</p>
+                    
+                    <h4>Scalability Features:</h4>
+                    <ul>
+                        <li>Cloud infrastructure that automatically scales with data growth</li>
+                        <li>Performance optimized for large account portfolios</li>
+                        <li>Flexible licensing that allows adding users as teams expand</li>
+                        <li>Modular functionality enabled as business needs evolve</li>
+                        <li>Data architecture designed for enterprise deployments</li>
+                        <li>API capabilities supporting complex integrations</li>
+                        <li>Multi-currency and multi-language for global expansion</li>
+                        <li>Advanced security scaling with organizational complexity</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Transform Your Account Management?</h2>
+                <p>Discover how Salesboom's customizable CRM can streamline your account management processes and drive business growth. Join 28,000+ users worldwide who trust Salesboom to manage their most important customer relationships.</p>
+                <div class="hero-cta">
+                    <a href="https://www.salesboom.com/request-crm-demo.html" class="btn-custom btn-primary-custom">Book a Demo Today</a>
+                    <a href="https://www.salesboom.com/crm_trial.html" class="btn-custom btn-outline-custom">Start Free Trial</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-2">
+      <h3 class="fw-bold text-color">
+        <i class="fa-solid fa-layer-group me-2"></i>
+        Explore Salesboom Editions
+      </h3>
+      <p class="text-muted">Discover powerful CRM editions to scale your business efficiently.</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-lg border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-briefcase fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Professional Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              A complete CRM suite with Marketing Automation, ERP integration, and Support tools — built for performance and value.
+            </p>
+            <a href="https://www.salesboom.com/editions/professional-edition.html" class="btn btn-color mt-auto">
+              Explore Professional <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-lg border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-building fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Enterprise Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              For large enterprises — automate workflows, unify data, and leverage analytics to drive strategic growth.
+            </p>
+            <a href="https://www.salesboom.com/editions/enterprise-edition.html" class="btn btn-color mt-auto">
+              View Enterprise <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-lg border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-users fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Team Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              Perfect for small teams starting with CRM — manage leads, track sales, and boost productivity with simplicity.
+            </p>
+            <a href="https://www.salesboom.com/editions/team-edition.html" class="btn btn-color mt-auto">
+           Discover Team<i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="container py-5">
+  <h2 class="text-center mb-5 text-color">
+    CRM Sales & Customization Tools
+  </h2>
+
+  <div class="row g-4">
+
+    <!-- Card 1: Account Management -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-building text-color fs-1 mb-3"></i>
+        <h4>Account Management CRM</h4>
+        <p>
+          Organize accounts & hierarchies with
+          <a href="https://www.salesboom.com/products/sfa-account-management.html" class="text-color fw-bold">
+            CRM Account Management
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 2: EDI Services Datasheet -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-file-lines text-color fs-1 mb-3"></i>
+        <h4>EDI Services Datasheet</h4>
+        <p>
+          Learn about integration & EDI with
+          <a href="https://www.salesboom.com/products/CRM-data-sheets/crm-data-sheet-edi-services.html" class="text-color fw-bold">
+            CRM EDI Services Datasheet
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 3: Opportunity Management -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-diagram-project text-color fs-1 mb-3"></i>
+        <h4>Opportunity Management</h4>
+        <p>
+          Track & forecast deals via
+          <a href="https://www.salesboom.com/products/crm-opportunity-management-software.html" class="text-color fw-bold">
+            CRM Opportunity Management
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 4: Lead-to-Opportunity Conversion -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-exchange-alt text-color fs-1 mb-3"></i>
+        <h4>Lead → Opportunity Conversion</h4>
+        <p>
+          Automate lead conversion with
+          <a href="https://www.salesboom.com/products/convert-leads-to-opps-automatically.html" class="text-color fw-bold">
+            Lead Conversion Tools
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 5: Customization Tools -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-wrench text-color fs-1 mb-3"></i>
+        <h4>CRM Customization</h4>
+        <p>
+          Personalize CRM with
+          <a href="https://www.salesboom.com/products/tools-customization.html" class="text-color fw-bold">
+            CRM Customization Tools
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 6: Workflow Rules -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-route text-color fs-1 mb-3"></i>
+        <h4>Custom Workflow Rules</h4>
+        <p>
+          Automate processes using
+          <a href="https://www.salesboom.com/products/custom-workflow-rules.html" class="text-color fw-bold">
+            Workflow Rule Builder
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 7: Zip Code Proximity Search -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-map-marker-alt text-color fs-1 mb-3"></i>
+        <h4>Zip Code Search Tool</h4>
+        <p>
+          Find customers near you with
+          <a href="https://www.salesboom.com/products/feature-zip-code-proximity-search.html" class="text-color fw-bold">
+            Zip Code Proximity Search
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 8: Sales Automation Content -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-gears text-color fs-1 mb-3"></i>
+        <h4>Sales Automation</h4>
+        <p>
+          Streamline workflows with
+          <a href="https://www.salesboom.com/sales-automation/sales_automation_content.html" class="text-color fw-bold">
+            CRM Sales Automation
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 9: Modern Sales Flywheel & AI -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-robot text-color fs-1 mb-3"></i>
+        <h4>Modern Sales Flywheel + AI</h4>
+        <p>
+          Learn modern revenue strategies with
+          <a href="https://www.salesboom.com/ai-sales-engine/modern-sales-flywheel-cpq-crm-ai.html" class="text-color fw-bold">
+            Modern Sales Flywheel & AI Guide
+          </a>.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="mt-5 footer">
+  <div class="container mt-5 pt-5">
+    <div class="footer-grid">
+      <div class="footer-section">
+        <h3>Products</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/products/tools-sfa.html">Sales Force Automation</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-marketing.html">Marketing Automation</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-casemanagement.html">Case Management</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-reporting.html">Business Intelligence</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-emailintegration.html">Email Integration</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Solutions</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/products/edition-team.html">Team Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/edition-professional.html">Professional Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/edition-enterprise.html">Enterprise Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/industry-solutions.html">Industry Solutions</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/company/index.html">About Us</a></li>
+          <li><a href="https://www.salesboom.com/company/company-contact.html">Contact Us</a></li>
+          <li><a href="https://www.salesboom.com/customers/index.html">Customers</a></li>
+          <li><a href="https://www.salesboom.com/partners/index.html">Partners</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/support/index.html">Support Center</a></li>
+          <li><a href="https://www.salesboom.com/crm_supportcenter/overview/index.html">Documentation</a></li>
+          <li><a href="https://www.salesboom.com/whitepapers/index.html">White Papers</a></li>
+          <li><a href="https://www.salesboom.com/pop-privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="bg-color">
+    <div class="container">
+     <div class="footer-bottom pb-3 mt-3">
+      <p>&copy; 2003-2025 <a class="text-white fw-bold" href="https://www.salesboom.com">Salesboom.com</a> Inc. All rights reserved. | Call: 1-855-229-2043</p>
+      <p style="margin-top: 10px;">Salesboom's color-coded CRM lead management software helps businesses visually prioritize sales opportunities with automated workflow rules. Contact us to learn how color coding can transform your lead management process and increase sales productivity.</p>
+    </div>
+    </div>
+  </div>
+ 
+</footer>
+
+<!-- Common JavaScript -->
+<script src="content/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+    <script>
+        // Loading Screen
+        window.addEventListener('load', function() {
+            const loadingScreen = document.getElementById('loading-screen');
+            setTimeout(function() {
+                loadingScreen.classList.add('fade-out');
+                setTimeout(function() {
+                    loadingScreen.style.display = 'none';
+                }, 500);
+            }, 500);
+        });
+
+        // Scroll to Top Button
+        const scrollTopBtn = document.getElementById('scroll-top');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                scrollTopBtn.classList.add('show');
+            } else {
+                scrollTopBtn.classList.remove('show');
+            }
+        });
+        
+        scrollTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

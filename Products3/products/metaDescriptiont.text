@@ -1,0 +1,25 @@
+
+
+
+  I will give you an text file.
+  Please rebuild it using Bootstrap following these rules:
+
+  The header name should be: [  name_file  ].
+
+  Replace every URL_SLUG in the meta tags with [name_file ].
+
+  Add a loading screen before the content appears.
+
+  Include a scroll-to-top button.
+
+  title section center in page
+
+  Use the color #002f6c as the main theme color for the website.
+
+  Do not include a navbar or a footer and top-navbar in the layout.
+
+  used font awesome library the icon
+  
+  Not write footer and navbar
+
+

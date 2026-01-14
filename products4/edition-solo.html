@@ -1,0 +1,1564 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+<!-- Primary Meta Tags -->
+<title>Solo CRM for Individual Sales Reps | Salesboom CRM</title>
+<meta name="description" content="Salesboom Solo CRM empowers individual sales reps with world-class automation, private lead management, and Outlook integration. Perfect for freelancers and commission-based sales professionals.">
+<meta name="keywords" content="Solo CRM, Individual sales CRM, Commission-based sales software, Contract sales rep tools, Small business CRM, Personal CRM software, Sales force automation, Private lead management">
+<link rel="canonical" href="https://www.salesboom.com/edition-solo.html">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.salesboom.com/edition-solo.html">
+<meta property="og:title" content="Solo CRM for Individual Sales Reps | Salesboom CRM">
+<meta property="og:description" content="Salesboom Solo CRM empowers individual sales reps with world-class automation, private lead management, and Outlook integration. Perfect for freelancers and commission-based sales professionals.">
+<meta property="og:image" content="https://www.salesboom.com/img/edition-solo-og.jpg">
+<meta property="og:site_name" content="Salesboom CRM">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://www.salesboom.com/edition-solo.html">
+<meta name="twitter:title" content="Solo CRM for Individual Sales Reps | Salesboom CRM">
+<meta name="twitter:description" content="Salesboom Solo CRM empowers individual sales reps with world-class automation, private lead management, and Outlook integration. Perfect for freelancers and commission-based sales professionals.">
+<meta name="twitter:image" content="https://www.salesboom.com/img/edition-solo-og.jpg">
+<meta name="twitter:site" content="@SalesboomCloud">
+
+<!-- Schema.org structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Salesboom Solo CRM Edition",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web-based, Cloud",
+  "offers": {
+    "@type": "Offer",
+    "price": "14.00",
+    "priceCurrency": "USD",
+    "priceValidUntil": "2026-12-31"
+  },
+  "featureList": [
+    "Complete sales pipeline visibility and automation",
+    "Private lead management with full data ownership",
+    "Native Outlook and QuickBooks integration",
+    "Offline mobile access for field sales",
+    "Advanced analytics and win/loss tracking",
+    "Free lifetime upgrades and updates"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.5",
+    "ratingCount": "3500"
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "Salesboom",
+    "url": "https://www.salesboom.com",
+    "logo": "https://www.salesboom.com/img/salesboom-logo-252x67.png",
+    "foundingDate": "2003",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-855-229-2043",
+      "contactType": "Customer Service"
+    }
+  }
+}
+</script>
+
+<link rel="shortcut icon" href="https://www.salesboom.com/favicon.ico">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="content/css/bootstrap.min.css">
+    <link rel="stylesheet" href="content/css/salesboom-common.css">
+    <link rel="shortcut icon" href="content/image/salesboom-logo-252x67.png" type="image/x-icon"> 
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+/* CSS Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #002f6c;
+  --secondary-color: #1a4d8f;
+  --accent-color: #3498db;
+  --success-color: #27ae60;
+  --text-color: #333;
+  --text-light: #666;
+  --border-color: #e0e0e0;
+  --bg-light: #f8f9fa;
+  --bg-white: #ffffff;
+  --shadow: 0 2px 10px rgba(0,0,0,0.1);
+  --shadow-hover: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background: var(--bg-white);
+  overflow-x: hidden;
+}
+
+/* Loading Screen */
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#loading-screen.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 5px solid rgba(255, 255, 255, 0.3);
+  border-top: 5px solid #ffffff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-text {
+  color: white;
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Scroll to Top Button */
+#scroll-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  box-shadow: var(--shadow-hover);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+#scroll-to-top:hover {
+  background: var(--secondary-color);
+  transform: translateY(-5px);
+}
+
+#scroll-to-top.show {
+  display: flex;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: white;
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+  opacity: 0.3;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 25px;
+  line-height: 1.2;
+}
+
+.hero .subtitle {
+  font-size: 1.4rem;
+  margin-bottom: 40px;
+  opacity: 0.95;
+  line-height: 1.6;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+/* Button Styles */
+.btn-custom {
+  display: inline-block;
+  padding: 18px 45px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary-custom {
+  background: #e74c3c;
+  color: white;
+  box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
+}
+
+.btn-primary-custom:hover {
+  background: #c0392b;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(231, 76, 60, 0.4);
+  color: white;
+}
+
+.btn-outline-custom {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-outline-custom:hover {
+  background: white;
+  color: var(--primary-color);
+}
+
+/* Stats Section */
+.stats-section {
+  background: var(--primary-color);
+  color: white;
+  padding: 60px 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  text-align: center;
+}
+
+.stat-item h3 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #e74c3c;
+  margin-bottom: 10px;
+}
+
+.stat-item p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* Content Sections */
+.content-section {
+  padding: 80px 0;
+}
+
+.content-section.bg-light {
+  background: var(--bg-light);
+}
+
+.section-header {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 60px;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.section-header p {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  line-height: 1.8;
+}
+
+/* Feature Cards */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.feature-card {
+  background: var(--bg-white);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  transition: all 0.3s;
+  border-top: 4px solid var(--primary-color);
+  height: 100%;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.feature-icon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.feature-card p {
+  color: var(--text-light);
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.feature-card ul {
+  list-style: none;
+  margin-top: 15px;
+  padding: 0;
+}
+
+.feature-card li {
+  padding-left: 30px;
+  position: relative;
+  margin-bottom: 12px;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+.feature-card li::before {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  color: var(--success-color);
+  font-size: 16px;
+}
+
+/* Two Column Layout */
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.two-column.reverse {
+  direction: rtl;
+}
+
+.two-column.reverse > * {
+  direction: ltr;
+}
+
+.column-content h3 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.column-content h4 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin: 30px 0 15px 0;
+  font-weight: 600;
+}
+
+.column-content p {
+  color: var(--text-light);
+  margin-bottom: 20px;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.column-content ul {
+  list-style: none;
+  margin-top: 20px;
+  padding: 0;
+}
+
+.column-content li {
+  padding-left: 35px;
+  position: relative;
+  margin-bottom: 15px;
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+.column-content li::before {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  color: var(--success-color);
+  font-size: 18px;
+}
+
+.column-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+/* Benefits Section */
+.benefits-section {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: white;
+  padding: 80px 0;
+  position: relative;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+.benefit-item {
+  text-align: center;
+  padding: 35px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s;
+}
+
+.benefit-item:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-5px);
+}
+
+.benefit-item .benefit-icon {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.benefit-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.benefit-item p {
+  opacity: 0.9;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+/* Process Steps */
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.process-step {
+  position: relative;
+  padding: 40px 30px;
+  background: var(--bg-white);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  text-align: center;
+  transition: all 0.3s;
+}
+
+.process-step:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.step-number {
+  width: 60px;
+  height: 60px;
+  background: var(--primary-color);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0 auto 20px;
+}
+
+.process-step h3 {
+  font-size: 1.4rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.process-step p {
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+/* Pricing Card */
+.pricing-card {
+  background: white;
+  padding: 50px 40px;
+  border-radius: 12px;
+  box-shadow: var(--shadow-hover);
+  max-width: 500px;
+  margin: 40px auto;
+  text-align: center;
+  border: 2px solid var(--primary-color);
+}
+
+.pricing-badge {
+  display: inline-block;
+  background: var(--primary-color);
+  color: white;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.price {
+  font-size: 4rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  margin: 20px 0;
+}
+
+.price-period {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  margin-bottom: 30px;
+}
+
+.pricing-features {
+  list-style: none;
+  padding: 0;
+  margin: 30px 0;
+  text-align: left;
+}
+
+.pricing-features li {
+  padding: 12px 0 12px 40px;
+  position: relative;
+  color: var(--text-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.pricing-features li:last-child {
+  border-bottom: none;
+}
+
+.pricing-features li::before {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  color: var(--success-color);
+  font-size: 18px;
+}
+
+/* CTA Section */
+.cta-section {
+  background: var(--primary-color);
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.cta-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.cta-content p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  opacity: 0.9;
+  line-height: 1.7;
+}
+
+.cta-contact {
+  margin-top: 30px;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.cta-contact a {
+  color: #e74c3c;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.cta-contact a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .two-column {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .two-column.reverse {
+    direction: ltr;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .section-header h2 {
+    font-size: 2rem;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 60px 0;
+  }
+  
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .hero .subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .hero-cta {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .content-section {
+    padding: 60px 0;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .process-steps {
+    grid-template-columns: 1fr;
+  }
+  
+  .section-header h2 {
+    font-size: 1.8rem;
+  }
+  
+  .column-content h3 {
+    font-size: 1.6rem;
+  }
+  
+  #scroll-to-top {
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+  
+  .btn-custom {
+    padding: 14px 30px;
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  .feature-card,
+  .process-step {
+    padding: 30px 20px;
+  }
+  
+  .cta-content h2 {
+    font-size: 1.8rem;
+  }
+  
+  .price {
+    font-size: 3rem;
+  }
+}
+</style>
+</head>
+
+<body>
+<!-- Loading Screen -->
+<div id="loading-screen">
+  <div class="spinner"></div>
+  <div class="loading-text">Loading Salesboom Solo CRM...</div>
+</div>
+
+    <!-- Top Bar -->
+<div class="top-bar">
+  <div class="container">
+    <div class="top-bar-left text-color">
+      <span>✓ Award-Winning Cloud CRM Software Since 2003</span>
+    </div>
+    <ul class="top-bar-nav">
+      <li><a href="https://www.salesboom.com/crm_supportcenter/overview/index.html">Support Center</a></li>
+      <li><a href="https://www.salesboom.com/crm_trial.html">Free Trial</a></li>
+      <li><a href="https://www.salesboom.com/login.html">Login</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Main Header -->
+<header>
+  <div class="main-header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <a href="https://www.salesboom.com" aria-label="Salesboom CRM Home">
+            <img src="https://www.salesboom.com/img/salesboom-logo-252x67.png" alt="Salesboom Cloud CRM Logo" width="252" height="67">
+          </a>
+        </div>
+        <div class="header-phone">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          <a href="tel:+18552292043">1-855-229-2043</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <h1>Your Leads. Your Sales. Your Success. Always.</h1>
+      <p class="subtitle">Salesboom Solo CRM gives individual sales professionals enterprise-grade sales automation with complete privacy and control—without sharing your valuable leads with anyone.</p>
+      <div class="hero-cta">
+        <a href="https://www.salesboom.com/crm_trial.html" class="btn-custom btn-primary-custom">Start Your Free 30-Day Trial</a>
+        <a href="https://www.salesboom.com/request-crm-demo.html" class="btn-custom btn-outline-custom">Request a Demo</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Section -->
+<section class="stats-section">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <h3>22+</h3>
+        <p>Years of CRM Innovation</p>
+      </div>
+      <div class="stat-item">
+        <h3>3,500+</h3>
+        <p>Professionals Empowered</p>
+      </div>
+      <div class="stat-item">
+        <h3>159</h3>
+        <p>Countries Worldwide</p>
+      </div>
+      <div class="stat-item">
+        <h3>100%</h3>
+        <p>Lead Privacy Guaranteed</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Problem Statement Section -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>The Challenge Facing Independent Sales Professionals</h2>
+      <p>Individual sales representatives—whether contract-based, commission-driven, or running SOHO businesses—face unique challenges that traditional CRM systems don't address. You need professional tools to compete with larger organizations, but you also need complete control and privacy over your most valuable asset: your leads and customer relationships.</p>
+    </div>
+    
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-user-lock"></i></div>
+        <h3>No Privacy Control</h3>
+        <p>Team-based CRM systems force you to share your leads with organizations or other reps, putting your most valuable business relationships at risk of being accessed or controlled by others.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-database"></i></div>
+        <h3>Data Portability Issues</h3>
+        <p>Your hard-earned contacts and sales history are trapped in whatever company system you're using. When you change clients, companies, or projects, you lose access to your pipeline and relationships.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-tools"></i></div>
+        <h3>Outdated Tools</h3>
+        <p>Contact management software like ACT! and Goldmine lack modern sales automation capabilities, limiting your ability to compete effectively in today's market.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-dollar-sign"></i></div>
+        <h3>Cost vs. Value</h3>
+        <p>Expensive enterprise CRM solutions are overkill and unaffordable for individual professionals, wasting money on features you'll never use or need.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-project-diagram"></i></div>
+        <h3>Multiple Projects</h3>
+        <p>You need to manage multiple side projects separately without cross-contamination, but most CRMs aren't designed for this level of organizational flexibility.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+        <h3>Career Security</h3>
+        <p>Your professional network is your career insurance, but without portable, private data management, you risk losing everything you've built when circumstances change.</p>
+      </div>
+    </div>
+    
+    <div class="text-center mt-5">
+      <p class="lead" style="color: var(--primary-color); font-weight: 600; font-size: 1.3rem;">Salesboom Solo CRM Edition solves these challenges by providing enterprise-grade functionality designed specifically for individual sales professionals who need privacy, portability, and power.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Solution Overview Section -->
+<section class="content-section bg-light">
+  <div class="container">
+    <div class="section-header">
+      <h2>Introducing Salesboom Solo CRM: Enterprise Tools for Individual Success</h2>
+      <p>Salesboom Solo CRM Edition is not just contact management software—it's a complete sales force automation platform built for the individual sales professional. Unlike traditional CRMs designed for teams, Solo Edition gives you world-class sales processes and tools while ensuring your leads, contacts, accounts, and deals remain completely private and under your control.</p>
+    </div>
+    
+    <div class="two-column">
+      <div class="column-content shadow-lg p-4">
+        <h3>Built-In Sales Force Automation</h3>
+        <p>Salesboom Solo CRM provides world-class sales force automation processes that help you work smarter and close more deals. The Solo CRM provides the tools and processes required to increase both the volume and size of your deals.</p>
+        <ul>
+          <li>Complete sales pipeline visibility showing every opportunity at every stage</li>
+          <li>Automated deal tracking that ensures nothing falls through the cracks</li>
+          <li>Structured sales processes that guide you from lead to close</li>
+          <li>Deal analysis showing exactly when and why opportunities succeed or fail</li>
+          <li>Forecasting tools that help you predict revenue and plan your activities</li>
+          <li>Task and activity management to keep you focused on high-value activities</li>
+          <li>Automated follow-up reminders so you never miss a critical touchpoint</li>
+        </ul>
+      </div>
+      <div class="column-content ">
+        <h3>Your Data Stays Yours Forever</h3>
+        <p>In Solo CRM, your leads are yours—period. Leads, contacts, accounts, and deals are not shareable with any other sales rep or organization unless you explicitly choose to share them.</p>
+        <p>No matter where you go or what you sell, your Rolodex and sales history are saved in Salesboom's secure online database, giving you seamless access to your sales pipelines, processes, and deals wherever your career takes you.</p>
+        <p><strong>This means when you switch employers, change industries, or start new projects, you take your relationships and sales history with you.</strong> Your valuable network remains under your control, not locked in someone else's system.</p>
+      </div>
+    </div>
+    
+    
+  </div>
+</section>
+
+<!-- Perfect For Section -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Who Benefits from Salesboom Solo CRM?</h2>
+      <p>Salesboom Solo CRM Edition is specifically designed for independent sales professionals and small business operators who need powerful tools without team sharing requirements.</p>
+    </div>
+    
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-file-contract"></i></div>
+        <h3>Contract Sales Representatives</h3>
+        <p>Contract sales reps working with multiple clients simultaneously need to keep each client's data separate and private. Solo CRM lets you manage multiple accounts independently while maintaining complete control over your contacts when contracts end or change.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-hand-holding-usd"></i></div>
+        <h3>Commission-Based Sales Professionals</h3>
+        <p>When your income depends on your relationships and pipeline, you can't afford to lose access to your contacts. Solo CRM ensures your hard-earned network travels with you throughout your career, protecting your most valuable business asset.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-heart"></i></div>
+        <h3>Nonprofit and Donation Representatives</h3>
+        <p>Fundraisers and donation coordinators need to track donor relationships, giving history, and campaign progress without expensive enterprise systems. Solo CRM provides sophisticated donor management at an individual-friendly price point.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-home"></i></div>
+        <h3>SOHO Businesses</h3>
+        <p>Solo entrepreneurs and small business owners need professional CRM capabilities without the complexity and cost of team-based systems. Solo CRM delivers enterprise features scaled appropriately for individual use.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-shopping-cart"></i></div>
+        <h3>eBay and Online Resellers</h3>
+        <p>Online sellers managing customer relationships, repeat buyers, and inventory need organized systems to scale their operations. Solo CRM helps track customer preferences, purchase history, and follow-up opportunities.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-sync-alt"></i></div>
+        <h3>Current ACT! and Goldmine Users</h3>
+        <p>If you're outgrowing desktop contact managers but don't need team collaboration features, Solo CRM provides the modern cloud-based upgrade with sales automation that ACT! and Goldmine lack.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Benefits Section -->
+<section class="benefits-section">
+  <div class="container">
+    <div class="section-header" style="color: white;">
+      <h2 style="color: white;">How Solo CRM Transforms Your Sales Success</h2>
+      <p style="color: rgba(255,255,255,0.9);">Salesboom Solo CRM delivers measurable business benefits that directly impact your revenue, efficiency, and professional independence.</p>
+    </div>
+    <div class="benefits-grid">
+      <div class="benefit-item">
+        <div class="benefit-icon"><i class="fas fa-chart-line"></i></div>
+        <h3>Increase Deal Size</h3>
+        <p>Structured sales processes and opportunity tracking help you identify upsell opportunities and close larger deals consistently.</p>
+      </div>
+      
+      <div class="benefit-item">
+        <div class="benefit-icon"><i class="fas fa-rocket"></i></div>
+        <h3>Accelerate Sales Cycles</h3>
+        <p>Automated workflows and reminders keep deals moving forward, reducing the time from first contact to closed won.</p>
+      </div>
+      
+      <div class="benefit-item">
+        <div class="benefit-icon"><i class="fas fa-percentage"></i></div>
+        <h3>Improve Close Rates</h3>
+        <p>Data-driven insights reveal what works and what doesn't, allowing you to refine your approach and win more often.</p>
+      </div>
+      
+      <div class="benefit-item">
+        <div class="benefit-icon"><i class="fas fa-clock"></i></div>
+        <h3>Save Time Daily</h3>
+        <p>Automation eliminates repetitive tasks, giving you more time for high-value selling activities and relationship building.</p>
+      </div>
+      
+      <div class="benefit-item">
+        <div class="benefit-icon"><i class="fas fa-shield-alt"></i></div>
+        <h3>Protect Your Assets</h3>
+        <p>Complete data ownership ensures your contact list and sales history remain yours regardless of employment or client changes.</p>
+      </div>
+      
+      <div class="benefit-item">
+        <div class="benefit-icon"><i class="fas fa-mobile-alt"></i></div>
+        <h3>Work Anywhere</h3>
+        <p>Cloud-based access with offline capabilities means you can sell effectively from anywhere, anytime, on any device.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Key Features Section -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Powerful Features Built for Individual Success</h2>
+      <p>Salesboom Solo CRM includes everything you need to run a professional sales operation as an individual.</p>
+    </div>
+    
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-tasks"></i></div>
+        <h3>Complete Pipeline Management</h3>
+        <p>Visual pipeline views show exactly where every opportunity stands. Track deals through customizable stages, set probability weightings, and forecast revenue with confidence. Never lose sight of a potential sale again.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-address-book"></i></div>
+        <h3>Advanced Contact Management</h3>
+        <p>Store unlimited contacts with detailed profiles, communication history, and relationship connections. Segment contacts by custom criteria, track interactions, and maintain complete relationship visibility.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-envelope"></i></div>
+        <h3>Email Integration</h3>
+        <p>Native Outlook integration means all your emails sync automatically with contact records. Send tracked emails, schedule follow-ups, and maintain complete communication history without leaving your inbox.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-calendar-alt"></i></div>
+        <h3>Calendar & Task Management</h3>
+        <p>Integrated calendar synchronization keeps your schedule aligned across platforms. Automated task creation ensures follow-ups happen on time, and priority-based task lists keep you focused on what matters most.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+        <h3>Quote & Proposal Generation</h3>
+        <p>Create professional quotes and proposals directly within the CRM. Track quote status, revision history, and acceptance rates. Integrate with QuickBooks for seamless invoicing after deals close.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-chart-bar"></i></div>
+        <h3>Sales Analytics & Reporting</h3>
+        <p>Comprehensive dashboards provide instant insights into your sales performance. Track metrics like conversion rates, average deal size, sales cycle length, and revenue trends over time.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-mobile-alt"></i></div>
+        <h3>Mobile Access</h3>
+        <p>Full-featured mobile apps for iOS and Android give you complete CRM access on the go. Offline mode ensures you can work anywhere, with automatic synchronization when connectivity returns.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-lock"></i></div>
+        <h3>Bank-Level Security</h3>
+        <p>Your data is protected with 256-bit encryption, secure data centers, and regular security audits. Two-factor authentication and role-based permissions provide additional layers of protection.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-cloud-upload-alt"></i></div>
+        <h3>Easy Data Import/Export</h3>
+        <p>Migrate from existing systems quickly with support for Excel, CSV, ACT!, and Goldmine imports. Export your data anytime in standard formats—your data is never held hostage.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Visibility Section -->
+<section class="content-section bg-light">
+  <div class="container">
+    <div class="section-header">
+      <h2>Unprecedented Sales Process Visibility</h2>
+      <p>One of the most powerful aspects of Salesboom Solo CRM is the unprecedented visibility it provides into your sales processes, pipeline health, and win/loss patterns.</p>
+    </div>
+    
+    <div class="row">
+      <div class="col-lg-6 mb-4">
+        <div class="feature-card h-100">
+          <h4><i class="fas fa-funnel-dollar" style="color: var(--primary-color); margin-right: 10px;"></i>Pipeline Analytics</h4>
+          <p>Track every opportunity through your sales stages with clear visibility into what's moving forward, what's stalled, and what needs immediate attention. Visual pipeline views show you at a glance where your revenue opportunities stand.</p>
+        </div>
+      </div>
+      
+      <div class="col-lg-6 mb-4">
+        <div class="feature-card h-100">
+          <h4><i class="fas fa-trophy" style="color: var(--primary-color); margin-right: 10px;"></i>Win/Loss Analysis</h4>
+          <p>You always know exactly when and why you closed or didn't close a deal. Detailed tracking of lost opportunities reveals patterns that help you refine your approach, eliminate obstacles, and improve your closing ratio over time.</p>
+        </div>
+      </div>
+      
+      <div class="col-lg-6 mb-4">
+        <div class="feature-card h-100">
+          <h4><i class="fas fa-running" style="color: var(--primary-color); margin-right: 10px;"></i>Activity Tracking</h4>
+          <p>Monitor your sales activities to understand what actions correlate with successful outcomes. See how many calls, meetings, and follow-ups typically lead to closed deals in your sales process.</p>
+        </div>
+      </div>
+      
+      <div class="col-lg-6 mb-4">
+        <div class="feature-card h-100">
+          <h4>    <i class="fa-solid fa-poo" style="color: var(--primary-color); margin-right: 10px;"></i>    Revenue Forecasting</h4> 
+          <p>Predict future income based on your current pipeline, historical close rates, and deal progression patterns. Make informed decisions about your business based on data, not guesses.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="text-center mt-5">
+      <p class="lead" style="color: var(--primary-color); font-weight: 600; font-size: 1.3rem;">Once you gain full visibility into your sales processes, you'll never want to go back to the dark again. We guarantee it.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Integration Section -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Works with the Tools You Already Use</h2>
+      <p>Salesboom Solo CRM doesn't require you to abandon your existing workflows. Instead, it integrates seamlessly with the business tools you rely on daily.</p>
+    </div>
+    
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fab fa-microsoft"></i></div>
+        <h3>Microsoft Outlook Integration</h3>
+        <p>Native integration with Outlook means your emails, calendar, and contacts sync automatically between platforms. Send emails from within the CRM, track email opens and responses, and maintain complete communication history—all while continuing to use Outlook exactly as you always have.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-file-invoice"></i></div>
+        <h3>QuickBooks Connectivity</h3>
+        <p>For professionals managing their own invoicing and accounting, Solo CRM integrates with QuickBooks to connect your sales processes with financial management. Create quotes in the CRM that flow seamlessly to invoices in QuickBooks.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-code"></i></div>
+        <h3>API Access</h3>
+        <p>The open API allows you to connect Solo CRM with other business tools you use, from marketing automation to e-commerce platforms. Custom integrations ensure your sales data flows where you need it.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-exchange-alt"></i></div>
+        <h3>Import/Export Capabilities</h3>
+        <p>Easily import existing contact data from ACT!, Goldmine, Excel, or other systems. Export your data whenever needed in standard formats—because your data should never be held hostage.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Scalability Section -->
+<section class="content-section bg-light">
+  <div class="container">
+    <div class="section-header">
+      <h2>Start Solo, Scale When Ready</h2>
+      <p>Salesboom Solo CRM is designed for individual professionals, but it doesn't limit your growth potential. When your business expands and you need team collaboration, Solo CRM can seamlessly integrate with or migrate to Salesboom's Team Edition, Professional Edition, or Enterprise Edition.</p>
+    </div>
+    
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="feature-card">
+          <h3 style="text-align: center; margin-bottom: 30px;">Your Clear Growth Path</h3>
+          <ul style="list-style: none; padding: 0;">
+            <li style="padding-left: 0;"><i class="fas fa-arrow-right" style="color: var(--primary-color); margin-right: 15px;"></i>No need to learn a completely new system when you hire team members</li>
+            <li style="padding-left: 0;"><i class="fas fa-arrow-right" style="color: var(--primary-color); margin-right: 15px;"></i>Your data, processes, and workflows transfer smoothly to team editions</li>
+            <li style="padding-left: 0;"><i class="fas fa-arrow-right" style="color: var(--primary-color); margin-right: 15px;"></i>Team members can be added incrementally as your business grows</li>
+            <li style="padding-left: 0;"><i class="fas fa-arrow-right" style="color: var(--primary-color); margin-right: 15px;"></i>Maintain your Solo CRM account for private opportunities while using team editions for shared accounts</li>
+            <li style="padding-left: 0;"><i class="fas fa-arrow-right" style="color: var(--primary-color); margin-right: 15px;"></i>Consistent user experience across all Salesboom editions</li>
+            <li style="padding-left: 0;"><i class="fas fa-arrow-right" style="color: var(--primary-color); margin-right: 15px;"></i>No vendor switching or costly re-implementation when you scale</li>
+          </ul>
+          <p class="mt-4 text-center" style="font-size: 1.1rem; color: var(--text-light);">Start where you are today, knowing you have a clear path forward as your needs evolve—all with the same trusted CRM provider and platform architecture.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pricing Section -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Simple, Transparent Pricing</h2>
+      <p>No hidden fees. No surprises. Just professional CRM power at an individual-friendly price.</p>
+    </div>
+    
+    <div class="pricing-card">
+      <div class="pricing-badge">SOLO EDITION</div>
+      <div class="price">$14<span style="font-size: 2rem;">/mo</span></div>
+      <div class="price-period">Per User, Billed Monthly</div>
+      
+      <ul class="pricing-features">
+        <li>Complete Sales Force Automation</li>
+        <li>Unlimited Contacts & Deals</li>
+        <li>Private Lead Management</li>
+        <li>Microsoft Outlook Integration</li>
+        <li>QuickBooks Connectivity</li>
+        <li>Mobile Apps (iOS & Android)</li>
+        <li>Offline Access</li>
+        <li>Pipeline Analytics & Reporting</li>
+        <li>Email & Calendar Sync</li>
+        <li>Task & Activity Management</li>
+        <li>Quote Generation</li>
+        <li>API Access</li>
+        <li>Free Lifetime Upgrades</li>
+        <li>24/7 Customer Support</li>
+        <li>Bank-Level Security</li>
+      </ul>
+      
+      <a href="https://www.salesboom.com/crm_trial.html" class="btn-custom btn-primary-custom w-100 mt-4">Start Your Free 30-Day Trial</a>
+      
+      <p class="mt-3 text-center" style="color: var(--text-light); font-size: 0.9rem;">No credit card required • Cancel anytime • Data export available</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-content">
+      <h2>Take Control of Your Sales Success Today</h2>
+      <p>Start your free 30-day trial of Salesboom Solo CRM and experience enterprise-grade sales automation designed specifically for individual professionals. No credit card required, no sharing your leads, no risk—just powerful tools to grow your sales.</p>
+      <div class="hero-cta">
+        <a href="https://www.salesboom.com/crm_trial.html" class="btn-custom btn-primary-custom">Start Your Free 30-Day Trial</a>
+        <a href="https://www.salesboom.com/request-crm-demo.html" class="btn-custom btn-outline-custom">Request a Demo</a>
+      </div>
+      <div class="cta-contact">
+        <p>Questions? Call us directly: <a href="tel:18552292043">1.855.229.2043</a> or email <a href="mailto:sales@salesboom.com">sales@salesboom.com</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Scroll to Top Button -->
+<button id="scroll-to-top" aria-label="Scroll to top">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-2">
+      <h3 class="fw-bold text-color">
+        <i class="fa-solid fa-layer-group me-2"></i>
+        Explore Salesboom Editions
+      </h3>
+      <p class="text-muted">Discover powerful CRM editions to scale your business efficiently.</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-lg border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-briefcase fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Professional Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              A complete CRM suite with Marketing Automation, ERP integration, and Support tools — built for performance and value.
+            </p>
+            <a href="https://www.salesboom.com/editions/professional-edition.html" class="btn btn-color mt-auto">
+              Explore Professional <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-lg border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-building fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Enterprise Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              For large enterprises — automate workflows, unify data, and leverage analytics to drive strategic growth.
+            </p>
+            <a href="https://www.salesboom.com/editions/enterprise-edition.html" class="btn btn-color mt-auto">
+              View Enterprise <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-lg border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-users fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Team Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              Perfect for small teams starting with CRM — manage leads, track sales, and boost productivity with simplicity.
+            </p>
+            <a href="https://www.salesboom.com/editions/team-edition.html" class="btn btn-color mt-auto">
+           Discover Team<i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="container py-5">
+  <h2 class="text-center mb-5 text-color">CRM Platform, Strategy & Services Overview</h2>
+
+  <div class="row g-4">
+
+    <!-- Card 1 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-chart-line text-color fa-2x mb-3"></i>
+        <h4>Sales Force Automation Features</h4>
+        <p>
+          Automate lead progression, activity tracking, pipeline forecasting, and team workflows with
+          <a href="https://www.salesboom.com/products/tools-sfa-features.html" class="text-color fw-bold">
+            CRM SFA features
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-layer-group text-color fa-2x mb-3"></i>
+        <h4>CRM Edition Comparison</h4>
+        <p>
+          Compare different CRM levels and plans to find the best fit on the
+          <a href="https://www.salesboom.com/products/edition-which.html" class="text-color fw-bold">
+            edition comparison
+          </a> page.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-cloud text-color fa-2x mb-3"></i>
+        <h4>Cloud-Based CRM Overview</h4>
+        <p>
+          Learn how a web-based CRM provides real-time access, automated updates, and collaboration features via
+          <a href="https://www.salesboom.com/products/old_Cloud-Based-CRM-Software.html" class="text-color fw-bold">
+            cloud CRM software
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-check-circle text-color fa-2x mb-3"></i>
+        <h4>Why Salesboom CRM</h4>
+        <p>
+          Discover what sets Salesboom apart — from customizability to integration and scalability — on the
+          <a href="https://www.salesboom.com/products/why-salesboom.html" class="text-color fw-bold">
+            Why Salesboom
+          </a> page.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-balance-scale text-color fa-2x mb-3"></i>
+        <h4>Build vs Buy CRM Guide</h4>
+        <p>
+          Evaluate the strategic trade-offs of building your own CRM vs subscribing to a SaaS platform on the
+          <a href="https://www.salesboom.com/cloud-crm-guide/cloud-crm-guide/crm-build-vs-buy-cost-analysis.html" class="text-color fw-bold">
+            CRM Build vs Buy guide
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-briefcase text-color fa-2x mb-3"></i>
+        <h4>Business CRM Consulting</h4>
+        <p>
+          Align your CRM strategy with business goals using expert guidance from
+          <a href="https://www.salesboom.com/services/business_crm_consulting_services.html" class="text-color fw-bold">
+            CRM consulting services
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 7 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-rocket text-color fa-2x mb-3"></i>
+        <h4>FastTrack CRM Implementation</h4>
+        <p>
+          Speed up CRM setup, configuration, and launch with the
+          <a href="https://www.salesboom.com/services/fasttrack.html" class="text-color fw-bold">
+            FastTrack program
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 8 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-chalkboard-user text-color fa-2x mb-3"></i>
+        <h4>CRM Training Services</h4>
+        <p>
+          Improve proficiency and user adoption with hands-on instruction through
+          <a href="https://www.salesboom.com/services/training.html" class="text-color fw-bold">
+            CRM training services
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 9 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-cogs text-color fa-2x mb-3"></i>
+        <h4>Sales Automation Guide</h4>
+        <p>
+          Learn how to automate tasks, alerts, lead routing and follow-ups using the
+          <a href="https://www.salesboom.com/sales-automation/sales_automation_content.html" class="text-color fw-bold">
+            sales automation guide
+          </a>.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="mt-5 footer">
+  <div class="container mt-5 pt-5">
+    <div class="footer-grid">
+      <div class="footer-section">
+        <h3>Products</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/products/tools-sfa.html">Sales Force Automation</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-marketing.html">Marketing Automation</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-casemanagement.html">Case Management</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-reporting.html">Business Intelligence</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-emailintegration.html">Email Integration</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Solutions</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/products/edition-team.html">Team Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/edition-professional.html">Professional Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/edition-enterprise.html">Enterprise Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/industry-solutions.html">Industry Solutions</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/company/index.html">About Us</a></li>
+          <li><a href="https://www.salesboom.com/company/company-contact.html">Contact Us</a></li>
+          <li><a href="https://www.salesboom.com/customers/index.html">Customers</a></li>
+          <li><a href="https://www.salesboom.com/partners/index.html">Partners</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/support/index.html">Support Center</a></li>
+          <li><a href="https://www.salesboom.com/crm_supportcenter/overview/index.html">Documentation</a></li>
+          <li><a href="https://www.salesboom.com/whitepapers/index.html">White Papers</a></li>
+          <li><a href="https://www.salesboom.com/pop-privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="bg-color">
+    <div class="container">
+     <div class="footer-bottom pb-3 mt-3">
+      <p>&copy; 2003-2025 <a class="text-white fw-bold" href="https://www.salesboom.com">Salesboom.com</a> Inc. All rights reserved. | Call: 1-855-229-2043</p>
+      <p style="margin-top: 10px;">Salesboom's color-coded CRM lead management software helps businesses visually prioritize sales opportunities with automated workflow rules. Contact us to learn how color coding can transform your lead management process and increase sales productivity.</p>
+    </div>
+    </div>
+  </div>
+ 
+</footer>
+
+<!-- Common JavaScript -->
+<script src="content/js/bootstrap.bundle.min.js"></script>
+
+
+<script>
+// Loading Screen
+window.addEventListener('load', function() {
+  setTimeout(function() {
+    document.getElementById('loading-screen').classList.add('fade-out');
+  }, 800);
+});
+
+// Scroll to Top Button
+const scrollToTopBtn = document.getElementById('scroll-to-top');
+
+window.addEventListener('scroll', function() {
+  if (window.pageYOffset > 300) {
+    scrollToTopBtn.classList.add('show');
+  } else {
+    scrollToTopBtn.classList.remove('show');
+  }
+});
+
+scrollToTopBtn.addEventListener('click', function() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+
+// Smooth scrolling for all anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
+  });
+});
+</script>
+
+</body>
+</html>

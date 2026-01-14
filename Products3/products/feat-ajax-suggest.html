@@ -1,0 +1,1608 @@
+
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+<!-- Primary Meta Tags -->
+<title>AJAX Suggest Tool - Fast Data Entry CRM | Salesboom</title>
+<meta name="description" content="Speed up CRM data entry with Salesboom's AJAX Suggest tool. Intelligent autocomplete reduces clicks, eliminates page reloads, and boosts user adoption rates.">
+<meta name="keywords" content="AJAX autocomplete CRM, Fast data entry software, CRM user adoption, Intelligent search CRM, Keyboard-friendly CRM, Web application efficiency, Real-time suggestions">
+<link rel="canonical" href="https://www.salesboom.com/feat-ajax-suggest.html">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.salesboom.com/feat-ajax-suggest.html">
+<meta property="og:title" content="AJAX Suggest Tool - Fast Data Entry CRM | Salesboom">
+<meta property="og:description" content="Speed up CRM data entry with Salesboom's AJAX Suggest tool. Intelligent autocomplete reduces clicks, eliminates page reloads, and boosts user adoption rates.">
+<meta property="og:image" content="https://www.salesboom.com/img/feat-ajax-suggest-og.jpg">
+<meta property="og:site_name" content="Salesboom CRM">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://www.salesboom.com/feat-ajax-suggest.html">
+<meta name="twitter:title" content="AJAX Suggest Tool - Fast Data Entry CRM | Salesboom">
+<meta name="twitter:description" content="Speed up CRM data entry with Salesboom's AJAX Suggest tool. Intelligent autocomplete reduces clicks, eliminates page reloads, and boosts user adoption rates.">
+<meta name="twitter:image" content="https://www.salesboom.com/img/feat-ajax-suggest-og.jpg">
+<meta name="twitter:site" content="@SalesboomCloud">
+
+<!-- Schema.org structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Salesboom AJAX Suggest Tool",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web-based, Cloud",
+  "offers": {
+    "@type": "Offer",
+    "price": "14.00",
+    "priceCurrency": "USD",
+    "priceValidUntil": "2026-12-31"
+  },
+  "featureList": [
+    "Real-time autocomplete suggestions",
+    "Zero page reloads for data entry",
+    "Keyboard-friendly navigation",
+    "60-70% faster data entry",
+    "Intelligent filtering and ranking",
+    "Works across all CRM modules"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.5",
+    "ratingCount": "3500"
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "Salesboom",
+    "url": "https://www.salesboom.com",
+    "logo": "https://www.salesboom.com/img/salesboom-logo-252x67.png",
+    "foundingDate": "2003",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-855-229-2043",
+      "contactType": "Customer Service"
+    }
+  }
+}
+</script>
+
+<link rel="shortcut icon" href="https://www.salesboom.com/favicon.ico">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="content/css/bootstrap.min.css">
+    <link rel="stylesheet" href="content/css/salesboom-common.css">
+    <link rel="shortcut icon" href="content/image/salesboom-logo-252x67.png" type="image/x-icon"> 
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+/* CSS Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #002f6c;
+  --secondary-color: #0047ab;
+  --accent-color: #3498db;
+  --success-color: #27ae60;
+  --warning-color: #f39c12;
+  --danger-color: #e74c3c;
+  --text-color: #333;
+  --text-light: #666;
+  --border-color: #e0e0e0;
+  --bg-light: #f8f9fa;
+  --bg-white: #ffffff;
+  --shadow: 0 2px 10px rgba(0,0,0,0.1);
+  --shadow-hover: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background: var(--bg-white);
+  overflow-x: hidden;
+}
+
+/* Loading Screen */
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s, visibility 0.5s;
+}
+
+#loading-screen.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader {
+  width: 60px;
+  height: 60px;
+  border: 5px solid rgba(255, 255, 255, 0.3);
+  border-top: 5px solid #ffffff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Scroll to Top Button */
+#scroll-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 47, 108, 0.3);
+}
+
+#scroll-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+#scroll-to-top:hover {
+  background: var(--secondary-color);
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 47, 108, 0.4);
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: white;
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+  opacity: 0.3;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 25px;
+  line-height: 1.2;
+}
+
+.hero .subtitle {
+  font-size: 1.4rem;
+  margin-bottom: 40px;
+  opacity: 0.95;
+  line-height: 1.6;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Button Styles */
+.btn {
+  padding: 16px 40px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--danger-color);
+  color: white;
+  box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
+}
+
+.btn-primary:hover {
+  background: #c0392b;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(231, 76, 60, 0.4);
+  color: white;
+}
+
+.btn-outline {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-outline:hover {
+  background: white;
+  color: var(--primary-color);
+}
+
+/* Stats Section */
+.stats-section {
+  background: var(--primary-color);
+  color: white;
+  padding: 60px 0;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-item h3 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--danger-color);
+  margin-bottom: 10px;
+}
+
+.stat-item p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* Content Sections */
+.content-section {
+  padding: 80px 0;
+}
+
+.content-section.bg-light {
+  background: var(--bg-light);
+}
+
+.section-header {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 60px;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.section-header p {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  line-height: 1.8;
+}
+
+/* Feature Cards */
+.feature-card {
+  background: var(--bg-white);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  transition: all 0.3s;
+  border-top: 4px solid var(--primary-color);
+  height: 100%;
+  margin-bottom: 30px;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.feature-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.feature-card h4 {
+  font-size: 1.2rem;
+  color: var(--secondary-color);
+  margin: 20px 0 10px 0;
+  font-weight: 600;
+}
+
+.feature-card p {
+  color: var(--text-light);
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.feature-card ul, .feature-card ol {
+  list-style: none;
+  margin-top: 15px;
+  padding-left: 0;
+}
+
+.feature-card li {
+  padding-left: 30px;
+  position: relative;
+  margin-bottom: 12px;
+  color: var(--text-light);
+}
+
+.feature-card li::before {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  color: var(--success-color);
+  font-size: 1.1rem;
+}
+
+.feature-card ol li::before {
+  content: counter(list-counter) ".";
+  font-family: 'Inter', sans-serif;
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.feature-card ol {
+  counter-reset: list-counter;
+  text-align: start;
+}
+
+.feature-card ol li {
+  counter-increment: list-counter;
+}
+
+/* Content Box */
+.content-box {
+  background: var(--bg-white);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  margin-bottom: 30px;
+}
+
+.content-box h3 {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.content-box h4 {
+  font-size: 1.4rem;
+  color: var(--secondary-color);
+  margin: 25px 0 15px 0;
+  font-weight: 600;
+}
+
+.content-box p {
+  color: var(--text-light);
+  margin-bottom: 15px;
+  line-height: 1.8;
+}
+
+.content-box ul, .content-box ol {
+  margin: 20px 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.content-box li {
+  padding-left: 30px;
+  position: relative;
+  margin-bottom: 12px;
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+.content-box ul li::before {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  color: var(--success-color);
+}
+
+.content-box strong {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* Comparison Box */
+.comparison-box {
+  background: var(--bg-light);
+  padding: 30px;
+  border-radius: 12px;
+  border-left: 5px solid var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.comparison-box.negative {
+  border-left-color: var(--danger-color);
+  background: #fff5f5;
+}
+
+.comparison-box.positive {
+  border-left-color: var(--success-color);
+  background: #f0fff4;
+}
+
+.comparison-box h4 {
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.comparison-box.negative h4 {
+  color: var(--danger-color);
+}
+
+.comparison-box.positive h4 {
+  color: var(--success-color);
+}
+
+/* Process Steps */
+.process-step {
+  background: var(--bg-white);
+  padding: 20px 25px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.step-number {
+  min-width: 40px;
+  height: 40px;
+  background: var(--primary-color);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.step-content {
+  flex: 1;
+}
+
+.step-content p {
+  margin: 0;
+  color: var(--text-light);
+}
+
+/* Highlight Box */
+.highlight-box {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 40px;
+  border-radius: 12px;
+  margin: 40px 0;
+  text-align: center;
+}
+
+.highlight-box h3 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.highlight-box p {
+  font-size: 1.2rem;
+  opacity: 0.95;
+  margin: 0;
+}
+
+/* CTA Section */
+.cta-section {
+  background: var(--primary-color);
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.cta-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.cta-content p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  opacity: 0.9;
+  line-height: 1.6;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero {
+    padding: 60px 0;
+  }
+  
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .hero .subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .hero-cta {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .content-section {
+    padding: 60px 0;
+  }
+  
+  .section-header h2 {
+    font-size: 1.8rem;
+  }
+  
+  .stat-item h3 {
+    font-size: 2rem;
+  }
+  
+  #scroll-to-top {
+    width: 45px;
+    height: 45px;
+    bottom: 20px;
+    right: 20px;
+    font-size: 18px;
+  }
+  
+  .process-step {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+  
+  .btn {
+    padding: 12px 30px;
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  .feature-card,
+  .content-box {
+    padding: 25px 20px;
+  }
+  
+  .cta-content h2 {
+    font-size: 1.8rem;
+  }
+}
+</style>
+</head>
+
+<body>
+<!-- Loading Screen -->
+<div id="loading-screen">
+  <div class="loader"></div>
+</div>
+
+<!-- Scroll to Top Button -->
+<button id="scroll-to-top" aria-label="Scroll to top">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+
+
+
+
+
+
+    <!-- Top Bar -->
+<div class="top-bar">
+  <div class="container">
+    <div class="top-bar-left text-color">
+      <span>✓ Award-Winning Cloud CRM Software Since 2003</span>
+    </div>
+    <ul class="top-bar-nav">
+      <li><a href="https://www.salesboom.com/crm_supportcenter/overview/index.html">Support Center</a></li>
+      <li><a href="https://www.salesboom.com/crm_trial.html">Free Trial</a></li>
+      <li><a href="https://www.salesboom.com/login.html">Login</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Main Header -->
+<header>
+  <div class="main-header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <a href="https://www.salesboom.com" aria-label="Salesboom CRM Home">
+            <img src="https://www.salesboom.com/img/salesboom-logo-252x67.png" alt="Salesboom Cloud CRM Logo" width="252" height="67">
+          </a>
+        </div>
+        <div class="header-phone">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          <a href="tel:+18552292043">1-855-229-2043</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <h1>Enter Data Faster With Intelligent AJAX Suggestions</h1>
+      <p class="subtitle">Reduce data entry time by up to 70% with real-time autocomplete suggestions that eliminate page reloads, minimize clicks, and make your CRM truly keyboard-friendly.</p>
+      <div class="hero-cta">
+        <a href="https://www.salesboom.com/request-crm-demo.html" class="btn btn-primary">Book a Demo</a>
+        <a href="https://www.salesboom.com/crm_trial.html" class="btn btn-outline">Start Free Trial</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Section -->
+<section class="stats-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+        <div class="stat-item">
+          <h3>70%</h3>
+          <p>Faster Data Entry</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+        <div class="stat-item">
+          <h3>0</h3>
+          <p>Page Reloads</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+        <div class="stat-item">
+          <h3>82%</h3>
+          <p>Time Savings</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="stat-item">
+          <h3>100%</h3>
+          <p>Keyboard Friendly</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Problem Statement Section -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>The Hidden Cost of Slow Data Entry in Traditional CRMs</h2>
+      <p>Traditional CRM systems force users through frustrating, time-consuming data entry processes. Every field requires multiple clicks, pop-up windows, page reloads, and searching through long dropdown lists.</p>
+    </div>
+    
+    <div class="content-box">
+      <p>Sales reps waste valuable selling time navigating clunky interfaces instead of engaging with customers.</p>
+      
+      <h3>The productivity drain is significant:</h3>
+      <ul>
+        <li>Multiple page reloads interrupt workflow and slow down data entry</li>
+        <li>Pop-up windows for lookups break user focus and concentration</li>
+        <li>Searching through long lists wastes time on repetitive tasks</li>
+        <li>Complex navigation discourages CRM usage and reduces adoption rates</li>
+        <li>Manual data entry increases errors and duplicate records</li>
+        <li>Sales reps avoid updating the CRM, leading to incomplete customer data</li>
+      </ul>
+      
+      <p class="mt-4"><strong>These inefficiencies compound daily, costing businesses thousands of hours in lost productivity.</strong> Sales teams need a faster, more intuitive way to input information without sacrificing accuracy or completeness.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Solution Overview Section -->
+<section class="content-section bg-light">
+  <div class="container">
+    <div class="section-header">
+      <h2>AJAX Suggest: Intelligent Autocomplete That Works As You Type</h2>
+      <p>Salesboom's AJAX Suggest tool transforms data entry from a tedious chore into a seamless experience.</p>
+    </div>
+    
+    <div class="content-box">
+      <p>This powerful component delivers real-time suggestions as users type, eliminating page reloads, reducing clicks, and dramatically accelerating the entire data entry process.</p>
+      
+      <p>The technology leverages AJAX (Asynchronous JavaScript and XML) to provide instant feedback without refreshing the page. As soon as a user presses a letter in any lookup field, the system dynamically searches the database and presents relevant matches—all happening in milliseconds without interrupting workflow.</p>
+      
+      <h4>Key advantages:</h4>
+      <ul>
+        <li>Zero page reloads mean uninterrupted workflow and faster completion</li>
+        <li>Intelligent filtering narrows results instantly as you type more characters</li>
+        <li>Keyboard-friendly navigation eliminates excessive mouse clicking</li>
+        <li>Dynamic suggestions appear directly in the field without pop-up windows</li>
+        <li>Works across all major CRM modules including Contacts, Accounts, Tasks, and Opportunities</li>
+        <li>Seamless user experience that feels responsive and modern</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- How It Works Section -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Simple, Intuitive, and Lightning Fast</h2>
+    </div>
+    
+    <div class="row">
+      <div class="col-lg-6 mb-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-bolt"></i>
+          </div>
+          <h3>Real-Time Search Without Page Reloads</h3>
+          <p>When creating or editing records, simply start typing in any lookup field. The AJAX Suggest tool immediately searches your CRM database and displays matching results in a dropdown list below the field.</p>
+          
+          <h4>For example, when creating a Task and entering an "Assigned To" user:</h4>
+          <ol>
+            <li>Type the first letter of the user's last name</li>
+            <li>Instantly see all users whose last name starts with that letter</li>
+            <li>Continue typing to narrow the results further</li>
+            <li>Use arrow keys to navigate the suggestions</li>
+            <li>Press Enter or click to select—no pop-ups, no page reload</li>
+          </ol>
+          
+          <p class="mt-3"><strong>The entire process takes seconds instead of the 30-60 seconds required in traditional CRM systems with separate lookup windows.</strong></p>
+        </div>
+      </div>
+      
+      <div class="col-lg-6 mb-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-link"></i>
+          </div>
+          <h3>Account Linking Made Effortless</h3>
+          <p>One of the most common and time-consuming CRM tasks is linking contacts to accounts. Traditional systems require clicking a lookup button, waiting for a pop-up window to load, entering search criteria, reviewing results, and finally selecting the account—a process requiring 8-12 clicks and multiple page loads.</p>
+          
+          <h4>With AJAX Suggest, the process is streamlined:</h4>
+          <ul>
+            <li>When creating or editing a Contact, click into the Account field</li>
+            <li>Type the first letter of the account name (e.g., "A")</li>
+            <li>See all accounts starting with "A" appear instantly</li>
+            <li>Type additional letters to narrow results (e.g., "Ac" for "Acme Corp")</li>
+            <li>Select the correct account with a single click or keyboard press</li>
+          </ul>
+          
+          <p class="mt-3"><strong>What previously took 30+ seconds now takes 3-5 seconds—an 85% time reduction on one of the most frequent CRM activities.</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Key Benefits Section -->
+<section class="content-section bg-light">
+  <div class="container">
+    <div class="section-header">
+      <h2>Measurable Productivity Gains Across Your Sales Team</h2>
+      <p>The AJAX Suggest tool delivers tangible benefits that directly impact your bottom line by reducing wasted time and improving CRM adoption.</p>
+    </div>
+    
+    <div class="row">
+      <div class="col-md-6 mb-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-tachometer-alt"></i>
+          </div>
+          <h3>Reduce Data Entry Time by 60-70%</h3>
+          <p>By eliminating page reloads, pop-up windows, and excessive clicking, users complete CRM updates in a fraction of the time. Tasks that previously took 2-3 minutes now take 30-60 seconds. Over the course of a day, each sales rep saves 30-45 minutes—time that can be redirected to revenue-generating activities.</p>
+        </div>
+      </div>
+      
+      <div class="col-md-6 mb-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <h3>Boost User Adoption Rates</h3>
+          <p>CRM systems fail when users don't adopt them. Complex, slow interfaces are the primary reason sales reps avoid updating their CRM. The AJAX Suggest tool makes data entry so fast and intuitive that resistance disappears. Users actually enjoy the responsive, modern experience, leading to higher adoption rates and more complete customer data.</p>
+        </div>
+      </div>
+      
+      <div class="col-md-6 mb-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3>Minimize Data Entry Errors</h3>
+          <p>When users must manually type account names, contact names, or user names, typos and inconsistencies creep into your database. AJAX Suggest ensures users select from existing records, maintaining data integrity and preventing duplicate entries. Clean data means better reporting, more accurate analytics, and improved decision-making.</p>
+        </div>
+      </div>
+      
+      <div class="col-md-6 mb-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-keyboard"></i>
+          </div>
+          <h3>Keyboard-Friendly Efficiency</h3>
+          <p>Power users and fast typists can complete entire record entries without touching the mouse. The AJAX Suggest tool responds instantly to keyboard input and allows full navigation using arrow keys and Enter. This keyboard-centric approach appeals to experienced users who value speed and efficiency above all else.</p>
+        </div>
+      </div>
+      
+      <div class="col-md-6 mb-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-mobile-alt"></i>
+          </div>
+          <h3>Mobile-Optimized Performance</h3>
+          <p>The AJAX Suggest tool works seamlessly on mobile devices, adapting to touch interfaces while maintaining the same speed and efficiency. Field sales reps can quickly enter data from customer sites without frustrating delays, ensuring information is captured in real-time when it matters most.</p>
+        </div>
+      </div>
+      
+      <div class="col-md-6 mb-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-brain"></i>
+          </div>
+          <h3>Reduce Cognitive Load</h3>
+          <p>By eliminating distracting pop-ups, page transitions, and complex navigation, AJAX Suggest allows users to maintain focus on their work. The streamlined interface reduces mental fatigue, enabling teams to work longer without losing productivity. Less cognitive load means better decision-making and reduced stress.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Use Cases Section -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Universal Application Across CRM Modules</h2>
+      <p>The AJAX Suggest tool enhances data entry efficiency throughout the entire CRM system.</p>
+    </div>
+    
+    <div class="row">
+      <div class="col-lg-4 mb-4">
+        <div class="content-box">
+          <h3><i class="fas fa-user-circle text-primary"></i> Contact Management</h3>
+          <p><strong>Link contacts to accounts:</strong> Start typing the account name and select from instant suggestions</p>
+          <p><strong>Assign contact owners:</strong> Quickly find and assign sales reps without navigating user lists</p>
+          <p><strong>Reference related contacts:</strong> Link contacts to each other with rapid autocomplete</p>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 mb-4">
+        <div class="content-box">
+          <h3><i class="fas fa-tasks text-primary"></i> Task and Activity Tracking</h3>
+          <p><strong>Assign tasks to users:</strong> Type a name and instantly select the assignee</p>
+          <p><strong>Link tasks to records:</strong> Connect tasks to contacts, accounts, or opportunities with autocomplete</p>
+          <p><strong>Create follow-ups:</strong> Rapidly schedule activities with intelligent suggestions</p>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 mb-4">
+        <div class="content-box">
+          <h3><i class="fas fa-handshake text-primary"></i> Opportunity Management</h3>
+          <p><strong>Associate opportunities:</strong> Link deals to accounts and contacts with minimal typing</p>
+          <p><strong>Assign opportunity owners:</strong> Quickly reassign opportunities to team members</p>
+          <p><strong>Add team members:</strong> Build opportunity teams with fast user selection</p>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 mb-4">
+        <div class="content-box">
+          <h3><i class="fas fa-life-ring text-primary"></i> Case Management</h3>
+          <p><strong>Assign cases:</strong> Route support tickets to the right team members instantly</p>
+          <p><strong>Link to contacts:</strong> Connect cases to customer records with autocomplete</p>
+          <p><strong>Reference accounts:</strong> Associate cases with company accounts effortlessly</p>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 mb-4">
+        <div class="content-box">
+          <h3><i class="fas fa-envelope text-primary"></i> Email and Communication</h3>
+          <p><strong>Select recipients:</strong> Add email recipients with intelligent name suggestions</p>
+          <p><strong>Link emails:</strong> Associate communications with relevant CRM records</p>
+          <p><strong>Create templates:</strong> Reference contacts and accounts in email templates</p>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 mb-4">
+        <div class="content-box">
+          <h3><i class="fas fa-chart-line text-primary"></i> Reporting and Analytics</h3>
+          <p><strong>Filter reports:</strong> Quickly select users, accounts, or contacts for report filters</p>
+          <p><strong>Build dashboards:</strong> Choose data sources with fast autocomplete</p>
+          <p><strong>Create views:</strong> Define filtered views with minimal clicking</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- User Experience Section -->
+<section class="content-section bg-light">
+  <div class="container">
+    <div class="section-header">
+      <h2>Thoughtful User Experience Design</h2>
+      <p>Every aspect of the AJAX Suggest tool is designed to maximize efficiency and user satisfaction.</p>
+    </div>
+    
+    <div class="content-box">
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <div class="d-flex align-items-start">
+            <div class="feature-icon me-3" style="min-width: 60px;">
+              <i class="fas fa-eye"></i>
+            </div>
+            <div>
+              <h4 style="color: var(--primary-color); font-size: 1.2rem; margin-bottom: 10px;">Visual Clarity</h4>
+              <p style="margin: 0; color: var(--text-light);">Highlighted matching characters help users quickly identify the right record</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6 mb-3">
+          <div class="d-flex align-items-start">
+            <div class="feature-icon me-3" style="min-width: 60px;">
+              <i class="fas fa-sort-amount-down"></i>
+            </div>
+            <div>
+              <h4 style="color: var(--primary-color); font-size: 1.2rem; margin-bottom: 10px;">Smart Ranking</h4>
+              <p style="margin: 0; color: var(--text-light);">Most frequently accessed records appear first, reducing scrolling</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6 mb-3">
+          <div class="d-flex align-items-start">
+            <div class="feature-icon me-3" style="min-width: 60px;">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+            <div>
+              <h4 style="color: var(--primary-color); font-size: 1.2rem; margin-bottom: 10px;">Contextual Intelligence</h4>
+              <p style="margin: 0; color: var(--text-light);">Suggestions are filtered based on the current module and user permissions</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6 mb-3">
+          <div class="d-flex align-items-start">
+            <div class="feature-icon me-3" style="min-width: 60px;">
+              <i class="fas fa-layer-group"></i>
+            </div>
+            <div>
+              <h4 style="color: var(--primary-color); font-size: 1.2rem; margin-bottom: 10px;">Graceful Degradation</h4>
+              <p style="margin: 0; color: var(--text-light);">If JavaScript is disabled, the system falls back to traditional lookup functionality</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6 mb-3">
+          <div class="d-flex align-items-start">
+            <div class="feature-icon me-3" style="min-width: 60px;">
+              <i class="fas fa-check-double"></i>
+            </div>
+            <div>
+              <h4 style="color: var(--primary-color); font-size: 1.2rem; margin-bottom: 10px;">Error Prevention</h4>
+              <p style="margin: 0; color: var(--text-light);">Invalid selections are prevented through validation, eliminating data quality issues</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-md-6 mb-3">
+          <div class="d-flex align-items-start">
+            <div class="feature-icon me-3" style="min-width: 60px;">
+              <i class="fas fa-expand-arrows-alt"></i>
+            </div>
+            <div>
+              <h4 style="color: var(--primary-color); font-size: 1.2rem; margin-bottom: 10px;">Progressive Disclosure</h4>
+              <p style="margin: 0; color: var(--text-light);">Only relevant fields display suggestions, avoiding interface clutter</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <p class="mt-4"><strong>The result is a data entry experience that feels modern, responsive, and professional—reinforcing user confidence in the CRM system.</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- Comparison Section -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>AJAX Suggest vs. Traditional CRM Lookups: A Time Study</h2>
+      <p>To quantify the productivity gains, consider a typical workflow for linking a contact to an account:</p>
+    </div>
+    
+    <div class="row">
+      <div class="col-lg-6 mb-4">
+        <div class="comparison-box negative">
+          <h4><i class="fas fa-times-circle"></i> Traditional Lookup Method</h4>
+          <div class="process-step">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <p>Click the Account lookup button (1 second)</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <p>Wait for pop-up window to load (2-3 seconds)</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <p>Enter search term in pop-up (3-4 seconds)</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="step-number">4</div>
+            <div class="step-content">
+              <p>Click Search button (1 second)</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="step-number">5</div>
+            <div class="step-content">
+              <p>Wait for results to load (2-3 seconds)</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="step-number">6</div>
+            <div class="step-content">
+              <p>Scroll through results list (2-5 seconds)</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="step-number">7</div>
+            <div class="step-content">
+              <p>Click the correct account (1 second)</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="step-number">8</div>
+            <div class="step-content">
+              <p>Wait for pop-up to close and field to populate (2-3 seconds)</p>
+            </div>
+          </div>
+          <div class="highlight-box mt-3" style="background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);">
+            <h3>Total: 14-22 seconds | 4-5 clicks | 3-4 page interactions</h3>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-6 mb-4">
+        <div class="comparison-box positive">
+          <h4><i class="fas fa-check-circle"></i> AJAX Suggest Method</h4>
+          <div class="process-step">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <p>Click into Account field (1 second)</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <p>Type first 2-3 letters of account name (1-2 seconds)</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <p>Select account from dropdown list (1 second)</p>
+            </div>
+          </div>
+          <div class="highlight-box mt-3" style="background: linear-gradient(135deg, #27ae60 0%, #229954 100%);">
+            <h3>Total: 3-4 seconds | 1 click | 1 inline selection</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="content-box mt-4">
+      <h3><i class="fas fa-calculator text-success"></i> Time Savings Analysis</h3>
+      <p><strong>Time Savings: 82% faster (18 seconds saved per lookup)</strong></p>
+      
+      <div class="row mt-3">
+        <div class="col-md-6">
+          <ul>
+            <li>For a sales rep who performs 20-30 account lookups per day: <strong>6-9 minutes saved daily</strong></li>
+            <li>Weekly savings per user: <strong>30-45 minutes</strong></li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <ul>
+            <li>Monthly savings per user: <strong>2-3 hours</strong></li>
+            <li>Across a 20-person sales team: <strong>40-60 hours monthly</strong></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="highlight-box mt-3">
+        <h3>That's the equivalent of adding 1 full-time employee in recovered productivity!</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Customer-Centric Design Section -->
+<section class="content-section bg-light">
+  <div class="container">
+    <div class="section-header">
+      <h2>Built Based on Real User Feedback</h2>
+      <p>Salesboom developed the AJAX Suggest tool in direct response to customer feedback requesting faster, more efficient data entry.</p>
+    </div>
+    
+    <div class="content-box">
+      <p>Rather than forcing users to adapt to rigid software limitations, Salesboom listens to user needs and continuously innovates to remove friction from daily workflows.</p>
+      
+      <h4>This customer-centric approach reflects Salesboom's core philosophy:</h4>
+      <ul>
+        <li>CRM software should accelerate business processes, not slow them down</li>
+        <li>User adoption depends on creating genuinely enjoyable experiences</li>
+        <li>Small improvements in daily tasks compound into massive productivity gains</li>
+        <li>Technology should feel invisible, allowing users to focus on relationships and revenue</li>
+        <li>Continuous innovation based on real-world usage patterns ensures lasting value</li>
+      </ul>
+      
+      <p class="mt-3"><strong>The AJAX Suggest tool exemplifies this philosophy—a seemingly simple feature that fundamentally transforms the daily CRM experience for thousands of users.</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- Integration Section -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Part of Salesboom's Comprehensive Efficiency Strategy</h2>
+      <p>The AJAX Suggest tool is just one component of Salesboom's broader commitment to CRM efficiency and usability.</p>
+    </div>
+    
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-edit"></i>
+          </div>
+          <h3>Mass Update Tools</h3>
+          <p>Bulk edit multiple records simultaneously without individual page loads</p>
+        </div>
+      </div>
+      
+      <div class="col-md-4 mb-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-plus-square"></i>
+          </div>
+          <h3>Quick Create Forms</h3>
+          <p>Streamlined forms for adding common records in seconds</p>
+        </div>
+      </div>
+      
+      <div class="col-md-4 mb-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-table"></i>
+          </div>
+          <h3>Inline Editing</h3>
+          <p>Edit field values directly in list views without opening full record pages</p>
+        </div>
+      </div>
+      
+      <div class="col-md-4 mb-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-magic"></i>
+          </div>
+          <h3>Smart Forms</h3>
+          <p>Dynamic forms that show/hide fields based on context to reduce clutter</p>
+        </div>
+      </div>
+      
+      <div class="col-md-4 mb-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-keyboard"></i>
+          </div>
+          <h3>Keyboard Shortcuts</h3>
+          <p>Power-user shortcuts for common actions throughout the system</p>
+        </div>
+      </div>
+      
+      <div class="col-md-4 mb-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-save"></i>
+          </div>
+          <h3>Auto-Save Functionality</h3>
+          <p>Automatic saving prevents data loss and eliminates manual save clicks</p>
+        </div>
+      </div>
+      
+      <div class="col-md-4 mb-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-history"></i>
+          </div>
+          <h3>Recent Items Lists</h3>
+          <p>Quick access to recently viewed records for faster navigation</p>
+        </div>
+      </div>
+      
+      <div class="col-md-4 mb-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-search"></i>
+          </div>
+          <h3>Global Search</h3>
+          <p>Instant search across all modules from a single search bar</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="content-box mt-4">
+      <p class="text-center"><strong>Together, these features create a CRM experience that feels fast, modern, and intuitive—driving higher adoption, better data quality, and improved business outcomes.</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-content">
+      <h2>Ready to Eliminate Slow Data Entry Forever?</h2>
+      <p>Experience the AJAX Suggest tool and other productivity features that make Salesboom the fastest, most user-friendly CRM on the market. Start your free trial today and see how much time your team can save.</p>
+      <div class="hero-cta">
+        <a href="https://www.salesboom.com/request-crm-demo.html" class="btn btn-primary">Book a Demo Today</a>
+        <a href="https://www.salesboom.com/crm_trial.html" class="btn btn-outline">Start Free Trial</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-2">
+      <h3 class="fw-bold text-color">
+        <i class="fa-solid fa-layer-group me-2"></i>
+        Explore Salesboom Editions
+      </h3>
+      <p class="text-muted">Discover powerful CRM editions to scale your business efficiently.</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-briefcase fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Professional Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              A complete CRM suite with Marketing Automation, ERP integration, and Support tools — built for performance and value.
+            </p>
+            <a href="https://www.salesboom.com/editions/professional-edition.html" class="btn btn-color mt-auto">
+              Explore Professional <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-building fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Enterprise Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              For large enterprises — automate workflows, unify data, and leverage analytics to drive strategic growth.
+            </p>
+            <a href="https://www.salesboom.com/editions/enterprise-edition.html" class="btn btn-color mt-auto">
+              View Enterprise <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-users fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Team Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              Perfect for small teams starting with CRM — manage leads, track sales, and boost productivity with simplicity.
+            </p>
+            <a href="https://www.salesboom.com/editions/team-edition.html" class="btn btn-color mt-auto">
+           Discover Team<i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container py-5">
+  <h2 class="text-center mb-5 text-color">CRM UI, Automation & AI-Enhanced Tools</h2>
+  <div class="row g-4">
+
+    <!-- Card 1 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-network-wired text-color fa-3x mb-3"></i>
+        <h4>AJAX Web 2.0 CRM</h4>
+        <p>
+          Experience a fast, responsive CRM interface with the <a href="https://www.salesboom.com/products/crm-ajax-web-2.0-custom-software.html" class="text-color fw-bold">AJAX Web 2.0 CRM</a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-pen text-color fa-3x mb-3"></i>
+        <h4>Automated Data Entry</h4>
+        <p>
+          Reduce manual input with the <a href="https://www.salesboom.com/products/crm-ajax-automated-data-entry.html" class="text-color fw-bold">AJAX Automated Data Entry</a> feature.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-layer-group text-color fa-3x mb-3"></i>
+        <h4>AJAX UI Enhancements</h4>
+        <p>
+          Improve user experience using the <a href="https://www.salesboom.com/products/feat-ajax-ui.html" class="text-color fw-bold">AJAX UI Features</a> for smoother navigation.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-list-check text-color fa-3x mb-3"></i>
+        <h4>SFA & CRM Core Features</h4>
+        <p>
+          Utilize sales force automation and core CRM tools with the <a href="https://www.salesboom.com/products/tools-sfa-features.html" class="text-color fw-bold">SFA & CRM Features Module</a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-cloud-arrow-up text-color fa-3x mb-3"></i>
+        <h4>Web Capture & Data Input Tools</h4>
+        <p>
+          Capture leads or data from the web directly into CRM using the <a href="https://www.salesboom.com/products/tools-webcapture.html" class="text-color fw-bold">Web Capture Tools</a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-gears text-color fa-3x mb-3"></i>
+        <h4>Interface Customization Tools</h4>
+        <p>
+          Customize CRM layout and interface with the <a href="https://www.salesboom.com/products/tools-interface.html" class="text-color fw-bold">Interface Tools</a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 7 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-headset text-color fa-3x mb-3"></i>
+        <h4>Self-Service Portal</h4>
+        <p>
+          Offer customers a CRM-integrated self-service portal via <a href="https://www.salesboom.com/service-management/web-based_self_service_portal_software.html" class="text-color fw-bold">Web-Based Self-Service Portal</a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 8 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-robot text-color fa-3x mb-3"></i>
+        <h4>AI-Powered CRM Platform</h4>
+        <p>
+          Leverage the latest in AI-driven automation and CRM intelligence with the <a href="https://www.salesboom.com/agentic-workforce/agentic-workforce-AI-Powered-CRM.html" class="text-color fw-bold">AI-Powered CRM Platform</a>.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="mt-5 footer">
+  <div class="container mt-5 pt-5">
+    <div class="footer-grid">
+      <div class="footer-section">
+        <h3>Products</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/products/tools-sfa.html">Sales Force Automation</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-marketing.html">Marketing Automation</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-casemanagement.html">Case Management</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-reporting.html">Business Intelligence</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-emailintegration.html">Email Integration</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Solutions</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/products/edition-team.html">Team Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/edition-professional.html">Professional Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/edition-enterprise.html">Enterprise Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/industry-solutions.html">Industry Solutions</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/company/index.html">About Us</a></li>
+          <li><a href="https://www.salesboom.com/company/company-contact.html">Contact Us</a></li>
+          <li><a href="https://www.salesboom.com/customers/index.html">Customers</a></li>
+          <li><a href="https://www.salesboom.com/partners/index.html">Partners</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/support/index.html">Support Center</a></li>
+          <li><a href="https://www.salesboom.com/crm_supportcenter/overview/index.html">Documentation</a></li>
+          <li><a href="https://www.salesboom.com/whitepapers/index.html">White Papers</a></li>
+          <li><a href="https://www.salesboom.com/pop-privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="bg-color">
+    <div class="container">
+     <div class="footer-bottom pb-3 mt-3">
+      <p>&copy; 2003-2025 <a class="text-white fw-bold" href="https://www.salesboom.com">Salesboom.com</a> Inc. All rights reserved. | Call: 1-855-229-2043</p>
+      <p style="margin-top: 10px;">Salesboom's color-coded CRM lead management software helps businesses visually prioritize sales opportunities with automated workflow rules. Contact us to learn how color coding can transform your lead management process and increase sales productivity.</p>
+    </div>
+    </div>
+  </div>
+ 
+</footer>
+
+<!-- Common JavaScript -->
+<script src="content/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+
+
+<script>
+// Loading Screen
+window.addEventListener('load', function() {
+  setTimeout(function() {
+    document.getElementById('loading-screen').classList.add('fade-out');
+  }, 500);
+});
+
+// Scroll to Top Button
+const scrollToTopBtn = document.getElementById('scroll-to-top');
+
+window.addEventListener('scroll', function() {
+  if (window.pageYOffset > 300) {
+    scrollToTopBtn.classList.add('show');
+  } else {
+    scrollToTopBtn.classList.remove('show');
+  }
+});
+
+scrollToTopBtn.addEventListener('click', function() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  });
+});
+</script>
+
+</body>
+</html>

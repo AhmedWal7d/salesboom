@@ -1,0 +1,1559 @@
+
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+<!-- Primary Meta Tags -->
+<title>Real-Time Business Intelligence & Analytics CRM | Salesboom</title>
+<meta name="description" content="Transform data into action with Salesboom's Business Intelligence & Analytics CRM. Real-time reporting, AI-powered insights, and voice-driven analytics across all departments.">
+<meta name="keywords" content="Business intelligence CRM, Analytics CRM software, Real-time CRM reporting, Data-driven CRM, Voice-powered analytics, CRM KPI tracking, Cloud CRM analytics, AI business intelligence">
+<link rel="canonical" href="https://www.salesboom.com/business-intelligence-and-analytics.html">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.salesboom.com/business-intelligence-and-analytics.html">
+<meta property="og:title" content="Real-Time Business Intelligence & Analytics CRM | Salesboom">
+<meta property="og:description" content="Transform data into action with Salesboom's Business Intelligence & Analytics CRM. Real-time reporting, AI-powered insights, and voice-driven analytics across all departments.">
+<meta property="og:image" content="https://www.salesboom.com/img/business-intelligence-and-analytics-og.jpg">
+<meta property="og:site_name" content="Salesboom CRM">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://www.salesboom.com/business-intelligence-and-analytics.html">
+<meta name="twitter:title" content="Real-Time Business Intelligence & Analytics CRM | Salesboom">
+<meta name="twitter:description" content="Transform data into action with Salesboom's Business Intelligence & Analytics CRM. Real-time reporting, AI-powered insights, and voice-driven analytics across all departments.">
+<meta name="twitter:image" content="https://www.salesboom.com/img/business-intelligence-and-analytics-og.jpg">
+<meta name="twitter:site" content="@SalesboomCloud">
+
+<!-- Schema.org structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Salesboom Business Intelligence & Analytics CRM",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web-based, Cloud",
+  "offers": {
+    "@type": "Offer",
+    "price": "14.00",
+    "priceCurrency": "USD",
+    "priceValidUntil": "2026-12-31"
+  },
+  "featureList": [
+    "Real-time business intelligence and reporting",
+    "Voice-powered analytics with AI assistance",
+    "Predictive analytics and forecasting",
+    "Unified cross-departmental data visibility",
+    "Customizable dashboards and KPI tracking",
+    "Pre-built analytics templates"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.5",
+    "ratingCount": "3500"
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "Salesboom",
+    "url": "https://www.salesboom.com",
+    "logo": "https://www.salesboom.com/img/salesboom-logo-252x67.png",
+    "foundingDate": "2003",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-855-229-2043",
+      "contactType": "Customer Service"
+    }
+  }
+}
+</script>
+
+<link rel="shortcut icon" href="https://www.salesboom.com/favicon.ico">
+
+
+    <link rel="stylesheet" href="content/css/bootstrap.min.css">
+    <link rel="stylesheet" href="content/css/salesboom-common.css">
+    <link rel="shortcut icon" href="content/image/salesboom-logo-252x67.png" type="image/x-icon"> 
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+/* ===== CSS Reset & Base Styles ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.benefit-item .feature-icon{
+  color: #001f45;
+  font-size: 50px !important;
+}
+.benefit-item{
+  border: 1px solid #001f45;
+}
+:root {
+  --primary-color: #002f6c;
+  --primary-light: #004080;
+  --primary-dark: #001f45;
+  --accent-color: #0066cc;
+  --success-color: #27ae60;
+  --warning-color: #f39c12;
+  --text-color: #333;
+  --text-light: #666;
+  --border-color: #e0e0e0;
+  --bg-light: #f8f9fa;
+  --bg-white: #ffffff;
+  --shadow: 0 2px 10px rgba(0,47,108,0.1);
+  --shadow-hover: 0 4px 20px rgba(0,47,108,0.15);
+}
+.feature-icon{
+  color: white !important;
+}
+
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background: var(--bg-white);
+  overflow-x: hidden;
+}
+
+/* ===== Loading Screen ===== */
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease-out;
+}
+
+#loading-screen.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loader {
+  width: 60px;
+  height: 60px;
+  border: 5px solid rgba(255, 255, 255, 0.3);
+  border-top: 5px solid #ffffff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+.feature-icon{
+  color: white !important;
+}
+
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-text {
+  position: absolute;
+  margin-top: 20px;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* ===== Scroll to Top Button ===== */
+#scroll-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  box-shadow: var(--shadow-hover);
+}
+
+#scroll-to-top:hover {
+  background: var(--primary-light);
+  transform: translateY(-5px);
+}
+
+#scroll-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ===== Container ===== */
+.container-custom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.container-wide {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+  color: white;
+  padding: 100px 0 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+  opacity: 0.3;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 25px;
+  line-height: 1.2;
+}
+
+.hero .subtitle {
+  font-size: 1.3rem;
+  margin-bottom: 40px;
+  opacity: 0.95;
+  line-height: 1.6;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+/* ===== Button Styles ===== */
+.btn-custom {
+  display: inline-block;
+  padding: 16px 40px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary-custom {
+  background: white;
+  color: var(--primary-color);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+}
+
+.btn-primary-custom:hover {
+  background: #f0f0f0;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 255, 255, 0.4);
+  color: var(--primary-color);
+}
+
+.btn-outline-custom {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-outline-custom:hover {
+  background: white;
+  color: var(--primary-color);
+}
+
+/* ===== Stats Section ===== */
+.stats-section {
+  background: var(--primary-dark);
+  color: white;
+  padding: 60px 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+  text-align: center;
+}
+
+.stat-item h3 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.stat-item p {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* ===== Content Sections ===== */
+.content-section {
+  padding: 80px 0;
+}
+
+.content-section.bg-light {
+  background: var(--bg-light);
+}
+
+.section-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 60px;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.section-header p {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  line-height: 1.8;
+}
+
+/* ===== Two Column Layout ===== */
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.two-column.reverse {
+  direction: rtl;
+}
+
+.two-column.reverse > * {
+  direction: ltr;
+}
+
+.column-content h3 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.column-content h4 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin: 25px 0 15px 0;
+  font-weight: 600;
+}
+
+.column-content p {
+  color: var(--text-light);
+  margin-bottom: 15px;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.column-content ul {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.column-content li {
+  padding-left: 30px;
+  position: relative;
+  margin-bottom: 15px;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+.column-content li::before {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  color: var(--success-color);
+  font-size: 1.2rem;
+}
+
+.column-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+/* ===== Feature Cards ===== */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.feature-card {
+  background: var(--bg-white);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  transition: all 0.3s;
+  border-top: 4px solid var(--primary-color);
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.feature-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.feature-card h3 {
+  font-size: 1.4rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.feature-card p {
+  color: var(--text-light);
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+.feature-card ul {
+  list-style: none;
+  margin-top: 15px;
+}
+
+.feature-card li {
+  padding-left: 25px;
+  position: relative;
+  margin-bottom: 10px;
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+.feature-card li::before {
+  content: "\f054";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 8px;
+  color: var(--primary-color);
+  font-size: 0.8rem;
+}
+
+/* ===== Benefits Section ===== */
+.benefits-section {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+  color: white;
+  padding: 80px 0;
+  position: relative;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+.benefit-item {
+  text-align: center;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s;
+}
+
+.benefit-item:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-5px);
+}
+
+.benefit-item .feature-icon {
+  margin: 0 auto 20px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.benefit-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.benefit-item p {
+  opacity: 0.9;
+  line-height: 1.7;
+}
+
+/* ===== CTA Section ===== */
+.cta-section {
+  background: var(--primary-dark);
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.cta-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.cta-content p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 968px) {
+  .two-column {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .two-column.reverse {
+    direction: ltr;
+  }
+  
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  
+  .section-header h2 {
+    font-size: 2rem;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 80px 0 60px;
+  }
+  
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+  
+  .hero .subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .hero-cta {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .content-section {
+    padding: 60px 0;
+  }
+  
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  
+  .section-header h2 {
+    font-size: 1.8rem;
+  }
+  
+  .column-content h3 {
+    font-size: 1.6rem;
+  }
+
+  #scroll-to-top {
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+  
+  .btn-custom {
+    padding: 12px 30px;
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  .feature-card {
+    padding: 25px 20px;
+  }
+  
+  .cta-content h2 {
+    font-size: 1.8rem;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== Utility Classes ===== */
+.text-center { text-align: center; }
+.mb-20 { margin-bottom: 20px; }
+.mb-30 { margin-bottom: 30px; }
+.mb-40 { margin-bottom: 40px; }
+.mt-40 { margin-top: 40px; }
+.mt-60 { margin-top: 60px; }
+</style>
+</head>
+
+<body>
+
+<!-- Loading Screen -->
+<div id="loading-screen">
+  <div>
+    <div class="loader"></div>
+    <div class="loading-text">Loading...</div>
+  </div>
+</div>
+
+<!-- Scroll to Top Button -->
+<button id="scroll-to-top" aria-label="Scroll to top">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+
+    <!-- Top Bar -->
+<div class="top-bar">
+  <div class="container">
+    <div class="top-bar-left text-color">
+      <span>✓ Award-Winning Cloud CRM Software Since 2003</span>
+    </div>
+    <ul class="top-bar-nav">
+      <li><a href="https://www.salesboom.com/crm_supportcenter/overview/index.html">Support Center</a></li>
+      <li><a href="https://www.salesboom.com/crm_trial.html">Free Trial</a></li>
+      <li><a href="https://www.salesboom.com/login.html">Login</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Main Header -->
+<header>
+  <div class="main-header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <a href="https://www.salesboom.com" aria-label="Salesboom CRM Home">
+            <img src="https://www.salesboom.com/img/salesboom-logo-252x67.png" alt="Salesboom Cloud CRM Logo" width="252" height="67">
+          </a>
+        </div>
+        <div class="header-phone">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          <a href="tel:+18552292043">1-855-229-2043</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container-custom">
+    <div class="hero-content">
+      <h1>Turn CRM Data Into Strategic Business Intelligence</h1>
+      <p class="subtitle">Real-time analytics, AI-powered insights, and voice-driven reporting that transform raw customer data into actionable intelligence for every department in your organization.</p>
+      <div class="hero-cta">
+        <a href="https://www.salesboom.com/request-crm-demo.html" class="btn-custom btn-primary-custom">Book a Demo</a>
+        <a href="https://www.salesboom.com/crm_trial.html" class="btn-custom btn-outline-custom">Start Free Trial</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Section -->
+<section class="stats-section">
+  <div class="container-custom">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <h3>20+</h3>
+        <p>Live Analytics & Reporting</p>
+      </div>
+      <div class="stat-item">
+        <h3>98+</h3>
+        <p>Powered Analytics Access</p>
+      </div>
+      <div class="stat-item">
+        <h3>78+</h3>
+        <p>Predictive Intelligence</p>
+      </div>
+      <div class="stat-item">
+        <h3>360+</h3>
+        <p>Customer View</p>
+      </div>
+      <div class="stat-item">
+        <h3>22+</h3>
+        <p>Years of Innovation</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 1: Why Business Intelligence Matters -->
+<section class="content-section">
+  <div class="container-custom">
+    <div class="section-header">
+      <h2>Why Business Intelligence Matters in Modern CRM</h2>
+      <p>In today's competitive business environment, making decisions based on gut feelings or outdated reports is no longer acceptable. Businesses need real-time visibility into their operations to stay ahead.</p>
+    </div>
+    
+    <div class="two-column">
+      <div class="column-content">
+        <p>Salesboom's Business Intelligence and Analytics transforms your CRM into a strategic command center that delivers instant insights across your entire organization.</p>
+        <p><strong>Traditional CRM systems simply store data.</strong> Salesboom's platform analyzes it, visualizes it, and turns it into actionable intelligence that drives growth. Your CRM now gives you real-time statistics and data to paint a clear picture of your business—easily tracking leads, sales, marketing campaigns, social media growth, and much more to help capture where your business is, and more importantly, where it is headed.</p>
+        <p>Live analytics help forecast agile and strategic moves, all at the click of a button—or even a voice command. Whether you're monitoring sales pipeline velocity, campaign ROI, customer satisfaction scores, or support ticket resolution times, every metric is available instantly to guide your next move.</p>
+        <p><strong>The result?</strong> Faster decisions, better outcomes, and a competitive advantage built on data-driven intelligence rather than guesswork.</p>
+      </div>
+      <div class="column-image">
+        <img src="content/image/image2.jpg" alt="Real-time business intelligence dashboard showing KPIs and analytics" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 2: Unified Data -->
+<section class="content-section bg-light">
+  <div class="container-custom">
+    <div class="section-header">
+      <h2>Breaking Down Data Silos for Complete Customer Understanding</h2>
+      <p>Salesboom provides a centralized platform for storing and accessing customer data from every touchpoint across your organization.</p>
+    </div>
+    
+    <div class="two-colaumn reverse">
+      <div class="column-content shadow-lg col-8 mx-auto p-5">
+        <p>This unified approach ensures that Sales, Marketing, Support, Quoting, Project Management, Partner Management, and back-office teams work together seamlessly on behalf of the customer, providing a personalized experience at every interaction.</p>
+        <h4>The platform captures comprehensive customer information including:</h4>
+        <ul>
+          <li>Complete contact information and communication history</li>
+          <li>Detailed sales history and transaction records</li>
+          <li>Service interactions and support ticket logs</li>
+          <li>Marketing engagement and campaign responses</li>
+          <li>Project timelines and deliverables</li>
+          <li>Partner collaboration data</li>
+          <li>Financial transactions and payment history</li>
+          <li>Social media interactions and sentiment analysis</li>
+          <li>Custom data fields specific to your industry</li>
+        </ul>
+        <p class="mt-3">By analyzing this data collectively rather than in departmental silos, businesses gain a complete 360-degree understanding of customer behavior, preferences, and needs—enabling truly personalized experiences and data-driven strategies.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Section 3: Department-Specific Analytics -->
+<section class="content-section">
+  <div class="container-custom">
+    <div class="section-header">
+      <h2>Empowering Every Team with Targeted Intelligence</h2>
+      <p>Salesboom delivers specialized analytics for each department, ensuring every team has the insights they need to excel.</p>
+    </div>
+    
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-chart-line"></i>
+        </div>
+        <h3>Sales Analytics That Drive Revenue</h3>
+        <p>Sales teams use Salesboom's analytics to identify potential opportunities, track deal progress, and forecast future revenue with unprecedented accuracy. The system analyzes customer behavior patterns to surface upsell and cross-sell opportunities automatically.</p>
+        <h4 style="font-size: 1.1rem; margin-top: 20px;">Key sales analytics include:</h4>
+        <ul>
+          <li>Pipeline velocity and conversion rates at each stage</li>
+          <li>Deal size analysis and win/loss patterns</li>
+          <li>Sales rep performance metrics and quota attainment</li>
+          <li>Lead source effectiveness and ROI analysis</li>
+          <li>Product interest patterns based on customer segments</li>
+          <li>Forecasting models that predict quarterly and annual revenue</li>
+          <li>Bottleneck identification in the sales process</li>
+          <li>Personalized next-best-action recommendations for each opportunity</li>
+        </ul>
+        <p class="mt-3">If a customer has expressed interest in a particular product, analytics determine which complementary products they may need, enabling sales teams to create targeted, data-backed pitches that resonate.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-bullhorn"></i>
+        </div>
+        <h3>Marketing Intelligence for Campaign Optimization</h3>
+        <p>Marketing teams leverage Salesboom's analytics to create highly targeted campaigns, measure effectiveness in real-time, and continuously optimize strategies based on actual performance data rather than assumptions.</p>
+        <h4 style="font-size: 1.1rem; margin-top: 20px;">Marketing analytics capabilities:</h4>
+        <ul>
+          <li>Campaign performance tracking across all channels</li>
+          <li>Lead source attribution and multi-touch analysis</li>
+          <li>Email engagement metrics including open rates, click-throughs, and conversions</li>
+          <li>Social media growth and engagement trends</li>
+          <li>Content performance analysis to identify top-performing assets</li>
+          <li>Customer segmentation based on behavior and demographics</li>
+          <li>Marketing ROI calculation by campaign, channel, and initiative</li>
+          <li>A/B testing results and statistical significance analysis</li>
+        </ul>
+        <p class="mt-3">For example, if a customer segment shows strong interest in a particular product category, the marketing team receives automated recommendations for targeted email campaigns featuring those products, dramatically improving conversion rates.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-headset"></i>
+        </div>
+        <h3>Support Team Analytics for Service Excellence</h3>
+        <p>Support teams use analytics to provide personalized customer service, identify recurring issues, and continuously improve service quality. By analyzing customer interactions and support tickets, teams develop solutions tailored to each customer's specific needs.</p>
+        <h4 style="font-size: 1.1rem; margin-top: 20px;">Support analytics include:</h4>
+        <ul>
+          <li>Response time metrics and SLA compliance tracking</li>
+          <li>First-call resolution rates by agent and issue type</li>
+          <li>Customer satisfaction scores and sentiment trends</li>
+          <li>Common issue identification and frequency analysis</li>
+          <li>Agent performance metrics and productivity tracking</li>
+          <li>Support cost per ticket and department efficiency</li>
+          <li>Escalation patterns and root cause analysis</li>
+          <li>Customer effort scores and support experience ratings</li>
+        </ul>
+        <p class="mt-3">These insights enable support managers to identify training opportunities, optimize staffing levels, and proactively address emerging issues before they impact multiple customers.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-file-invoice-dollar"></i>
+        </div>
+        <h3>Quoting and Pricing Intelligence</h3>
+        <p>Quoting teams leverage historical sales data analytics to create accurate quotes and proposals that maximize both win rates and profitability. The system analyzes past deals to determine optimal pricing strategies for each customer segment and situation.</p>
+        <h4 style="font-size: 1.1rem; margin-top: 20px;">Quoting analytics provide:</h4>
+        <ul>
+          <li>Historical pricing analysis by customer, product, and deal size</li>
+          <li>Discount effectiveness and impact on conversion rates</li>
+          <li>Competitive pricing benchmarks based on win/loss data</li>
+          <li>Margin optimization recommendations</li>
+          <li>Quote-to-close time analysis and bottleneck identification</li>
+          <li>Product bundle performance tracking</li>
+          <li>Price sensitivity analysis by customer segment</li>
+          <li>Win probability scoring for each quote configuration</li>
+        </ul>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-tasks"></i>
+        </div>
+        <h3>Project Management and Delivery Analytics</h3>
+        <p>Project teams use analytics to optimize resource allocation, predict delivery timelines, and maintain profitability across all engagements.</p>
+        <h4 style="font-size: 1.1rem; margin-top: 20px;">Project analytics include:</h4>
+        <ul>
+          <li>Project profitability tracking by customer and project type</li>
+          <li>Resource utilization rates and capacity planning</li>
+          <li>Timeline adherence and delay pattern analysis</li>
+          <li>Budget variance tracking and cost overrun alerts</li>
+          <li>Team productivity metrics and efficiency scores</li>
+          <li>Scope creep identification and impact assessment</li>
+          <li>Customer satisfaction by project phase</li>
+          <li>Delivery quality metrics and defect rates</li>
+        </ul>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-handshake"></i>
+        </div>
+        <h3>Partner and Channel Analytics</h3>
+        <p>Partner management teams leverage analytics to optimize channel performance, identify high-value partnerships, and allocate support resources effectively.</p>
+        <h4 style="font-size: 1.1rem; margin-top: 20px;">Partner analytics track:</h4>
+        <ul>
+          <li>Revenue contribution by partner and partner tier</li>
+          <li>Deal registration and conflict resolution metrics</li>
+          <li>Partner certification and training completion rates</li>
+          <li>Joint marketing campaign effectiveness</li>
+          <li>Lead pass-through conversion rates</li>
+          <li>Partner satisfaction scores and engagement levels</li>
+          <li>Geographic coverage and market penetration</li>
+          <li>Partner churn risk indicators and retention strategies</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 4: Voice-Powered Analytics -->
+<section class="content-section bg-light">
+  <div class="container-custom">
+    <div class="section-header">
+      <h2>Voice-Powered Analytics for Hands-Free Intelligence</h2>
+      <p>Salesboom's innovative voice interface allows you to access critical business intelligence without touching a keyboard, revolutionizing how busy professionals stay informed.</p>
+    </div>
+    
+    <div class="two-colsumn">
+      <div class="column-content col-8 shadow-lg mx-auto p-5 rounded-2">
+        <p>Simply speak your query naturally, and Salesboom's AI-powered voice assistant delivers instant answers with relevant visualizations and data.</p>
+        <h4>Voice commands enable you to:</h4>
+        <ul>
+          <li>Check pipeline status and deal progress while driving or in meetings</li>
+          <li>Get real-time KPI updates without logging into dashboards</li>
+          <li>Request specific reports and have them emailed instantly</li>
+          <li>Ask comparative questions like "How does this quarter compare to last quarter?"</li>
+          <li>Query customer information and interaction history</li>
+          <li>Monitor campaign performance across channels</li>
+          <li>Receive alerts and notifications through voice updates</li>
+          <li>Access analytics on any device with voice capability</li>
+        </ul>
+        <p class="mt-3"><strong>Example queries:</strong> "Show me my top 10 deals this month," "What's our conversion rate for email campaigns?" or "How many support tickets are open right now?"</p>
+        <p>This hands-free approach makes business intelligence accessible anytime, anywhere—perfect for executives on the go, field sales teams, or anyone who needs insights without interrupting their workflow.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Section 5: Predictive Analytics -->
+<section class="content-section">
+  <div class="container-custom">
+    <div class="section-header">
+      <h2>Predictive Intelligence That Anticipates the Future</h2>
+      <p>Salesboom's AI-powered predictive analytics don't just tell you what happened—they forecast what's coming next, enabling proactive decision-making.</p>
+    </div>
+    
+    <div class="benefits-grid">
+      <div class="benefit-item">
+        <div class="feature-icon">
+          <i class="fas fa-brain"></i>
+        </div>
+        <h3>Churn Risk Prediction</h3>
+        <p>AI algorithms analyze customer behavior patterns, engagement levels, and support interactions to identify accounts at risk of leaving before they actually churn.</p>
+      </div>
+      
+      <div class="benefit-item">
+        <div class="feature-icon">
+          <i class="fas fa-chart-area"></i>
+        </div>
+        <h3>Lead Scoring Intelligence</h3>
+        <p>Predictive lead scoring automatically identifies which prospects are most likely to convert, helping sales teams prioritize their efforts on high-value opportunities.</p>
+      </div>
+      
+      <div class="benefit-item">
+        <div class="feature-icon">
+          <i class="fas fa-calendar-alt"></i>
+        </div>
+        <h3>Demand Forecasting</h3>
+        <p>Forecast future demand for products, services, and support resources based on historical patterns, seasonal trends, and market indicators.</p>
+      </div>
+      
+      <div class="benefit-item">
+        <div class="feature-icon">
+          <i class="fas fa-dollar-sign"></i>
+        </div>
+        <h3>Revenue Projections</h3>
+        <p>Advanced forecasting models predict revenue across multiple scenarios, helping executives plan budgets and set realistic growth targets.</p>
+      </div>
+      
+      <div class="benefit-item">
+        <div class="feature-icon">
+          <i class="fas fa-shopping-cart"></i>
+        </div>
+        <h3>Product Interest Prediction</h3>
+        <p>AI predicts which products customers are likely to be interested in based on their behavior patterns, purchase history, and similar customer profiles.</p>
+      </div>
+      
+      <div class="benefit-item">
+        <div class="feature-icon">
+          <i class="fas fa-trophy"></i>
+        </div>
+        <h3>Win Probability Scoring</h3>
+        <p>Every sales opportunity receives an AI-calculated win probability score based on historical data, helping teams focus on the most promising deals.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 6: Integration -->
+<section class="content-section bg-light">
+  <div class="container-custom">
+    <div class="section-header">
+      <h2>Unified Intelligence from All Your Business Systems</h2>
+      <p>Salesboom integrates seamlessly with other business applications to create a comprehensive analytical ecosystem. Data flows automatically between systems, ensuring analytics reflect your complete business reality.</p>
+    </div>
+    
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-envelope"></i>
+        </div>
+        <h3>Email & Calendar Integration</h3>
+        <p>Native integration with Microsoft Outlook captures email communications and calendar data, providing complete visibility into customer interactions and time allocation.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-calculator"></i>
+        </div>
+        <h3>Financial System Connectivity</h3>
+        <p>QuickBooks integration brings financial and accounting metrics into your analytics, enabling revenue tracking, profitability analysis, and payment pattern insights.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-share-alt"></i>
+        </div>
+        <h3>Social Media Analytics</h3>
+        <p>Social media management tools feed engagement analytics into Salesboom, tracking brand sentiment, social listening insights, and campaign performance across platforms.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-shopping-bag"></i>
+        </div>
+        <h3>E-Commerce Data</h3>
+        <p>E-commerce platform integration delivers transaction data, shopping behavior patterns, cart abandonment metrics, and customer journey insights.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-phone"></i>
+        </div>
+        <h3>Telephony System Integration</h3>
+        <p>Connect telephony systems for comprehensive call analytics including call volume, duration, outcomes, and agent performance metrics.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-credit-card"></i>
+        </div>
+        <h3>Payment Processing</h3>
+        <p>Payment processor integration enables real-time revenue tracking, payment success rates, and financial performance monitoring.</p>
+      </div>
+    </div>
+    
+    <div class="text-center mt-60">
+      <p style="font-size: 1.15rem; color: #666; max-width: 800px; margin: 0 auto;">
+        <strong>This integration creates a single source of truth</strong> where all business data converges, enabling the cross-functional analytics that reveal your most important insights and growth opportunities.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Section 7: Security -->
+<section class="content-section">
+  <div class="container-custom">
+    <div class="section-header">
+      <h2>Secure Analytics with Complete Audit Trails</h2>
+      <p>Salesboom's analytics platform maintains enterprise-grade security while providing comprehensive audit trails for compliance requirements.</p>
+    </div>
+    
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-user-shield"></i>
+        </div>
+        <h3>Role-Based Access Controls</h3>
+        <p>Limit data visibility based on user roles and positions. Each team member sees only the analytics relevant to their responsibilities, protecting sensitive information.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-lock"></i>
+        </div>
+        <h3>Field-Level Security</h3>
+        <p>Control access to specific data fields containing sensitive information, ensuring compliance with privacy regulations and internal security policies.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-clipboard-list"></i>
+        </div>
+        <h3>Complete Audit Logs</h3>
+        <p>Track all data access and changes with comprehensive audit logs. Know exactly who viewed or modified which data and when, supporting compliance requirements.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-shield-alt"></i>
+        </div>
+        <h3>Data Encryption</h3>
+        <p>Military-grade encryption protects data both at rest and in transit, ensuring your business intelligence remains secure at all times.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-file-contract"></i>
+        </div>
+        <h3>Regulatory Compliance</h3>
+        <p>Meet GDPR, CCPA, and industry-specific regulations with built-in compliance features, exportable compliance reports, and data governance tools.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-user-check"></i>
+        </div>
+        <h3>Activity Monitoring</h3>
+        <p>Monitor user activity and detect anomalies with automated alerts for unusual access patterns or potential security threats.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 8: Implementation -->
+<section class="content-section bg-light">
+  <div class="container-custom">
+    <div class="section-header">
+      <h2>Fast Implementation, Immediate Value</h2>
+      <p>Salesboom's Business Intelligence and Analytics doesn't require months of implementation or expensive consulting. The platform is designed for rapid deployment with pre-built dashboards, templates, and configurations that deliver immediate value.</p>
+    </div>
+    
+    <div class="benefits-grid">
+      <div class="benefit-item">
+        <div class="feature-icon">
+          <i class="fas fa-tachometer-alt  text-color"></i>
+        </div>
+        <h3>Pre-Configured Dashboards</h3>
+        <p>Start with pre-built dashboards for common business scenarios and customize them as your needs evolve.</p>
+      </div>
+      
+      <div class="benefit-item">
+        <div class="feature-icon">
+          <i class="fas fa-industry  text-color"></i>
+        </div>
+        <h3>Industry Templates</h3>
+        <p>Industry-specific templates accelerate time-to-value with analytics tailored to your vertical.</p>
+      </div>
+      
+      <div class="benefit-item">
+        <div class="feature-icon">
+          <i class="fas fa-mouse-pointer  text-color"></i>
+        </div>
+        <h3>Intuitive Interface</h3>
+        <p>User-friendly design requires minimal training. Teams become productive with analytics immediately.</p>
+      </div>
+      
+      <div class="benefit-item">
+        <div class="feature-icon">
+          <i class="fas fa-magic  text-color"></i>
+        </div>
+        <h3>Guided Setup</h3>
+        <p>Setup wizards guide you through custom analytics creation without requiring technical expertise.</p>
+      </div>
+      
+      <div class="benefit-item">
+        <div class="feature-icon">
+          <i class="fas fa-headphones  text-color"></i>
+        </div>
+        <h3>Expert Support</h3>
+        <p>CRM specialists provide support during onboarding, ensuring successful implementation and adoption.</p>
+      </div>
+      
+      <div class="benefit-item">
+        <div class="feature-icon">
+          <i class="fas fa-sync-alt  text-color"></i>
+        </div>
+        <h3>Continuous Updates</h3>
+        <p>Ongoing optimization and feature updates at no additional cost keep your analytics capabilities current.</p>
+      </div>
+    </div>
+    
+    <div class="text-center mt-60">
+      <p style="font-size: 1.15rem; color: #666; max-width: 800px; margin: 0 auto;">
+        <strong>Most organizations begin seeing analytical insights within days, not months</strong>, allowing them to start making data-driven decisions immediately while continuing to refine and expand their analytics capabilities over time.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Benefits Summary Section -->
+<section class="benefits-section">
+  <div class="container-custom">
+    <div class="section-header" style="color: white;">
+      <h2 style="color: white;">Why Choose Salesboom Business Intelligence & Analytics</h2>
+      <p style="color: rgba(255,255,255,0.9);">Transform your CRM from a data repository into a strategic intelligence platform that drives growth across every department.</p>
+    </div>
+    <div class="benefits-grid">
+      <div class="benefit-item">
+        <div class="feature-icon">
+          <i class="fas fa-bolt"></i>
+        </div>
+        <h3>Real-Time Intelligence</h3>
+        <p>Live analytics and reporting provide instant visibility into your business operations, enabling faster, more confident decision-making.</p>
+      </div>
+      <div class="benefit-item">
+        <div class="feature-icon">
+          <i class="fas fa-microphone"></i>
+        </div>
+        <h3>Voice-Powered Access</h3>
+        <p>Query your data hands-free with natural language voice commands, getting answers instantly without logging into dashboards.</p>
+      </div>
+      <div class="benefit-item">
+        <div class="feature-icon">
+          <i class="fas fa-brain"></i>
+        </div>
+        <h3>AI Predictive Analytics</h3>
+        <p>Forecast future trends, identify risks, and discover opportunities with AI-powered predictive intelligence that sees around corners.</p>
+      </div>
+      <div class="benefit-item">
+        <div class="feature-icon">
+          <i class="fas fa-project-diagram"></i>
+        </div>
+        <h3>Unified Platform</h3>
+        <p>Break down data silos with a single platform that delivers cross-departmental analytics and complete customer visibility.</p>
+      </div>
+      <div class="benefit-item">
+        <div class="feature-icon">
+          <i class="fas fa-rocket"></i>
+        </div>
+        <h3>Rapid Deployment</h3>
+        <p>Pre-built dashboards and industry templates deliver immediate value with insights flowing within days, not months.</p>
+      </div>
+      <div class="benefit-item">
+        <div class="feature-icon">
+          <i class="fas fa-award"></i>
+        </div>
+        <h3>22+ Years Proven</h3>
+        <p>Two decades of CRM innovation and business intelligence expertise trusted by organizations worldwide.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+  <div class="container-custom">
+    <div class="cta-content">
+      <h2>Ready to Transform Data Into Your Competitive Advantage?</h2>
+      <p>Discover how Salesboom's Business Intelligence & Analytics empowers your entire organization with real-time insights, predictive intelligence, and voice-powered reporting. See the platform in action with a personalized demo tailored to your business needs.</p>
+      <div class="hero-cta">
+        <a href="https://www.salesboom.com/request-crm-demo.html" class="btn-custom btn-primary-custom">Schedule Demo Today</a>
+        <a href="https://www.salesboom.com/crm_trial.html" class="btn-custom btn-outline-custom">Start Free Trial</a>
+      </div>
+      <p style="margin-top: 30px; font-size: 1rem; opacity: 0.9;">
+        Salesboom's Business Intelligence & Analytics CRM transforms raw customer data into strategic intelligence that drives growth across every department. With real-time reporting, voice-powered analytics, predictive insights, and unified cross-departmental visibility, businesses make faster, smarter decisions backed by data instead of guesswork. Our cloud-based analytics platform integrates seamlessly with your existing systems, delivering actionable KPIs and comprehensive business intelligence from day one.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-2">
+      <h3 class="fw-bold text-color">
+        <i class="fa-solid fa-layer-group me-2"></i>
+        Explore Salesboom Editions
+      </h3>
+      <p class="text-muted">Discover powerful CRM editions to scale your business efficiently.</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-briefcase fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Professional Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              A complete CRM suite with Marketing Automation, ERP integration, and Support tools — built for performance and value.
+            </p>
+            <a href="https://www.salesboom.com/editions/professional-edition.html" class="btn btn-color mt-auto">
+              Explore Professional <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-building fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Enterprise Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              For large enterprises — automate workflows, unify data, and leverage analytics to drive strategic growth.
+            </p>
+            <a href="https://www.salesboom.com/editions/enterprise-edition.html" class="btn btn-color mt-auto">
+              View Enterprise <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-users fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Team Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              Perfect for small teams starting with CRM — manage leads, track sales, and boost productivity with simplicity.
+            </p>
+            <a href="https://www.salesboom.com/editions/team-edition.html" class="btn btn-color mt-auto">
+           Discover Team<i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="my-5">
+  <div class="container">
+    <!-- Section Title -->
+    <div class="text-center mb-5">
+      <h2 class="fw-bold text-color">Advanced Reporting & Revenue Tools</h2>
+      <p class="text-muted">Powerful analytics, reporting, and revenue management tools to grow your business</p>
+    </div>
+
+    <div class="row g-4">
+
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="card shadow-lg border-0 text-center p-4 h-100">
+          <i class="fa-solid fa-chart-line text-color fa-3x mb-3"></i>
+          <h4>CRM Reports & Analytics</h4>
+          <p>
+            Visualize performance through interactive CRM dashboards, KPI charts, and analytics views.
+            <a href="https://www.salesboom.com/products/crm-reports-and-analytics-screenshots.html">View CRM Analytics</a>.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card shadow-lg border-0 text-center p-4 h-100">
+          <i class="fa-solid fa-chart-pie text-color fa-3x mb-3"></i>
+          <h4>Reporting Tools</h4>
+          <p>
+            Access flexible reporting tools to track sales metrics, forecast trends, and analyze customer activity.
+            <a href="https://www.salesboom.com/products/tools-reporting.html">Explore Reporting Tools</a>.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card shadow-lg border-0 text-center p-4 h-100">
+          <i class="fa-solid fa-file-signature text-color fa-3x mb-3"></i>
+          <h4>Custom Reports</h4>
+          <p>
+            Build fully customized reports to measure KPIs, monitor teams, and optimize performance.
+            <a href="https://www.salesboom.com/products/custom-reports.html">Build Custom Reports</a>.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col-md-4">
+        <div class="card shadow-lg border-0 text-center p-4 h-100">
+          <i class="fa-solid fa-infinity text-color fa-3x mb-3"></i>
+          <h4>Revenue Lifecycle Management</h4>
+          <p>
+            Master the entire revenue lifecycle with AI-driven forecasting, renewal automation, and pipeline insights.
+            <a href="https://www.salesboom.com/ai-rlm/revenue-lifecycle-management-guide.html">Learn About RLM</a>.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="col-md-4">
+        <div class="card shadow-lg border-0 text-center p-4 h-100">
+          <i class="fa-solid fa-sack-dollar text-color fa-3x mb-3"></i>
+          <h4>Revenue Operations Guide</h4>
+          <p>
+            Improve alignment between sales, marketing, and operations using the full RevOps framework.
+            <a href="https://www.salesboom.com/revenue-operations/revenue-operations-guide-for-smes.html">Explore RevOps Guide</a>.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="col-md-4">
+        <div class="card shadow-lg border-0 text-center p-4 h-100">
+          <i class="fa-solid fa-headset text-color fa-3x mb-3"></i>
+          <h4>Self-Service Portal</h4>
+          <p>
+            Give customers an easy-to-use portal to submit tickets, check status, and manage support cases.
+            <a href="https://www.salesboom.com/service-management/web-based_self_service_portal_software.html">Visit Portal Page</a>.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="mt-5 footer">
+  <div class="container mt-5 pt-5">
+    <div class="footer-grid">
+      <div class="footer-section">
+        <h3>Products</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/products/tools-sfa.html">Sales Force Automation</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-marketing.html">Marketing Automation</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-casemanagement.html">Case Management</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-reporting.html">Business Intelligence</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-emailintegration.html">Email Integration</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Solutions</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/products/edition-team.html">Team Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/edition-professional.html">Professional Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/edition-enterprise.html">Enterprise Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/industry-solutions.html">Industry Solutions</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/company/index.html">About Us</a></li>
+          <li><a href="https://www.salesboom.com/company/company-contact.html">Contact Us</a></li>
+          <li><a href="https://www.salesboom.com/customers/index.html">Customers</a></li>
+          <li><a href="https://www.salesboom.com/partners/index.html">Partners</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/support/index.html">Support Center</a></li>
+          <li><a href="https://www.salesboom.com/crm_supportcenter/overview/index.html">Documentation</a></li>
+          <li><a href="https://www.salesboom.com/whitepapers/index.html">White Papers</a></li>
+          <li><a href="https://www.salesboom.com/pop-privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="bg-color">
+    <div class="container">
+     <div class="footer-bottom pb-3 mt-3">
+      <p>&copy; 2003-2025 <a class="text-white fw-bold" href="https://www.salesboom.com">Salesboom.com</a> Inc. All rights reserved. | Call: 1-855-229-2043</p>
+      <p style="margin-top: 10px;">Salesboom's color-coded CRM lead management software helps businesses visually prioritize sales opportunities with automated workflow rules. Contact us to learn how color coding can transform your lead management process and increase sales productivity.</p>
+    </div>
+    </div>
+  </div>
+ 
+</footer>
+
+<!-- Common JavaScript -->
+<script src="content/js/bootstrap.bundle.min.js"></script>
+
+
+
+<!-- Custom JavaScript -->
+<script>
+// Loading Screen
+window.addEventListener('load', function() {
+  const loadingScreen = document.getElementById('loading-screen');
+  setTimeout(function() {
+    loadingScreen.classList.add('fade-out');
+    setTimeout(function() {
+      loadingScreen.style.display = 'none';
+    }, 500);
+  }, 1000);
+});
+
+// Scroll to Top Button
+const scrollToTopBtn = document.getElementById('scroll-to-top');
+
+window.addEventListener('scroll', function() {
+  if (window.pageYOffset > 300) {
+    scrollToTopBtn.classList.add('show');
+  } else {
+    scrollToTopBtn.classList.remove('show');
+  }
+});
+
+scrollToTopBtn.addEventListener('click', function() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+
+// Smooth Scroll for Anchor Links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  });
+});
+</script>
+
+</body>
+</html>

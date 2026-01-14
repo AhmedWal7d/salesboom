@@ -1,0 +1,1575 @@
+
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+<!-- Primary Meta Tags -->
+<title>Automated Case Escalation & Routing Rules | Salesboom CRM</title>
+<meta name="description" content="Automate case escalation and routing with Salesboom's 100% customizable rules. Assign cases to the right team instantly, trigger alerts, and maintain key relationships.">
+<meta name="keywords" content="Case escalation rules, Automated case routing, CRM routing rules, Support ticket automation, Case management system, Customer service escalation, Automated workflows CRM">
+<link rel="canonical" href="https://www.salesboom.com/feature-case-escalation-routing.html">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.salesboom.com/feature-case-escalation-routing.html">
+<meta property="og:title" content="Automated Case Escalation & Routing Rules | Salesboom CRM">
+<meta property="og:description" content="Automate case escalation and routing with Salesboom's 100% customizable rules. Assign cases to the right team instantly, trigger alerts, and maintain key relationships.">
+<meta property="og:image" content="https://www.salesboom.com/img/feature-case-escalation-routing-og.jpg">
+<meta property="og:site_name" content="Salesboom CRM">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://www.salesboom.com/feature-case-escalation-routing.html">
+<meta name="twitter:title" content="Automated Case Escalation & Routing Rules | Salesboom CRM">
+<meta name="twitter:description" content="Automate case escalation and routing with Salesboom's 100% customizable rules. Assign cases to the right team instantly, trigger alerts, and maintain key relationships.">
+<meta name="twitter:image" content="https://www.salesboom.com/img/feature-case-escalation-routing-og.jpg">
+<meta name="twitter:site" content="@SalesboomCloud">
+
+<!-- Schema.org structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Case Escalation & Routing Rules - Salesboom CRM",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web-based, Cloud",
+  "offers": {
+    "@type": "Offer",
+    "price": "14.00",
+    "priceCurrency": "USD",
+    "priceValidUntil": "2026-12-31"
+  },
+  "featureList": [
+    "100% customizable case routing rules with unlimited conditions",
+    "Automatic case assignment based on skills, workload, and priority",
+    "Real-time alerts and escalation notifications to stakeholders",
+    "Automated task creation for follow-up and relationship maintenance",
+    "VIP customer protection with priority routing workflows",
+    "Cross-functional coordination across sales, service, and operations"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.5",
+    "ratingCount": "3500"
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "Salesboom",
+    "url": "https://www.salesboom.com",
+    "logo": "https://www.salesboom.com/img/salesboom-logo-252x67.png",
+    "foundingDate": "2003",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-855-229-2043",
+      "contactType": "Customer Service"
+    }
+  }
+}
+</script>
+
+<link rel="shortcut icon" href="https://www.salesboom.com/favicon.ico">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="content/css/bootstrap.min.css">
+    <link rel="stylesheet" href="content/css/salesboom-common.css">
+    <link rel="shortcut icon" href="content/image/salesboom-logo-252x67.png" type="image/x-icon"> 
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+/* Loading Screen */
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #002f6c;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#loading-screen.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader {
+  width: 60px;
+  height: 60px;
+  border: 5px solid rgba(255, 255, 255, 0.3);
+  border-top: 5px solid #fff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-text {
+  color: white;
+  font-size: 18px;
+  margin-top: 20px;
+  font-weight: 500;
+}
+
+/* Scroll to Top Button */
+#scrollToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: #002f6c;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 47, 108, 0.4);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+#scrollToTop:hover {
+  background: #004080;
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 47, 108, 0.6);
+}
+
+#scrollToTop.show {
+  display: flex;
+}
+
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #002f6c;
+  --secondary-color: #004080;
+  --accent-color: #0066cc;
+  --success-color: #28a745;
+  --warning-color: #ffc107;
+  --danger-color: #dc3545;
+  --text-color: #333;
+  --text-light: #666;
+  --border-color: #e0e0e0;
+  --bg-light: #f8f9fa;
+  --bg-white: #ffffff;
+  --shadow: 0 2px 10px rgba(0,0,0,0.1);
+  --shadow-hover: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background: var(--bg-white);
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #002f6c 0%, #004080 100%);
+  color: white;
+  padding: 100px 0 80px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+  opacity: 0.3;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 25px;
+  line-height: 1.2;
+}
+
+.hero .subtitle {
+  font-size: 1.4rem;
+  margin-bottom: 40px;
+  opacity: 0.95;
+  line-height: 1.6;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 16px 40px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #dc3545;
+  color: white;
+  box-shadow: 0 4px 12px rgba(220, 53, 69, 0.3);
+}
+
+.btn-primary:hover {
+  background: #c82333;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(220, 53, 69, 0.4);
+}
+
+.btn-outline {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-outline:hover {
+  background: white;
+  color: var(--primary-color);
+}
+
+/* Stats Section */
+.stats-section {
+  background: var(--primary-color);
+  color: white;
+  padding: 60px 0;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-item h3 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #17a2b8;
+  margin-bottom: 10px;
+}
+
+.stat-item p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* Content Sections */
+.content-section {
+  padding: 80px 0;
+}
+
+.content-section.bg-light {
+  background: var(--bg-light);
+}
+
+.section-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 60px;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.section-header p {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  line-height: 1.8;
+}
+
+/* Feature Cards */
+.feature-card {
+  background: var(--bg-white);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  transition: all 0.3s;
+  border-top: 4px solid var(--primary-color);
+  height: 100%;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.feature-icon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.feature-card h4 {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  margin: 20px 0 10px 0;
+  font-weight: 600;
+}
+
+.feature-card p {
+  color: var(--text-light);
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.feature-card ul {
+  list-style: none;
+  margin-top: 15px;
+  padding-left: 0;
+}
+
+.feature-card li {
+  padding-left: 25px;
+  position: relative;
+  margin-bottom: 10px;
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+.feature-card li::before {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  color: var(--success-color);
+}
+
+/* Two Column Layout */
+.two-column-content h3 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.two-column-content h4 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin: 30px 0 15px 0;
+  font-weight: 600;
+}
+
+.two-column-content p {
+  color: var(--text-light);
+  margin-bottom: 20px;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.two-column-content ul {
+  list-style: none;
+  margin: 20px 0;
+  padding-left: 0;
+}
+
+.two-column-content li {
+  padding-left: 30px;
+  position: relative;
+  margin-bottom: 15px;
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+.two-column-content li::before {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  color: var(--success-color);
+  font-size: 1.2rem;
+}
+
+.two-column-content strong {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* Benefits Section */
+.benefits-section {
+  background: linear-gradient(135deg, #002f6c 0%, #004080 100%);
+  color: white;
+  padding: 80px 0;
+  position: relative;
+}
+
+.benefit-item {
+  text-align: center;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s;
+  height: 100%;
+}
+
+.benefit-item:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-5px);
+}
+
+.benefit-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.benefit-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.benefit-item p {
+  opacity: 0.9;
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+/* Scenario Cards */
+.scenario-card {
+  background: var(--bg-white);
+  padding: 35px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  border-left: 5px solid var(--primary-color);
+  height: 100%;
+  transition: all 0.3s;
+}
+
+.scenario-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.scenario-card .badge-scenario {
+  background: var(--primary-color);
+  color: white;
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.scenario-card h4 {
+  color: var(--primary-color);
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.scenario-card .scenario-section {
+  margin-bottom: 20px;
+}
+
+.scenario-card .scenario-section h5 {
+  color: var(--text-color);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.scenario-card .scenario-section p {
+  color: var(--text-light);
+  line-height: 1.7;
+  margin-bottom: 0;
+  font-size: 0.95rem;
+}
+
+.scenario-card .outcome-box {
+  background: #e8f5e9;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 4px solid var(--success-color);
+  margin-top: 15px;
+}
+
+.scenario-card .outcome-box strong {
+  color: var(--success-color);
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Advantage Cards */
+.advantage-card {
+  background: var(--bg-white);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  transition: all 0.3s;
+  border-top: 4px solid var(--success-color);
+  height: 100%;
+}
+
+.advantage-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.advantage-card h4 {
+  color: var(--primary-color);
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.advantage-card p {
+  color: var(--text-light);
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+/* CTA Section */
+.cta-section {
+  background: var(--primary-color);
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.cta-content h2 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.cta-content p {
+  font-size: 1.3rem;
+  margin-bottom: 40px;
+  opacity: 0.9;
+  line-height: 1.6;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Alert Box */
+.alert-box {
+  background: #fff3cd;
+  border-left: 5px solid #ffc107;
+  padding: 25px;
+  border-radius: 8px;
+  margin: 30px 0;
+}
+
+.alert-box h5 {
+  color: #856404;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.alert-box p {
+  color: #856404;
+  margin-bottom: 0;
+  line-height: 1.7;
+}
+
+/* Info Box */
+.info-box {
+  background: #d1ecf1;
+  border-left: 5px solid #17a2b8;
+  padding: 25px;
+  border-radius: 8px;
+  margin: 30px 0;
+}
+
+.info-box h5 {
+  color: #0c5460;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.info-box p {
+  color: #0c5460;
+  margin-bottom: 0;
+  line-height: 1.7;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  
+  .hero .subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .section-header h2 {
+    font-size: 2rem;
+  }
+  
+  .content-section {
+    padding: 60px 0;
+  }
+  
+  .stat-item h3 {
+    font-size: 2.5rem;
+  }
+  
+  #scrollToTop {
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+  }
+  
+  .hero-cta {
+    flex-direction: column;
+  }
+  
+  .btn {
+    width: 100%;
+  }
+}
+
+/* Utility Classes */
+.text-center { text-align: center; }
+.mb-4 { margin-bottom: 1.5rem; }
+.mb-5 { margin-bottom: 3rem; }
+.mt-4 { margin-top: 1.5rem; }
+.mt-5 { margin-top: 3rem; }
+</style>
+</head>
+
+<body>
+<!-- Loading Screen -->
+<div id="loading-screen">
+  <div class="loader"></div>
+  <div class="loading-text">Loading...</div>
+</div>
+
+<!-- Scroll to Top Button -->
+<button id="scrollToTop" aria-label="Scroll to top">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+
+
+    <!-- Top Bar -->
+<div class="top-bar">
+  <div class="container">
+    <div class="top-bar-left text-color">
+      <span>✓ Award-Winning Cloud CRM Software Since 2003</span>
+    </div>
+    <ul class="top-bar-nav">
+      <li><a href="https://www.salesboom.com/crm_supportcenter/overview/index.html">Support Center</a></li>
+      <li><a href="https://www.salesboom.com/crm_trial.html">Free Trial</a></li>
+      <li><a href="https://www.salesboom.com/login.html">Login</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Main Header -->
+<header>
+  <div class="main-header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <a href="https://www.salesboom.com" aria-label="Salesboom CRM Home">
+            <img src="https://www.salesboom.com/img/salesboom-logo-252x67.png" alt="Salesboom Cloud CRM Logo" width="252" height="67">
+          </a>
+        </div>
+        <div class="header-phone">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          <a href="tel:+18552292043">1-855-229-2043</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <h1>Never Let Another Critical Case Slip Through the Cracks</h1>
+      <p class="subtitle">Automatically route, escalate, and manage customer cases with 100% customizable rules that ensure the right expert handles every support request at the right time.</p>
+      <div class="hero-cta">
+        <a href="https://www.salesboom.com/request-crm-demo.html" class="btn btn-primary">
+          <i class="fas fa-calendar-check me-2"></i>Book a Demo
+        </a>
+        <a href="https://www.salesboom.com/crm_trial.html" class="btn btn-outline">
+          <i class="fas fa-rocket me-2"></i>Start Free Trial
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Section -->
+<section class="stats-section">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-3 col-sm-6">
+        <div class="stat-item">
+          <h3>100%</h3>
+          <p>Customizable Rules</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="stat-item">
+          <h3>22+</h3>
+          <p>Years of Innovation</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="stat-item">
+          <h3>26+</h3>
+          <p>Case Assignment</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="stat-item">
+          <h3>24/7</h3>
+          <p>Automated Monitoring</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Problem Statement Section -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>The Hidden Cost of Manual Case Management</h2>
+      <p>Without intelligent automation, customer support cases become chaos. Support requests land in generic inboxes, urgent issues get buried under routine inquiries, and critical escalations reach the wrong people too late.</p>
+    </div>
+    
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-6">
+        <div class="two-column-content">
+          <h4><i class="fas fa-exclamation-triangle text-danger me-2"></i>The Consequences of Manual Case Handling:</h4>
+          <ul>
+            <li>High-priority cases from premium customers languish while junior reps handle routine tasks</li>
+            <li>Urgent escalations fail to reach specialized teams, leading to SLA violations</li>
+            <li>Important stakeholders remain uninformed when critical issues arise</li>
+            <li>Support representatives waste time manually determining who should handle each case</li>
+            <li>Cases fall through the cracks during handoffs between teams or shifts</li>
+            <li>Customer satisfaction plummets as response times drag and issues remain unresolved</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="alert-box">
+          <h5><i class="fas fa-lightbulb me-2"></i>The Solution</h5>
+          <p>Modern businesses require intelligent automation that instantly routes cases to the right expert, triggers appropriate escalation workflows, and keeps all stakeholders informed in real-time.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Solution Overview Section -->
+<section class="content-section bg-light">
+  <div class="container">
+    <div class="section-header">
+      <h2>Intelligent Case Escalation and Routing That Works Automatically</h2>
+      <p>Salesboom's case escalation and routing rules form the backbone of efficient customer support operations. These intelligent automation rules control how support requests are handled and by whom, ensuring every case receives appropriate attention based on its specific details and context.</p>
+    </div>
+    
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-brain"></i>
+          </div>
+          <h3>Conditional Logic</h3>
+          <p>The system operates on fully customizable conditional logic that evaluates each case when it's created, modified, or escalated based on the conditions you define.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-route"></i>
+          </div>
+          <h3>Automatic Assignment</h3>
+          <p>Salesboom automatically assigns cases to the appropriate support representative, sends real-time alerts to stakeholders, creates follow-up tasks, and triggers escalation workflows.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-check-double"></i>
+          </div>
+          <h3>Consistent Handling</h3>
+          <p>This intelligent automation eliminates manual decision-making, reduces response times, and ensures consistency in how your organization handles customer issues.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Core Capabilities Section -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>100% Customizable Rules for Complete Control</h2>
+      <p>Unlike rigid case management systems that force you to adapt to their workflows, Salesboom gives you complete control over how cases are routed and escalated within your organization.</p>
+    </div>
+    
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-sliders-h"></i>
+          </div>
+          <h3>Flexible Conditional Logic</h3>
+          <p>Create routing rules based on any combination of case attributes, customer data, or business context. The system evaluates multiple conditions simultaneously to determine the perfect routing decision for each unique situation.</p>
+          
+          <h4><i class="fas fa-filter me-2"></i>Define Conditions Based On:</h4>
+          <ul>
+            <li>Customer tier, account value, or relationship status</li>
+            <li>Case category, priority level, or severity classification</li>
+            <li>Product or service line affected</li>
+            <li>Geographic location or time zone</li>
+            <li>Support channel used (phone, email, chat, portal)</li>
+            <li>Keywords or phrases in case descriptions</li>
+            <li>Customer sentiment detected through AI analysis</li>
+            <li>SLA requirements and time-sensitive deadlines</li>
+            <li>Previous case history or escalation patterns</li>
+            <li>Agent availability, skills, and current workload</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="col-lg-6">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-user-check"></i>
+          </div>
+          <h3>Automatic Case Assignment & Reassignment</h3>
+          <p>Cases route automatically to the right person based on your custom conditions. When a case is created or modified, the system evaluates all active rules and instantly assigns it to the support representative best equipped to resolve it.</p>
+          
+          <h4><i class="fas fa-random me-2"></i>Routing Capabilities Include:</h4>
+          <ul>
+            <li>Round-robin distribution for balanced workload across teams</li>
+            <li>Skills-based routing to match cases with expert knowledge</li>
+            <li>Geographic routing based on customer or agent location</li>
+            <li>Workload-aware assignment to prevent representative overload</li>
+            <li>Automatic reassignment when cases are escalated or modified</li>
+            <li>Backup routing when primary assignees are unavailable</li>
+            <li>Team-based assignment with internal redistribution flexibility</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="col-lg-6">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-bell"></i>
+          </div>
+          <h3>Real-Time Alerts and Notifications</h3>
+          <p>Keep stakeholders informed instantly when cases require attention. Salesboom automatically sends email alerts to anyone who needs to know about a case creation, escalation, or status change.</p>
+          
+          <h4><i class="fas fa-envelope me-2"></i>Alert Triggers Include:</h4>
+          <ul>
+            <li>Immediate notification when high-value customer cases arrive</li>
+            <li>Escalation alerts to managers and specialized teams</li>
+            <li>Sales representative notifications when their accounts need attention</li>
+            <li>Automatic updates to cross-functional teams (shipping, billing, technical)</li>
+            <li>Reminder alerts for cases approaching SLA deadlines</li>
+            <li>Status change notifications to keep everyone synchronized</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="col-lg-6">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-tasks"></i>
+          </div>
+          <h3>Automated Task Creation</h3>
+          <p>Beyond routing and alerts, the system automatically creates follow-up tasks to ensure proper case resolution and relationship maintenance. These tasks appear on the appropriate team member's dashboard with all necessary context.</p>
+          
+          <h4><i class="fas fa-list-check me-2"></i>Automated Tasks Include:</h4>
+          <ul>
+            <li>Follow-up calls scheduled for account managers</li>
+            <li>Quality assurance reviews for escalated cases</li>
+            <li>Relationship maintenance activities for VIP customers</li>
+            <li>Cross-functional coordination tasks for complex issues</li>
+            <li>Documentation requirements after case resolution</li>
+            <li>Customer satisfaction surveys triggered at case closure</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Real-World Scenarios Section -->
+<section class="content-section bg-light">
+  <div class="container">
+    <div class="section-header">
+      <h2>Real-World Scenarios That Drive Results</h2>
+      <p>See how intelligent case routing solves common customer service challenges across different business contexts.</p>
+    </div>
+    
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <div class="scenario-card">
+          <span class="badge-scenario"><i class="fas fa-crown me-2"></i>VIP Protection</span>
+          <h4>Scenario 1: VIP Customer Protection</h4>
+          
+          <div class="scenario-section">
+            <h5>Challenge:</h5>
+            <p>A premium enterprise customer submits a support case through the standard portal, but their VIP status isn't immediately visible to frontline support staff.</p>
+          </div>
+          
+          <div class="scenario-section">
+            <h5>Automated Workflow:</h5>
+            <p>Case routing rules detect the customer's platinum tier status and immediately assign the case to a senior support specialist. Simultaneously, alerts notify the customer's dedicated account manager and regional VP, while creating a follow-up task for the account manager to check in after resolution.</p>
+          </div>
+          
+          <div class="outcome-box">
+            <strong><i class="fas fa-trophy me-2"></i>Outcome:</strong>
+            <p>VIP customer receives white-glove service, relationship is protected, and account team stays informed without manual intervention.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-4">
+        <div class="scenario-card">
+          <span class="badge-scenario"><i class="fas fa-fire me-2"></i>Critical Escalation</span>
+          <h4>Scenario 2: Critical System Outage</h4>
+          
+          <div class="scenario-section">
+            <h5>Challenge:</h5>
+            <p>A customer reports a complete system outage affecting production operations, requiring immediate attention from specialized technical teams.</p>
+          </div>
+          
+          <div class="scenario-section">
+            <h5>Automated Workflow:</h5>
+            <p>Keywords like "outage" and "production down" combined with high priority trigger instant escalation. The case routes directly to Tier 3 technical support, bypassing normal escalation levels. Email alerts go to the technical director, product management team, and on-call engineer with SMS backup notification.</p>
+          </div>
+          
+          <div class="outcome-box">
+            <strong><i class="fas fa-clock me-2"></i>Outcome:</strong>
+            <p>Critical issue reaches the right experts within minutes instead of hours, preventing extended downtime and customer churn.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-4">
+        <div class="scenario-card">
+          <span class="badge-scenario"><i class="fas fa-handshake me-2"></i>Cross-Functional</span>
+          <h4>Scenario 3: Cross-Functional Coordination</h4>
+          
+          <div class="scenario-section">
+            <h5>Challenge:</h5>
+            <p>A customer's case involves both a technical support issue and a billing discrepancy requiring coordination between multiple departments.</p>
+          </div>
+          
+          <div class="scenario-section">
+            <h5>Automated Workflow:</h5>
+            <p>Case routing detects keywords related to both technical problems and billing. The system assigns primary ownership to technical support while simultaneously creating tasks for billing review and notifying the finance team. All stakeholders receive access to the unified case with full context.</p>
+          </div>
+          
+          <div class="outcome-box">
+            <strong><i class="fas fa-users me-2"></i>Outcome:</strong>
+            <p>Complex issue is coordinated seamlessly across departments without customer having to repeat information or manage multiple support interactions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Benefits Section -->
+<section class="benefits-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 style="color: white;">Transform Your Support Operations</h2>
+      <p style="color: rgba(255,255,255,0.9);">Automated case routing and escalation delivers measurable improvements across your entire customer service organization.</p>
+    </div>
+    
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6">
+        <div class="benefit-item">
+          <div class="benefit-icon">
+            <i class="fas fa-tachometer-alt"></i>
+          </div>
+          <h3>Faster Response Times</h3>
+          <p>Eliminate delays caused by manual case assignment and routing decisions. Cases reach the right expert instantly, dramatically reducing time to first response.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="benefit-item">
+          <div class="benefit-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3>Improved SLA Compliance</h3>
+          <p>Automated escalation ensures urgent cases receive priority attention before SLA deadlines are breached, improving compliance rates and customer satisfaction.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="benefit-item">
+          <div class="benefit-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3>VIP Relationship Protection</h3>
+          <p>High-value customers automatically receive premium service levels, protecting critical relationships and reducing churn among your most valuable accounts.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="benefit-item">
+          <div class="benefit-icon">
+            <i class="fas fa-balance-scale"></i>
+          </div>
+          <h3>Balanced Workload Distribution</h3>
+          <p>Round-robin and workload-aware routing prevents representative burnout by distributing cases evenly across available support staff.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="benefit-item">
+          <div class="benefit-icon">
+            <i class="fas fa-bullseye"></i>
+          </div>
+          <h3>Skills Matching Accuracy</h3>
+          <p>Cases automatically route to representatives with the right expertise, improving first-contact resolution rates and reducing escalations.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="benefit-item">
+          <div class="benefit-icon">
+            <i class="fas fa-chart-pie"></i>
+          </div>
+          <h3>Enhanced Visibility</h3>
+          <p>Stakeholders stay informed through automated alerts, eliminating the need for manual status updates and improving cross-functional coordination.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Integration Section -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Unified CRM Platform Advantages</h2>
+      <p>Case routing and escalation work seamlessly with Salesboom's complete CRM ecosystem, delivering benefits impossible with standalone support tools.</p>
+    </div>
+    
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-handshake"></i>
+          </div>
+          <h3>Sales Visibility</h3>
+          <p>Sales representatives receive automatic notifications when their accounts need attention, maintaining relationships during service interactions and preventing account churn.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-user-circle"></i>
+          </div>
+          <h3>Customer 360 Context</h3>
+          <p>Routing decisions leverage complete customer history, purchase patterns, and relationship status for intelligent assignment based on full context.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-lightbulb"></i>
+          </div>
+          <h3>Marketing Insights</h3>
+          <p>Case data flows into marketing analytics to identify product improvement opportunities and common pain points driving future campaigns.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-dollar-sign"></i>
+          </div>
+          <h3>Financial Integration</h3>
+          <p>Case routing considers customer payment status, contract terms, and account value for appropriate prioritization and resource allocation.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-book"></i>
+          </div>
+          <h3>Knowledge Base Connection</h3>
+          <p>Routing rules can suggest knowledge base articles automatically, enabling faster resolution and consistent answers across support teams.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-chart-bar"></i>
+          </div>
+          <h3>Performance Analytics</h3>
+          <p>Case routing data feeds comprehensive dashboards showing team efficiency, individual performance, and bottleneck identification for continuous improvement.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  
+    <!-- ---------------------------------------------------------------------------------------------------------------------------------- -->
+     
+    <div class="col-md-8 mx-auto">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body d-flex flex-column">
+            <!-- Responsive iframe -->
+            <div class="ratio ratio-16x9 mb-3">
+              <iframe
+                src="https://www.youtube.com/embed/JbmZYxKFe30"
+                title="YouTube video 2"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- ---------------------------------------------------------------------------------------------------------------------------------- -->
+
+
+<!-- Configuration Section -->
+<section class="content-section bg-light">
+  <div class="container">
+    <div class="section-header">
+      <h2>Easy Configuration Without IT Dependencies</h2>
+      <p>Despite their sophisticated capabilities, Salesboom's case routing and escalation rules are designed for business users to configure and maintain without constant IT involvement.</p>
+    </div>
+    
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-6">
+        <div class="info-box">
+          <h5><i class="fas fa-wrench me-2"></i>Configuration Features:</h5>
+          <ul style="list-style: none; padding-left: 0; margin-top: 15px;">
+            <li style="padding-left: 25px; position: relative; margin-bottom: 10px; color: #0c5460;">
+              <i class="fas fa-check" style="position: absolute; left: 0; color: #28a745;"></i>
+              Visual rule builder with drag-and-drop condition creation
+            </li>
+            <li style="padding-left: 25px; position: relative; margin-bottom: 10px; color: #0c5460;">
+              <i class="fas fa-check" style="position: absolute; left: 0; color: #28a745;"></i>
+              Template library with pre-built scenarios for common use cases
+            </li>
+            <li style="padding-left: 25px; position: relative; margin-bottom: 10px; color: #0c5460;">
+              <i class="fas fa-check" style="position: absolute; left: 0; color: #28a745;"></i>
+              Test mode to validate rules before activating in production
+            </li>
+            <li style="padding-left: 25px; position: relative; margin-bottom: 10px; color: #0c5460;">
+              <i class="fas fa-check" style="position: absolute; left: 0; color: #28a745;"></i>
+              Version history with rollback capability for confident experimentation
+            </li>
+            <li style="padding-left: 25px; position: relative; margin-bottom: 10px; color: #0c5460;">
+              <i class="fas fa-check" style="position: absolute; left: 0; color: #28a745;"></i>
+              Clone and modify functionality to rapidly create rule variations
+            </li>
+            <li style="padding-left: 25px; position: relative; margin-bottom: 10px; color: #0c5460;">
+              <i class="fas fa-check" style="position: absolute; left: 0; color: #28a745;"></i>
+              Detailed logging shows exactly why each routing decision was made
+            </li>
+            <li style="padding-left: 25px; position: relative; margin-bottom: 10px; color: #0c5460;">
+              <i class="fas fa-check" style="position: absolute; left: 0; color: #28a745;"></i>
+              Import/export capabilities for replicating rules across teams or locations
+            </li>
+            <li style="padding-left: 25px; position: relative; margin-bottom: 10px; color: #0c5460;">
+              <i class="fas fa-check" style="position: absolute; left: 0; color: #28a745;"></i>
+              Real-time validation prevents conflicting rules or logic errors
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="alert-box">
+          <h5><i class="fas fa-user-cog me-2"></i>Business User Empowerment</h5>
+          <p>Business managers can adapt routing rules as processes evolve, respond to seasonal changes, or accommodate organizational restructuring without waiting for IT resources or external consultants.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Competitive Advantages Section -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Why Salesboom's Case Routing Outperforms the Competition</h2>
+      <p>While many CRM systems offer basic case routing, Salesboom delivers capabilities that set us apart in the market.</p>
+    </div>
+    
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6">
+        <div class="advantage-card">
+          <h4><i class="fas fa-infinity me-2"></i>True 100% Customization</h4>
+          <p>Unlike competitors with rigid templates or limited condition options, Salesboom enables unlimited custom conditions based on any data field, enabling perfect alignment with your unique processes.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="advantage-card">
+          <h4><i class="fas fa-dollar-sign me-2"></i>No Additional Cost</h4>
+          <p>Case escalation and routing rules are included in your CRM subscription, not sold as expensive add-ons or requiring separate workflow automation purchases.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="advantage-card">
+          <h4><i class="fas fa-project-diagram me-2"></i>Cross-Functional Coordination</h4>
+          <p>Rules can trigger actions across sales, service, and operations teams within a single unified platform, eliminating integration complexity.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="advantage-card">
+          <h4><i class="fas fa-user-friends me-2"></i>Business User Friendly</h4>
+          <p>Configure sophisticated rules without writing code or depending on technical resources. Visual builders and templates enable rapid deployment.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="advantage-card">
+          <h4><i class="fas fa-award me-2"></i>22+ Years of Refinement</h4>
+          <p>Our case management capabilities reflect over two decades of real-world usage and continuous improvement based on customer feedback.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="advantage-card">
+          <h4><i class="fas fa-expand-arrows-alt me-2"></i>Unlimited Scalability</h4>
+          <p>Whether managing 50 cases per month or 50,000, our routing engine scales seamlessly without performance degradation or additional costs.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-content">
+      <h2>Ready to Automate Your Case Management Workflows?</h2>
+      <p>Stop letting critical cases slip through the cracks. Discover how Salesboom's intelligent routing and escalation rules can transform your customer support operations with automated workflows tailored to your business.</p>
+      <div class="hero-cta">
+        <a href="https://www.salesboom.com/request-crm-demo.html" class="btn btn-primary">
+          <i class="fas fa-calendar-check me-2"></i>Book a Demo Today
+        </a>
+        <a href="https://www.salesboom.com/crm_trial.html" class="btn btn-outline">
+          <i class="fas fa-rocket me-2"></i>Start Free Trial
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-2">
+      <h3 class="fw-bold text-color">
+        <i class="fa-solid fa-layer-group me-2"></i>
+        Explore Salesboom Editions
+      </h3>
+      <p class="text-muted">Discover powerful CRM editions to scale your business efficiently.</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-briefcase fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Professional Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              A complete CRM suite with Marketing Automation, ERP integration, and Support tools — built for performance and value.
+            </p>
+            <a href="https://www.salesboom.com/editions/professional-edition.html" class="btn btn-color mt-auto">
+              Explore Professional <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-building fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Enterprise Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              For large enterprises — automate workflows, unify data, and leverage analytics to drive strategic growth.
+            </p>
+            <a href="https://www.salesboom.com/editions/enterprise-edition.html" class="btn btn-color mt-auto">
+              View Enterprise <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-users fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Team Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              Perfect for small teams starting with CRM — manage leads, track sales, and boost productivity with simplicity.
+            </p>
+            <a href="https://www.salesboom.com/editions/team-edition.html" class="btn btn-color mt-auto">
+           Discover Team<i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="container py-5">
+  <h2 class="text-center mb-5 text-color">CRM Automation, Alerts & AI Solutions</h2>
+  <div class="row g-4">
+
+    <!-- Card 1 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-route text-color fa-3x mb-3"></i>
+        <h4>Lead Routing</h4>
+        <p>
+          Automatically assign leads to the best-fit sales reps using <a href="https://www.salesboom.com/products/feature-lead-routing.html" class="text-color fw-bold">Lead Routing</a> to speed up follow-ups.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-clock text-color fa-3x mb-3"></i>
+        <h4>Support Hours Management</h4>
+        <p>
+          Schedule and manage customer support hours effectively with <a href="https://www.salesboom.com/products/feature-support-hours-management.html" class="text-color fw-bold">Support Hours Management</a>, improving response reliability.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-exclamation-triangle text-color fa-3x mb-3"></i>
+        <h4>At-Risk Deal Alerts</h4>
+        <p>
+          Stay ahead of risky deals — receive timely warnings using <a href="https://www.salesboom.com/products/feature-at-risk-deal-alert.html" class="text-color fw-bold">At-Risk Deal Alerts</a> so you can act fast.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-headset text-color fa-3x mb-3"></i>
+        <h4>Self-Service Portal</h4>
+        <p>
+          Provide customers with a CRM-integrated self-service portal for support and service management — check <a href="https://www.salesboom.com/service-management/web-based_self_service_portal_software.html" class="text-color fw-bold">Self-Service Portal Software</a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-robot text-color fa-3x mb-3"></i>
+        <h4>AI-Powered CRM</h4>
+        <p>
+          Enhance CRM workflows and automation with AI-driven insights using <a href="https://www.salesboom.com/agentic-workforce/agentic-workforce-AI-Powered-CRM.html" class="text-color fw-bold">AI-Powered CRM</a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-rocket text-color fa-3x mb-3"></i>
+        <h4>AI Sales Engine & CPQ</h4>
+        <p>
+          Automate quoting, pipeline management, and accelerate sales using the <a href="https://www.salesboom.com/ai-sales-engine/modern-sales-flywheel-cpq-crm-ai.html" class="text-color fw-bold">AI Sales Engine</a>.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="mt-5 footer">
+  <div class="container mt-5 pt-5">
+    <div class="footer-grid">
+      <div class="footer-section">
+        <h3>Products</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/products/tools-sfa.html">Sales Force Automation</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-marketing.html">Marketing Automation</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-casemanagement.html">Case Management</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-reporting.html">Business Intelligence</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-emailintegration.html">Email Integration</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Solutions</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/products/edition-team.html">Team Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/edition-professional.html">Professional Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/edition-enterprise.html">Enterprise Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/industry-solutions.html">Industry Solutions</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/company/index.html">About Us</a></li>
+          <li><a href="https://www.salesboom.com/company/company-contact.html">Contact Us</a></li>
+          <li><a href="https://www.salesboom.com/customers/index.html">Customers</a></li>
+          <li><a href="https://www.salesboom.com/partners/index.html">Partners</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/support/index.html">Support Center</a></li>
+          <li><a href="https://www.salesboom.com/crm_supportcenter/overview/index.html">Documentation</a></li>
+          <li><a href="https://www.salesboom.com/whitepapers/index.html">White Papers</a></li>
+          <li><a href="https://www.salesboom.com/pop-privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="bg-color">
+    <div class="container">
+     <div class="footer-bottom pb-3 mt-3">
+      <p>&copy; 2003-2025 <a class="text-white fw-bold" href="https://www.salesboom.com">Salesboom.com</a> Inc. All rights reserved. | Call: 1-855-229-2043</p>
+      <p style="margin-top: 10px;">Salesboom's color-coded CRM lead management software helps businesses visually prioritize sales opportunities with automated workflow rules. Contact us to learn how color coding can transform your lead management process and increase sales productivity.</p>
+    </div>
+    </div>
+  </div>
+ 
+</footer>
+
+<!-- Common JavaScript -->
+<script src="content/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+<script>
+// Loading Screen
+window.addEventListener('load', function() {
+  const loadingScreen = document.getElementById('loading-screen');
+  setTimeout(function() {
+    loadingScreen.classList.add('fade-out');
+  }, 500);
+});
+
+// Scroll to Top Button
+const scrollToTopBtn = document.getElementById('scrollToTop');
+
+window.addEventListener('scroll', function() {
+  if (window.pageYOffset > 300) {
+    scrollToTopBtn.classList.add('show');
+  } else {
+    scrollToTopBtn.classList.remove('show');
+  }
+});
+
+scrollToTopBtn.addEventListener('click', function() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+
+// Smooth Scroll for All Links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  });
+});
+</script>
+
+</body>
+</html>

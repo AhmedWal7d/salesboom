@@ -1,0 +1,1402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    
+    <!-- Primary Meta Tags -->
+    <title>Zip Code Proximity Search for CRM | Salesboom</title>
+    <meta name="description" content="Target prospects by location with Salesboom's Zip Code Proximity Search. Find leads, contacts, and accounts within any radius. Perfect for sales and marketing teams.">
+    <meta name="keywords" content="Zip code proximity search, Geographic CRM search, Location-based prospecting, Territory management CRM, Field sales tools, Radius search CRM, Geographic marketing campaigns, Location intelligence CRM">
+    <link rel="canonical" href="https://www.salesboom.com/feature-zip-code-proximity-search.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.salesboom.com/feature-zip-code-proximity-search.html">
+    <meta property="og:title" content="Zip Code Proximity Search for CRM | Salesboom">
+    <meta property="og:description" content="Target prospects by location with Salesboom's Zip Code Proximity Search. Find leads, contacts, and accounts within any radius. Perfect for sales and marketing teams.">
+    <meta property="og:image" content="https://www.salesboom.com/img/feature-zip-code-proximity-search-og.jpg">
+    <meta property="og:site_name" content="Salesboom CRM">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.salesboom.com/feature-zip-code-proximity-search.html">
+    <meta name="twitter:title" content="Zip Code Proximity Search for CRM | Salesboom">
+    <meta name="twitter:description" content="Target prospects by location with Salesboom's Zip Code Proximity Search. Find leads, contacts, and accounts within any radius. Perfect for sales and marketing teams.">
+    <meta name="twitter:image" content="https://www.salesboom.com/img/feature-zip-code-proximity-search-og.jpg">
+    <meta name="twitter:site" content="@SalesboomCloud">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Salesboom Zip Code Proximity Search",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web-based, Cloud",
+      "offers": {
+        "@type": "Offer",
+        "price": "14.00",
+        "priceCurrency": "USD",
+        "priceValidUntil": "2026-12-31"
+      },
+      "featureList": [
+        "Zip code proximity search with customizable radius",
+        "Geographic targeting for leads, contacts, and accounts",
+        "Field sales route optimization",
+        "Territory management and planning tools",
+        "Targeted marketing campaign capabilities",
+        "Emergency service response coordination"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.5",
+        "ratingCount": "3500"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Salesboom",
+        "url": "https://www.salesboom.com",
+        "logo": "https://www.salesboom.com/img/salesboom-logo-252x67.png",
+        "foundingDate": "2003",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+1-855-229-2043",
+          "contactType": "Customer Service"
+        }
+      }
+    }
+    </script>
+    
+    <link rel="shortcut icon" href="https://www.salesboom.com/favicon.ico">
+    <link rel="stylesheet" href="content/css/bootstrap.min.css">
+    <link rel="stylesheet" href="content/css/salesboom-common.css">
+    <link rel="shortcut icon" href="content/image/salesboom-logo-252x67.png" type="image/x-icon"> 
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #002f6c;
+            --secondary-color: #0052cc;
+            --accent-color: #3498db;
+            --text-dark: #333333;
+            --text-light: #666666;
+            --bg-light: #f8f9fa;
+            --success-color: #28a745;
+            --shadow: 0 4px 6px rgba(0, 47, 108, 0.1);
+            --shadow-hover: 0 8px 15px rgba(0, 47, 108, 0.2);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+        
+        /* Loading Screen */
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+        
+        #loading-screen.fade-out {
+            opacity: 0;
+            visibility: hidden;
+        }
+        
+        .loader {
+            width: 60px;
+            height: 60px;
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            border-top: 5px solid #ffffff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .loading-text {
+            color: white;
+            font-size: 1.2rem;
+            margin-top: 20px;
+            font-weight: 500;
+        }
+        
+        /* Scroll to Top Button */
+        #scroll-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 20px;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-hover);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        
+        #scroll-to-top:hover {
+            background: var(--secondary-color);
+            transform: translateY(-5px);
+        }
+        
+        #scroll-to-top.show {
+            display: flex;
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 100px 0 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.5;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .hero-section h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 25px;
+            line-height: 1.2;
+        }
+        
+        .hero-section .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            line-height: 1.6;
+        }
+        
+        .hero-icon {
+            font-size: 4rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .pioneer-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 10px 25px;
+            border-radius: 25px;
+            margin-bottom: 20px;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+        
+        /* Section Styles */
+        .content-section {
+            padding: 80px 0;
+        }
+        
+        .content-section.bg-light {
+            background: var(--bg-light);
+        }
+        
+        .section-header {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto 60px;
+        }
+        
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .section-header p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+        
+        /* Feature Cards */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--primary-color);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            color: white;
+            margin-bottom: 25px;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .feature-card h4 {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            margin: 20px 0 10px;
+            font-weight: 600;
+        }
+        
+        .feature-card p {
+            color: var(--text-light);
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+        
+        .feature-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .feature-card li {
+            padding-left: 30px;
+            position: relative;
+            margin-bottom: 12px;
+            color: var(--text-light);
+        }
+        
+        .feature-card li::before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--success-color);
+        }
+        
+        /* Stats Section */
+        .stats-section {
+            background: var(--primary-color);
+            color: white;
+            padding: 60px 0;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+        
+        .stat-item i {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            opacity: 0.9;
+        }
+        
+        .stat-item h3 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 5px;
+        }
+        
+        .stat-item p {
+            font-size: 1.1rem;
+            opacity: 0.85;
+        }
+        
+        /* Benefits Grid */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .benefit-item {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .benefit-item:hover {
+            transform: scale(1.05);
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+
+        }
+        
+        .benefit-item i {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+        
+        .benefit-item h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .benefit-item p {
+            opacity: 0.9;
+            line-height: 1.7;
+        }
+        
+        /* Use Case Section */
+        .use-case-section {
+            background: white;
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            margin-bottom: 30px;
+            border-left: 5px solid var(--primary-color);
+        }
+        
+        .use-case-section h3 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .use-case-section h4 {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            margin: 25px 0 15px;
+            font-weight: 600;
+        }
+        
+        .use-case-section p {
+            color: var(--text-light);
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+        
+        .use-case-section ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 20px 0;
+        }
+        
+        .use-case-section li {
+            padding-left: 30px;
+            position: relative;
+            margin-bottom: 12px;
+            color: var(--text-light);
+        }
+        
+        .use-case-section li::before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--success-color);
+        }
+        
+        /* ROI Metrics */
+        .roi-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+        
+        .roi-card {
+            background: white;
+            padding: 35px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            border-top: 3px solid var(--success-color);
+        }
+        
+        .roi-card h4 {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .roi-card p {
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .cta-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .cta-content p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            line-height: 1.6;
+        }
+        
+        .btn-cta {
+            display: inline-block;
+            padding: 18px 45px;
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--primary-color);
+            background: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            color: var(--primary-color);
+        }
+        
+        /* Content Text Styles */
+        .content-text {
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-light);
+        }
+        
+        .content-text h3 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin: 40px 0 20px;
+            font-weight: 600;
+        }
+        
+        .content-text ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 20px 0;
+        }
+        
+        .content-text li {
+            padding-left: 30px;
+            position: relative;
+            margin-bottom: 12px;
+        }
+        
+        .content-text li::before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+        }
+        
+        /* Highlight Box */
+        .highlight-box {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-left: 5px solid var(--primary-color);
+            padding: 30px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+        
+        .highlight-box h4 {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .highlight-box p {
+            color: var(--text-light);
+            line-height: 1.7;
+            margin-bottom: 10px;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-section .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .section-header h2 {
+                font-size: 2rem;
+            }
+            
+            .content-section {
+                padding: 60px 0;
+            }
+            
+            .feature-grid,
+            .benefits-grid,
+            .roi-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            #scroll-to-top {
+                bottom: 20px;
+                right: 20px;
+                width: 45px;
+                height: 45px;
+            }
+            
+            .use-case-section {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader"></div>
+        <div class="loading-text">Loading...</div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    
+
+    <!-- Top Bar -->
+<div class="top-bar">
+  <div class="container">
+    <div class="top-bar-left text-color">
+      <span>✓ Award-Winning Cloud CRM Software Since 2003</span>
+    </div>
+    <ul class="top-bar-nav">
+      <li><a href="https://www.salesboom.com/crm_supportcenter/overview/index.html">Support Center</a></li>
+      <li><a href="https://www.salesboom.com/crm_trial.html">Free Trial</a></li>
+      <li><a href="https://www.salesboom.com/login.html">Login</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Main Header -->
+<header>
+  <div class="main-header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <a href="https://www.salesboom.com" aria-label="Salesboom CRM Home">
+            <img src="https://www.salesboom.com/img/salesboom-logo-252x67.png" alt="Salesboom Cloud CRM Logo" width="252" height="67">
+          </a>
+        </div>
+        <div class="header-phone">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          <a href="tel:+18552292043">1-855-229-2043</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <div class="pioneer-badge">
+                    <i class="fas fa-crown" style="margin-right: 8px;"></i>
+                    World's First CRM with Zip Code Proximity Search
+                </div>
+                <div class="hero-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <h1>Find Prospects Anywhere with Pinpoint Geographic Precision</h1>
+                <p class="subtitle">Target leads, contacts, and accounts within any radius using zip code proximity search. Maximize prospecting efficiency and transform how your sales and marketing teams work.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Statement Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>The Challenge of Location-Based Prospecting</h2>
+            </div>
+            <div class="content-text">
+                <p>Sales and marketing teams waste countless hours manually researching prospect locations, plotting territories on paper maps, and trying to organize customer visits efficiently. Traditional CRM systems force teams to search through endless lists without any geographic context, making it nearly impossible to identify opportunities in specific regions or plan efficient field visits.</p>
+                
+                <h3>The impact on business operations is significant:</h3>
+                <ul>
+                    <li>Field sales representatives waste time and fuel driving inefficient routes</li>
+                    <li>Marketing campaigns lack geographic targeting precision, reducing ROI</li>
+                    <li>Event managers struggle to generate accurate invite lists for regional events</li>
+                    <li>Territory managers cannot effectively balance workloads across geographic areas</li>
+                    <li>Support teams lose critical time locating the nearest technician for emergency responses</li>
+                    <li>Sales leadership lacks visibility into regional performance and opportunity density</li>
+                </ul>
+                
+                <p style="margin-top: 30px;">Without intelligent geographic search capabilities, businesses miss opportunities hiding in plain sight and waste resources on inefficient prospecting and service delivery.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Overview Section -->
+    <section class="content-section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Revolutionary Zip Code Proximity Search Technology</h2>
+                <p>Salesboom introduced the world's first zip code proximity search capability to cloud CRM systems, transforming how businesses approach location-based prospecting and customer management.</p>
+            </div>
+            
+            <div class="content-text text-center" style="max-width: 800px; margin: 0 auto 50px;">
+                <p>This powerful feature allows teams to locate prospects, leads, contacts, and accounts using a zip code and customizable search radius, delivering pinpoint accuracy for marketing and sales initiatives.</p>
+            </div>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-search-location"></i>
+                    </div>
+                    <h3>Customizable Geographic Search</h3>
+                    <p>Search by any zip code or postal code with customizable radius in miles or kilometers. Set your search parameters to match your specific business needs.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Complete Visibility</h3>
+                    <p>Visualize all leads, contacts, and accounts within the specified geographic area. Drill down to progressively smaller regions to narrow results.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-route"></i>
+                    </div>
+                    <h3>Instant List Generation</h3>
+                    <p>Generate instant lists of prospects for territory planning and route optimization. Export geographic segments for targeted campaigns.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Performance Tracking</h3>
+                    <p>Track performance metrics by specific geographic regions. Measure results and optimize strategy based on location data.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-plug"></i>
+                    </div>
+                    <h3>Seamless Integration</h3>
+                    <p>Integrate location data with all standard CRM functions and workflows. No separate systems or complex integrations required.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Global Coverage</h3>
+                    <p>Support for international postal codes and global territories. Manage worldwide operations with consistent geographic intelligence.</p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <p style="font-size: 1.2rem; color: var(--text-light); max-width: 900px; margin: 0 auto;">This breakthrough technology gives sales, marketing, and support teams unprecedented control over how they target, engage, and serve customers based on geographic proximity.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                <i class="fa-solid fa-infinity"></i>
+                    <h3 class="text-white">0</h3>
+                    <p class="text-white">First CRM with proximity search</p>
+                </div>
+                <div class="stat-item">
+                  <i class="fa-solid fa-calendar"></i>
+                    <h3 class="text-white">95+</h3>
+                    <p class="text-white"> Unlimited searches</p>
+                </div>
+                <div class="stat-item">
+                <i class="fa-solid fa-infinity"></i>
+                    <h3 class="text-white">0</h3>
+                    <p class="text-white">Real-time results</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fa-solid fa-infinity"></i>
+                    <h3 class="text-white">0</h3>
+                    <p class="text-white">Configuration needed</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Powerful Applications Across Your Organization</h2>
+                <p>Zip code proximity search delivers immediate value across multiple business functions, transforming how teams approach geographic challenges.</p>
+            </div>
+            
+            <div class="use-case-section">
+                <h3><i class="fas fa-user-tie" style="color: var(--primary-color); margin-right: 15px;"></i>Field Sales Optimization</h3>
+                <p>Traveling sales representatives can instantly search for leads and prospects within a specific radius of their current location or planned destinations. Before visiting a client in a new city, sales reps can identify all nearby opportunities, schedule multiple meetings in the same area, and maximize the productivity of every business trip.</p>
+                <h4>Benefits include:</h4>
+                <ul>
+                    <li>Reduced travel costs through optimized routing and clustered appointments</li>
+                    <li>Increased face-to-face meeting opportunities without additional travel</li>
+                    <li>Ability to respond quickly when prospects request immediate in-person meetings</li>
+                    <li>Better territory coverage with data-driven planning</li>
+                    <li>Improved work-life balance by minimizing unnecessary travel time</li>
+                </ul>
+            </div>
+            
+            <div class="use-case-section">
+                <h3><i class="fas fa-bullhorn" style="color: var(--primary-color); margin-right: 15px;"></i>Targeted Marketing Campaigns</h3>
+                <p>Marketing teams gain unprecedented ability to manage campaigns based on specific geographic regions. Instead of broad, unfocused campaigns, marketers can target prospects in high-potential zip codes, test messaging in specific markets, and measure campaign performance by geographic area.</p>
+                <h4>Marketing capabilities include:</h4>
+                <ul>
+                    <li>Creating highly targeted direct mail campaigns for specific neighborhoods</li>
+                    <li>Testing new product launches in defined geographic markets before wider rollout</li>
+                    <li>Analyzing campaign performance by region to identify high-converting areas</li>
+                    <li>Allocating marketing budget based on opportunity density in each territory</li>
+                    <li>Personalizing messaging based on regional demographics and characteristics</li>
+                    <li>Building lookalike audiences based on high-performing geographic segments</li>
+                </ul>
+            </div>
+            
+            <div class="use-case-section">
+                <h3><i class="fas fa-calendar-check" style="color: var(--primary-color); margin-right: 15px;"></i>Event Management and Invitations</h3>
+                <p>Event managers can quickly generate accurate invitation lists for trade shows, seminars, customer appreciation events, and product demonstrations in any city. The system instantly identifies all relevant contacts within the event radius, ensuring no potential attendees are overlooked.</p>
+                <h4>Event planning benefits:</h4>
+                <ul>
+                    <li>Generate complete invite lists in seconds instead of hours</li>
+                    <li>Set appropriate search radius based on event type and target audience</li>
+                    <li>Segment attendees by customer type, industry, or engagement level</li>
+                    <li>Track RSVPs and attendance patterns by geographic region</li>
+                    <li>Plan multiple events efficiently by identifying high-density opportunity areas</li>
+                    <li>Calculate optimal event locations based on customer concentration</li>
+                </ul>
+            </div>
+            
+            <div class="use-case-section">
+                <h3><i class="fas fa-ambulance" style="color: var(--primary-color); margin-right: 15px;"></i>Emergency Service Response</h3>
+                <p>Support and service teams can quickly locate the nearest technician, support specialist, or account manager to respond to urgent customer needs. When emergencies arise, seconds matter—proximity search eliminates delays by instantly identifying who can respond fastest.</p>
+                <h4>Emergency response capabilities:</h4>
+                <ul>
+                    <li>Find available technicians within specified distance of incident location</li>
+                    <li>Consider technician skills, availability, and current workload in selection</li>
+                    <li>Reduce response times by dispatching the geographically closest resource</li>
+                    <li>Track historical response times by territory to optimize future deployment</li>
+                    <li>Plan technician territories based on customer density and service demand</li>
+                    <li>Ensure SLA compliance through faster emergency response coordination</li>
+                </ul>
+            </div>
+            
+            <div class="use-case-section">
+                <h3><i class="fas fa-map" style="color: var(--primary-color); margin-right: 15px;"></i>Territory Management and Planning</h3>
+                <p>Sales managers can balance territories effectively by visualizing opportunity distribution across geographic regions. The proximity search reveals whether territories are fairly allocated based on actual prospect and customer density rather than arbitrary geographic boundaries.</p>
+                <h4>Territory management benefits:</h4>
+                <ul>
+                    <li>Identify over-served and under-served territories at a glance</li>
+                    <li>Rebalance workload based on actual opportunity density</li>
+                    <li>Assign new representatives to territories with optimal prospect concentrations</li>
+                    <li>Identify coverage gaps that require additional resources or territory adjustments</li>
+                    <li>Make data-driven decisions about territory expansion or consolidation</li>
+                    <li>Improve team morale through fair and balanced territory assignments</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+       <!-- ---------------------------------------------------------------------------------------------------------------------------------- -->
+      <div class="col-md-8 mx-auto">
+        <div class="card h-100 shadow-sm border-0">
+          <div class="card-body d-flex flex-column">
+            <!-- Responsive iframe -->
+            <div class="ratio ratio-16x9 mb-3">
+              <iframe
+                src="https://www.youtube.com/embed/bV6tTp1QdiU"
+                title="YouTube video 2"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- ---------------------------------------------------------------------------------------------------------------------------------- -->
+
+
+
+    <!-- Benefits Section -->
+    <section class="content-section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Measurable Business Impact and ROI</h2>
+                <p>Organizations implementing zip code proximity search see immediate, measurable improvements across key business metrics.</p>
+            </div>
+            
+            <div class="roi-grid">
+                <div class="roi-card">
+                    <h4><i class="fas fa-piggy-bank" style="color: var(--success-color); margin-right: 10px;"></i>Reduced Travel Expenses</h4>
+                    <p>Field sales teams cut travel costs by 25-40% through optimized route planning and appointment clustering. Less time on the road means lower fuel, lodging, and meal expenses.</p>
+                </div>
+                
+                <div class="roi-card">
+                    <h4><i class="fas fa-chart-line" style="color: var(--success-color); margin-right: 10px;"></i>Increased Sales Productivity</h4>
+                    <p>Representatives schedule 30-50% more customer meetings per trip by identifying nearby opportunities. More face-time with prospects accelerates deal velocity and improves close rates.</p>
+                </div>
+                
+                <div class="roi-card">
+                    <h4><i class="fas fa-bullseye" style="color: var(--success-color); margin-right: 10px;"></i>Higher Marketing ROI</h4>
+                    <p>Geographic targeting increases campaign response rates by 2-3x compared to broad campaigns. Marketing budget generates more qualified leads with better conversion rates.</p>
+                </div>
+                
+                <div class="roi-card">
+                    <h4><i class="fas fa-clock" style="color: var(--success-color); margin-right: 10px;"></i>Faster Service Response</h4>
+                    <p>Service teams reduce average response time by 35-45% by dispatching the nearest available technician. Faster response improves customer satisfaction and strengthens SLA compliance.</p>
+                </div>
+                
+                <div class="roi-card">
+                    <h4><i class="fas fa-balance-scale" style="color: var(--success-color); margin-right: 10px;"></i>Improved Territory Coverage</h4>
+                    <p>Sales managers eliminate coverage gaps and territory imbalances, ensuring every high-potential prospect receives appropriate attention. Balanced territories improve team morale and increase overall conversion rates.</p>
+                </div>
+                
+                <div class="roi-card">
+                    <h4><i class="fas fa-lightbulb" style="color: var(--success-color); margin-right: 10px;"></i>Better Strategic Planning</h4>
+                    <p>Geographic data analysis reveals expansion opportunities, underserved markets, and high-performing regions. Leadership makes data-driven decisions about where to invest resources for maximum return.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Implementation Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Fast Implementation with Minimal Learning Curve</h2>
+                <p>Unlike complex GIS systems requiring extensive training, Salesboom's zip code proximity search is intuitive and easy to use from day one.</p>
+            </div>
+            
+            <div class="highlight-box">
+                <h4><i class="fas fa-rocket" style="color: var(--primary-color); margin-right: 10px;"></i>Immediate Availability</h4>
+                <p>The feature is available immediately upon CRM implementation with no additional configuration required. Standard zip code and postal code databases are pre-loaded for all supported regions, and the intuitive interface requires minimal training.</p>
+                <p>New users typically achieve proficiency within minutes of their first use. The system provides contextual help, tooltips, and guided workflows that make geographic searching as simple as any other CRM search function.</p>
+            </div>
+            
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <i class="fas fa-cogs"></i>
+                    <h3>Zero Configuration</h3>
+                    <p>No technical setup, software installation, or third-party tools required. Works instantly across all devices.</p>
+                </div>
+                
+                <div class="benefit-item">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Minimal Training</h3>
+                    <p>Intuitive interface that users master in minutes. Comprehensive documentation and video tutorials available.</p>
+                </div>
+                
+                <div class="benefit-item">
+                    <i class="fas fa-expand-arrows-alt"></i>
+                    <h3>Automatic Scaling</h3>
+                    <p>System scales automatically as your database grows. No performance degradation with increased data volume.</p>
+                </div>
+                
+                <div class="benefit-item">
+                    <i class="fas fa-sync-alt"></i>
+                    <h3>Regular Updates</h3>
+                    <p>Accuracy improvements and feature enhancements delivered automatically. Always access the latest capabilities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Features Section -->
+    <section class="content-section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Part of a Comprehensive CRM Platform</h2>
+                <p>Zip code proximity search is one of many innovative features that make Salesboom the most comprehensive CRM solution for modern businesses.</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-user-lock"></i>
+                        </div>
+                        <h3>Enhanced User Profile Management</h3>
+                        <p>Democratize data across your organization while supervising user permissions. Control exactly what each user can access and modify.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <h3>Enhanced Workflow Controls</h3>
+                        <p>Build sophisticated automated workflows that trigger based on geographic data, customer actions, or business events.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-random"></i>
+                        </div>
+                        <h3>Lead Routing Rules</h3>
+                        <p>Automatically assign leads to the right sales representative based on geography, industry, lead score, or custom criteria.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-life-ring"></i>
+                        </div>
+                        <h3>Case Escalation and Routing</h3>
+                        <p>Route support cases to the appropriate team member based on location, expertise, availability, and case complexity.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <h3>Improved Shared Calendaring</h3>
+                        <p>Coordinate field sales activities across teams with shared calendars that show everyone's location and availability.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Mobile CRM Access</h3>
+                        <p>Access proximity search and all CRM functionality from smartphones and tablets. Stay productive anywhere.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Transform Your Geographic Prospecting?</h2>
+                <p>Experience the power of location-based prospecting with Salesboom's Zip Code Proximity Search. See how easy it is to find opportunities, optimize territories, and maximize field sales productivity.</p>
+                <a href="https://www.salesboom.com/request-crm-demo.html" class="btn-cta">
+                    <i class="fas fa-rocket" style="margin-right: 10px;"></i>Request a Demo Today
+                </a>
+            </div>
+        </div>
+    </section>
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-2">
+      <h3 class="fw-bold text-color">
+        <i class="fa-solid fa-layer-group me-2"></i>
+        Explore Salesboom Editions
+      </h3>
+      <p class="text-muted">Discover powerful CRM editions to scale your business efficiently.</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-briefcase fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Professional Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              A complete CRM suite with Marketing Automation, ERP integration, and Support tools — built for performance and value.
+            </p>
+            <a href="https://www.salesboom.com/editions/professional-edition.html" class="btn btn-color mt-auto">
+              Explore Professional <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-building fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Enterprise Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              For large enterprises — automate workflows, unify data, and leverage analytics to drive strategic growth.
+            </p>
+            <a href="https://www.salesboom.com/editions/enterprise-edition.html" class="btn btn-color mt-auto">
+              View Enterprise <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-users fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Team Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              Perfect for small teams starting with CRM — manage leads, track sales, and boost productivity with simplicity.
+            </p>
+            <a href="https://www.salesboom.com/editions/team-edition.html" class="btn btn-color mt-auto">
+           Discover Team<i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<div class="container py-5">
+
+  <h2 class="text-center mb-5 fw-bold text-color">Enhanced CRM Features</h2>
+
+  <div class="row g-4">
+
+    <!-- Card 1 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-user-gear text-color fa-3x mb-3"></i>
+        <h4>Enhanced User Profile Management</h4>
+        <p>
+          Manage user roles, profiles and permissions with advanced controls.
+          <a href="https://www.salesboom.com/products/feature-enhanced-user-profile-management.html" class="text-color fw-bold">
+            View Profile Features
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-universal-access text-color fa-3x mb-3"></i>
+        <h4>Enhanced Accessibility</h4>
+        <p>
+          Accessibility features to make CRM usable for all users regardless of ability.
+          <a href="https://www.salesboom.com/products/feature-enhanced-accessibility.html" class="text-color fw-bold">
+            Explore Accessibility Tools
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-route text-color fa-3x mb-3"></i>
+        <h4>Workflow Control</h4>
+        <p>
+          Control and automate workflows to streamline processes across your team.
+          <a href="https://www.salesboom.com/products/feature-enhanced-workflow-control.html" class="text-color fw-bold">
+            View Workflow Tools
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-book-open text-color fa-3x mb-3"></i>
+        <h4>Public Knowledge Base</h4>
+        <p>
+          Provide public access to documentation and help resources for clients and team.
+          <a href="https://www.salesboom.com/products/feature-public-knowledge-base.html" class="text-color fw-bold">
+            Browse Knowledge Base
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-bell text-color fa-3x mb-3"></i>
+        <h4>Big Deal Alert</h4>
+        <p>
+          Get notified instantly when high-value deals enter your pipeline.
+          <a href="https://www.salesboom.com/products/feature-big-deal-alert.html" class="text-color fw-bold">
+            Learn About Deal Alerts
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-exclamation-triangle text-color fa-3x mb-3"></i>
+        <h4>At-Risk Deal Alert</h4>
+        <p>
+          Detect deals at risk and get alerts to take action before losing them.
+          <a href="https://www.salesboom.com/products/feature-at-risk-deal-alert.html" class="text-color fw-bold">
+            View Risk Alerts
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 7 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-arrow-right-to-bracket text-color fa-3x mb-3"></i>
+        <h4>Case Escalation Routing</h4>
+        <p>
+          Automatically route support cases to the right team for quick resolution.
+          <a href="https://www.salesboom.com/products/feature-case-escalation-routing.html" class="text-color fw-bold">
+            View Escalation Rules
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 8 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-random text-color fa-3x mb-3"></i>
+        <h4>Lead Routing</h4>
+        <p>
+          Automatically distribute leads among sales agents based on rules and assignments.
+          <a href="https://www.salesboom.com/products/feature-lead-routing.html" class="text-color fw-bold">
+            Explore Lead Routing
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 9 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-calendar-check text-color fa-3x mb-3"></i>
+        <h4>Shared Calendaring</h4>
+        <p>
+          Sync team calendars, schedule meetings and track tasks collaboratively.
+          <a href="https://www.salesboom.com/products/feature-improved-shared-calendaring.html" class="text-color fw-bold">
+            View Calendar Features
+          </a>
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- Footer -->
+<footer class="mt-5 footer">
+  <div class="container mt-5 pt-5">
+    <div class="footer-grid">
+      <div class="footer-section">
+        <h3>Products</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/products/tools-sfa.html">Sales Force Automation</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-marketing.html">Marketing Automation</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-casemanagement.html">Case Management</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-reporting.html">Business Intelligence</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-emailintegration.html">Email Integration</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Solutions</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/products/edition-team.html">Team Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/edition-professional.html">Professional Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/edition-enterprise.html">Enterprise Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/industry-solutions.html">Industry Solutions</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/company/index.html">About Us</a></li>
+          <li><a href="https://www.salesboom.com/company/company-contact.html">Contact Us</a></li>
+          <li><a href="https://www.salesboom.com/customers/index.html">Customers</a></li>
+          <li><a href="https://www.salesboom.com/partners/index.html">Partners</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/support/index.html">Support Center</a></li>
+          <li><a href="https://www.salesboom.com/crm_supportcenter/overview/index.html">Documentation</a></li>
+          <li><a href="https://www.salesboom.com/whitepapers/index.html">White Papers</a></li>
+          <li><a href="https://www.salesboom.com/pop-privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="bg-color">
+    <div class="container">
+     <div class="footer-bottom pb-3 mt-3">
+      <p>&copy; 2003-2025 <a class="text-white fw-bold" href="https://www.salesboom.com">Salesboom.com</a> Inc. All rights reserved. | Call: 1-855-229-2043</p>
+      <p style="margin-top: 10px;">Salesboom's color-coded CRM lead management software helps businesses visually prioritize sales opportunities with automated workflow rules. Contact us to learn how color coding can transform your lead management process and increase sales productivity.</p>
+    </div>
+    </div>
+  </div>
+ 
+</footer>
+
+<!-- Common JavaScript -->
+<script src="content/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+    <!-- Custom JavaScript -->
+    <script>
+        // Loading Screen
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.getElementById('loading-screen').classList.add('fade-out');
+            }, 500);
+        });
+
+        // Scroll to Top Button
+        const scrollToTopBtn = document.getElementById('scroll-to-top');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.classList.add('show');
+            } else {
+                scrollToTopBtn.classList.remove('show');
+            }
+        });
+        
+        scrollToTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1237 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+<!-- Primary Meta Tags -->
+<title>Salesboom Construction CRM - Built for Design & Build Companies</title>
+<meta name="description" content="Purpose-built Construction CRM for design-build and EPC companies. Manage leads, jobs, estimates, and execution in one unified platform. 22+ years of CRM innovation.">
+<meta name="keywords" content="construction CRM, design build CRM, EPC CRM, construction management software, contractor CRM, job management CRM">
+<link rel="canonical" href="https://www.salesboom.com/construction-crm-software.html">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.salesboom.com/construction-crm-software.html">
+<meta property="og:title" content="Salesboom Construction CRM - Built for Design & Build Companies">
+<meta property="og:description" content="Purpose-built Construction CRM for design-build and EPC companies. Manage leads, jobs, estimates, and execution in one unified platform. 22+ years of CRM innovation.">
+<meta property="og:image" content="https://www.salesboom.com/img/construction-crm-software-og.jpg">
+<meta property="og:site_name" content="Salesboom CRM">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://www.salesboom.com/construction-crm-software.html">
+<meta name="twitter:title" content="Salesboom Construction CRM - Built for Design & Build Companies">
+<meta name="twitter:description" content="Purpose-built Construction CRM for design-build and EPC companies. Manage leads, jobs, estimates, and execution in one unified platform. 22+ years of CRM innovation.">
+<meta name="twitter:image" content="https://www.salesboom.com/img/construction-crm-software-og.jpg">
+<meta name="twitter:site" content="@SalesboomCloud">
+
+<!-- Schema.org structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Salesboom Construction CRM",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web-based, Cloud",
+  "offers": {
+    "@type": "Offer",
+    "price": "14.00",
+    "priceCurrency": "USD",
+    "priceValidUntil": "2026-12-31"
+  },
+  "featureList": [
+    "Job-centric management with complete project tracking",
+    "Bid and estimate management with approval workflows",
+    "Seamless lead-to-job-to-invoice workflow",
+    "Executive dashboards with real-time visibility",
+    "Outlook 365 and accounting system integration",
+    "Custom development and built-to-suit customization"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.5",
+    "ratingCount": "3500"
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "Salesboom",
+    "url": "https://www.salesboom.com",
+    "logo": "https://www.salesboom.com/img/salesboom-logo-252x67.png",
+    "foundingDate": "2003",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-855-229-2043",
+      "contactType": "Customer Service"
+    }
+  }
+}
+</script>
+
+<link rel="shortcut icon" href="https://www.salesboom.com/favicon.ico">
+
+    <link rel="stylesheet" href="content/css/bootstrap.min.css">
+    <link rel="stylesheet" href="content/css/salesboom-common.css">
+    <link rel="shortcut icon" href="content/image/salesboom-logo-252x67.png" type="image/x-icon"> 
+    
+    
+<!-- Font Awesome 6 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+/* CSS Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #002f6c;
+  --primary-dark: #001f4d;
+  --primary-light: #003d8f;
+  --accent-color: #0066cc;
+  --success-color: #27ae60;
+  --text-color: #333;
+  --text-light: #666;
+  --border-color: #e0e0e0;
+  --bg-light: #f8f9fa;
+  --bg-white: #ffffff;
+  --shadow: 0 2px 10px rgba(0,0,0,0.1);
+  --shadow-hover: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background: var(--bg-white);
+  overflow-x: hidden;
+}
+
+/* Loading Screen */
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#loading-screen.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader {
+  width: 60px;
+  height: 60px;
+  border: 5px solid rgba(255, 255, 255, 0.3);
+  border-top: 5px solid #ffffff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Scroll to Top Button */
+#scroll-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  box-shadow: var(--shadow-hover);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#scroll-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+#scroll-to-top:hover {
+  background: var(--primary-dark);
+  transform: translateY(-5px);
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+  color: white;
+  padding: 100px 0 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+  opacity: 0.3;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero h2 {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 30px;
+  opacity: 0.95;
+}
+
+.hero-text {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  opacity: 0.9;
+  line-height: 1.7;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Button Styles */
+.btn-custom {
+  display: inline-block;
+  padding: 16px 40px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary-custom {
+  background: white;
+  color: var(--primary-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary-custom:hover {
+  background: var(--bg-light);
+  color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+.btn-outline-custom {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-outline-custom:hover {
+  background: white;
+  color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+/* Content Sections */
+.content-section {
+  padding: 80px 0;
+}
+
+.content-section.bg-light {
+  background: var(--bg-light);
+}
+
+.section-header {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 60px;
+}
+
+.section-header h2 {
+  font-size: 2.8rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.section-header p {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  line-height: 1.8;
+}
+
+/* Workflow Visualization */
+.workflow-visual {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  margin: 40px 0;
+  text-align: center;
+}
+
+.workflow-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.workflow-arrow {
+  color: var(--accent-color);
+  font-size: 1.5rem;
+}
+
+.workflow-stage {
+  padding: 12px 24px;
+  background: var(--bg-light);
+  border-radius: 8px;
+  border: 2px solid var(--primary-color);
+}
+
+/* Feature Cards */
+.feature-card {
+  background: var(--bg-white);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  transition: all 0.3s;
+  height: 100%;
+  border-top: 4px solid var(--primary-color);
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.feature-icon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: white;
+  margin-bottom: 25px;
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.feature-card p, .feature-card ul {
+  color: var(--text-light);
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+.feature-card ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 15px;
+}
+
+.feature-card li {
+  padding-left: 30px;
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.feature-card li::before {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  color: var(--success-color);
+  font-size: 1.1rem;
+}
+
+/* Content Block */
+.content-block {
+  background: white;
+  padding: 50px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  margin-bottom: 40px;
+}
+
+.content-block h3 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.content-block h4 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin: 30px 0 15px 0;
+  font-weight: 600;
+}
+
+.content-block p {
+  color: var(--text-light);
+  margin-bottom: 15px;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.content-block ul {
+  list-style: none;
+  margin-top: 20px;
+  padding-left: 0;
+}
+
+.content-block li {
+  padding-left: 35px;
+  position: relative;
+  margin-bottom: 15px;
+  color: var(--text-light);
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+.content-block li::before {
+  content: "\f058";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+  font-size: 1.2rem;
+}
+
+/* Stage Cards */
+.stage-card {
+  background: white;
+  padding: 35px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  margin-bottom: 30px;
+  border-left: 5px solid var(--primary-color);
+}
+
+.stage-card h4 {
+  font-size: 1.6rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.stage-card p {
+  color: var(--text-light);
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+/* CTA Section */
+.cta-section {
+  background: var(--primary-color);
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+  opacity: 0.3;
+}
+
+.cta-content {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-content h2 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.cta-content p {
+  font-size: 1.3rem;
+  margin-bottom: 40px;
+  opacity: 0.95;
+  line-height: 1.7;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+  
+  .section-header h2 {
+    font-size: 2.2rem;
+  }
+  
+  .content-block {
+    padding: 35px;
+  }
+  
+  .workflow-line {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 80px 0 60px;
+  }
+  
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .hero h2 {
+    font-size: 1.3rem;
+  }
+  
+  .hero-text {
+    font-size: 1.1rem;
+  }
+  
+  .hero-cta {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .btn-custom {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .content-section {
+    padding: 60px 0;
+  }
+  
+  .section-header h2 {
+    font-size: 1.8rem;
+  }
+  
+  .content-block {
+    padding: 25px;
+  }
+  
+  .feature-card {
+    padding: 30px 20px;
+  }
+  
+  .workflow-line {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .workflow-arrow {
+    transform: rotate(90deg);
+  }
+  
+  #scroll-to-top {
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+  
+  .cta-content h2 {
+    font-size: 2rem;
+  }
+}
+</style>
+</head>
+
+<body>
+<!-- Loading Screen -->
+<div id="loading-screen">
+  <div class="loader"></div>
+</div>
+
+<!-- Scroll to Top Button -->
+<button id="scroll-to-top" aria-label="Scroll to top">
+  <i class="fas fa-arrow-up"></i>
+</button>
+    <!-- Top Bar -->
+<div class="top-bar">
+  <div class="container">
+    <div class="top-bar-left text-color">
+      <span>✓ Award-Winning Cloud CRM Software Since 2003</span>
+    </div>
+    <ul class="top-bar-nav">
+      <li><a href="https://www.salesboom.com/crm_supportcenter/overview/index.html">Support Center</a></li>
+      <li><a href="https://www.salesboom.com/crm_trial.html">Free Trial</a></li>
+      <li><a href="https://www.salesboom.com/login.html">Login</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Main Header -->
+<header>
+  <div class="main-header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <a href="https://www.salesboom.com" aria-label="Salesboom CRM Home">
+            <img src="https://www.salesboom.com/img/salesboom-logo-252x67.png" alt="Salesboom Cloud CRM Logo" width="252" height="67">
+          </a>
+        </div>
+        <div class="header-phone">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          <a href="tel:+18552292043">1-855-229-2043</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <h1>Salesboom Construction CRM</h1>
+      <h2>Built for Design & Build Construction Companies</h2>
+      <p class="hero-text">
+        Salesboom is expanding its cloud CRM platform with a <strong>Construction-focused vertical</strong>, designed specifically for <strong>design-and-build and EPC construction companies</strong> that need better alignment between business development, project execution, and commercial follow-up.
+      </p>
+      <div class="hero-cta">
+        <a href="https://www.salesboom.com/crm-live-demo.html" class="btn-custom btn-primary-custom">
+          <i class="fas fa-calendar-check me-2"></i>Schedule a Demo
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 2: Company Credentials -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Proven CRM Innovation for Construction Companies</h2>
+    </div>
+    <div class="content-block">
+      <p>
+        With more than 22 years of software innovation, Salesboom delivers a construction CRM that goes beyond generic contact management and disconnected project tools—focusing instead on how construction companies actually operate.
+      </p>
+      <p>
+        Salesboom is expanding its cloud CRM platform with a Construction-focused vertical, designed specifically for the unique workflows, terminology, and operational challenges that design-and-build and EPC construction companies face daily.
+      </p>
+      <p>
+        This is not a generic sales CRM retrofitted for construction use. This is a purpose-built platform that understands jobs, estimates, bids, handovers, and delivery milestones—the real operational drivers of construction business success.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Section 3: Why Construction-Specific CRM -->
+<section class="content-section bg-light">
+  <div class="container">
+    <div class="section-header">
+      <h2>Why a Construction-Specific CRM Matters</h2>
+    </div>
+    <div class="content-block">
+      <p>
+        Most CRM systems are built for sales teams, not construction teams. They focus on contacts, deals, and pipelines—terminology and workflows that don't match how construction companies actually operate.
+      </p>
+      <p>
+        Construction companies work around jobs, estimates, bids, handovers, and delivery milestones. They need systems that support the full construction lifecycle, from early client engagement through job execution and readiness for invoicing, while maintaining visibility and control for management.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Section 4: Salesboom Advantage -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>The Salesboom Construction CRM Advantage</h2>
+    </div>
+    
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-cogs"></i>
+          </div>
+          <h3>Built-to-Suit Customization</h3>
+          <p>
+            Every construction company operates differently. Salesboom adapts to your exact workflows, terminology, and business processes through configurable settings and custom development capabilities. The system fits your operation—not the other way around.
+          </p>
+        </div>
+      </div>
+      
+      <div class="col-lg-6">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-layer-group"></i>
+          </div>
+          <h3>True All-in-One Platform</h3>
+          <p>
+            Customer management, estimating, marketing, field service, task management, calendars, Outlook 365 synchronization, Google Maps integration, and project tracking all operate within a <strong>single unified platform</strong>. No disconnected applications or manual workarounds.
+          </p>
+        </div>
+      </div>
+      
+      <div class="col-lg-6">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-hard-hat"></i>
+          </div>
+          <h3>Construction-Specific Expertise</h3>
+          <p>
+            With two decades of experience building solutions for construction companies, Salesboom anticipates construction workflows, terminology, and operational challenges. This is not a generic CRM retrofitted for construction use.
+          </p>
+        </div>
+      </div>
+      
+      <div class="col-lg-6">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-code"></i>
+          </div>
+          <h3>Custom Development Capability</h3>
+          <p>
+            Custom solutions, new features, integrations, and extensions are part of Salesboom's core offering. If your business has unique requirements, the platform can be extended to support them.
+          </p>
+        </div>
+      </div>
+      
+      <div class="col-lg-6">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-plug"></i>
+          </div>
+          <h3>Comprehensive Integration Ecosystem</h3>
+          <p>Salesboom integrates with key construction and business tools, including:</p>
+          <ul>
+            <li>Sage accounting systems</li>
+            <li>Microsoft Outlook 365</li>
+            <li>Google Workspace</li>
+            <li>QuickBooks</li>
+            <li>DocuSign</li>
+            <li>Hundreds of applications via Zapier</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="col-lg-6">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-database"></i>
+          </div>
+          <h3>You Own Your Data</h3>
+          <p>
+            All reports export to Excel with one click. Your data remains fully accessible in standard formats, with no vendor lock-in or proprietary restrictions.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 5: Seamless Workflow -->
+<section class="content-section bg-light">
+  <div class="container">
+    <div class="section-header">
+      <h2>A Seamless Sales-to-Operations Workflow</h2>
+      <p>
+        Salesboom Construction CRM connects business development with delivery by maintaining linked records across the entire lifecycle. Information captured during early client engagement is not lost during project handover or execution.
+      </p>
+    </div>
+    
+    <div class="workflow-visual">
+      <div class="workflow-line">
+        <span class="workflow-stage">Lead</span>
+        <i class="fas fa-arrow-right workflow-arrow"></i>
+        <span class="workflow-stage">Job</span>
+        <i class="fas fa-arrow-right workflow-arrow"></i>
+        <span class="workflow-stage">Bid / Estimate</span>
+        <i class="fas fa-arrow-right workflow-arrow"></i>
+        <span class="workflow-stage">Execution</span>
+        <i class="fas fa-arrow-right workflow-arrow"></i>
+        <span class="workflow-stage">Ready-to-Invoice</span>
+      </div>
+    </div>
+    
+    <div class="container mt-5 mb-5">
+      <img src="content/image/image200.jpeg" class="mx-auto" alt="">
+  
+    </div>
+    
+    <div class="stage-card">
+      <h4><i class="fas fa-lightbulb me-2"></i>Lead Stage</h4>
+      <p>
+        Initial contact information, project requirements, timeline expectations, budget parameters, and qualification notes are captured in the CRM. Sales teams can track multiple opportunities with the same customer across different project types.
+      </p>
+    </div>
+    
+    <div class="stage-card">
+      <h4><i class="fas fa-briefcase me-2"></i>Job Stage</h4>
+      <p>
+        Qualified leads convert to jobs with all relevant context maintained. Customer preferences, site conditions, special requirements, and historical notes carry forward automatically. Jobs become the central operational record.
+      </p>
+    </div>
+    
+    <div class="stage-card">
+      <h4><i class="fas fa-file-invoice-dollar me-2"></i>Bid / Estimate Stage</h4>
+      <p>
+        Bids and estimates are created directly from jobs, maintaining the connection to the original customer and project requirements. Multiple estimates can be tracked with version control, approval workflows, and acceptance status.
+      </p>
+    </div>
+    
+    <div class="stage-card">
+      <h4><i class="fas fa-tools me-2"></i>Execution Stage</h4>
+      <p>
+        Accepted estimates convert into active jobs automatically, carrying forward all relevant data. Project teams have instant access to customer commitments, specifications, and history. Tasks, appointments, and notes ensure accountability and continuity.
+      </p>
+    </div>
+    
+    <div class="stage-card">
+      <h4><i class="fas fa-check-circle me-2"></i>Ready-to-Invoice Stage</h4>
+      <p>
+        Completed work is marked ready for invoicing with complete documentation and traceability. Management has real-time visibility into work that can be billed, supporting proactive cash-flow management.
+      </p>
+    </div>
+    
+    <div class="content-block" style="margin-top: 40px;">
+      <p>
+        This connected workflow eliminates the information loss and communication gaps that plague construction companies using disconnected systems or manual handoffs.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Section 6: Core Capabilities -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Core Construction Workflow Capabilities</h2>
+    </div>
+    
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-user-plus"></i>
+          </div>
+          <h3>Lead & Opportunity Management</h3>
+          <p>
+            Capture and qualify leads, classify them by trade or project type, and convert qualified opportunities directly into jobs.
+          </p>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-project-diagram"></i>
+          </div>
+          <h3>Job-Centric Management</h3>
+          <p>
+            Jobs become the central operational record, linking customers, estimates, tasks, appointments, notes, and documents in one place.
+          </p>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-calculator"></i>
+          </div>
+          <h3>Bid & Estimate Management</h3>
+          <p>
+            Manage bids and estimates with approval workflows, version control, and acceptance tracking—directly tied to jobs and customers.
+          </p>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-exchange-alt"></i>
+          </div>
+          <h3>Smart Estimate-to-Job Conversion</h3>
+          <p>
+            Accepted estimates convert into jobs automatically, carrying forward all relevant data and maintaining full traceability.
+          </p>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3>Executive Dashboards & Visibility</h3>
+          <p>Management dashboards provide real-time visibility into:</p>
+          <ul>
+            <li>Active jobs</li>
+            <li>Pipeline value</li>
+            <li>Win rates</li>
+            <li>Completed and ready-to-invoice work</li>
+          </ul>
+    
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-sync-alt"></i>
+          </div>
+          <h3>Automated Status Synchronization</h3>
+          <p>
+            Job and estimate statuses update automatically based on defined rules—reducing manual effort and improving accuracy.
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="content-block" style="margin-top: 50px;">
+      <h3><i class="fas fa-tasks me-2"></i>Notes, Tasks, Appointments & Documents</h3>
+      <p>
+        All activity is tracked across records to ensure accountability, continuity, and clear follow-ups from first contact to project completion.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Section 7: Designed for Construction Teams -->
+<section class="content-section bg-light">
+  <div class="container">
+    <div class="section-header">
+      <h2>Built for Construction Companies Like Yours</h2>
+      <p>
+        Salesboom Construction CRM is specifically designed to serve the operational needs of construction companies across multiple specializations:
+      </p>
+    </div>
+    
+    <div class="content-block">
+      <h4><i class="fas fa-building me-2"></i>Design & Build Construction Companies</h4>
+      <p>
+        Companies that handle both design and construction phases need systems that support proposal development, design collaboration, and construction execution. Salesboom manages the entire flow from initial concept through final build.
+      </p>
+    </div>
+    
+    <div class="content-block">
+      <h4><i class="fas fa-industry me-2"></i>EPC and Turnkey Contractors</h4>
+      <p>
+        Engineering, Procurement, and Construction contractors require visibility across complex multi-phase projects. The CRM supports phase gates, milestone tracking, and handoffs between engineering, procurement, and construction teams.
+      </p>
+    </div>
+    
+    <div class="content-block">
+      <h4><i class="fas fa-wrench me-2"></i>Specialty Contractors</h4>
+      <p>
+        Companies focused on specific trades—roofing, exteriors, HVAC, plumbing, electrical, cabinetry, concrete, and more—benefit from customizable workflows that match their unique operational requirements and terminology.
+      </p>
+    </div>
+    
+    <div class="content-block">
+      <h4><i class="fas fa-list-check me-2"></i>Multi-Project Construction Firms</h4>
+      <p>
+        Companies managing multiple concurrent jobs and estimates need clear visibility and organization. Salesboom provides the structure and reporting to manage complexity without chaos.
+      </p>
+    </div>
+    
+    <div class="content-block" style="margin-top: 40px; background: white; border-left: 5px solid var(--primary-color);">
+      <p style="font-size: 1.1rem; font-weight: 500;">
+        Whether you're a growing specialty contractor looking to professionalize operations or an established design-build firm needing better coordination between departments, Salesboom Construction CRM scales to your needs.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Section 8: Platform for Growth -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>A Platform for Growth, Not Just a Tool</h2>
+      <p>
+        Salesboom Construction CRM is designed to scale with your organization—supporting operational maturity, process standardization, and expansion without forcing rigid workflows or fragmented systems.
+      </p>
+    </div>
+    
+    <div class="content-block">
+      <p style="text-align: center; font-size: 1.2rem; font-weight: 600; color: var(--primary-color);">
+        As your construction business grows, the platform grows with you.
+      </p>
+      <p style="text-align: center; margin-top: 20px;">
+        This scalability means you invest once in a platform that supports long-term growth rather than facing costly migrations every few years as you outgrow starter systems.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-content">
+      <h2>Ready to See How Construction CRM Works for Your Business?</h2>
+      <p>
+        Schedule a short, focused demo to review the Construction CRM workflow and discuss how it fits your specific operational needs. A concise introduction pack is available for review ahead of the demo.
+      </p>
+      <div class="hero-cta">
+        <a href="https://www.salesboom.com/crm-live-demo.html" class="btn-custom btn-primary-custom">
+          <i class="fas fa-calendar-check me-2"></i>Schedule a Demo
+        </a>
+        <a href="https://www.salesboom.com/free_trial/index.html" class="btn-custom btn-primary-custom">
+          <i class="fas fa-calendar-check me-2"></i>Free Trial
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-2">
+      <h3 class="fw-bold text-color">
+        <i class="fa-solid fa-layer-group me-2"></i>
+        Explore Salesboom Editions
+      </h3>
+      <p class="text-muted">Discover powerful CRM editions to scale your business efficiently.</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-briefcase fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Professional Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              A complete CRM suite with Marketing Automation, ERP integration, and Support tools — built for performance and value.
+            </p>
+            <a href="https://www.salesboom.com/editions/professional-edition.html" class="btn btn-color mt-auto">
+              Explore Professional <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-building fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Enterprise Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              For large enterprises — automate workflows, unify data, and leverage analytics to drive strategic growth.
+            </p>
+            <a href="https://www.salesboom.com/editions/enterprise-edition.html" class="btn btn-color mt-auto">
+              View Enterprise <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-users fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Team Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              Perfect for small teams starting with CRM — manage leads, track sales, and boost productivity with simplicity.
+            </p>
+            <a href="https://www.salesboom.com/editions/team-edition.html" class="btn btn-color mt-auto">
+           Discover Team<i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="mt-5 footer">
+  <div class="container mt-5 pt-5">
+    <div class="footer-grid">
+      <div class="footer-section">
+        <h3>Products</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/products/tools-sfa.html">Sales Force Automation</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-marketing.html">Marketing Automation</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-casemanagement.html">Case Management</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-reporting.html">Business Intelligence</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-emailintegration.html">Email Integration</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Solutions</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/products/edition-team.html">Team Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/edition-professional.html">Professional Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/edition-enterprise.html">Enterprise Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/industry-solutions.html">Industry Solutions</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/company/index.html">About Us</a></li>
+          <li><a href="https://www.salesboom.com/company/company-contact.html">Contact Us</a></li>
+          <li><a href="https://www.salesboom.com/customers/index.html">Customers</a></li>
+          <li><a href="https://www.salesboom.com/partners/index.html">Partners</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/support/index.html">Support Center</a></li>
+          <li><a href="https://www.salesboom.com/crm_supportcenter/overview/index.html">Documentation</a></li>
+          <li><a href="https://www.salesboom.com/whitepapers/index.html">White Papers</a></li>
+          <li><a href="https://www.salesboom.com/pop-privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="bg-color">
+    <div class="container">
+     <div class="footer-bottom pb-3 mt-3">
+      <p>&copy; 2003-2025 <a class="text-white fw-bold" href="https://www.salesboom.com">Salesboom.com</a> Inc. All rights reserved. | Call: 1-855-229-2043</p>
+      <p style="margin-top: 10px;">Salesboom's color-coded CRM lead management software helps businesses visually prioritize sales opportunities with automated workflow rules. Contact us to learn how color coding can transform your lead management process and increase sales productivity.</p>
+    </div>
+    </div>
+  </div>
+ 
+</footer>
+
+<!-- Common JavaScript -->
+<script src="content/js/bootstrap.bundle.min.js"></script>
+
+
+
+<script>
+// Loading Screen
+window.addEventListener('load', function() {
+  const loadingScreen = document.getElementById('loading-screen');
+  setTimeout(function() {
+    loadingScreen.classList.add('fade-out');
+  }, 500);
+});
+
+// Scroll to Top Button
+const scrollToTopBtn = document.getElementById('scroll-to-top');
+
+window.addEventListener('scroll', function() {
+  if (window.pageYOffset > 300) {
+    scrollToTopBtn.classList.add('show');
+  } else {
+    scrollToTopBtn.classList.remove('show');
+  }
+});
+
+scrollToTopBtn.addEventListener('click', function() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+
+// Smooth scrolling for all anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  });
+});
+</script>
+
+</body>
+</html>

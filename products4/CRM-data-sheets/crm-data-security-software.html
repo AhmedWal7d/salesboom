@@ -1,0 +1,1583 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    
+    <!-- Primary Meta Tags -->
+    <title>Enterprise CRM Security & Data Protection | Salesboom</title>
+    <meta name="description" content="Bank-level 128-bit encryption, 99.8% uptime SLA, multi-data center redundancy. Salesboom's enterprise CRM security protects your data 24/7. Learn more.">
+    <meta name="keywords" content="CRM security, data encryption software, cloud CRM security, enterprise data protection, secure CRM platform, disaster recovery CRM, RAID backup systems, SOA architecture">
+    <link rel="canonical" href="https://www.salesboom.com/crm-data-security-software.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.salesboom.com/crm-data-security-software.html">
+    <meta property="og:title" content="Enterprise CRM Security & Data Protection | Salesboom">
+    <meta property="og:description" content="Bank-level 128-bit encryption, 99.8% uptime SLA, multi-data center redundancy. Salesboom's enterprise CRM security protects your data 24/7. Learn more.">
+    <meta property="og:image" content="https://www.salesboom.com/img/crm-data-security-software-og.jpg">
+    <meta property="og:site_name" content="Salesboom CRM">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.salesboom.com/crm-data-security-software.html">
+    <meta name="twitter:title" content="Enterprise CRM Security & Data Protection | Salesboom">
+    <meta name="twitter:description" content="Bank-level 128-bit encryption, 99.8% uptime SLA, multi-data center redundancy. Salesboom's enterprise CRM security protects your data 24/7. Learn more.">
+    <meta name="twitter:image" content="https://www.salesboom.com/img/crm-data-security-software-og.jpg">
+    <meta name="twitter:site" content="@SalesboomCloud">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Salesboom Enterprise CRM Security",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web-based, Cloud",
+      "offers": {
+        "@type": "Offer",
+        "price": "14.00",
+        "priceCurrency": "USD",
+        "priceValidUntil": "2026-12-31"
+      },
+      "featureList": [
+        "Bank-level 128-bit SSL encryption",
+        "99.8% uptime Service Level Agreement",
+        "Multi-data center global redundancy",
+        "Nightly automated backups with RAID protection",
+        "24/7 security monitoring and rapid response",
+        "SOA architecture with automatic failover"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.5",
+        "ratingCount": "3500"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Salesboom",
+        "url": "https://www.salesboom.com",
+        "logo": "https://www.salesboom.com/img/salesboom-logo-252x67.png",
+        "foundingDate": "2003",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+1-855-229-2043",
+          "contactType": "Customer Service"
+        }
+      }
+    }
+    </script>
+    
+    <link rel="shortcut icon" href="https://www.salesboom.com/favicon.ico">
+    
+
+ <link rel="stylesheet" href="../content/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../content/css/salesboom-common.css">
+    <link rel="shortcut icon" href="../content/image/salesboom-logo-252x67.png" type="image/x-icon"> 
+
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #002f6c;
+            --secondary-color: #0052cc;
+            --accent-color: #00a3ff;
+            --success-color: #27ae60;
+            --text-dark: #1a1a1a;
+            --text-light: #666;
+            --bg-light: #f8f9fa;
+            --border-color: #e0e0e0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Loading Screen */
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--primary-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease-out;
+        }
+        
+        #loading-screen.fade-out {
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        .loader {
+            width: 60px;
+            height: 60px;
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-top-color: #fff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Scroll to Top Button */
+        #scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            box-shadow: 0 4px 12px rgba(0, 47, 108, 0.3);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        
+        #scroll-top:hover {
+            background: var(--secondary-color);
+            transform: translateY(-5px);
+            box-shadow: 0 6px 16px rgba(0, 47, 108, 0.4);
+        }
+        
+        #scroll-top.show {
+            display: flex;
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 100px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .hero-section h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 25px;
+            line-height: 1.2;
+        }
+        
+        .hero-section .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            line-height: 1.6;
+        }
+        
+        .hero-cta {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        /* Buttons */
+        .btn-custom {
+            padding: 16px 40px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .btn-primary-custom {
+            background: white;
+            color: var(--primary-color);
+            border: 2px solid white;
+        }
+        
+        .btn-primary-custom:hover {
+            background: transparent;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+        }
+        
+        .btn-outline-custom {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .btn-outline-custom:hover {
+            background: white;
+            color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+        
+        /* Stats Section */
+        .stats-section {
+            background: var(--text-dark);
+            color: white;
+            padding: 60px 0;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .stat-item h3 {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--accent-color);
+            margin-bottom: 10px;
+        }
+        
+        .stat-item p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        /* Content Sections */
+        .content-section {
+            padding: 80px 0;
+        }
+        
+        .content-section.bg-light {
+            background: var(--bg-light);
+        }
+        
+        .section-header {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto 60px;
+        }
+        
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .section-header p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+        
+        /* Feature Cards */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .feature-card {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--primary-color);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0, 47, 108, 0.15);
+        }
+        
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            color: white;
+            margin-bottom: 25px;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .feature-card h4 {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            margin: 20px 0 10px 0;
+            font-weight: 600;
+        }
+        
+        .feature-card p, .feature-card ul {
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+        
+        .feature-card ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 15px;
+        }
+        
+        .feature-card ul li {
+            padding-left: 30px;
+            position: relative;
+            margin-bottom: 12px;
+        }
+        
+        .feature-card ul li::before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--success-color);
+        }
+        
+        /* Two Column Layout */
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+        
+        .column-content h3 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .column-content h4 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin: 30px 0 15px 0;
+            font-weight: 600;
+        }
+        
+        .column-content p {
+            color: var(--text-light);
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+        
+        .column-content ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        
+        .column-content ul li {
+            padding-left: 35px;
+            position: relative;
+            margin-bottom: 15px;
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+        
+        .column-content ul li::before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--success-color);
+            font-size: 1.2rem;
+        }
+        
+        .column-image img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Security Badge */
+        .security-badge {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 50px;
+            border-radius: 12px;
+            text-align: center;
+            margin: 40px 0;
+            box-shadow: 0 8px 24px rgba(0, 47, 108, 0.2);
+        }
+        
+        .security-badge i {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+        }
+        
+        .security-badge h3 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .security-badge p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* Benefits Section */
+        .benefits-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 80px 0;
+            position: relative;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .benefit-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        
+        .benefit-item:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-5px);
+        }
+        
+        .benefit-item i {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+        }
+        
+        .benefit-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .benefit-item p {
+            opacity: 0.9;
+            line-height: 1.7;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: var(--text-dark);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .cta-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .cta-content p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            line-height: 1.7;
+        }
+        
+        /* Info Box */
+        .info-box {
+            background: #e8f4fd;
+            border-left: 4px solid var(--primary-color);
+            padding: 25px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+        
+        .info-box strong {
+            color: var(--primary-color);
+            display: block;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .info-box p {
+            color: var(--text-dark);
+            margin: 0;
+            line-height: 1.7;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero-section h1 {
+                font-size: 2.5rem;
+            }
+            
+            .two-column {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .section-header h2 {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 60px 0;
+            }
+            
+            .hero-section h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-section .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .hero-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn-custom {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .content-section {
+                padding: 60px 0;
+            }
+            
+            .stat-item h3 {
+                font-size: 2.5rem;
+            }
+            
+            #scroll-top {
+                width: 45px;
+                height: 45px;
+                bottom: 20px;
+                right: 20px;
+            }
+            
+            .security-badge {
+                padding: 30px 20px;
+            }
+            
+            .security-badge i {
+                font-size: 3rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero-section h1 {
+                font-size: 1.8rem;
+            }
+            
+            .section-header h2 {
+                font-size: 1.8rem;
+            }
+            
+            .feature-card {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+
+    <!-- Top Bar -->
+<div class="top-bar">
+  <div class="container">
+    <div class="top-bar-left text-color">
+      <span>✓ Award-Winning Cloud CRM Software Since 2003</span>
+    </div>
+    <ul class="top-bar-nav">
+      <li><a href="https://www.salesboom.com/crm_supportcenter/overview/index.html">Support Center</a></li>
+      <li><a href="https://www.salesboom.com/crm_trial.html">Free Trial</a></li>
+      <li><a href="https://www.salesboom.com/login.html">Login</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Main Header -->
+<header>
+  <div class="main-header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <a href="https://www.salesboom.com" aria-label="Salesboom CRM Home">
+            <img src="https://www.salesboom.com/img/salesboom-logo-252x67.png" alt="Salesboom Cloud CRM Logo" width="252" height="67">
+          </a>
+        </div>
+        <div class="header-phone">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          <a href="tel:+18552292043">1-855-229-2043</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Bank-Level Security for Your Mission-Critical CRM Data</h1>
+                <p class="subtitle">Protect your customer data with enterprise-grade 128-bit encryption, multi-data center redundancy, and the industry's only 99.8% uptime Service Level Agreement.</p>
+                <div class="hero-cta">
+                    <a href="https://www.salesboom.com/request-crm-demo.html" class="btn-custom btn-primary-custom">Book a Demo</a>
+                    <a href="https://www.salesboom.com/crm_trial.html" class="btn-custom btn-outline-custom">Start Free Trial</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-6">
+                    <div class="stat-item">
+                        <h3>99.8%</h3>
+                        <p>Uptime SLA Guarantee</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-item">
+                        <h3>128-bit</h3>
+                        <p>SSL Encryption</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-item">
+                        <h3>24/7</h3>
+                        <p>Security Monitoring</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-item">
+                        <h3>22+</h3>
+                        <p>Years of Protection</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Overview Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Enterprise-Grade Security Architecture Built for Global Operations</h2>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-12 mb-4">
+                    <p style="font-size: 1.1rem; color: var(--text-light); text-align: center; max-width: 1000px; margin: 0 auto 40px;">Security and privacy protection are not afterthoughts at Salesboom—they are fundamental pillars of our business offering. With over two decades of CRM innovation, we have invested heavily in creating a security infrastructure that matches or exceeds what you would expect from financial institutions.</p>
+                </div>
+            </div>
+            
+            <div class="security-badge">
+                <i class="fas fa-shield-check"></i>
+                <h3>Industry's Only 99.8% Uptime Service Level Agreement</h3>
+                <p>Salesboom is the only on-demand CRM provider that backs our service with a comprehensive Service Level Agreement guaranteeing 99.8% uptime. We maintain complete transparency by publishing our real-time server status publicly at www.salesboom.com via the 'System Status' link.</p>
+            </div>
+            
+            <div class="two-column">
+                <div class="column-content">
+                    <h3>Global Service-Oriented Architecture</h3>
+                    <p>Our security architecture was built from the ground up as a secure, global Service-Oriented Architecture (SOA) leveraging multiple data centers strategically positioned around the world.</p>
+                    <p>This distributed approach ensures:</p>
+                    <ul>
+                        <li>Maximum security through geographic distribution</li>
+                        <li>Unlimited scalability as your business grows</li>
+                        <li>Exceptional reliability with automatic failover</li>
+                        <li>Multi-layer redundancy at every level</li>
+                        <li>Optimal performance regardless of location</li>
+                    </ul>
+                </div>
+                <div class="column-image">
+                    <img src="../content/image/image2.jpg" alt="Global service-oriented architecture with multiple data centers" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Data Encryption Section -->
+    <section class="content-section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Military-Grade Encryption Protecting Every Transaction</h2>
+                <p>When you log into your Salesboom account, you receive the same level of security protection used by banks and financial institutions. Every interaction with the platform is secured through multiple layers of encryption technology.</p>
+            </div>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>128-bit SSL Encryption</h3>
+                    <p>All data transmission over the Internet is protected by 128-bit SSL (Secure Sockets Layer) encryption, the same standard used by financial institutions worldwide.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <h3>1024-bit RSA Cryptography</h3>
+                    <p>Secure key exchange employs 1024-bit RSA public key cryptography to ensure encryption keys are transmitted safely and cannot be intercepted.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-halved"></i>
+                    </div>
+                    <h3>100% HTTPS Protocol</h3>
+                    <p>Salesboom software is delivered exclusively over secure Internet connections using HTTPS protocol, ensuring every data packet benefits from strong encryption protection.</p>
+                </div>
+            </div>
+            
+            <div class="info-box mt-5">
+                <strong><i class="fas fa-info-circle"></i> Verify Your Secure Connection</strong>
+                <p>You can verify the secure connection by checking for the security lock icon in your browser, confirming you are operating in a fully encrypted environment. Even if data were intercepted during transmission—an extremely unlikely scenario given our additional security layers—it would be completely unreadable without the proper decryption keys.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Infrastructure Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Multi-Data Center Redundancy Across Global Locations</h2>
+            </div>
+            
+            <div class="two-column">
+                <div class="column-image">
+                    <img src="../content/image/image5.png" alt="Multi-data center infrastructure with global coverage" loading="lazy">
+                </div>
+                <div class="column-content">
+                    <h3>Global Delivery Model</h3>
+                    <p>Salesboom's Software-as-a-Service offerings were architected from inception as a Global Delivery Model. Unlike single-location CRM providers, our global Service-Oriented Architecture features data center nodes strategically positioned at multiple locations around the world.</p>
+                    <p>We collocate our servers exclusively with world-class, National-tier Internet Service Providers, giving our customers access to:</p>
+                    <ul>
+                        <li>Latest data center security technologies</li>
+                        <li>State-of-the-art infrastructure investments</li>
+                        <li>Expert operational support 24/7/365</li>
+                        <li>Redundant power and cooling systems</li>
+                        <li>Advanced physical security measures</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="row mt-5">
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h3>Server Cluster Level</h3>
+                        <p>At each data center location, Salesboom maintains server clusters with built-in automatic failover capabilities. If any individual server experiences issues, the remaining servers immediately assume the workload with zero interruption.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-cubes"></i>
+                        </div>
+                        <h3>Cluster Level</h3>
+                        <p>Beyond individual server redundancy, we maintain multiple server clusters at each data center. If an entire cluster experiences issues, backup clusters automatically take over processing seamlessly.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3>Data Center Level</h3>
+                        <p>In the extremely unlikely event that an entire data center experiences a major disruption, our other globally distributed data centers automatically absorb the workload until normal operations resume.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4">
+                <p style="font-size: 1.15rem; color: var(--text-light); max-width: 900px; margin: 0 auto;">This three-tier redundancy approach means your CRM data and operations are protected against hardware failures, network issues, power disruptions, and even regional infrastructure problems.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Disaster Recovery Section -->
+    <section class="content-section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Comprehensive Disaster Recovery Planning and Testing</h2>
+                <p>Business continuity is not something we hope for—it is something we engineer, test, and continuously improve. Salesboom maintains a comprehensive disaster recovery plan that is regularly tested to ensure effectiveness when needed.</p>
+            </div>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>RAID Protection</h3>
+                    <p>Salesboom data is stored on redundant RAID (Redundant Array of Independent Disks) disk systems, providing real-time protection against storage hardware failures. Data is simultaneously written to multiple disks for instant redundancy.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock-rotate-left"></i>
+                    </div>
+                    <h3>Nightly Automated Backups</h3>
+                    <p>All customer data is backed up nightly through automated processes, with complete data snapshots captured during off-peak hours to minimize performance impact.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-copy"></i>
+                    </div>
+                    <h3>Multiple Backup Copies</h3>
+                    <p>Backup data is cloned to create multiple copies for additional redundancy, stored on secure tape media for long-term archival with comprehensive verification processes.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-warehouse"></i>
+                    </div>
+                    <h3>Off-Site Storage</h3>
+                    <p>Fire-proof, off-site storage locations are physically separated from primary data centers with regular rotation schedules to maintain multiple recovery points.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-virus"></i>
+                    </div>
+                    <h3>Data Corruption Protection</h3>
+                    <p>Multi-layered backup approach enables recovery from multiple points in time, protecting against data corruption, accidental deletion, or any other data loss scenario.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-check-double"></i>
+                    </div>
+                    <h3>Verification & Testing</h3>
+                    <p>Regular disaster recovery testing ensures our backup and recovery procedures work flawlessly when needed, with documented procedures and trained personnel.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Physical Security Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Multi-Layer Physical Security Controls</h2>
+            </div>
+            
+            <div class="two-codlumn">
+                <div class="column-content">
+                    <h3>Data Center Physical Protection</h3>
+                    <p>Our world-class data center partners employ comprehensive physical security measures that rival the most secure government and financial facilities:</p>
+                    <ul>
+                        <li>24/7/365 on-site professional security personnel</li>
+                        <li>Biometric access controls (fingerprint and retinal scanners)</li>
+                        <li>Multi-factor authentication for facility access</li>
+                        <li>Continuous video surveillance with recording and archival</li>
+                        <li>Mantrap entry systems preventing unauthorized access</li>
+                        <li>Motion detection and intrusion alarm systems</li>
+                        <li>Visitor logging and escort requirements</li>
+                        <li>Secure perimeter fencing and barriers</li>
+                    </ul>
+                </div>
+              
+            </div>
+            
+            <div class="row mt-5">
+                <div class="col-md-6 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-temperature-half"></i>
+                        </div>
+                        <h3>Environmental Controls</h3>
+                        <p>Redundant power systems with backup generators and UPS protection. Climate control with precision cooling systems. Fire suppression using advanced, server-safe technologies.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <h3>Network Infrastructure</h3>
+                        <p>Redundant network connections from multiple Tier-1 carriers. Advanced routing and failover systems. DDoS protection and traffic filtering. Continuous bandwidth monitoring.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Network Security Section -->
+    <section class="content-section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Enterprise Firewall and Network Protection</h2>
+            </div>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <h3>Enterprise Firewall Systems</h3>
+                    <p>State-of-the-art, dedicated firewall appliances protect server networks from unauthorized access. Advanced intrusion detection systems monitor for suspicious activity 24/7.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-filter"></i>
+                    </div>
+                    <h3>Packet Filtering</h3>
+                    <p>Deep packet inspection examines all network traffic. Stateful inspection tracks connection states for enhanced security. Protocol validation ensures only legitimate traffic passes through.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-ban"></i>
+                    </div>
+                    <h3>DDoS Protection</h3>
+                    <p>Distributed Denial of Service attack mitigation systems protect against volumetric attacks. Traffic analysis identifies and blocks malicious patterns before they impact service.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Intrusion Detection</h3>
+                    <p>Real-time monitoring systems detect potential security threats. Automated response systems react instantly to suspicious activity. Security event logging provides complete audit trails.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield"></i>
+                    </div>
+                    <h3>Port Security</h3>
+                    <p>Only essential ports are open and accessible. Unused services are disabled to minimize attack surface. Port scanning is actively blocked and logged.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-virus-slash"></i>
+                    </div>
+                    <h3>Malware Protection</h3>
+                    <p>Multi-layer antivirus and anti-malware scanning. Regular signature updates to detect new threats. Heuristic analysis identifies unknown malware variants.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Security Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Application-Level Security and Data Isolation</h2>
+            </div>
+            
+            <div class="two-codlumn shadow-lg">
+       
+                <div class="column-content   P-5 m-5">
+                    <h3>Complete Data Isolation</h3>
+                    <p>Within the Salesboom software, extensive security measures ensure that all code instances are completely separate from one another and cannot be accessed across organizational boundaries.</p>
+                    
+                    <h4>Security Enforcement Features:</h4>
+                    <ul>
+                        <li>Security validation re-applied with every single request</li>
+                        <li>Session-based security maintained for entire browser session</li>
+                        <li>Automatic session timeouts after inactivity periods</li>
+                        <li>Unique encryption keys for each customer organization</li>
+                        <li>Database-level access controls preventing cross-organization queries</li>
+                        <li>Application-level permissions enforced in addition to database security</li>
+                    </ul>
+                    
+                    <p>This layered security approach means that even if one security measure were somehow bypassed, multiple additional security layers would still protect your data.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Internal Security Section -->
+    <section class="content-section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Defense-in-Depth Strategy Behind the Firewall</h2>
+                <p>While perimeter defenses are critical, Salesboom recognizes that comprehensive security requires protection at every level. Inside the firewall perimeter, we employ additional security measures to protect our systems and your data.</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Proprietary Security Software</h3>
+                        <p>Continuously developed custom security checks and monitoring triggers watch for suspicious activity patterns and unauthorized access attempts.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <h3>Network Address Translation</h3>
+                        <p>NAT hides internal server IP addresses from external networks, adding an additional layer of protection against direct attacks.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-door-closed"></i>
+                        </div>
+                        <h3>Port Redirection</h3>
+                        <p>Minimizes the attack surface by limiting accessible network ports and redirecting traffic through secure channels.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-location-crosshairs"></i>
+                        </div>
+                        <h3>Non-Routable IP Addresses</h3>
+                        <p>Internal systems use private IP ranges that cannot be directly accessed from the Internet, creating an additional security barrier.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-user-secret"></i>
+                        </div>
+                        <h3>IP Masquerading</h3>
+                        <p>Additional layer of network-level obfuscation that makes it extremely difficult for attackers to map internal infrastructure.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>24/7/365 Monitoring</h3>
+                        <p>Continuous system monitoring by both Salesboom security teams and our colocation ISP partners ensures rapid response to any issues.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compliance & Transparency Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Transparent Operations and Industry Compliance</h2>
+            </div>
+            
+            <div class="security-badge">
+                <i class="fas fa-chart-line"></i>
+                <h3>Real-Time System Status Transparency</h3>
+                <p>Salesboom believes in complete transparency regarding our security posture and operational performance. Unlike competitors who hide performance issues, we maintain public visibility into our system status. Customers can view real-time and historical uptime data at any time by visiting www.salesboom.com and clicking the 'System Status' link.</p>
+            </div>
+            
+            <div class="row mt-5">
+                <div class="col-md-6 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-balance-scale"></i>
+                        </div>
+                        <h3>Regulatory Compliance</h3>
+                        <p>Our security practices are designed to support compliance with industry regulations including data protection requirements, financial services regulations, and healthcare privacy laws.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 mb-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-sync"></i>
+                        </div>
+                        <h3>Continuous Improvement</h3>
+                        <p>We regularly review and update our security measures to align with evolving compliance requirements and industry best practices, ensuring ongoing protection.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Continuous Investment Section -->
+    <section class="content-section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Ongoing Investment in Latest Security Technologies</h2>
+                <p>Cybersecurity is not a destination—it is an ongoing journey requiring continuous investment, monitoring, and improvement. Salesboom invests heavily in the latest hardware and software to protect our servers and your data.</p>
+            </div>
+            
+            <div class="benefits-grid">
+                <div class="benefit-item" style="background: white; color: var(--text-dark); box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                    <i class="fas fa-microchip" style="color: var(--primary-color);"></i>
+                    <h3 style="color: var(--primary-color);">Hardware Upgrades</h3>
+                    <p style="color: var(--text-light);">Regular hardware upgrades to maintain performance and security capabilities with the latest technology.</p>
+                </div>
+                
+                <div class="benefit-item" style="background: white; color: var(--text-dark); box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                    <i class="fas fa-download" style="color: var(--primary-color);"></i>
+                    <h3 style="color: var(--primary-color);">Software Updates</h3>
+                    <p style="color: var(--text-light);">Continuous software updates and security patches applied promptly to protect against emerging threats.</p>
+                </div>
+                
+                <div class="benefit-item" style="background: white; color: var(--text-dark); box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                    <i class="fas fa-rocket" style="color: var(--primary-color);"></i>
+                    <h3 style="color: var(--primary-color);">Emerging Technologies</h3>
+                    <p style="color: var(--text-light);">Investment in emerging security technologies before they become industry standard, staying ahead of threats.</p>
+                </div>
+                
+                <div class="benefit-item" style="background: white; color: var(--text-dark); box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                    <i class="fas fa-graduation-cap" style="color: var(--primary-color);"></i>
+                    <h3 style="color: var(--primary-color);">Team Training</h3>
+                    <p style="color: var(--text-light);">Ongoing training for security and operations teams to stay current with latest threats and protection methods.</p>
+                </div>
+                
+                <div class="benefit-item" style="background: white; color: var(--text-dark); box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                    <i class="fas fa-handshake" style="color: var(--primary-color);"></i>
+                    <h3 style="color: var(--primary-color);">Security Partnerships</h3>
+                    <p style="color: var(--text-light);">Partnerships with leading security vendors and consultants bring external expertise and perspectives.</p>
+                </div>
+                
+                <div class="benefit-item" style="background: white; color: var(--text-dark); box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                    <i class="fas fa-clipboard-check" style="color: var(--primary-color);"></i>
+                    <h3 style="color: var(--primary-color);">Independent Audits</h3>
+                    <p style="color: var(--text-light);">Regular security audits by independent third parties validate our security posture and identify improvements.</p>
+                </div>
+                
+                <div class="benefit-item" style="background: white; color: var(--text-dark); box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                    <i class="fas fa-users" style="color: var(--primary-color);"></i>
+                    <h3 style="color: var(--primary-color);">Industry Participation</h3>
+                    <p style="color: var(--text-light);">Active participation in industry security forums and information sharing networks keeps us informed.</p>
+                </div>
+                
+                <div class="benefit-item" style="background: white; color: var(--text-dark); box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                    <i class="fas fa-radar" style="color: var(--primary-color);"></i>
+                    <h3 style="color: var(--primary-color);">Threat Intelligence</h3>
+                    <p style="color: var(--text-light);">Proactive threat intelligence monitoring helps us stay ahead of emerging threats and attack patterns.</p>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <p style="font-size: 1.2rem; color: var(--text-light); max-width: 900px; margin: 0 auto;">This continuous investment approach ensures that Salesboom's security infrastructure evolves to meet tomorrow's threats, not just today's challenges.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Experience Enterprise-Grade CRM Security?</h2>
+                <p>Protect your customer data with the same security standards used by financial institutions. Start your free trial today and experience the peace of mind that comes with world-class CRM security and our industry-leading 99.8% uptime guarantee.</p>
+                <div class="hero-cta">
+                    <a href="https://www.salesboom.com/request-crm-demo.html" class="btn-custom btn-primary-custom">Book a Demo Today</a>
+                    <a href="https://www.salesboom.com/crm_trial.html" class="btn-custom btn-outline-custom">Start Free Trial</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-2">
+      <h3 class="fw-bold text-color">
+        <i class="fa-solid fa-layer-group me-2"></i>
+        Explore Salesboom Editions
+      </h3>
+      <p class="text-muted">Discover powerful CRM editions to scale your business efficiently.</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-lg border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-briefcase fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Professional Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              A complete CRM suite with Marketing Automation, ERP integration, and Support tools — built for performance and value.
+            </p>
+            <a href="https://www.salesboom.com/editions/professional-edition.html" class="btn btn-color mt-auto">
+              Explore Professional <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-lg border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-building fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Enterprise Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              For large enterprises — automate workflows, unify data, and leverage analytics to drive strategic growth.
+            </p>
+            <a href="https://www.salesboom.com/editions/enterprise-edition.html" class="btn btn-color mt-auto">
+              View Enterprise <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-lg border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-users fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Team Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              Perfect for small teams starting with CRM — manage leads, track sales, and boost productivity with simplicity.
+            </p>
+            <a href="https://www.salesboom.com/editions/team-edition.html" class="btn btn-color mt-auto">
+           Discover Team<i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="container py-5">
+  <h2 class="text-center mb-5 text-color">
+    CRM Security, Cloud & Services
+  </h2>
+
+  <div class="row g-4">
+
+    <!-- Card 1: Security Features -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-shield-halved text-color fs-1 mb-3"></i>
+        <h4>CRM Security Features</h4>
+        <p>
+          Discover core security measures with
+          <a href="https://www.salesboom.com/products/features-security.html" class="text-color fw-bold">
+            CRM Security Features
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 2: Profile Security -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-user-shield text-color fs-1 mb-3"></i>
+        <h4>Profile Security</h4>
+        <p>
+          Learn how CRM protects user profiles with
+          <a href="https://www.salesboom.com/products/feat-profile-security.html" class="text-color fw-bold">
+            Feature Profile Security
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 3: Cloud CRM Solutions -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-cloud text-color fs-1 mb-3"></i>
+        <h4>Cloud CRM Solutions</h4>
+        <p>
+          Explore hosted CRM platforms with
+          <a href="https://www.salesboom.com/products/web_based_crm_hosted_software_solutions.html" class="text-color fw-bold">
+            Web-Based CRM Solutions
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 4: Why Salesboom -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-question-circle text-color fs-1 mb-3"></i>
+        <h4>Why Salesboom</h4>
+        <p>
+          Learn the CRM advantages with
+          <a href="https://www.salesboom.com/products/why-salesboom.html" class="text-color fw-bold">
+            Why Salesboom
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 5: Build vs Buy Analysis -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-balance-scale text-color fs-1 mb-3"></i>
+        <h4>CRM Build vs Buy</h4>
+        <p>
+          Evaluate options with
+          <a href="https://www.salesboom.com/cloud-crm-guide/cloud-crm-guide/crm-build-vs-buy-cost-analysis.html" class="text-color fw-bold">
+            CRM Cost Analysis Guide
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 6: CRM Consulting -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-lightbulb text-color fs-1 mb-3"></i>
+        <h4>CRM Consulting</h4>
+        <p>
+          Get expert guidance with
+          <a href="https://www.salesboom.com/services/business_crm_consulting_services.html" class="text-color fw-bold">
+            CRM Consulting Services
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 7: FastTrack Implementation -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-rocket text-color fs-1 mb-3"></i>
+        <h4>FastTrack Services</h4>
+        <p>
+          Speed up deployment with
+          <a href="https://www.salesboom.com/services/fasttrack.html" class="text-color fw-bold">
+            FastTrack Implementation
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 8: CRM Training -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-chalkboard-teacher text-color fs-1 mb-3"></i>
+        <h4>CRM Training</h4>
+        <p>
+          Improve skills with
+          <a href="https://www.salesboom.com/services/training.html" class="text-color fw-bold">
+            CRM Training Services
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 9: Sales Automation Content -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-gears text-color fs-1 mb-3"></i>
+        <h4>Sales Automation</h4>
+        <p>
+          Automate workflows with
+          <a href="https://www.salesboom.com/sales-automation/sales_automation_content.html" class="text-color fw-bold">
+            CRM Sales Automation Content
+          </a>.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="mt-5 footer">
+  <div class="container mt-5 pt-5">
+    <div class="footer-grid">
+      <div class="footer-section">
+        <h3>Products</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/products/tools-sfa.html">Sales Force Automation</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-marketing.html">Marketing Automation</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-casemanagement.html">Case Management</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-reporting.html">Business Intelligence</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-emailintegration.html">Email Integration</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Solutions</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/products/edition-team.html">Team Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/edition-professional.html">Professional Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/edition-enterprise.html">Enterprise Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/industry-solutions.html">Industry Solutions</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/company/index.html">About Us</a></li>
+          <li><a href="https://www.salesboom.com/company/company-contact.html">Contact Us</a></li>
+          <li><a href="https://www.salesboom.com/customers/index.html">Customers</a></li>
+          <li><a href="https://www.salesboom.com/partners/index.html">Partners</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/support/index.html">Support Center</a></li>
+          <li><a href="https://www.salesboom.com/crm_supportcenter/overview/index.html">Documentation</a></li>
+          <li><a href="https://www.salesboom.com/whitepapers/index.html">White Papers</a></li>
+          <li><a href="https://www.salesboom.com/pop-privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="bg-color">
+    <div class="container">
+     <div class="footer-bottom pb-3 mt-3">
+      <p>&copy; 2003-2025 <a class="text-white fw-bold" href="https://www.salesboom.com">Salesboom.com</a> Inc. All rights reserved. | Call: 1-855-229-2043</p>
+      <p style="margin-top: 10px;">Salesboom's color-coded CRM lead management software helps businesses visually prioritize sales opportunities with automated workflow rules. Contact us to learn how color coding can transform your lead management process and increase sales productivity.</p>
+    </div>
+    </div>
+  </div>
+ 
+</footer>
+
+<!-- Common JavaScript -->
+<script src="content/js/bootstrap.bundle.min.js"></script>
+
+
+
+    <script>
+        // Loading Screen
+        window.addEventListener('load', function() {
+            const loadingScreen = document.getElementById('loading-screen');
+            setTimeout(function() {
+                loadingScreen.classList.add('fade-out');
+                setTimeout(function() {
+                    loadingScreen.style.display = 'none';
+                }, 500);
+            }, 500);
+        });
+
+        // Scroll to Top Button
+        const scrollTopBtn = document.getElementById('scroll-top');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                scrollTopBtn.classList.add('show');
+            } else {
+                scrollTopBtn.classList.remove('show');
+            }
+        });
+        
+        scrollTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+

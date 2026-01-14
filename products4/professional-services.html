@@ -1,0 +1,1492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    
+    <!-- Primary Meta Tags -->
+    <title>Custom CRM & ERP Development | Salesboom Professional Services</title>
+    <meta name="description" content="Transform your business with Salesboom Professional Services. Custom CRM & ERP development, integrations, and automation delivered on time, on budget. ROI in 3-4 months.">
+    <meta name="keywords" content="Custom CRM development, ERP customization, Business process automation, CRM integration services, Custom business software, CRM consulting services, Enterprise software development, Professional services CRM">
+    <link rel="canonical" href="https://www.salesboom.com/professional-services.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.salesboom.com/professional-services.html">
+    <meta property="og:title" content="Custom CRM & ERP Development | Salesboom Professional Services">
+    <meta property="og:description" content="Transform your business with Salesboom Professional Services. Custom CRM & ERP development, integrations, and automation delivered on time, on budget. ROI in 3-4 months.">
+    <meta property="og:image" content="https://www.salesboom.com/img/professional-services-og.jpg">
+    <meta property="og:site_name" content="Salesboom CRM">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.salesboom.com/professional-services.html">
+    <meta name="twitter:title" content="Custom CRM & ERP Development | Salesboom Professional Services">
+    <meta name="twitter:description" content="Transform your business with Salesboom Professional Services. Custom CRM & ERP development, integrations, and automation delivered on time, on budget. ROI in 3-4 months.">
+    <meta name="twitter:image" content="https://www.salesboom.com/img/professional-services-og.jpg">
+    <meta name="twitter:site" content="@SalesboomCloud">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Salesboom Professional Services",
+      "description": "Custom CRM and ERP development, integrations, and automation",
+      "provider": {
+        "@type": "Organization",
+        "name": "Salesboom",
+        "url": "https://www.salesboom.com",
+        "logo": "https://www.salesboom.com/img/salesboom-logo-252x67.png",
+        "foundingDate": "2003",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+1-855-229-2043",
+          "contactType": "Customer Service"
+        }
+      },
+      "areaServed": "Worldwide",
+      "serviceType": [
+        "CRM Customization",
+        "ERP Development",
+        "Business Process Automation",
+        "System Integration",
+        "Data Migration",
+        "Training and Support"
+      ]
+    }
+    </script>
+    
+    <link rel="shortcut icon" href="https://www.salesboom.com/favicon.ico">
+    
+
+    <link rel="stylesheet" href="content/css/bootstrap.min.css">
+    <link rel="stylesheet" href="content/css/salesboom-common.css">
+    <link rel="shortcut icon" href="content/image/salesboom-logo-252x67.png" type="image/x-icon"> 
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #002f6c;
+            --secondary-color: #004d99;
+            --accent-color: #0066cc;
+            --success-color: #28a745;
+            --info-color: #17a2b8;
+            --warning-color: #ffc107;
+            --danger-color: #dc3545;
+            --text-dark: #212529;
+            --text-light: #6c757d;
+            --bg-light: #f8f9fa;
+            --bg-white: #ffffff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+        
+        /* Loading Screen */
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+        
+        #loading-screen.fade-out {
+            opacity: 0;
+            visibility: hidden;
+        }
+        
+        .spinner {
+            width: 60px;
+            height: 60px;
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            border-top-color: #ffffff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        .loading-text {
+            color: white;
+            font-size: 1.2rem;
+            margin-top: 20px;
+            font-weight: 500;
+        }
+        
+        /* Scroll to Top Button */
+        #scrollToTop {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 20px;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0, 47, 108, 0.3);
+        }
+        
+        #scrollToTop.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        #scrollToTop:hover {
+            background: var(--secondary-color);
+            transform: translateY(-5px);
+            box-shadow: 0 6px 16px rgba(0, 47, 108, 0.4);
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-section h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 25px;
+            line-height: 1.2;
+        }
+        
+        .hero-section .subtitle {
+            font-size: 1.4rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            line-height: 1.6;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn-primary-custom {
+            background: white;
+            color: var(--primary-color);
+            padding: 16px 40px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-primary-custom:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3);
+            color: var(--primary-color);
+        }
+        
+        .btn-outline-custom {
+            background: transparent;
+            color: white;
+            padding: 16px 40px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border: 2px solid white;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-outline-custom:hover {
+            background: white;
+            color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+        
+        /* Section Styles */
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto 50px;
+            line-height: 1.8;
+        }
+        
+        .bg-light-custom {
+            background-color: var(--bg-light);
+        }
+        
+        /* Feature Cards */
+        .feature-card {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            height: 100%;
+            transition: all 0.3s ease;
+            border: 1px solid #e9ecef;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 47, 108, 0.15);
+            border-color: var(--primary-color);
+        }
+        
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+            font-size: 32px;
+            color: white;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        .feature-card p {
+            color: var(--text-light);
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+        
+        /* List Styles */
+        .custom-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .custom-list li {
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 15px;
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+        
+        .custom-list li::before {
+            content: "\f058";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-size: 20px;
+        }
+        
+        .warning-list li::before {
+            content: "\f06a";
+            color: var(--danger-color);
+        }
+        
+        /* Alert Boxes */
+        .alert-custom {
+            border-radius: 12px;
+            padding: 30px;
+            margin: 30px 0;
+            border-left: 5px solid;
+        }
+        
+        .alert-primary-custom {
+            background: #e3f2fd;
+            border-color: var(--primary-color);
+        }
+        
+        .alert-success-custom {
+            background: #d4edda;
+            border-color: var(--success-color);
+        }
+        
+        .alert-info-custom {
+            background: #d1ecf1;
+            border-color: var(--info-color);
+        }
+        
+        .alert-warning-custom {
+            background: #fff3cd;
+            border-color: var(--warning-color);
+        }
+        
+        .alert-danger-custom {
+            background: #f8d7da;
+            border-color: var(--danger-color);
+        }
+        
+        .alert-custom h4 {
+            font-weight: 600;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        /* Stats Section */
+        .stats-section {
+            background: var(--primary-color);
+            color: white;
+            padding: 60px 0;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            color: white;
+        }
+        
+        .stat-label {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        /* Process Steps */
+        .process-step {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 25px;
+            border-left: 5px solid var(--primary-color);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .process-step:hover {
+            box-shadow: 0 8px 20px rgba(0, 47, 108, 0.15);
+            transform: translateX(5px);
+        }
+        
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        
+        .process-step h4 {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .process-step p {
+            color: var(--text-light);
+            margin: 0;
+            line-height: 1.7;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Quote Block */
+        .quote-block {
+            background: var(--bg-light);
+            border-left: 5px solid var(--primary-color);
+            padding: 30px;
+            margin: 30px 0;
+            border-radius: 8px;
+            font-style: italic;
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: var(--text-dark);
+        }
+        
+        /* Content Typography */
+        .content-text {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        
+        .content-text strong {
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+        
+        /* Service Number Badge */
+        .service-number {
+            background: var(--primary-color);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            margin-right: 15px;
+            font-size: 1.1rem;
+        }
+        
+        /* Industry Grid */
+        .industry-item {
+            background: white;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 20px;
+            border: 1px solid #e9ecef;
+            transition: all 0.3s ease;
+        }
+        
+        .industry-item:hover {
+            border-color: var(--primary-color);
+            box-shadow: 0 4px 15px rgba(0, 47, 108, 0.1);
+        }
+        
+        .industry-item h5 {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .industry-item p {
+            color: var(--text-light);
+            margin: 0;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero-section h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-section .subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            #scrollToTop {
+                bottom: 20px;
+                right: 20px;
+                width: 45px;
+                height: 45px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 60px 0;
+            }
+            
+            .hero-section h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-section .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            section {
+                padding: 60px 0;
+            }
+            
+            .feature-card {
+                margin-bottom: 30px;
+            }
+            
+            .btn-primary-custom,
+            .btn-outline-custom {
+                width: 100%;
+                text-align: center;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+            }
+            
+            .stat-number {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="spinner"></div>
+        <div class="loading-text">Loading...</div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    
+
+    <!-- Top Bar -->
+<div class="top-bar">
+  <div class="container">
+    <div class="top-bar-left text-color">
+      <span>✓ Award-Winning Cloud CRM Software Since 2003</span>
+    </div>
+    <ul class="top-bar-nav">
+      <li><a href="https://www.salesboom.com/crm_supportcenter/overview/index.html">Support Center</a></li>
+      <li><a href="https://www.salesboom.com/crm_trial.html">Free Trial</a></li>
+      <li><a href="https://www.salesboom.com/login.html">Login</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Main Header -->
+<header>
+  <div class="main-header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <a href="https://www.salesboom.com" aria-label="Salesboom CRM Home">
+            <img src="https://www.salesboom.com/img/salesboom-logo-252x67.png" alt="Salesboom Cloud CRM Logo" width="252" height="67">
+          </a>
+        </div>
+        <div class="header-phone">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          <a href="tel:+18552292043">1-855-229-2043</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Custom Business Software That Actually Fits Your Processes</h1>
+                <p class="subtitle">Salesboom Professional Services delivers tailored CRM and ERP solutions that automate your unique business processes—on time, on budget, with ROI in just 3-4 months.</p>
+                <div class="hero-buttons">
+                    <a href="https://www.salesboom.com/request-crm-demo.html" class="btn-primary-custom">Schedule Consultation</a>
+                    <a href="https://www.salesboom.com/crm_trial.html" class="btn-outline-custom">Start Free Trial</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <div class="stats-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-6">
+                    <div class="stat-item">
+                        <div class="stat-number">22+</div>
+                        <div class="stat-label">Years of Expertise</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-item">
+                        <div class="stat-number">3-4</div>
+                        <div class="stat-label">Months to ROI</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-item">
+                        <div class="stat-number">2+</div>
+                        <div class="stat-label">Weeks to Customize</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-item">
+                        <div class="stat-number">125+</div>
+                        <div class="stat-label">Partner Network</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Problem Statement Section -->
+    <section id="problem">
+        <div class="container">
+            <h2 class="section-title">Why Off-the-Shelf Software Fails Your Business</h2>
+            
+            <div class="row mt-5">
+                <div class="col-lg-10 mx-auto">
+                    <p class="content-text">
+                        Most businesses face a frustrating reality: generic CRM and ERP systems force you to change your proven processes to fit the software, not the other way around. You're left with three bad options: accept inefficient workarounds, maintain expensive manual processes alongside your "automated" system, or invest months and hundreds of thousands in customization with uncertain results.
+                    </p>
+                    
+                    <div class="alert-custom alert-danger-custom">
+                        <h4><i class="fas fa-exclamation-triangle"></i> The Consequences of Forcing Square Pegs into Round Holes</h4>
+                        <ul class="custom-list warning-list">
+                            <li>Critical business processes that remain manual because the software can't accommodate them</li>
+                            <li>Employee resistance and low adoption rates when systems don't match how they actually work</li>
+                            <li>Data silos when you're forced to maintain multiple systems for different functions</li>
+                            <li>Wasted investment in software licenses that never deliver promised ROI</li>
+                            <li>Competitive disadvantage as you're constrained by inflexible technology</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="quote-block">
+                        <i class="fas fa-quote-left me-2"></i>
+                        Your business is unique. Your software should be too. Salesboom Professional Services builds custom CRM and ERP solutions that adapt to your business, not force your business to adapt to rigid software templates.
+                        <i class="fas fa-quote-right ms-2"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Overview Section -->
+    <section id="solution" class="bg-light-custom">
+        <div class="container">
+            <h2 class="section-title">Professional Services That Put Your Business First</h2>
+            
+            <div class="row mt-5">
+                <div class="col-lg-10 mx-auto">
+                    <p class="content-text">
+                        At Salesboom, we listen to our customers. Technology alone will not bring about success. That's why we provide a complete range of Professional Services to develop custom business applications that automate your specific Customer Relationship Management (CRM) and Enterprise Resource Planning (ERP) processes exactly as you need them.
+                    </p>
+                    
+                    <div class="alert-custom alert-primary-custom">
+                        <h4><i class="fas fa-bullseye"></i> Our Primary Goal</h4>
+                        <p style="margin: 0; color: var(--text-dark);">
+                            <strong>Salesboom IT Professional Services has one primary goal: to make your CRM and ERP deployment a success.</strong> We work with your company to develop a carefully orchestrated plan, to design and deploy streamlined custom business process software applications that deliver positive ROI within the first 3-4 months.
+                        </p>
+                    </div>
+                    
+                    <h3 style="color: var(--primary-color); font-weight: 600; margin: 40px 0 25px; text-align: center;">
+                        <i class="fas fa-cogs me-2"></i>Our Proven Methodology Combines
+                    </h3>
+                    
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-search"></i>
+                                </div>
+                                <h3>Deep Business Analysis</h3>
+                                <p>We take time to understand your unique requirements through comprehensive business process analysis.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-layer-group"></i>
+                                </div>
+                                <h3>Standards-Based Architecture</h3>
+                                <p>Our platform approach reduces customization costs while maintaining flexibility and scalability.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-users-cog"></i>
+                                </div>
+                                <h3>Experienced Team</h3>
+                                <p>Our development team delivers projects on time and on budget with over 22 years of experience.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-handshake"></i>
+                                </div>
+                                <h3>Ongoing Partnership</h3>
+                                <p>We provide comprehensive training, support, and partnership throughout your entire CRM/ERP lifecycle.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Offerings Section -->
+    <section id="services">
+        <div class="container">
+            <h2 class="section-title">End-to-End Professional Services for CRM & ERP Success</h2>
+            <p class="section-subtitle">Salesboom can help you through the entire lifecycle of your CRM and ERP initiative. We are there with you every step of the way and work hard at maintaining a free-flow of communication between our team and all project stakeholders.</p>
+            
+            <div class="row mt-5">
+                <div class="col-lg-10 mx-auto">
+                    <!-- Service 1 -->
+                    <div class="process-step">
+                        <div class="d-flex align-items-center mb-3">
+                            <span class="service-number">1</span>
+                            <h4 class="mb-0">CRM Strategy & Requirements Analysis</h4>
+                        </div>
+                        <p>Before writing a single line of code, we work with your team to understand your business objectives, pain points, and success criteria. Through structured workshops and stakeholder interviews, we document detailed requirements and create a strategic roadmap that aligns technology with business goals.</p>
+                    </div>
+                    
+                    <!-- Service 2 -->
+                    <div class="process-step">
+                        <div class="d-flex align-items-center mb-3">
+                            <span class="service-number">2</span>
+                            <h4 class="mb-0">Custom Business Process Design and Automation</h4>
+                        </div>
+                        <p>We analyze your existing workflows and design optimized processes that eliminate bottlenecks and manual tasks. Our team then builds custom automation that streamlines operations, reduces errors, and frees your staff to focus on high-value activities instead of repetitive administrative work.</p>
+                    </div>
+                    
+                    <!-- Service 3 -->
+                    <div class="process-step">
+                        <div class="d-flex align-items-center mb-3">
+                            <span class="service-number">3</span>
+                            <h4 class="mb-0">Platform Customization</h4>
+                        </div>
+                        <p>Leveraging Salesboom's powerful customization capabilities, we tailor the CRM and ERP platform to match your exact business rules, terminology, and workflows. <strong>On average, we can customize our solutions to exactly fit the needs of your business in less than 2 weeks—not months.</strong></p>
+                    </div>
+                    
+                    <!-- Service 4 -->
+                    <div class="process-step">
+                        <div class="d-flex align-items-center mb-3">
+                            <span class="service-number">4</span>
+                            <h4 class="mb-0">Integration with Existing Applications</h4>
+                        </div>
+                        <p>The Salesboom API allows your business to integrate our web-based CRM and ERP software directly into your existing systems—front office, back office, and everything in between—seamlessly and rapidly. The entire Salesboom infrastructure is designed to accommodate popular business applications used by the corporate world.</p>
+                    </div>
+                    
+                    <!-- Service 5 -->
+                    <div class="process-step">
+                        <div class="d-flex align-items-center mb-3">
+                            <span class="service-number">5</span>
+                            <h4 class="mb-0">Data Cleansing and Import</h4>
+                        </div>
+                        <p>Migrating from legacy systems doesn't have to be painful. Our data specialists clean, normalize, and validate your existing data before importing it into your new system. We ensure data integrity, eliminate duplicates, and establish proper relationships so you start with a clean foundation.</p>
+                    </div>
+                    
+                    <!-- Service 6 -->
+                    <div class="process-step">
+                        <div class="d-flex align-items-center mb-3">
+                            <span class="service-number">6</span>
+                            <h4 class="mb-0">Deployment Audits</h4>
+                        </div>
+                        <p>Before and after go-live, we conduct comprehensive audits to verify system configuration, test business processes, validate data accuracy, and ensure security protocols are properly implemented. This proactive approach prevents costly issues and ensures smooth deployment.</p>
+                    </div>
+                    
+                    <!-- Service 7 -->
+                    <div class="process-step">
+                        <div class="d-flex align-items-center mb-3">
+                            <span class="service-number">7</span>
+                            <h4 class="mb-0">Comprehensive Training</h4>
+                        </div>
+                        <p>Technology is only valuable if people use it. We provide role-based training tailored to your specific customizations and workflows. From executives to end users, we ensure everyone understands how to leverage the system to maximize productivity and ROI.</p>
+                    </div>
+                    
+                    <!-- Service 8 -->
+                    <div class="process-step">
+                        <div class="d-flex align-items-center mb-3">
+                            <span class="service-number">8</span>
+                            <h4 class="mb-0">Specialized Support</h4>
+                        </div>
+                        <p>Our relationship doesn't end at deployment. Salesboom provides ongoing specialized support to address questions, optimize performance, and help you adapt the system as your business evolves. We're your long-term technology partner, not just a vendor.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Platform Section -->
+    <section id="platform" class="bg-light-custom">
+        <div class="container">
+            <h2 class="section-title">Built on a Platform Designed for Customization</h2>
+            <p class="section-subtitle">Unlike generic software that requires expensive and time-consuming modification, Salesboom's platform is architected specifically for rapid customization. This fundamental design difference is why we can deliver custom solutions in weeks instead of months.</p>
+            
+            <div class="row g-4 mt-5">
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Powerful API Access</h3>
+                        <p>Our comprehensive API enables seamless integration with virtually any business application. Connect accounting systems, marketing platforms, e-commerce solutions, and legacy databases without complex middleware.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3>Flexible Data Model</h3>
+                        <p>Custom fields, objects, and relationships can be added without database restructuring. Your unique data requirements don't require expensive development—just configuration.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-project-diagram"></i>
+                        </div>
+                        <h3>Workflow Automation Engine</h3>
+                        <p>Build complex business rules and automated workflows without programming. Our visual workflow designer puts customization power directly in your hands.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <h3>Customizable Interface</h3>
+                        <p>Modify layouts, forms, and user interfaces to match your team's preferences and workflows. No two businesses are identical, so your system shouldn't look identical either.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Custom Reporting</h3>
+                        <p>Create reports and dashboards that track the metrics that matter to your business. Our reporting engine adapts to your custom fields and processes automatically.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <h3>Security & Permissions</h3>
+                        <p>Granular security controls protect sensitive data while enabling appropriate access. Custom roles and permissions ensure the right people see the right information.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Self-Service Section -->
+    <section id="self-service">
+        <div class="container">
+            <h2 class="section-title">Self-Service Tools That Reduce Total Cost of Ownership</h2>
+            
+            <div class="row mt-5">
+                <div class="col-lg-10 mx-auto">
+                    <p class="content-text">
+                        One of Salesboom's most powerful differentiators is our comprehensive self-service customization capability. While our Professional Services team can handle any requirement, many customizations can be performed by your own team using our intuitive tools.
+                    </p>
+                    
+                    <div class="alert-custom alert-success-custom">
+                        <h4><i class="fas fa-tools"></i> Reduce Ongoing Costs</h4>
+                        <p style="margin: 0; color: var(--text-dark);">
+                            This self-service approach dramatically reduces your total cost of ownership. Simple modifications that would require expensive consultant hours with other platforms can be completed by your team in minutes—without writing code, without development environments, without risk.
+                        </p>
+                    </div>
+                    
+                    <h3 style="color: var(--primary-color); font-weight: 600; margin: 40px 0 20px;">
+                        What You Can Customize Yourself
+                    </h3>
+                    
+                    <ul class="custom-list">
+                        <li><strong>Custom Fields:</strong> Add new data fields to any object with appropriate data types and validation rules</li>
+                        <li><strong>Page Layouts:</strong> Rearrange fields, sections, and components to match your team's workflow preferences</li>
+                        <li><strong>Workflow Rules:</strong> Create automated actions triggered by specific events or conditions</li>
+                        <li><strong>Email Templates:</strong> Design professional templates for automated communications and campaigns</li>
+                        <li><strong>Reports and Dashboards:</strong> Build custom analytics that track your unique business metrics</li>
+                        <li><strong>User Permissions:</strong> Define roles and access controls that match your organizational structure</li>
+                        <li><strong>Business Processes:</strong> Configure approval workflows, escalation rules, and task assignments</li>
+                    </ul>
+                    
+                    <div class="quote-block mt-4">
+                        <i class="fas fa-quote-left me-2"></i>
+                        Our Professional Services team is always available when you need advanced customization or strategic guidance. But for day-to-day adjustments and improvements, you have the power to make changes immediately—no waiting, no consultants, no additional costs.
+                        <i class="fas fa-quote-right ms-2"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industry Experience Section -->
+    <section id="industries" class="bg-light-custom">
+        <div class="container">
+            <h2 class="section-title">Industry-Specific Expertise Across Diverse Sectors</h2>
+            <p class="section-subtitle">Salesboom Professional Services has successfully delivered custom CRM and ERP solutions for organizations across diverse industries, each with unique requirements and regulatory considerations.</p>
+            
+            <div class="row mt-5">
+                <div class="col-lg-10 mx-auto">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="industry-item">
+                                <h5><i class="fas fa-briefcase me-2"></i>Professional Services Firms</h5>
+                                <p>Project management, time tracking, resource allocation, and client billing automation</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="industry-item">
+                                <h5><i class="fas fa-industry me-2"></i>Manufacturing</h5>
+                                <p>Production scheduling, inventory management, supply chain coordination, and quality control</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="industry-item">
+                                <h5><i class="fas fa-truck me-2"></i>Distribution and Wholesale</h5>
+                                <p>Order management, inventory optimization, logistics tracking, and supplier management</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="industry-item">
+                                <h5><i class="fas fa-chart-line me-2"></i>Financial Services</h5>
+                                <p>Client onboarding, compliance documentation, investment tracking, and regulatory reporting</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="industry-item">
+                                <h5><i class="fas fa-heartbeat me-2"></i>Healthcare</h5>
+                                <p>Patient management, appointment scheduling, billing, and HIPAA-compliant record keeping</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="industry-item">
+                                <h5><i class="fas fa-laptop-code me-2"></i>Technology Companies</h5>
+                                <p>Lead management, product lifecycle management, customer support, and subscription billing</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="industry-item">
+                                <h5><i class="fas fa-hands-helping me-2"></i>Non-Profit Organizations</h5>
+                                <p>Donor management, fundraising campaigns, grant tracking, and volunteer coordination</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="industry-item">
+                                <h5><i class="fas fa-building me-2"></i>And Many More</h5>
+                                <p>Whatever your industry, we bring technical expertise and business understanding to your project</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advantages Section -->
+    <section id="advantages">
+        <div class="container">
+            <h2 class="section-title">The Salesboom Professional Services Advantage</h2>
+            <p class="section-subtitle">When you partner with Salesboom Professional Services, you're not just hiring developers—you're gaining a strategic technology partner committed to your long-term success.</p>
+            
+            <div class="row g-4 mt-5">
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3>22+ Years of Expertise</h3>
+                        <p>With over two decades of experience, we've seen it all. This deep expertise means we anticipate challenges before they occur, recommend proven best practices, and deliver solutions that stand the test of time.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>On Time, On Budget, On Demand</h3>
+                        <p>We pride ourselves on delivering projects as promised. No endless delays, no budget overruns, no surprises. Our proven methodology and fixed-scope engagements give you predictability and confidence.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3>True Partnership Approach</h3>
+                        <p>We maintain free-flowing communication between our team and all project stakeholders. You're never left wondering about project status or excluded from important decisions. We're your partner, not just a vendor.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3>Technology + Business Understanding</h3>
+                        <p>Our team combines technical expertise with business acumen. We don't just build what you ask for—we provide strategic guidance to ensure the solution delivers maximum business value.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <h3>Lower Cost Than Enterprise Solutions</h3>
+                        <p>Our platform-based approach and efficient development processes mean you get enterprise-grade customization at a fraction of traditional costs. Professional services that fit SMB budgets.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-th-large"></i>
+                        </div>
+                        <h3>Comprehensive Service Portfolio</h3>
+                        <p>From strategy through deployment and beyond, we provide everything you need for success. No need to coordinate multiple vendors—we're your single source for all CRM and ERP professional services.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Getting Started Section -->
+    <section id="getting-started" class="bg-light-custom">
+        <div class="container">
+            <h2 class="section-title">Your Journey to Custom CRM & ERP Success Starts Here</h2>
+            
+            <div class="row mt-5">
+                <div class="col-lg-8 mx-auto">
+                    <p class="content-text text-center">
+                        Ready to stop forcing your business to fit inflexible software? Ready to automate your unique processes exactly as they should work? Ready to achieve ROI in months, not years?
+                    </p>
+                    
+                    <div class="alert-custom alert-info-custom">
+                        <h4><i class="fas fa-phone-alt"></i> Schedule Your Complimentary Consultation</h4>
+                        <p style="margin-bottom: 15px; color: var(--text-dark);">
+                            The first step is simple: contact our professional services team for a complimentary consultation. During this initial conversation, we'll:
+                        </p>
+                        <ul class="custom-list">
+                            <li>Learn about your business processes and challenges</li>
+                            <li>Discuss your current systems and pain points</li>
+                            <li>Assess your requirements and objectives</li>
+                            <li>Outline potential solutions and approaches</li>
+                            <li>Provide a preliminary scope and timeline estimate</li>
+                            <li>Answer all your questions about our services and approach</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="quote-block">
+                        <i class="fas fa-quote-left me-2"></i>
+                        There's no obligation, no pressure, no sales pitch—just an honest conversation about whether Salesboom Professional Services can help you achieve your goals. Our small business CRM consultants are ready to further assess your Customer Relationship Management and ERP needs and design a solution that transforms your business operations.
+                        <i class="fas fa-quote-right ms-2"></i>
+                    </div>
+                    
+                    <div class="text-center mt-5">
+                        <a href="https://www.salesboom.com/request-crm-demo.html" class="btn btn-lg" style="background: var(--primary-color); color: white; border: none; padding: 18px 50px; font-size: 1.2rem; font-weight: 600; border-radius: 8px;">
+                            <i class="fas fa-calendar-check me-2"></i>Schedule Your Free Consultation
+                        </a>
+                        <p class="mt-3 text-muted">
+                            <i class="fas fa-phone me-2"></i>Or call us directly: 1-855-229-2043
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Build CRM & ERP Software That Actually Fits Your Business?</h2>
+            <p>Stop adapting your business to inflexible software. Contact our Professional Services team for a complimentary consultation and discover how custom CRM and ERP solutions can deliver ROI in just 3-4 months.</p>
+            <div class="hero-buttons">
+                <a href="https://www.salesboom.com/request-crm-demo.html" class="btn-primary-custom">Get Started Today</a>
+                <a href="https://www.salesboom.com/crm_trial.html" class="btn-outline-custom">Try Platform Free</a>
+            </div>
+            <p style="margin-top: 30px; font-size: 1rem; opacity: 0.9;">
+                <i class="fas fa-envelope me-2"></i>Email: info@salesboom.com | <i class="fas fa-phone-alt ms-3 me-2"></i>Call: 1-855-229-2043
+            </p>
+        </div>
+    </section>
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-2">
+      <h3 class="fw-bold text-color">
+        <i class="fa-solid fa-layer-group me-2"></i>
+        Explore Salesboom Editions
+      </h3>
+      <p class="text-muted">Discover powerful CRM editions to scale your business efficiently.</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-lg border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-briefcase fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Professional Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              A complete CRM suite with Marketing Automation, ERP integration, and Support tools — built for performance and value.
+            </p>
+            <a href="https://www.salesboom.com/editions/professional-edition.html" class="btn btn-color mt-auto">
+              Explore Professional <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-lg border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-building fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Enterprise Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              For large enterprises — automate workflows, unify data, and leverage analytics to drive strategic growth.
+            </p>
+            <a href="https://www.salesboom.com/editions/enterprise-edition.html" class="btn btn-color mt-auto">
+              View Enterprise <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-lg border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-users fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Team Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              Perfect for small teams starting with CRM — manage leads, track sales, and boost productivity with simplicity.
+            </p>
+            <a href="https://www.salesboom.com/editions/team-edition.html" class="btn btn-color mt-auto">
+           Discover Team<i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="container py-5">
+  <h2 class="text-center mb-5">CRM Value, Guidance & Professional Services</h2>
+
+  <div class="row g-4">
+
+    <!-- Card 1 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-check-circle fa-3x mb-3 text-color"></i>
+        <h4>Why Salesboom CRM</h4>
+        <p>
+          Discover why Salesboom is a user-friendly and robust cloud CRM solution that helps businesses manage sales, service, and operations efficiently.
+          <a href="https://www.salesboom.com/products/why-salesboom.html" class="fw-bold text-color">Learn more about Salesboom</a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-book-open fa-3x mb-3 text-color"></i>
+        <h4>CRM Buying Guide</h4>
+        <p>
+          Get expert advice on how to choose the right CRM for your business’s goals and needs with the
+          <a href="https://www.salesboom.com/products/how-to-buy-crm.html" class="fw-bold text-color">CRM buying guide</a>. 
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-scale-balanced fa-3x mb-3 text-color"></i>
+        <h4>Build vs Buy CRM</h4>
+        <p>
+          Understand the financial and strategic reasons to buy a mature SaaS CRM vs building one yourself with detailed cost analysis.
+          <a href="https://www.salesboom.com/cloud-crm-guide/cloud-crm-guide/crm-build-vs-buy-cost-analysis.html" class="fw-bold text-color">Build vs Buy CRM analysis</a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-handshake fa-3x mb-3 text-color"></i>
+        <h4>Business CRM Consulting</h4>
+        <p>
+          Align your CRM strategy with business goals using professional
+          <a href="https://www.salesboom.com/services/business_crm_consulting_services.html" class="fw-bold text-color">CRM consulting services</a> that tailor the system to your processes.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-fast-forward fa-3x mb-3 text-color"></i>
+        <h4>FastTrack Implementation</h4>
+        <p>
+          Implement CRM faster with a bundled approach that includes setup, configuration, and support so you can see ROI in weeks — not months.
+          <a href="https://www.salesboom.com/services/fasttrack.html" class="fw-bold text-color">Explore FastTrack services</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-chalkboard-teacher fa-3x mb-3 text-color"></i>
+        <h4>CRM Training Services</h4>
+        <p>
+          Boost team adoption and proficiency with role-based
+          <a href="https://www.salesboom.com/services/training.html" class="fw-bold text-color">CRM training services</a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 7 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-project-diagram fa-3x mb-3 text-color"></i>
+        <h4>CRM Implementation Methodology</h4>
+        <p>
+          Follow a structured implementation methodology that aligns stakeholders, minimizes friction, and drives long-term adoption.
+          <a href="https://www.salesboom.com/services/crm-implementation-methodology.html" class="fw-bold text-color">Learn about the methodology</a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 8 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-list fa-3x mb-3 text-color"></i>
+        <h4>CRM Features Overview</h4>
+        <p>
+          Explore the full suite of CRM capabilities — from automation and reporting to service workflows and customization — on the
+          <a href="https://www.salesboom.com/products/features.html" class="fw-bold text-color">CRM features page</a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 9 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-headset fa-3x mb-3 text-color"></i>
+        <h4>Web-Based Self-Service Portal</h4>
+        <p>
+          Empower customers and internal teams with a 24/7
+          <a href="https://www.salesboom.com/service-management/web-based_self_service_portal_software.html" class="fw-bold text-color">self-service support portal</a> for faster service resolution.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="mt-5 footer">
+  <div class="container mt-5 pt-5">
+    <div class="footer-grid">
+      <div class="footer-section">
+        <h3>Products</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/products/tools-sfa.html">Sales Force Automation</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-marketing.html">Marketing Automation</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-casemanagement.html">Case Management</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-reporting.html">Business Intelligence</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-emailintegration.html">Email Integration</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Solutions</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/products/edition-team.html">Team Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/edition-professional.html">Professional Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/edition-enterprise.html">Enterprise Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/industry-solutions.html">Industry Solutions</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/company/index.html">About Us</a></li>
+          <li><a href="https://www.salesboom.com/company/company-contact.html">Contact Us</a></li>
+          <li><a href="https://www.salesboom.com/customers/index.html">Customers</a></li>
+          <li><a href="https://www.salesboom.com/partners/index.html">Partners</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/support/index.html">Support Center</a></li>
+          <li><a href="https://www.salesboom.com/crm_supportcenter/overview/index.html">Documentation</a></li>
+          <li><a href="https://www.salesboom.com/whitepapers/index.html">White Papers</a></li>
+          <li><a href="https://www.salesboom.com/pop-privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="bg-color">
+    <div class="container">
+     <div class="footer-bottom pb-3 mt-3">
+      <p>&copy; 2003-2025 <a class="text-white fw-bold" href="https://www.salesboom.com">Salesboom.com</a> Inc. All rights reserved. | Call: 1-855-229-2043</p>
+      <p style="margin-top: 10px;">Salesboom's color-coded CRM lead management software helps businesses visually prioritize sales opportunities with automated workflow rules. Contact us to learn how color coding can transform your lead management process and increase sales productivity.</p>
+    </div>
+    </div>
+  </div>
+ 
+</footer>
+
+<!-- Common JavaScript -->
+<script src="content/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+
+
+
+
+    <script>
+        // Loading Screen
+        window.addEventListener('load', function() {
+            const loadingScreen = document.getElementById('loading-screen');
+            setTimeout(function() {
+                loadingScreen.classList.add('fade-out');
+            }, 500);
+        });
+
+        // Scroll to Top Button
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.classList.add('show');
+            } else {
+                scrollToTopBtn.classList.remove('show');
+            }
+        });
+        
+        scrollToTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

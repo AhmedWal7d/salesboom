@@ -1,0 +1,1554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    
+    <!-- Primary Meta Tags -->
+    <title>CRM Marketing Collateral Management Software | Salesboom</title>
+    <meta name="description" content="Centralize all marketing materials in one cloud-based CRM. Empower sales and marketing teams with instant access to PDFs, videos, case studies, and more.">
+    <meta name="keywords" content="CRM marketing collateral, Marketing collateral management, Sales enablement CRM, Document management CRM, Cloud-based marketing software, Marketing automation CRM, Sales and marketing collaboration">
+    <link rel="canonical" href="https://www.salesboom.com/marketing-collateral.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.salesboom.com/marketing-collateral.html">
+    <meta property="og:title" content="CRM Marketing Collateral Management Software | Salesboom">
+    <meta property="og:description" content="Centralize all marketing materials in one cloud-based CRM. Empower sales and marketing teams with instant access to PDFs, videos, case studies, and more.">
+    <meta property="og:image" content="https://www.salesboom.com/img/marketing-collateral-og.jpg">
+    <meta property="og:site_name" content="Salesboom CRM">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.salesboom.com/marketing-collateral.html">
+    <meta name="twitter:title" content="CRM Marketing Collateral Management Software | Salesboom">
+    <meta name="twitter:description" content="Centralize all marketing materials in one cloud-based CRM. Empower sales and marketing teams with instant access to PDFs, videos, case studies, and more.">
+    <meta name="twitter:image" content="https://www.salesboom.com/img/marketing-collateral-og.jpg">
+    <meta name="twitter:site" content="@SalesboomCloud">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Salesboom Marketing Collateral Management Software",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web-based, Cloud",
+      "offers": {
+        "@type": "Offer",
+        "price": "14.00",
+        "priceCurrency": "USD",
+        "priceValidUntil": "2026-12-31"
+      },
+      "featureList": [
+        "Centralized marketing collateral management",
+        "Real-time publishing and version control",
+        "Universal file format support",
+        "Marketing automation integration",
+        "Comprehensive usage analytics and tracking",
+        "Mobile-first access for sales teams"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.5",
+        "ratingCount": "3500"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Salesboom",
+        "url": "https://www.salesboom.com",
+        "logo": "https://www.salesboom.com/img/salesboom-logo-252x67.png",
+        "foundingDate": "2003",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+1-855-229-2043",
+          "contactType": "Customer Service"
+        }
+      }
+    }
+    </script>
+    
+    <link rel="shortcut icon" href="https://www.salesboom.com/favicon.ico">
+
+    <link rel="stylesheet" href="content/css/bootstrap.min.css">
+    <link rel="stylesheet" href="content/css/salesboom-common.css">
+    <link rel="shortcut icon" href="content/image/salesboom-logo-252x67.png" type="image/x-icon"> 
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #002f6c;
+            --primary-dark: #001d44;
+            --primary-light: #004494;
+            --accent-color: #0066cc;
+            --text-dark: #1a1a1a;
+            --text-light: #666666;
+            --bg-light: #f8f9fa;
+            --white: #ffffff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        .btn-outline-light{
+            border: 2px solid white;
+        }
+        
+        /* Loading Screen */
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+        
+        #loading-screen.fade-out {
+            opacity: 0;
+            visibility: hidden;
+        }
+        
+        .loader {
+            width: 50px;
+            height: 50px;
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            border-top: 5px solid var(--white);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* Scroll to Top Button */
+        #scrollToTop {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            color: var(--white);
+            border: none;
+            border-radius: 50%;
+            font-size: 20px;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0, 47, 108, 0.3);
+        }
+        
+        #scrollToTop.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        #scrollToTop:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 16px rgba(0, 47, 108, 0.4);
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+            color: var(--white);
+            padding: 100px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-section h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 25px;
+            line-height: 1.2;
+        }
+        
+        .hero-section .lead {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            line-height: 1.6;
+        }
+        
+        .hero-buttons .btn {
+            padding: 15px 40px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            margin: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-light {
+            background: var(--white);
+            color: var(--primary-color);
+            border: none;
+        }
+        
+        .btn-light:hover {
+            background: var(--bg-light);
+            color: var(--primary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn-outline-light:hover {
+            background: var(--white);
+            color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+        
+        /* Stats Section */
+        .stats-section {
+            background: var(--primary-dark);
+            color: var(--white);
+            padding: 60px 0;
+        }
+        
+        .stat-card {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .stat-card h3 {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #0066cc;
+            margin-bottom: 10px;
+        }
+        
+        .stat-card p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        /* Content Sections */
+        .content-section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .section-intro {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto 60px;
+            line-height: 1.8;
+        }
+        
+        /* Feature Cards */
+        .feature-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            height: 100%;
+            border-top: 4px solid var(--primary-color);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 25px rgba(0, 47, 108, 0.15);
+        }
+        
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            color: var(--white);
+            margin-bottom: 25px;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        .feature-card p {
+            color: var(--text-light);
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+        
+        .feature-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .feature-card ul li {
+            padding-left: 30px;
+            position: relative;
+            margin-bottom: 12px;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+        
+        .feature-card ul li::before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: #28a745;
+            font-size: 16px;
+        }
+        
+        /* Two Column Layout */
+        .two-column-section {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+        
+        .two-column-section.reverse {
+            flex-direction: row-reverse;
+        }
+        
+        .column-content h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .column-content h4 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        
+        .column-content p {
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        
+        .column-content ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .column-content ul li {
+            padding-left: 30px;
+            position: relative;
+            margin-bottom: 12px;
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+        
+        .column-content ul li::before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: #28a745;
+            font-size: 16px;
+        }
+        
+        .column-image img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Background Colors */
+        .bg-light-section {
+            background: var(--bg-light);
+        }
+        
+        /* Benefits Section */
+        .benefits-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+            color: var(--white);
+            padding: 80px 0;
+            position: relative;
+        }
+        
+        .benefit-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: 40px;
+            text-align: center;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        
+        .benefit-card:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-5px);
+        }
+        
+        .benefit-card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        
+        .benefit-card p {
+            opacity: 0.95;
+            line-height: 1.7;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: var(--primary-dark);
+            color: var(--white);
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+        }
+        
+        .cta-section p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            margin-bottom: 40px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* File Format List */
+        .file-formats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .file-format-item {
+            background: var(--white);
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .file-format-item i {
+            font-size: 2rem;
+            color: var(--primary-color);
+        }
+        
+        .file-format-item span {
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+        
+        /* Use Case Cards */
+        .use-case-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 12px;
+            border-left: 4px solid var(--primary-color);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+        }
+        
+        .use-case-card:hover {
+            box-shadow: 0 8px 25px rgba(0, 47, 108, 0.15);
+            transform: translateX(5px);
+        }
+        
+        .use-case-card h4 {
+            color: var(--primary-color);
+            font-weight: 700;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+        
+        .use-case-card p {
+            color: var(--text-light);
+            line-height: 1.7;
+            margin: 0;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero-section h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-section .lead {
+                font-size: 1.1rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .two-column-section {
+                flex-direction: column;
+                gap: 40px;
+            }
+            
+            .two-column-section.reverse {
+                flex-direction: column;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 60px 0 50px;
+            }
+            
+            .hero-section h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-section .lead {
+                font-size: 1rem;
+            }
+            
+            .hero-buttons .btn {
+                display: block;
+                width: 100%;
+                margin: 10px 0;
+            }
+            
+            .stat-card h3 {
+                font-size: 2.5rem;
+            }
+            
+            .content-section {
+                padding: 60px 0;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .feature-card {
+                padding: 30px;
+            }
+            
+            #scrollToTop {
+                bottom: 20px;
+                right: 20px;
+                width: 45px;
+                height: 45px;
+                font-size: 18px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero-section h1 {
+                font-size: 1.7rem;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+            }
+            
+            .cta-section h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader"></div>
+    </div>
+    
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+        <!-- Top Bar -->
+<div class="top-bar">
+  <div class="container">
+    <div class="top-bar-left text-color">
+      <span>✓ Award-Winning Cloud CRM Software Since 2003</span>
+    </div>
+    <ul class="top-bar-nav">
+      <li><a href="https://www.salesboom.com/crm_supportcenter/overview/index.html">Support Center</a></li>
+      <li><a href="https://www.salesboom.com/crm_trial.html">Free Trial</a></li>
+      <li><a href="https://www.salesboom.com/login.html">Login</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Main Header -->
+<header>
+  <div class="main-header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <a href="https://www.salesboom.com" aria-label="Salesboom CRM Home">
+            <img src="https://www.salesboom.com/img/salesboom-logo-252x67.png" alt="Salesboom Cloud CRM Logo" width="252" height="67">
+          </a>
+        </div>
+        <div class="header-phone">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          <a href="tel:+18552292043">1-855-229-2043</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content text-center">
+                <h1>One Central Hub for All Your Marketing Materials</h1>
+                <p class="lead">Empower your sales and marketing teams with instant access to the right collateral at the right time—all stored securely in your cloud-based CRM.</p>
+                <div class="hero-buttons">
+                    <a href="https://www.salesboom.com/request-crm-demo.html" class="btn btn-light btn-lg">Book a Demo</a>
+                    <a href="https://www.salesboom.com/crm_trial.html" class="btn btn-outline-light btn-lg">Start Free Trial</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-6 mb-4 mb-md-0">
+                    <div class="stat-card">
+                        <h3>22+</h3>
+                        <p>Years of CRM Innovation</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-4 mb-md-0">
+                    <div class="stat-card">
+                        <h3>3,500+</h3>
+                        <p>Businesses Transformed</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-card">
+                        <h3>159</h3>
+                        <p>Countries Served</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-card">
+                        <h3>24/7</h3>
+                        <p>Customer Support</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Problem Statement Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">The Marketing Collateral Challenge Holding Your Team Back</h2>
+            <p class="section-intro">Sales reps waste precious selling time searching through email threads, shared drives, and outdated folders trying to find the right white paper, case study, or presentation. Marketing teams struggle to ensure everyone uses current, on-brand materials. The result? Missed opportunities, inconsistent messaging, and frustrated teams on both sides.</p>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-file-circle-xmark"></i>
+                        </div>
+                        <h3>Outdated Materials</h3>
+                        <p>Sales reps send outdated materials to prospects, damaging credibility and losing deals to more prepared competitors.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-eye-slash"></i>
+                        </div>
+                        <h3>Zero Visibility</h3>
+                        <p>Marketing has no visibility into which materials are actually being used or driving results in the field.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-code-branch"></i>
+                        </div>
+                        <h3>Version Control Chaos</h3>
+                        <p>Multiple conflicting documents circulate, creating confusion and brand inconsistency across customer touchpoints.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>Time Wasted</h3>
+                        <p>Critical selling moments are lost while reps hunt for the right document instead of engaging prospects.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-user-clock"></i>
+                        </div>
+                        <h3>Onboarding Delays</h3>
+                        <p>New hires spend weeks just learning where to find basic materials, slowing ramp time and productivity.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h3>Brand Inconsistency</h3>
+                        <p>Brand consistency suffers when teams use outdated or unapproved materials with conflicting messaging.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <p class="mt-5 text-center" style="font-size: 1.1rem; color: var(--text-light); max-width: 900px; margin-left: auto; margin-right: auto;">Traditional document management systems weren't built for the dynamic needs of sales and marketing collaboration. You need a solution that lives where your teams already work—inside your CRM.</p>
+        </div>
+    </section>
+    
+    <!-- Solution Overview Section -->
+    <section class="content-section bg-light-section">
+        <div class="container">
+            <h2 class="section-title">Centralized Marketing Collateral Management in Your CRM</h2>
+            <p class="section-intro">Salesboom's CRM Marketing Collateral Software creates a single, centralized location where all your marketing materials live, breathe, and work for your business. PDFs, videos, white papers, case studies, presentations, testimonials, advertisements, and more—everything your teams need is instantly accessible from anywhere, on any device.</p>
+            
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6">
+                    <div class="column-content">
+                        <h3>Real-Time Control and Publishing</h3>
+                        <p>Marketing leaders gain complete control over what materials are published and available to the sales organization. In minutes, you can update documents, retire outdated materials, or launch new collateral across your entire organization.</p>
+                        <p>This real-time publishing control ensures everyone always has access to current, approved materials—no more version confusion or outdated presentations.</p>
+                        <p class="mt-3"><strong>The flexibility you need for today's agile business environments is built right in:</strong></p>
+                        <ul>
+                            <li>Running a new promotion? Launch new sales materials instantly</li>
+                            <li>Updated your positioning? Replace old presentations across the organization with a few clicks</li>
+                            <li>Entering a new market? Publish region-specific collateral to the right teams immediately</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-2">
+                    <div class="column-content">
+                        <h3>Sales and Marketing Alignment</h3>
+                        <p>Bridge the gap between sales and marketing teams with shared visibility and seamless collaboration. Marketing sees exactly which materials sales teams are using, how often, and with which prospects. Sales gets immediate access to the latest collateral without needing to email marketing or dig through shared drives.</p>
+                        <p><strong>This alignment transforms both teams:</strong></p>
+                        <ul>
+                            <li>Marketing creates materials that sales actually uses based on real usage data</li>
+                            <li>Sales confidently shares materials knowing they're current and on-brand</li>
+                            <li>Both teams communicate in real-time about what's working and what's not</li>
+                            <li>New campaigns launch faster with synchronized collateral distribution</li>
+                            <li>Feedback loops tighten, improving collateral effectiveness over time</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+         
+        </div>
+    </section>
+    
+    <!-- Universal Document Support Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Support for Every File Format Your Business Uses</h2>
+            <p class="section-intro">Your marketing materials come in many formats, and Salesboom supports them all. No need to convert files or worry about compatibility—upload and share any document type your teams need.</p>
+            
+            <div class="file-formats">
+                <div class="file-format-item">
+                    <i class="fas fa-file-word"></i>
+                    <span>Microsoft Word (.doc, .docx)</span>
+                </div>
+                <div class="file-format-item">
+                    <i class="fas fa-file-pdf"></i>
+                    <span>Adobe PDF (.pdf)</span>
+                </div>
+                <div class="file-format-item">
+                    <i class="fas fa-file-powerpoint"></i>
+                    <span>PowerPoint (.ppt, .pptx)</span>
+                </div>
+                <div class="file-format-item">
+                    <i class="fas fa-file-excel"></i>
+                    <span>Excel (.xls, .xlsx)</span>
+                </div>
+                <div class="file-format-item">
+                    <i class="fas fa-video"></i>
+                    <span>Video Files (all formats)</span>
+                </div>
+                <div class="file-format-item">
+                    <i class="fas fa-image"></i>
+                    <span>Images (.jpg, .png, .gif)</span>
+                </div>
+                <div class="file-format-item">
+                    <i class="fas fa-code"></i>
+                    <span>HTML Files</span>
+                </div>
+                <div class="file-format-item">
+                    <i class="fas fa-file"></i>
+                    <span>Any Other Format</span>
+                </div>
+            </div>
+            
+            <p class="mt-5 text-center" style="font-size: 1.1rem; color: var(--text-light); max-width: 900px; margin-left: auto; margin-right: auto;">Files maintain their original formatting and quality, ensuring professional presentation every time. Sales reps can preview documents directly in the CRM before sharing with prospects, and download or share materials with a single click.</p>
+        </div>
+    </section>
+    
+    <!-- Instant Access Section -->
+    <section class="content-section bg-light-section">
+        <div class="container">
+            <h2 class="section-title">The Right Collateral at the Right Time</h2>
+            <p class="section-intro">In sales, timing is everything. That perfect case study, compelling white paper, or powerful customer testimonial can be the difference between closing a deal and hearing "I need to think about it."</p>
+            
+            <div class="row g-4 mt-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-folder-tree"></i>
+                        </div>
+                        <h3>Organized by Category and Campaign</h3>
+                        <p>Structure your collateral library with customizable categories, tags, and folders that mirror how your teams actually think and work. Organize by industry, product line, buyer persona, sales stage, or campaign—whatever taxonomy makes sense for your business.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-magnifying-glass"></i>
+                        </div>
+                        <h3>Powerful Search and Filtering</h3>
+                        <p>Sales reps find what they need in seconds with robust search functionality. Search by title, content, tags, date, campaign, or any custom field. Filter results by document type, recency, or relevance to surface the perfect material instantly.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3>Contextual Recommendations</h3>
+                        <p>The system learns which collateral works best for different scenarios and suggests relevant materials based on the opportunity stage, industry, or prospect profile. Smart recommendations save time and increase effectiveness.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-mobile-screen"></i>
+                        </div>
+                        <h3>Mobile Access Everywhere</h3>
+                        <p>Access the complete collateral library from any smartphone or tablet. Sales reps in the field can pull up case studies, product sheets, or presentations on the spot during customer meetings—no laptop required.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-share-nodes"></i>
+                        </div>
+                        <h3>One-Click Sharing</h3>
+                        <p>Share materials with prospects via email, link, or direct download with a single click. Track who opens what and when, providing valuable insights into prospect engagement and interest levels.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-bookmark"></i>
+                        </div>
+                        <h3>Personal Favorites and Collections</h3>
+                        <p>Sales reps can bookmark frequently used materials and create personal collections for different industries or use cases. Quick access to go-to materials accelerates every sales conversation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Analytics Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Data-Driven Insights for Marketing Optimization</h2>
+            <p class="section-intro">Stop guessing which marketing materials drive results. Salesboom's comprehensive analytics show exactly what's working, what's not, and where to invest your content creation efforts.</p>
+            
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Usage Tracking and Analytics</h3>
+                        <p>Monitor which materials are downloaded, shared, and viewed most frequently. Identify your highest-performing collateral and understand which content resonates with different industries, buyer personas, and sales stages.</p>
+                        <ul class="mt-3">
+                            <li>Views, downloads, and shares by material</li>
+                            <li>Usage trends over time</li>
+                            <li>Performance by sales rep and team</li>
+                            <li>Material usage by opportunity stage</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-pie"></i>
+                        </div>
+                        <h3>Content Engagement Metrics</h3>
+                        <p>When sales reps share materials with prospects, track engagement in real-time. See who opens what, how long they spend with each document, and which materials move deals forward.</p>
+                        <ul class="mt-3">
+                            <li>Prospect engagement tracking</li>
+                            <li>Time spent viewing materials</li>
+                            <li>Content that drives conversions</li>
+                            <li>Materials correlating with closed deals</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-triangle-exclamation"></i>
+                        </div>
+                        <h3>Underutilized Content Alerts</h3>
+                        <p>Identify marketing materials that aren't being used by sales teams. Discover gaps in your content library and understand why certain materials gather dust while others are constantly shared.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3>ROI Measurement</h3>
+                        <p>Connect marketing collateral usage directly to revenue outcomes. See which materials contribute to closed deals, quantify the impact of your content investments, and justify marketing budgets with hard data.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+      
+    <!-- ---------------------------------------------------------------------------------------------------------------------------------- -->
+      <div class="col-md-8 mx-auto">
+        <div class="card h-100 shadow-lg border-0">
+          <div class="card-body d-flex flex-column">
+            <!-- Responsive iframe -->
+            <div class="ratio ratio-16x9 mb-3">
+              <iframe
+                src="https://www.youtube.com/embed/2EPdRqQ0m0k"
+                title="YouTube video 2"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- ---------------------------------------------------------------------------------------------------------------------------------- -->
+
+    <!-- Marketing Automation Integration Section -->
+    <section class="content-section bg-light-section">
+        <div class="container">
+            <h2 class="section-title">Seamless Marketing Automation Integration</h2>
+            <p class="section-intro">Collateral management doesn't exist in isolation. Salesboom connects your content library directly to marketing campaigns, email automation, and lead nurturing workflows.</p>
+            
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="column-content">
+                        <h3>Content-Driven Campaigns</h3>
+                        <ul>
+                            <li><strong>Email Marketing:</strong> Attach collateral directly from the library to marketing emails</li>
+                            <li><strong>Lead Nurturing:</strong> Trigger automated workflows based on which materials prospects engage with</li>
+                            <li><strong>Drip Campaigns:</strong> Deliver sequential content series using materials from your library</li>
+                            <li><strong>Landing Pages:</strong> Link landing pages to relevant collateral for immediate download</li>
+                            <li><strong>Campaign Performance:</strong> Track which materials drive the most campaign engagement and conversions</li>
+                            <li><strong>Content Scoring:</strong> Score leads based on their engagement with high-value collateral</li>
+                        </ul>
+                        <p class="mt-3">The integration between collateral management and marketing automation creates a powerful engine for lead generation and nurturing. Marketing and sales work from the same content library, ensuring consistent messaging throughout the entire customer journey.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="column-image">
+                        <img src="content/image/image2.jpg" alt="Marketing automation and collateral management integration workflow" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Version Control Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Never Worry About Version Control Again</h2>
+            <p class="section-intro">Eliminate the chaos of multiple document versions circulating through your organization. Salesboom's intelligent version control ensures everyone always works with the most current materials.</p>
+            
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="text-center">
+                        <div class="feature-icon mx-auto mb-3">
+                            <i class="fas fa-clock-rotate-left"></i>
+                        </div>
+                        <h4 style="font-size: 1.3rem; color: var(--primary-color); margin-bottom: 15px;">Automatic Versioning</h4>
+                        <p style="color: var(--text-light);">Every update creates a new version while maintaining complete history</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="text-center">
+                        <div class="feature-icon mx-auto mb-3">
+                            <i class="fas fa-link"></i>
+                        </div>
+                        <h4 style="font-size: 1.3rem; color: var(--primary-color); margin-bottom: 15px;">Smart Links</h4>
+                        <p style="color: var(--text-light);">Links always point to the latest version—no broken references</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="text-center">
+                        <div class="feature-icon mx-auto mb-3">
+                            <i class="fas fa-bell"></i>
+                        </div>
+                        <h4 style="font-size: 1.3rem; color: var(--primary-color); margin-bottom: 15px;">Update Notifications</h4>
+                        <p style="color: var(--text-light);">Alert sales teams when frequently-used materials are updated</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="text-center">
+                        <div class="feature-icon mx-auto mb-3">
+                            <i class="fas fa-archive"></i>
+                        </div>
+                        <h4 style="font-size: 1.3rem; color: var(--primary-color); margin-bottom: 15px;">Archive Old Versions</h4>
+                        <p style="color: var(--text-light);">Outdated materials are automatically archived, not deleted</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-5">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 order-lg-2">
+                        <div class="column-content">
+                            <h3>Approval Workflows</h3>
+                            <p>Before new materials or updates go live, route them through customizable approval workflows. Marketing directors, product managers, legal teams, or any stakeholder can review and approve content before it becomes available to sales.</p>
+                            <ul>
+                                <li>Multi-step approval processes for sensitive materials</li>
+                                <li>Automated routing based on material type or department</li>
+                                <li>Comment and revision functionality during approval</li>
+                                <li>Audit trail of all approvals and rejections</li>
+                                <li>Automatic publishing upon final approval</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 order-lg-1">
+                        <div class="column-image">
+                            <img src="content/image/image1.jpg" alt="Document approval workflow and version control system" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Security & Access Control Section -->
+    <section class="content-section bg-light-section">
+        <div class="container">
+            <h2 class="section-title">Enterprise-Grade Security and Access Control</h2>
+            <p class="section-intro">Sensitive marketing materials require robust security. Salesboom protects your intellectual property with comprehensive security features and granular access controls.</p>
+            
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-user-lock"></i>
+                        </div>
+                        <h3>Role-Based Access Control</h3>
+                        <p>Define exactly who can access, edit, publish, or share each piece of collateral. Create permission groups by role, department, region, or any criteria relevant to your organization.</p>
+                        <ul class="mt-3">
+                            <li>View-only, edit, and publish permissions</li>
+                            <li>Territory-based content restrictions</li>
+                            <li>Time-limited access for contractors</li>
+                            <li>Audit logs of all access and actions</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-halved"></i>
+                        </div>
+                        <h3>Data Protection and Encryption</h3>
+                        <p>All materials are encrypted in transit and at rest using bank-level security protocols. Ensure compliance with data protection regulations including GDPR, CCPA, and SOC 2.</p>
+                        <ul class="mt-3">
+                            <li>256-bit SSL encryption</li>
+                            <li>Secure cloud storage infrastructure</li>
+                            <li>Regular security audits and updates</li>
+                            <li>Compliance with industry standards</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-4">
+                <h3 class="text-center mb-4" style="color: var(--primary-color); font-size: 2rem;">Content Protection</h3>
+                <p class="text-center" style="font-size: 1.1rem; color: var(--text-light); max-width: 800px; margin: 0 auto 30px;">Sales reps can share materials with prospects while maintaining control. Set permissions that allow viewing but prevent downloading or forwarding. Track who has accessed shared materials and for how long. Revoke access instantly if needed.</p>
+                <p class="text-center" style="font-size: 1.1rem; color: var(--text-light); max-width: 800px; margin: 0 auto;">Marketing maintains complete oversight of content distribution while enabling sales agility. It's the perfect balance of control and empowerment.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Competitive Advantages Section -->
+    <section class="benefits-section">
+        <div class="container">
+            <h2 class="section-title text-white">Why Salesboom for Marketing Collateral Management</h2>
+            <p class="section-intro text-white" style="opacity: 0.95;">Many solutions claim to solve the marketing collateral challenge. Salesboom delivers advantages that matter to real sales and marketing teams.</p>
+            
+            <div class="row g-4 mt-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="benefit-card">
+                        <h3><i class="fas fa-puzzle-piece me-2"></i> CRM-Native Solution</h3>
+                        <p>Collateral management lives inside the CRM where sales teams already work—no separate login, no context switching, no integration headaches</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="benefit-card">
+                        <h3><i class="fas fa-gears me-2"></i> Marketing Automation Integration</h3>
+                        <p>Seamlessly connects collateral to campaigns, email marketing, and lead nurturing for complete marketing-to-sales alignment</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="benefit-card">
+                        <h3><i class="fas fa-file-circle-check me-2"></i> Universal File Format Support</h3>
+                        <p>Upload and share any file type without conversion or compatibility issues—works with every format your business uses</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="benefit-card">
+                        <h3><i class="fas fa-bolt me-2"></i> Real-Time Publishing Control</h3>
+                        <p>Marketing updates materials instantly across the entire organization—no waiting for IT or dealing with complicated deployment processes</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="benefit-card">
+                        <h3><i class="fas fa-chart-column me-2"></i> Comprehensive Analytics</h3>
+                        <p>Track usage, measure impact, and optimize content strategy with detailed reporting unavailable in standalone document management systems</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="benefit-card">
+                        <h3><i class="fas fa-mobile-alt me-2"></i> Mobile-First Access</h3>
+                        <p>Full functionality on smartphones and tablets means sales reps always have materials at their fingertips, even in face-to-face meetings</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="benefit-card">
+                        <h3><i class="fas fa-trophy me-2"></i> 22+ Years of CRM Expertise</h3>
+                        <p>Built on proven platform trusted by 3,500+ businesses worldwide—reliable, scalable, and continuously improving</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="benefit-card">
+                        <h3><i class="fas fa-check-double me-2"></i> Included in CRM Platform</h3>
+                        <p>No additional software to purchase or licenses to manage—collateral management is part of your complete CRM solution</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Use Cases and Industries Section -->
+    <section class="content-section">
+        <div class="container">
+            <h2 class="section-title">Versatile Solution for Every Business Model</h2>
+            <p class="section-intro">Salesboom's marketing collateral management adapts to the unique needs of different industries and business models. Here's how various organizations leverage the platform.</p>
+            
+            <div class="row mt-5">
+                <div class="col-lg-6">
+                    <div class="use-case-card">
+                        <h4><i class="fas fa-laptop-code me-2"></i> B2B Technology Companies</h4>
+                        <p>Manage complex product documentation, technical specifications, white papers, and competitive comparisons. Enable technical sales teams with the latest datasheets and architecture diagrams. Track which technical content accelerates deals through engineering evaluation.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="use-case-card">
+                        <h4><i class="fas fa-handshake me-2"></i> Professional Services Firms</h4>
+                        <p>Share case studies, client testimonials, and capability statements with prospects. Maintain libraries of proposal templates and past winning proposals. Ensure consultants present consistent firm positioning and service offerings.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="use-case-card">
+                        <h4><i class="fas fa-industry me-2"></i> Manufacturing and Distribution</h4>
+                        <p>Provide sales teams with product catalogs, specification sheets, safety data sheets, and compliance certifications. Update pricing and availability information in real-time. Enable channel partners with co-branded collateral.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="use-case-card">
+                        <h4><i class="fas fa-building-columns me-2"></i> Financial Services</h4>
+                        <p>Distribute regulatory-compliant marketing materials with approval workflows. Maintain version-controlled disclosures and legal disclaimers. Track material usage for compliance reporting and audits.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="use-case-card">
+                        <h4><i class="fas fa-heart-pulse me-2"></i> Healthcare and Life Sciences</h4>
+                        <p>Manage clinical studies, product information, and regulatory documentation. Ensure sales reps share only approved, compliant materials. Track material distribution for FDA and regulatory reporting.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Centralize Your Marketing Collateral?</h2>
+            <p>Stop wasting time searching for the right materials. See how Salesboom brings all your marketing collateral together in one powerful, easy-to-use platform integrated with your CRM.</p>
+            <div class="hero-buttons">
+                <a href="https://www.salesboom.com/request-crm-demo.html" class="btn btn-light btn-lg">Book a Demo Today</a>
+                <a href="https://www.salesboom.com/crm_trial.html" class="btn btn-outline-light btn-lg">Start Free Trial</a>
+            </div>
+        </div>
+    </section>
+
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-2">
+      <h3 class="fw-bold text-color">
+        <i class="fa-solid fa-layer-group me-2"></i>
+        Explore Salesboom Editions
+      </h3>
+      <p class="text-muted">Discover powerful CRM editions to scale your business efficiently.</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-lg border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-briefcase fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Professional Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              A complete CRM suite with Marketing Automation, ERP integration, and Support tools — built for performance and value.
+            </p>
+            <a href="https://www.salesboom.com/editions/professional-edition.html" class="btn btn-color mt-auto">
+              Explore Professional <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-lg border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-building fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Enterprise Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              For large enterprises — automate workflows, unify data, and leverage analytics to drive strategic growth.
+            </p>
+            <a href="https://www.salesboom.com/editions/enterprise-edition.html" class="btn btn-color mt-auto">
+              View Enterprise <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-lg border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-users fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Team Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              Perfect for small teams starting with CRM — manage leads, track sales, and boost productivity with simplicity.
+            </p>
+            <a href="https://www.salesboom.com/editions/team-edition.html" class="btn btn-color mt-auto">
+           Discover Team<i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="container py-5">
+  <h2 class="text-center mb-5 text-color">CRM Marketing Tools & Revenue Growth Guides</h2>
+
+  <div class="row g-4">
+
+    <!-- Card 1 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-bullhorn text-color fa-3x mb-3"></i>
+        <h4>CRM Marketing Automation</h4>
+        <p>
+          Use comprehensive
+          <a href="https://www.salesboom.com/products/tools-marketing.html" class="text-color fw-bold">
+            CRM marketing tools
+          </a> to automate customer journeys, segment audiences, and align campaigns with sales outcomes.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-stream text-color fa-3x mb-3"></i>
+        <h4>Drip Marketing Campaigns</h4>
+        <p>
+          Engage leads over time using automated sequences built with
+          <a href="https://www.salesboom.com/products/crm-drip-marketing.html" class="text-color fw-bold">
+            CRM drip marketing
+          </a>, keeping prospects warm and boosting conversions.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-envelope text-color fa-3x mb-3"></i>
+        <h4>Mass Email Marketing Software</h4>
+        <p>
+          Create, send, and track email campaigns at scale with
+          <a href="https://www.salesboom.com/products/web-based_mass_e-mail_marketing_software.html" class="text-color fw-bold">
+            web-based mass email marketing
+          </a>, fully synced with your CRM contacts.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-cloud  text-color fa-3x mb-3"></i>
+        <h4>Campaign Management Tools</h4>
+        <p>
+          Monitor and optimize multi-channel marketing efforts with
+          <a href="https://www.salesboom.com/products/tools-campaign.html" class="text-color fw-bold">
+            campaign management tools
+          </a>, and drive better ROI through coordinated execution.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-images text-color fa-3x mb-3"></i>
+        <h4>Campaign Screenshots & Examples</h4>
+        <p>
+          View real layouts and dashboards of marketing campaigns using
+          <a href="https://www.salesboom.com/products/CRM-Campaign-Management-Screenshot.html" class="text-color fw-bold">
+            CRM campaign management screenshots
+          </a> for inspiration and planning.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-chart-pie text-color fa-3x mb-3"></i>
+        <h4>Customer Lifecycle Management</h4>
+        <p>
+          Manage the full journey from lead to loyal customer with
+          <a href="https://www.salesboom.com/products/customer_lifecycle_management_clm_solutions.html" class="text-color fw-bold">
+            CLM solutions
+          </a>, improving retention and overall customer value.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 7 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-robot text-color fa-3x mb-3"></i>
+        <h4>Sales & Marketing Automation</h4>
+        <p>
+          Reduce manual work and improve handoffs between teams with integrated
+          <a href="https://www.salesboom.com/sales-automation/sales_automation_content.html" class="text-color fw-bold">
+            sales automation tools
+          </a> that support marketing follow-ups and task routing.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 8 -->
+<div class="col-md-4">
+  <div class="card shadow-lg border-0 text-center p-4 h-100">
+    <i class="fa-solid fa-poo text-color fa-3x mb-3"></i>
+    <h4>CRM Mass Email Feature</h4>
+    <p>
+      Send personalized bulk email campaigns to Leads, Contacts, Employees, and Partners using built-in templates and send history reports in CRM —
+      <a href="https://www.salesboom.com/products/How-to-Mass-Email-CRM.html" class="text-color fw-bold">
+        learn how
+      </a>.
+    </p>
+  </div>
+</div>
+
+    <!-- Card 9 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-cogs text-color fa-3x mb-3"></i>
+        <h4>Revenue Operations Guide for SMEs</h4>
+        <p>
+          Align sales, marketing, and service teams with strategic frameworks designed for small and medium businesses in the
+          <a href="https://www.salesboom.com/revenue-operations/revenue-operations-guide-for-smes.html" class="text-color fw-bold">
+            Revenue Operations Guide
+          </a>.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="mt-5 footer">
+  <div class="container mt-5 pt-5">
+    <div class="footer-grid">
+      <div class="footer-section">
+        <h3>Products</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/products/tools-sfa.html">Sales Force Automation</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-marketing.html">Marketing Automation</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-casemanagement.html">Case Management</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-reporting.html">Business Intelligence</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-emailintegration.html">Email Integration</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Solutions</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/products/edition-team.html">Team Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/edition-professional.html">Professional Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/edition-enterprise.html">Enterprise Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/industry-solutions.html">Industry Solutions</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/company/index.html">About Us</a></li>
+          <li><a href="https://www.salesboom.com/company/company-contact.html">Contact Us</a></li>
+          <li><a href="https://www.salesboom.com/customers/index.html">Customers</a></li>
+          <li><a href="https://www.salesboom.com/partners/index.html">Partners</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/support/index.html">Support Center</a></li>
+          <li><a href="https://www.salesboom.com/crm_supportcenter/overview/index.html">Documentation</a></li>
+          <li><a href="https://www.salesboom.com/whitepapers/index.html">White Papers</a></li>
+          <li><a href="https://www.salesboom.com/pop-privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="bg-color">
+    <div class="container">
+     <div class="footer-bottom pb-3 mt-3">
+      <p>&copy; 2003-2025 <a class="text-white fw-bold" href="https://www.salesboom.com">Salesboom.com</a> Inc. All rights reserved. | Call: 1-855-229-2043</p>
+      <p style="margin-top: 10px;">Salesboom's color-coded CRM lead management software helps businesses visually prioritize sales opportunities with automated workflow rules. Contact us to learn how color coding can transform your lead management process and increase sales productivity.</p>
+    </div>
+    </div>
+  </div>
+ 
+</footer>
+
+<!-- Common JavaScript -->
+<script src="content/js/bootstrap.bundle.min.js"></script>
+
+
+    <script>
+        // Loading Screen
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.getElementById('loading-screen').classList.add('fade-out');
+            }, 500);
+        });
+        
+        // Scroll to Top Button
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.classList.add('show');
+            } else {
+                scrollToTopBtn.classList.remove('show');
+            }
+        });
+        
+        scrollToTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    
+    <!-- Primary Meta Tags -->
+    <title>Master Your Sales Pipeline with Opportunity Management CRM</title>
+    <meta name="description" content="Transform your sales cycle with Salesboom's Opportunity Management CRM. Track deals, automate quotes, and gain pipeline visibility. Start your free trial today.">
+    <meta name="keywords" content="Opportunity management software, Sales pipeline management, CRM opportunity tracking, Sales cycle management, Deal management CRM, Sales forecasting tools, Opportunity management CRM">
+    <link rel="canonical" href="https://www.salesboom.com/opportunity-management.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.salesboom.com/opportunity-management.html">
+    <meta property="og:title" content="Master Your Sales Pipeline with Opportunity Management CRM">
+    <meta property="og:description" content="Transform your sales cycle with Salesboom's Opportunity Management CRM. Track deals, automate quotes, and gain pipeline visibility. Start your free trial today.">
+    <meta property="og:image" content="https://www.salesboom.com/img/opportunity-management-og.jpg">
+    <meta property="og:site_name" content="Salesboom CRM">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.salesboom.com/opportunity-management.html">
+    <meta name="twitter:title" content="Master Your Sales Pipeline with Opportunity Management CRM">
+    <meta name="twitter:description" content="Transform your sales cycle with Salesboom's Opportunity Management CRM. Track deals, automate quotes, and gain pipeline visibility. Start your free trial today.">
+    <meta name="twitter:image" content="https://www.salesboom.com/img/opportunity-management-og.jpg">
+    <meta name="twitter:site" content="@SalesboomCloud">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Salesboom Opportunity Management CRM",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web-based, Cloud",
+      "offers": {
+        "@type": "Offer",
+        "price": "14.00",
+        "priceCurrency": "USD",
+        "priceValidUntil": "2026-12-31"
+      },
+      "featureList": [
+        "Opportunity tracking and pipeline management",
+        "Automated quote generation",
+        "Sales forecasting and analytics",
+        "Customizable sales stages",
+        "Real-time pipeline visibility",
+        "Mobile CRM access"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.5",
+        "ratingCount": "3500"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Salesboom",
+        "url": "https://www.salesboom.com",
+        "logo": "https://www.salesboom.com/img/salesboom-logo-252x67.png",
+        "foundingDate": "2003",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+1-855-229-2043",
+          "contactType": "Customer Service"
+        }
+      }
+    }
+    </script>
+    
+    <link rel="shortcut icon" href="https://www.salesboom.com/favicon.ico">
+    
+
+ <link rel="stylesheet" href="../content/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../content/css/salesboom-common.css">
+    <link rel="shortcut icon" href="../content/image/salesboom-logo-252x67.png" type="image/x-icon"> 
+
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #002f6c;
+            --secondary-color: #0056b3;
+            --accent-color: #17a2b8;
+            --success-color: #28a745;
+            --text-dark: #212529;
+            --text-light: #6c757d;
+            --bg-light: #f8f9fa;
+            --border-color: #dee2e6;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: #ffffff;
+        }
+        
+        /* Loading Screen */
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--primary-color);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease-out;
+        }
+        
+        #loading-screen.fade-out {
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        .loader {
+            width: 50px;
+            height: 50px;
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            border-top: 5px solid #ffffff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        .loading-text {
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: 600;
+            margin-top: 20px;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        /* Scroll to Top Button */
+        #scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            color: #ffffff;
+            border: none;
+            border-radius: 50%;
+            font-size: 20px;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0, 47, 108, 0.3);
+        }
+        
+        #scroll-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        #scroll-top:hover {
+            background: var(--secondary-color);
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0, 47, 108, 0.4);
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: #ffffff;
+            padding: 100px 0 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+        
+        .hero-section h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 25px;
+            line-height: 1.2;
+        }
+        
+        .hero-section .subtitle {
+            font-size: 1.4rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+        
+        .hero-cta {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        
+        /* Buttons */
+        .btn-custom {
+            padding: 16px 40px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .btn-primary-custom {
+            background: #ffffff;
+            color: var(--primary-color);
+            border: 2px solid #ffffff;
+        }
+        
+        .btn-primary-custom:hover {
+            background: transparent;
+            color: #ffffff;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+        }
+        
+        .btn-outline-custom {
+            background: transparent;
+            color: #ffffff;
+            border: 2px solid #ffffff;
+        }
+        
+        .btn-outline-custom:hover {
+            background: #ffffff;
+            color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+        
+        /* Stats Section */
+        .stats-section {
+            background: var(--primary-color);
+            color: #ffffff;
+            padding: 60px 0;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .stat-item h3 {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--accent-color);
+            margin-bottom: 10px;
+        }
+        
+        .stat-item p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        /* Content Sections */
+        .content-section {
+            padding: 80px 0;
+        }
+        
+        .content-section.bg-light-custom {
+            background: var(--bg-light);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.8rem;
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .section-title p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+        
+        /* Feature Cards */
+        .feature-card {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            height: 100%;
+            border-top: 4px solid var(--primary-color);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+        
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            color: #ffffff;
+            margin-bottom: 25px;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .feature-card p {
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+        
+        .feature-card ul {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 15px;
+        }
+        
+        .feature-card li {
+            padding-left: 30px;
+            position: relative;
+            margin-bottom: 12px;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+        
+        .feature-card li::before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--success-color);
+            font-size: 14px;
+        }
+        
+        /* Benefits Section */
+        .benefits-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: #ffffff;
+            padding: 80px 0;
+            position: relative;
+        }
+        
+        .benefit-item {
+            text-align: center;
+            padding: 40px 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        
+        .benefit-item:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-5px);
+        }
+        
+        .benefit-item h3 {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .benefit-item p {
+            opacity: 0.95;
+            line-height: 1.7;
+        }
+        
+        /* Two Column Layout */
+        .two-column {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+        
+        .two-column.reverse {
+            flex-direction: row-reverse;
+        }
+        
+        .column-content h3 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .column-content p {
+            color: var(--text-light);
+            margin-bottom: 20px;
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+        
+        .column-content ul {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 20px;
+        }
+        
+        .column-content li {
+            padding-left: 35px;
+            position: relative;
+            margin-bottom: 15px;
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+        
+        .column-content li::before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--success-color);
+            font-size: 16px;
+        }
+        
+        .column-image {
+            flex: 0 0 45%;
+        }
+        
+        .column-image img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: var(--primary-color);
+            color: #ffffff;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .cta-section p {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+        
+        /* Role Card */
+        .role-card {
+            background: #ffffff;
+            padding: 35px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            height: 100%;
+            border-left: 5px solid var(--accent-color);
+            transition: all 0.3s ease;
+        }
+        
+        .role-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+        
+        .role-card h4 {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        
+        .role-card p {
+            color: var(--text-light);
+            line-height: 1.7;
+            margin-bottom: 0;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero-section h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-section .subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2.2rem;
+            }
+            
+            .two-column {
+                flex-direction: column;
+            }
+            
+            .two-column.reverse {
+                flex-direction: column;
+            }
+            
+            .column-image {
+                flex: 0 0 100%;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 60px 0 50px 0;
+            }
+            
+            .hero-section h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-section .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .content-section {
+                padding: 60px 0;
+            }
+            
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+            
+            .stat-item h3 {
+                font-size: 2.5rem;
+            }
+            
+            .btn-custom {
+                padding: 14px 30px;
+                font-size: 15px;
+            }
+            
+            .hero-cta {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            #scroll-top {
+                bottom: 20px;
+                right: 20px;
+                width: 45px;
+                height: 45px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero-section h1 {
+                font-size: 1.75rem;
+            }
+            
+            .cta-section h2 {
+                font-size: 2rem;
+            }
+            
+            .feature-card,
+            .benefit-item,
+            .role-card {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Loading Screen -->
+<div id="loading-screen">
+    <div class="loader"></div>
+    <div class="loading-text">Loading...</div>
+</div>
+
+<!-- Scroll to Top Button -->
+<button id="scroll-top" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+
+    <!-- Top Bar -->
+<div class="top-bar">
+  <div class="container">
+    <div class="top-bar-left text-color">
+      <span>✓ Award-Winning Cloud CRM Software Since 2003</span>
+    </div>
+    <ul class="top-bar-nav">
+      <li><a href="https://www.salesboom.com/crm_supportcenter/overview/index.html">Support Center</a></li>
+      <li><a href="https://www.salesboom.com/crm_trial.html">Free Trial</a></li>
+      <li><a href="https://www.salesboom.com/login.html">Login</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Main Header -->
+<header>
+  <div class="main-header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <a href="https://www.salesboom.com" aria-label="Salesboom CRM Home">
+            <img src="https://www.salesboom.com/img/salesboom-logo-252x67.png" alt="Salesboom Cloud CRM Logo" width="252" height="67">
+          </a>
+        </div>
+        <div class="header-phone">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          <a href="tel:+18552292043">1-855-229-2043</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container">
+        <div class="hero-content">
+            <h1>Win More Deals with Intelligent Opportunity Management</h1>
+            <p class="subtitle">Empower your sales team with powerful opportunity tracking, automated quote generation, and real-time pipeline insights that turn prospects into customers faster.</p>
+            <div class="hero-cta">
+                <a href="https://www.salesboom.com/crm_trial.html" class="btn-custom btn-primary-custom">Start Free 30-Day Trial</a>
+                <a href="https://www.salesboom.com/request-crm-demo.html" class="btn-custom btn-outline-custom">Book a Demo</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Stats Section -->
+<section class="stats-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                <div class="stat-item">
+                    <h3>22+</h3>
+                    <p>Years of CRM Innovation</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                <div class="stat-item">
+                    <h3>78</h3>
+                    <p>Pipeline Visibility</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <div class="stat-item">
+                    <h3>Auto</h3>
+                    <p>Quote Generation</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="stat-item">
+                    <h3>30 Days</h3>
+                    <p>Free Trial Period</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Problem Statement Section -->
+<section class="content-section">
+    <div class="container">
+        <div class="section-title">
+            <h2>The Critical Middle: Why Opportunity Management Makes or Breaks Sales Success</h2>
+            <p>Most organizations invest heavily in lead generation and customer retention, but overlook the critical middle stage where deals are won or lost.</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-folder-open"></i>
+                    </div>
+                    <h3>Lost Opportunities</h3>
+                    <p>Opportunities buried in email threads and scattered spreadsheets disappear without proper tracking. Manual systems can't keep pace with modern sales velocity.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-hourglass-half"></i>
+                    </div>
+                    <h3>Inconsistent Follow-Up</h3>
+                    <p>Inconsistent follow-up processes allow hot prospects to go cold. Without automated reminders and task management, opportunities slip through the cracks.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-eye-slash"></i>
+                    </div>
+                    <h3>No Pipeline Visibility</h3>
+                    <p>Sales managers fly blind without accurate forecasting data. Lack of real-time visibility into deal status and pipeline health prevents proactive management.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-invoice"></i>
+                    </div>
+                    <h3>Manual Quote Process</h3>
+                    <p>Manual quote generation slows down the sales process and introduces errors. Delays in providing quotes cost deals to faster-moving competitors.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Hidden Bottlenecks</h3>
+                    <p>Inability to identify bottlenecks and optimize conversion rates means systematic problems go undetected. Revenue potential evaporates without visibility.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Competitive Disadvantage</h3>
+                    <p>Competitive disadvantage when rivals respond faster with better information. Modern buyers expect immediate, knowledgeable responses from sales teams.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Solution Overview Section -->
+<section class="content-section bg-light-custom">
+    <div class="container">
+        <div class="section-title">
+            <h2>Transforming Sales Performance Through Intelligent Opportunity Management</h2>
+            <p>Salesboom's Opportunity Management CRM provides comprehensive tools that support both Sales Representatives and Sales Managers throughout the entire sales cycle.</p>
+        </div>
+        
+        <div class="two-column mb-5">
+            <div class="column-content">
+                <h3>Empowering Sales Representatives to Sell More</h3>
+                <p>Sales Representatives need to spend their time engaging prospects, not wrestling with administrative tasks. Salesboom's Opportunity Management tools eliminate friction from the sales process, giving reps powerful capabilities at their fingertips.</p>
+                <ul>
+                    <li>Instant sales quote generation ready for email or postal mail delivery</li>
+                    <li>Complete purchasing history and interaction timeline for every prospect</li>
+                    <li>Automated follow-up reminders and task management</li>
+                    <li>Document management with easy access to proposals and contracts</li>
+                    <li>Mobile access to opportunity details from anywhere</li>
+                    <li>Integration with email for seamless communication tracking</li>
+                    <li>Customizable sales stages that match your unique process</li>
+                    <li>Collaboration tools for team selling and manager oversight</li>
+                </ul>
+            </div>
+              <div class="column-content">
+                <h3>Giving Sales Managers Pipeline Visibility and Control</h3>
+                <p>Sales Managers need accurate, real-time visibility into the sales pipeline to forecast revenue, identify problems, and coach their teams effectively. Salesboom delivers comprehensive pipeline management tools.</p>
+                <ul>
+                    <li>Real-time pipeline visualization showing all opportunities by stage</li>
+                    <li>Conversion rate analysis tracking opportunity close rates</li>
+                    <li>Average sales cycle length metrics to identify bottlenecks</li>
+                    <li>Geographic performance analysis revealing regional strengths</li>
+                    <li>Product-based results showing which offerings drive revenue</li>
+                    <li>Rep performance dashboards comparing individual results</li>
+                    <li>Forecasting accuracy with weighted pipeline values</li>
+                    <li>Win/loss analysis to understand why deals succeed or fail</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Opportunity Tracking Section -->
+<section class="content-section">
+    <div class="container">
+        <div class="section-title">
+            <h2>Never Lose Track of a Deal: Comprehensive Opportunity Tracking</h2>
+            <p>The foundation of effective Opportunity Management is comprehensive tracking that captures every detail of each potential deal.</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 mb-4">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Centralized Opportunity Records</h3>
+                    <p>Every opportunity is stored in a centralized database with complete details including contact information, company data, deal value, probability, expected close date, products of interest, competitive information, and custom fields tailored to your business.</p>
+                    <p>All team members access the same up-to-date information, eliminating confusion and duplication.</p>
+                </div>
+            </div>
+            <div class="col-lg-6 mb-4">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-sliders-h"></i>
+                    </div>
+                    <h3>Customizable Sales Stages</h3>
+                    <p>Define sales stages that match your actual sales process—from initial contact through proposal, negotiation, and closed-won. Each stage can have required fields, automated tasks, and probability weights for accurate forecasting.</p>
+                    <p>Visual pipeline views show exactly where each opportunity stands at a glance.</p>
+                </div>
+            </div>
+            <div class="col-lg-6 mb-4">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-history"></i>
+                    </div>
+                    <h3>Activity History and Timeline</h3>
+                    <p>Complete chronological timeline of every interaction with the prospect including emails, calls, meetings, quotes sent, and notes added. This historical context enables anyone on the team to pick up where others left off.</p>
+                    <p>Ensure continuity and prevent prospects from having to repeat information.</p>
+                </div>
+            </div>
+            <div class="col-lg-6 mb-4">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-folder"></i>
+                    </div>
+                    <h3>Document Management</h3>
+                    <p>Attach relevant documents directly to opportunity records—proposals, contracts, specifications, presentations, and competitive analysis. All stakeholders access the latest versions without digging through email attachments.</p>
+                    <p>Maintain a complete document history with version control and audit trails.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Benefits Section -->
+<section class="benefits-section">
+    <div class="container">
+        <div class="section-title" style="color: #ffffff;">
+            <h2 style="color: #ffffff;">Automated Workflows and Quote Generation</h2>
+            <p style="color: rgba(255,255,255,0.9);">Salesboom automates time-consuming tasks, freeing your sales team to focus on building relationships and closing deals.</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="benefit-item">
+                    <h3>Instant Quote Generation</h3>
+                    <p>Create professional, branded sales quotes in seconds with automated product pricing, discount calculations, and formatting. Send via email or generate PDFs for postal delivery.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="benefit-item">
+                    <h3>Automated Follow-Up</h3>
+                    <p>Never miss a follow-up again with automated reminders based on opportunity stage, deal value, or custom timelines. Tasks generate automatically to keep deals moving forward.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="benefit-item">
+                    <h3>Email Integration</h3>
+                    <p>All emails related to opportunities are automatically tracked and logged. Send emails directly from the CRM with complete context and history at your fingertips.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="benefit-item">
+                    <h3>Stage Automation</h3>
+                    <p>Automatically trigger actions when opportunities move between stages—send notifications, create tasks, update fields, or route to different team members.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="benefit-item">
+                    <h3>QuickBooks Sync</h3>
+                    <p>Seamlessly integrate with QuickBooks to sync customer data, products, pricing, and invoices. Won opportunities automatically create invoices in your accounting system.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="benefit-item">
+                    <h3>Mobile CRM Access</h3>
+                    <p>Access complete opportunity details from your smartphone or tablet. Update deals, add notes, and close opportunities from anywhere—perfect for field sales teams.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Role Benefits Section -->
+<section class="content-section">
+    <div class="container">
+        <div class="section-title">
+            <h2>Opportunity Management Value Across Your Entire Organization</h2>
+            <p>Different stakeholders benefit from Opportunity Management in different ways. Here's how Salesboom delivers value across your organization.</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="role-card">
+                    <h4>For Sales Representatives</h4>
+                    <p>Opportunity Management tools help reps sell more efficiently by eliminating administrative burden, providing instant access to customer information, automating quote generation, and ensuring consistent follow-up. Reps spend more time with prospects and less time searching for information.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="role-card">
+                    <h4>For Sales Managers</h4>
+                    <p>Pipeline visibility and forecasting tools enable managers to accurately predict revenue, identify at-risk deals early, coach reps effectively based on data, allocate resources optimally, and report confidently to leadership.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="role-card">
+                    <h4>For Sales Operations</h4>
+                    <p>Customizable workflows, automated processes, and comprehensive reporting reduce the operational burden on sales operations teams. Easy configuration of sales stages, fields, and automation rules means the system adapts to changing business needs.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="role-card">
+                    <h4>For Executive Leadership</h4>
+                    <p>Executive dashboards provide high-level visibility into sales performance, pipeline health, and revenue forecasts. Trend analysis reveals whether the business is on track to hit targets. Accurate forecasting enables better business planning.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="role-card">
+                    <h4>For Finance</h4>
+                    <p>Weighted pipeline forecasting helps finance plan cash flow and anticipate revenue timing. Integration with accounting systems ensures quote-to-cash accuracy. Historical data supports budgeting and financial planning.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="role-card">
+                    <h4>For Marketing</h4>
+                    <p>Track which marketing campaigns and channels generate the highest-quality opportunities. Measure ROI on marketing spend by connecting campaigns to closed revenue. Optimize lead generation based on conversion data.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+    <div class="container">
+        <h2>Ready to Transform Your Sales Pipeline?</h2>
+        <p>Start your Free 30 Day Trial of Salesboom's Opportunity Management CRM today—no credit card required. Empower your sales team with the tools they need to win more deals and accelerate revenue.</p>
+        <div class="hero-cta">
+            <a href="https://www.salesboom.com/crm_trial.html" class="btn-custom btn-primary-custom">Start Your Free 30-Day Trial</a>
+            <a href="https://www.salesboom.com/request-crm-demo.html" class="btn-custom btn-outline-custom">Book a Demo</a>
+        </div>
+    </div>
+</section>
+
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-2">
+      <h3 class="fw-bold text-color">
+        <i class="fa-solid fa-layer-group me-2"></i>
+        Explore Salesboom Editions
+      </h3>
+      <p class="text-muted">Discover powerful CRM editions to scale your business efficiently.</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-lg border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-briefcase fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Professional Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              A complete CRM suite with Marketing Automation, ERP integration, and Support tools — built for performance and value.
+            </p>
+            <a href="https://www.salesboom.com/editions/professional-edition.html" class="btn btn-color mt-auto">
+              Explore Professional <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-lg border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-building fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Enterprise Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              For large enterprises — automate workflows, unify data, and leverage analytics to drive strategic growth.
+            </p>
+            <a href="https://www.salesboom.com/editions/enterprise-edition.html" class="btn btn-color mt-auto">
+              View Enterprise <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-lg border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-users fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Team Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              Perfect for small teams starting with CRM — manage leads, track sales, and boost productivity with simplicity.
+            </p>
+            <a href="https://www.salesboom.com/editions/team-edition.html" class="btn btn-color mt-auto">
+           Discover Team<i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="container py-5">
+  <h2 class="text-center mb-5 text-color">
+    CRM Opportunity & Revenue Growth Tools
+  </h2>
+
+  <div class="row g-4 justify-content-center">
+
+    <!-- Card 1: Opportunity Management -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-diagram-project text-color fs-2 mb-3"></i>
+        <h4>Opportunity Management</h4>
+        <p>
+          Track and manage deals from first touch through close with pipeline forecasting and prioritization.  
+          <a href="https://www.salesboom.com/products/sfa-opportunity.html" class="text-color fw-bold">
+            View Opportunity Tools
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 2: Lead Conversion -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-exchange-alt text-color fs-2 mb-3"></i>
+        <h4>Lead-to-Opportunity Conversion</h4>
+        <p>
+          Automatically transform qualified leads into sales opportunities to speed up follow-ups.  
+          <a href="https://www.salesboom.com/products/convert-leads-to-opps-automatically.html" class="text-color fw-bold">
+            View Lead Conversion
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 3: Big Deal Alerts -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-bell text-color fs-2 mb-3"></i>
+        <h4>Big Deal Alerts</h4>
+        <p>
+          Be notified when high-value deals enter or move through your pipeline.  
+          <a href="https://www.salesboom.com/products/feature-big-deal-alert.html" class="text-color fw-bold">
+            See Big Deal Alerts
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 4: At-Risk Deal Alerts -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-exclamation-triangle text-color fs-2 mb-3"></i>
+        <h4>At-Risk Deal Alerts</h4>
+        <p>
+          Detect deals losing momentum early and take action before they slip away.  
+          <a href="https://www.salesboom.com/products/feature-at-risk-deal-alert.html" class="text-color fw-bold">
+            View At-Risk Alerts
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 5: Increase Revenues -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-chart-line text-color fs-2 mb-3"></i>
+        <h4>Increase Revenues Tools</h4>
+        <p>
+          Boost your sales performance with data-driven tools focused on revenue growth.  
+          <a href="https://www.salesboom.com/products/crm-increase-revenues.html" class="text-color fw-bold">
+            Explore Revenue Growth
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 6: Sales Growth Strategies</h4> -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-money-bill-trend-up text-color fs-2 mb-3"></i>
+        <h4>Increase Sales Efforts</h4>
+        <p>
+          Learn how to enhance sales productivity without extra spend using CRM tools.  
+          <a href="https://www.salesboom.com/products/increase-sales-efforts-without-spending-money.html" class="text-color fw-bold">
+            Read Sales Growth Tips
+          </a>
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="mt-5 footer">
+  <div class="container mt-5 pt-5">
+    <div class="footer-grid">
+      <div class="footer-section">
+        <h3>Products</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/products/tools-sfa.html">Sales Force Automation</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-marketing.html">Marketing Automation</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-casemanagement.html">Case Management</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-reporting.html">Business Intelligence</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-emailintegration.html">Email Integration</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Solutions</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/products/edition-team.html">Team Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/edition-professional.html">Professional Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/edition-enterprise.html">Enterprise Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/industry-solutions.html">Industry Solutions</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/company/index.html">About Us</a></li>
+          <li><a href="https://www.salesboom.com/company/company-contact.html">Contact Us</a></li>
+          <li><a href="https://www.salesboom.com/customers/index.html">Customers</a></li>
+          <li><a href="https://www.salesboom.com/partners/index.html">Partners</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/support/index.html">Support Center</a></li>
+          <li><a href="https://www.salesboom.com/crm_supportcenter/overview/index.html">Documentation</a></li>
+          <li><a href="https://www.salesboom.com/whitepapers/index.html">White Papers</a></li>
+          <li><a href="https://www.salesboom.com/pop-privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="bg-color">
+    <div class="container">
+     <div class="footer-bottom pb-3 mt-3">
+      <p>&copy; 2003-2025 <a class="text-white fw-bold" href="https://www.salesboom.com">Salesboom.com</a> Inc. All rights reserved. | Call: 1-855-229-2043</p>
+      <p style="margin-top: 10px;">Salesboom's color-coded CRM lead management software helps businesses visually prioritize sales opportunities with automated workflow rules. Contact us to learn how color coding can transform your lead management process and increase sales productivity.</p>
+    </div>
+    </div>
+  </div>
+ 
+</footer>
+
+<!-- Bootstrap 5 JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+// Loading Screen
+window.addEventListener('load', function() {
+    const loadingScreen = document.getElementById('loading-screen');
+    setTimeout(function() {
+        loadingScreen.classList.add('fade-out');
+        setTimeout(function() {
+            loadingScreen.style.display = 'none';
+        }, 500);
+    }, 500);
+});
+
+// Scroll to Top Button
+const scrollTopBtn = document.getElementById('scroll-top');
+
+window.addEventListener('scroll', function() {
+    if (window.pageYOffset > 300) {
+        scrollTopBtn.classList.add('show');
+    } else {
+        scrollTopBtn.classList.remove('show');
+    }
+});
+
+scrollTopBtn.addEventListener('click', function() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+</script>
+
+</body>
+</html>
