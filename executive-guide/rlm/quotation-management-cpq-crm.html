@@ -1,0 +1,1655 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+<!-- Primary Meta Tags -->
+<title>Turn Quotes into Revenue with Salesboom CPQ CRM</title>
+<meta name="description" content="Master quotation management with Salesboom's AI-powered CPQ. Accelerate sales cycles, protect margins, and automate approvals. Book a demo today.">
+<meta name="keywords" content="CPQ software, Quotation management CRM, Quote-to-cash automation, Configure price quote, Sales quoting software, AI-powered pricing, Margin protection CRM, Quote approval workflow">
+<link rel="canonical" href="https://www.salesboom.com/quotation-management-cpq-crm.html">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.salesboom.com/quotation-management-cpq-crm.html">
+<meta property="og:title" content="Turn Quotes into Revenue with Salesboom CPQ CRM">
+<meta property="og:description" content="Master quotation management with Salesboom's AI-powered CPQ. Accelerate sales cycles, protect margins, and automate approvals. Book a demo today.">
+<meta property="og:image" content="https://www.salesboom.com/img/quotation-management-cpq-crm-og.jpg">
+<meta property="og:site_name" content="Salesboom CRM">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://www.salesboom.com/quotation-management-cpq-crm.html">
+<meta name="twitter:title" content="Turn Quotes into Revenue with Salesboom CPQ CRM">
+<meta name="twitter:description" content="Master quotation management with Salesboom's AI-powered CPQ. Accelerate sales cycles, protect margins, and automate approvals. Book a demo today.">
+<meta name="twitter:image" content="https://www.salesboom.com/img/quotation-management-cpq-crm-og.jpg">
+<meta name="twitter:site" content="@SalesboomCloud">
+
+<!-- Schema.org structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Salesboom CPQ and Quotation Management",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web-based, Cloud",
+  "offers": {
+    "@type": "Offer",
+    "price": "14.00",
+    "priceCurrency": "USD",
+    "priceValidUntil": "2026-12-31"
+  },
+  "featureList": [
+    "AI-powered pricing intelligence and deal guidance",
+    "Automated quote generation with product configuration",
+    "Intelligent approval workflows and margin protection",
+    "Multi-currency support and real-time pricing",
+    "Professional quote templates with brand consistency",
+    "Revenue Lifecycle Management integration"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.5",
+    "ratingCount": "3500"
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "Salesboom",
+    "url": "https://www.salesboom.com",
+    "logo": "https://www.salesboom.com/img/salesboom-logo-252x67.png",
+    "foundingDate": "2003",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-855-229-2043",
+      "contactType": "Customer Service"
+    }
+  }
+}
+</script>
+
+<link rel="shortcut icon" href="https://www.salesboom.com/favicon.ico">
+
+    <link rel="stylesheet" href="content/css/bootstrap.min.css">
+    <link rel="stylesheet" href="content/css/salesboom-common.css">
+    <link rel="shortcut icon" href="content/image/salesboom-logo-252x67.png" type="image/x-icon"> 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+/* CSS Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #002f6c;
+  --primary-light: #0a4a9f;
+  --primary-dark: #001f47;
+  --secondary-color: #2c3e50;
+  --accent-color: #3498db;
+  --success-color: #27ae60;
+  --warning-color: #f39c12;
+  --danger-color: #e74c3c;
+  --text-color: #333;
+  --text-light: #666;
+  --border-color: #e0e0e0;
+  --bg-light: #f8f9fa;
+  --bg-white: #ffffff;
+  --shadow: 0 2px 10px rgba(0,0,0,0.1);
+  --shadow-hover: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background: var(--bg-white);
+  overflow-x: hidden;
+}
+
+/* Loading Screen */
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#loading-screen.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader {
+  width: 60px;
+  height: 60px;
+  border: 5px solid rgba(255,255,255,0.3);
+  border-top: 5px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-text {
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 20px;
+  letter-spacing: 1px;
+}
+
+/* Scroll to Top Button */
+#scroll-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-hover);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#scroll-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+#scroll-top:hover {
+  background: var(--primary-light);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 25px rgba(0,47,108,0.4);
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+  color: white;
+  padding: 100px 0 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+  opacity: 0.3;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 3.2rem;
+  font-weight: 800;
+  margin-bottom: 25px;
+  line-height: 1.2;
+}
+
+.hero .subtitle {
+  font-size: 1.35rem;
+  margin-bottom: 40px;
+  opacity: 0.95;
+  line-height: 1.6;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Button Styles */
+.btn-custom {
+  display: inline-block;
+  padding: 16px 40px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary-custom {
+  background: white;
+  color: var(--primary-color);
+  box-shadow: 0 4px 12px rgba(255,255,255,0.3);
+}
+
+.btn-primary-custom:hover {
+  background: #f0f0f0;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255,255,255,0.4);
+  color: var(--primary-color);
+}
+
+.btn-outline-custom {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-outline-custom:hover {
+  background: white;
+  color: var(--primary-color);
+}
+
+/* Stats Section */
+.stats-section {
+  background: var(--primary-dark);
+  color: white;
+  padding: 60px 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  text-align: center;
+}
+
+.stat-item h3 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.stat-item p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* Content Sections */
+.content-section {
+  padding: 80px 0;
+}
+
+.content-section.bg-light {
+  background: var(--bg-light);
+}
+
+.section-header {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 60px;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.section-header p {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  line-height: 1.8;
+}
+
+/* Two Column Layout */
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+  margin-bottom: 60px;
+}
+
+.two-column.reverse {
+  direction: rtl;
+}
+
+.two-column.reverse > * {
+  direction: ltr;
+}
+
+.column-content h3 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.column-content h4 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin: 30px 0 15px 0;
+  font-weight: 600;
+}
+
+.column-content p {
+  color: var(--text-light);
+  margin-bottom: 20px;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.column-content ul {
+  list-style: none;
+  margin: 25px 0;
+}
+
+.column-content li {
+  padding-left: 35px;
+  position: relative;
+  margin-bottom: 18px;
+  color: var(--text-light);
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+.column-content li::before {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  color: var(--success-color);
+  font-size: 1.2rem;
+}
+
+.column-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+/* Feature Cards */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin-top: 60px;
+}
+
+.feature-card {
+  background: var(--bg-white);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  transition: all 0.3s;
+  border-top: 4px solid var(--primary-color);
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.feature-icon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: white;
+  margin-bottom: 25px;
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.feature-card p {
+  color: var(--text-light);
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.feature-card ul {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.feature-card li {
+  padding-left: 25px;
+  position: relative;
+  margin-bottom: 12px;
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+.feature-card li::before {
+  content: "\f061";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+  font-size: 0.85rem;
+}
+
+/* Benefits Section */
+.benefits-section {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+  color: white;
+  padding: 80px 0;
+  position: relative;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+.benefit-item {
+  text-align: center;
+  padding: 35px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.benefit-item:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-5px);
+}
+
+.benefit-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.benefit-item p {
+  opacity: 0.95;
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+/* Info Card */
+.info-card {
+  background: var(--bg-white);
+  padding: 35px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  margin-bottom: 25px;
+  border-left: 5px solid var(--primary-color);
+}
+
+.info-card h4 {
+  font-size: 1.4rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.info-card p {
+  color: var(--text-light);
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* Process Steps */
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.process-card {
+  background: var(--bg-white);
+  padding: 35px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  text-align: center;
+  transition: all 0.3s;
+  border-top: 4px solid var(--accent-color);
+}
+
+.process-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.process-number {
+  width: 60px;
+  height: 60px;
+  background: var(--accent-color);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0 auto 20px;
+}
+
+.process-card h4 {
+  font-size: 1.3rem;
+  color: var(--primary-color);
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.process-card p {
+  color: var(--text-light);
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+/* Advantage Card */
+.advantage-card {
+  background: var(--bg-white);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  margin-bottom: 20px;
+  border-left: 5px solid var(--success-color);
+  transition: all 0.3s;
+}
+
+.advantage-card:hover {
+  transform: translateX(5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.advantage-card h4 {
+  font-size: 1.3rem;
+  color: var(--primary-color);
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.advantage-card p {
+  color: var(--text-light);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* CTA Section */
+.cta-section {
+  background: var(--primary-dark);
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.cta-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-content h2 {
+  font-size: 2.8rem;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.cta-content p {
+  font-size: 1.25rem;
+  margin-bottom: 40px;
+  opacity: 0.95;
+  line-height: 1.7;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .two-column {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .two-column.reverse {
+    direction: ltr;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .section-header h2 {
+    font-size: 2rem;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 70px 0 60px;
+  }
+  
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .hero .subtitle {
+    font-size: 1.15rem;
+  }
+  
+  .hero-cta {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn-custom {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .content-section {
+    padding: 60px 0;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .section-header h2 {
+    font-size: 1.8rem;
+  }
+  
+  .column-content h3 {
+    font-size: 1.6rem;
+  }
+
+  .cta-content h2 {
+    font-size: 2rem;
+  }
+
+  #scroll-top {
+    width: 45px;
+    height: 45px;
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.75rem;
+  }
+  
+  .feature-card,
+  .process-card,
+  .info-card,
+  .advantage-card {
+    padding: 25px 20px;
+  }
+
+  .stat-item h3 {
+    font-size: 2.5rem;
+  }
+}
+</style>
+</head>
+
+<body>
+<!-- Loading Screen -->
+<div id="loading-screen">
+  <div class="loader"></div>
+  <div class="loading-text">Loading CPQ Solutions...</div>
+</div>
+
+<!-- Scroll to Top Button -->
+<button id="scroll-top" aria-label="Scroll to top">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+    <!-- Top Bar -->
+<div class="top-bar">
+  <div class="container">
+    <div class="top-bar-left text-color">
+      <span>✓ Award-Winning Cloud CRM Software Since 2003</span>
+    </div>
+    <ul class="top-bar-nav">
+      <li><a href="https://www.salesboom.com/crm_supportcenter/overview/index.html">Support Center</a></li>
+      <li><a href="https://www.salesboom.com/crm_trial.html">Free Trial</a></li>
+      <li><a href="https://www.salesboom.com/login.html">Login</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Main Header -->
+<header>
+  <div class="main-header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <a href="https://www.salesboom.com" aria-label="Salesboom CRM Home">
+            <img src="https://www.salesboom.com/img/salesboom-logo-252x67.png" alt="Salesboom Cloud CRM Logo" width="252" height="67">
+          </a>
+        </div>
+        <div class="header-phone">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          <a href="tel:+18552292043">1-855-229-2043</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <h1>Turn Every Quote Into Predictable Revenue</h1>
+      <p class="subtitle">Transform quotation management into a strategic revenue control point with AI-powered CPQ that accelerates sales cycles, protects margins, and ensures pricing discipline at every deal.</p>
+<a href="revenue-lifecycle-management-guide.html" class="text-white border-white border-bottom">  back to home <i class="fa-solid fa-arrow-right"></i>   </a>
+      
+      <div class="hero-cta mt-3">
+        <a href="https://www.salesboom.com/request-crm-demo.html" class="btn-custom btn-primary-custom">Book a Demo</a>
+        <a href="https://www.salesboom.com/crm_trial.html" class="btn-custom btn-outline-custom">Start Free Trial</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Section -->
+<section class="stats-section">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <h3>22+</h3>
+        <p>Years of CPQ Innovation</p>
+      </div>
+      <div class="stat-item">
+        <h3>30-50%</h3>
+        <p>Higher Win Rates with Fast Quotes</p>
+      </div>
+      <div class="stat-item">
+        <h3>80%</h3>
+        <p>Reduction in Quote Turnaround Time</p>
+      </div>
+      <div class="stat-item">
+        <h3>3,500+</h3>
+        <p>Organizations Trust Salesboom</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 1: Problem Statement -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Why Quotation Management Demands Executive Attention</h2>
+      <p>For most organizations, the sales process doesn't break down at lead generation, discovery, or even negotiation. It breaks down at the moment value is formalized.</p>
+    </div>
+    
+    <div class="two-column">
+      <div class="column-content">
+        <h3>The Critical Revenue Control Point</h3>
+        <p>Quotation management represents more than an administrative task. <strong>Every quote is a binding commercial commitment, a pricing decision, and a brand promise.</strong> When pricing discipline, legal integrity, brand consistency, and sales velocity must all converge in a single document, the stakes are extraordinarily high.</p>
+        
+        <p>Without centralized quotation management systems, organizations face severe consequences:</p>
+
+        <h4><i class="fas fa-exclamation-triangle" style="color: var(--danger-color); margin-right: 10px;"></i>Strategic Risks</h4>
+        <ul>
+          <li>Margin leakage through uncontrolled discounting</li>
+          <li>Slower deal cycles caused by manual quote creation processes</li>
+          <li>Legal and compliance exposure from outdated terms and conditions</li>
+          <li>Inconsistent customer experiences across sales representatives and geographic regions</li>
+          <li>Inability to scale revenue operations efficiently</li>
+        </ul>
+
+        <p class="mt-3"><strong>Traditional quoting methods</strong>—relying on spreadsheets, Word documents, and email-based approval chains—create unnecessary delays, introduce pricing errors, and expose businesses to competitive disadvantage.</p>
+      </div>
+      <div class="column-image">
+        <img src="content/image/image2.jpg" alt="Quotation management challenges showing manual processes and delays" loading="lazy">
+      </div>
+    </div>
+
+    
+  </div>
+</section>
+
+<!-- Section 2: Strategic Imperatives -->
+<section class="content-section bg-light">
+  <div class="container">
+    <div class="section-header">
+      <h2>The Strategic Imperative Behind Modern Quotation Management</h2>
+      <p>Quotation management is not just about creating documents faster—it's about protecting revenue, accelerating sales cycles, and ensuring brand consistency at scale.</p>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-shield-alt"></i>
+        </div>
+        <h3>Revenue Assurance and Margin Protection</h3>
+        <p>Sales teams are naturally incentivized to close deals quickly. Without systematic guardrails, this urgency leads to problematic compromises: non-standard discounts negotiated ad-hoc, incompatible product bundles that create fulfillment issues, and deals closed below acceptable margin thresholds.</p>
+        
+        <p><strong>Modern quotation management systems enforce critical business rules automatically:</strong></p>
+        <ul>
+          <li>Validates pricing against established floors and ceilings</li>
+          <li>Calculates accurate margins in real-time based on current costs</li>
+          <li>Routes discount requests to appropriate approval authorities</li>
+          <li>Prevents quotes from being sent until all governance requirements are satisfied</li>
+          <li>Maintains complete audit trails for compliance and financial reporting</li>
+        </ul>
+        
+        <p class="mt-3">Salesboom embeds these controls directly into the quoting workflow, making pricing discipline automatic rather than optional.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-rocket"></i>
+        </div>
+        <h3>Speed-to-Quote as a Competitive Advantage</h3>
+        <p><strong>Speed wins deals.</strong> Research consistently demonstrates that the vendor who responds first with an accurate, professional quote increases win probability by 30-50%. Every hour of delay provides competitors an opportunity to establish position and influence buyer preference.</p>
+        
+        <p>Manual quoting processes transform what should be a simple transaction into a multi-day ordeal involving spreadsheet calculations, document formatting, internal approvals via email, and multiple revision cycles.</p>
+
+        <h4 style="font-size: 1.2rem; margin-top: 20px;">Speed-to-Quote Improvements Deliver:</h4>
+        <ul>
+          <li>Shorter sales cycles reduce cost of customer acquisition</li>
+          <li>Faster response times improve win rates and competitive positioning</li>
+          <li>Reduced administrative burden increases sales productivity</li>
+          <li>Fewer errors and revisions improve customer experience</li>
+          <li>Accelerated cash flow strengthens financial performance</li>
+        </ul>
+
+        <p class="mt-3">Salesboom reduces quote turnaround time from days to minutes through intelligent automation.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-certificate"></i>
+        </div>
+        <h3>Brand and Legal Consistency at Scale</h3>
+        <p>Every quote represents your organization to the market. Inconsistent layouts damage brand perception. Outdated payment terms create collection challenges. Incorrect legal clauses introduce liability exposure. Non-standard language creates confusion and negotiation friction.</p>
+        
+        <p>As organizations grow—adding products, entering new markets, expanding sales teams—maintaining quote quality becomes exponentially more complex. Without centralized control, each representative develops personal templates with incremental variations.</p>
+
+        <h4 style="font-size: 1.2rem; margin-top: 20px;">Centralized Management Ensures:</h4>
+        <ul>
+          <li>Standardized branding across all customer touchpoints</li>
+          <li>Pre-approved legal terms and conditions that reflect current policy</li>
+          <li>Automatic version control preventing execution of outdated quotes</li>
+          <li>Consistent visual identity that reinforces brand positioning</li>
+        </ul>
+
+        <p class="mt-3">Salesboom maintains a single, authoritative quote template library managed centrally by marketing, legal, and finance stakeholders.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 3: CPQ Core Capabilities -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>AI-Powered CPQ: Configure, Price, Quote with Intelligence</h2>
+      <p>Salesboom's CPQ engine combines product configuration, intelligent pricing, and professional quote generation in a single, integrated workflow.</p>
+    </div>
+
+    <div class="two-column">
+      <div class="column-content">
+        <h3><i class="fas fa-cogs" style="color: var(--primary-color); margin-right: 10px;"></i>Product Configuration</h3>
+        <p><strong>Guided selling prevents costly configuration errors</strong> that create fulfillment nightmares and damage customer relationships. The system enforces product compatibility rules, ensuring only valid combinations can be quoted.</p>
+        
+        <h4>Configuration Capabilities:</h4>
+        <ul>
+          <li>Visual product configurators for complex offerings</li>
+          <li>Dependency rules preventing incompatible selections</li>
+          <li>Optional and required component logic</li>
+          <li>Quantity-based pricing tiers and volume discounts</li>
+          <li>Custom product attributes and dynamic pricing</li>
+          <li>Bill of materials generation for manufacturing</li>
+        </ul>
+
+        <p class="mt-3">Sales representatives configure products with confidence, knowing the system prevents technical errors that delay delivery or require costly rework.</p>
+      </div>
+  <div class="column-content">
+        <h3><i class="fas fa-tags" style="color: var(--primary-color); margin-right: 10px;"></i>Intelligent Pricing</h3>
+        <p>Pricing complexity multiplies with product variety, customer segments, geographic markets, and promotional strategies. Manual pricing creates errors, inconsistencies, and margin erosion.</p>
+        
+        <h4>AI-Powered Pricing Features:</h4>
+        <ul>
+          <li>Multi-dimensional pricing matrices (product, customer, volume, region)</li>
+          <li>Time-based pricing for seasonal or promotional campaigns</li>
+          <li>Customer-specific negotiated pricing and contract terms</li>
+          <li>Competitive intelligence-informed pricing recommendations</li>
+          <li>Real-time margin calculation with cost visibility</li>
+          <li>Currency conversion with up-to-date exchange rates</li>
+        </ul>
+
+        <p class="mt-3">The system automatically applies the correct pricing logic based on customer, product, and deal characteristics, eliminating manual calculation errors.</p>
+      </div>
+    </div>
+
+   
+
+    <div class="mt-5">
+      <div class="info-card">
+        <h4><i class="fas fa-file-invoice-dollar" style="color: var(--primary-color); margin-right: 10px;"></i>Professional Quote Generation</h4>
+        <p>Once products are configured and priced, Salesboom generates professional, branded quotes instantly. Templates ensure visual consistency, legal compliance, and brand alignment across all customer communications. Sales representatives generate pixel-perfect quotes with a single click, complete with product descriptions, pricing details, terms and conditions, and digital signatures—ready to send to customers immediately without additional formatting or review.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Blogs -->
+
+<section class="container py-5">
+  <h2 class="text-center mb-5 text-color">
+    CRM & Revenue Strategy Guides (Blog)
+  </h2>
+
+  <div class="row g-4">
+
+    <!-- Revenue Lifecycle Management Guide -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-infinity fa-3x mb-3 text-color"></i>
+        <h4>Revenue Lifecycle Management</h4>
+        <p>
+          Discover how to unify sales, marketing, service and finance into a continuous revenue engine in
+          <a href="https://blog.salesboom.com/revenue-lifecycle-management-guide" class="text-color fw-bold" target="_blank">
+            this guide
+          </a>. Revenue Lifecycle Management replaces the traditional funnel with a holistic, integrated growth model. 
+        </p>
+      </div>
+    </div>
+
+    <!-- Opportunity Management Guide -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-lightbulb fa-3x mb-3 text-color"></i>
+        <h4>Opportunity Management Guide</h4>
+        <p>
+          Learn best practices for identifying, qualifying, and managing sales opportunities in
+          <a href="https://blog.salesboom.com/opportunity-management-guide" class="text-color fw-bold" target="_blank">
+            this guide
+          </a>. Opportunity management ensures that high-value deals get attention and don’t slip through the cracks. 
+        </p>
+      </div>
+    </div>
+
+
+
+    <!-- Quotation Management CPQ Guide -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-calculator fa-3x mb-3 text-color"></i>
+        <h4>Quotation Management & CPQ Guide</h4>
+        <p>
+          Get strategies for effective **Configure-Price-Quote** (CPQ) and revenue control workflows in
+          <a href="https://blog.salesboom.com/quotation-management-cpq-revenue-control" class="text-color fw-bold" target="_blank">
+            this CPQ guide
+          </a>. Learn how to generate precise quotes and accelerate deal cycles.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Section 4: Approval Workflows -->
+<section class="content-section bg-light">
+  <div class="container">
+    <div class="section-header">
+      <h2>Intelligent Approval Workflows That Balance Speed and Control</h2>
+      <p>Approval processes must protect the business without creating unnecessary bottlenecks. Salesboom's intelligent workflows ensure only quotes requiring review get escalated.</p>
+    </div>
+
+    <div class="process-grid">
+      <div class="process-card">
+        <div class="process-number">1</div>
+        <h4>Threshold-Based Routing</h4>
+        <p>Configure approval requirements based on discount percentage, deal size, margin levels, or custom business rules. Standard quotes bypass approvals entirely, while exceptional deals route automatically to appropriate authorities.</p>
+      </div>
+
+      <div class="process-card">
+        <div class="process-number">2</div>
+        <h4>Parallel and Sequential Approvals</h4>
+        <p>Design approval chains that match organizational hierarchy. Route simultaneously to multiple approvers for speed, or sequentially through escalating authority levels. Automated reminders prevent approvals from stalling.</p>
+      </div>
+
+      <div class="process-card">
+        <div class="process-number">3</div>
+        <h4>Mobile Approval Capabilities</h4>
+        <p>Approvers receive instant notifications and can review quotes, check margin details, and approve or reject directly from mobile devices. No more waiting for executives to return to their desks.</p>
+      </div>
+
+      <div class="process-card">
+        <div class="process-number">4</div>
+        <h4>Conditional Logic and Escalation</h4>
+        <p>Build sophisticated approval logic based on multiple criteria: product category, customer type, competitive situation, or strategic importance. Automatically escalate stalled approvals after defined timeframes.</p>
+      </div>
+
+      <div class="process-card">
+        <div class="process-number">5</div>
+        <h4>Complete Audit Trail</h4>
+        <p>Every approval, rejection, modification, and comment is logged with timestamp and user details. Finance and compliance teams have complete visibility into discount authorization and pricing decisions.</p>
+      </div>
+
+      <div class="process-card">
+        <div class="process-number">6</div>
+        <h4>AI-Powered Recommendations</h4>
+        <p>Machine learning analyzes historical approval patterns to suggest likely outcomes and flag deals that deviate from normal parameters, helping approvers focus attention where it matters most.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 5: Integration & Ecosystem -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Quote-to-Cash Continuity Through Seamless Integration</h2>
+      <p>CPQ doesn't exist in isolation. Salesboom connects quotation management with the entire revenue lifecycle—from opportunity through cash collection.</p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="info-card">
+          <h4><i class="fas fa-handshake" style="color: var(--primary-color); margin-right: 10px;"></i>Native CRM Integration</h4>
+          <p>Because Salesboom CPQ is built directly into the CRM platform (not a bolted-on module), quotes inherit complete opportunity context automatically. Customer history, pricing agreements, past purchases, and relationship details inform every quote without manual data entry. No integration complexity, no data synchronization delays, no vendor finger-pointing when issues arise.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="info-card">
+          <h4><i class="fas fa-calculator" style="color: var(--primary-color); margin-right: 10px;"></i>ERP and Financial Systems</h4>
+          <p>Quotes flow seamlessly to ERP systems for order processing, inventory allocation, and fulfillment. Bidirectional integration ensures pricing, product availability, and customer credit limits remain synchronized in real-time. Eliminate manual order entry errors and accelerate revenue recognition through automated quote-to-cash workflows.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="info-card">
+          <h4><i class="fas fa-file-contract" style="color: var(--primary-color); margin-right: 10px;"></i>Contract Lifecycle Management</h4>
+          <p>Accepted quotes automatically generate contracts with terms, pricing, and obligations pre-populated. Track amendments, renewals, and compliance obligations throughout the contract lifecycle. Ensure quoted pricing matches executed agreements without manual reconciliation.</p>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="info-card">
+          <h4><i class="fas fa-sync-alt" style="color: var(--primary-color); margin-right: 10px;"></i>Revenue Recognition and Billing</h4>
+          <p>Quote line items flow directly to billing systems with appropriate revenue recognition schedules. Handle complex scenarios including multi-year subscriptions, usage-based pricing, and milestone-based billing without manual intervention. Ensure compliance with ASC 606/IFRS 15 revenue recognition standards.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 6: Competitive Advantages -->
+<section class="content-section bg-light">
+  <div class="container">
+    <div class="section-header">
+      <h2>The Salesboom CPQ Advantage</h2>
+      <p>What separates Salesboom from standalone CPQ tools and generic quotation features.</p>
+    </div>
+
+    <div class="advantage-card">
+      <h4><i class="fas fa-brain" style="color: var(--success-color); margin-right: 10px;"></i>AI-Powered Pricing Intelligence</h4>
+      <p>Machine learning analyzes historical deal data to recommend optimal pricing based on customer profile, competitive situation, and likelihood to close. The system learns from win-loss patterns to improve pricing guidance continuously, helping sales representatives quote competitively while protecting margins.</p>
+    </div>
+
+    <div class="advantage-card">
+      <h4><i class="fas fa-puzzle-piece" style="color: var(--success-color); margin-right: 10px;"></i>True CRM-Native CPQ</h4>
+      <p>Unlike bolt-on CPQ modules that require complex integration, Salesboom CPQ is built directly into the CRM platform. This native architecture eliminates data synchronization delays, reduces implementation complexity, and ensures quotes always reflect current customer and opportunity context.</p>
+    </div>
+
+    <div class="advantage-card">
+      <h4><i class="fas fa-chart-line" style="color: var(--success-color); margin-right: 10px;"></i>Revenue Lifecycle Management Integration</h4>
+      <p>CPQ is one component of complete Revenue Lifecycle Management. Salesboom connects quoting with contract management, billing, revenue recognition, and renewal processes—providing end-to-end visibility and control that standalone CPQ tools cannot deliver.</p>
+    </div>
+
+    <div class="advantage-card">
+      <h4><i class="fas fa-history" style="color: var(--success-color); margin-right: 10px;"></i>22+ Years of Enterprise Experience</h4>
+      <p>Salesboom has implemented CPQ for 3,500+ organizations across diverse industries and business models. This experience translates to proven templates, best practices, and implementation methodologies that reduce deployment risk and accelerate time-to-value.</p>
+    </div>
+
+    <div class="advantage-card">
+      <h4><i class="fas fa-sliders-h" style="color: var(--success-color); margin-right: 10px;"></i>Configurable Without Custom Development</h4>
+      <p>Business users can configure products, pricing rules, approval workflows, and quote templates without requiring developer resources or professional services. Adapt to changing business requirements quickly through intuitive administrative interfaces.</p>
+    </div>
+
+    <div class="advantage-card">
+      <h4><i class="fas fa-expand-arrows-alt" style="color: var(--success-color); margin-right: 10px;"></i>Scalability from SMB to Enterprise</h4>
+      <p>The platform scales seamlessly from simple quotations for small teams to complex, multi-currency, multi-entity configurations for global enterprises—without requiring platform migrations or architectural changes as your business grows.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Old Content -->
+
+<section class="container py-5">
+  <h2 class="text-center mb-5 text-color">
+    Salesboom CRM: Sales, Marketing, Service & Revenue Solutions
+  </h2>
+
+  <div class="row g-4">
+
+    <!-- Sales Quote Management -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-file-invoice-dollar fa-3x mb-3 text-color"></i>
+        <h4>Sales Quote Management</h4>
+        <p>
+          Generate accurate quotes quickly and track the full proposal lifecycle with
+          <a href="https://www.salesboom.com/products/web-based_sales_quote_management_software.html" class="text-color fw-bold" target="_blank">
+            Quote Management Software
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Opportunity Management -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-lightbulb fa-3x mb-3 text-color"></i>
+        <h4>Opportunity Management CRM</h4>
+        <p>
+          Track and prioritize sales opportunities from discovery to close with
+          <a href="https://www.salesboom.com/products/crm-opportunity-management-software.html" class="text-color fw-bold" target="_blank">
+            Opportunity Management Software
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- CRM Increase Revenues -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-money-bill-trend-up fa-3x mb-3 text-color"></i>
+        <h4>CRM to Increase Revenues</h4>
+        <p>
+          Drive revenue growth through aligned sales, marketing and service workflows via
+          <a href="https://www.salesboom.com/products/crm-increase-revenues.html" class="text-color fw-bold" target="_blank">
+            CRM Revenue Solutions
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Self-Service Portal -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-door-open fa-3x mb-3 text-color"></i>
+        <h4>Self-Service Portal Software</h4>
+        <p>
+          Empower customers to get answers and manage support requests through
+          <a href="https://www.salesboom.com/service-management/web-based_self_service_portal_software.html" class="text-color fw-bold" target="_blank">
+            Self-Service Portal
+          </a>. 
+        </p>
+      </div>
+    </div>
+
+    <!-- Revenue Lifecycle Management Guide -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-infinity fa-3x mb-3 text-color"></i>
+        <h4>Revenue Lifecycle Management</h4>
+        <p>
+          Unify sales, marketing, and service into a continuous growth engine with
+          <a href="https://www.salesboom.com/ai-rlm/revenue-lifecycle-management-guide.html" class="text-color fw-bold" target="_blank">
+            RLM Guide
+          </a>. 
+        </p>
+      </div>
+    </div>
+
+    <!-- Revenue Operations Guide -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-gear fa-3x mb-3 text-color"></i>
+        <h4>Revenue Operations Guide</h4>
+        <p>
+          Learn best practices for unifying operations across revenue teams with
+          <a href="https://www.salesboom.com/revenue-operations/revenue-operations-guide-for-smes.html" class="text-color fw-bold" target="_blank">
+            Revenue Operations Guide
+          </a>.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Section 7: Scalability -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Building Quotation Management That Scales With Growth</h2>
+      <p>Quotation management systems must accommodate business evolution without requiring periodic reimplementation.</p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <div class="feature-card h-100">
+          <div class="feature-icon">
+            <i class="fas fa-boxes"></i>
+          </div>
+          <h3>Product Catalog Expansion</h3>
+          <p>As product lines multiply from dozens to hundreds or thousands of SKUs, configuration rules must remain manageable. Salesboom's hierarchical product structure organizes complex catalogs through categories, families, and attributes that simplify navigation and maintenance.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="feature-card h-100">
+          <div class="feature-icon">
+            <i class="fas fa-globe-americas"></i>
+          </div>
+          <h3>Geographic Distribution</h3>
+          <p>As sales teams span time zones, countries, and regulatory jurisdictions, quotation management must support multiple currencies, tax regimes, language requirements, and approval authorities while maintaining central visibility and control.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="feature-card h-100">
+          <div class="feature-icon">
+            <i class="fas fa-sitemap"></i>
+          </div>
+          <h3>Organizational Complexity</h3>
+          <p>As teams grow from single offices to regional hierarchies with specialized roles, access controls, approval workflows, and reporting hierarchies must accommodate increasing complexity without performance degradation.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="feature-card h-100">
+          <div class="feature-icon">
+            <i class="fas fa-building"></i>
+          </div>
+          <h3>Customer Sophistication</h3>
+          <p>As customer base expands to include enterprise accounts with complex procurement requirements, master service agreements, and negotiated pricing, the system must handle customer-specific terms and multi-year contracts.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="feature-card h-100">
+          <div class="feature-icon">
+            <i class="fas fa-plug"></i>
+          </div>
+          <h3>Integration Ecosystem</h3>
+          <p>As technology stacks evolve to include specialized tools for sales enablement, revenue operations, customer success, and analytics, quotation management must integrate seamlessly with the expanding system landscape.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="feature-card h-100">
+          <div class="feature-icon">
+            <i class="fas fa-cloud"></i>
+          </div>
+          <h3>Cloud Infrastructure</h3>
+          <p>Cloud infrastructure automatically handles demand fluctuations, quarter-end spikes, seasonal patterns, and rapid hiring without performance degradation, ensuring consistent user experience at any scale.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Benefits Section -->
+<section class="benefits-section">
+  <div class="container">
+    <div class="section-header" style="color: white;">
+      <h2 style="color: white;">Transform Quotation Management Into Strategic Advantage</h2>
+      <p style="color: rgba(255,255,255,0.95);">Salesboom CPQ delivers measurable business outcomes that directly impact revenue, margins, and customer satisfaction.</p>
+    </div>
+
+    <div class="benefits-grid">
+      <div class="benefit-item">
+        <h3><i class="fas fa-tachometer-alt" style="margin-right: 10px;"></i>80% Faster Quote Turnaround</h3>
+        <p>Reduce quote creation from days to minutes with automated configuration, intelligent pricing, and professional template generation that eliminates manual document work.</p>
+      </div>
+
+      <div class="benefit-item">
+        <h3><i class="fas fa-percentage" style="margin-right: 10px;"></i>Margin Protection</h3>
+        <p>Enforce pricing floors, approval thresholds, and discount controls that prevent margin erosion while maintaining sales velocity and competitive responsiveness.</p>
+      </div>
+
+      <div class="benefit-item">
+        <h3><i class="fas fa-trophy" style="margin-right: 10px;"></i>30-50% Higher Win Rates</h3>
+        <p>Beat competitors to market with fast, accurate quotes that establish early buyer preference and demonstrate professional capability from first interaction.</p>
+      </div>
+
+      <div class="benefit-item">
+        <h3><i class="fas fa-user-check" style="margin-right: 10px;"></i>Improved Customer Experience</h3>
+        <p>Deliver consistent, professional quotes with accurate pricing, clear terms, and transparent timelines that build trust and accelerate buying decisions.</p>
+      </div>
+
+      <div class="benefit-item">
+        <h3><i class="fas fa-shield-alt" style="margin-right: 10px;"></i>Legal and Brand Consistency</h3>
+        <p>Ensure every quote reflects current legal terms, brand standards, and compliance requirements through centralized template management and version control.</p>
+      </div>
+
+      <div class="benefit-item">
+        <h3><i class="fas fa-chart-line" style="margin-right: 10px;"></i>Revenue Predictability</h3>
+        <p>Connect quotes to opportunities, contracts, and billing in a unified revenue lifecycle that provides complete visibility from initial pricing to cash collection.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-content">
+      <h2>Ready to Transform Quotes Into Predictable Revenue?</h2>
+      <p>Discover how Salesboom's AI-powered CPQ accelerates your sales cycle, protects margins, and scales with your growth. Book a personalized demo to see quotation management that works the way your business needs.</p>
+      <div class="hero-cta">
+        <a href="https://www.salesboom.com/request-crm-demo.html" class="btn-custom btn-primary-custom">Book Your Demo Today</a>
+        <a href="https://www.salesboom.com/crm_trial.html" class="btn-custom btn-outline-custom">Start Free Trial</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-2">
+      <h3 class="fw-bold text-color">
+        <i class="fa-solid fa-layer-group me-2"></i>
+        Explore Salesboom Editions
+      </h3>
+      <p class="text-muted">Discover powerful CRM editions to scale your business efficiently.</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-briefcase fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Professional Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              A complete CRM suite with Marketing Automation, ERP integration, and Support tools — built for performance and value.
+            </p>
+            <a href="https://www.salesboom.com/editions/professional-edition.html" class="btn btn-color mt-auto">
+              Explore Professional <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-building fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Enterprise Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              For large enterprises — automate workflows, unify data, and leverage analytics to drive strategic growth.
+            </p>
+            <a href="https://www.salesboom.com/editions/enterprise-edition.html" class="btn btn-color mt-auto">
+              View Enterprise <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-users fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Team Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              Perfect for small teams starting with CRM — manage leads, track sales, and boost productivity with simplicity.
+            </p>
+            <a href="https://www.salesboom.com/editions/team-edition.html" class="btn btn-color mt-auto">
+           Discover Team<i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Local Page -->
+
+<section class="container py-5">
+  <h2 class="text-center mb-5 text-color">
+    CRM Opportunity & Lead Management Solutions
+  </h2>
+
+  <div class="row g-4">
+
+    <!-- opportunity-management-crm -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-hand-holding-dollar fa-3x mb-3 text-color"></i>
+        <h4>Opportunity Management CRM</h4>
+        <p>
+          Track, prioritize, and grow sales opportunities efficiently using
+          <a href="opportunity-management-crm.html" class="text-color fw-bold">
+            Opportunity Management CRM
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- lead-conversion-crm -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-exchange-alt fa-3x mb-3 text-color"></i>
+        <h4>Lead Conversion CRM</h4>
+        <p>
+          Boost conversions and increase pipeline velocity with
+          <a href="lead-conversion-crm.html" class="text-color fw-bold">
+            Lead Conversion CRM
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- ai-powered-lead-scoring-crm -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-brain fa-3x mb-3 text-color"></i>
+        <h4>AI Powered Lead Scoring CRM</h4>
+        <p>
+          Use intelligent AI to score and prioritize leads automatically via
+          <a href="ai-powered-lead-scoring-crm.html" class="text-color fw-bold">
+            AI Lead Scoring CRM
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- integrated-estimating-crm -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-ruler-combined fa-3x mb-3 text-color"></i>
+        <h4>Integrated Estimating CRM</h4>
+        <p>
+          Create dependable project estimates and cost models with
+          <a href="integrated-estimating-crm.html" class="text-color fw-bold">
+            Integrated Estimating CRM
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- lead-to-close-lifecycle-optimization -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-sync-alt fa-3x mb-3 text-color"></i>
+        <h4>Lead to Close Lifecycle Optimization</h4>
+        <p>
+          Maximize revenue conversion across the full sales cycle with
+          <a href="lead-to-close-lifecycle-optimization.html" class="text-color fw-bold">
+            Lifecycle Optimization CRM
+          </a>.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- Footer -->
+<footer class="mt-5 footer">
+  <div class="container mt-5 pt-5">
+    <div class="footer-grid">
+      <div class="footer-section">
+        <h3>Products</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/products/tools-sfa.html">Sales Force Automation</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-marketing.html">Marketing Automation</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-casemanagement.html">Case Management</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-reporting.html">Business Intelligence</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-emailintegration.html">Email Integration</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Solutions</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/products/edition-team.html">Team Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/edition-professional.html">Professional Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/edition-enterprise.html">Enterprise Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/industry-solutions.html">Industry Solutions</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/company/index.html">About Us</a></li>
+          <li><a href="https://www.salesboom.com/company/company-contact.html">Contact Us</a></li>
+          <li><a href="https://www.salesboom.com/customers/index.html">Customers</a></li>
+          <li><a href="https://www.salesboom.com/partners/index.html">Partners</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/support/index.html">Support Center</a></li>
+          <li><a href="https://www.salesboom.com/crm_supportcenter/overview/index.html">Documentation</a></li>
+          <li><a href="https://www.salesboom.com/whitepapers/index.html">White Papers</a></li>
+          <li><a href="https://www.salesboom.com/pop-privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="bg-color">
+    <div class="container">
+     <div class="footer-bottom pb-3 mt-3">
+      <p>&copy; 2003-2025 <a class="text-white fw-bold" href="https://www.salesboom.com">Salesboom.com</a> Inc. All rights reserved. | Call: 1-855-229-2043</p>
+      <p style="margin-top: 10px;">Salesboom's color-coded CRM lead management software helps businesses visually prioritize sales opportunities with automated workflow rules. Contact us to learn how color coding can transform your lead management process and increase sales productivity.</p>
+    </div>
+    </div>
+  </div>
+ 
+</footer>
+
+<!-- Common JavaScript -->
+<script src="content/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+<script>
+// Loading Screen
+window.addEventListener('load', function() {
+  setTimeout(function() {
+    document.getElementById('loading-screen').classList.add('fade-out');
+  }, 800);
+});
+
+// Scroll to Top Button
+const scrollTopBtn = document.getElementById('scroll-top');
+
+window.addEventListener('scroll', function() {
+  if (window.pageYOffset > 300) {
+    scrollTopBtn.classList.add('visible');
+  } else {
+    scrollTopBtn.classList.remove('visible');
+  }
+});
+
+scrollTopBtn.addEventListener('click', function() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+
+// Smooth scroll for all internal links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  });
+});
+</script>
+
+</body>
+</html>
