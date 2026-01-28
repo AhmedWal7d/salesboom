@@ -1,0 +1,1554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+<!-- Primary Meta Tags -->
+<title>Gemini AI Prompt Engineering for Sales CRM | Salesboom</title>
+<meta name="description" content="Transform sales workflows with Salesboom's Gemini AI integration. Turn CRM data into cognitive revenue intelligence through advanced prompt engineering.">
+<meta name="keywords" content="Gemini prompt engineering, AI-powered CRM workflows, Cognitive revenue intelligence, Sales automation AI, MEDDIC automation, Challenger sales AI, AI workflow integration, Enterprise AI CRM">
+<link rel="canonical" href="https://www.salesboom.com/gemini-ai-prompt-engineering-sales-crm.html">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.salesboom.com/gemini-ai-prompt-engineering-sales-crm.html">
+<meta property="og:title" content="Gemini AI Prompt Engineering for Sales CRM | Salesboom">
+<meta property="og:description" content="Transform sales workflows with Salesboom's Gemini AI integration. Turn CRM data into cognitive revenue intelligence through advanced prompt engineering.">
+<meta property="og:image" content="https://www.salesboom.com/img/gemini-ai-prompt-engineering-sales-crm-og.jpg">
+<meta property="og:site_name" content="Salesboom">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://www.salesboom.com/gemini-ai-prompt-engineering-sales-crm.html">
+<meta name="twitter:title" content="Gemini AI Prompt Engineering for Sales CRM | Salesboom">
+<meta name="twitter:description" content="Transform sales workflows with Salesboom's Gemini AI integration. Turn CRM data into cognitive revenue intelligence through advanced prompt engineering.">
+<meta name="twitter:image" content="https://www.salesboom.com/img/gemini-ai-prompt-engineering-sales-crm-og.jpg">
+<meta name="twitter:site" content="@SalesboomCloud">
+
+<!-- Schema.org Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Salesboom Gemini AI Cognitive Workflows",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Cloud-based",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "description": "Cognitive revenue intelligence platform powered by Gemini prompt engineering that transforms CRM workflows into reasoning systems.",
+  "provider": {
+    "@type": "Organization",
+    "name": "Salesboom",
+    "url": "https://www.salesboom.com"
+  },
+  "featureList": "Cognitive workflows, Prompt engineering, MEDDIC automation, Challenger sales AI, Long-context reasoning, Multimodal intelligence, Structured outputs"
+}
+</script>
+
+<!-- Favicon -->
+<link rel="shortcut icon" href="https://www.salesboom.com/favicon.ico">
+    <link rel="stylesheet" href="content/css/bootstrap.min.css">
+    <link rel="stylesheet" href="content/css/salesboom-common.css">
+    <link rel="shortcut icon" href="content/image/salesboom-logo-252x67.png" type="image/x-icon"> 
+    
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --primary-color: #002f6c;
+  --secondary-color: #0052cc;
+  --accent-color: #00a3ff;
+  --gemini-color: #4285f4;
+  --text-dark: #1a1a1a;
+  --text-light: #666;
+  --bg-light: #f8f9fa;
+  --white: #ffffff;
+  --success: #28a745;
+  --warning: #ff9800;
+  --gradient-primary: linear-gradient(135deg, #002f6c 0%, #0052cc 100%);
+  --gradient-gemini: linear-gradient(135deg, #4285f4 0%, #34a853 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: var(--text-dark);
+  overflow-x: hidden;
+}
+
+/* Loading Screen */
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#loading-screen.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader {
+  width: 60px;
+  height: 60px;
+  border: 5px solid rgba(255, 255, 255, 0.2);
+  border-top-color: var(--white);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Scroll to Top Button */
+#scroll-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: var(--primary-color);
+  color: var(--white);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(0, 47, 108, 0.3);
+}
+
+#scroll-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+#scroll-top:hover {
+  background: var(--secondary-color);
+  transform: translateY(-5px);
+}
+
+/* Hero Section */
+.hero-section {
+  background: var(--gradient-primary);
+  color: var(--white);
+  padding: 100px 0 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+  opacity: 0.3;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.hero-section h1 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  margin-bottom: 25px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.hero-section .lead {
+  font-size: 1.3rem;
+  margin-bottom: 40px;
+  opacity: 0.95;
+  max-width: 950px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
+}
+
+/* Cognitive Badge */
+.cognitive-badge {
+  display: inline-block;
+  background: var(--gradient-gemini);
+  color: var(--white);
+  padding: 10px 25px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+.btn-primary-custom {
+  background: var(--white);
+  color: var(--primary-color);
+  padding: 16px 40px;
+  font-size: 18px;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary-custom:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+.btn-outline-custom {
+  background: transparent;
+  color: var(--white);
+  padding: 16px 40px;
+  font-size: 18px;
+  font-weight: 700;
+  border: 2px solid var(--white);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-custom:hover {
+  background: var(--white);
+  color: var(--primary-color);
+}
+
+/* Section Styling */
+.content-section {
+  padding: 80px 0;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 30px;
+  text-align: center;
+  line-height: 1.3;
+}
+
+.section-subtitle {
+  font-size: 1.15rem;
+  color: var(--text-light);
+  margin-bottom: 50px;
+  text-align: center;
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.8;
+}
+
+/* Feature Cards */
+.feature-card {
+  background: var(--white);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  height: 100%;
+  border-top: 4px solid var(--primary-color);
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 47, 108, 0.15);
+}
+
+.feature-card.gemini-theme {
+  border-top-color: var(--gemini-color);
+}
+
+.feature-icon {
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.feature-icon.gemini-icon {
+  color: var(--gemini-color);
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.feature-card p {
+  color: var(--text-light);
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+/* Stats Section */
+.stats-section {
+  background: var(--primary-color);
+  color: var(--white);
+  padding: 60px 0;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 20px;
+}
+
+.stat-number {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--accent-color);
+  margin-bottom: 10px;
+}
+
+.stat-label {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* Background Variations */
+.bg-light-custom {
+  background: var(--bg-light);
+}
+
+/* List Styling */
+.custom-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.custom-list li {
+  padding: 12px 0;
+  padding-left: 35px;
+  position: relative;
+  color: var(--text-dark);
+  line-height: 1.8;
+}
+
+.custom-list li::before {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  color: var(--success);
+  font-size: 1.2rem;
+}
+
+.custom-list-dash li::before {
+  content: "\f105";
+  color: var(--primary-color);
+  font-size: 1.3rem;
+}
+
+/* Principle Cards */
+.principle-card {
+  background: var(--white);
+  padding: 35px;
+  border-radius: 12px;
+  border-left: 5px solid var(--gemini-color);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 25px;
+  transition: all 0.3s ease;
+}
+
+.principle-card:hover {
+  transform: translateX(10px);
+  box-shadow: 0 8px 25px rgba(0, 47, 108, 0.12);
+}
+
+.principle-card h4 {
+  color: var(--gemini-color);
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Methodology Cards */
+.methodology-card {
+  background: var(--white);
+  padding: 35px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  height: 100%;
+  border-top: 5px solid var(--primary-color);
+}
+
+.methodology-card h3 {
+  color: var(--primary-color);
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+/* Chain-of-Thought Box */
+.chain-box {
+  background: linear-gradient(135deg, rgba(66, 133, 244, 0.05) 0%, rgba(52, 168, 83, 0.05) 100%);
+  border-left: 5px solid var(--gemini-color);
+  padding: 30px;
+  border-radius: 12px;
+  margin: 30px 0;
+}
+
+.chain-box h5 {
+  color: var(--gemini-color);
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+/* Impact Cards */
+.impact-card {
+  background: var(--white);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  border-left: 5px solid var(--success);
+  height: 100%;
+}
+
+.impact-card h4 {
+  color: var(--primary-color);
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 1.25rem;
+}
+
+/* Comparison Box */
+.comparison-box {
+  background: var(--white);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 25px;
+  height: 100%;
+}
+
+.comparison-box h4 {
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-size: 1.3rem;
+}
+
+/* CTA Section */
+.cta-section {
+  background: var(--gradient-primary);
+  color: var(--white);
+  padding: 80px 0;
+  text-align: center;
+}
+
+.cta-section h2 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 25px;
+}
+
+.cta-section p {
+  font-size: 1.25rem;
+  margin-bottom: 40px;
+  opacity: 0.95;
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
+}
+
+/* Form Styling */
+.contact-form {
+  background: var(--white);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.form-control {
+  padding: 14px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(0, 47, 108, 0.1);
+}
+
+.form-label {
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+
+.btn-submit {
+  background: var(--primary-color);
+  color: var(--white);
+  padding: 14px 40px;
+  font-size: 18px;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+  background: var(--secondary-color);
+  transform: translateY(-2px);
+}
+
+/* Highlight Box */
+.highlight-box {
+  background: linear-gradient(135deg, rgba(0, 47, 108, 0.05) 0%, rgba(0, 163, 255, 0.05) 100%);
+  border-left: 5px solid var(--primary-color);
+  padding: 25px 30px;
+  border-radius: 8px;
+  margin: 30px 0;
+}
+
+.highlight-box p {
+  margin-bottom: 0;
+  font-size: 1.1rem;
+  color: var(--text-dark);
+  font-weight: 500;
+  line-height: 1.7;
+}
+
+/* Phase Cards */
+.phase-card {
+  background: var(--white);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+  border-left: 5px solid var(--warning);
+}
+
+.phase-card h4 {
+  color: var(--primary-color);
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-section .lead {
+    font-size: 1.1rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+  }
+
+  .cta-section h2 {
+    font-size: 2rem;
+  }
+
+  .feature-card {
+    padding: 30px;
+  }
+}
+
+/* Animation */
+.fade-in {
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Content Formatting */
+.content-text {
+  font-size: 1.08rem;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.content-text strong {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+</style>
+</head>
+
+<body>
+<!-- Loading Screen -->
+<div id="loading-screen">
+  <div class="loader"></div>
+</div>
+
+<!-- Scroll to Top Button -->
+<button id="scroll-top">
+  <i class="fas fa-arrow-up"></i>
+</button>
+    <!-- Top Bar -->
+<div class="top-bar">
+  <div class="container">
+    <div class="top-bar-left text-color">
+      <span>✓ Award-Winning Cloud CRM Software Since 2003</span>
+    </div>
+    <ul class="top-bar-nav">
+      <li><a href="https://www.salesboom.com/crm_supportcenter/overview/index.html">Support Center</a></li>
+      <li><a href="https://www.salesboom.com/crm_trial.html">Free Trial</a></li>
+      <li><a href="https://www.salesboom.com/login.html">Login</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Main Header -->
+<header>
+  <div class="main-header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <a href="https://www.salesboom.com" aria-label="Salesboom CRM Home">
+            <img src="https://www.salesboom.com/img/salesboom-logo-252x67.png" alt="Salesboom Cloud CRM Logo" width="252" height="67">
+          </a>
+        </div>
+        <div class="header-phone">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          <a href="tel:+18552292043">1-855-229-2043</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="container">
+    <div class="hero-content fade-in">
+      <div class="cognitive-badge">
+        <i class="fas fa-brain me-2"></i>Cognitive CRM Workflows
+      </div>
+      <h1>Transform Workflows into Cognitive Revenue Intelligence</h1>
+      <p class="lead">Salesboom integrates Gemini prompt engineering directly into CRM workflows—not as a chatbot, but as a reasoning layer that analyzes, qualifies, and recommends like your best operators.</p>
+     
+     
+     
+<a href="ai-agents-google-gemini-crm.html" class="text-white border-bottom">back to home <i class="fa-solid fa-arrow-right"></i></a>
+     
+      <div class="d-flex gap-3 mt-3 justify-content-center flex-wrap">
+        <a href="#demo-form" class="btn btn-primary-custom">
+          <i class="fas fa-flask me-2"></i>Experience Cognitive Workflows
+        </a>
+        <a href="#features" class="btn btn-outline-custom">
+          <i class="fas fa-info-circle me-2"></i>Learn More
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Section -->
+<section class="stats-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 col-6">
+        <div class="stat-item">
+          <div class="stat-number">60%</div>
+          <div class="stat-label">Admin Time Reduction</div>
+        </div>
+      </div>
+      <div class="col-md-3 col-6">
+        <div class="stat-item">
+          <div class="stat-number">30%</div>
+          <div class="stat-label">Forecast Accuracy Gain</div>
+        </div>
+      </div>
+      <div class="col-md-3 col-6">
+        <div class="stat-item">
+          <div class="stat-number">25%</div>
+          <div class="stat-label">Faster Deal Velocity</div>
+        </div>
+      </div>
+      <div class="col-md-3 col-6">
+        <div class="stat-item">
+          <div class="stat-number">50%</div>
+          <div class="stat-label">Seller Productivity Boost</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Breaking Point Section -->
+<section class="content-section" id="features">
+  <div class="container">
+    <h2 class="section-title animate-on-scroll">Why Rule-Based Automation Cannot Scale Modern Revenue Operations</h2>
+    <div class="row">
+      <div class="col-lg-10 offset-lg-1">
+        <p class="content-text animate-on-scroll">
+          For the last 30 years, business workflows have followed a predictable pattern: capture data, apply rules, trigger actions. CRMs stored information. Automation tools moved records. Humans filled the gaps with intuition, judgment, and experience.
+        </p>
+        <p class="content-text animate-on-scroll">
+          <strong>That model is breaking.</strong>
+        </p>
+        <p class="content-text animate-on-scroll">
+          Modern revenue workflows are no longer linear. Buying committees are fragmented across departments and geographies. Sales cycles stretch across months or years. Critical insight is buried in unstructured data—emails, call transcripts, contracts, slide decks, financial reports, and competitive materials. <strong>Rule-based automation cannot interpret meaning, detect nuance, or reason across time.</strong>
+        </p>
+        
+        <div class="highlight-box animate-on-scroll">
+          <p><strong>The consequences of this breakdown are severe:</strong></p>
+          <ul class="custom-list-dash mt-3 mb-0">
+            <li>Senior sellers rely on gut instinct that doesn't scale across teams</li>
+            <li>Managers forecast based on subjective judgment rather than evidence</li>
+            <li>Revenue risks are discovered late—after damage has occurred</li>
+            <li>Administrative tasks consume hours that should be spent with customers</li>
+            <li>Deal intelligence dies in silos, never reaching those who need it most</li>
+          </ul>
+        </div>
+
+        <p class="content-text animate-on-scroll" style="font-weight: 600; color: #002f6c; font-size: 1.15rem; text-align: center;">
+          Traditional CRM automation asks "Did this step occur?" The next generation asks "What does this interaction actually indicate? Which signals are missing? What is the most likely blocker? What should happen next, and why?"
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Gemini Integration Philosophy Section -->
+<section class="content-section bg-light-custom">
+  <div class="container">
+    <h2 class="section-title animate-on-scroll">Cognitive Workflows: Reasoning as Infrastructure, Not a Feature</h2>
+    <p class="section-subtitle animate-on-scroll">
+      Salesboom's integration with Gemini prompt engineering represents a fundamental architectural shift in how CRM platforms operate. This is not a chatbot bolted onto a dashboard. This is not a writing assistant for emails. This is a reasoning layer embedded directly inside business workflow execution.
+    </p>
+
+    <div class="row g-4 mt-4">
+      <div class="col-lg-6">
+        <div class="feature-card gemini-theme animate-on-scroll">
+          <div class="feature-icon gemini-icon">
+            <i class="fas fa-route"></i>
+          </div>
+          <h3>From Intuition-Driven to Algorithmic Revenue Execution</h3>
+          <p>Historically, revenue operations depended on senior expertise that couldn't be codified, transferred, or scaled. Salesboom's Gemini integration reframes workflows as decision systems, not task checklists.</p>
+          <div class="mt-3">
+            <p style="font-weight: 600; margin-bottom: 10px;">Instead of tracking task completion, workflows now evaluate:</p>
+            <ul class="custom-list">
+              <li>What this specific interaction actually indicates about deal health</li>
+              <li>Which qualification signals are present versus missing</li>
+              <li>What the most likely blocker or risk factor is based on historical patterns</li>
+              <li>What should happen next, with clear reasoning for the recommendation</li>
+            </ul>
+          </div>
+          <p class="mt-3"><strong>Gemini's role inside these workflows is not execution—it is reasoning. The CRM handles execution. Gemini handles judgment.</strong></p>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="feature-card gemini-theme animate-on-scroll">
+          <div class="feature-icon gemini-icon">
+            <i class="fas fa-code"></i>
+          </div>
+          <h3>Why Prompt Engineering Is the True Differentiator</h3>
+          <p>Large language models are powerful generalists, but left unconstrained, they produce vague answers, default to politeness, avoid necessary tension, and hallucinate confidence. Inside enterprise workflows, this is unacceptable.</p>
+          <p class="mt-3"><strong>The model itself is not the competitive advantage—prompt engineering is.</strong></p>
+          <p class="mt-3">Salesboom treats prompts as first-class workflow logic, equivalent to validation rules, approval gates, and business process definitions.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Four Prompt Principles Section -->
+<section class="content-section">
+  <div class="container">
+    <h2 class="section-title animate-on-scroll">Four Non-Negotiable Prompt Engineering Components</h2>
+    <p class="section-subtitle animate-on-scroll">
+      Each Gemini prompt is engineered with four components that transform AI from a content generator into a decision engine.
+    </p>
+
+    <div class="row g-4 mt-4">
+      <div class="col-lg-12">
+        <div class="principle-card animate-on-scroll">
+          <h4><i class="fas fa-user-tie"></i>1. Persona (Who Is Thinking?)</h4>
+          <p>Every prompt defines the cognitive stance of the model—<strong>enterprise account executive, revenue operations analyst, contract risk reviewer, or Challenger-style advisor</strong>. This prevents generic output and activates domain-specific reasoning patterns.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-12">
+        <div class="principle-card animate-on-scroll">
+          <h4><i class="fas fa-tasks"></i>2. Task (What Must Be Decided?)</h4>
+          <p>Tasks are framed with action verbs that demand decisions, not summaries. <strong>Qualify. Extract evidence. Identify gaps. Quantify risk. Recommend next action.</strong> Weak prompts ask for information. Strong prompts demand judgment.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-12">
+        <div class="principle-card animate-on-scroll">
+          <h4><i class="fas fa-database"></i>3. Context (What Reality Must Be Considered?)</h4>
+          <p>Salesboom injects comprehensive context into every prompt: complete deal history, call transcripts, email threads, CRM field data, and competitive intelligence. <strong>Context is the fuel of reasoning</strong>—without it, AI output becomes speculation.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-12">
+        <div class="principle-card animate-on-scroll">
+          <h4><i class="fas fa-file-code"></i>4. Format (How Must Output Be Used?)</h4>
+          <p>All outputs are structured—typically JSON—so they can update CRM fields, trigger downstream workflows, escalate risks to management, and inform real-time dashboards. <strong>Without structured output, AI insight dies in chat windows and never drives action.</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sales Methodologies Section -->
+<section class="content-section bg-light-custom">
+  <div class="container">
+    <h2 class="section-title animate-on-scroll">Automating Elite Sales Behavior Through Prompt Engineering</h2>
+    <p class="section-subtitle animate-on-scroll">
+      Elite sales performance is not random—it is methodological. Top performers follow repeatable frameworks like MEDDIC, Challenger, and SPIN. Salesboom does not ask Gemini to "help sell." It encodes how great sellers think directly into workflow prompts.
+    </p>
+
+    <div class="row g-4 mt-4">
+      <div class="col-lg-4">
+        <div class="methodology-card animate-on-scroll">
+          <div class="feature-icon text-center">
+            <i class="fas fa-check-circle"></i>
+          </div>
+          <h3 class="text-center">MEDDIC as an Automated Qualification Engine</h3>
+          <p>MEDDIC qualification (Metrics, Economic Buyer, Decision Criteria, Decision Process, Identify Pain, Champion) separates real opportunities from hope.</p>
+          <div class="mt-3">
+            <p style="font-weight: 600;">Salesboom workflows prompt Gemini to:</p>
+            <ul class="custom-list-dash">
+              <li>Evaluate every deal against MEDDIC criteria using call transcripts and email threads</li>
+              <li>Extract specific evidence that proves or disproves each element</li>
+              <li>Flag missing qualification criteria that put forecast accuracy at risk</li>
+              <li>Identify false confidence where reps believe criteria are met without supporting evidence</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="methodology-card animate-on-scroll">
+          <div class="feature-icon text-center">
+            <i class="fas fa-exclamation-triangle"></i>
+          </div>
+          <h3 class="text-center">Challenger Sales Logic Inside Automation</h3>
+          <p>The Challenger methodology requires sellers to teach, tailor, and take control—creating constructive tension that reframes customer thinking.</p>
+          <div class="mt-3">
+            <p style="font-weight: 600;">Salesboom overrides Gemini's default behavior to:</p>
+            <ul class="custom-list-dash">
+              <li>Reframe customer assumptions with data-driven alternative perspectives</li>
+              <li>Highlight the quantified cost of inaction using industry benchmarks</li>
+              <li>Surface uncomfortable insights that customers may be avoiding</li>
+              <li>Challenge stated priorities when evidence suggests misalignment</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="methodology-card animate-on-scroll">
+          <div class="feature-icon text-center">
+            <i class="fas fa-question-circle"></i>
+          </div>
+          <h3 class="text-center">SPIN Selling as Recursive Discovery Logic</h3>
+          <p>SPIN (Situation, Problem, Implication, Need-Payoff) guides buyers to self-articulated value through structured questioning.</p>
+          <div class="mt-3">
+            <p style="font-weight: 600;">Salesboom uses recursive prompting to generate:</p>
+            <ul class="custom-list-dash">
+              <li>Situation questions that uncover current state</li>
+              <li>Problem questions that identify gaps and challenges</li>
+              <li>Implication questions that deepen understanding of consequences</li>
+              <li>Need-payoff questions that guide buyers to articulate solution value</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Chain-of-Thought Section -->
+<section class="content-section">
+  <div class="container">
+    <h2 class="section-title animate-on-scroll">Multi-Step Analysis That Eliminates Shallow Conclusions</h2>
+    <p class="section-subtitle animate-on-scroll">
+      Complex business decisions cannot be answered in a single step. Chain-of-thought prompting forces AI systems to show their work—breaking complex reasoning into discrete, auditable steps that dramatically improve accuracy and reliability.
+    </p>
+
+    <div class="chain-box animate-on-scroll mt-5">
+      <h5><i class="fas fa-project-diagram me-2"></i>Example: Deal Risk Assessment Workflow</h5>
+      <p class="mb-3">Instead of asking "Is this deal risky?" (which produces unreliable yes/no answers), the workflow instructs Gemini to:</p>
+      
+      <div class="row g-3">
+        <div class="col-12">
+          <div style="background: white; padding: 20px; border-radius: 8px; border-left: 4px solid #4285f4;">
+            <h6 style="color: #4285f4; font-weight: 700; margin-bottom: 10px;">Step 1: Analyze Objections</h6>
+            <p class="mb-0">Extract and categorize all objections raised across emails, calls, and meetings. Classify them as technical, financial, political, or timing concerns.</p>
+          </div>
+        </div>
+        <div class="col-12">
+          <div style="background: white; padding: 20px; border-radius: 8px; border-left: 4px solid #34a853;">
+            <h6 style="color: #34a853; font-weight: 700; margin-bottom: 10px;">Step 2: Infer Political Blockers</h6>
+            <p class="mb-0">Identify stakeholders who have been silent, have changed positions, or have introduced new requirements late in the process. Cross-reference with organizational hierarchy data.</p>
+          </div>
+        </div>
+        <div class="col-12">
+          <div style="background: white; padding: 20px; border-radius: 8px; border-left: 4px solid #fbbc04;">
+            <h6 style="color: #fbbc04; font-weight: 700; margin-bottom: 10px;">Step 3: Assess Timeline Realism</h6>
+            <p class="mb-0">Compare stated close dates against historical cycle time data for similar deal sizes, industries, and complexity levels. Flag optimistic projections.</p>
+          </div>
+        </div>
+        <div class="col-12">
+          <div style="background: white; padding: 20px; border-radius: 8px; border-left: 4px solid #ea4335;">
+            <h6 style="color: #ea4335; font-weight: 700; margin-bottom: 10px;">Step 4: Recommend Intervention</h6>
+            <p class="mb-0">Based on findings from steps 1-3, recommend specific actions: executive escalation, technical proof-of-concept, financial restructuring, or timeline adjustment.</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="mt-3 mb-0"><strong>This multi-step approach dramatically reduces shallow conclusions and provides audit trails that build enterprise trust in AI-driven recommendations.</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- Business Impact Section -->
+<section class="content-section bg-light-custom">
+  <div class="container">
+    <h2 class="section-title animate-on-scroll">Quantified Results from Cognitive Workflow Implementation</h2>
+    <p class="section-subtitle animate-on-scroll">
+      Organizations implementing Salesboom's Gemini-powered workflows report transformative operational improvements.
+    </p>
+
+    <div class="row g-4 mt-4">
+      <div class="col-lg-3 col-md-6">
+        <div class="impact-card animate-on-scroll">
+          <h4><i class="fas fa-clock me-2"></i>Administrative Efficiency</h4>
+          <p>Sales teams report <strong>40-60% reductions</strong> in administrative time previously spent on CRM data entry, meeting notes transcription, and opportunity updates.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="impact-card animate-on-scroll">
+          <h4><i class="fas fa-tachometer-alt me-2"></i>Deal Velocity</h4>
+          <p>Average sales cycle time decreases by <strong>15-25%</strong> as AI-identified blockers are addressed earlier in the process and qualification accuracy improves.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="impact-card animate-on-scroll">
+          <h4><i class="fas fa-bullseye me-2"></i>Forecast Accuracy</h4>
+          <p>Forecast accuracy improves by <strong>20-30%</strong> as evidence-based qualification replaces subjective judgment and risk detection becomes proactive.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6">
+        <div class="impact-card animate-on-scroll">
+          <h4><i class="fas fa-chart-line me-2"></i>Seller Productivity</h4>
+          <p>Per-rep productivity increases by <strong>30-50%</strong> as cognitive workflows handle routine analysis, allowing sellers to focus on relationship building and strategic negotiation.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Okd Content -->
+<section class="container py-5">
+
+   <!-- AI Solutions & Integrations Section Title -->
+<div class="container text-center py-4">
+  <h2 class="fw-bold text-color">AI & CRM Intelligence Tools</h2>
+  <p class="text-muted">
+    Explore key AI tools, agentic workforce solutions, CRM integrations, and intelligent workflow platforms from Salesboom.
+  </p>
+</div>
+  <div class="row g-4">
+
+    <!-- AI — Work for You -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-lg border-0 text-center p-4">
+        <i class="fa-solid fa-rocket fa-3x mb-3 text-color"></i>
+        <h5 class="fw-bold">AI — Work for You</h5>
+        <p class="text-muted">
+          Learn how AI drives real business value through scalable workflows and practical deployments.
+          <a href="https://www.salesboom.com/products/new/AI-work-for-you.html" class="fw-semibold text-color">
+            Discover how AI works for you 
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <!-- What Are AI Agents -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-lg border-0 text-center p-4">
+        <i class="fa-solid fa-robot fa-3x mb-3 text-color"></i>
+        <h5 class="fw-bold">What Are AI Agents</h5>
+        <p class="text-muted">
+          Understand autonomous AI agents and how they automate tasks across business functions.
+          <a href="https://salesboom.com/What-Are-AI-Agents.html" class="fw-semibold text-color">
+            Explore AI agents 
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <!-- AI People Economy -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-lg border-0 text-center p-4">
+        <i class="fa-solid fa-users fa-3x mb-3 text-color"></i>
+        <h5 class="fw-bold">AI People Economy</h5>
+        <p class="text-muted">
+          See how AI reshapes work, productivity, and human-centric operations in enterprise settings.
+          <a href="https://www.salesboom.com/products/new/AI-People-Economy.html" class="fw-semibold text-color">
+            View AI People Economy 
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Salesboom Copilot -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-lg border-0 text-center p-4">
+        <i class="fa-solid fa-plane fa-3x mb-3 text-color"></i>
+        <h5 class="fw-bold">Salesboom Copilot</h5>
+        <p class="text-muted">
+          AI assistant to enhance CRM productivity, content generation, and real-time suggestions.
+          <a href="https://www.salesboom.com/products/new/Salesboom-Copilot.html" class="fw-semibold text-color">
+            Try Salesboom Copilot 
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Agentic Workforce -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-lg border-0 text-center p-4">
+        <i class="fa-solid fa-cogs fa-3x mb-3 text-color"></i>
+        <h5 class="fw-bold">Agentic Workforce</h5>
+        <p class="text-muted">
+          Build adaptive AI agents that automate workflows and collaborate within your systems.
+          <a href="https://www.salesboom.com/products/new/Agentic-Workforce.html" class="fw-semibold text-color">
+            Learn about agentic workforce 
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <!-- CRM Integration — Google -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-lg border-0 text-center p-4">
+        <i class="fa-brands fa-google fa-3x mb-3 text-color"></i>
+        <h5 class="fw-bold">CRM Integration — Google</h5>
+        <p class="text-muted">
+          Seamlessly integrate CRM with Google tools for enhanced productivity and data sync.
+          <a href="https://www.salesboom.com/CRM-integration-Google.html" class="fw-semibold text-color">
+            View Google CRM integration 
+          </a>
+        </p>
+      </div>
+    </div>
+
+
+  </div>
+</section>
+
+<!-- Differentiation Section -->
+<section class="content-section">
+  <div class="container">
+    <h2 class="section-title animate-on-scroll">Why Salesboom's Approach Is Architecturally Different</h2>
+    <p class="section-subtitle animate-on-scroll">
+      Most CRM platforms approaching AI integration follow predictable patterns. Salesboom's architectural approach fundamentally differs.
+    </p>
+
+    <div class="row g-4 mt-5">
+      <div class="col-lg-6">
+        <div class="comparison-box animate-on-scroll">
+          <h4 style="color: #dc3545;"><i class="fas fa-times-circle me-2"></i>Traditional Platform Approach</h4>
+          <ul class="custom-list-dash">
+            <li>Add a chatbot interface for users to ask questions</li>
+            <li>Summarize existing data in more readable formats</li>
+            <li>Assist users with email drafting and content creation</li>
+            <li>AI assists humans who drive workflows</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="comparison-box animate-on-scroll">
+          <h4 style="color: #28a745;"><i class="fas fa-check-circle me-2"></i>Salesboom's Architectural Approach</h4>
+          <ul class="custom-list">
+            <li>Embed reasoning as workflow infrastructure</li>
+            <li>Encode proven methodologies (MEDDIC, Challenger, SPIN) as executable logic</li>
+            <li>Operationalize judgment that previously required senior expertise</li>
+            <li>AI participates in workflows alongside humans, making autonomous decisions within governance boundaries</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <p class="content-text animate-on-scroll mt-4" style="font-weight: 600; color: #002f6c; font-size: 1.15rem; text-align: center;">
+      Gemini prompt engineering is not an add-on feature at Salesboom. It is core workflow infrastructure that transforms how revenue operations function at a fundamental level. This represents the evolution from automated workflows (rule-based) to cognitive workflows (reasoning-based).
+    </p>
+  </div>
+</section>
+
+<!-- Implementation Section -->
+<section class="content-section bg-light-custom">
+  <div class="container">
+    <h2 class="section-title animate-on-scroll">Deploying Cognitive Workflows Without Disruption</h2>
+    <p class="section-subtitle animate-on-scroll">
+      The power of Salesboom's approach is that cognitive workflows are implemented progressively, not as disruptive platform replacements.
+    </p>
+
+    <div class="row g-4 mt-4">
+      <div class="col-lg-4">
+        <div class="phase-card animate-on-scroll">
+          <h4><i class="fas fa-layer-group me-2"></i>Phase 1: Augmentation</h4>
+          <p>Initial workflows augment existing processes with AI-powered analysis. Sales teams continue their current activities while Gemini provides deal scoring, risk alerts, and qualification support in the background.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="phase-card animate-on-scroll">
+          <h4><i class="fas fa-cogs me-2"></i>Phase 2: Automation</h4>
+          <p>As teams build trust in AI recommendations, routine decisions are automated. Ticket routing, lead scoring, follow-up scheduling, and basic qualification move to fully automated execution.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="phase-card animate-on-scroll">
+          <h4><i class="fas fa-rocket me-2"></i>Phase 3: Transformation</h4>
+          <p>Advanced workflows encode elite sales methodologies, enable strategic analysis at scale, and position AI as an active workflow participant that handles complex reasoning previously requiring senior expertise.</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="content-text animate-on-scroll mt-4 text-center">
+      This progressive approach minimizes change management resistance while maximizing adoption velocity and business value realization.
+    </p>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section" id="demo-form">
+  <div class="container">
+    <h2 class="animate-on-scroll">Ready to Transform Your Revenue Operations with Cognitive Workflows?</h2>
+    <p class="animate-on-scroll">Discover how Salesboom's Gemini integration can turn your CRM into a reasoning engine that thinks like your best operators. Schedule a personalized demo to see cognitive workflows in action.</p>
+    
+    <div class="row justify-content-center mt-5">
+      <div class="col-lg-6">
+        <div class="contact-form animate-on-scroll">
+          <h3 class="text-center mb-4" style="color: #002f6c; font-weight: 700;">
+            <i class="fas fa-brain me-2"></i>Experience Cognitive Workflows
+          </h3>
+          <form id="demoForm" class="text-start" method="post" action="/submit-demo.php">
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="first_name" class="form-label">First Name *</label>
+                <input type="text" class="form-control" id="first_name" name="first_name" required>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="last_name" class="form-label">Last Name *</label>
+                <input type="text" class="form-control" id="last_name" name="last_name" required>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email Address *</label>
+              <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="mb-3">
+              <label for="company" class="form-label">Company Name *</label>
+              <input type="text" class="form-control" id="company" name="company" required>
+            </div>
+            <div class="mb-3">
+              <label for="phone" class="form-label">Phone Number *</label>
+              <input type="tel" class="form-control" id="phone" name="phone" required>
+            </div>
+            <div class="mb-4">
+              <label for="message" class="form-label">Revenue operations challenges</label>
+              <textarea class="form-control" id="message" name="message" rows="4" placeholder="Describe your workflow challenges..."></textarea>
+            </div>
+            <button type="submit" class="btn-submit">
+              <i class="fas fa-paper-plane me-2"></i>Schedule Demo
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-2">
+      <h3 class="fw-bold text-color">
+        <i class="fa-solid fa-layer-group me-2"></i>
+        Explore Salesboom Editions
+      </h3>
+      <p class="text-muted">Discover powerful CRM editions to scale your business efficiently.</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-lg border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-briefcase fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Professional Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              A complete CRM suite with Marketing Automation, ERP integration, and Support tools — built for performance and value.
+            </p>
+            <a href="https://www.salesboom.com/editions/professional-edition.html" class="btn btn-color mt-auto">
+              Explore Professional <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-lg border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-building fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Enterprise Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              For large enterprises — automate workflows, unify data, and leverage analytics to drive strategic growth.
+            </p>
+            <a href="https://www.salesboom.com/editions/enterprise-edition.html" class="btn btn-color mt-auto">
+              View Enterprise <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-lg border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-users fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Team Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              Perfect for small teams starting with CRM — manage leads, track sales, and boost productivity with simplicity.
+            </p>
+            <a href="https://www.salesboom.com/editions/team-edition.html" class="btn btn-color mt-auto">
+           Discover Team<i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Local Page Cards  -->
+<section class="container py-5">
+
+
+  
+<!-- AI Integrations & Automation Section Title -->
+<div class="container text-center py-4">
+  <h2 class="fw-bold text-color">AI Integrations & Intelligent Automation</h2>
+  <p class="text-muted">
+    Advanced AI integrations, automation platforms, and Gemini-powered prompt engineering
+    designed to accelerate CRM performance and revenue growth.
+  </p>
+</div>
+
+  <div class="row g-4">
+
+    <!-- Salesboom A2UI Integration -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-lg border-0 text-center p-4">
+        <i class="fa-solid fa-layer-group fa-3x mb-3 text-color"></i>
+        <h5 class="fw-bold">
+          Salesboom A2UI Integration
+        </h5>
+        <p class="text-muted">
+          Dynamic AI-driven user interfaces that adapt in real time to user behavior and workflows.
+          <a href="salesboom-a2ui-integration-dynamic-interfaces.html" class="fw-semibold text-color">
+            Explore dynamic interfaces 
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Google Cloud + n8n Integration -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-lg border-0 text-center p-4">
+        <i class="fa-brands fa-google fa-3x mb-3 text-color"></i>
+        <h5 class="fw-bold">
+          Google Cloud & n8n Integration Platform
+        </h5>
+        <p class="text-muted">
+          Connect Google Cloud services with n8n to automate workflows and data pipelines at scale.
+          <a href="google-cloud-n8n-integration-platform.html" class="fw-semibold text-color">
+            View integration platform 
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Demandinator AI Marketing Automation -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-lg border-0 text-center p-4">
+        <i class="fa-solid fa-bullseye fa-3x mb-3 text-color"></i>
+        <h5 class="fw-bold">
+          Demandinator AI Marketing Automation
+        </h5>
+        <p class="text-muted">
+          AI-powered marketing automation that drives demand generation, lead scoring, and conversions.
+          <a href="demandinator-ai-marketing-automation.html" class="fw-semibold text-color">
+            Discover marketing automation 
+          </a>
+        </p>
+      </div>
+    </div>
+
+
+
+    <!-- Gemini Prompt Engineering for Sales Growth -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-lg border-0 text-center p-4">
+        <i class="fa-solid fa-chart-line fa-3x mb-3 text-color"></i>
+        <h5 class="fw-bold">
+          Gemini Prompt Engineering for Sales Growth
+        </h5>
+        <p class="text-muted">
+          Optimize sales strategies and revenue growth using Gemini-powered prompt frameworks inside CRM systems.
+          <a href="gemini-prompt-engineering-crm-sales-growth.html" class="fw-semibold text-color">
+            Accelerate sales growth 
+          </a>
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="mt-5 footer">
+  <div class="container mt-5 pt-5">
+    <div class="footer-grid">
+      <div class="footer-section">
+        <h3>Products</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/products/tools-sfa.html">Sales Force Automation</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-marketing.html">Marketing Automation</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-casemanagement.html">Case Management</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-reporting.html">Business Intelligence</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-emailintegration.html">Email Integration</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Solutions</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/products/edition-team.html">Team Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/edition-professional.html">Professional Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/edition-enterprise.html">Enterprise Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/industry-solutions.html">Industry Solutions</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/company/index.html">About Us</a></li>
+          <li><a href="https://www.salesboom.com/company/company-contact.html">Contact Us</a></li>
+          <li><a href="https://www.salesboom.com/customers/index.html">Customers</a></li>
+          <li><a href="https://www.salesboom.com/partners/index.html">Partners</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/support/index.html">Support Center</a></li>
+          <li><a href="https://www.salesboom.com/crm_supportcenter/overview/index.html">Documentation</a></li>
+          <li><a href="https://www.salesboom.com/whitepapers/index.html">White Papers</a></li>
+          <li><a href="https://www.salesboom.com/pop-privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="bg-color">
+    <div class="container">
+     <div class="footer-bottom pb-3 mt-3">
+      <p>&copy; 2003-2025 <a class="text-white fw-bold" href="https://www.salesboom.com">Salesboom.com</a> Inc. All rights reserved. | Call: 1-855-229-2043</p>
+      <p style="margin-top: 10px;">Salesboom's color-coded CRM lead management software helps businesses visually prioritize sales opportunities with automated workflow rules. Contact us to learn how color coding can transform your lead management process and increase sales productivity.</p>
+    </div>
+    </div>
+  </div>
+ 
+</footer>
+
+<!-- Common JavaScript -->
+<script src="content/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+
+
+
+<script>
+// Loading Screen
+window.addEventListener('load', function() {
+  setTimeout(function() {
+    document.getElementById('loading-screen').classList.add('hide');
+  }, 500);
+});
+
+// Scroll to Top Button
+const scrollTopBtn = document.getElementById('scroll-top');
+
+window.addEventListener('scroll', function() {
+  if (window.pageYOffset > 300) {
+    scrollTopBtn.classList.add('show');
+  } else {
+    scrollTopBtn.classList.remove('show');
+  }
+});
+
+scrollTopBtn.addEventListener('click', function() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+
+// Smooth Scroll for Anchor Links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    const href = this.getAttribute('href');
+    if (href === '#' || href === '#0') {
+      return;
+    }
+    
+    const target = document.querySelector(href);
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  });
+});
+
+// Scroll Animation Observer
+const observerOptions = {
+  threshold: 0.1,
+  rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver(function(entries) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, observerOptions);
+
+// Observe all elements with animate-on-scroll class
+document.querySelectorAll('.animate-on-scroll').forEach(el => {
+  observer.observe(el);
+});
+
+// Form Submission Handler
+document.getElementById('demoForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  // In production, this would submit to your backend
+  alert('Thank you for your interest in cognitive workflows! Our revenue operations specialists will contact you within 24 hours to schedule your personalized demo and discuss how Gemini-powered reasoning can transform your CRM into an intelligent decision engine.');
+  
+  // Reset form
+  this.reset();
+  
+  // In production, uncomment this to actually submit:
+  // this.submit();
+});
+</script>
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123069-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-123069-3');
+</script>
+
+</body>
+</html>

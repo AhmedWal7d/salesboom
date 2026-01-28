@@ -1,0 +1,1440 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    
+    <!-- Primary Meta Tags -->
+    <title>Activity Management CRM | Salesboom Task & Calendar System</title>
+    <meta name="description" content="Transform your CRM into a daily operating system. Salesboom's activity management combines tasks, events, shortcuts, and real-time metrics to drive execution.">
+    <meta name="keywords" content="Activity management CRM, Task management software, CRM calendar system, Daily productivity tools, Sales activity tracking, Team execution platform, CRM task automation">
+    <link rel="canonical" href="https://www.salesboom.com/products/snap-activity.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.salesboom.com/products/snap-activity.html">
+    <meta property="og:title" content="Activity Management CRM | Salesboom Task & Calendar System">
+    <meta property="og:description" content="Transform your CRM into a daily operating system. Salesboom's activity management combines tasks, events, shortcuts, and real-time metrics to drive execution.">
+    <meta property="og:image" content="https://www.salesboom.com/img/snap-activity-og.jpg">
+    <meta property="og:site_name" content="Salesboom CRM">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.salesboom.com/products/snap-activity.html">
+    <meta name="twitter:title" content="Activity Management CRM | Salesboom Task & Calendar System">
+    <meta name="twitter:description" content="Transform your CRM into a daily operating system. Salesboom's activity management combines tasks, events, shortcuts, and real-time metrics to drive execution.">
+    <meta name="twitter:image" content="https://www.salesboom.com/img/snap-activity-og.jpg">
+    <meta name="twitter:site" content="@SalesboomCloud">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Salesboom Activity Management CRM",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web-based, Cloud",
+      "offers": {
+        "@type": "Offer",
+        "price": "14.00",
+        "priceCurrency": "USD",
+        "priceValidUntil": "2026-12-31"
+      },
+      "featureList": [
+        "Unified task and event management",
+        "Personal productivity dashboard",
+        "Customizable shortcuts for workflows",
+        "Real-time business metrics integration",
+        "Internal messaging system",
+        "Connected to accounts, opportunities, and contacts"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.5",
+        "ratingCount": "3500"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Salesboom",
+        "url": "https://www.salesboom.com",
+        "logo": "https://www.salesboom.com/img/salesboom-logo-252x67.png",
+        "foundingDate": "2003",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+1-855-229-2043",
+          "contactType": "Customer Service"
+        }
+      }
+    }
+    </script>
+    
+    <link rel="shortcut icon" href="https://www.salesboom.com/favicon.ico">
+  <link rel="stylesheet" href="content/css/bootstrap.min.css">
+    <link rel="stylesheet" href="content/css/salesboom-common.css">
+    <link rel="shortcut icon" href="content/image/salesboom-logo-252x67.png" type="image/x-icon"> 
+    
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #002f6c;
+            --secondary-color: #0051a8;
+            --accent-color: #0066cc;
+            --text-dark: #1a1a1a;
+            --text-light: #666;
+            --bg-light: #f8f9fa;
+            --border-color: #e0e0e0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+        
+        /* Loading Screen */
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+        
+        #loading-screen.fade-out {
+            opacity: 0;
+            visibility: hidden;
+        }
+        
+        .loader {
+            width: 60px;
+            height: 60px;
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            border-top: 5px solid #fff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .loading-text {
+            color: #fff;
+            margin-top: 20px;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+        
+        /* Scroll to Top Button */
+        #scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            font-size: 20px;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(0, 47, 108, 0.3);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+        
+        #scroll-top:hover {
+            background: var(--secondary-color);
+            transform: translateY(-5px);
+            box-shadow: 0 6px 16px rgba(0, 47, 108, 0.4);
+        }
+        
+        #scroll-top.show {
+            display: flex;
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: #fff;
+            padding: 100px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+        
+        .hero-section h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 25px;
+            line-height: 1.2;
+        }
+        
+        .hero-section .subtitle {
+            font-size: 1.4rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+        
+        .hero-cta {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn-primary-custom {
+            background: #fff;
+            color: var(--primary-color);
+            padding: 16px 40px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 2px solid #fff;
+        }
+        
+        .btn-primary-custom:hover {
+            background: transparent;
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
+        }
+        
+        .btn-secondary-custom {
+            background: transparent;
+            color: #fff;
+            padding: 16px 40px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            text-decoration: none;
+            border: 2px solid #fff;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-secondary-custom:hover {
+            background: #fff;
+            color: var(--primary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Stats Section */
+        .stats-section {
+            background: var(--primary-color);
+            color: #fff;
+            padding: 60px 0;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .stat-item h3 {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+        
+        .stat-item p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        /* Content Sections */
+        .content-section {
+            padding: 80px 0;
+        }
+        
+        .content-section.bg-light {
+            background: var(--bg-light);
+        }
+        
+        .section-header {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto 60px;
+        }
+        
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .section-header p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+        
+        /* Feature Cards */
+        .feature-card {
+            background: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--primary-color);
+
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 25px rgba(0, 47, 108, 0.15);
+        }
+        
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            color: #fff;
+            margin-bottom: 25px;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .feature-card h4 {
+            font-size: 1.3rem;
+            color: var(--primary-color);
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+        
+        .feature-card p {
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 0;
+        }
+        
+        .feature-card ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+        
+        .feature-card li {
+            padding-left: 30px;
+            position: relative;
+            margin-bottom: 12px;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+        
+        .feature-card li::before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-size: 1.1rem;
+        }
+        
+        /* Benefits Section */
+        .benefits-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: #fff;
+            padding: 80px 0;
+            position: relative;
+        }
+        
+        .benefit-item {
+            text-align: center;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        
+        .benefit-item:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-5px);
+        }
+        
+        .benefit-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .benefit-item p {
+            opacity: 0.95;
+            line-height: 1.7;
+            margin-bottom: 0;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: var(--primary-color);
+            color: #fff;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .cta-section p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+        
+        /* Problem List */
+        .problem-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 30px;
+        }
+        
+        .problem-list li {
+            padding-left: 40px;
+            position: relative;
+            margin-bottom: 15px;
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+        
+        .problem-list li::before {
+            content: "\f00d";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: #dc3545;
+            font-size: 1.3rem;
+        }
+        
+        /* Highlight Box */
+        .highlight-box {
+            background: var(--bg-light);
+            border-left: 5px solid var(--primary-color);
+            padding: 25px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+        
+        .highlight-box h4 {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        
+        .highlight-box p {
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 0;
+        }
+        
+        /* Best Practice Box */
+        .best-practice-box {
+            background: #fff;
+            border: 2px solid var(--primary-color);
+            border-radius: 12px;
+            padding: 30px;
+            margin-top: 30px;
+        }
+        
+        .best-practice-box h4 {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .best-practice-box p {
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+        
+        .best-practice-box p:last-child {
+            margin-bottom: 0;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero-section h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-section .subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .section-header h2 {
+                font-size: 2rem;
+            }
+            
+            .stat-item h3 {
+                font-size: 2.5rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 80px 0 60px;
+            }
+            
+            .hero-section h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-section .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .hero-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn-primary-custom,
+            .btn-secondary-custom {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .content-section {
+                padding: 60px 0;
+            }
+            
+            .section-header h2 {
+                font-size: 1.8rem;
+            }
+            
+            .cta-section h2 {
+                font-size: 2rem;
+            }
+            
+            #scroll-top {
+                bottom: 20px;
+                right: 20px;
+                width: 45px;
+                height: 45px;
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Loading Screen -->
+<div id="loading-screen">
+    <div class="loader"></div>
+    <div class="loading-text">Loading...</div>
+</div>
+
+<!-- Scroll to Top Button -->
+<button id="scroll-top" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+
+
+    <!-- Top Bar -->
+<div class="top-bar">
+  <div class="container">
+    <div class="top-bar-left text-color">
+      <span>✓ Award-Winning Cloud CRM Software Since 2003</span>
+    </div>
+    <ul class="top-bar-nav">
+      <li><a href="https://www.salesboom.com/crm_supportcenter/overview/index.html">Support Center</a></li>
+      <li><a href="https://www.salesboom.com/crm_trial.html">Free Trial</a></li>
+      <li><a href="https://www.salesboom.com/login.html">Login</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Main Header -->
+<header>
+  <div class="main-header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <a href="https://www.salesboom.com" aria-label="Salesboom CRM Home">
+            <img src="https://www.salesboom.com/img/salesboom-logo-252x67.png" alt="Salesboom Cloud CRM Logo" width="252" height="67">
+          </a>
+        </div>
+        <div class="header-phone">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          <a href="tel:+18552292043">1-855-229-2043</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+
+
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container">
+        <div class="hero-content">
+            <h1>Turn Your CRM Into Your Daily Operating System</h1>
+            <p class="subtitle">Plan your day, execute consistently, and never miss a follow-up with Salesboom's integrated activity management—where tasks, events, and priorities meet accountability.</p>
+            <div class="hero-cta">
+                <a href="https://www.salesboom.com/request-crm-demo.html" class="btn-primary-custom">
+                    <i class="fas fa-calendar-check me-2"></i>Book a Demo
+                </a>
+                <a href="https://www.salesboom.com/crm_trial.html" class="btn-secondary-custom">
+                    <i class="fas fa-rocket me-2"></i>Start Free Trial
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Stats Section -->
+<section class="stats-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                <div class="stat-item">
+                    <h3>22+</h3>
+                    <p>Years of CRM Innovation</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                <div class="stat-item">
+                    <h3>3,500+</h3>
+                    <p>Businesses Transformed</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                <div class="stat-item">
+                    <h3>159</h3>
+                    <p>Countries Served</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="stat-item">
+                    <h3>Daily</h3>
+                    <p>Execution Platform</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 1: Problem Statement -->
+<section class="content-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Why Most Teams Struggle with Activity Management</h2>
+            <p>Sales, marketing, and service teams juggle multiple tools—separate task managers, disconnected calendars, email reminders, sticky notes, and spreadsheets. This fragmentation creates chaos:</p>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <p class="text-center mb-4" style="font-size: 1.1rem; color: var(--text-light);">The consequences are predictable and costly:</p>
+                <ul class="problem-list">
+                    <li>Follow-ups slip through the cracks, killing deals in the pipeline</li>
+                    <li>Team members waste time switching between apps and hunting for information</li>
+                    <li>Managers lack visibility into whether work is actually getting done</li>
+                    <li>Important customer commitments are forgotten or delayed</li>
+                    <li>Daily priorities get buried under reactive firefighting</li>
+                    <li>Accountability disappears when tasks aren't tied to customer records</li>
+                </ul>
+                
+                <div class="highlight-box">
+                    <h4><i class="fas fa-exclamation-triangle me-2"></i>The Result?</h4>
+                    <p>Strategy doesn't translate into execution. Plans remain just plans. Revenue suffers because work that should happen doesn't happen—or happens too late.</p>
+                    <p class="mt-3 mb-0" style="font-weight: 600; color: var(--primary-color);">Salesboom's activity management solves this by transforming your CRM from a system of record into a system of execution, where every task, event, and priority is connected directly to customers and revenue.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 2: Solution Overview -->
+<section class="content-section bg-light">
+    <div class="container">
+        <div class="section-header">
+            <h2>Activity Management That Powers Daily Execution</h2>
+            <p>Activity management in Salesboom is designed to help teams plan their day, execute consistently, and never miss a follow-up. From tasks and calendar events to shortcuts and internal messages, Salesboom turns the CRM into a daily operating system for your business.</p>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <div class="feature-card">
+                    <p class="mb-4" style="font-size: 1.1rem; line-height: 1.8;">This isn't just another task list—it's a complete productivity platform tightly integrated with your customer data, ensuring that every action taken moves deals forward, strengthens relationships, and drives revenue.</p>
+                    
+                    <h3 class="mb-4">Core capabilities include:</h3>
+                    <ul>
+                        <li>Unified task and event management tied directly to accounts, opportunities, contacts, cases, and projects</li>
+                        <li>Personal productivity dashboard that serves as your daily command center</li>
+                        <li>Customizable shortcuts for instant access to your most critical workflows</li>
+                        <li>Real-time business metrics surfaced alongside your daily agenda</li>
+                        <li>Internal messaging system that reduces email clutter and keeps teams aligned</li>
+                        <li>Accountability tools that ensure work gets done, not just tracked</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 3: The Home Screen -->
+<section class="content-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Starting Every Day from Your Personal Productivity Dashboard</h2>
+            <p>The Home tab is the first screen users see after logging in, intentionally designed as a personal productivity dashboard that answers three critical questions: What do I need to do today? What's happening in the business right now? Where should I focus my attention?</p>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <div class="feature-card">
+                    <p class="mb-4" style="font-size: 1.05rem; line-height: 1.8;">Unlike traditional CRMs that force users to hunt through menus and reports, Salesboom puts everything you need to execute your day in one centralized location. This design philosophy transforms how teams work—instead of the CRM being something you check occasionally, it becomes the place you start every single day.</p>
+                    
+                    <h3 class="mb-4">The Home screen consolidates:</h3>
+                    <ul>
+                        <li>Your personal agenda with tasks and events organized by date</li>
+                        <li>Quick-access shortcuts to your most-used reports and workflows</li>
+                        <li>Real-time business metrics like daily signups, campaign performance, and pipeline activity</li>
+                        <li>Company-wide messages and announcements for organizational alignment</li>
+                        <li>Engagement features that promote collaboration across the team</li>
+                    </ul>
+                    
+                    <div class="highlight-box mt-4">
+                        <h4><i class="fas fa-star me-2"></i>Key Insight</h4>
+                        <p>This isn't just a homepage—it's your daily operating system, ensuring you're always focused on what matters most while staying connected to broader business priorities.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 4: My Agenda -->
+<section class="content-section bg-light">
+    <div class="container">
+        <div class="section-header">
+            <h2>Never Miss a Follow-Up with Date-Based Agenda Views</h2>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-lg-6">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>What You See in My Agenda</h3>
+                    <p class="mb-3">The My Agenda section provides a clean, date-based view of all your scheduled activities, making it effortless to plan and execute your day. The interface displays events grouped by day with intuitive navigation that lets you move backward to review past commitments, jump to today to see current priorities, or look ahead to prepare for upcoming meetings and deadlines.</p>
+                    
+                    <h4>Key interface elements include:</h4>
+                    <ul>
+                        <li>Clear date-based organization that shows what's due when</li>
+                        <li>One-click navigation to previous day, today, and next day</li>
+                        <li>Add Event button for quick scheduling without leaving the screen</li>
+                        <li>View on Google Map integration for location-based meetings, site visits, and field service appointments</li>
+                        <li>Visual indicators for different event types (calls, meetings, demos, deadlines)</li>
+                        <li>Time-based sorting that helps you structure your day efficiently</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="col-lg-6">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3>How Teams Use My Agenda</h3>
+                    <p class="mb-3">Sales professionals use My Agenda to track every customer touchpoint—demos, follow-up calls, proposal deadlines, and contract review meetings. Marketing teams schedule campaign launches, content deadlines, and strategy sessions. Service teams manage customer callbacks, site visits, and escalation reviews.</p>
+                    
+                    <p class="mb-3" style="font-weight: 600;">The power lies in integration: every event can be linked to specific accounts, opportunities, contacts, or cases, providing full context at a glance. When you see "Demo for Acme Corp" on your agenda, one click takes you to the complete opportunity record with deal history, decision-maker contacts, and previous interactions.</p>
+                    
+                    <h4>Practical applications:</h4>
+                    <ul>
+                        <li>Track meetings, calls, demos, site visits, and hard deadlines</li>
+                        <li>See today's complete workload without switching between tools</li>
+                        <li>Plan upcoming days and weeks to balance workload effectively</li>
+                        <li>Eliminate double-booking with visibility into team calendars</li>
+                        <li>Maintain momentum on sales cycles by scheduling next steps immediately</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 5: Shortcuts -->
+<section class="content-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Customizable Shortcuts for Instant Access to Critical Workflows</h2>
+            <p>Time is precious. Salesboom's customizable shortcuts eliminate the need to hunt through menus for the reports, views, and workflows you use most frequently. Each user can configure their Home screen to match their specific role, responsibilities, and work patterns.</p>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="benefit-item" style="background: #fff; color: var(--text-dark);">
+                    <div class="feature-icon mx-auto mb-3">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 style="color: var(--primary-color);">Sales Reps</h3>
+                    <p style="color: var(--text-light);">My Pipeline, Open Opportunities, Today's Follow-Ups, Weekly Forecast, Customer Calls Log</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="benefit-item" style="background: #fff; color: var(--text-dark);">
+                    <div class="feature-icon mx-auto mb-3">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h3 style="color: var(--primary-color);">Marketers</h3>
+                    <p style="color: var(--text-light);">Campaign Performance, Lead Sources, Conversion Rates, Content Calendar, Email Analytics</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="benefit-item" style="background: #fff; color: var(--text-dark);">
+                    <div class="feature-icon mx-auto mb-3">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3 style="color: var(--primary-color);">Service Teams</h3>
+                    <p style="color: var(--text-light);">Open Cases, SLA Alerts, Customer Satisfaction, Ticket Queue, Resolution Metrics</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="benefit-item" style="background: #fff; color: var(--text-dark);">
+                    <div class="feature-icon mx-auto mb-3">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3 style="color: var(--primary-color);">Executives</h3>
+                    <p style="color: var(--text-light);">Revenue Dashboard, Team Performance, Pipeline Health, Key Metrics, Strategic Reports</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="benefit-item" style="background: #fff; color: var(--text-dark);">
+                    <div class="feature-icon mx-auto mb-3">
+                        <i class="fas fa-users-cog"></i>
+                    </div>
+                    <h3 style="color: var(--primary-color);">Managers</h3>
+                    <p style="color: var(--text-light);">Team Activity, Performance Coaching, Pipeline Reviews, Accountability Tracking</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6">
+                <div class="benefit-item" style="background: #fff; color: var(--text-dark);">
+                    <div class="feature-icon mx-auto mb-3">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3 style="color: var(--primary-color);">Operations</h3>
+                    <p style="color: var(--text-light);">Project Status, Resource Allocation, Workflow Optimization, Process Analytics</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mt-5 text-center">
+            <div class="p-4" style="background: var(--bg-light); border-radius: 8px; max-width: 900px; margin: 0 auto;">
+                <p style="font-size: 1.1rem; color: var(--text-dark); line-height: 1.8; margin-bottom: 0;">This customization dramatically improves CRM adoption because each user experiences a system tailored to their needs, not a one-size-fits-all interface designed for everyone and optimized for no one.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 6: Real-Time Metrics -->
+<section class="content-section bg-light">
+    <div class="container">
+        <div class="section-header">
+            <h2>Real-Time Business Metrics Where You Work</h2>
+            <p>Salesboom surfaces key business metrics directly on the Home screen, eliminating the need to run separate reports or check dashboard tools. The metrics displayed can be customized by role, department, or individual preference.</p>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <div class="feature-card">
+                    <h3 class="mb-4">Examples of surfaced metrics:</h3>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul>
+                                <li><strong>Daily Signups:</strong> Track new customer registrations in real-time</li>
+                                <li><strong>Pipeline Velocity:</strong> Monitor how quickly deals move through stages</li>
+                                <li><strong>Campaign Performance:</strong> See lead generation and conversion rates</li>
+                                <li><strong>Team Activity:</strong> View task completion and meeting attendance</li>
+                                <li><strong>Revenue Tracking:</strong> Monitor daily, weekly, and monthly revenue</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul>
+                                <li><strong>Customer Satisfaction:</strong> Track service quality scores</li>
+                                <li><strong>Response Times:</strong> Monitor how quickly teams respond to inquiries</li>
+                                <li><strong>Case Resolution:</strong> See open vs. closed support tickets</li>
+                                <li><strong>Goal Progress:</strong> Track individual and team quota attainment</li>
+                                <li><strong>System Alerts:</strong> Receive notifications for critical events</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="highlight-box mt-4">
+                        <h4><i class="fas fa-lightbulb me-2"></i>Strategic Value</h4>
+                        <p>By surfacing metrics where work happens, Salesboom keeps teams connected to business performance without forcing context-switching. Users see how their daily activities contribute to broader organizational goals, driving both individual accountability and collective ownership of results.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 7: Best Practices -->
+<section class="content-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Best Practices for Maximum Impact</h2>
+            <p>Technology only delivers value when it's used effectively. The most successful Salesboom users follow these proven best practices to maximize the impact of activity management features.</p>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-lg-6">
+                <div class="best-practice-box">
+                    <h4><i class="fas fa-star me-2"></i>Daily Habits</h4>
+                    <p><strong>Start Every Day from the Home Tab:</strong> Make the CRM your first stop each morning, not your email inbox. Review your agenda, check business metrics, and plan your day before diving into reactive tasks. This simple habit shift transforms productivity.</p>
+                    <p><strong>Always Set a Next Task on Opportunities:</strong> Never leave an opportunity without scheduling the next action. Even if it's just "follow up in two weeks," capturing that commitment ensures the deal keeps moving and nothing falls through the cracks.</p>
+                    <p><strong>Use Events for Real Commitments, Not Reminders:</strong> Reserve calendar events for scheduled interactions—calls, meetings, demos, site visits. Use tasks for action items. This distinction keeps your calendar focused on time-based commitments while maintaining a separate list of to-dos.</p>
+                    <p><strong>Review Your Agenda Twice Daily:</strong> Check your agenda at the start of each day to plan and at the end to prepare for tomorrow. This bookending habit ensures you're always one step ahead and never caught off guard.</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-6">
+                <div class="best-practice-box">
+                    <h4><i class="fas fa-cogs me-2"></i>Customization Strategies</h4>
+                    <p><strong>Personalize Shortcuts by Role:</strong> Sales reps should have shortcuts to pipeline and forecast reports. Marketers need campaign dashboards. Service teams require case queues. Executives want high-level business intelligence. Take five minutes to customize shortcuts for each team member.</p>
+                    <p><strong>Surface Relevant Metrics:</strong> Different roles care about different metrics. Configure the Home screen to show signups for marketing, pipeline velocity for sales, ticket resolution time for service. Make the dashboard personally relevant.</p>
+                    <p><strong>Create Standard Task Templates:</strong> Build reusable task lists for common processes—onboarding new customers, closing deals, resolving escalations. Templates ensure consistency and reduce the mental load of figuring out what to do next.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div class="container">
+    <img src="content/image/Home.png" class="mx-auto" alt="">
+</div>
+
+<!-- Section 8: Integration -->
+<section class="content-section bg-light">
+    <div class="container">
+        <div class="section-header">
+            <h2>Activity Management as Part of Your Complete Business Platform</h2>
+            <p>Activity management doesn't exist in isolation—it's deeply integrated with every aspect of Salesboom's CRM platform. This integration is what makes it powerful, ensuring that daily tasks and activities are always connected to the customer data, sales processes, and business intelligence that give them meaning.</p>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <div class="feature-card mb-4">
+                    <h3 class="mb-4">Tasks and Events Link to:</h3>
+                    <ul>
+                        <li>Sales opportunities with full deal context and history</li>
+                        <li>Customer accounts with relationship details and interaction logs</li>
+                        <li>Individual contacts with communication preferences and past conversations</li>
+                        <li>Support cases with issue details and resolution progress</li>
+                        <li>Marketing campaigns with engagement data and conversion tracking</li>
+                        <li>Projects with milestones, dependencies, and team assignments</li>
+                    </ul>
+                    <p class="mt-3 mb-0" style="font-style: italic;">This connectivity means users never work in the dark—every task carries the context needed to execute it effectively.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3 class="mb-4">Workflow Automation</h3>
+                    <p class="mb-3">Activity management becomes even more powerful when combined with Salesboom's automation engine:</p>
+                    <ul>
+                        <li>Tasks can be automatically created when deals reach certain stages</li>
+                        <li>Events can trigger follow-up sequences without manual intervention</li>
+                        <li>Overdue tasks can escalate to managers for visibility and coaching</li>
+                        <li>Completed activities can update fields and move records through pipelines</li>
+                        <li>Calendar events can sync with external systems like Google Calendar and Outlook</li>
+                    </ul>
+                    <p class="mt-3 mb-0" style="font-weight: 600; color: var(--primary-color);">Automation ensures critical activities happen consistently, even when teams are busy or distracted.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Benefits Section -->
+<section class="benefits-section">
+    <div class="container">
+        <div class="section-header" style="color: white;">
+            <h2 style="color: white;">Transform How Your Team Executes</h2>
+            <p style="color: rgba(255,255,255,0.95);">Professional activity management delivers measurable improvements across every aspect of daily operations.</p>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6">
+                <div class="benefit-item">
+                    <h3><i class="fas fa-check-circle me-2"></i>Zero Lost Follow-Ups</h3>
+                    <p>Every commitment is captured, scheduled, and tracked to completion—nothing slips through the cracks.</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6">
+                <div class="benefit-item">
+                    <h3><i class="fas fa-tachometer-alt me-2"></i>Improved Productivity</h3>
+                    <p>Eliminate time wasted switching between tools and searching for information.</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6">
+                <div class="benefit-item">
+                    <h3><i class="fas fa-eye me-2"></i>Complete Visibility</h3>
+                    <p>Managers see exactly what's being worked on and what's getting done across the team.</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6">
+                <div class="benefit-item">
+                    <h3><i class="fas fa-users me-2"></i>Better Accountability</h3>
+                    <p>Tasks tied to customer records create clear ownership and measurable outcomes.</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6">
+                <div class="benefit-item">
+                    <h3><i class="fas fa-chart-line me-2"></i>Higher CRM Adoption</h3>
+                    <p>When the CRM becomes your daily starting point, adoption happens naturally.</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6">
+                <div class="benefit-item">
+                    <h3><i class="fas fa-bolt me-2"></i>Faster Execution</h3>
+                    <p>Strategy translates into action when every plan becomes a scheduled task.</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6">
+                <div class="benefit-item">
+                    <h3><i class="fas fa-bullseye me-2"></i>Focused Priorities</h3>
+                    <p>Clear daily agendas ensure teams work on what matters most, not just what's urgent.</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6">
+                <div class="benefit-item">
+                    <h3><i class="fas fa-handshake me-2"></i>Stronger Relationships</h3>
+                    <p>Consistent follow-through builds trust and demonstrates professionalism to customers.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+    <div class="container">
+        <h2>Ready to Transform Your CRM Into Your Team's Daily Operating System?</h2>
+        <p>See how Salesboom's activity management features drive consistent execution, improve follow-through, and keep your team focused on what matters most. Schedule a personalized demo to experience the platform where tasks, customers, and priorities come together.</p>
+        <div class="hero-cta">
+            <a href="https://www.salesboom.com/request-crm-demo.html" class="btn-primary-custom">
+                <i class="fas fa-calendar-check me-2"></i>Book a Demo Today
+            </a>
+            <a href="https://www.salesboom.com/crm_trial.html" class="btn-secondary-custom">
+                <i class="fas fa-rocket me-2"></i>Start Free Trial
+            </a>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-2">
+      <h3 class="fw-bold text-color">
+        <i class="fa-solid fa-layer-group me-2"></i>
+        Explore Salesboom Editions
+      </h3>
+      <p class="text-muted">Discover powerful CRM editions to scale your business efficiently.</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-briefcase fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Professional Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              A complete CRM suite with Marketing Automation, ERP integration, and Support tools — built for performance and value.
+            </p>
+            <a href="https://www.salesboom.com/editions/professional-edition.html" class="btn btn-color mt-auto">
+              Explore Professional <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-building fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Enterprise Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              For large enterprises — automate workflows, unify data, and leverage analytics to drive strategic growth.
+            </p>
+            <a href="https://www.salesboom.com/editions/enterprise-edition.html" class="btn btn-color mt-auto">
+              View Enterprise <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-users fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Team Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              Perfect for small teams starting with CRM — manage leads, track sales, and boost productivity with simplicity.
+            </p>
+            <a href="https://www.salesboom.com/editions/team-edition.html" class="btn btn-color mt-auto">
+           Discover Team<i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="container py-5">
+  <h2 class="text-center mb-5 text-color">
+    CRM Task Management, Reporting & Strategic Insights
+  </h2>
+
+  <div class="row g-4">
+
+    <!-- Card 1: Event & Task Management -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-calendar-check text-color fs-1 mb-3"></i>
+        <h5 class="mb-3">Event & Task Management</h5>
+        <p>
+          Organize your team’s to-dos and schedule events with
+          <a href="https://www.salesboom.com/products/tools-event_task_management.html" class="text-color fw-bold">
+            Event & Task Management Tools
+          </a>
+          for reliable execution.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 2: Custom Workflow Automation -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-gears text-color fs-1 mb-3"></i>
+        <h5 class="mb-3">Custom Workflow Tasks</h5>
+        <p>
+          Build smart workflows and assign automated tasks with
+          <a href="https://www.salesboom.com/products/custom-workflow-tasks.html" class="text-color fw-bold">
+            Custom Workflow Task Tools
+          </a>
+          to streamline operations.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 3: Team Task Features -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-users text-color fs-1 mb-3"></i>
+        <h5 class="mb-3">Team Task Management</h5>
+        <p>
+          Assign and manage tasks across your team using
+          <a href="https://www.salesboom.com/products/feat-task-for-team.html" class="text-color fw-bold">
+            Team Task Management Features
+          </a>
+          designed for collaboration.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 4: Bulk Task Updates -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-sync text-color fs-1 mb-3"></i>
+        <h5 class="mb-3">Bulk Task Updates</h5>
+        <p>
+          Quickly update multiple tasks at once with
+          <a href="https://www.salesboom.com/products/feat-mass-update-task.html" class="text-color fw-bold">
+            Mass Task Update Tools
+          </a>
+          for faster planning.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 5: Workflow Alerts & Notifications -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-bell text-color fs-1 mb-3"></i>
+        <h5 class="mb-3">Smart Workflow Alerts</h5>
+        <p>
+          Stay updated with real-time system alerts using
+          <a href="https://www.salesboom.com/products/custom-workflow-system-alerts.html" class="text-color fw-bold">
+            Custom Workflow Alerts
+          </a>
+          for timely action.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 6: Custom Reports Builder -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-chart-column text-color fs-1 mb-3"></i>
+        <h5 class="mb-3">Custom Reports Builder</h5>
+        <p>
+          Gain deeper insights with tailored reporting using
+          <a href="https://www.salesboom.com/products/custom-reports.html" class="text-color fw-bold">
+            Custom Reports Builder
+          </a>
+          to measure performance.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 7: CRM Dashboard Tools -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-chart-pie text-color fs-1 mb-3"></i>
+        <h5 class="mb-3">CRM Dashboards & Insights</h5>
+        <p>
+          Visualize performance metrics and trends using
+          <a href="https://www.salesboom.com/products/tools-dashboard.html" class="text-color fw-bold">
+            CRM Dashboard Tools
+          </a>
+          for faster decision-making.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 8: Build vs Buy CRM Guide -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-balance-scale text-color fs-1 mb-3"></i>
+        <h5 class="mb-3">CRM Build vs Buy Analysis</h5>
+        <p>
+          Understand costs and benefits of building versus buying CRM with the
+          <a href="https://www.salesboom.com/cloud-crm-guide/cloud-crm-guide/crm-build-vs-buy-cost-analysis.html" class="text-color fw-bold">
+            CRM Build vs Buy Cost Analysis Guide
+          </a>
+          to make informed investment decisions.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 9: Unified CRM Platform Overview -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-layer-group text-color fs-1 mb-3"></i>
+        <h5 class="mb-3">Unified CRM Platform</h5>
+        <p>
+          Learn how a unified CRM connects sales, marketing, and service in the
+          <a href="https://www.salesboom.com/smb-crm/unified_crm_content.html" class="text-color fw-bold">
+            Unified CRM Platform Guide
+          </a>
+          for seamless business operations.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="mt-5 footer">
+  <div class="container mt-5 pt-5">
+    <div class="footer-grid">
+      <div class="footer-section">
+        <h3>Products</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/products/tools-sfa.html">Sales Force Automation</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-marketing.html">Marketing Automation</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-casemanagement.html">Case Management</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-reporting.html">Business Intelligence</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-emailintegration.html">Email Integration</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Solutions</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/products/edition-team.html">Team Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/edition-professional.html">Professional Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/edition-enterprise.html">Enterprise Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/industry-solutions.html">Industry Solutions</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/company/index.html">About Us</a></li>
+          <li><a href="https://www.salesboom.com/company/company-contact.html">Contact Us</a></li>
+          <li><a href="https://www.salesboom.com/customers/index.html">Customers</a></li>
+          <li><a href="https://www.salesboom.com/partners/index.html">Partners</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/support/index.html">Support Center</a></li>
+          <li><a href="https://www.salesboom.com/crm_supportcenter/overview/index.html">Documentation</a></li>
+          <li><a href="https://www.salesboom.com/whitepapers/index.html">White Papers</a></li>
+          <li><a href="https://www.salesboom.com/pop-privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="bg-color">
+    <div class="container">
+     <div class="footer-bottom pb-3 mt-3">
+      <p>&copy; 2003-2025 <a class="text-white fw-bold" href="https://www.salesboom.com">Salesboom.com</a> Inc. All rights reserved. | Call: 1-855-229-2043</p>
+      <p style="margin-top: 10px;">Salesboom's color-coded CRM lead management software helps businesses visually prioritize sales opportunities with automated workflow rules. Contact us to learn how color coding can transform your lead management process and increase sales productivity.</p>
+    </div>
+    </div>
+  </div>
+ 
+</footer>
+
+<!-- Common JavaScript -->
+<script src="content/js/bootstrap.bundle.min.js"></script>
+
+
+
+<script>
+    // Loading Screen
+    window.addEventListener('load', function() {
+        const loadingScreen = document.getElementById('loading-screen');
+        setTimeout(() => {
+            loadingScreen.classList.add('fade-out');
+        }, 500);
+    });
+    
+    // Scroll to Top Button
+    const scrollTopBtn = document.getElementById('scroll-top');
+    
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+            scrollTopBtn.classList.add('show');
+        } else {
+            scrollTopBtn.classList.remove('show');
+        }
+    });
+    
+    scrollTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+    
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,1992 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+<!-- Primary Meta Tags -->
+<title>Enterprise AI Strategy & CRM Integration | Salesboom</title>
+<meta name="description" content="Learn how Enterprise AI drives decision-making, automation, and scale with secure CRM integration using Salesboom AI Powered CRM.">
+<meta name="keywords" content="Enterprise AI, AI-powered CRM, Enterprise AI strategy, AI integration, CRM automation, Agentic AI, Enterprise AI governance, AI decision support, AI-powered workflows, Business intelligence AI">
+<link rel="canonical" href="https://www.salesboom.com/enterprise-ai-crm-integration.html">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.salesboom.com/enterprise-ai-crm-integration.html">
+<meta property="og:title" content="Enterprise AI Strategy & CRM Integration | Salesboom">
+<meta property="og:description" content="Learn how Enterprise AI drives decision-making, automation, and scale with secure CRM integration using Salesboom AI Powered CRM.">
+<meta property="og:image" content="https://www.salesboom.com/img/enterprise-ai-crm-integration-og.jpg">
+<meta property="og:site_name" content="Salesboom CRM">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://www.salesboom.com/enterprise-ai-crm-integration.html">
+<meta name="twitter:title" content="Enterprise AI Strategy & CRM Integration | Salesboom">
+<meta name="twitter:description" content="Learn how Enterprise AI drives decision-making, automation, and scale with secure CRM integration using Salesboom AI Powered CRM.">
+<meta name="twitter:image" content="https://www.salesboom.com/img/enterprise-ai-crm-integration-og.jpg">
+<meta name="twitter:site" content="@SalesboomCloud">
+
+<!-- Schema.org structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Salesboom AI-Powered CRM - Enterprise AI Integration Platform",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web-based, Cloud",
+  "offers": {
+    "@type": "Offer",
+    "price": "14.00",
+    "priceCurrency": "USD",
+    "priceValidUntil": "2026-12-31"
+  },
+  "featureList": [
+    "Enterprise AI governance and security framework",
+    "Strategic AI reasoning and decision support",
+    "Agentic workflow automation with human oversight",
+    "Unified data platform eliminating AI silos",
+    "Real-time AI integration with CRM operations",
+    "Comprehensive audit trails and compliance"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.5",
+    "ratingCount": "3500"
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "Salesboom",
+    "url": "https://www.salesboom.com",
+    "logo": "https://www.salesboom.com/img/salesboom-logo-252x67.png",
+    "foundingDate": "2003",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-855-229-2043",
+      "contactType": "Customer Service"
+    }
+  }
+}
+</script>
+
+<link rel="shortcut icon" href="https://www.salesboom.com/favicon.ico">
+
+    <link rel="stylesheet" href="content/css/bootstrap.min.css">
+    <link rel="stylesheet" href="content/css/salesboom-common.css">
+    <link rel="shortcut icon" href="content/image/salesboom-logo-252x67.png" type="image/x-icon"> 
+    
+    
+<!-- Font Awesome 6 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --primary-color: #002f6c;
+  --secondary-color: #0052cc;
+  --accent-color: #00a3ff;
+  --text-dark: #1a1a1a;
+  --text-medium: #4a4a4a;
+  --text-light: #666666;
+  --bg-light: #f8f9fc;
+  --bg-white: #ffffff;
+  --border-color: #e0e4eb;
+  --gradient-start: #002f6c;
+  --gradient-end: #0052cc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  color: var(--text-dark);
+  background: var(--bg-white);
+  overflow-x: hidden;
+}
+
+/* Loading Screen */
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease-out;
+}
+
+#loading-screen.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loader {
+  width: 60px;
+  height: 60px;
+  border: 5px solid rgba(255, 255, 255, 0.3);
+  border-top: 5px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Scroll to Top Button */
+#scroll-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 47, 108, 0.3);
+}
+
+#scroll-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+#scroll-top:hover {
+  background: var(--secondary-color);
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 47, 108, 0.4);
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+  color: white;
+  padding: 100px 0 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+  opacity: 0.4;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.hero-section h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 30px;
+  line-height: 1.2;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.hero-section .subtitle {
+  font-size: 1.4rem;
+  margin-bottom: 40px;
+  opacity: 0.95;
+  line-height: 1.6;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-custom {
+  padding: 16px 40px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  border: none;
+}
+
+.btn-primary-custom {
+  background: white;
+  color: var(--primary-color);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+}
+
+.btn-primary-custom:hover {
+  background: var(--bg-light);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 255, 255, 0.4);
+  color: var(--primary-color);
+}
+
+.btn-outline-custom {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-outline-custom:hover {
+  background: white;
+  color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+/* Stats Section */
+.stats-section {
+  background: var(--primary-color);
+  color: white;
+  padding: 60px 0;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 20px;
+}
+
+.stat-item h3 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--accent-color);
+  margin-bottom: 10px;
+}
+
+.stat-item p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* Content Sections */
+.content-section {
+  padding: 80px 0;
+}
+
+.content-section.bg-light {
+  background: var(--bg-light);
+}
+
+.section-header {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 60px;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.section-header p {
+  font-size: 1.2rem;
+  color: var(--text-medium);
+  line-height: 1.8;
+}
+
+/* Feature Cards */
+.feature-card {
+  background: var(--bg-white);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 47, 108, 0.08);
+  transition: all 0.3s ease;
+  border-left: 4px solid var(--primary-color);
+  height: 100%;
+  margin-bottom: 30px;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0, 47, 108, 0.15);
+}
+
+.feature-icon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  color: white;
+  margin-bottom: 25px;
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.feature-card h4 {
+  font-size: 1.2rem;
+  color: var(--secondary-color);
+  margin: 20px 0 10px 0;
+  font-weight: 600;
+}
+
+.feature-card p {
+  color: var(--text-medium);
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.feature-card ul {
+  list-style: none;
+  margin-top: 20px;
+  padding-left: 0;
+}
+
+.feature-card li {
+  padding-left: 30px;
+  position: relative;
+  margin-bottom: 12px;
+  color: var(--text-medium);
+}
+
+.feature-card li::before {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  color: var(--secondary-color);
+  font-size: 1.1rem;
+}
+
+/* Content Box */
+.content-box {
+  background: var(--bg-white);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 47, 108, 0.08);
+  height: 100%;
+  margin-bottom: 30px;
+}
+
+.content-box h3 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.content-box h4 {
+  font-size: 1.4rem;
+  color: var(--secondary-color);
+  margin: 25px 0 15px 0;
+  font-weight: 600;
+}
+
+.content-box p {
+  color: var(--text-medium);
+  margin-bottom: 15px;
+  line-height: 1.8;
+}
+
+.content-box ul {
+  list-style: none;
+  margin-top: 20px;
+  padding-left: 0;
+}
+
+.content-box li {
+  padding-left: 30px;
+  position: relative;
+  margin-bottom: 12px;
+  color: var(--text-medium);
+  line-height: 1.6;
+}
+
+.content-box li::before {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  color: var(--secondary-color);
+}
+
+/* Highlight Box */
+.highlight-box {
+  background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+  color: white;
+  padding: 60px;
+  border-radius: 16px;
+  margin: 60px 0;
+  box-shadow: 0 8px 30px rgba(0, 47, 108, 0.2);
+}
+
+.highlight-box h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.highlight-box h4 {
+  font-size: 1.5rem;
+  margin: 25px 0 15px 0;
+  font-weight: 600;
+}
+
+.highlight-box p {
+  font-size: 1.1rem;
+  opacity: 0.95;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.highlight-box ul {
+  list-style: none;
+  margin-top: 20px;
+  padding-left: 0;
+}
+
+.highlight-box li {
+  padding-left: 30px;
+  position: relative;
+  margin-bottom: 12px;
+  opacity: 0.95;
+}
+
+.highlight-box li::before {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  color: var(--accent-color);
+}
+
+/* Pillar Cards */
+.pillar-card {
+  background: var(--bg-white);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 47, 108, 0.08);
+  transition: all 0.3s ease;
+  border-top: 4px solid var(--primary-color);
+  height: 100%;
+  margin-bottom: 30px;
+}
+
+.pillar-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0, 47, 108, 0.15);
+}
+
+.pillar-card h3 {
+  font-size: 1.6rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.pillar-card h4 {
+  font-size: 1.3rem;
+  color: var(--secondary-color);
+  margin: 25px 0 15px 0;
+  font-weight: 600;
+}
+
+.pillar-card p {
+  color: var(--text-medium);
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+/* Advantage Grid */
+.advantage-item {
+  background: var(--bg-white);
+  padding: 35px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 47, 108, 0.08);
+  transition: all 0.3s ease;
+  margin-bottom: 30px;
+  border-left: 4px solid var(--accent-color);
+  height: 100%;
+}
+
+.advantage-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 47, 108, 0.15);
+}
+
+.advantage-item h4 {
+  font-size: 1.3rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.advantage-item p {
+  color: var(--text-medium);
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+/* Process Steps */
+.process-step {
+  background: var(--bg-white);
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 47, 108, 0.08);
+  text-align: center;
+  transition: all 0.3s ease;
+  margin-bottom: 30px;
+  border-top: 4px solid var(--primary-color);
+  height: 100%;
+}
+
+.process-step:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 47, 108, 0.15);
+}
+
+.step-number {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin: 0 auto 20px;
+  box-shadow: 0 4px 12px rgba(0, 47, 108, 0.3);
+}
+
+.process-step h3 {
+  font-size: 1.4rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.process-step h4 {
+  font-size: 1.1rem;
+  color: var(--secondary-color);
+  margin: 15px 0 10px 0;
+  font-weight: 600;
+}
+
+.process-step p {
+  color: var(--text-medium);
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* CTA Section */
+.cta-section {
+  background: var(--primary-color);
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.cta-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.cta-section p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  opacity: 0.95;
+  line-height: 1.6;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-section .subtitle {
+    font-size: 1.2rem;
+  }
+
+  .section-header h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 80px 0 60px;
+  }
+
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .hero-section .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn-custom {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .content-section {
+    padding: 60px 0;
+  }
+
+  .section-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .highlight-box {
+    padding: 40px 30px;
+  }
+
+  #scroll-top {
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section h1 {
+    font-size: 1.75rem;
+  }
+
+  .stat-item h3 {
+    font-size: 2.5rem;
+  }
+
+  .feature-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 28px;
+  }
+
+  .step-number {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Loading Screen -->
+<div id="loading-screen">
+  <div class="loader"></div>
+</div>
+
+<!-- Scroll to Top Button -->
+<button id="scroll-top" aria-label="Scroll to top">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+    <!-- Top Bar -->
+<div class="top-bar">
+  <div class="container">
+    <div class="top-bar-left text-color">
+      <span>✓ Award-Winning Cloud CRM Software Since 2003</span>
+    </div>
+    <ul class="top-bar-nav">
+      <li><a href="https://www.salesboom.com/crm_supportcenter/overview/index.html">Support Center</a></li>
+      <li><a href="https://www.salesboom.com/crm_trial.html">Free Trial</a></li>
+      <li><a href="https://www.salesboom.com/login.html">Login</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Main Header -->
+<header>
+  <div class="main-header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <a href="https://www.salesboom.com" aria-label="Salesboom CRM Home">
+            <img src="https://www.salesboom.com/img/salesboom-logo-252x67.png" alt="Salesboom Cloud CRM Logo" width="252" height="67">
+          </a>
+        </div>
+        <div class="header-phone">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          <a href="tel:+18552292043">1-855-229-2043</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="container">
+    <div class="hero-content">
+      <h1>From Experimental AI Tools to Scalable Enterprise Operating Model</h1>
+      <p class="subtitle">Transform AI from isolated productivity experiments into a governed, revenue-connected enterprise capability that influences decision-making, execution speed, and competitive advantage.</p>
+      
+<a href="agentic-workforce-ai-crm.html" class="text-white border-white border-bottom">  back to home <i class="fa-solid fa-arrow-right"></i>   </a>
+      
+      
+      <div class="cta-buttons mt-3">
+        <a href="https://www.salesboom.com/request-crm-demo.html" class="btn-custom btn-primary-custom">Book a Demo</a>
+        <a href="https://www.salesboom.com/crm_trial.html" class="btn-custom btn-outline-custom">Start Free Trial</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Section -->
+<section class="stats-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-md-6">
+        <div class="stat-item">
+          <h3>22+</h3>
+          <p>Years of CRM Innovation</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="stat-item">
+          <h3>3,500+</h3>
+          <p>Businesses Transformed</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="stat-item">
+          <h3>159</h3>
+          <p>Countries Served</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="stat-item">
+          <h3>24/7</h3>
+          <p>Enterprise Support</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 1: Enterprise AI Imperative -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Why Enterprise AI Is Now a Board-Level Imperative</h2>
+      <p>In 2026, artificial intelligence has crossed a critical threshold. Enterprise leaders are no longer asking whether AI belongs in the organization—that question has already been answered. The real challenge today is how to deploy Enterprise AI at scale, securely, strategically, and with measurable business impact.</p>
+    </div>
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <div class="content-box">
+          <p>Early AI adoption focused on experimentation: chatbots, content generation, and isolated use cases. While useful, these efforts often failed to scale because they lacked structure, governance, and integration. <strong>Enterprise AI represents a fundamentally different paradigm.</strong></p>
+          
+          <h4>Enterprise AI is defined by three executive realities:</h4>
+          
+          <p><strong>1. AI now influences core business decisions, not just productivity tasks.</strong> Advanced reasoning models pressure-test strategic plans, identify blind spots in go-to-market strategies, and simulate competitive responses—transforming AI into a decision augmentation layer for leadership.</p>
+          
+          <p><strong>2. Risk exposure has increased dramatically,</strong> including data leakage, compliance violations, and brand damage. The biggest Enterprise AI risks in 2026 are no longer limited to hallucinations but extend to uncontrolled data usage, shadow AI deployments, and regulatory exposure under frameworks like the EU AI Act.</p>
+          
+          <p><strong>3. Value creation depends on integration, not standalone tools.</strong> Enterprise AI must be embedded where work actually happens, which is why CRM integration is non-negotiable.</p>
+          
+          <p style="margin-top: 30px;"><strong>As a result, Enterprise AI is no longer owned by IT or innovation teams alone. It is a shared responsibility of the C-suite, touching strategy, operations, finance, legal, and customer experience.</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 2: Strategic Value Pillars -->
+<section class="content-section bg-light">
+  <div class="container">
+    <div class="section-header">
+      <h2>The Three Strategic Value Pillars of Enterprise AI</h2>
+    </div>
+    
+    <div class="row">
+      <div class="col-lg-4 mb-4">
+        <div class="pillar-card">
+          <div class="feature-icon">
+            <i class="fas fa-brain"></i>
+          </div>
+          <h3>Decision Support and Strategic Reasoning</h3>
+          <p>Modern enterprise AI systems are no longer limited to pattern matching or text generation. Advanced reasoning models can now pressure-test strategic plans, identify blind spots in go-to-market strategies, simulate competitive responses, and analyze trade-offs across multiple scenarios.</p>
+          <p><strong>For executives, this transforms AI into a decision augmentation layer, not a replacement for leadership judgment.</strong> When integrated with CRM, this capability becomes significantly more powerful.</p>
+          <h4>Salesboom Integration Advantage:</h4>
+          <p>AI reasons over real pipeline data, customer behavior, revenue trends, and historical outcomes—allowing leadership to evaluate strategy based on reality, not assumptions. Executives can ask complex questions about market positioning, customer acquisition costs, retention patterns, and revenue forecasting with confidence that AI is working from trusted, governed data sources.</p>
+          <p style="margin-top: 20px;"><strong>The difference is substantial.</strong> Consumer AI tools work in isolation with whatever data users manually provide. Enterprise AI integrated with CRM automatically has context about every customer interaction, every deal stage, every service ticket, and every revenue milestone.</p>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 mb-4">
+        <div class="pillar-card">
+          <div class="feature-icon">
+            <i class="fas fa-book-open"></i>
+          </div>
+          <h3>Enterprise Knowledge as a Living Asset</h3>
+          <p>One of the most underappreciated challenges in large organizations is knowledge fragmentation. Critical information is spread across documents, emails, systems, and people. When key employees leave, institutional knowledge walks out the door.</p>
+          <p><strong>Enterprise AI changes this by acting as an organizational knowledge hub.</strong> When connected to internal systems, AI can answer questions using proprietary data, summarize historical decisions and context, and surface insights that would otherwise remain buried in legacy databases.</p>
+          <h4>Salesboom CRM Integration:</h4>
+          <p>CRM is where customer truth lives—accounts, opportunities, contracts, service history, and interactions. By integrating AI directly with CRM, organizations transform static records into an interactive intelligence layer accessible to authorized teams.</p>
+          <ul>
+            <li>Sales representatives can instantly understand account history before a call</li>
+            <li>Service teams can access every past interaction and resolution</li>
+            <li>Executives can query revenue patterns and customer sentiment without waiting for analysts</li>
+          </ul>
+          <p style="margin-top: 20px;"><strong>Knowledge becomes fluid, accessible, and actionable</strong>—rather than locked in siloed systems or individual memories.</p>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 mb-4">
+        <div class="pillar-card">
+          <div class="feature-icon">
+            <i class="fas fa-project-diagram"></i>
+          </div>
+          <h3>Agentic Workflows: From Insight to Action</h3>
+          <p>The most transformative aspect of Enterprise AI is the shift from "chatting" to doing. <strong>Agentic AI systems can execute multi-step workflows, interact with multiple enterprise systems, make conditional decisions, and report outcomes autonomously.</strong></p>
+          <h4>Real-world examples include:</h4>
+          <ul>
+            <li>Following up with leads and automatically logging activity in CRM</li>
+            <li>Reconciling revenue data across multiple systems to identify discrepancies</li>
+            <li>Preparing forecasts and reports overnight without human intervention</li>
+            <li>Detecting churn risk and proactively routing alerts to account managers</li>
+            <li>Generating compliance documentation based on workflow completion</li>
+          </ul>
+          <h4>How Salesboom Enables This:</h4>
+          <p>Salesboom exposes structured CRM data, permissions, and workflows that AI agents can operate on safely—ensuring actions are auditable, compliant, and aligned with business rules. AI doesn't just suggest actions; it executes them within governance guardrails.</p>
+          <p style="margin-top: 20px;"><strong>This represents a fundamental shift in how work gets done.</strong> Instead of humans logging into five different systems to complete a process, AI orchestrates the entire workflow while humans focus on exceptions, approvals, and strategic decisions.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 3: Architecture -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Why Integration Matters More Than Models</h2>
+      <p>The enterprise AI conversation often fixates on which model is "best"—GPT, Claude, Gemini, or the latest release. This misses the fundamental point. In enterprise contexts, integration matters far more than model selection.</p>
+    </div>
+    
+    <div class="row">
+      <div class="col-lg-10 mx-auto mb-5">
+        <div class="highlight-box">
+          <h3>The Integration Challenge</h3>
+          <p>Consumer AI tools operate in isolation. They have no context about your business, your customers, your processes, or your data unless you manually provide it. Every interaction starts from zero.</p>
+          <p><strong>This creates three critical problems for enterprises:</strong></p>
+          <ul>
+            <li><strong>Data Fragmentation:</strong> AI cannot reason effectively without comprehensive context from your systems of record</li>
+            <li><strong>Manual Overhead:</strong> Every request requires copy-pasting data, losing massive efficiency gains</li>
+            <li><strong>Security Risk:</strong> Employees paste sensitive data into external tools, creating uncontrolled data exposure</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-lg-6 mb-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-link"></i>
+          </div>
+          <h3>Native CRM Integration</h3>
+          <p>Salesboom AI is not bolted on—it's built in. AI operates directly within the CRM platform where customer data, revenue processes, and operational workflows already live.</p>
+          <h4>What this means in practice:</h4>
+          <ul>
+            <li>Zero data copying between systems</li>
+            <li>AI has automatic context about every customer, deal, and interaction</li>
+            <li>Actions taken by AI are automatically logged in CRM</li>
+            <li>Security policies apply consistently to AI and human users</li>
+            <li>No "glue code" maintenance between systems</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="col-lg-6 mb-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3>Single Source of Truth</h3>
+          <p>When AI operates across disconnected systems, conflicts and errors are inevitable. Different systems have different versions of customer data, leading to wrong decisions based on incomplete information.</p>
+          <h4>Salesboom's unified platform eliminates this:</h4>
+          <ul>
+            <li>All customer data lives in one authoritative system</li>
+            <li>AI always works from current, accurate information</li>
+            <li>Changes made by AI are immediately visible to all users</li>
+            <li>No synchronization delays or version conflicts</li>
+            <li>Complete audit trail of all AI actions and decisions</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row mt-4">
+      <div class="col-lg-10 mx-auto">
+        <div class="content-box">
+          <h3>The Architecture Advantage</h3>
+          <p><strong>This architectural difference is why Salesboom AI Powered CRM delivers superior Enterprise AI outcomes compared to point solutions or loosely integrated tools.</strong></p>
+          <p>Integration isn't a nice-to-have feature—it's the foundation that determines whether Enterprise AI delivers strategic value or remains an isolated productivity tool.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 4: Governance Framework -->
+<section class="content-section bg-light">
+  <div class="container">
+    <div class="section-header">
+      <h2>Enterprise AI Governance: Control Without Stifling Innovation</h2>
+      <p>The biggest barrier to Enterprise AI adoption isn't technical—it's trust. Executives need confidence that AI will operate safely, comply with regulations, protect sensitive data, and remain under organizational control.</p>
+    </div>
+    
+    <div class="row">
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="process-step">
+          <div class="step-number"><i class="fas fa-user-lock"></i></div>
+          <h3>Role-Based Access Control</h3>
+          <p>AI inherits the same permissions as the user invoking it. If a sales rep can't access executive pipeline data, neither can AI acting on their behalf. This ensures AI never operates beyond intended authority levels.</p>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="process-step">
+          <div class="step-number"><i class="fas fa-clipboard-check"></i></div>
+          <h3>Audit Trail Everything</h3>
+          <p>Every AI action is logged with full context: what was done, when, by which AI agent, based on what data, and what the outcome was. This creates accountability and enables continuous improvement.</p>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="process-step">
+          <div class="step-number"><i class="fas fa-database"></i></div>
+          <h3>Data Residency Control</h3>
+          <p>Enterprise data never leaves your organizational boundaries for model training. Salesboom processes AI requests securely without exposing proprietary information to external model providers.</p>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="process-step">
+          <div class="step-number"><i class="fas fa-user-check"></i></div>
+          <h3>Human-in-the-Loop</h3>
+          <p>For high-impact decisions, AI can be configured to require human approval before execution. This provides safety without sacrificing the efficiency gains from automation.</p>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="process-step">
+          <div class="step-number"><i class="fas fa-balance-scale"></i></div>
+          <h3>Compliance by Design</h3>
+          <p>Built-in compliance frameworks ensure AI operations meet GDPR, CCPA, HIPAA, and other regulatory requirements automatically, rather than requiring manual compliance processes.</p>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="process-step">
+          <div class="step-number"><i class="fas fa-cogs"></i></div>
+          <h3>Workflow Constraints</h3>
+          <p>AI agents operate within pre-defined workflow boundaries, preventing unauthorized actions while enabling autonomous execution within approved parameters.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row mt-5">
+      <div class="col-lg-10 mx-auto">
+        <div class="highlight-box">
+          <p style="font-size: 1.2rem;"><strong>This governance framework is what distinguishes Enterprise AI from consumer AI tools.</strong> Organizations can deploy AI confidently, knowing it operates within acceptable risk parameters while still delivering transformative business value.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Blog Guides -->
+<section class="container py-5">
+  <h2 class="text-center mb-5 text-color">
+    Enterprise CRM & AI Strategy Blog Guides
+  </h2>
+
+  <div class="row g-4">
+
+    <!-- Agentic Workforce Guide -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-robot fa-3x mb-3 text-color"></i>
+        <h4>Agentic Workforce Guide</h4>
+        <p>
+          Learn how combining autonomous AI agents and human expertise transforms SMB CRM, boosts productivity, and automates sales and service workflows in
+          <a href="https://blog.salesboom.com/agentic-workforce-guide" class="text-color fw-bold" target="_blank">
+            this guide
+          </a>. 
+        </p>
+      </div>
+    </div>
+
+    <!-- Enterprise AI Strategy & CRM Integration -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-plug-circle-bolt fa-3x mb-3 text-color"></i>
+        <h4>Enterprise AI & CRM Integration Strategy</h4>
+        <p>
+          Understand how unified CRM + AI and ERP integration creates intelligent business processes, eliminates data silos, and powers smarter decision-making in
+          <a href="https://blog.salesboom.com/enterprise-ai-strategy-crm-integration" class="text-color fw-bold" target="_blank">
+            this strategy guide
+          </a>. 
+        </p>
+      </div>
+    </div>
+
+   
+    <!-- Integration Station Enterprise Strategy Guide -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-layer-group fa-3x mb-3 text-color"></i>
+        <h4>Integration Station Enterprise Strategy</h4>
+        <p>
+          Best practices for centralizing enterprise integrations and building a scalable integration platform are discussed in
+          <a href="https://blog.salesboom.com/integration-station-enterprise-strategy-guide" class="text-color fw-bold" target="_blank">
+            this strategy guide
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Google Gemini Enterprise AI CRM Integration -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-brands fa-google fa-3x mb-3 text-color"></i>
+        <h4>Google Gemini Enterprise AI CRM</h4>
+        <p>
+          Learn how Google’s Gemini Enterprise can be integrated into CRM systems to drive sales automation, document handling, and analytics in
+          <a href="https://blog.salesboom.com/google-gemini-enterprise-ai-crm-integration" class="text-color fw-bold" target="_blank">
+            this integration guide
+          </a>. 
+        </p>
+      </div>
+    </div>
+
+    <!-- Google A2A Enterprise AI Agent Protocol -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-network-wired fa-3x mb-3 text-color"></i>
+        <h4>Google A2A Enterprise AI Agent Protocol Guide</h4>
+        <p>
+          Understand the enterprise implications of Google’s A2A protocol — enabling collaboration between AI agents to automate complex business workflows — in
+          <a href="https://blog.salesboom.com/google-a2a-enterprise-ai-agent-protocol-guide" class="text-color fw-bold" target="_blank">
+            this protocol guide
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Google Demand Generation Strategy AI CRM Guide -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-bullseye fa-3x mb-3 text-color"></i>
+        <h4>Google Demand Generation Strategy (AI CRM Guide)</h4>
+        <p>
+          Explore how AI-driven demand generation strategies using tools like Google AI can boost CRM pipeline growth in
+          <a href="https://blog.salesboom.com/google-demand-generation-strategy-ai-crm-guide" class="text-color fw-bold" target="_blank">
+            this strategic guide
+          </a>.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- Section 5: Implementation Strategy -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Enterprise AI Implementation: From Pilot to Production</h2>
+      <p>Successful Enterprise AI deployment follows a proven pattern that balances speed with governance, innovation with control, and ambition with practical execution.</p>
+    </div>
+    
+    <div class="row">
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="process-step">
+          <div class="step-number">1</div>
+          <h3>Assessment Phase</h3>
+          <h4>Weeks 1-2</h4>
+          <p><strong>Goal:</strong> Identify high-value use cases and establish governance foundation</p>
+          <ul style="text-align: left; list-style: none; padding-left: 0; margin-top: 15px;">
+            <li style="margin-bottom: 8px;"><i class="fas fa-check-circle" style="color: var(--secondary-color); margin-right: 8px;"></i>Audit existing workflows</li>
+            <li style="margin-bottom: 8px;"><i class="fas fa-check-circle" style="color: var(--secondary-color); margin-right: 8px;"></i>Define success metrics</li>
+            <li style="margin-bottom: 8px;"><i class="fas fa-check-circle" style="color: var(--secondary-color); margin-right: 8px;"></i>Establish governance policies</li>
+            <li style="margin-bottom: 8px;"><i class="fas fa-check-circle" style="color: var(--secondary-color); margin-right: 8px;"></i>Select pilot use cases</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="process-step">
+          <div class="step-number">2</div>
+          <h3>Pilot Deployment</h3>
+          <h4>Weeks 3-8</h4>
+          <p><strong>Goal:</strong> Prove value with controlled scope and build organizational confidence</p>
+          <ul style="text-align: left; list-style: none; padding-left: 0; margin-top: 15px;">
+            <li style="margin-bottom: 8px;"><i class="fas fa-check-circle" style="color: var(--secondary-color); margin-right: 8px;"></i>Deploy AI for specific team</li>
+            <li style="margin-bottom: 8px;"><i class="fas fa-check-circle" style="color: var(--secondary-color); margin-right: 8px;"></i>Monitor performance closely</li>
+            <li style="margin-bottom: 8px;"><i class="fas fa-check-circle" style="color: var(--secondary-color); margin-right: 8px;"></i>Gather user feedback</li>
+            <li style="margin-bottom: 8px;"><i class="fas fa-check-circle" style="color: var(--secondary-color); margin-right: 8px;"></i>Measure ROI metrics</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="process-step">
+          <div class="step-number">3</div>
+          <h3>Expansion Phase</h3>
+          <h4>Weeks 9-16</h4>
+          <p><strong>Goal:</strong> Scale successful pilots across organization while maintaining governance</p>
+          <ul style="text-align: left; list-style: none; padding-left: 0; margin-top: 15px;">
+            <li style="margin-bottom: 8px;"><i class="fas fa-check-circle" style="color: var(--secondary-color); margin-right: 8px;"></i>Roll out to additional teams</li>
+            <li style="margin-bottom: 8px;"><i class="fas fa-check-circle" style="color: var(--secondary-color); margin-right: 8px;"></i>Add new use cases</li>
+            <li style="margin-bottom: 8px;"><i class="fas fa-check-circle" style="color: var(--secondary-color); margin-right: 8px;"></i>Refine workflows</li>
+            <li style="margin-bottom: 8px;"><i class="fas fa-check-circle" style="color: var(--secondary-color); margin-right: 8px;"></i>Document best practices</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="process-step">
+          <div class="step-number">4</div>
+          <h3>Enterprise Scale</h3>
+          <h4>Month 4+</h4>
+          <p><strong>Goal:</strong> Achieve organization-wide AI integration with continuous optimization</p>
+          <ul style="text-align: left; list-style: none; padding-left: 0; margin-top: 15px;">
+            <li style="margin-bottom: 8px;"><i class="fas fa-check-circle" style="color: var(--secondary-color); margin-right: 8px;"></i>Company-wide deployment</li>
+            <li style="margin-bottom: 8px;"><i class="fas fa-check-circle" style="color: var(--secondary-color); margin-right: 8px;"></i>Advanced agentic workflows</li>
+            <li style="margin-bottom: 8px;"><i class="fas fa-check-circle" style="color: var(--secondary-color); margin-right: 8px;"></i>Continuous improvement</li>
+            <li style="margin-bottom: 8px;"><i class="fas fa-check-circle" style="color: var(--secondary-color); margin-right: 8px;"></i>Strategic AI roadmap</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 6: Risk Management -->
+<section class="content-section bg-light">
+  <div class="container">
+    <div class="section-header">
+      <h2>Managing Enterprise AI Risks Proactively</h2>
+      <p>Every new technology introduces risk. The question is whether organizations manage risk proactively through governance, or reactively through damage control. Salesboom's approach anticipates and mitigates Enterprise AI risks before they materialize.</p>
+    </div>
+    
+    <div class="row">
+      <div class="col-lg-6 mb-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-exclamation-triangle"></i>
+          </div>
+          <h3>Data Leakage Prevention</h3>
+          <h4>The Risk:</h4>
+          <p>Employees paste sensitive customer data, financial information, or strategic plans into consumer AI tools, inadvertently exposing proprietary information to external systems and potentially to model training datasets.</p>
+          <h4>Salesboom's Mitigation:</h4>
+          <p>AI operates entirely within enterprise boundaries. Data never leaves the Salesboom platform, eliminating external exposure risk. Technical controls prevent copy-paste to external tools, and comprehensive logging tracks all data access.</p>
+        </div>
+      </div>
+      
+      <div class="col-lg-6 mb-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-user-shield"></i>
+          </div>
+          <h3>Shadow AI Deployments</h3>
+          <h4>The Risk:</h4>
+          <p>Without official Enterprise AI solutions, employees use unapproved consumer tools, creating ungoverned AI sprawl that IT cannot monitor, secure, or control.</p>
+          <h4>Salesboom's Mitigation:</h4>
+          <p>Providing sanctioned, easy-to-use AI capabilities within existing workflows eliminates the need for shadow IT. Employees get the productivity benefits they want within governance frameworks leadership requires.</p>
+        </div>
+      </div>
+      
+      <div class="col-lg-6 mb-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-gavel"></i>
+          </div>
+          <h3>Regulatory Compliance</h3>
+          <h4>The Risk:</h4>
+          <p>AI systems that don't comply with GDPR, CCPA, HIPAA, or emerging AI-specific regulations expose organizations to fines, legal liability, and reputational damage.</p>
+          <h4>Salesboom's Mitigation:</h4>
+          <p>Built-in compliance frameworks ensure AI operations automatically meet regulatory requirements. Comprehensive audit trails document decision-making for regulatory review. Data residency controls ensure compliance with data sovereignty laws.</p>
+        </div>
+      </div>
+      
+      <div class="col-lg-6 mb-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-bullseye"></i>
+          </div>
+          <h3>AI Accuracy and Hallucinations</h3>
+          <h4>The Risk:</h4>
+          <p>AI systems generate plausible-sounding but factually incorrect information, leading to wrong business decisions when users trust AI outputs without verification.</p>
+          <h4>Salesboom's Mitigation:</h4>
+          <p>AI grounded in CRM data reduces hallucination risk dramatically by working from verified business records rather than general knowledge. Human-in-the-loop workflows require approval for high-stakes decisions. Confidence scoring helps users assess AI output reliability.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 7: Use Case Examples -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Real-World Enterprise AI Use Cases</h2>
+      <p>Enterprise AI delivers value across every business function. These examples demonstrate how organizations leverage Salesboom AI Powered CRM integration to transform operations.</p>
+    </div>
+    
+    <div class="row">
+      <div class="col-lg-6 mb-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h3>Executive Strategic Analysis</h3>
+          <h4>Challenge:</h4>
+          <p>Leadership needs to evaluate whether to enter a new market segment but lacks comprehensive analysis of existing customer patterns, competitive positioning, and resource requirements.</p>
+          <h4>AI Solution:</h4>
+          <p>AI analyzes historical CRM data to identify customer segments, revenue patterns, and sales cycle characteristics. It pressure-tests market entry strategy against real performance data and generates scenario analysis with risk assessments.</p>
+          <h4>Business Impact:</h4>
+          <p>Strategic decisions based on comprehensive data analysis rather than intuition. Weeks of analysis compressed into hours. Higher confidence in market entry decisions.</p>
+        </div>
+      </div>
+      
+      <div class="col-lg-6 mb-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <h3>Sales Team Productivity</h3>
+          <h4>Challenge:</h4>
+          <p>Sales representatives spend hours researching accounts, preparing for calls, and logging activities—time that should be spent selling.</p>
+          <h4>AI Solution:</h4>
+          <p>AI automatically generates pre-call briefings with account history, recent interactions, and relevant context. It drafts follow-up emails and logs activities automatically. It identifies upsell opportunities based on usage patterns.</p>
+          <h4>Business Impact:</h4>
+          <p>40% more time spent in actual customer conversations. Faster deal velocity through better preparation. Improved win rates from personalized engagement.</p>
+        </div>
+      </div>
+      
+      <div class="col-lg-6 mb-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-headset"></i>
+          </div>
+          <h3>Customer Service Excellence</h3>
+          <h4>Challenge:</h4>
+          <p>Support teams handle repetitive inquiries while complex issues wait in queue. Customer satisfaction suffers from slow response times and inconsistent service quality.</p>
+          <h4>AI Solution:</h4>
+          <p>AI handles routine inquiries automatically while escalating complex cases with full context. It suggests solutions based on similar historical issues. It proactively identifies at-risk accounts and triggers retention workflows.</p>
+          <h4>Business Impact:</h4>
+          <p>60% reduction in routine ticket volume. Faster resolution of complex issues. Improved customer satisfaction scores. Proactive churn prevention.</p>
+        </div>
+      </div>
+      
+      <div class="col-lg-6 mb-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-file-contract"></i>
+          </div>
+          <h3>Compliance Automation</h3>
+          <h4>Challenge:</h4>
+          <p>Regulated industries require extensive documentation, audit trails, and compliance reporting that consume significant administrative resources.</p>
+          <h4>AI Solution:</h4>
+          <p>AI automatically generates compliance documentation based on completed workflows. It monitors transactions for regulatory compliance in real-time. It prepares audit reports with complete activity logs and evidence trails.</p>
+          <h4>Business Impact:</h4>
+          <p>Reduced compliance overhead by 70%. Faster, more accurate audit preparation. Lower risk of compliance violations. Real-time compliance monitoring.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 8: Measurement & ROI -->
+<section class="content-section bg-light">
+  <div class="container">
+    <div class="section-header">
+      <h2>Measuring Enterprise AI Success: KPIs That Matter</h2>
+      <p>Successful Enterprise AI initiatives are measured not by AI adoption metrics but by business outcomes. Salesboom helps organizations track what actually matters.</p>
+    </div>
+    
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <div class="content-box">
+          <h3>Key Performance Indicators for Enterprise AI</h3>
+          
+          <h4>Operational Efficiency Metrics:</h4>
+          <ul>
+            <li>Time saved on routine tasks (measured in hours per employee per week)</li>
+            <li>Reduction in manual data entry and administrative overhead</li>
+            <li>Faster process completion times (quote generation, report preparation, etc.)</li>
+            <li>Decreased error rates in data processing and documentation</li>
+          </ul>
+          
+          <h4>Revenue Impact Metrics:</h4>
+          <ul>
+            <li>Increased deal velocity (shorter sales cycles)</li>
+            <li>Higher win rates from better preparation and personalization</li>
+            <li>More opportunities identified through AI-powered insights</li>
+            <li>Reduced customer churn from proactive intervention</li>
+            <li>Expansion revenue from AI-identified upsell opportunities</li>
+          </ul>
+          
+          <h4>Strategic Decision Metrics:</h4>
+          <ul>
+            <li>Faster time-to-decision on strategic initiatives</li>
+            <li>Quality of analysis (comprehensiveness, accuracy, insight depth)</li>
+            <li>Leadership confidence in AI-supported decisions</li>
+            <li>Successful outcomes from AI-informed strategy</li>
+          </ul>
+          
+          <h4>Risk & Compliance Metrics:</h4>
+          <ul>
+            <li>Reduction in compliance violations or near-misses</li>
+            <li>Time saved on audit preparation</li>
+            <li>Decreased data security incidents</li>
+            <li>Improved audit trail completeness</li>
+          </ul>
+          
+          <h4>User Adoption Metrics:</h4>
+          <ul>
+            <li>Percentage of eligible users actively using AI features</li>
+            <li>Frequency of AI usage across different functions</li>
+            <li>User satisfaction scores with AI capabilities</li>
+            <li>Reduction in shadow IT AI tool usage</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row mt-5">
+      <div class="col-lg-10 mx-auto">
+        <div class="highlight-box">
+          <h3>Typical ROI Timeline</h3>
+          <p><strong>Month 1-2:</strong> Efficiency gains become apparent as routine tasks are automated</p>
+          <p><strong>Month 3-4:</strong> Revenue impact emerges through faster deal cycles and improved win rates</p>
+          <p><strong>Month 5-6:</strong> Strategic value materializes as decision-making quality improves</p>
+          <p><strong>Month 6+:</strong> Compounding benefits as AI capabilities expand and organizational competence grows</p>
+          <p style="margin-top: 30px; font-size: 1.15rem;"><strong>Most organizations achieve positive ROI within 3-4 months and see returns accelerate as AI integration deepens.</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Old content -->
+<section class="container py-5">
+  <h2 class="text-center mb-5 text-color">
+    Salesboom AI & CRM Innovation Solutions
+  </h2>
+
+  <div class="row g-4">
+
+    <!-- How to Get AI to Work for You -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-brain fa-3x mb-3 text-color"></i>
+        <h4>AI — How to Work for You</h4>
+        <p>
+          Practical strategies for deploying AI ethically and effectively in your business in
+          <a href="https://www.salesboom.com/products/new/AI-work-for-you.html" class="text-color fw-bold" target="_blank">
+            How to Get AI to Work for You
+          </a>. Focus on alignment, collaboration, and intentional use of AI systems. 
+        </p>
+      </div>
+    </div>
+
+    <!-- What Are AI Agents -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-robot fa-3x mb-3 text-color"></i>
+        <h4>What Are AI Agents?</h4>
+        <p>
+          Learn the fundamentals of autonomous AI agents and how they augment workflows in
+          <a href="https://salesboom.com/What-Are-AI-Agents.html" class="text-color fw-bold" target="_blank">
+            What Are AI Agents
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- AI People Economy -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-users-gear fa-3x mb-3 text-color"></i>
+        <h4>AI People Economy</h4>
+        <p>
+          Discover how CRM and AI integrations reshape business operations and strategy in the
+          <a href="https://www.salesboom.com/products/new/AI-People-Economy.html" class="text-color fw-bold" target="_blank">
+            AI People Economy
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Salesboom Copilot -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-plane-departure fa-3x mb-3 text-color"></i>
+        <h4>Salesboom Copilot</h4>
+        <p>
+          Boost sales productivity with an always-available AI assistant that drafts messages, qualifies leads and provides insights in
+          <a href="https://www.salesboom.com/products/new/Salesboom-Copilot.html" class="text-color fw-bold" target="_blank">
+            Salesboom Copilot
+          </a>. 
+        </p>
+      </div>
+    </div>
+
+    <!-- Agentic Workforce -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-gears fa-3x mb-3 text-color"></i>
+        <h4>Agentic Workforce</h4>
+        <p>
+          Build a system where autonomous AI agents and humans collaborate to optimize workflows and decision-making in
+          <a href="https://www.salesboom.com/products/new/Agentic-Workforce.html" class="text-color fw-bold" target="_blank">
+            Agentic Workforce
+          </a>. 
+        </p>
+      </div>
+    </div>
+
+    <!-- CRM Integration — Google -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-brands fa-google fa-3x mb-3 text-color"></i>
+        <h4>CRM Integration with Google</h4>
+        <p>
+          Seamlessly integrate your CRM with Google tools (Gmail, Docs, Calendar) for unified workflows in
+          <a href="https://www.salesboom.com/CRM-integration-Google.html" class="text-color fw-bold" target="_blank">
+            CRM Integration – Google
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Sales Intelligence Content -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-chart-bar fa-3x mb-3 text-color"></i>
+        <h4>Integrated Sales Intelligence</h4>
+        <p>
+          Learn how built-in analytics and sales intelligence help you make smarter CRM decisions in
+          <a href="https://www.salesboom.com/integrated-crm/sales_intelligence_content.html" class="text-color fw-bold" target="_blank">
+            Sales Intelligence Content
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Agentic Workforce – AI Powered CRM -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-network-wired fa-3x mb-3 text-color"></i>
+        <h4>Agentic Workforce — AI CRM</h4>
+        <p>
+          How AI-augmented CRM drives better decisions and unifies processes across departments in
+          <a href="https://www.salesboom.com/agentic-workforce/agentic-workforce-AI-Powered-CRM.html" class="text-color fw-bold" target="_blank">
+            Agentic Workforce AI CRM
+          </a>. 
+        </p>
+      </div>
+    </div>
+
+    <!-- AI Agent Management System -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-cloud fa-3x mb-3 text-color "></i>
+        <h4>AI Agent Management System</h4>
+        <p>
+          Manage and scale autonomous AI agents safely with a system built to work alongside your team in
+          <a href="https://www.salesboom.com/ai-agent-management/ai-agent-management-system.html" class="text-color fw-bold" target="_blank">
+            AI Agent Management System
+          </a>.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Section 9: Competitive Advantage -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>From Enterprise AI to Enterprise Advantage</h2>
+      <p>Enterprise AI is not about replacing people. It is about removing friction from decision-making and execution, enabling organizations to operate in fundamentally more efficient and effective ways.</p>
+    </div>
+    
+    <div class="row">
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="advantage-item">
+          <h4><i class="fas fa-tachometer-alt" style="color: var(--primary-color); margin-right: 10px;"></i>Operate Faster</h4>
+          <p>Organizations with Enterprise AI operate faster than competitors by automating routine workflows and accelerating decision cycles. While others spend days gathering information, you're already executing.</p>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="advantage-item">
+          <h4><i class="fas fa-chart-line" style="color: var(--primary-color); margin-right: 10px;"></i>Scale Without Linear Costs</h4>
+          <p>Add customers and revenue without proportionally increasing headcount. Cognitive work scales at near-zero marginal cost, transforming unit economics.</p>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="advantage-item">
+          <h4><i class="fas fa-shield-alt" style="color: var(--primary-color); margin-right: 10px;"></i>Reduce Operational Risk</h4>
+          <p>Better data governance, audit trails, and automated compliance reduce risk exposure. AI consistency eliminates human errors that create vulnerabilities.</p>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="advantage-item">
+          <h4><i class="fas fa-smile" style="color: var(--primary-color); margin-right: 10px;"></i>Deliver Better Experiences</h4>
+          <p>Personalized, proactive, and efficient customer service delivered at scale. Every customer receives high-quality attention regardless of company size or team capacity.</p>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="advantage-item">
+          <h4><i class="fas fa-brain" style="color: var(--primary-color); margin-right: 10px;"></i>Make Smarter Decisions</h4>
+          <p>Leadership makes better decisions sooner by leveraging AI-powered analysis of comprehensive data. Strategy is informed by reality, not assumptions.</p>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="advantage-item">
+          <h4><i class="fas fa-award" style="color: var(--primary-color); margin-right: 10px;"></i>Build Lasting Advantages</h4>
+          <p>Early movers establish advantages that compound over time. Data advantages, workflow optimization, and organizational capabilities become increasingly difficult for competitors to replicate.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row mt-5">
+      <div class="col-lg-10 mx-auto">
+        <div class="highlight-box">
+          <p style="font-size: 1.2rem;"><strong>Salesboom AI Powered CRM integration ensures Enterprise AI is not an abstract capability—but a practical, governed, revenue-connected system that leadership can trust.</strong></p>
+          <p style="font-size: 1.15rem;">By anchoring AI to the platform where customer relationships, revenue processes, and operational workflows live, organizations create a foundation for sustained competitive advantage.</p>
+          <p style="margin-top: 30px; font-size: 1.15rem;"><strong>The question facing executives is no longer whether to adopt Enterprise AI—but whether it will be governed, integrated, and strategic.</strong> Organizations that treat AI as a governed enterprise capability will outperform those that allow fragmented, uncontrolled usage.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 10: Salesboom Advantage -->
+<section class="content-section bg-light">
+  <div class="container">
+    <div class="section-header">
+      <h2>The Salesboom Advantage: Why Businesses Choose Us for Enterprise AI</h2>
+      <p>With over 22 years of CRM innovation, Salesboom delivers unique advantages for Enterprise AI deployment that separate us from the competition.</p>
+    </div>
+    
+    <div class="row">
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="advantage-item">
+          <h4>Unified Platform Architecture</h4>
+          <p>Single integrated platform for sales, service, marketing, and operations—no separate apps, no data silos, complete visibility across the customer lifecycle. AI operates on unified, governed data rather than fragmented sources.</p>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="advantage-item">
+          <h4>Enterprise-Grade Security</h4>
+          <p>Built-in data governance, role-based access controls, comprehensive audit logging, and compliance frameworks that extend automatically to AI capabilities. Your data never leaves enterprise boundaries.</p>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="advantage-item">
+          <h4>Seamless Integration</h4>
+          <p>Native integration with Outlook, QuickBooks, and other business systems, plus open APIs for connecting existing tools. AI works within your current workflows.</p>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="advantage-item">
+          <h4>Continuous Innovation</h4>
+          <p>In-house development team delivers quarterly updates with new AI features and capabilities at no extra cost. Benefit from latest AI advances without vendor lock-in.</p>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="advantage-item">
+          <h4>Transparent Pricing</h4>
+          <p>Lower total cost of ownership with predictable monthly pricing starting at $14/user, no hidden fees, and no vendor lock-in. AI capabilities included in platform licensing.</p>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="advantage-item">
+          <h4>Proven Track Record</h4>
+          <p>3,500+ businesses across 159 countries trust Salesboom to power their operations. Decades of CRM expertise applied to Enterprise AI deployment.</p>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="advantage-item">
+          <h4>Expert Support</h4>
+          <p>Real CRM and AI specialists available 24/7, not chatbots. Implementation support, training programs, and ongoing optimization assistance ensure successful adoption.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+  <div class="container">
+    <h2>Ready to Transform AI from Experiment to Enterprise Advantage?</h2>
+    <p>Discover how Salesboom AI-Powered CRM integration serves as the foundation of your Enterprise AI strategy—connecting insight, action, and governance across your entire organization. Book a demo today to see how we help businesses deploy AI at scale, securely and strategically.</p>
+    <div class="cta-buttons">
+      <a href="https://www.salesboom.com/request-crm-demo.html" class="btn-custom btn-primary-custom">Book a Demo Today</a>
+      <a href="https://www.salesboom.com/crm_trial.html" class="btn-custom btn-outline-custom">Start Free Trial</a>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-2">
+      <h3 class="fw-bold text-color">
+        <i class="fa-solid fa-layer-group me-2"></i>
+        Explore Salesboom Editions
+      </h3>
+      <p class="text-muted">Discover powerful CRM editions to scale your business efficiently.</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-briefcase fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Professional Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              A complete CRM suite with Marketing Automation, ERP integration, and Support tools — built for performance and value.
+            </p>
+            <a href="https://www.salesboom.com/editions/professional-edition.html" class="btn btn-color mt-auto">
+              Explore Professional <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-building fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Enterprise Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              For large enterprises — automate workflows, unify data, and leverage analytics to drive strategic growth.
+            </p>
+            <a href="https://www.salesboom.com/editions/enterprise-edition.html" class="btn btn-color mt-auto">
+              View Enterprise <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-users fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Team Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              Perfect for small teams starting with CRM — manage leads, track sales, and boost productivity with simplicity.
+            </p>
+            <a href="https://www.salesboom.com/editions/team-edition.html" class="btn btn-color mt-auto">
+           Discover Team<i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Local Page -->
+<section class="container py-5">
+  <h2 class="text-center mb-5 text-color">
+    Enterprise AI & CRM Integration Platform
+  </h2>
+
+  <div class="row g-4">
+
+
+
+    <!-- API Integration Strategy -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-code-branch fa-3x mb-3 text-color"></i>
+        <h4>API Integration Strategy</h4>
+        <p>
+          Design scalable and secure enterprise API architectures using
+          <a href="api-integration-strategy.html" class="text-color fw-bold">
+            API Integration Strategy
+          </a>
+          to connect CRM, AI and business systems.
+        </p>
+      </div>
+    </div>
+
+    <!-- A2UI Agent to User Interface -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-user-gear fa-3x mb-3 text-color"></i>
+        <h4>A2UI — Agent to User Interface</h4>
+        <p>
+          Enable seamless interaction between AI agents and users via
+          <a href="a2ui-agent-to-user-interface.html" class="text-color fw-bold">
+            A2UI Interfaces
+          </a>, transforming how users collaborate with AI.
+        </p>
+      </div>
+    </div>
+
+    <!-- CRM Integrations as Revenue Engine -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-money-bill-trend-up fa-3x mb-3 text-color"></i>
+        <h4>CRM Integrations Revenue Engine</h4>
+        <p>
+          Turn integrations into growth drivers by connecting data, automation and insights through
+          <a href="crm-integrations-revenue-engine.html" class="text-color fw-bold">
+            CRM Revenue Integrations
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Integration Station Enterprise Platform -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-layer-group fa-3x mb-3 text-color"></i>
+        <h4>Integration Station Platform</h4>
+        <p>
+          Centralize and orchestrate all enterprise integrations with
+          <a href="integration-station-enterprise-platform.html" class="text-color fw-bold">
+            Integration Station
+          </a>, built for scale and flexibility.
+        </p>
+      </div>
+    </div>
+
+    <!-- Google Gemini Enterprise AI CRM -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-brands fa-google fa-3x mb-3 text-color"></i>
+        <h4>Google Gemini Enterprise AI CRM</h4>
+        <p>
+          Power your CRM with advanced generative AI using
+          <a href="google-gemini-enterprise-ai-crm.html" class="text-color fw-bold">
+            Google Gemini for CRM
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Google A2A AI Agent Integration -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-network-wired fa-3x mb-3 text-color"></i>
+        <h4>Google A2A AI Agent Integration</h4>
+        <p>
+          Enable secure agent-to-agent communication using
+          <a href="google-a2a-ai-agent-integration.html" class="text-color fw-bold">
+            Google A2A Integration
+          </a> across enterprise systems.
+        </p>
+      </div>
+    </div>
+
+    <!-- Google Demand Generation AI CRM -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-bullseye fa-3x mb-3 text-color"></i>
+        <h4>Google Demand Generation AI CRM</h4>
+        <p>
+          Accelerate pipeline growth and demand generation using
+          <a href="google-demand-generation-ai-crm.html" class="text-color fw-bold">
+            AI-Driven Demand Generation
+          </a>.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="mt-5 footer">
+  <div class="container mt-5 pt-5">
+    <div class="footer-grid">
+      <div class="footer-section">
+        <h3>Products</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/products/tools-sfa.html">Sales Force Automation</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-marketing.html">Marketing Automation</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-casemanagement.html">Case Management</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-reporting.html">Business Intelligence</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-emailintegration.html">Email Integration</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Solutions</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/products/edition-team.html">Team Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/edition-professional.html">Professional Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/edition-enterprise.html">Enterprise Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/industry-solutions.html">Industry Solutions</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/company/index.html">About Us</a></li>
+          <li><a href="https://www.salesboom.com/company/company-contact.html">Contact Us</a></li>
+          <li><a href="https://www.salesboom.com/customers/index.html">Customers</a></li>
+          <li><a href="https://www.salesboom.com/partners/index.html">Partners</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/support/index.html">Support Center</a></li>
+          <li><a href="https://www.salesboom.com/crm_supportcenter/overview/index.html">Documentation</a></li>
+          <li><a href="https://www.salesboom.com/whitepapers/index.html">White Papers</a></li>
+          <li><a href="https://www.salesboom.com/pop-privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="bg-color">
+    <div class="container">
+     <div class="footer-bottom pb-3 mt-3">
+      <p>&copy; 2003-2025 <a class="text-white fw-bold" href="https://www.salesboom.com">Salesboom.com</a> Inc. All rights reserved. | Call: 1-855-229-2043</p>
+      <p style="margin-top: 10px;">Salesboom's color-coded CRM lead management software helps businesses visually prioritize sales opportunities with automated workflow rules. Contact us to learn how color coding can transform your lead management process and increase sales productivity.</p>
+    </div>
+    </div>
+  </div>
+ 
+</footer>
+
+<!-- Common JavaScript -->
+<script src="content/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+
+<script>
+// Loading Screen
+window.addEventListener('load', function() {
+  const loadingScreen = document.getElementById('loading-screen');
+  setTimeout(function() {
+    loadingScreen.classList.add('fade-out');
+    setTimeout(function() {
+      loadingScreen.style.display = 'none';
+    }, 500);
+  }, 800);
+});
+
+// Scroll to Top Button
+const scrollTopBtn = document.getElementById('scroll-top');
+
+window.addEventListener('scroll', function() {
+  if (window.pageYOffset > 300) {
+    scrollTopBtn.classList.add('visible');
+  } else {
+    scrollTopBtn.classList.remove('visible');
+  }
+});
+
+scrollTopBtn.addEventListener('click', function() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+</script>
+
+</body>
+</html>
+
