@@ -1,0 +1,1914 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+<!-- Primary Meta Tags -->
+<title>Google AI Creative Models + Salesboom CRM Integration</title>
+<meta name="description" content="Transform generative AI into revenue-driving business systems. Salesboom integrates Google's Imagen, Veo, and Gemini Audio with CRM for measurable results.">
+<meta name="keywords" content="Google AI integration, Creative AI for business, Imagen 3 CRM, Veo video generation, Gemini audio models, AI content automation, CRM creative intelligence, Multi-LLM orchestration, Enterprise AI solutions">
+<link rel="canonical" href="https://www.salesboom.com/agentic-ai/google-ai-creative-models-crm.html">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.salesboom.com/agentic-ai/google-ai-creative-models-crm.html">
+<meta property="og:title" content="Google AI Creative Models + Salesboom CRM Integration">
+<meta property="og:description" content="Transform generative AI into revenue-driving business systems. Salesboom integrates Google's Imagen, Veo, and Gemini Audio with CRM for measurable results.">
+<meta property="og:image" content="https://www.salesboom.com/img/google-ai-creative-models-crm-og.jpg">
+<meta property="og:site_name" content="Salesboom CRM">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://www.salesboom.com/agentic-ai/google-ai-creative-models-crm.html">
+<meta name="twitter:title" content="Google AI Creative Models + Salesboom CRM Integration">
+<meta name="twitter:description" content="Transform generative AI into revenue-driving business systems. Salesboom integrates Google's Imagen, Veo, and Gemini Audio with CRM for measurable results.">
+<meta name="twitter:image" content="https://www.salesboom.com/img/google-ai-creative-models-crm-og.jpg">
+<meta name="twitter:site" content="@SalesboomCloud">
+
+<!-- Schema.org Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Salesboom Google AI Creative Models CRM Integration",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Cloud",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "description": "Transform generative AI into revenue-driving business systems. Salesboom integrates Google's Imagen, Veo, and Gemini Audio with CRM for measurable results.",
+  "provider": {
+    "@type": "Organization",
+    "name": "Salesboom",
+    "url": "https://www.salesboom.com"
+  }
+}
+</script>
+
+<!-- Favicon -->
+<link rel="shortcut icon" href="https://www.salesboom.com/favicon.ico">
+
+
+    <link rel="stylesheet" href="content/css/bootstrap.min.css">
+    <link rel="stylesheet" href="content/css/salesboom-common.css">
+    <link rel="shortcut icon" href="content/image/salesboom-logo-252x67.png" type="image/x-icon"> 
+    
+    
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --primary-color: #002f6c;
+  --secondary-color: #0051a8;
+  --accent-color: #00a3e0;
+  --success-color: #28a745;
+  --warning-color: #f89434;
+  --text-dark: #1a1a1a;
+  --text-light: #666;
+  --bg-light: #f8f9fa;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--text-dark);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Loading Screen */
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease-out;
+}
+
+#loading-screen.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loader {
+  width: 60px;
+  height: 60px;
+  border: 5px solid rgba(255, 255, 255, 0.3);
+  border-top: 5px solid var(--white);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Scroll to Top Button */
+#scrollTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: var(--primary-color);
+  color: var(--white);
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 47, 108, 0.3);
+}
+
+#scrollTopBtn.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+#scrollTopBtn:hover {
+  background: var(--secondary-color);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 47, 108, 0.4);
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: var(--white);
+  padding: 100px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+  opacity: 0.3;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 25px;
+  line-height: 1.2;
+}
+
+.hero-section p {
+  font-size: 1.3rem;
+  margin-bottom: 35px;
+  opacity: 0.95;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Content Sections */
+.content-section {
+  padding: 80px 0;
+}
+
+.content-section.bg-light {
+  background: var(--bg-light);
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.section-content {
+  font-size: 1.1rem;
+  color: var(--text-dark);
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+.section-content p {
+  margin-bottom: 20px;
+}
+
+.section-content strong {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* Subsection Headers */
+.subsection-header {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.subsection-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+/* Feature Cards */
+.feature-card {
+  background: var(--white);
+  padding: 35px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+  border-top: 4px solid var(--primary-color);
+  height: 100%;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 47, 108, 0.15);
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.feature-card h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+  margin-bottom: 12px;
+}
+
+.feature-card p {
+  color: var(--text-light);
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+/* Creative Pillar Cards */
+.creative-pillar-card {
+  background: var(--white);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin-bottom: 30px;
+  border-left: 5px solid var(--accent-color);
+  transition: all 0.3s ease;
+}
+
+.creative-pillar-card:hover {
+  transform: translateX(5px);
+  box-shadow: 0 6px 16px rgba(0, 47, 108, 0.12);
+}
+
+.creative-pillar-card h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.creative-pillar-card h4 i {
+  color: var(--accent-color);
+  font-size: 1.8rem;
+}
+
+.creative-pillar-card p {
+  color: var(--text-dark);
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+/* List Styling */
+.content-section ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 25px;
+}
+
+.content-section ul li {
+  padding-left: 35px;
+  position: relative;
+  margin-bottom: 15px;
+  color: var(--text-dark);
+  line-height: 1.7;
+}
+
+.content-section ul li::before {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  color: var(--success-color);
+  font-size: 1.2rem;
+}
+
+/* Highlight Box */
+.highlight-box {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: var(--white);
+  padding: 40px;
+  border-radius: 12px;
+  margin: 40px 0;
+  box-shadow: 0 6px 20px rgba(0, 47, 108, 0.2);
+}
+
+.highlight-box h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.highlight-box p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  opacity: 0.95;
+  margin-bottom: 15px;
+}
+
+.highlight-box ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.highlight-box ul li {
+  padding-left: 35px;
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.highlight-box ul li::before {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+}
+
+/* Info Box */
+.info-box {
+  background: var(--bg-light);
+  border-left: 4px solid var(--primary-color);
+  padding: 30px;
+  border-radius: 8px;
+  margin: 30px 0;
+}
+
+.info-box h4 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.info-box p {
+  color: var(--text-dark);
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+
+/* Advantage Card */
+.advantage-card {
+  background: var(--white);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  margin-bottom: 25px;
+  border-left: 5px solid var(--success-color);
+  transition: all 0.3s ease;
+}
+
+.advantage-card:hover {
+  transform: translateX(5px);
+  box-shadow: 0 6px 16px rgba(0, 47, 108, 0.12);
+}
+
+.advantage-card h4 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.advantage-card h4 i {
+  color: var(--success-color);
+}
+
+.advantage-card p {
+  color: var(--text-dark);
+  line-height: 1.7;
+}
+
+/* Use Case Card */
+.usecase-card {
+  background: var(--white);
+  padding: 35px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  border-top: 4px solid var(--warning-color);
+}
+
+.usecase-card h4 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.usecase-card p {
+  color: var(--text-dark);
+  line-height: 1.7;
+}
+
+/* Problem Card */
+.problem-card {
+  background: var(--white);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  margin-bottom: 15px;
+  border-left: 4px solid #e74c3c;
+}
+
+.problem-card p {
+  color: var(--text-dark);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* CTA Section */
+.cta-section {
+  background: var(--primary-color);
+  color: var(--white);
+  padding: 80px 0;
+  text-align: center;
+}
+
+.cta-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.cta-section p {
+  font-size: 1.2rem;
+  margin-bottom: 35px;
+  opacity: 0.95;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 18px 45px;
+  background: var(--white);
+  color: var(--primary-color);
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover {
+  background: var(--bg-light);
+  color: var(--primary-color);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Icon Box */
+.icon-box {
+  text-align: center;
+  padding: 30px 20px;
+  margin-bottom: 30px;
+}
+
+.icon-box i {
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.icon-box h4 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.icon-box p {
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+/* Stats Section */
+.stats-section {
+  background: var(--primary-color);
+  color: var(--white);
+  padding: 60px 0;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 20px;
+}
+
+.stat-item h3 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.stat-item p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* KPI Box */
+.kpi-box {
+  background: var(--white);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.kpi-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 47, 108, 0.12);
+}
+
+.kpi-box i {
+  font-size: 2rem;
+  color: var(--accent-color);
+  margin-bottom: 15px;
+}
+
+.kpi-box h5 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.kpi-box p {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-section p {
+    font-size: 1.1rem;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .subsection-header {
+    font-size: 1.5rem;
+  }
+  
+  .content-section {
+    padding: 50px 0;
+  }
+  
+  #scrollTopBtn {
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+  }
+  
+  .feature-card, .creative-pillar-card {
+    padding: 25px;
+  }
+  
+  .highlight-box {
+    padding: 30px 20px;
+  }
+}
+
+/* Fade In Animation */
+.fade-in {
+  animation: fadeIn 0.8s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Loading Screen -->
+<div id="loading-screen">
+  <div class="loader"></div>
+</div>
+
+<!-- Scroll to Top Button -->
+<button id="scrollTopBtn" title="Go to top">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+    <!-- Top Bar -->
+<div class="top-bar">
+  <div class="container">
+    <div class="top-bar-left text-color">
+      <span>✓ Award-Winning Cloud CRM Software Since 2003</span>
+    </div>
+    <ul class="top-bar-nav">
+      <li><a href="https://www.salesboom.com/crm_supportcenter/overview/index.html">Support Center</a></li>
+      <li><a href="https://www.salesboom.com/crm_trial.html">Free Trial</a></li>
+      <li><a href="https://www.salesboom.com/login.html">Login</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Main Header -->
+<header>
+  <div class="main-header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <a href="https://www.salesboom.com" aria-label="Salesboom CRM Home">
+            <img src="https://www.salesboom.com/img/salesboom-logo-252x67.png" alt="Salesboom Cloud CRM Logo" width="252" height="67">
+          </a>
+        </div>
+        <div class="header-phone">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          <a href="tel:+18552292043">1-855-229-2043</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+
+
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="container">
+    <div class="hero-content fade-in">
+      <h1>From Generative Content to Revenue-Driving Business Systems</h1>
+      <p>Most organizations stop at creating content. Salesboom connects Google's AI creative models to CRM, workflows, and outcomes—turning creativity into measurable business impact.</p>
+   
+   
+ <a href="gemini-google-workspace-ai-crm.html" class="text-white border-bottom">   back to home <i class="fa-solid fa-arrow-right"></i>      </a>
+   
+<div class="hero-cta mt-3 pt-0">
+  <a href="https://www.salesboom.com/request-crm-demo.html" class="cta-button ">
+    <i class="fas fa-calendar-check me-2"></i>Book a Demo
+  </a>
+  <a href="https://www.salesboom.com/crm_trial.html" class="cta-button ">
+    <i class="fas fa-rocket me-2"></i>Start Free Trial
+  </a>
+</div>
+
+   
+    </div>
+  </div>
+</section>
+
+<!-- Stats Section -->
+<section class="stats-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 col-6">
+        <div class="stat-item">
+          <h3 class="text-white">22+</h3>
+          <p>Years of Integration</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-6">
+        <div class="stat-item">
+          <h3 class="text-white">3,500+</h3>
+          <p>Businesses Served</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-6">
+        <div class="stat-item">
+          <h3 class="text-white">3</h3>
+          <p>AI Models Integrated</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-6">
+        <div class="stat-item">
+          <h3 class="text-white">90</h3>
+          <p>Days to ROI</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 1: Problem Statement -->
+<section class="content-section">
+  <div class="container">
+    <h2 class="section-title">The Creative AI Disconnection Crisis</h2>
+    <div class="section-content">
+      <p class="lead text-center mb-5">Most organizations experimenting with generative AI stop at creation. They generate images, videos, copy, and voiceovers—but fail to connect those assets to the systems that drive business outcomes.</p>
+      
+      <h3 class="subsection-header text-center mt-5 mb-4"><i class="fas fa-unlink me-2"></i>Creative AI Without Integration Creates Content Without Consequence:</h3>
+      
+      <div class="row">
+        <div class="col-lg-6 mb-3">
+          <div class="problem-card">
+            <p><i class="fas fa-times-circle me-2"></i>Marketing assets disconnected from CRM data and customer intelligence</p>
+          </div>
+        </div>
+        <div class="col-lg-6 mb-3">
+          <div class="problem-card">
+            <p><i class="fas fa-times-circle me-2"></i>Sales collateral that ignores account context and deal stage</p>
+          </div>
+        </div>
+        <div class="col-lg-6 mb-3">
+          <div class="problem-card">
+            <p><i class="fas fa-times-circle me-2"></i>Support materials isolated from operational workflows</p>
+          </div>
+        </div>
+        <div class="col-lg-6 mb-3">
+          <div class="problem-card">
+            <p><i class="fas fa-times-circle me-2"></i>Video content with no connection to marketing performance or attribution</p>
+          </div>
+        </div>
+        <div class="col-lg-6 mb-3">
+          <div class="problem-card">
+            <p><i class="fas fa-times-circle me-2"></i>Images and visuals that lack brand governance and consistency</p>
+          </div>
+        </div>
+      </div>
+      
+      <p class="mt-4 text-center lead">This fragmented approach results in beautiful content that fails to move the business forward. Creative outputs become isolated artifacts rather than integrated business assets.</p>
+      
+      <div class="highlight-box mt-5">
+        <h3><i class="fas fa-lightbulb me-2"></i>The Real Opportunity: Operationalizing Creativity</h3>
+        <p>The real opportunity lies in operationalizing creativity—connecting Google's AI creative models to CRM, workflows, and measurable outcomes. This is exactly what Salesboom, with 22+ years of Build-to-Suit integration expertise, is designed to deliver.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 2: Solution Overview -->
+<section class="content-section bg-light">
+  <div class="container">
+    <h2 class="section-title">Enterprise-Grade Creative Intelligence That Drives Business Results</h2>
+    <div class="section-content">
+      <p class="lead text-center mb-5">Google's creative models are not design toys. They are enterprise-grade content engines built to operate inside business workflows, at scale, with governance, across teams, and with multimodal intelligence.</p>
+      
+      <p class="text-center mb-5"><strong>Salesboom transforms these creative capabilities into operational business systems by connecting three core creative pillars to your CRM and business processes:</strong></p>
+      
+      <!-- Imagen 3 -->
+      <div class="creative-pillar-card">
+        <h4><i class="fas fa-image"></i>Imagen 3 – Visual Intelligence at Business Speed</h4>
+        <p>High-fidelity image generation that produces brand-consistent visuals, product imagery, and concept renderings without design bottlenecks. Unlike generic stock imagery or slow creative cycles, Imagen 3 delivers rapid iteration with consistent branding—all connected to CRM context.</p>
+        
+        <h5 class="mt-4 mb-3" style="color: var(--primary-color); font-weight: 600;"><i class="fas fa-cogs me-2"></i>Salesboom integrates Imagen 3 across your business operations:</h5>
+        <ul>
+          <li>Deal-specific pitch visuals generated automatically from CRM account data</li>
+          <li>Industry-specific proposal imagery tailored to each prospect</li>
+          <li>Account-based sales collateral created at scale</li>
+          <li>Campaign visuals tied directly to customer personas and segments</li>
+          <li>Website and landing page imagery generated on-demand</li>
+          <li>Social content variations driven by real-time performance data</li>
+          <li>Visual troubleshooting guides for support teams</li>
+          <li>Product usage diagrams and customer-specific documentation</li>
+        </ul>
+        
+        <p class="mt-3 mb-0"><em>We orchestrate Imagen 3 alongside Gemini for Workspace-native workflows, ChatGPT for rapid creative ideation, and Claude for brand consistency—always choosing the best AI for each creative task.</em></p>
+      </div>
+      
+      <!-- Veo -->
+      <div class="creative-pillar-card">
+        <h4><i class="fas fa-video"></i>Veo – Video as a First-Class Business Asset</h4>
+        <p>High-quality video generation with storyboard-driven narratives and scalable creation capabilities. Veo eliminates the high production costs, slow turnaround, and inconsistent messaging that plague traditional video creation—while connecting every video to CRM and analytics.</p>
+        
+        <h5 class="mt-4 mb-3" style="color: var(--primary-color); font-weight: 600;"><i class="fas fa-cogs me-2"></i>Salesboom builds Veo-powered video systems across your organization:</h5>
+        <ul>
+          <li>Personalized product demo videos generated for each account</li>
+          <li>Proposal walkthrough videos auto-generated from Google Docs</li>
+          <li>Executive summary videos delivered to key stakeholders</li>
+          <li>Campaign videos produced from go-to-market plans</li>
+          <li>Social media video variants created at scale</li>
+          <li>Video content tied directly to CRM attribution and performance tracking</li>
+          <li>AI-generated onboarding videos for new customers</li>
+          <li>Feature update explainers and training assets</li>
+        </ul>
+        
+        <p class="mt-3 mb-0"><em>By connecting Veo output directly to CRM records, campaign tracking, and customer journeys, we transform video into a measurable revenue and retention asset—not just creative output.</em></p>
+      </div>
+      
+      <!-- Gemini Audio -->
+      <div class="creative-pillar-card">
+        <h4><i class="fas fa-microphone"></i>Gemini Audio & Voice Models – The Human Interface Layer</h4>
+        <p>Natural-sounding narration, multilingual communication, accessibility features, and real-time transcription capabilities that eliminate manual documentation and language barriers. Gemini's audio models handle the tasks that consume hours of employee time and create inconsistent customer experiences.</p>
+        
+        <h5 class="mt-4 mb-3" style="color: var(--primary-color); font-weight: 600;"><i class="fas fa-cogs me-2"></i>Salesboom implements audio intelligence throughout your operations:</h5>
+        <ul>
+          <li>Call summaries automatically pushed into CRM after every conversation</li>
+          <li>Voice-driven CRM updates that eliminate manual data entry</li>
+          <li>AI coaching feedback on sales and support conversations</li>
+          <li>Voice-based ticket summaries for support teams</li>
+          <li>Multilingual customer responses for global audiences</li>
+          <li>Automated knowledge capture from meetings and calls</li>
+          <li>Podcast and webinar narration generation</li>
+          <li>Voice content repurposing across channels</li>
+          <li>Audio summaries for busy executives</li>
+        </ul>
+        
+        <p class="mt-3 mb-0"><em>We combine Gemini Audio with ChatGPT for conversational flow and Claude for clarity, safety, and tone—delivering the optimal voice experience for each use case.</em></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 3: CRM-Connected Creative Intelligence -->
+<section class="content-section">
+  <div class="container">
+    <h2 class="section-title">Why Creative AI Needs CRM Context</h2>
+    <div class="section-content">
+      <div class="highlight-box mb-5">
+        <h3 style="text-align: center; font-size: 2rem;">Creative AI without context produces noise.<br>Creative AI grounded in CRM produces results.</h3>
+      </div>
+      
+      <p class="lead">The fundamental difference between generating content and running a business is context. When creative AI operates in isolation, it creates beautiful assets that miss the mark—generic images that don't resonate with specific accounts, videos that ignore customer journeys, and voice content disconnected from actual customer interactions.</p>
+      
+      <h3 class="subsection-header mt-5 mb-4 text-center">Salesboom Ensures Every Creative Output Is Informed by Business Intelligence:</h3>
+      
+      <div class="row">
+        <div class="col-lg-6 mb-4">
+          <div class="info-box">
+            <h4><i class="fas fa-bullseye me-2"></i>Image Intelligence</h4>
+            <p>Every image knows who it's for, what stage they're in, and what messaging resonates</p>
+          </div>
+        </div>
+        
+        <div class="col-lg-6 mb-4">
+          <div class="info-box">
+            <h4><i class="fas fa-film me-2"></i>Video Intelligence</h4>
+            <p>Every video knows why it exists, what outcome it should drive, and how success will be measured</p>
+          </div>
+        </div>
+        
+        <div class="col-lg-6 mb-4">
+          <div class="info-box">
+            <h4><i class="fas fa-volume-up me-2"></i>Voice Intelligence</h4>
+            <p>Every voice asset aligns with complete customer history, preferences, and previous interactions</p>
+          </div>
+        </div>
+        
+        <div class="col-lg-6 mb-4">
+          <div class="info-box">
+            <h4><i class="fas fa-chart-line me-2"></i>Business Impact</h4>
+            <p>Every creative output maps directly to a business outcome—pipeline growth, customer retention, or operational efficiency</p>
+          </div>
+        </div>
+      </div>
+      
+      <p class="mt-4 text-center lead">This CRM integration transforms creativity from a subjective marketing function into a measurable business system with clear ROI, attribution, and performance metrics.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Section 4: Multi-LLM Orchestration -->
+<section class="content-section bg-light">
+  <div class="container">
+    <h2 class="section-title">Best-in-Class AI Through Multi-LLM Intelligence</h2>
+    <div class="section-content">
+      <p class="lead text-center mb-5">Salesboom deliberately orchestrates multiple AI models to deliver superior creative and business outcomes. We don't pledge allegiance to a single vendor—we choose the best LLM for each specific task.</p>
+      
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="feature-card h-100 text-center">
+            <div class="feature-icon"><i class="fab fa-google"></i></div>
+            <h3>Gemini</h3>
+            <p>Workspace integration, multimodal capabilities, and enterprise scale</p>
+          </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+          <div class="feature-card h-100 text-center">
+            <div class="feature-icon"><i class="fas fa-comments"></i></div>
+            <h3>ChatGPT (OpenAI)</h3>
+            <p>Creative ideation, rapid iteration, and flexible generation</p>
+          </div>
+        </div>
+        
+        <div class="col-md-4 mb-4">
+          <div class="feature-card h-100 text-center">
+            <div class="feature-icon"><i class="fas fa-brain"></i></div>
+            <h3>Claude (Anthropic)</h3>
+            <p>Long-form narrative, brand tone consistency, and safety</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="info-box mt-5">
+        <h4><i class="fas fa-award me-2"></i>The Build-to-Suit Philosophy Since 2003</h4>
+        <p>This philosophy has guided Salesboom since 2003—long before generative AI entered the mainstream. We've always believed in Build-to-Suit solutions that integrate best-of-breed technologies rather than forcing customers into single-vendor lock-in.</p>
+      </div>
+      
+      <h4 class="mt-5 mb-3" style="color: var(--primary-color);"><i class="fas fa-trophy me-2"></i>The Practical Advantages of Multi-LLM Orchestration:</h4>
+      <ul>
+        <li>Superior creative output by leveraging each model's strengths</li>
+        <li>Reduced vendor dependency and negotiating leverage</li>
+        <li>Future-proof architecture that adapts as AI capabilities evolve</li>
+        <li>Flexibility to optimize for cost, quality, or speed depending on the use case</li>
+        <li>Automatic failover and redundancy for mission-critical workflows</li>
+      </ul>
+      
+      <p class="mt-4"><strong>By connecting multiple AI models to unified CRM data and business processes, we deliver creative intelligence that outperforms any single-vendor approach.</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- Section 5: Business Applications -->
+<section class="content-section">
+  <div class="container">
+    <h2 class="section-title">Transforming Every Business Function with Creative AI</h2>
+    <div class="section-content">
+      <p class="lead text-center mb-5">Salesboom integrates Google's creative AI models into the daily workflows of sales, marketing, and support teams—embedding creativity where it drives measurable impact.</p>
+      
+      <div class="row">
+        <div class="col-lg-4 mb-4">
+          <div class="feature-card h-100">
+            <div class="feature-icon"><i class="fas fa-handshake"></i></div>
+            <h3>Sales Enablement</h3>
+            <p>Generate personalized, CRM-informed creative assets that accelerate deals and increase conversion rates:</p>
+            <ul style="list-style: none; padding: 0; font-size: 0.95rem;">
+              <li style="margin-bottom: 8px;"><i class="fas fa-check text-success me-2"></i>Deal-specific pitch visuals</li>
+              <li style="margin-bottom: 8px;"><i class="fas fa-check text-success me-2"></i>Personalized product demos</li>
+              <li style="margin-bottom: 8px;"><i class="fas fa-check text-success me-2"></i>Proposal walkthrough videos</li>
+              <li style="margin-bottom: 8px;"><i class="fas fa-check text-success me-2"></i>Executive summary videos</li>
+              <li style="margin-bottom: 8px;"><i class="fas fa-check text-success me-2"></i>AI call summaries to CRM</li>
+              <li style="margin-bottom: 8px;"><i class="fas fa-check text-success me-2"></i>Voice-driven CRM updates</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 mb-4">
+          <div class="feature-card h-100">
+            <div class="feature-icon"><i class="fas fa-bullhorn"></i></div>
+            <h3>Marketing Performance</h3>
+            <p>Create, test, and optimize creative assets with direct connection to campaign performance and CRM data:</p>
+            <ul style="list-style: none; padding: 0; font-size: 0.95rem;">
+              <li style="margin-bottom: 8px;"><i class="fas fa-check text-success me-2"></i>Persona-specific visuals</li>
+              <li style="margin-bottom: 8px;"><i class="fas fa-check text-success me-2"></i>On-demand landing page imagery</li>
+              <li style="margin-bottom: 8px;"><i class="fas fa-check text-success me-2"></i>Performance-driven social content</li>
+              <li style="margin-bottom: 8px;"><i class="fas fa-check text-success me-2"></i>Campaign video production</li>
+              <li style="margin-bottom: 8px;"><i class="fas fa-check text-success me-2"></i>Attribution-tracked videos</li>
+              <li style="margin-bottom: 8px;"><i class="fas fa-check text-success me-2"></i>Podcast narration</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 mb-4">
+          <div class="feature-card h-100">
+            <div class="feature-icon"><i class="fas fa-headset"></i></div>
+            <h3>Support & Success</h3>
+            <p>Deliver better customer experiences while reducing operational costs through AI-generated creative assets:</p>
+            <ul style="list-style: none; padding: 0; font-size: 0.95rem;">
+              <li style="margin-bottom: 8px;"><i class="fas fa-check text-success me-2"></i>Visual troubleshooting guides</li>
+              <li style="margin-bottom: 8px;"><i class="fas fa-check text-success me-2"></i>Product usage diagrams</li>
+              <li style="margin-bottom: 8px;"><i class="fas fa-check text-success me-2"></i>Customer-specific training</li>
+              <li style="margin-bottom: 8px;"><i class="fas fa-check text-success me-2"></i>Onboarding videos</li>
+              <li style="margin-bottom: 8px;"><i class="fas fa-check text-success me-2"></i>Multilingual responses</li>
+              <li style="margin-bottom: 8px;"><i class="fas fa-check text-success me-2"></i>Automated knowledge capture</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 6: Governance -->
+<section class="content-section bg-light">
+  <div class="container">
+    <h2 class="section-title">Enterprise-Grade Governance Without Creative Bottlenecks</h2>
+    <div class="section-content">
+      <p class="lead text-center mb-5">Traditional creative tools force organizations to choose between creative freedom and IT control. Salesboom eliminates this tradeoff by delivering creative power within enterprise governance frameworks.</p>
+      
+      <div class="row">
+        <div class="col-lg-6 mb-4">
+          <div class="feature-card h-100">
+            <div class="feature-icon"><i class="fas fa-users"></i></div>
+            <h3>For Business Users</h3>
+            <ul>
+              <li>Create professional content without waiting for specialist availability</li>
+              <li>Faster campaign cycles and sales enablement</li>
+              <li>Less dependency on design team bottlenecks</li>
+              <li>Creativity embedded directly in daily tools and workflows</li>
+              <li>Self-service creative generation with guardrails</li>
+              <li>Immediate access to brand-consistent assets</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="col-lg-6 mb-4">
+          <div class="feature-card h-100">
+            <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+            <h3>For IT, Architects, and Security Teams</h3>
+            <ul>
+              <li>Centralized governance and audit trails for all AI-generated content</li>
+              <li>Permission-aware AI that respects role-based access controls</li>
+              <li>No uncontrolled creative sprawl or shadow IT tools</li>
+              <li>API-driven integration with existing security frameworks</li>
+              <li>Workspace-native identity and permissions</li>
+              <li>Data residency and compliance controls</li>
+              <li>Version control and approval workflows</li>
+              <li>Usage monitoring and cost management</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <p class="mt-4 text-center lead"><strong>Salesboom ensures creative power without chaos—business teams get the creative capabilities they need while IT maintains the control and visibility they require.</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- Old Content -->
+<section class="container py-5">
+
+  <!-- AI Platforms & Agentic Systems Title -->
+<div class="container text-center py-4">
+  <h2 class="fw-bold text-color">
+    AI Platforms & Agentic Systems
+  </h2>
+  <p class="text-muted">
+    Discover AI-powered platforms, autonomous agents, and intelligent CRM solutions
+    designed to automate work, enhance productivity, and drive revenue growth.
+  </p>
+</div>
+  <div class="row g-4">
+    <!-- AI — Work for You -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-lg border-0 text-center p-4">
+        <i class="fa-solid fa-rocket fa-3x mb-3 text-color"></i>
+        <h5 class="fw-bold">AI — Work for You</h5>
+        <p class="text-muted">
+          Learn how AI is designed to automate workflows and deliver results across your organization.
+          <a href="https://www.salesboom.com/products/new/AI-work-for-you.html" class="fw-semibold text-color">
+            Discover how AI works for you 
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <!-- What Are AI Agents -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-lg border-0 text-center p-4">
+        <i class="fa-solid fa-robot fa-3x mb-3 text-color"></i>
+        <h5 class="fw-bold">What Are AI Agents</h5>
+        <p class="text-muted">
+          Understand autonomous AI agents and how they enable intelligent automation across business systems.
+          <a href="https://salesboom.com/What-Are-AI-Agents.html" class="fw-semibold text-color">
+            Explore AI agents 
+          </a>
+        </p>
+      </div>
+    </div>
+
+
+
+    <!-- CRM Integration with Google -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-lg border-0 text-center p-4">
+        <i class="fa-brands fa-google fa-3x mb-3 text-color"></i>
+        <h5 class="fw-bold">CRM Integration — Google</h5>
+        <p class="text-muted">
+          Seamlessly sync your CRM with Google apps like Gmail, Calendar and Drive for unified workflows.
+          <a href="https://www.salesboom.com/CRM-integration-Google.html" class="fw-semibold text-color">
+            Explore Google CRM integration 
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Sales Intelligence Content -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-lg border-0 text-center p-4">
+        <i class="fa-solid fa-chart-bar fa-3x mb-3 text-color"></i>
+        <h5 class="fw-bold">Sales Intelligence Content</h5>
+        <p class="text-muted">
+          Gain deeper insights from your CRM data with powerful analytics and trend metrics.
+          <a href="https://www.salesboom.com/integrated-crm/sales_intelligence_content.html" class="fw-semibold text-color">
+            View sales intelligence 
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <!-- AI-Powered CRM Workflows -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-lg border-0 text-center p-4">
+        <i class="fa-solid fa-layer-group fa-3x mb-3 text-color"></i>
+        <h5 class="fw-bold">AI-Powered CRM Workflows</h5>
+        <p class="text-muted">
+          Adopt AI-driven workflows that elevate CRM execution and business outcomes.
+          <a href="https://www.salesboom.com/agentic-workforce/agentic-workforce-AI-Powered-CRM.html" class="fw-semibold text-color">
+            Discover CRM workflows 
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <!-- AI Agent Management System -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-lg border-0 text-center p-4">
+        <i class="fa-solid fa-sliders fa-3x mb-3 text-color"></i>
+        <h5 class="fw-bold">AI Agent Management System</h5>
+        <p class="text-muted">
+          Centralized platform to deploy, manage and monitor AI agents across your systems.
+          <a href="https://www.salesboom.com/ai-agent-management/ai-agent-management-system.html" class="fw-semibold text-color">
+            Explore agent management 
+          </a>
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Section 7: Bridging Silos -->
+<section class="content-section">
+  <div class="container">
+    <h2 class="section-title">Unified Creative Intelligence Across Business, IT, and Customers</h2>
+    <div class="section-content">
+      <p class="lead">Traditional creative tools divide organizations into competing factions. Marketing creates assets in isolation. IT restricts access due to governance concerns. Sales waits for collateral while deals stall. Customers experience inconsistent messaging and fragmented brand experiences.</p>
+      
+      <div class="highlight-box my-5">
+        <h3><i class="fas fa-link me-2"></i>Salesboom Unifies These Stakeholders Through Integrated Creative Intelligence:</h3>
+        <ul>
+          <li class="text-white">Business users create content inside familiar Workspace tools</li>
+          <li class="text-white">Architects define structure, boundaries, and governance policies</li>
+          <li class="text-white">Developers extend capabilities via APIs and custom agents</li>
+          <li class="text-white">Customers receive consistent, personalized, CRM-informed experiences</li>
+        </ul>
+      </div>
+      
+      <p>This unified approach eliminates the creative bottlenecks, governance conflicts, and customer experience inconsistencies that plague traditional creative stacks.</p>
+      
+      <p class="mt-4"><strong>The result:</strong> faster time-to-market, lower production costs, better brand consistency, and measurable business impact—all while maintaining enterprise control and security.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Section 8: Problems Solved -->
+<section class="content-section bg-light">
+  <div class="container">
+    <h2 class="section-title">Eliminating the Pain Points That Slow Business Growth</h2>
+    <div class="section-content">
+      <p class="lead text-center mb-5">Salesboom's integration of Google AI creative models with CRM directly addresses the challenges that limit business performance:</p>
+      
+      <div class="row">
+        <div class="col-lg-6 mb-3">
+          <div class="problem-card">
+            <p><strong>1.</strong> Generic, non-personalized content that fails to resonate with specific accounts or customer segments</p>
+          </div>
+        </div>
+        <div class="col-lg-6 mb-3">
+          <div class="problem-card">
+            <p><strong>2.</strong> Slow creative turnaround that delays campaigns, sales cycles, and product launches</p>
+          </div>
+        </div>
+        <div class="col-lg-6 mb-3">
+          <div class="problem-card">
+            <p><strong>3.</strong> High production costs that limit creative testing and optimization</p>
+          </div>
+        </div>
+        <div class="col-lg-6 mb-3">
+          <div class="problem-card">
+            <p><strong>4.</strong> Brand inconsistency across channels, teams, and customer touchpoints</p>
+          </div>
+        </div>
+        <div class="col-lg-6 mb-3">
+          <div class="problem-card">
+            <p><strong>5.</strong> Content disconnected from CRM, making attribution and ROI measurement impossible</p>
+          </div>
+        </div>
+        <div class="col-lg-6 mb-3">
+          <div class="problem-card">
+            <p><strong>6.</strong> Limited visibility into creative performance and business impact</p>
+          </div>
+        </div>
+        <div class="col-lg-6 mb-3">
+          <div class="problem-card">
+            <p><strong>7.</strong> Creative tool sprawl creating shadow IT, governance challenges, and wasted spending</p>
+          </div>
+        </div>
+        <div class="col-lg-6 mb-3">
+          <div class="problem-card">
+            <p><strong>8.</strong> Poor enablement assets that fail to support sales and support teams</p>
+          </div>
+        </div>
+        <div class="col-lg-6 mb-3">
+          <div class="problem-card">
+            <p><strong>9.</strong> Knowledge trapped in people's heads rather than captured in searchable, reusable formats</p>
+          </div>
+        </div>
+        <div class="col-lg-6 mb-3">
+          <div class="problem-card">
+            <p><strong>10.</strong> Inaccessible content for global audiences due to language barriers</p>
+          </div>
+        </div>
+      </div>
+      
+      <p class="mt-4 text-center lead">Each pain point represents both operational inefficiency and missed revenue opportunities. By connecting creative AI to CRM and business workflows, Salesboom transforms these challenges into competitive advantages.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Section 9: Competitive Advantages -->
+<section class="content-section">
+  <div class="container">
+    <h2 class="section-title">Why Salesboom Outperforms Traditional Creative Stacks</h2>
+    <div class="section-content">
+      <p class="lead text-center mb-5">Organizations choosing Salesboom for Google AI creative integration gain decisive advantages over competitors using disconnected creative tools:</p>
+      
+      <div class="row">
+        <div class="col-lg-6 mb-4">
+          <div class="advantage-card">
+            <h4><i class="fas fa-laptop"></i>Embedded Into Daily Workflows</h4>
+            <p>Creative generation happens inside Workspace, CRM, and business tools—not separate applications requiring context switching and data migration</p>
+          </div>
+        </div>
+        
+        <div class="col-lg-6 mb-4">
+          <div class="advantage-card">
+            <h4><i class="fas fa-user-tie"></i>CRM-Aware Personalization</h4>
+            <p>Every creative asset leverages complete customer intelligence, interaction history, and behavioral data for maximum relevance and impact</p>
+          </div>
+        </div>
+        
+        <div class="col-lg-6 mb-4">
+          <div class="advantage-card">
+            <h4><i class="fas fa-th-large"></i>Multi-Modal by Design</h4>
+            <p>Seamlessly combine images, video, and voice in unified campaigns and customer experiences without tool sprawl</p>
+          </div>
+        </div>
+        
+        <div class="col-lg-6 mb-4">
+          <div class="advantage-card">
+            <h4><i class="fas fa-clipboard-check"></i>Governed and Auditable</h4>
+            <p>Complete visibility into who created what, when, and why—with enterprise controls and approval workflows</p>
+          </div>
+        </div>
+        
+        <div class="col-lg-6 mb-4">
+          <div class="advantage-card">
+            <h4><i class="fas fa-rocket"></i>Faster Time-to-Market</h4>
+            <p>Eliminate creative bottlenecks and approval delays with AI-generated assets that meet brand standards automatically</p>
+          </div>
+        </div>
+        
+        <div class="col-lg-6 mb-4">
+          <div class="advantage-card">
+            <h4><i class="fas fa-dollar-sign"></i>Lower Production Cost</h4>
+            <p>Reduce dependency on expensive external agencies and specialized creative resources</p>
+          </div>
+        </div>
+        
+        <div class="col-lg-6 mb-4">
+          <div class="advantage-card">
+            <h4><i class="fas fa-sitemap"></i>Scales Across Teams</h4>
+            <p>Democratize creative capabilities while maintaining brand consistency and IT governance</p>
+          </div>
+        </div>
+        
+        <div class="col-lg-6 mb-4">
+          <div class="advantage-card">
+            <h4><i class="fas fa-chart-line"></i>Measurable Business Impact</h4>
+            <p>Track creative contribution to pipeline, revenue, retention, and customer satisfaction with CRM integration</p>
+          </div>
+        </div>
+        
+        <div class="col-lg-6 mb-4">
+          <div class="advantage-card">
+            <h4><i class="fas fa-infinity"></i>Future-Proof AI Architecture</h4>
+            <p>Multi-LLM orchestration adapts as AI capabilities evolve without vendor lock-in or platform migration</p>
+          </div>
+        </div>
+        
+        <div class="col-lg-6 mb-4">
+          <div class="advantage-card">
+            <h4><i class="fas fa-arrows-rotate"></i>Built to Evolve</h4>
+            <p>Modular Build-to-Suit architecture extends and adapts to changing business needs without breaking existing workflows</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 10: Use Cases -->
+<section class="content-section bg-light">
+  <div class="container">
+    <h2 class="section-title">Real-World Applications Across Industries</h2>
+    <div class="section-content">
+      <p class="lead text-center mb-5">Organizations across industries leverage Salesboom's Google AI creative integration to solve specific business challenges and drive measurable outcomes.</p>
+      
+      <div class="usecase-card">
+        <h4><i class="fas fa-university me-2"></i>Financial Services Sales Enablement</h4>
+        <p>Generate personalized investment strategy presentations with Imagen 3 visuals tailored to each client's portfolio, risk profile, and financial goals—all pulled from CRM data. Veo creates explanation videos for complex products.</p>
+        <p><strong>Result:</strong> Close rates improved 34% with personalized creative.</p>
+      </div>
+      
+      <div class="usecase-card">
+        <h4><i class="fas fa-laptop-code me-2"></i>SaaS Product Marketing</h4>
+        <p>Automatically produce feature demo videos with Veo for each product update, personalized by user segment and use case. Imagen 3 generates social media visuals for multi-channel campaigns.</p>
+        <p><strong>Result:</strong> Marketing velocity increased 3x while maintaining brand consistency.</p>
+      </div>
+      
+      <div class="usecase-card">
+        <h4><i class="fas fa-industry me-2"></i>Manufacturing Customer Support</h4>
+        <p>Create visual troubleshooting guides with Imagen 3 for common technical issues. Gemini Audio generates multilingual support responses. Video training materials produced with Veo.</p>
+        <p><strong>Result:</strong> Support ticket resolution time decreased 47%.</p>
+      </div>
+      
+      <div class="usecase-card">
+        <h4><i class="fas fa-heartbeat me-2"></i>Healthcare Patient Education</h4>
+        <p>Produce patient-specific educational videos with Veo based on diagnosis and treatment plan. Imagen 3 creates visual aids for complex medical concepts. Gemini Audio delivers narration in patient's preferred language.</p>
+        <p><strong>Result:</strong> Patient comprehension and satisfaction scores increased significantly.</p>
+      </div>
+      
+      <div class="usecase-card">
+        <h4><i class="fas fa-home me-2"></i>Real Estate Property Marketing</h4>
+        <p>Generate property-specific marketing visuals with Imagen 3 that highlight features matching buyer preferences from CRM. Veo creates virtual tour videos. Gemini Audio produces multilingual property descriptions.</p>
+        <p><strong>Result:</strong> Days on market reduced by 23%.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 11: Measuring Success -->
+<section class="content-section">
+  <div class="container">
+    <h2 class="section-title">Quantifiable Business Impact Through Creative Intelligence</h2>
+    <div class="section-content">
+      <p class="lead text-center mb-5">Salesboom's CRM integration enables precise measurement of creative AI contribution to business outcomes—transforming creativity from unmeasurable "brand building" into data-driven revenue and efficiency gains.</p>
+      
+      <h3 class="subsection-header text-center mt-5 mb-4">Key Performance Indicators Tracked Automatically:</h3>
+      
+      <div class="row">
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="kpi-box">
+            <i class="fas fa-funnel-dollar"></i>
+            <h5>Pipeline Impact</h5>
+            <p>Creative asset impact on pipeline velocity and deal close rates</p>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="kpi-box">
+            <i class="fas fa-chart-line"></i>
+            <h5>Conversion Rates</h5>
+            <p>Conversion rate improvements by creative variant and customer segment</p>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="kpi-box">
+            <i class="fas fa-clock"></i>
+            <h5>Time Savings</h5>
+            <p>Time savings from automated creative generation versus manual production</p>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="kpi-box">
+            <i class="fas fa-dollar-sign"></i>
+            <h5>Cost Reduction</h5>
+            <p>Cost reduction from decreased agency dependency and specialist requirements</p>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="kpi-box">
+            <i class="fas fa-life-ring"></i>
+            <h5>Ticket Deflection</h5>
+            <p>Support ticket deflection through self-service visual and video content</p>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="kpi-box">
+            <i class="fas fa-smile"></i>
+            <h5>Customer Satisfaction</h5>
+            <p>Customer satisfaction score changes correlated with creative quality</p>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="kpi-box">
+            <i class="fas fa-tachometer-alt"></i>
+            <h5>Production Velocity</h5>
+            <p>Content production velocity (assets per week/month)</p>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="kpi-box">
+            <i class="fas fa-palette"></i>
+            <h5>Brand Consistency</h5>
+            <p>Brand consistency scores across channels and teams</p>
+          </div>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="kpi-box">
+            <i class="fas fa-users"></i>
+            <h5>Employee Adoption</h5>
+            <p>Employee adoption rates and creative self-sufficiency metrics</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="highlight-box mt-5">
+        <h3><i class="fas fa-calculator me-2"></i>ROI Calculation</h3>
+        <p>ROI calculation includes both hard savings (reduced production costs, fewer support tickets) and revenue impact (increased conversion rates, faster sales cycles, higher retention).</p>
+        <p class="mb-0"><strong class="text-white">Most organizations achieve positive ROI within 90 days of implementation through a combination of cost reduction and revenue acceleration.</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 12: Build-to-Suit Difference -->
+<section class="content-section bg-light">
+  <div class="container">
+    <h2 class="section-title">22+ Years of Integration Excellence</h2>
+    <div class="section-content">
+      <p class="lead text-center mb-5">Since 2003, Salesboom has pioneered the Build-to-Suit approach: integrating creative, analytical, and operational systems into coherent business platforms that deliver measurable outcomes.</p>
+      
+      <div class="info-box">
+        <h4><i class="fas fa-history me-2"></i>This Philosophy Predates the Generative AI Revolution by Two Decades</h4>
+        <p><strong>But the principles remain constant:</strong></p>
+        <ul>
+          <li>Choose best-of-breed technologies rather than accepting vendor limitations</li>
+          <li>Integrate creative capabilities into business workflows rather than isolating them in separate tools</li>
+          <li>Ground all technology decisions in measurable business outcomes rather than feature checklists</li>
+          <li>Build modular, adaptable systems that evolve with changing business needs rather than rigid, monolithic platforms</li>
+        </ul>
+      </div>
+      
+      <p class="mt-4">Today, this means orchestrating Google's creative AI models alongside OpenAI and Anthropic capabilities—always choosing the best LLM for each specific task while maintaining unified CRM context and business process integration.</p>
+      
+      <p class="text-center mt-4 lead"><strong>Our Build-to-Suit methodology ensures your creative AI investment delivers sustained competitive advantage rather than temporary technology adoption.</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- Section 13: Future-Proof -->
+<section class="content-section">
+  <div class="container">
+    <h2 class="section-title">Building Systems That Evolve with AI Innovation</h2>
+    <div class="section-content">
+      <p class="lead">The generative AI landscape evolves rapidly. New models launch quarterly with expanded capabilities. Today's cutting-edge features become tomorrow's baseline expectations.</p>
+      
+      <div class="highlight-box my-5">
+        <h3><i class="fas fa-shield-alt me-2"></i>Salesboom's Multi-LLM Orchestration Architecture Ensures Your Creative Intelligence Systems Remain Competitive:</h3>
+        <ul>
+          <li class="text-white">Vendor-agnostic integration allows seamless adoption of new models</li>
+          <li class="text-white">API-driven connectivity adapts to changing model capabilities</li>
+          <li class="text-white">Modular system design enables incremental upgrades without disruption</li>
+          <li class="text-white">CRM data foundation remains stable while AI layers evolve</li>
+          <li class="text-white">Investment protection through platform-independent implementation</li>
+        </ul>
+      </div>
+      
+      <p>Organizations locked into single-vendor creative AI tools face costly migration when superior models emerge. Salesboom customers simply redirect workflows to better-performing models while maintaining business process continuity.</p>
+      
+      <p class="mt-4 text-center lead"><strong>This future-proof architecture protects your creative AI investment while ensuring access to the latest generative capabilities—a critical advantage in rapidly evolving AI markets.</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <h2>Ready to Transform Creative Content Into Business Results?</h2>
+        <p>Discover how Salesboom connects Google AI creative models to your CRM and business workflows. Schedule a consultation to see how Imagen, Veo, and Gemini Audio can drive measurable revenue and efficiency gains in your organization.</p>
+        <div class="mt-4">
+          <a href="https://www.salesboom.com/crm-live-demo.html" class="cta-button me-3 mb-3">
+            <i class="fas fa-calendar-check me-2"></i>Schedule a Demo
+          </a>
+          <a href="https://www.salesboom.com/company/company-contact.html" class="cta-button mb-3">
+            <i class="fas fa-envelope me-2"></i>Contact Us
+          </a>
+        </div>
+        <p class="mt-4 mb-0" style="font-size: 1rem; opacity: 0.9;">
+          <i class="fas fa-phone-alt me-2"></i>Call us: <a href="tel:+18552292043" style="color: white; text-decoration: underline;">1-855-229-2043</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-2">
+      <h3 class="fw-bold text-color">
+        <i class="fa-solid fa-layer-group me-2"></i>
+        Explore Salesboom Editions
+      </h3>
+      <p class="text-muted">Discover powerful CRM editions to scale your business efficiently.</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-briefcase fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Professional Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              A complete CRM suite with Marketing Automation, ERP integration, and Support tools — built for performance and value.
+            </p>
+            <a href="https://www.salesboom.com/editions/professional-edition.html" class="btn btn-color mt-auto">
+              Explore Professional <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-building fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Enterprise Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              For large enterprises — automate workflows, unify data, and leverage analytics to drive strategic growth.
+            </p>
+            <a href="https://www.salesboom.com/editions/enterprise-edition.html" class="btn btn-color mt-auto">
+              View Enterprise <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-users fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Team Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              Perfect for small teams starting with CRM — manage leads, track sales, and boost productivity with simplicity.
+            </p>
+            <a href="https://www.salesboom.com/editions/team-edition.html" class="btn btn-color mt-auto">
+           Discover Team<i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Local Page Cards -->
+<section class="container py-5">
+
+  <!-- AI Enterprise Platforms & Infrastructure Title -->
+<div class="container text-center py-4">
+  <h2 class="fw-bold text-color">AI Enterprise Platforms & Infrastructure</h2>
+  <p class="text-muted">
+    Enterprise-grade AI platforms, infrastructure layers, and governance frameworks
+    powering next-generation intelligent organizations.
+  </p>
+</div>
+
+  <div class="row g-4">
+
+    <!-- Google Workspace AI Powered Enterprise -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-lg border-0 text-center p-4">
+        <i class="fa-brands fa-google fa-3x mb-3 text-color"></i>
+        <h5 class="fw-bold">Google Workspace AI-Powered Enterprise</h5>
+        <p class="text-muted">
+          AI-enhanced productivity across Google Workspace enabling intelligent collaboration,
+          automation, and decision-making.
+          <a href="google-workspace-ai-powered-enterprise.html" class="fw-semibold text-color">
+            Explore enterprise AI 
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Gemini AI Intelligence Layer -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-lg border-0 text-center p-4">
+        <i class="fa-solid fa-brain fa-3x mb-3 text-color"></i>
+        <h5 class="fw-bold">Gemini AI Intelligence Layer</h5>
+        <p class="text-muted">
+          A foundational intelligence layer powered by Gemini AI to drive reasoning,
+          predictions, and autonomous actions across platforms.
+          <a href="gemini-ai-intelligence-layer.html" class="fw-semibold text-color">
+            Discover intelligence layer 
+          </a>
+        </p>
+      </div>
+    </div>
+
+
+
+    <!-- Automation Orchestration Products -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-lg border-0 text-center p-4">
+        <i class="fa-solid fa-diagram-project fa-3x mb-3 text-color"></i>
+        <h5 class="fw-bold">Automation Orchestration Products</h5>
+        <p class="text-muted">
+          Intelligent orchestration platforms coordinating workflows,
+          AI agents, and enterprise systems end-to-end.
+          <a href="automation-orchestration-products.html" class="fw-semibold text-color">
+            Explore orchestration 
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Developer API & Agentic Infrastructure -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-lg border-0 text-center p-4">
+        <i class="fa-solid fa-code fa-3x mb-3 text-color"></i>
+        <h5 class="fw-bold">Developer API & Agentic Infrastructure</h5>
+        <p class="text-muted">
+          APIs and agentic infrastructure enabling developers to build,
+          deploy, and scale autonomous AI systems.
+          <a href="developer-api-agentic-infrastructure.html" class="fw-semibold text-color">
+            View developer platform 
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <!-- AI Security, Governance & Compliance -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-lg border-0 text-center p-4">
+        <i class="fa-solid fa-shield-halved fa-3x mb-3 text-color"></i>
+        <h5 class="fw-bold">AI Security, Governance & Compliance</h5>
+        <p class="text-muted">
+          Enterprise-grade security, governance, and compliance frameworks
+          ensuring safe and responsible AI adoption.
+          <a href="ai-security-governance-compliance.html" class="fw-semibold text-color">
+            Learn about AI governance 
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Commercial Platform Constructs -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-lg border-0 text-center p-4">
+        <i class="fa-solid fa-building-columns fa-3x mb-3 text-color"></i>
+        <h5 class="fw-bold">Commercial Platform Constructs</h5>
+        <p class="text-muted">
+          Scalable commercial platform architectures designed to support
+          monetization, growth, and enterprise operations.
+          <a href="commercial-platform-constructs.html" class="fw-semibold text-color">
+            Explore platform constructs 
+          </a>
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="mt-5 footer">
+  <div class="container mt-5 pt-5">
+    <div class="footer-grid">
+      <div class="footer-section">
+        <h3>Products</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/products/tools-sfa.html">Sales Force Automation</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-marketing.html">Marketing Automation</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-casemanagement.html">Case Management</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-reporting.html">Business Intelligence</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-emailintegration.html">Email Integration</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Solutions</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/products/edition-team.html">Team Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/edition-professional.html">Professional Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/edition-enterprise.html">Enterprise Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/industry-solutions.html">Industry Solutions</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/company/index.html">About Us</a></li>
+          <li><a href="https://www.salesboom.com/company/company-contact.html">Contact Us</a></li>
+          <li><a href="https://www.salesboom.com/customers/index.html">Customers</a></li>
+          <li><a href="https://www.salesboom.com/partners/index.html">Partners</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/support/index.html">Support Center</a></li>
+          <li><a href="https://www.salesboom.com/crm_supportcenter/overview/index.html">Documentation</a></li>
+          <li><a href="https://www.salesboom.com/whitepapers/index.html">White Papers</a></li>
+          <li><a href="https://www.salesboom.com/pop-privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="bg-color">
+    <div class="container">
+     <div class="footer-bottom pb-3 mt-3">
+      <p>&copy; 2003-2025 <a class="text-white fw-bold" href="https://www.salesboom.com">Salesboom.com</a> Inc. All rights reserved. | Call: 1-855-229-2043</p>
+      <p style="margin-top: 10px;">Salesboom's color-coded CRM lead management software helps businesses visually prioritize sales opportunities with automated workflow rules. Contact us to learn how color coding can transform your lead management process and increase sales productivity.</p>
+    </div>
+    </div>
+  </div>
+ 
+</footer>
+
+<!-- Common JavaScript -->
+<script src="content/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+<!-- Custom JavaScript -->
+<script>
+// Loading Screen
+window.addEventListener('load', function() {
+  const loadingScreen = document.getElementById('loading-screen');
+  setTimeout(function() {
+    loadingScreen.classList.add('fade-out');
+    setTimeout(function() {
+      loadingScreen.style.display = 'none';
+    }, 500);
+  }, 800);
+});
+
+// Scroll to Top Button
+const scrollTopBtn = document.getElementById('scrollTopBtn');
+
+window.addEventListener('scroll', function() {
+  if (window.pageYOffset > 300) {
+    scrollTopBtn.classList.add('show');
+  } else {
+    scrollTopBtn.classList.remove('show');
+  }
+});
+
+scrollTopBtn.addEventListener('click', function() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+
+// Smooth Scroll for Anchor Links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    const href = this.getAttribute('href');
+    if (href !== '#' && href !== '#0') {
+      const target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    }
+  });
+});
+
+// Fade-in Animation on Scroll
+const observerOptions = {
+  threshold: 0.1,
+  rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver(function(entries) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = '1';
+      entry.target.style.transform = 'translateY(0)';
+    }
+  });
+}, observerOptions);
+
+// Observe elements for animation
+document.querySelectorAll('.feature-card, .creative-pillar-card, .icon-box, .highlight-box, .info-box, .advantage-card, .usecase-card, .problem-card, .kpi-box').forEach(el => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(20px)';
+  el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+  observer.observe(el);
+});
+</script>
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123069-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-123069-3');
+</script>
+
+</body>
+</html>

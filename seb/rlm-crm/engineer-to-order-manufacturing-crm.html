@@ -1,0 +1,1485 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+<!-- Primary Meta Tags -->
+<title>Engineer-to-Order CRM | Salesboom Manufacturing ERP Integration</title>
+<meta name="description" content="Purpose-built CRM for complex manufacturing. Streamline engineering proposals, project execution, and ERP integration. Trusted by nuclear and aerospace leaders.">
+<meta name="keywords" content="Engineer-to-Order CRM, Manufacturing CRM software, ERP CRM integration, Project-based CRM, Complex proposal management, Bill of Materials CRM, Team Selling CRM, Nuclear manufacturing CRM">
+<link rel="canonical" href="https://www.salesboom.com/rlm-crm/engineer-to-order-manufacturing-crm.html">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.salesboom.com/rlm-crm/engineer-to-order-manufacturing-crm.html">
+<meta property="og:title" content="Engineer-to-Order CRM | Salesboom Manufacturing ERP Integration">
+<meta property="og:description" content="Purpose-built CRM for complex manufacturing. Streamline engineering proposals, project execution, and ERP integration. Trusted by nuclear and aerospace leaders.">
+<meta property="og:image" content="https://www.salesboom.com/img/rlm-crm/engineer-to-order-manufacturing-crm-og.jpg">
+<meta property="og:site_name" content="Salesboom CRM">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://www.salesboom.com/rlm-crm/engineer-to-order-manufacturing-crm.html">
+<meta name="twitter:title" content="Engineer-to-Order CRM | Salesboom Manufacturing ERP Integration">
+<meta name="twitter:description" content="Purpose-built CRM for complex manufacturing. Streamline engineering proposals, project execution, and ERP integration. Trusted by nuclear and aerospace leaders.">
+<meta name="twitter:image" content="https://www.salesboom.com/img/rlm-crm/engineer-to-order-manufacturing-crm-og.jpg">
+<meta name="twitter:site" content="@SalesboomCloud">
+
+<!-- Schema.org structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Salesboom Engineer-to-Order Manufacturing CRM",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web-based, Cloud",
+  "offers": {
+    "@type": "Offer",
+    "price": "14.00",
+    "priceCurrency": "USD",
+    "priceValidUntil": "2026-12-31"
+  },
+  "featureList": [
+    "Team Selling collaboration platform",
+    "Deep ERP integration with BOM management",
+    "Complex proposal and quote management",
+    "Compliance automation for regulated industries",
+    "Revenue Lifecycle Management for custom manufacturing",
+    "AI-powered workflow orchestration"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.5",
+    "ratingCount": "3500"
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "Salesboom",
+    "url": "https://www.salesboom.com",
+    "logo": "https://www.salesboom.com/img/salesboom-logo-252x67.png",
+    "foundingDate": "2003",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-855-229-2043",
+      "contactType": "Customer Service"
+    }
+  }
+}
+</script>
+
+<link rel="shortcut icon" href="https://www.salesboom.com/favicon.ico">
+
+    <link rel="stylesheet" href="content/css/bootstrap.min.css">
+    <link rel="stylesheet" href="content/css/salesboom-common.css">
+    <link rel="shortcut icon" href="content/image/salesboom-logo-252x67.png" type="image/x-icon"> 
+    
+    
+<!-- Font Awesome 6 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+/* Custom CSS */
+:root {
+  --primary-color: #002f6c;
+  --secondary-color: #0052cc;
+  --accent-color: #00a3ff;
+  --dark-bg: #001a3d;
+  --light-bg: #f8f9fa;
+  --text-dark: #333;
+  --text-light: #666;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.7;
+  color: var(--text-dark);
+  background: #fff;
+  overflow-x: hidden;
+}
+
+/* Loading Screen */
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#loading-screen.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader {
+  width: 60px;
+  height: 60px;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid #fff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-text {
+  color: #fff;
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* Scroll to Top Button */
+#scroll-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 47, 108, 0.3);
+}
+
+#scroll-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+#scroll-top:hover {
+  background: var(--secondary-color);
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 47, 108, 0.4);
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-bg) 100%);
+  color: #fff;
+  padding: 100px 0 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+  opacity: 0.4;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.hero-section h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 25px;
+  line-height: 1.2;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.hero-section .subtitle {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  opacity: 0.95;
+  max-width: 950px;
+  margin: 0 auto 40px;
+}
+
+.hero-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px 25px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  backdrop-filter: blur(10px);
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Section Styles */
+.content-section {
+  padding: 80px 0;
+}
+
+.content-section.bg-light {
+  background: var(--light-bg);
+}
+
+.content-section.bg-dark {
+  background: var(--dark-bg);
+  color: #fff;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-title h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.content-section.bg-dark .section-title h2 {
+  color: #fff;
+}
+
+.section-title p {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+.content-section.bg-dark .section-title p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Content Text */
+.content-text {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.content-section.bg-dark .content-text {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* Info Box */
+.info-box {
+  background: var(--light-bg);
+  border-left: 4px solid var(--primary-color);
+  padding: 30px;
+  border-radius: 8px;
+  margin: 30px 0;
+}
+
+.info-box h4 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.info-box ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.info-box li {
+  padding-left: 30px;
+  position: relative;
+  margin-bottom: 12px;
+  color: var(--text-light);
+}
+
+.info-box li::before {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  color: var(--secondary-color);
+  font-size: 14px;
+}
+
+.info-box p {
+  color: var(--text-light);
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+/* Feature Cards */
+.feature-card {
+  background: #fff;
+  padding: 35px;
+  border-radius: 12px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  height: 100%;
+  border-top: 4px solid var(--primary-color);
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.feature-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: #fff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.feature-card h4 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.feature-card p {
+  color: var(--text-light);
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+/* Content Card */
+.content-card {
+  background: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border-left: 5px solid var(--primary-color);
+  margin-bottom: 30px;
+}
+
+.content-card:hover {
+  transform: translateX(5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.content-card h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.content-card h4 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin: 25px 0 15px;
+}
+
+.content-card p {
+  color: var(--text-light);
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.content-card ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 15px 0;
+}
+
+.content-card li {
+  padding-left: 30px;
+  position: relative;
+  margin-bottom: 12px;
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+.content-card li::before {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  color: var(--secondary-color);
+  font-size: 14px;
+}
+
+/* Highlight Box */
+.highlight-box {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  margin: 40px 0;
+  text-align: center;
+}
+
+.highlight-box h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.highlight-box p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  opacity: 0.95;
+  margin: 0;
+}
+
+/* Phase Boxes */
+.phase-box {
+  background: #fff;
+  padding: 35px;
+  border-radius: 12px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+  margin-bottom: 25px;
+  border-left: 5px solid var(--secondary-color);
+}
+
+.phase-box h4 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.phase-box ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.phase-box li {
+  padding-left: 30px;
+  position: relative;
+  margin-bottom: 10px;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+.phase-box li::before {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  color: var(--secondary-color);
+  font-size: 12px;
+}
+
+/* Benefit List */
+.benefit-list {
+  background: var(--light-bg);
+  padding: 30px;
+  border-radius: 12px;
+  margin: 30px 0;
+}
+
+.benefit-list h4 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.benefit-list ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  columns: 2;
+  column-gap: 30px;
+}
+
+.benefit-list li {
+  padding-left: 30px;
+  position: relative;
+  margin-bottom: 15px;
+  color: var(--text-light);
+  break-inside: avoid;
+}
+
+.benefit-list li::before {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  color: var(--secondary-color);
+  font-size: 14px;
+}
+
+/* CTA Section */
+.cta-section {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--dark-bg) 100%);
+  color: #fff;
+  padding: 100px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+  opacity: 0.4;
+}
+
+.cta-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-section h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 25px;
+}
+
+.cta-section p {
+  font-size: 1.3rem;
+  line-height: 1.7;
+  opacity: 0.95;
+  margin-bottom: 40px;
+}
+
+.btn {
+  padding: 16px 40px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #fff;
+  color: var(--primary-color);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+}
+
+.btn-primary:hover {
+  background: var(--light-bg);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(255, 255, 255, 0.4);
+  color: var(--primary-color);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.btn-secondary:hover {
+  background: #fff;
+  color: var(--primary-color);
+  transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-section .subtitle {
+    font-size: 1.2rem;
+  }
+
+  .section-title h2 {
+    font-size: 2rem;
+  }
+
+  .cta-section h2 {
+    font-size: 2.2rem;
+  }
+
+  .benefit-list ul {
+    columns: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 80px 0 60px;
+  }
+
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .hero-section .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .content-section {
+    padding: 60px 0;
+  }
+
+  .section-title h2 {
+    font-size: 1.8rem;
+  }
+
+  .feature-card, .content-card {
+    padding: 30px 20px;
+  }
+
+  .cta-section {
+    padding: 80px 0;
+  }
+
+  .cta-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .cta-section p {
+    font-size: 1.1rem;
+  }
+
+  #scroll-top {
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section h1 {
+    font-size: 1.6rem;
+  }
+
+  .section-title h2 {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    padding: 14px 30px;
+    font-size: 14px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Loading Screen -->
+<div id="loading-screen">
+  <div class="loader"></div>
+  <div class="loading-text">Loading...</div>
+</div>
+
+<!-- Scroll to Top Button -->
+<button id="scroll-top" aria-label="Scroll to top">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+    <!-- Top Bar -->
+<div class="top-bar">
+  <div class="container">
+    <div class="top-bar-left text-color">
+      <span>✓ Award-Winning Cloud CRM Software Since 2003</span>
+    </div>
+    <ul class="top-bar-nav">
+      <li><a href="https://www.salesboom.com/crm_supportcenter/overview/index.html">Support Center</a></li>
+      <li><a href="https://www.salesboom.com/crm_trial.html">Free Trial</a></li>
+      <li><a href="https://www.salesboom.com/login.html">Login</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Main Header -->
+<header>
+  <div class="main-header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <a href="https://www.salesboom.com" aria-label="Salesboom CRM Home">
+            <img src="https://www.salesboom.com/img/salesboom-logo-252x67.png" alt="Salesboom Cloud CRM Logo" width="252" height="67">
+          </a>
+        </div>
+        <div class="header-phone">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          <a href="tel:+18552292043">1-855-229-2043</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <i class="fas fa-industry me-2"></i>Transforming Complex Manufacturing Since 2003
+      </div>
+      <h1>Purpose-Built CRM for Complex Engineer-to-Order Manufacturing</h1>
+      <p class="subtitle">Transform complex proposals into profitable projects. Unify sales, engineering, and manufacturing with deep ERP integration, AI-powered automation, and Revenue Lifecycle Management for high-stakes industries.</p>
+ <a href="revenue-lifecycle-management.html" class="text-white border-bottom">   back to home <i class="fa-solid fa-arrow-right"></i>      </a>
+     
+     
+      <div class="hero-buttons mt-3">
+        <a href="https://www.salesboom.com/request-crm-demo.html" class="btn btn-primary">
+          <i class="fas fa-calendar-check me-2"></i>Schedule Demo
+        </a>
+        <a href="https://www.salesboom.com/crm_trial.html" class="btn btn-secondary">
+          <i class="fas fa-rocket me-2"></i>Start Free Trial
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Problem Statement Section -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-title">
+      <h2>Why Standard CRMs Fail Complex Manufacturing Businesses</h2>
+    </div>
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <p class="content-text">
+          Traditional CRM systems are designed for transactional sales of existing products. But in Engineer-to-Order (ETO) manufacturing—where every project is custom-designed, requires regulatory compliance, and involves multiple engineering disciplines—these generic solutions create more problems than they solve.
+        </p>
+        <div class="info-box">
+          <h4><i class="fas fa-exclamation-triangle me-2"></i>The Unique Challenges of ETO Manufacturing:</h4>
+          <ul>
+            <li>Weeks of engineering work required before a quote can be generated</li>
+            <li>Complex multi-level Bills of Materials that evolve from concept to production</li>
+            <li>Tight integration needed between sales, engineering, quality, and manufacturing teams</li>
+            <li>Regulatory compliance requirements (ASME, ISO, nuclear standards) embedded in every project</li>
+            <li>Long sales cycles requiring collaboration between commercial and technical experts</li>
+            <li>Mission-critical need to preserve "as-sold" margins through "as-built" execution</li>
+            <li>Heavy reliance on CAD files, technical drawings, and compliance documentation</li>
+          </ul>
+        </div>
+        <div class="highlight-box">
+          <h3>The Salesboom Difference</h3>
+          <p>Generic CRM systems cannot handle the complexity of projects like designing a nuclear refurbishment platform or aerospace tooling. Salesboom's Manufacturing CRM is architected specifically for businesses where engineering and sales are inseparable—where the product doesn't exist until your team designs it.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Manufacturing Ecosystem Section -->
+<section class="content-section bg-light">
+  <div class="container">
+    <div class="section-title">
+      <h2>A Unified Platform That Speaks Engineering and Business</h2>
+    </div>
+    <div class="row">
+      <div class="col-lg-11 mx-auto">
+        <div class="content-card">
+          <h3><i class="fas fa-sync-alt me-2"></i>Revenue Lifecycle Management (RLM) Architecture</h3>
+          <p>Salesboom doesn't just track leads—it orchestrates the entire revenue lifecycle from initial inquiry through design, manufacturing, delivery, and long-term service. Our RLM platform unifies the fragmented stages of complex manufacturing into a single data-driven continuum.</p>
+          
+          <h4>The RLM Engine Provides:</h4>
+          <ul>
+            <li>Seamless handoff from sales opportunity to engineering feasibility study</li>
+            <li>Collaborative "Team Selling" environments where Account Executives and Application Engineers work on proposals simultaneously</li>
+            <li>Real-time project profitability tracking comparing quoted margins against actual costs</li>
+            <li>Automated workflow triggers that move projects through design gates and compliance checkpoints</li>
+            <li>Complete asset lifecycle management for long-term service contracts and maintenance revenue</li>
+            <li>Integrated time tracking and resource management across all project phases</li>
+          </ul>
+        </div>
+
+        <div class="content-card">
+          <h3><i class="fas fa-link me-2"></i>Deep ERP Integration: The Missing Link</h3>
+          <p>The gap between CRM and ERP is where profit margins evaporate. Salesboom bridges this gap with our Integration Station—specialized middleware that orchestrates bidirectional data flow between your CRM and manufacturing systems like Epicor BisTrack, SAP, or custom ERPs.</p>
+          
+          <h4>Our Phased Integration Approach Minimizes Risk:</h4>
+          
+          <div class="phase-box">
+            <h4><i class="fas fa-flag me-2"></i>Phase 1: Robust CSV Batch Processing</h4>
+            <ul>
+              <li>Establishes stable data foundation through secure file-based synchronization</li>
+              <li>Validates and cleanses data before committing to ensure accuracy</li>
+              <li>Handles complex hierarchical structures like multi-level BOMs</li>
+              <li>Provides complete audit trails for every data movement</li>
+              <li>Operates on scheduled intervals (hourly, daily) with automatic error handling</li>
+            </ul>
+          </div>
+
+          <div class="phase-box">
+            <h4><i class="fas fa-bolt me-2"></i>Phase 2: Real-Time API Integration</h4>
+            <ul>
+              <li>Unlocks event-driven workflows impossible with batch processing</li>
+              <li>Provides instant inventory availability during quote configuration</li>
+              <li>Pushes live production status updates to sales dashboards</li>
+              <li>Enables dynamic pricing based on current material costs</li>
+              <li>Implements OAuth 2.0 security with exponential backoff retry logic</li>
+            </ul>
+          </div>
+
+          <p style="margin-top: 20px; font-weight: 600; color: var(--primary-color);">This two-phase strategy ensures you never experience the catastrophic failures of "big bang" ERP integrations.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Team Selling Section -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-title">
+      <h2>Engineering Collaboration That Wins High-Stakes Contracts</h2>
+      <p>In complex manufacturing, creating accurate proposals requires weeks of collaboration between commercial teams and multiple engineering disciplines</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <h4>Collaborative Opportunity Workspaces</h4>
+          <p>Each opportunity becomes a shared workspace where Account Executives, Application Engineers, Project Managers, and Quality Specialists work together with role-based permissions. Engineering uploads preliminary CAD files (SolidWorks, STEP, STL), feasibility reports, and compliance checklists directly to the opportunity.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-route"></i>
+          </div>
+          <h4>Intelligent Workflow Routing</h4>
+          <p>Automated routing ensures the right experts review proposals at the right time. When a lead is tagged "Nuclear Industry," the system automatically assigns it to the Application Engineering Group for technical assessment. Quotes exceeding $500,000 trigger mandatory approval hierarchies.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-calculator"></i>
+          </div>
+          <h4>Advanced CPQ for Complex Manufacturing</h4>
+          <p>Configure-Price-Quote functionality tailored for custom projects with multi-level BOMs, material sourcing options, custom labor estimating, and real-time margin visibility. Build complex quotes that reflect true manufacturing costs and preserve profitability.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Competitive Advantages Section -->
+<section class="content-section bg-color">
+  <div class="container">
+    <div class="section-title">
+      <h2 class="text-white">Why Manufacturers Choose Salesboom</h2>
+      <p class="text-white">Purpose-built for the complexity of engineer-to-order manufacturing</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-cogs"></i>
+          </div>
+          <h4>Purpose-Built for ETO</h4>
+          <p>Not adapted from transactional CRM—architected specifically for custom manufacturing where engineering and sales are inseparable. Handles complex BOMs, regulatory compliance, and multi-discipline collaboration natively.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-plug"></i>
+          </div>
+          <h4>Deep ERP Integration Expertise</h4>
+          <p>Proven Integration Station middleware with 22+ years of experience connecting CRMs to manufacturing systems. Specialized connectors for Epicor BisTrack, SAP, and custom ERPs with phased implementation reducing risk.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-project-diagram"></i>
+          </div>
+          <h4>Unified Platform Architecture</h4>
+          <p>Single platform for sales, engineering, project management, service, and analytics—no separate applications, no data silos, complete visibility across the entire revenue lifecycle from first inquiry through multi-year service contracts.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-industry"></i>
+          </div>
+          <h4>Manufacturing Domain Expertise</h4>
+          <p>22+ years serving complex manufacturers in nuclear, aerospace, defense, heavy equipment, and industrial automation. We understand nuclear compliance (ASME, CSA), aerospace quality (AS9100), and ITAR requirements.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-dollar-sign"></i>
+          </div>
+          <h4>Transparent Pricing</h4>
+          <p>Predictable monthly pricing starting at $14/user with all features included. No surprise fees for "premium" integrations, no vendor lock-in, no forced upgrades. Lower total cost of ownership than cobbling together multiple systems.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-flag"></i>
+          </div>
+          <h4>Canadian Innovation</h4>
+          <p>Developed and hosted in Canada ensuring data sovereignty for defense contractors and regulated industries. Not subject to foreign data access laws. Continuous innovation from our in-house development team delivering quarterly updates.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Blogs -->
+<section class="container py-5">
+  <div class="text-center mb-5">
+    <h2 class="fw-bold text-color">Salesboom Blog Insights</h2>
+  </div>
+
+  <div class="row g-4">
+
+    <!-- Construction CRM + Revenue Management -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-lg border-0 text-center p-4">
+        <i class="fa-solid fa-hard-hat fa-3x mb-3 text-color"></i>
+        <h5 class="fw-bold">Construction CRM & Revenue</h5>
+        <p class="text-muted">
+          Read about 
+          <a href="https://blog.salesboom.com/construction-crm-revenue-management" class="fw-semibold text-color">
+            construction CRM revenue management
+          </a>
+          trends and practices.
+        </p>
+      </div>
+    </div>
+
+    <!-- Healthcare Revenue Lifecycle Management -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-lg border-0 text-center p-4">
+        <i class="fa-solid fa-hospital fa-3x mb-3 text-color"></i>
+        <h5 class="fw-bold">Healthcare Revenue Lifecycle</h5>
+        <p class="text-muted">
+          Explore insights on 
+          <a href="https://blog.salesboom.com/revenue-lifecycle-management-healthcare" class="fw-semibold text-color">
+            revenue lifecycle in healthcare
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Government Revenue Lifecycle Management -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-lg border-0 text-center p-4">
+        <i class="fa-solid fa-landmark fa-3x mb-3 text-color"></i>
+        <h5 class="fw-bold">Government Revenue Lifecycle</h5>
+        <p class="text-muted">
+          Learn about 
+          <a href="https://blog.salesboom.com/revenue-lifecycle-management-government" class="fw-semibold text-color">
+            revenue lifecycle for government
+          </a>
+          systems.
+        </p>
+      </div>
+    </div>
+
+    <!-- Sales Transformation -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-lg border-0 text-center p-4">
+        <i class="fa-solid fa-chart-simple fa-3x mb-3 text-color"></i>
+        <h5 class="fw-bold">Revenue Lifecycle & Sales Transformation</h5>
+        <p class="text-muted">
+          Discover 
+          <a href="https://blog.salesboom.com/revenue-lifecycle-management-sales-transformation" class="fw-semibold text-color">
+            how revenue lifecycle supports sales transformation
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Marketing Revenue Lifecycle -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-lg border-0 text-center p-4">
+        <i class="fa-solid fa-bullhorn fa-3x mb-3 text-color"></i>
+        <h5 class="fw-bold">Marketing Revenue Lifecycle</h5>
+        <p class="text-muted">
+          Read insights on 
+          <a href="https://blog.salesboom.com/revenue-lifecycle-management-marketing" class="fw-semibold text-color">
+            revenue lifecycle in marketing
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Customer Support Revenue Lifecycle -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-lg border-0 text-center p-4">
+        <i class="fa-solid fa-headset fa-3x mb-3 text-color"></i>
+        <h5 class="fw-bold">Customer Support Revenue Lifecycle</h5>
+        <p class="text-muted">
+          Discover strategies in 
+          <a href="https://blog.salesboom.com/revenue-lifecycle-management-customer-support" class="fw-semibold text-color">
+            improving revenue via customer support
+          </a>.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Results Section -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-title">
+      <h2>Proven Results in Complex Manufacturing Environments</h2>
+    </div>
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <p class="content-text">
+          Salesboom powers some of the world's most demanding manufacturing operations across 159 countries. Our platform has been proven in environments where engineering precision, regulatory compliance, and project profitability are non-negotiable.
+        </p>
+
+        <div class="benefit-list">
+          <h4><i class="fas fa-check-circle me-2"></i>Immediate Benefits:</h4>
+          <ul>
+            <li>Reduce proposal development time by 40% through collaborative workflows</li>
+            <li>Eliminate margin erosion with real-time profitability tracking</li>
+            <li>Accelerate project handoffs with automated workflow triggers</li>
+            <li>Improve compliance with AI-powered documentation verification</li>
+            <li>Increase service revenue through predictive maintenance opportunities</li>
+          </ul>
+        </div>
+
+        <div class="benefit-list">
+          <h4><i class="fas fa-trophy me-2"></i>Strategic Advantages:</h4>
+          <ul>
+            <li>Build a unified data foundation supporting AI and machine learning initiatives</li>
+            <li>Create competitive advantage through faster, more accurate proposals</li>
+            <li>Establish audit trails and compliance frameworks for regulated industries</li>
+            <li>Scale operations without adding administrative overhead</li>
+            <li>Future-proof your business with continuous innovation</li>
+          </ul>
+        </div>
+
+        <div class="highlight-box">
+          <h3>Industry Success</h3>
+          <p>With 3,500+ businesses trusting Salesboom and 22+ years of proven track record in nuclear, aerospace, defense, heavy equipment, and industrial automation, we understand what it takes to succeed in complex manufacturing.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Old Content -->
+ <section class="container py-5">
+  <div class="text-center mb-5">
+    <h2 class="fw-bold text-color">Explore Salesboom Solutions</h2>
+  </div>
+
+  <div class="row g-4">
+
+    <!-- Sales App -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-lg border-0 text-center p-4">
+        <i class="fa-solid fa-chart-line fa-3x mb-3 text-color"></i>
+        <h5 class="fw-bold">Sales App</h5>
+        <p class="text-muted">
+          Discover features in the 
+          <a href="https://www.salesboom.com/apps/sales.html" class="fw-semibold text-color">
+            Sales app
+          </a>
+          that drive revenue.
+        </p>
+      </div>
+    </div>
+
+
+    <!-- CRM Integrations -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-lg border-0 text-center p-4">
+        <i class="fa-solid fa-plug fa-3x mb-3 text-color"></i>
+        <h5 class="fw-bold">CRM Integrations</h5>
+        <p class="text-muted">
+          Understand 
+          <a href="https://www.salesboom.com/crm/crm-integration.html" class="fw-semibold text-color">
+            CRM integration options
+          </a>
+          for seamless workflows.
+        </p>
+      </div>
+    </div>
+
+    <!-- Developer Tools -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-lg border-0 text-center p-4">
+        <i class="fa-solid fa-code fa-3x mb-3 text-color"></i>
+        <h5 class="fw-bold">Developer Tools</h5>
+        <p class="text-muted">
+          Enhance your builds with 
+          <a href="https://www.salesboom.com/apps/developer.html" class="fw-semibold text-color">
+            developer apps
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Sales Quote Management -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-lg border-0 text-center p-4">
+        <i class="fa-solid fa-file-invoice-dollar fa-3x mb-3 text-color"></i>
+        <h5 class="fw-bold">Web-based Sales Quote</h5>
+        <p class="text-muted">
+          Check out 
+          <a href="https://www.salesboom.com/small-business-crm-management-software/web-based_sales_quote_management_software.html" class="fw-semibold text-color">
+            web quote management
+          </a>
+          for small businesses.
+        </p>
+      </div>
+    </div>
+
+    <!-- Revenue Lifecycle Management Guide -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-lg border-0 text-center p-4">
+        <i class="fa-solid fa-life-ring fa-3x mb-3 text-color"></i>
+        <h5 class="fw-bold">Revenue Lifecycle Guide</h5>
+        <p class="text-muted">
+          Learn the essentials in the 
+          <a href="https://www.salesboom.com/ai-rlm/revenue-lifecycle-management-guide.html" class="fw-semibold text-color">
+            revenue lifecycle guide
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Revenue Operations Guide -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow-lg border-0 text-center p-4">
+        <i class="fa-solid fa-briefcase fa-3x mb-3 text-color"></i>
+        <h5 class="fw-bold">Revenue Operations Guide</h5>
+        <p class="text-muted">
+          Dive into the 
+          <a href="https://www.salesboom.com/revenue-operations/revenue-operations-guide-for-smes.html" class="fw-semibold text-color">
+            revenue ops guide
+          </a>
+          for SMEs.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-content">
+      <h2>Ready to Transform Your Engineer-to-Order Operations?</h2>
+      <p>Discover how Salesboom's manufacturing-specific CRM can streamline your complex proposals, unify your engineering teams, and integrate seamlessly with your ERP. Schedule a personalized demo with our manufacturing CRM specialists.</p>
+      <div class="d-flex gap-3 justify-content-center flex-wrap">
+        <a href="https://www.salesboom.com/request-crm-demo.html" class="btn btn-primary">
+          <i class="fas fa-calendar-check me-2"></i>Schedule Demo
+        </a>
+        <a href="https://www.salesboom.com/crm_trial.html" class="btn btn-secondary">
+          <i class="fas fa-rocket me-2"></i>Start Free Trial
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-2">
+      <h3 class="fw-bold text-color">
+        <i class="fa-solid fa-layer-group me-2"></i>
+        Explore Salesboom Editions
+      </h3>
+      <p class="text-muted">Discover powerful CRM editions to scale your business efficiently.</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-briefcase fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Professional Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              A complete CRM suite with Marketing Automation, ERP integration, and Support tools — built for performance and value.
+            </p>
+            <a href="https://www.salesboom.com/editions/professional-edition.html" class="btn btn-color mt-auto">
+              Explore Professional <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-building fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Enterprise Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              For large enterprises — automate workflows, unify data, and leverage analytics to drive strategic growth.
+            </p>
+            <a href="https://www.salesboom.com/editions/enterprise-edition.html" class="btn btn-color mt-auto">
+              View Enterprise <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-users fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Team Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              Perfect for small teams starting with CRM — manage leads, track sales, and boost productivity with simplicity.
+            </p>
+            <a href="https://www.salesboom.com/editions/team-edition.html" class="btn btn-color mt-auto">
+           Discover Team<i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Page Loacal -->
+<section class="container py-5">
+  <div class="text-center mb-5">
+    <h2 class="fw-bold text-color">Revenue & CRM Solutions</h2>
+  </div>
+
+  <div class="row g-4">
+
+    <!-- Revenue Lifecycle Management Benefits -->
+    <div class="col-md-3">
+      <div class="card h-100 shadow-lg border-0 text-center p-4">
+        <i class="fa-solid fa-chart-pie fa-3x mb-3 text-color"></i>
+        <h5 class="fw-bold">Revenue Lifecycle Management Benefits</h5>
+        <p class="text-muted">
+          Explore the advantages of implementing 
+          <a href="revenue-lifecycle-management-benefits.html" class="fw-semibold text-color">
+            revenue lifecycle management
+          </a>
+          in your business.
+        </p>
+      </div>
+    </div>
+
+    <!-- Revenue Lifecycle Management for SMBs -->
+    <div class="col-md-3">
+      <div class="card h-100 shadow-lg border-0 text-center p-4">
+        <i class="fa-solid fa-business-time fa-3x mb-3 text-color"></i>
+        <h5 class="fw-bold">RLM Benefits for SMBs</h5>
+        <p class="text-muted">
+          Discover how 
+          <a href="revenue-lifecycle-management-benefits-smbs.html" class="fw-semibold text-color">
+            SMBs can benefit from revenue lifecycle management
+          </a>
+          to optimize growth.
+        </p>
+      </div>
+    </div>
+
+    <!-- CRM Integration — RLM, ERP, LMS Projects -->
+    <div class="col-md-3">
+      <div class="card h-100 shadow-lg border-0 text-center p-4">
+        <i class="fa-solid fa-network-wired fa-3x mb-3 text-color"></i>
+        <h5 class="fw-bold">CRM Integration Projects</h5>
+        <p class="text-muted">
+          Learn about 
+          <a href="crm-integration-rlm-erp-projects-lms.html" class="fw-semibold text-color">
+            RLM, ERP, and LMS project integrations
+          </a>
+          for seamless operations.
+        </p>
+      </div>
+    </div>
+
+    <!-- Operational Excellence for SME CRM -->
+    <div class="col-md-3">
+      <div class="card h-100 shadow-lg border-0 text-center p-4">
+        <i class="fa-solid fa-cogs fa-3x mb-3 text-color"></i>
+        <h5 class="fw-bold">Operational Excellence</h5>
+        <p class="text-muted">
+          Discover strategies for 
+          <a href="operational-excellence-sme-crm.html" class="fw-semibold text-color">
+            operational excellence in SME CRM
+          </a>
+          and productivity improvement.
+        </p>
+      </div>
+    </div>
+
+
+
+  </div>
+</section>
+<!-- Footer -->
+<footer class="mt-5 footer">
+  <div class="container mt-5 pt-5">
+    <div class="footer-grid">
+      <div class="footer-section">
+        <h3>Products</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/products/tools-sfa.html">Sales Force Automation</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-marketing.html">Marketing Automation</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-casemanagement.html">Case Management</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-reporting.html">Business Intelligence</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-emailintegration.html">Email Integration</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Solutions</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/products/edition-team.html">Team Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/edition-professional.html">Professional Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/edition-enterprise.html">Enterprise Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/industry-solutions.html">Industry Solutions</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/company/index.html">About Us</a></li>
+          <li><a href="https://www.salesboom.com/company/company-contact.html">Contact Us</a></li>
+          <li><a href="https://www.salesboom.com/customers/index.html">Customers</a></li>
+          <li><a href="https://www.salesboom.com/partners/index.html">Partners</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/support/index.html">Support Center</a></li>
+          <li><a href="https://www.salesboom.com/crm_supportcenter/overview/index.html">Documentation</a></li>
+          <li><a href="https://www.salesboom.com/whitepapers/index.html">White Papers</a></li>
+          <li><a href="https://www.salesboom.com/pop-privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="bg-color">
+    <div class="container">
+     <div class="footer-bottom pb-3 mt-3">
+      <p>&copy; 2003-2025 <a class="text-white fw-bold" href="https://www.salesboom.com">Salesboom.com</a> Inc. All rights reserved. | Call: 1-855-229-2043</p>
+      <p style="margin-top: 10px;">Salesboom's color-coded CRM lead management software helps businesses visually prioritize sales opportunities with automated workflow rules. Contact us to learn how color coding can transform your lead management process and increase sales productivity.</p>
+    </div>
+    </div>
+  </div>
+ 
+</footer>
+
+<!-- Common JavaScript -->
+<script src="content/js/bootstrap.bundle.min.js"></script>
+
+
+
+<script>
+// Loading Screen
+window.addEventListener('load', function() {
+  setTimeout(function() {
+    document.getElementById('loading-screen').classList.add('fade-out');
+  }, 500);
+});
+
+// Scroll to Top Button
+const scrollTopBtn = document.getElementById('scroll-top');
+
+window.addEventListener('scroll', function() {
+  if (window.pageYOffset > 300) {
+    scrollTopBtn.classList.add('show');
+  } else {
+    scrollTopBtn.classList.remove('show');
+  }
+});
+
+scrollTopBtn.addEventListener('click', function() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+</script>
+
+</body>
+</html>

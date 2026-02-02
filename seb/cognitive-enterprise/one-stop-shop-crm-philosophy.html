@@ -1,0 +1,1544 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+<!-- Primary Meta Tags -->
+<title>One-Stop Shop CRM: End Software Fragmentation | Salesboom</title>
+<meta name="description" content="Stop juggling vendors. Salesboom's One-Stop Shop delivers platform, implementation, customization, training, and support—all from one accountable partner.">
+<meta name="keywords" content="One-stop CRM solution, Unified CRM platform, CRM implementation services, End-to-end CRM delivery, Accountable CRM partner, Build-to-suit CRM, In-house CRM setup, Integrated CRM solution, Revenue operations platform, CRM without fragmentation">
+<link rel="canonical" href="https://www.salesboom.com/cognitive-enterprise/one-stop-shop-crm-philosophy.html">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.salesboom.com/cognitive-enterprise/one-stop-shop-crm-philosophy.html">
+<meta property="og:title" content="One-Stop Shop CRM: End Software Fragmentation | Salesboom">
+<meta property="og:description" content="Stop juggling vendors. Salesboom's One-Stop Shop delivers platform, implementation, customization, training, and support—all from one accountable partner.">
+<meta property="og:image" content="https://www.salesboom.com/img/one-stop-shop-crm-philosophy-og.jpg">
+<meta property="og:site_name" content="Salesboom CRM">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://www.salesboom.com/cognitive-enterprise/one-stop-shop-crm-philosophy.html">
+<meta name="twitter:title" content="One-Stop Shop CRM: End Software Fragmentation | Salesboom">
+<meta name="twitter:description" content="Stop juggling vendors. Salesboom's One-Stop Shop delivers platform, implementation, customization, training, and support—all from one accountable partner.">
+<meta name="twitter:image" content="https://www.salesboom.com/img/one-stop-shop-crm-philosophy-og.jpg">
+<meta name="twitter:site" content="@SalesboomCloud">
+
+<!-- Schema.org structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Salesboom One-Stop Shop CRM",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web-based, Cloud",
+  "offers": {
+    "@type": "Offer",
+    "price": "14.00",
+    "priceCurrency": "USD",
+    "priceValidUntil": "2026-12-31"
+  },
+  "featureList": [
+    "End-to-end platform delivery",
+    "In-house implementation services",
+    "Custom CRM configuration",
+    "Comprehensive training programs",
+    "Continuous maintenance and support",
+    "Unified accountability model"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.5",
+    "ratingCount": "3500"
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "Salesboom",
+    "url": "https://www.salesboom.com",
+    "logo": "https://www.salesboom.com/img/salesboom-logo-252x67.png",
+    "foundingDate": "2003",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-855-229-2043",
+      "contactType": "Customer Service"
+    }
+  }
+}
+</script>
+
+<link rel="shortcut icon" href="https://www.salesboom.com/favicon.ico">
+
+    <link rel="stylesheet" href="content/css/bootstrap.min.css">
+    <link rel="stylesheet" href="content/css/salesboom-common.css">
+    <link rel="shortcut icon" href="content/image/salesboom-logo-252x67.png" type="image/x-icon"> 
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --primary-color: #002f6c;
+  --primary-dark: #001f47;
+  --primary-light: #004a9f;
+  --accent-color: #0066cc;
+  --accent-light: #3399ff;
+  --success-color: #28a745;
+  --warning-color: #ffc107;
+  --danger-color: #dc3545;
+  --info-color: #17a2b8;
+  --text-dark: #1a1a1a;
+  --text-medium: #4a4a4a;
+  --text-light: #6a6a6a;
+  --bg-light: #f8f9fa;
+  --bg-lighter: #ffffff;
+  --gradient-primary: linear-gradient(135deg, #002f6c 0%, #004a9f 100%);
+  --gradient-accent: linear-gradient(135deg, #0066cc 0%, #3399ff 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.7;
+  color: var(--text-dark);
+  background: var(--bg-lighter);
+  overflow-x: hidden;
+}
+
+/* Loading Screen */
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--gradient-primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease-out;
+}
+
+#loading-screen.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loader {
+  width: 70px;
+  height: 70px;
+  border: 6px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.loading-text {
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-top: 30px;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 0 20px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Scroll to Top Button */
+#scroll-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 55px;
+  height: 55px;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 47, 108, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#scroll-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+#scroll-top:hover {
+  background: var(--primary-dark);
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 47, 108, 0.5);
+}
+
+/* Hero Section */
+.hero-section {
+  background: var(--gradient-primary);
+  color: white;
+  padding: 130px 0 110px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+  opacity: 0.4;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.hero-section h1 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  margin-bottom: 35px;
+  line-height: 1.15;
+  letter-spacing: -1px;
+}
+
+.hero-section .subtitle {
+  font-size: 1.45rem;
+  margin-bottom: 50px;
+  opacity: 0.95;
+  line-height: 1.65;
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 500;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 45px;
+}
+
+/* Buttons */
+.btn-custom {
+  padding: 18px 45px;
+  font-size: 1.15rem;
+  font-weight: 700;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  border: none;
+  letter-spacing: 0.3px;
+}
+
+.btn-primary-custom {
+  background: white;
+  color: var(--primary-color);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+}
+
+.btn-primary-custom:hover {
+  background: var(--bg-light);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
+  color: var(--primary-color);
+}
+
+.btn-outline-custom {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-outline-custom:hover {
+  background: white;
+  color: var(--primary-color);
+  transform: translateY(-3px);
+}
+
+/* Stats Section */
+.stats-section {
+  background: var(--primary-dark);
+  padding: 70px 0;
+  color: white;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 25px;
+}
+
+.stat-item h3 {
+  font-size: 3.8rem;
+  font-weight: 900;
+  color: var(--accent-light);
+  margin-bottom: 12px;
+  line-height: 1;
+}
+
+.stat-item p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+/* Content Sections */
+.content-section {
+  padding: 110px 0;
+}
+
+.content-section.bg-light {
+  background: var(--bg-light);
+}
+
+.section-header {
+  text-align: center;
+  max-width: 950px;
+  margin: 0 auto 80px;
+}
+
+.section-header h2 {
+  font-size: 2.8rem;
+  color: var(--primary-color);
+  margin-bottom: 30px;
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: -0.5px;
+}
+
+.section-header p {
+  font-size: 1.3rem;
+  color: var(--text-medium);
+  line-height: 1.8;
+  font-weight: 500;
+}
+
+/* Feature Cards */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 35px;
+  margin-top: 60px;
+}
+
+.feature-card {
+  background: white;
+  padding: 45px 35px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border-left: 5px solid var(--primary-color);
+  position: relative;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 35px rgba(0, 47, 108, 0.15);
+  border-left-color: var(--accent-color);
+}
+
+.feature-icon {
+  width: 75px;
+  height: 75px;
+  background: var(--gradient-accent);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 35px;
+  color: white;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
+}
+
+.feature-card h3 {
+  font-size: 1.6rem;
+  color: var(--primary-color);
+  margin-bottom: 18px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.feature-card p {
+  color: var(--text-medium);
+  line-height: 1.75;
+  font-size: 1.05rem;
+  margin-bottom: 0;
+}
+
+.feature-card ul {
+  list-style: none;
+  margin-top: 25px;
+  padding-left: 0;
+}
+
+.feature-card li {
+  padding-left: 32px;
+  position: relative;
+  margin-bottom: 14px;
+  color: var(--text-medium);
+  line-height: 1.7;
+}
+
+.feature-card li::before {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  color: var(--success-color);
+  font-size: 1.15rem;
+}
+
+/* Content Box */
+.content-box {
+  background: white;
+  padding: 50px 45px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  margin-top: 40px;
+  border-top: 5px solid var(--primary-color);
+}
+
+.content-box h3 {
+  font-size: 1.9rem;
+  color: var(--primary-color);
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.content-box h4 {
+  font-size: 1.4rem;
+  color: var(--text-dark);
+  margin-top: 30px;
+  margin-bottom: 18px;
+  font-weight: 600;
+}
+
+.content-box p {
+  color: var(--text-medium);
+  line-height: 1.8;
+  margin-bottom: 18px;
+  font-size: 1.05rem;
+}
+
+.content-box .lead {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  line-height: 1.75;
+  margin-bottom: 25px;
+}
+
+/* Highlight Box */
+.highlight-box {
+  background: var(--gradient-primary);
+  color: white;
+  padding: 50px 45px;
+  border-radius: 15px;
+  margin-top: 50px;
+  box-shadow: 0 8px 25px rgba(0, 47, 108, 0.25);
+}
+
+.highlight-box h3 {
+  font-size: 2rem;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.highlight-box p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  opacity: 0.95;
+  margin-bottom: 15px;
+}
+
+.highlight-box .lead {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+  opacity: 1;
+}
+
+.highlight-box ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.highlight-box li {
+  padding-left: 35px;
+  position: relative;
+  margin-bottom: 15px;
+  line-height: 1.7;
+}
+
+.highlight-box li::before {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  font-size: 1.2rem;
+}
+
+/* Problem Cards */
+.problem-card {
+  background: white;
+  padding: 30px 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  margin-bottom: 18px;
+  border-left: 5px solid var(--danger-color);
+  transition: all 0.3s ease;
+}
+
+.problem-card:hover {
+  transform: translateX(5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.problem-card p {
+  color: var(--text-medium);
+  line-height: 1.75;
+  margin-bottom: 0;
+  padding-left: 30px;
+  position: relative;
+  font-size: 1.05rem;
+}
+
+.problem-card p::before {
+  content: "\f071";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  color: var(--danger-color);
+  font-size: 1.2rem;
+}
+
+/* Advantage Cards */
+.advantage-card {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  padding: 40px 35px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  border-left: 5px solid var(--success-color);
+  transition: all 0.3s ease;
+}
+
+.advantage-card:hover {
+  transform: translateX(5px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.advantage-card h4 {
+  font-size: 1.6rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.advantage-card p {
+  color: var(--text-dark);
+  line-height: 1.75;
+  margin-bottom: 0;
+  font-size: 1.05rem;
+}
+
+/* Failure Mode Cards */
+.failure-card {
+  background: white;
+  padding: 35px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  margin-bottom: 25px;
+  border-left: 4px solid var(--warning-color);
+  transition: all 0.3s ease;
+}
+
+.failure-card:hover {
+  transform: translateX(5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.failure-card h5 {
+  font-size: 1.35rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.failure-card p {
+  color: var(--text-medium);
+  line-height: 1.75;
+  margin-bottom: 12px;
+  font-size: 0.98rem;
+}
+
+.failure-card p strong {
+  color: var(--text-dark);
+}
+
+/* CTA Section */
+.cta-section {
+  background: var(--gradient-primary);
+  color: white;
+  padding: 110px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid2" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid2)"/></svg>');
+  opacity: 0.5;
+}
+
+.cta-content {
+  position: relative;
+  z-index: 1;
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.cta-section h2 {
+  font-size: 3rem;
+  margin-bottom: 30px;
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: -0.5px;
+}
+
+.cta-section p {
+  font-size: 1.35rem;
+  margin-bottom: 50px;
+  opacity: 0.95;
+  line-height: 1.7;
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .hero-section h1 {
+    font-size: 2.8rem;
+  }
+  
+  .hero-section .subtitle {
+    font-size: 1.25rem;
+  }
+  
+  .section-header h2 {
+    font-size: 2.4rem;
+  }
+  
+  .content-section {
+    padding: 80px 0;
+  }
+  
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 90px 0 70px;
+  }
+  
+  .hero-section h1 {
+    font-size: 2.2rem;
+  }
+  
+  .hero-section .subtitle {
+    font-size: 1.15rem;
+  }
+  
+  .hero-cta {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .btn-custom {
+    width: 100%;
+    max-width: 320px;
+  }
+  
+  .stat-item h3 {
+    font-size: 2.8rem;
+  }
+  
+  .section-header h2 {
+    font-size: 2rem;
+  }
+  
+  .content-section {
+    padding: 60px 0;
+  }
+  
+  .cta-section h2 {
+    font-size: 2.2rem;
+  }
+  
+  .cta-section p {
+    font-size: 1.15rem;
+  }
+  
+  #scroll-top {
+    width: 48px;
+    height: 48px;
+    bottom: 20px;
+    right: 20px;
+    font-size: 19px;
+  }
+  
+  .content-box,
+  .highlight-box {
+    padding: 35px 25px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section h1 {
+    font-size: 1.85rem;
+  }
+  
+  .section-header h2 {
+    font-size: 1.75rem;
+  }
+  
+  .feature-card,
+  .problem-card,
+  .advantage-card,
+  .failure-card {
+    padding: 30px 22px;
+  }
+  
+  .feature-icon {
+    width: 65px;
+    height: 65px;
+    font-size: 30px;
+  }
+}
+</style>
+</head>
+
+<body>
+<!-- Loading Screen -->
+<div id="loading-screen">
+  <div class="loader"></div>
+  <div class="loading-text">Unifying Your Revenue System...</div>
+</div>
+
+<!-- Scroll to Top Button -->
+<button id="scroll-top" aria-label="Scroll to top">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+
+
+    <!-- Top Bar -->
+<div class="top-bar">
+  <div class="container">
+    <div class="top-bar-left text-color">
+      <span>✓ Award-Winning Cloud CRM Software Since 2003</span>
+    </div>
+    <ul class="top-bar-nav">
+      <li><a href="https://www.salesboom.com/crm_supportcenter/overview/index.html">Support Center</a></li>
+      <li><a href="https://www.salesboom.com/crm_trial.html">Free Trial</a></li>
+      <li><a href="https://www.salesboom.com/login.html">Login</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Main Header -->
+<header>
+  <div class="main-header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <a href="https://www.salesboom.com" aria-label="Salesboom CRM Home">
+            <img src="https://www.salesboom.com/img/salesboom-logo-252x67.png" alt="Salesboom Cloud CRM Logo" width="252" height="67">
+          </a>
+        </div>
+        <div class="header-phone">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          <a href="tel:+18552292043">1-855-229-2043</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="container">
+    <div class="hero-content">
+      <h1>Stop Coordinating Vendors. Start Executing Revenue Strategy.</h1>
+      <p class="subtitle">The One-Stop Shop philosophy delivers platform, implementation, customization, training, and maintenance from one accountable partner—eliminating fragmentation and finger-pointing forever.</p>
+     
+     <a href="cognitive-enterprise-agentic-ai-crm.html" class="text-white  border-bottom border-white">
+  back to home
+  <i class="fa-solid fa-arrow-right mx-2"></i>
+</a>
+
+      <div class="hero-cta mt-3">
+        <a href="https://www.salesboom.com/request-crm-demo.html" class="btn-custom btn-primary-custom">Book a Demo</a>
+        <a href="https://www.salesboom.com/crm_trial.html" class="btn-custom btn-outline-custom">Start Free Trial</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Section -->
+<section class="stats-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+        <div class="stat-item">
+          <h3>1</h3>
+          <p>Accountable Partner</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+        <div class="stat-item">
+          <h3>100%</h3>
+          <p>End-to-End Ownership</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+        <div class="stat-item">
+          <h3>22+</h3>
+          <p>Years Proven Model</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="stat-item">
+          <h3>Zero</h3>
+          <p>Vendor Finger-Pointing</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 1: Problem Statement -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Why Fragmented Software Delivery Fails Revenue Teams</h2>
+      <p>The hidden costs of managing vendor ecosystems</p>
+    </div>
+    
+    <div class="row">
+      <div class="col-lg-12 mx-auto">
+        <p class="lead mb-5">Modern revenue teams don't suffer from a lack of software options. They suffer from too many of them.</p>
+        
+        <div class="content-box">
+          <h3><i class="fas fa-puzzle-piece text-danger me-3"></i>The Accumulation Problem</h3>
+          <p class="lead">CRM, marketing automation, sales engagement, quoting, analytics, support tools, integrations, and add-ons—each promising to solve a specific problem. On paper, the stack looks powerful. In practice, it's fragmented, brittle, and exhausting to manage.</p>
+          
+          <p class="mt-4">Most organizations didn't choose this complexity deliberately. They accumulated it over time, one "best-of-breed" decision at a time. Each purchase made sense in isolation. Together, they created a system where no single party owns the outcome.</p>
+          
+          <h4 class="mt-4">In the Typical Fragmented Model:</h4>
+          <ul>
+            <li>One vendor sells the core platform</li>
+            <li>Another sells integrations</li>
+            <li>A third-party consultant implements it</li>
+            <li>Internal teams maintain it</li>
+            <li>Support is split across multiple companies</li>
+          </ul>
+        </div>
+        
+        <div class="highlight-box mt-5">
+          <h3>When Something Breaks, Everyone Points Somewhere Else</h3>
+          <p>Sales blames the tool. IT blames the configuration. Consultants blame the requirements. Vendors blame "how it was implemented."</p>
+          <p class="mb-0"><strong>The customer is left coordinating the mess.</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 2: Real Cost of Fragmentation -->
+<section class="content-section bg-light">
+  <div class="container">
+    <div class="section-header">
+      <h2>How Software Fragmentation Destroys Value and Trust</h2>
+      <p>The compounding costs of distributed responsibility</p>
+    </div>
+    
+    <div class="row">
+      <div class="col-lg-12 mx-auto">
+        <p class="lead mb-5">Fragmentation doesn't just slow things down—it erodes trust in the entire system. Over time, the consequences compound into organizational dysfunction.</p>
+        
+        <div class="content-box">
+          <h3>The Hidden Costs Include:</h3>
+          <div class="row g-3 mt-4">
+            <div class="col-md-6">
+              <div class="problem-card">
+                <p>Adoption drops as users encounter friction at every integration point</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="problem-card">
+                <p>Workarounds increase when official processes fail, creating shadow systems</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="problem-card">
+                <p>Data quality suffers with no single source of truth across platforms</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="problem-card">
+                <p>Leadership stops relying on the platform when reports don't reconcile</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="problem-card">
+                <p>Internal teams become referees, arbitrating between vendors</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="problem-card">
+                <p>Revenue teams waste hours troubleshooting instead of selling</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="highlight-box mt-5">
+          <h3>The System Becomes Shelfware</h3>
+          <p class="lead">Not because it lacked features, but because it lacked ownership.</p>
+          <p>When responsibility is distributed across multiple vendors, incentives become misaligned. Each party optimizes for its own scope, not the customer's outcome.</p>
+          <p class="mb-0"><strong>Leadership faces an impossible choice: continue managing vendor chaos or rip everything out and start over. Both options waste time, money, and organizational momentum.</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 3: One-Stop Shop Philosophy -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>The One-Stop Shop Philosophy: A Different Operating Model</h2>
+      <p>From vendor coordination to true partnership</p>
+    </div>
+    
+    <div class="row">
+      <div class="col-lg-12 mx-auto">
+        <p class="lead mb-5">The One-Stop Shop philosophy starts with a simple premise: customers should not have to assemble, manage, and referee an ecosystem of vendors just to make their revenue system work.</p>
+        
+        <div class="content-box">
+          <h3>This Is Not About Convenience. It's About Execution.</h3>
+          <p class="lead mb-4">In a One-Stop Shop model, one partner provides the platform, implements it, customizes it, trains your team, and maintains it as your business evolves.</p>
+          
+          <div class="feature-grid mt-5">
+            <div class="feature-card">
+              <div class="feature-icon"><i class="fas fa-layer-group"></i></div>
+              <h3>Unified Platform</h3>
+              <p>Complete CRM solution built and maintained by one team</p>
+            </div>
+            
+            <div class="feature-card">
+              <div class="feature-icon"><i class="fas fa-tools"></i></div>
+              <h3>In-House Implementation</h3>
+              <p>Expert setup and customization by the platform creators</p>
+            </div>
+            
+            <div class="feature-card">
+              <div class="feature-icon"><i class="fas fa-graduation-cap"></i></div>
+              <h3>Comprehensive Training</h3>
+              <p>User education focused on outcomes, not just features</p>
+            </div>
+            
+            <div class="feature-card">
+              <div class="feature-icon"><i class="fas fa-sync"></i></div>
+              <h3>Continuous Maintenance</h3>
+              <p>Ongoing evolution as your business requirements change</p>
+            </div>
+            
+            <div class="feature-card">
+              <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+              <h3>Complete Accountability</h3>
+              <p>One throat to choke, one team accountable for success</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="highlight-box mt-5">
+          <h3><i class="fas fa-bullseye me-3"></i>The Core Principle</h3>
+          <p class="lead">When success and failure are owned end-to-end, decisions are made with long-term impact in mind.</p>
+          <p>Trade-offs are evaluated holistically, not locally. There's no hiding behind handoffs or contracts. If the system doesn't work, the same team that built it fixes it.</p>
+          <p class="mb-0"><strong>That accountability drives better architecture, cleaner implementations, and faster results. Software without delivery is unfinished work. The One-Stop Shop completes that work.</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 4: Software Alone Not Solution -->
+<section class="content-section bg-light">
+  <div class="container">
+    <div class="section-header">
+      <h2>Why Selling Licenses Without Delivery Guarantees Failure</h2>
+      <p>The productivity gap between purchase and value</p>
+    </div>
+    
+    <div class="row">
+      <div class="col-lg-12 mx-auto">
+        <p class="lead mb-5">Most software companies are optimized to sell licenses, not to ensure outcomes. Once the contract is signed, implementation is "out of scope," customization is "extra," training is minimal or generic, and ongoing optimization becomes your problem.</p>
+        
+        <div class="content-box">
+          <h3>The Gap Where CRM Projects Fail</h3>
+          <p class="lead mb-4">The gap between purchase and productivity is where most CRM projects fail:</p>
+          
+          <div class="row g-3 mt-3">
+            <div class="col-md-6">
+              <div class="problem-card">
+                <p>Generic implementations ignore unique business processes</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="problem-card">
+                <p>Cookie-cutter training fails to change behavior</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="problem-card">
+                <p>Platform features remain unused because teams don't know they exist</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="problem-card">
+                <p>Systems drift out of alignment as business needs evolve</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="problem-card">
+                <p>Support tickets go unanswered or get bounced between vendors</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="highlight-box mt-5">
+          <h3>Software Is a Tool, Not a Solution</h3>
+          <p>Without proper delivery, even the best platform becomes another abandoned technology investment.</p>
+          <p class="mb-0"><strong>The One-Stop Shop bridges that gap by treating delivery as core to the product itself.</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  <!-- Old Content -->
+   <section class="container py-5">
+  <h2 class="fw-bold mb-4 text-center text-color">AI & CRM Intelligence Solutions</h2>
+
+  <div class="row g-4">
+
+    <!-- AI Work for You -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow border-0 p-4 text-center">
+        <i class="fa-solid text-color fa-rocket fa-3x mb-3"></i>
+        <h5 class="fw-bold ">AI — Work for You</h5>
+        <p class="text-muted">
+          Learn how
+          <a href="https://www.salesboom.com/products/new/AI-work-for-you.html" class="fw-semibold text-color">
+            AI works for you
+          </a>
+          to automate workflows and deliver business impact.
+        </p>
+      </div>
+    </div>
+
+    <!-- What Are AI Agents -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow border-0 p-4 text-center">
+        <i class="fa-solid fa-robot fa-3x mb-3 text-color"></i>
+        <h5 class="fw-bold">What Are AI Agents</h5>
+        <p class="text-muted">
+          Understand autonomous systems with
+          <a href="https://salesboom.com/What-Are-AI-Agents.html" class="fw-semibold text-color">
+            AI agents
+          </a>
+          and how they transform workflows.
+        </p>
+      </div>
+    </div>
+
+    <!-- AI People Economy -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow border-0 p-4 text-center">
+        <i class="fa-solid fa-users fa-3x mb-3 text-color"></i>
+        <h5 class="fw-bold">AI People Economy</h5>
+        <p class="text-muted">
+          Explore how
+          <a href="https://www.salesboom.com/products/new/AI-People-Economy.html" class="fw-semibold text-color">
+            AI People Economy
+          </a>
+          reshapes work and human-centric processes.
+        </p>
+      </div>
+    </div>
+
+    <!-- Salesboom Copilot -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow border-0 p-4 text-center">
+        <i class="fa-solid fa-plane fa-3x mb-3 text-color"></i>
+        <h5 class="fw-bold">Salesboom Copilot</h5>
+        <p class="text-muted">
+          Boost productivity with
+          <a href="https://www.salesboom.com/products/new/Salesboom-Copilot.html" class="fw-semibold text-color">
+            Salesboom Copilot
+          </a>
+          for smarter CRM suggestions.
+        </p>
+      </div>
+    </div>
+
+
+
+    <!-- AI-Powered CRM Workflows -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow border-0 p-4 text-center">
+        <i class="fa-solid fa-layer-group fa-3x mb-3 text-color"></i>
+        <h5 class="fw-bold">AI-Powered CRM Workflows</h5>
+        <p class="text-muted">
+          Adopt intelligent automation with
+          <a href="https://www.salesboom.com/agentic-workforce/agentic-workforce-AI-Powered-CRM.html" class="fw-semibold text-color">
+            AI-powered CRM workflows
+          </a>
+          that elevate results.
+        </p>
+      </div>
+    </div>
+
+    <!-- AI Agent Management System -->
+    <div class="col-md-4">
+      <div class="card h-100 shadow border-0 p-4 text-center">
+        <i class="fa-solid fa-sliders fa-3x mb-3 text-color"></i>
+        <h5 class="fw-bold">AI Agent Management System</h5>
+        <p class="text-muted">
+          Centralize and manage your AI agents with
+          <a href="https://www.salesboom.com/ai-agent-management/ai-agent-management-system.html" class="fw-semibold text-color">
+            agent management platform
+          </a>.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>    
+
+<!-- Section 5: Competitive Advantages -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Why the One-Stop Shop Model Creates Unmatched Advantages</h2>
+      <p>Benefits that fragmented models cannot match</p>
+    </div>
+    
+    <div class="row">
+      <div class="col-lg-12 mx-auto">
+        <p class="lead mb-5 text-center">The One-Stop Shop philosophy delivers competitive advantages that fragmented models cannot match:</p>
+        
+        <div class="advantage-card">
+          <h4><i class="fas fa-bolt text-success me-2"></i>Speed to Value</h4>
+          <p>Unified delivery eliminates coordination delays. Implementation timelines compress from months to weeks because one team controls all dependencies. Changes happen faster because there's no vendor negotiation or consultant scheduling.</p>
+        </div>
+        
+        <div class="advantage-card">
+          <h4><i class="fas fa-dollar-sign text-success me-2"></i>Total Cost of Ownership</h4>
+          <p>Consolidated delivery reduces costs across the board—no integration fees, no consultant markups, no overlapping licenses, no internal coordination overhead. Predictable pricing with no hidden charges.</p>
+        </div>
+        
+        <div class="advantage-card">
+          <h4><i class="fas fa-check-circle text-success me-2"></i>System Reliability</h4>
+          <p>End-to-end ownership means every component is tested together. No integration failures between systems built by different vendors. One team owns uptime, performance, and data integrity.</p>
+        </div>
+        
+        <div class="advantage-card">
+          <h4><i class="fas fa-brain text-success me-2"></i>Knowledge Continuity</h4>
+          <p>Institutional knowledge stays with your partner, not scattered across consultants who move on. Context accumulates over time, making every interaction more efficient.</p>
+        </div>
+        
+        <div class="advantage-card">
+          <h4><i class="fas fa-project-diagram text-success me-2"></i>Architectural Consistency</h4>
+          <p>Single-team design ensures coherent architecture. No frankenstack of incompatible systems. Clean data models, unified workflows, and sustainable customization.</p>
+        </div>
+        
+        <div class="advantage-card">
+          <h4><i class="fas fa-shield-alt text-success me-2"></i>True Accountability</h4>
+          <p>No finger-pointing, no blame-shifting, no coordination nightmares. One partner owns everything. If something breaks, you know exactly who to call—and they have the authority and expertise to fix it.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 6: Eliminating Failure Modes -->
+<section class="content-section bg-light">
+  <div class="container">
+    <div class="section-header">
+      <h2>How One-Stop Delivery Prevents the Problems That Kill CRM Projects</h2>
+      <p>Systematic elimination of common failure modes</p>
+    </div>
+    
+    <div class="row">
+      <div class="col-lg-12 mx-auto">
+        <p class="lead mb-5">Most CRM projects fail for predictable reasons. The One-Stop Shop philosophy systematically eliminates these failure modes.</p>
+        
+        <div class="failure-card">
+          <h5><i class="fas fa-link text-warning me-2"></i>Integration Failures</h5>
+          <p><strong>Problem:</strong> Systems from different vendors don't talk properly, creating data silos and manual workarounds</p>
+          <p><strong>One-Stop Solution:</strong> Native integration by the team that built both sides of the connection ensures reliability and performance</p>
+        </div>
+        
+        <div class="failure-card">
+          <h5><i class="fas fa-code text-warning me-2"></i>Abandoned Customizations</h5>
+          <p><strong>Problem:</strong> Custom features break during updates because third-party consultants didn't coordinate with the platform vendor</p>
+          <p><strong>One-Stop Solution:</strong> In-house customization means all changes are maintained as the platform evolves</p>
+        </div>
+        
+        <div class="failure-card">
+          <h5><i class="fas fa-users text-warning me-2"></i>Poor User Adoption</h5>
+          <p><strong>Problem:</strong> Generic training doesn't address real workflows, so users revert to spreadsheets and email</p>
+          <p><strong>One-Stop Solution:</strong> Training integrated into implementation focuses on actual business processes, not abstract features</p>
+        </div>
+        
+        <div class="failure-card">
+          <h5><i class="fas fa-user-times text-warning me-2"></i>Vendor Blame Games</h5>
+          <p><strong>Problem:</strong> When issues arise, multiple vendors point fingers instead of solving problems</p>
+          <p><strong>One-Stop Solution:</strong> Single point of accountability eliminates blame-shifting entirely</p>
+        </div>
+        
+        <div class="failure-card">
+          <h5><i class="fas fa-cog text-warning me-2"></i>Configuration Drift</h5>
+          <p><strong>Problem:</strong> Systems become outdated as business evolves but no one owns ongoing optimization</p>
+          <p><strong>One-Stop Solution:</strong> Continuous maintenance ensures system evolves with the business</p>
+        </div>
+        
+        <div class="failure-card">
+          <h5><i class="fas fa-money-bill-wave text-warning me-2"></i>Hidden Costs</h5>
+          <p><strong>Problem:</strong> Initial costs look reasonable but integration fees, consulting charges, and change orders add up</p>
+          <p><strong>One-Stop Solution:</strong> Transparent, consolidated pricing with no surprise fees</p>
+        </div>
+        
+        <div class="highlight-box mt-5">
+          <h3>These Aren't Hypothetical Risks</h3>
+          <p class="lead">They're the documented reasons most CRM implementations underdeliver.</p>
+          <p class="mb-0"><strong>The One-Stop Shop addresses them structurally, not circumstantially.</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-content">
+      <h2>Ready to Stop Managing Vendors and Start Executing Revenue Strategy?</h2>
+      <p>Experience the difference of working with one accountable partner who delivers platform, implementation, and ongoing success. Schedule a demo to see how the One-Stop Shop philosophy transforms CRM delivery.</p>
+      <div class="hero-cta">
+        <a href="https://www.salesboom.com/request-crm-demo.html" class="btn-custom btn-primary-custom">Schedule Your Demo Today</a>
+        <a href="https://www.salesboom.com/crm_trial.html" class="btn-custom btn-outline-custom">Start Free Trial</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-2">
+      <h3 class="fw-bold text-color">
+        <i class="fa-solid fa-layer-group me-2"></i>
+        Explore Salesboom Editions
+      </h3>
+      <p class="text-muted">Discover powerful CRM editions to scale your business efficiently.</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-briefcase fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Professional Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              A complete CRM suite with Marketing Automation, ERP integration, and Support tools — built for performance and value.
+            </p>
+            <a href="https://www.salesboom.com/editions/professional-edition.html" class="btn btn-color mt-auto">
+              Explore Professional <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-building fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Enterprise Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              For large enterprises — automate workflows, unify data, and leverage analytics to drive strategic growth.
+            </p>
+            <a href="https://www.salesboom.com/editions/enterprise-edition.html" class="btn btn-color mt-auto">
+              View Enterprise <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-users fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Team Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              Perfect for small teams starting with CRM — manage leads, track sales, and boost productivity with simplicity.
+            </p>
+            <a href="https://www.salesboom.com/editions/team-edition.html" class="btn btn-color mt-auto">
+           Discover Team<i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Loacla Page -->
+<section class="container py-5">
+  <div class="text-center mb-5">
+    <h2 class="fw-bold text-color">AI-Driven CRM & Agentic Enterprise</h2>
+  </div>
+
+  <div class="row g-4">
+
+    <div class="col-md-4">
+      <div class="card h-100 shadow-lg border-0 text-center p-4">
+        <i class="fa-solid fa-robot fa-3x mb-3 text-color"></i>
+        <h5 class="fw-bold">Agentic Enterprise</h5>
+        <p class="text-muted">
+          Learn more about
+          <a href="agentic-enterprise-claude-code.html" class="fw-semibold text-color">
+            agentic enterprise powered by Claude Code
+          </a>
+          and autonomous workflows.
+        </p>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card h-100 shadow-lg border-0 text-center p-4">
+        <i class="fa-solid fa-brain fa-3x mb-3 text-color"></i>
+        <h5 class="fw-bold">AI-Powered CRM</h5>
+        <p class="text-muted">
+          Discover how
+          <a href="sales-first-ai-powered-crm.html" class="fw-semibold text-color">
+            sales-first AI-powered CRM
+          </a>
+          accelerates revenue growth.
+        </p>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card h-100 shadow-lg border-0 text-center p-4">
+        <i class="fa-solid fa-users-gear fa-3x mb-3 text-color"></i>
+        <h5 class="fw-bold">People-Tech Model</h5>
+        <p class="text-muted">
+          Explore the
+          <a href="people-tech-crm-model.html" class="fw-semibold text-color">
+            people-tech CRM model
+          </a>
+          connecting teams with technology.
+        </p>
+      </div>
+    </div>
+
+
+
+    <div class="col-md-4">
+      <div class="card h-100 shadow-lg border-0 text-center p-4">
+        <i class="fa-solid fa-screwdriver-wrench fa-3x mb-3 text-color"></i>
+        <h5 class="fw-bold">Custom CRM</h5>
+        <p class="text-muted">
+          Build scalable systems with
+          <a href="build-to-suit-custom-crm.html" class="fw-semibold text-color">
+            build-to-suit custom CRM
+          </a>
+          solutions.
+        </p>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card h-100 shadow-lg border-0 text-center p-4">
+        <i class="fa-solid fa-chart-line fa-3x mb-3 text-color"></i>
+        <h5 class="fw-bold">AI Sales Automation</h5>
+        <p class="text-muted">
+          Power your pipeline using the
+          <a href="ai-sales-automation-framework-gemini-crm.html" class="fw-semibold text-color">
+            AI sales automation framework
+          </a>
+          with Gemini CRM.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="mt-5 footer">
+  <div class="container mt-5 pt-5">
+    <div class="footer-grid">
+      <div class="footer-section">
+        <h3>Products</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/products/tools-sfa.html">Sales Force Automation</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-marketing.html">Marketing Automation</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-casemanagement.html">Case Management</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-reporting.html">Business Intelligence</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-emailintegration.html">Email Integration</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Solutions</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/products/edition-team.html">Team Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/edition-professional.html">Professional Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/edition-enterprise.html">Enterprise Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/industry-solutions.html">Industry Solutions</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/company/index.html">About Us</a></li>
+          <li><a href="https://www.salesboom.com/company/company-contact.html">Contact Us</a></li>
+          <li><a href="https://www.salesboom.com/customers/index.html">Customers</a></li>
+          <li><a href="https://www.salesboom.com/partners/index.html">Partners</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/support/index.html">Support Center</a></li>
+          <li><a href="https://www.salesboom.com/crm_supportcenter/overview/index.html">Documentation</a></li>
+          <li><a href="https://www.salesboom.com/whitepapers/index.html">White Papers</a></li>
+          <li><a href="https://www.salesboom.com/pop-privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="bg-color">
+    <div class="container">
+     <div class="footer-bottom pb-3 mt-3">
+      <p>&copy; 2003-2025 <a class="text-white fw-bold" href="https://www.salesboom.com">Salesboom.com</a> Inc. All rights reserved. | Call: 1-855-229-2043</p>
+      <p style="margin-top: 10px;">Salesboom's color-coded CRM lead management software helps businesses visually prioritize sales opportunities with automated workflow rules. Contact us to learn how color coding can transform your lead management process and increase sales productivity.</p>
+    </div>
+    </div>
+  </div>
+ 
+</footer>
+
+<!-- Common JavaScript -->
+<script src="content/js/bootstrap.bundle.min.js"></script>
+
+
+<script>
+// Loading Screen
+window.addEventListener('load', function() {
+  setTimeout(function() {
+    const loadingScreen = document.getElementById('loading-screen');
+    loadingScreen.classList.add('fade-out');
+    setTimeout(function() {
+      loadingScreen.style.display = 'none';
+    }, 500);
+  }, 1000);
+});
+
+// Scroll to Top Button
+const scrollTopBtn = document.getElementById('scroll-top');
+
+window.addEventListener('scroll', function() {
+  if (window.pageYOffset > 300) {
+    scrollTopBtn.classList.add('visible');
+  } else {
+    scrollTopBtn.classList.remove('visible');
+  }
+});
+
+scrollTopBtn.addEventListener('click', function() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  });
+});
+</script>
+</body>
+</html>
