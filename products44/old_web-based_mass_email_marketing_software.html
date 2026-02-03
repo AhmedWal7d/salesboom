@@ -1,0 +1,1419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    
+    <!-- Primary Meta Tags -->
+    <title>CRM Email Marketing Software | Salesboom Mass Email Tool</title>
+    <meta name="description" content="Transform email marketing with Salesboom's CRM-integrated mass email software. Automate campaigns, track results, and send personalized emails at scale. Try free for 30 days.">
+    <meta name="keywords" content="CRM email marketing, mass email software, email campaign management, marketing automation CRM, email marketing CRM integration, bulk email marketing software, email drip campaigns">
+    <link rel="canonical" href="https://www.salesboom.com/products/old_web-based_mass_email_marketing_software.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.salesboom.com/products/old_web-based_mass_email_marketing_software.html">
+    <meta property="og:title" content="CRM Email Marketing Software | Salesboom Mass Email Tool">
+    <meta property="og:description" content="Transform email marketing with Salesboom's CRM-integrated mass email software. Automate campaigns, track results, and send personalized emails at scale. Try free for 30 days.">
+    <meta property="og:image" content="https://www.salesboom.com/img/old_web-based_mass_email_marketing_software-og.jpg">
+    <meta property="og:site_name" content="Salesboom CRM">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.salesboom.com/products/old_web-based_mass_email_marketing_software.html">
+    <meta name="twitter:title" content="CRM Email Marketing Software | Salesboom Mass Email Tool">
+    <meta name="twitter:description" content="Transform email marketing with Salesboom's CRM-integrated mass email software. Automate campaigns, track results, and send personalized emails at scale. Try free for 30 days.">
+    <meta name="twitter:image" content="https://www.salesboom.com/img/old_web-based_mass_email_marketing_software-og.jpg">
+    <meta name="twitter:site" content="@SalesboomCloud">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Salesboom CRM Email Marketing",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web-based, Cloud",
+      "offers": {
+        "@type": "Offer",
+        "price": "14.00",
+        "priceCurrency": "USD",
+        "priceValidUntil": "2026-12-31"
+      },
+      "featureList": [
+        "CRM-integrated mass email marketing",
+        "Automated drip campaigns and lead nurturing",
+        "Real-time email tracking and analytics",
+        "Dynamic personalization with merge fields",
+        "Advanced segmentation and targeting",
+        "Mobile-responsive email templates"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.5",
+        "ratingCount": "3500"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Salesboom",
+        "url": "https://www.salesboom.com",
+        "logo": "https://www.salesboom.com/img/salesboom-logo-252x67.png",
+        "foundingDate": "2003",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+1-855-229-2043",
+          "contactType": "Customer Service"
+        }
+      }
+    }
+    </script>
+    
+    <link rel="shortcut icon" href="https://www.salesboom.com/favicon.ico">
+    
+
+    <link rel="stylesheet" href="content/css/bootstrap.min.css">
+    <link rel="stylesheet" href="content/css/salesboom-common.css">
+    <link rel="shortcut icon" href="content/image/salesboom-logo-252x67.png" type="image/x-icon"> 
+    
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #002f6c;
+            --primary-dark: #001d45;
+            --primary-light: #004a9f;
+            --accent-color: #0066cc;
+            --text-dark: #1a1a1a;
+            --text-light: #555;
+            --bg-light: #f8f9fa;
+            --white: #ffffff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.7;
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+        
+        /* Loading Screen */
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--primary-color);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease-out;
+        }
+        
+        #loading-screen.fade-out {
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        .loader {
+            width: 60px;
+            height: 60px;
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            border-top-color: var(--white);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        .loading-text {
+            color: var(--white);
+            font-size: 1.2rem;
+            margin-top: 20px;
+            font-weight: 500;
+        }
+        
+        /* Scroll to Top Button */
+        #scroll-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            color: var(--white);
+            border: none;
+            border-radius: 50%;
+            font-size: 20px;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(0, 47, 108, 0.3);
+        }
+        
+        #scroll-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        #scroll-to-top:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 47, 108, 0.4);
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+            color: var(--white);
+            padding: 120px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.5;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+        
+        .hero-section h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 25px;
+            line-height: 1.2;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .hero-section .subtitle {
+            font-size: 1.4rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        /* Buttons */
+        .btn-custom-primary {
+            background: var(--white);
+            color: var(--primary-color);
+            padding: 16px 40px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-custom-primary:hover {
+            background: var(--bg-light);
+            color: var(--primary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
+        }
+        
+        .btn-custom-outline {
+            background: transparent;
+            color: var(--white);
+            padding: 16px 40px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border: 2px solid var(--white);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-custom-outline:hover {
+            background: var(--white);
+            color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+        
+        /* Section Styles */
+        .content-section {
+            padding: 80px 0;
+        }
+        
+        .content-section.bg-light {
+            background: var(--bg-light);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+        
+        .section-title p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* Feature Cards */
+        .feature-card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            height: 100%;
+            border-top: 4px solid var(--primary-color);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 30px rgba(0, 47, 108, 0.15);
+        }
+        
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+            color: var(--white);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin-bottom: 25px;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        .feature-card p {
+            color: var(--text-light);
+            line-height: 1.7;
+            margin-bottom: 0;
+        }
+        
+        .feature-card ul {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 15px;
+        }
+        
+        .feature-card ul li {
+            padding-left: 30px;
+            position: relative;
+            margin-bottom: 12px;
+            color: var(--text-light);
+        }
+        
+        .feature-card ul li::before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-size: 0.9rem;
+        }
+        
+        /* Two Column Layout */
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+        
+        .two-column img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .two-column h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .two-column h4 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin: 30px 0 15px;
+        }
+        
+        .two-column p {
+            color: var(--text-light);
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+        
+        .two-column ul {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 20px;
+        }
+        
+        .two-column ul li {
+            padding-left: 30px;
+            position: relative;
+            margin-bottom: 12px;
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+        
+        .two-column ul li::before {
+            content: "\f058";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-size: 1.1rem;
+        }
+        
+        /* Stats Section */
+        .stats-section {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 60px 0;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .stat-item h3 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            color: var(--white);
+        }
+        
+        .stat-item p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            margin: 0;
+        }
+        
+        /* Process Steps */
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .process-step {
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--primary-color);
+        }
+        
+        .process-step:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 47, 108, 0.15);
+        }
+        
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: var(--primary-color);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 0 auto 20px;
+        }
+        
+        .process-step h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        .process-step p {
+            color: var(--text-light);
+            line-height: 1.7;
+            margin: 0;
+        }
+        
+        /* Highlight Box */
+        .highlight-box {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+            color: var(--white);
+            padding: 50px;
+            border-radius: 12px;
+            text-align: center;
+            margin: 60px 0;
+            box-shadow: 0 8px 30px rgba(0, 47, 108, 0.2);
+        }
+        
+        .highlight-box h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--white);
+        }
+        
+        .highlight-box p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            margin: 0;
+            line-height: 1.6;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+            color: var(--white);
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+        
+        .cta-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .cta-section h2 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            line-height: 1.3;
+        }
+        
+        .cta-section p {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            line-height: 1.6;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero-section h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-section .subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .two-column {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .cta-section h2 {
+                font-size: 2.2rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 80px 0 60px;
+            }
+            
+            .hero-section h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-section .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .content-section {
+                padding: 60px 0;
+            }
+            
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+            
+            .feature-card {
+                padding: 30px;
+            }
+            
+            .stat-item h3 {
+                font-size: 2.5rem;
+            }
+            
+            .highlight-box {
+                padding: 30px;
+            }
+            
+            #scroll-to-top {
+                bottom: 20px;
+                right: 20px;
+                width: 45px;
+                height: 45px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero-buttons {
+                flex-direction: column;
+            }
+            
+            .btn-custom-primary,
+            .btn-custom-outline {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Loading Screen -->
+<div id="loading-screen">
+    <div class="loader"></div>
+    <div class="loading-text">Loading...</div>
+</div>
+
+<!-- Scroll to Top Button -->
+<button id="scroll-to-top" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
+    <!-- Top Bar -->
+<div class="top-bar">
+  <div class="container">
+    <div class="top-bar-left text-color">
+      <span>✓ Award-Winning Cloud CRM Software Since 2003</span>
+    </div>
+    <ul class="top-bar-nav">
+      <li><a href="https://www.salesboom.com/crm_supportcenter/overview/index.html">Support Center</a></li>
+      <li><a href="https://www.salesboom.com/crm_trial.html">Free Trial</a></li>
+      <li><a href="https://www.salesboom.com/login.html">Login</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Main Header -->
+<header>
+  <div class="main-header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <a href="https://www.salesboom.com" aria-label="Salesboom CRM Home">
+            <img src="https://www.salesboom.com/img/salesboom-logo-252x67.png" alt="Salesboom Cloud CRM Logo" width="252" height="67">
+          </a>
+        </div>
+        <div class="header-phone">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          <a href="tel:+18552292043">1-855-229-2043</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container">
+        <div class="hero-content">
+            <h1>Email Marketing That Lives Inside Your CRM</h1>
+            <p class="subtitle">Send personalized mass emails directly from your CRM. Track every campaign, nurture leads automatically, and turn email marketing into your most powerful sales tool—all in one platform.</p>
+            <div class="hero-buttons">
+                <a href="https://www.salesboom.com/request-crm-demo.html" class="btn-custom-primary">Book a Demo</a>
+                <a href="https://www.salesboom.com/crm_trial.html" class="btn-custom-outline">Start Free Trial</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Stats Section -->
+<section class="stats-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-6">
+                <div class="stat-item">
+                    <h3>22+</h3>
+                    <p>Years of CRM Innovation</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="stat-item">
+                    <h3>3,500+</h3>
+                    <p>Businesses Served</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="stat-item">
+                    <h3>159</h3>
+                    <p>Countries Worldwide</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-6">
+                <div class="stat-item">
+                    <h3>30</h3>
+                    <p>Day Free Trial</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Problem Statement Section -->
+<section class="content-section">
+    <div class="container">
+        <div class="section-title">
+            <h2>Why Disconnected Email Marketing Fails Modern Businesses</h2>
+        </div>
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <p style="font-size: 1.15rem; color: #555; line-height: 1.8; margin-bottom: 30px;">
+                    Traditional email marketing tools operate in isolation from your customer data, creating inefficiencies that cost your business time, money, and opportunities. When your email platform doesn't talk to your CRM, you're flying blind—sending generic messages without leveraging the rich customer intelligence you already have.
+                </p>
+                <div class="row g-4 mt-4">
+                    <div class="col-md-6">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <h3>Time Wasted</h3>
+                            <p>Marketing teams waste hours manually exporting contact lists and syncing data between systems, reducing productivity and increasing error rates.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-eye-slash"></i>
+                            </div>
+                            <h3>Blind Sales Teams</h3>
+                            <p>Sales teams miss follow-up opportunities because they can't see which prospects engaged with emails, losing valuable momentum.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </div>
+                            <h3>Redundant Communications</h3>
+                            <p>Customer service sends redundant communications because they can't see marketing touchpoints, frustrating customers.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h3>Lost Revenue</h3>
+                            <p>Leadership lacks unified visibility into campaign performance and ROI across the customer journey, making optimization impossible.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="highlight-box mt-5">
+                    <h3>The Solution is Integration</h3>
+                    <p>Salesboom's CRM Email Marketing gives you this power out of the box, with no additional integrations or third-party tools required. Email marketing lives where your customer data lives.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Solution Overview Section -->
+<section class="content-section bg-light">
+    <div class="container">
+        <div class="section-title">
+            <h2>Email Marketing Built Into Your CRM: The Salesboom Advantage</h2>
+            <p>Salesboom CRM includes enterprise-grade email marketing capabilities as a standard feature in every edition—no add-ons, no extra fees, no separate platforms to manage.</p>
+        </div>
+        <div class="two-column">
+            <div>
+                <h4><i class="fas fa-users" style="color: #002f6c; margin-right: 10px;"></i>Unified Customer View Drives Better Results</h4>
+                <p>Every email sent, opened, clicked, or ignored is automatically logged in the customer's CRM record. This creates a complete timeline of engagement that sales, marketing, support, and billing teams can all access.</p>
+                <ul>
+                    <li>Sales teams see which prospects are engaging with content and can time their outreach perfectly</li>
+                    <li>Marketing teams track which campaigns generate actual revenue, not just opens and clicks</li>
+                    <li>Support teams avoid sending promotional emails to frustrated customers dealing with issues</li>
+                    <li>Billing teams see payment history alongside communication history for smarter collections</li>
+                    <li>Leadership gains complete visibility into how email marketing impacts the entire customer lifecycle</li>
+                </ul>
+            </div>
+                <div>
+                <h4><i class="fas fa-paper-plane" style="color: #002f6c; margin-right: 10px;"></i>Send Mass Emails Without Leaving Your CRM</h4>
+                <p>With Salesboom, your entire team can send targeted mass emails directly from the CRM interface they already use daily. No switching between platforms, no separate logins, no data exports.</p>
+                <ul>
+                    <li>Send personalized mass emails to any segment of contacts with a few clicks</li>
+                    <li>Create and save HTML email templates that maintain your brand consistency</li>
+                    <li>Use mail merge fields to personalize each message with recipient-specific data</li>
+                    <li>Schedule campaigns for optimal send times or trigger them based on CRM events</li>
+                    <li>Automatically suppress contacts who've unsubscribed or marked emails as spam</li>
+                    <li>Track delivery rates, open rates, click rates, and conversions in real-time dashboards</li>
+                </ul>
+            </div>
+        </div>
+      
+    </div>
+</section>
+
+
+
+<!-- ---------------------------------------------------------------------------------------------------------------------------------- -->
+      <div class="col-md-8 mx-auto">
+        <div class="card h-100 shadow-lg border-0">
+          <div class="card-body d-flex flex-column">
+            <!-- Responsive iframe -->
+            <div class="ratio ratio-16x9 mb-3">
+              <iframe
+                src="https://www.youtube.com/embed/uzDpqMVoNMI"
+                title="YouTube video 2"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- ---------------------------------------------------------------------------------------------------------------------------------- -->
+
+
+<!-- Campaign Management Section -->
+<section class="content-section">
+    <div class="container">
+        <div class="section-title">
+            <h2>Professional Email Campaign Management Made Simple</h2>
+            <p>Creating captivating email marketing campaigns is effortless with Salesboom's intuitive campaign builder.</p>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-4">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>HTML Email Templates</h3>
+                    <p>Design beautiful, mobile-responsive emails using our drag-and-drop template builder or create custom HTML designs that match your brand perfectly. Every template automatically adapts to display perfectly on all devices.</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-tag"></i>
+                    </div>
+                    <h3>Dynamic Personalization</h3>
+                    <p>Transform generic mass emails into personalized messages by inserting dynamic content that pulls directly from CRM records. Use merge fields to automatically include recipient names, company names, purchase history, and more.</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-filter"></i>
+                    </div>
+                    <h3>Advanced Segmentation</h3>
+                    <p>Target the right audience with sophisticated segmentation based on any CRM data point. Create segments by industry, company size, purchase history, engagement level, or custom criteria for maximum relevance.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Automation Section -->
+<section class="content-section bg-light">
+    <div class="container">
+        <div class="section-title">
+            <h2>Marketing Automation That Nurtures Leads While You Sleep</h2>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-route"></i>
+                    </div>
+                    <h3>Drip Campaigns</h3>
+                    <p>Set up multi-touch email sequences that automatically nurture leads over time. Define the timing, content, and triggers for each message in the sequence, then let automation do the work.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Trigger-Based Emails</h3>
+                    <p>Automatically send relevant emails based on customer actions or CRM events. Welcome new leads, follow up on abandoned quotes, send birthday greetings, or trigger re-engagement campaigns based on inactivity.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <h3>Lead Scoring</h3>
+                    <p>Track email engagement automatically and adjust lead scores based on opens, clicks, and other interactions. Hot leads rise to the top automatically, enabling sales teams to prioritize their efforts.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3>Automated Follow-Ups</h3>
+                    <p>Never miss a follow-up opportunity with automated reminder sequences. Schedule follow-up emails after sales calls, proposals, demos, or any other important touchpoint to maintain momentum.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Analytics Section -->
+<section class="content-section">
+    <div class="container">
+        <div class="section-title">
+            <h2>Real-Time Analytics That Drive Continuous Improvement</h2>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-envelope-open"></i>
+                    </div>
+                    <h3>Open Tracking</h3>
+                    <p>Monitor exactly who opened your emails and when, providing valuable intelligence for sales follow-up timing.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mouse-pointer"></i>
+                    </div>
+                    <h3>Click Tracking</h3>
+                    <p>Track which links recipients clicked to understand what content resonates and drives engagement.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Campaign Analytics</h3>
+                    <p>Comprehensive reporting on delivery rates, bounce rates, unsubscribe rates, and overall campaign performance.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h3>ROI Tracking</h3>
+                    <p>Connect email campaigns directly to revenue by tracking which emails lead to opportunities and closed deals.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Use Cases Section -->
+<section class="content-section bg-light">
+    <div class="container">
+        <div class="section-title">
+            <h2>Email Marketing Applications Across Your Organization</h2>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Marketing</h3>
+                    <p>Newsletters, promotions, product announcements, event invitations, and lead nurturing campaigns.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Sales</h3>
+                    <p>Proposal follow-ups, meeting confirmations, demo invitations, and personalized outreach sequences.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Customer Service</h3>
+                    <p>Support ticket updates, satisfaction surveys, knowledge base articles, and onboarding communications.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                    </div>
+                    <h3>Billing</h3>
+                    <p>Invoice delivery, payment reminders, renewal notifications, and account status updates.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Success Formula Section -->
+<section class="content-section">
+    <div class="container">
+        <div class="section-title">
+            <h2>The Three-Step Path to Email Marketing Success</h2>
+            <p>Getting started with Salesboom email marketing is straightforward. Follow this proven formula to transform email into your most powerful marketing channel.</p>
+        </div>
+        <div class="process-steps">
+            <div class="process-step">
+                <div class="step-number">1</div>
+                <h3>Build Your Foundation</h3>
+                <p>Import your contacts into Salesboom CRM. Create basic segmentation rules and build 3-5 core email templates for common scenarios. This foundation takes a few hours but provides infrastructure for all future campaigns.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">2</div>
+                <h3>Launch Simple Campaigns</h3>
+                <p>Start simple: send a monthly newsletter to engaged contacts, create a welcome sequence for new leads, or automate billing reminders. Monitor results and learn what resonates with your audience.</p>
+            </div>
+            <div class="process-step">
+                <div class="step-number">3</div>
+                <h3>Scale and Automate</h3>
+                <p>Expand your sophistication by adding more segments, building multi-touch drip campaigns, creating behavioral triggers, and implementing A/B testing. The more you automate, the more value you extract without increasing effort.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Getting Started Section -->
+<section class="content-section bg-light">
+    <div class="container">
+        <div class="section-title">
+            <h2>Start Transforming Email Marketing Today</h2>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Implementation Support</h3>
+                    <p>Our team guides you through setup, template creation, list import, and first campaign launch with industry best practices.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Training Resources</h3>
+                    <p>Access comprehensive documentation, video tutorials, and live webinars that teach strategy alongside platform functionality.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Ongoing Optimization</h3>
+                    <p>Email marketing specialists review your campaigns, suggest improvements, and help troubleshoot performance issues.</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <h3>Risk-Free Trial</h3>
+                    <p>Try Salesboom CRM and email marketing features free for 30 days with no credit card required and no strings attached.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-content">
+            <h2>Ready to Transform Email Marketing Into Your #1 Revenue Driver?</h2>
+            <p>Experience the power of CRM-integrated email marketing with a free 30-day trial. Send personalized campaigns, automate follow-ups, and watch your engagement rates soar—no credit card required.</p>
+            <div class="hero-buttons">
+                <a href="https://www.salesboom.com/request-crm-demo.html" class="btn-custom-primary">Book a Demo Today</a>
+                <a href="https://www.salesboom.com/crm_trial.html" class="btn-custom-outline">Start Free Trial</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-2">
+      <h3 class="fw-bold text-color">
+        <i class="fa-solid fa-layer-group me-2"></i>
+        Explore Salesboom Editions
+      </h3>
+      <p class="text-muted">Discover powerful CRM editions to scale your business efficiently.</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-lg border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-briefcase fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Professional Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              A complete CRM suite with Marketing Automation, ERP integration, and Support tools — built for performance and value.
+            </p>
+            <a href="https://www.salesboom.com/editions/professional-edition.html" class="btn btn-color mt-auto">
+              Explore Professional <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-lg border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-building fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Enterprise Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              For large enterprises — automate workflows, unify data, and leverage analytics to drive strategic growth.
+            </p>
+            <a href="https://www.salesboom.com/editions/enterprise-edition.html" class="btn btn-color mt-auto">
+              View Enterprise <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-lg border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-users fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Team Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              Perfect for small teams starting with CRM — manage leads, track sales, and boost productivity with simplicity.
+            </p>
+            <a href="https://www.salesboom.com/editions/team-edition.html" class="btn btn-color mt-auto">
+           Discover Team<i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="container py-5">
+  <h2 class="text-center mb-5">CRM Email Integration & Unified Platform Features</h2>
+
+  <div class="row g-4">
+
+    <!-- Card 1 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-envelope fa-3x mb-3 text-color"></i>
+        <h4>Cloud CRM Email Client</h4>
+        <p>
+          Use a fully functional email client built directly into your CRM that sends, receives, and archives all messages while attaching them to the right records.  
+          <a href="https://www.salesboom.com/products/tools-email.html" class="text-color fw-bold">
+            Explore CRM Email Tools
+          </a>. 
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-network-wired fa-3x mb-3 text-color"></i>
+        <h4>Email Integration with CRM</h4>
+        <p>
+          Sync contacts, messages, tasks, and opportunities between your inbox and CRM through seamless email integration — manage CRM data without leaving your email.  
+          <a href="https://www.salesboom.com/products/email-integration.html" class="text-color fw-bold">
+            Learn about Email Integration
+          </a>. 
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-sync fa-3x mb-3 text-color"></i>
+        <h4>CRM with Built-In Email Functions</h4>
+        <p>
+          Unify email and CRM data so your sales, service, and support teams always have context — every email becomes part of the customer history with  
+          <a href="https://www.salesboom.com/products/crm-with-email.html" class="text-color fw-bold">
+            CRM with Email
+          </a>. 
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-envelope-circle-check fa-3x mb-3 text-color"></i>
+        <h4>POP3 Email Support</h4>
+        <p>
+          Connect external email accounts using POP3 so that incoming messages are retrieved and logged automatically into the CRM.  
+          <a href="https://www.salesboom.com/products/feature-pop3-email-support.html" class="text-color fw-bold">
+            View POP3 Email Support
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-info-circle fa-3x mb-3 text-color"></i>
+        <h4>How to Mass Email in CRM</h4>
+        <p>
+          Learn to send bulk personalized emails directly from your CRM using templates and mail merge, with history tracking and bounce reports through  
+          <a href="https://www.salesboom.com/products/How-to-Mass-Email-CRM.html" class="text-color fw-bold">
+            CRM Mass Email Guide
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-envelope-open-text fa-3x mb-3 text-color"></i>
+        <h4>Outlook Integration</h4>
+        <p>
+          Sync your Outlook inbox and calendar with the CRM and auto-log communications, appointments, and tasks using  
+          <a href="https://www.salesboom.com/products/tools-outlook_integration.html" class="text-color fw-bold">
+            Outlook Integration
+          </a>. 
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 7 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-book fa-3x mb-3 text-color"></i>
+        <h4>Outlook Integration Instructions</h4>
+        <p>
+          Get step-by-step guidance on configuring your Outlook CRM connection to ensure seamless message sync and automatic case creation via  
+          <a href="https://www.salesboom.com/products/crm-outlook-integration-instructions.html" class="text-color fw-bold">
+            Outlook Integration Guide
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 8 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-chart-simple fa-3x mb-3 text-color"></i>
+        <h4>Sales Intelligence & Email Analytics</h4>
+        <p>
+          Combine email engagement data with CRM reports and dashboards to analyze performance and improve follow-up and pipeline prioritization via  
+          <a href="https://www.salesboom.com/integrated-crm/sales_intelligence_content.html" class="text-color fw-bold">
+            Sales Intelligence tools
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 9 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-layer-group fa-3x mb-3 text-color"></i>
+        <h4>Unified CRM Platform</h4>
+        <p>
+          Centralize email, sales activities, service cases and analytics in a single integrated system using the  
+          <a href="https://www.salesboom.com/unified-crm/comprehensive-crm-platform.html" class="text-color fw-bold">
+            unified CRM platform
+          </a>.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="mt-5 footer">
+  <div class="container mt-5 pt-5">
+    <div class="footer-grid">
+      <div class="footer-section">
+        <h3>Products</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/products/tools-sfa.html">Sales Force Automation</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-marketing.html">Marketing Automation</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-casemanagement.html">Case Management</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-reporting.html">Business Intelligence</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-emailintegration.html">Email Integration</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Solutions</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/products/edition-team.html">Team Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/edition-professional.html">Professional Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/edition-enterprise.html">Enterprise Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/industry-solutions.html">Industry Solutions</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/company/index.html">About Us</a></li>
+          <li><a href="https://www.salesboom.com/company/company-contact.html">Contact Us</a></li>
+          <li><a href="https://www.salesboom.com/customers/index.html">Customers</a></li>
+          <li><a href="https://www.salesboom.com/partners/index.html">Partners</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/support/index.html">Support Center</a></li>
+          <li><a href="https://www.salesboom.com/crm_supportcenter/overview/index.html">Documentation</a></li>
+          <li><a href="https://www.salesboom.com/whitepapers/index.html">White Papers</a></li>
+          <li><a href="https://www.salesboom.com/pop-privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="bg-color">
+    <div class="container">
+     <div class="footer-bottom pb-3 mt-3">
+      <p>&copy; 2003-2025 <a class="text-white fw-bold" href="https://www.salesboom.com">Salesboom.com</a> Inc. All rights reserved. | Call: 1-855-229-2043</p>
+      <p style="margin-top: 10px;">Salesboom's color-coded CRM lead management software helps businesses visually prioritize sales opportunities with automated workflow rules. Contact us to learn how color coding can transform your lead management process and increase sales productivity.</p>
+    </div>
+    </div>
+  </div>
+ 
+</footer>
+
+<!-- Common JavaScript -->
+<script src="content/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+<script>
+    // Loading screen fade out
+    window.addEventListener('load', function() {
+        setTimeout(function() {
+            document.getElementById('loading-screen').classList.add('fade-out');
+        }, 500);
+    });
+    
+    // Scroll to top button functionality
+    const scrollToTopBtn = document.getElementById('scroll-to-top');
+    
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+            scrollToTopBtn.classList.add('show');
+        } else {
+            scrollToTopBtn.classList.remove('show');
+        }
+    });
+    
+    scrollToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1587 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+<!-- Primary Meta Tags -->
+<title>QuickBooks CRM Integration | Salesboom Connector</title>
+<meta name="description" content="Seamlessly sync Salesboom CRM with QuickBooks. Bi-directional integration eliminates duplicate data entry, reduces errors, and gives your team one unified view.">
+<meta name="keywords" content="QuickBooks CRM integration, QuickBooks connector, CRM accounting integration, QuickBooks synchronization, Salesboom QuickBooks, CRM QuickBooks add-on, automated accounting sync">
+<link rel="canonical" href="https://www.salesboom.com/products/CRM-data-sheets/crm-data-sheet-quickbooks-connector-test.html">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.salesboom.com/products/CRM-data-sheets/crm-data-sheet-quickbooks-connector-test.html">
+<meta property="og:title" content="QuickBooks CRM Integration | Salesboom Connector">
+<meta property="og:description" content="Seamlessly sync Salesboom CRM with QuickBooks. Bi-directional integration eliminates duplicate data entry, reduces errors, and gives your team one unified view.">
+<meta property="og:image" content="https://www.salesboom.com/img/crm-data-sheet-quickbooks-connector-test-og.jpg">
+<meta property="og:site_name" content="Salesboom CRM">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://www.salesboom.com/products/CRM-data-sheets/crm-data-sheet-quickbooks-connector-test.html">
+<meta name="twitter:title" content="QuickBooks CRM Integration | Salesboom Connector">
+<meta name="twitter:description" content="Seamlessly sync Salesboom CRM with QuickBooks. Bi-directional integration eliminates duplicate data entry, reduces errors, and gives your team one unified view.">
+<meta name="twitter:image" content="https://www.salesboom.com/img/crm-data-sheet-quickbooks-connector-test-og.jpg">
+<meta name="twitter:site" content="@SalesboomCloud">
+
+<!-- Schema.org structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Salesboom QuickBooks CRM Integration",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web-based, Cloud",
+  "offers": {
+    "@type": "Offer",
+    "price": "900.00",
+    "priceCurrency": "USD",
+    "priceValidUntil": "2026-12-31"
+  },
+  "featureList": [
+    "Bi-directional synchronization between CRM and QuickBooks",
+    "Automatic customer data synchronization",
+    "Won opportunities to sales orders/invoices",
+    "Product and inventory synchronization",
+    "Invoice details back to opportunities",
+    "Real-time data updates",
+    "48-hour implementation"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.5",
+    "ratingCount": "3500"
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "Salesboom",
+    "url": "https://www.salesboom.com",
+    "logo": "https://www.salesboom.com/img/salesboom-logo-252x67.png",
+    "foundingDate": "2003",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-855-229-2043",
+      "contactType": "Customer Service"
+    }
+  }
+}
+</script>
+
+<link rel="shortcut icon" href="https://www.salesboom.com/favicon.ico">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+ <link rel="stylesheet" href="../content/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../content/css/salesboom-common.css">
+    <link rel="shortcut icon" href="../content/image/salesboom-logo-252x67.png" type="image/x-icon"> 
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+/* CSS Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #002f6c;
+  --secondary-color: #1a4d8f;
+  --accent-color: #3498db;
+  --success-color: #27ae60;
+  --danger-color: #e74c3c;
+  --warning-color: #f39c12;
+  --text-color: #333;
+  --text-light: #666;
+  --border-color: #e0e0e0;
+  --bg-light: #f8f9fa;
+  --bg-white: #ffffff;
+  --shadow: 0 2px 10px rgba(0,0,0,0.1);
+  --shadow-hover: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background: var(--bg-white);
+  overflow-x: hidden;
+}
+
+/* Loading Screen */
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#loading-screen.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 5px solid rgba(255, 255, 255, 0.3);
+  border-top: 5px solid #ffffff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-text {
+  color: white;
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* Scroll to Top Button */
+#scroll-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  box-shadow: var(--shadow-hover);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+#scroll-to-top:hover {
+  background: var(--secondary-color);
+  transform: translateY(-5px);
+}
+
+#scroll-to-top.show {
+  display: flex;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: white;
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+  opacity: 0.3;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 25px;
+  line-height: 1.2;
+}
+
+.hero .subtitle {
+  font-size: 1.4rem;
+  margin-bottom: 40px;
+  opacity: 0.95;
+  line-height: 1.6;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+/* Button Styles */
+.btn-custom {
+  display: inline-block;
+  padding: 18px 45px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary-custom {
+  background: var(--danger-color);
+  color: white;
+  box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
+}
+
+.btn-primary-custom:hover {
+  background: #c0392b;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(231, 76, 60, 0.4);
+  color: white;
+}
+
+.btn-outline-custom {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-outline-custom:hover {
+  background: white;
+  color: var(--primary-color);
+}
+
+/* Stats Section */
+.stats-section {
+  background: var(--primary-color);
+  color: white;
+  padding: 60px 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  text-align: center;
+}
+
+.stat-item h3 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--danger-color);
+  margin-bottom: 10px;
+}
+
+.stat-item p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* Content Sections */
+.content-section {
+  padding: 80px 0;
+}
+
+.content-section.bg-light {
+  background: var(--bg-light);
+}
+
+.section-header {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 60px;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.section-header p {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  line-height: 1.8;
+}
+
+/* Feature Cards */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.feature-card {
+  background: var(--bg-white);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  transition: all 0.3s;
+  border-top: 4px solid var(--primary-color);
+  height: 100%;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.feature-icon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.feature-card p {
+  color: var(--text-light);
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.feature-card ul {
+  list-style: none;
+  margin-top: 15px;
+  padding: 0;
+}
+
+.feature-card li {
+  padding-left: 30px;
+  position: relative;
+  margin-bottom: 12px;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+.feature-card li::before {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  color: var(--success-color);
+  font-size: 16px;
+}
+
+/* Benefits Section */
+.benefits-section {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: white;
+  padding: 80px 0;
+  position: relative;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+.benefit-item {
+  text-align: center;
+  padding: 35px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s;
+}
+
+.benefit-item:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-5px);
+}
+
+.benefit-item .benefit-icon {
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.benefit-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.benefit-item p {
+  opacity: 0.9;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+/* Integration Flow */
+.integration-flow {
+  background: white;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: var(--shadow-hover);
+  margin: 40px 0;
+}
+
+.flow-step {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 20px;
+  background: var(--bg-light);
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+.flow-step:hover {
+  background: #e8f4f8;
+  transform: translateX(10px);
+}
+
+.flow-icon {
+  width: 60px;
+  height: 60px;
+  background: var(--primary-color);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.flow-content h4 {
+  color: var(--primary-color);
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.flow-content p {
+  margin: 0;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+/* Pricing Card */
+.pricing-card {
+  background: white;
+  padding: 50px 40px;
+  border-radius: 12px;
+  box-shadow: var(--shadow-hover);
+  max-width: 600px;
+  margin: 40px auto;
+  text-align: center;
+  border: 3px solid var(--primary-color);
+}
+
+.pricing-badge {
+  display: inline-block;
+  background: var(--primary-color);
+  color: white;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.price {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  margin: 20px 0;
+}
+
+.price-small {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-color);
+  margin: 15px 0;
+}
+
+.price-period {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  margin-bottom: 30px;
+}
+
+.pricing-features {
+  list-style: none;
+  padding: 0;
+  margin: 30px 0;
+  text-align: left;
+}
+
+.pricing-features li {
+  padding: 12px 0 12px 40px;
+  position: relative;
+  color: var(--text-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.pricing-features li:last-child {
+  border-bottom: none;
+}
+
+.pricing-features li::before {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  color: var(--success-color);
+  font-size: 18px;
+}
+
+/* Alert Box */
+.alert-box {
+  background: #fff3cd;
+  border-left: 5px solid var(--warning-color);
+  padding: 25px;
+  border-radius: 8px;
+  margin: 30px 0;
+}
+
+.alert-box h4 {
+  color: #856404;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.alert-box p {
+  color: #856404;
+  margin: 0;
+  line-height: 1.7;
+}
+
+/* Success Box */
+.success-box {
+  background: #d4edda;
+  border-left: 5px solid var(--success-color);
+  padding: 25px;
+  border-radius: 8px;
+  margin: 30px 0;
+}
+
+.success-box h4 {
+  color: #155724;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.success-box p {
+  color: #155724;
+  margin: 0;
+  line-height: 1.7;
+}
+
+.success-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0 0 0;
+}
+
+.success-box li {
+  padding: 8px 0 8px 30px;
+  position: relative;
+  color: #155724;
+}
+
+.success-box li::before {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  color: var(--success-color);
+  font-size: 16px;
+}
+
+/* Info Box */
+.info-box {
+  background: #d1ecf1;
+  border-left: 5px solid #0c5460;
+  padding: 25px;
+  border-radius: 8px;
+  margin: 30px 0;
+}
+
+.info-box h4 {
+  color: #0c5460;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.info-box p {
+  color: #0c5460;
+  margin: 0;
+  line-height: 1.7;
+}
+
+/* CTA Section */
+.cta-section {
+  background: var(--primary-color);
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.cta-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.cta-content p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  opacity: 0.9;
+  line-height: 1.7;
+}
+
+.cta-contact {
+  margin-top: 30px;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.cta-contact a {
+  color: var(--danger-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.cta-contact a:hover {
+  text-decoration: underline;
+}
+
+/* Comparison Table */
+.comparison-table {
+  background: white;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  margin: 40px 0;
+}
+
+.comparison-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.comparison-row:last-child {
+  border-bottom: none;
+}
+
+.comparison-cell {
+  padding: 25px;
+}
+
+.comparison-cell h4 {
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.comparison-cell p {
+  color: var(--text-light);
+  margin: 0;
+  line-height: 1.7;
+}
+
+.comparison-cell:first-child {
+  background: var(--bg-light);
+  border-right: 1px solid var(--border-color);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .section-header h2 {
+    font-size: 2rem;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .comparison-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .comparison-cell:first-child {
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 60px 0;
+  }
+  
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .hero .subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .hero-cta {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .content-section {
+    padding: 60px 0;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .section-header h2 {
+    font-size: 1.8rem;
+  }
+  
+  #scroll-to-top {
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+  }
+  
+  .flow-step {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .flow-icon {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+  
+  .btn-custom {
+    padding: 14px 30px;
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  .feature-card {
+    padding: 30px 20px;
+  }
+  
+  .cta-content h2 {
+    font-size: 1.8rem;
+  }
+  
+  .price {
+    font-size: 2.5rem;
+  }
+}
+</style>
+</head>
+
+<body>
+<!-- Loading Screen -->
+<div id="loading-screen">
+  <div class="spinner"></div>
+  <div class="loading-text">Loading QuickBooks Integration...</div>
+</div>
+
+    <!-- Top Bar -->
+<div class="top-bar">
+  <div class="container">
+    <div class="top-bar-left text-color">
+      <span>✓ Award-Winning Cloud CRM Software Since 2003</span>
+    </div>
+    <ul class="top-bar-nav">
+      <li><a href="https://www.salesboom.com/crm_supportcenter/overview/index.html">Support Center</a></li>
+      <li><a href="https://www.salesboom.com/crm_trial.html">Free Trial</a></li>
+      <li><a href="https://www.salesboom.com/login.html">Login</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Main Header -->
+<header>
+  <div class="main-header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <a href="https://www.salesboom.com" aria-label="Salesboom CRM Home">
+            <img src="https://www.salesboom.com/img/salesboom-logo-252x67.png" alt="Salesboom Cloud CRM Logo" width="252" height="67">
+          </a>
+        </div>
+        <div class="header-phone">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          <a href="tel:+18552292043">1-855-229-2043</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <h1>Unite Your CRM and QuickBooks in Perfect Harmony</h1>
+      <p class="subtitle">Eliminate duplicate data entry and accounting errors with seamless bi-directional synchronization between Salesboom CRM and QuickBooks. One view of truth, organization-wide.</p>
+      <div class="hero-cta">
+        <a href="https://www.salesboom.com/request-crm-demo.html" class="btn-custom btn-primary-custom">Schedule Consultation</a>
+        <a href="https://www.salesboom.com/crm_trial.html" class="btn-custom btn-outline-custom">Start Free Trial</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Section -->
+<section class="stats-section">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <h3>48 Hrs</h3>
+        <p>Rapid Implementation</p>
+      </div>
+      <div class="stat-item">
+        <h3>28,000+</h3>
+        <p>Active Subscribers</p>
+      </div>
+      <div class="stat-item">
+        <h3>22+</h3>
+        <p>Years of Expertise</p>
+      </div>
+      <div class="stat-item">
+        <h3>154</h3>
+        <p>Countries Worldwide</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Problem Statement Section -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>The Hidden Cost of Disconnected Systems</h2>
+      <p>When your CRM and accounting systems don't talk to each other, your business pays the price every single day. Sales teams work in the CRM while accounting teams work in QuickBooks, creating two separate versions of customer data, inventory levels, and order information.</p>
+    </div>
+    
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-clock"></i></div>
+        <h3>Time Waste</h3>
+        <p>Double data entry wastes hours of productive time every week that could be spent on revenue-generating activities instead of administrative busywork.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-exclamation-triangle"></i></div>
+        <h3>Costly Errors</h3>
+        <p>Manual data transfer introduces costly errors that damage customer relationships and create internal conflicts between departments.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-eye-slash"></i></div>
+        <h3>Incomplete Information</h3>
+        <p>Incomplete information leads to poor decisions and missed opportunities as teams lack visibility into the complete customer picture.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-users"></i></div>
+        <h3>Internal Conflicts</h3>
+        <p>Sales and accounting teams work from different numbers, causing confusion and internal conflicts that slow down operations.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-boxes"></i></div>
+        <h3>Inventory Discrepancies</h3>
+        <p>Inventory discrepancies result in unfulfilled orders and disappointed customers, damaging your reputation and bottom line.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon"><i class="fas fa-hand-holding-usd"></i></div>
+        <h3>Delayed Revenue</h3>
+        <p>Quote-to-cash cycle slows down, delaying revenue recognition and impacting your financial performance and cash flow.</p>
+      </div>
+    </div>
+    
+    <div class="alert-box mt-5">
+      <h4><i class="fas fa-lightbulb me-2"></i>There's a Better Way</h4>
+      <p>These disconnected systems create organizational friction that holds your business back. Your teams deserve better tools that work together seamlessly, eliminating waste and enabling growth.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Solution Overview Section -->
+<section class="content-section bg-light">
+  <div class="container">
+    <div class="section-header">
+      <h2>One Integration, Unlimited Benefits: The Salesboom QuickBooks Connector</h2>
+      <p>Salesboom delivers an out-of-the-box solution that automatically synchronizes your CRM with QuickBooks, ensuring one accurate view of customer, product, and order information across your entire organization.</p>
+    </div>
+    
+    <div class="success-box">
+      <h4><i class="fas fa-rocket me-2"></i>Seamless Implementation in 48 Hours</h4>
+      <p>Within hours, Salesboom will remotely install and configure the integration to provide bi-directional synchronization between your Salesboom Cloud CRM and QuickBooks. The entire process is seamless and runs in the background—there's no extra software to learn, no complex configuration, and no disruption to your daily operations.</p>
+    </div>
+    
+    <div class="row mt-5">
+      <div class="col-lg-6">
+        <div class="info-box">
+          <h4><i class="fas fa-sync-alt me-2"></i>Real-Time Synchronization</h4>
+          <p>Whether you're working in QuickBooks or managing Opportunities, Accounts, or Products in Salesboom CRM, data synchronizes automatically and accurately between both systems in real-time. No delays, no manual intervention required.</p>
+        </div>
+      </div>
+      
+      <div class="col-lg-6">
+        <div class="info-box">
+          <h4><i class="fas fa-shield-alt me-2"></i>One Source of Truth</h4>
+          <p>Our QuickBooks CRM Integration guarantees that Sales, Accounting, and Management teams always see correct and timely information. Everyone works from the same data, eliminating confusion and improving decision-making.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Core Integration Features Section -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Bi-Directional Data Synchronization That Just Works</h2>
+      <p>The Salesboom QuickBooks Connector synchronizes critical business data between key objects in both systems, creating a unified source of truth for your organization.</p>
+    </div>
+    
+    <div class="integration-flow">
+      <div class="flow-step">
+        <div class="flow-icon"><i class="fas fa-building"></i></div>
+        <div class="flow-content">
+          <h4>Accounts to QuickBooks Customers</h4>
+          <p>Customer information flows seamlessly between systems. When you create or update an Account in Salesboom CRM, the corresponding Customer record in QuickBooks updates automatically. Changes made in QuickBooks sync back to Salesboom, ensuring both systems always reflect the same accurate customer data including contact details, addresses, payment terms, and account status.</p>
+        </div>
+      </div>
+      
+      <div class="flow-step">
+        <div class="flow-icon"><i class="fas fa-trophy"></i></div>
+        <div class="flow-content">
+          <h4>Won Opportunities to Sales Orders/Invoices</h4>
+          <p>The moment you mark an Opportunity as Won in Salesboom CRM, the system automatically creates the corresponding Sales Order, Invoice, or Sales Receipt in QuickBooks. This eliminates the delay between closing a deal and beginning the fulfillment and billing process. Sales teams maintain momentum while accounting receives accurate order details instantly.</p>
+        </div>
+      </div>
+      
+      <div class="flow-step">
+        <div class="flow-icon"><i class="fas fa-box"></i></div>
+        <div class="flow-content">
+          <h4>Products Synchronized with Inventory Items</h4>
+          <p>Product catalogs stay perfectly aligned between both systems. When you add, update, or modify Products in Salesboom or Inventory Items in QuickBooks, changes synchronize automatically. Pricing updates, descriptions, SKU numbers, and availability status remain consistent. Sales teams always quote with current pricing while accounting maintains accurate inventory records.</p>
+        </div>
+      </div>
+      
+      <div class="flow-step">
+        <div class="flow-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+        <div class="flow-content">
+          <h4>Invoice Details Back to Opportunities</h4>
+          <p>Financial information flows back from QuickBooks to Salesboom, completing the loop. Invoice details, payment status, outstanding balances, and transaction history appear within Opportunity records. Sales teams gain visibility into the financial relationship with each customer, enabling better conversations about renewals, upsells, and payment terms.</p>
+        </div>
+      </div>
+      
+      <div class="flow-step">
+        <div class="flow-icon"><i class="fas fa-puzzle-piece"></i></div>
+        <div class="flow-content">
+          <h4>Extensible Integration Architecture</h4>
+          <p>Beyond standard objects, the integration can be customized to sync additional fields, custom objects, or other internal systems. Whether you need to integrate custom data fields, connect to third-party applications, or build specialized workflows, our architecture supports extensions tailored to your specific business requirements.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8 Reasons Section -->
+<section class="benefits-section">
+  <div class="container">
+    <div class="section-header" style="color: white;">
+      <h2 style="color: white;">8 Reasons Why QuickBooks CRM Integration is Essential</h2>
+      <p style="color: rgba(255,255,255,0.9);">With Salesboom's QuickBooks CRM add-on, your accounting, sales, and marketing departments operate from the same accurate data. Two-way real-time synchronization of customer, vendor, quotes, proposals, and invoice data is completely seamless.</p>
+    </div>
+    <div class="benefits-grid">
+      <div class="benefit-item">
+        <div class="benefit-icon"><i class="fas fa-eye"></i></div>
+        <h3>Unified View</h3>
+        <p>Sales, Accounting, and Management share the most up-to-date information on customers, inventory, and orders. Everyone works from the same facts, eliminating confusion.</p>
+      </div>
+      
+      <div class="benefit-item">
+        <div class="benefit-icon"><i class="fas fa-chart-line"></i></div>
+        <h3>Error Reduction</h3>
+        <p>Eliminate manual data entry completely. This removes human error from the equation and frees your team to focus on revenue-generating activities.</p>
+      </div>
+      
+      <div class="benefit-item">
+        <div class="benefit-icon"><i class="fas fa-warehouse"></i></div>
+        <h3>Effortless Inventory</h3>
+        <p>Never worry about unfulfilled orders due to inventory shortages. Real-time inventory synchronization ensures accurate stock levels.</p>
+      </div>
+      
+      <div class="benefit-item">
+        <div class="benefit-icon"><i class="fas fa-rocket"></i></div>
+        <h3>Rapid Implementation</h3>
+        <p>Customized and rapid implementation means you're up and running in 48 hours with no disruption to daily operations.</p>
+      </div>
+      
+      <div class="benefit-item">
+        <div class="benefit-icon"><i class="fas fa-dollar-sign"></i></div>
+        <h3>Affordable Pricing</h3>
+        <p>At just $900 annually plus $495 setup, the integration pays for itself within weeks through time savings and error reduction.</p>
+      </div>
+      
+      <div class="benefit-item">
+        <div class="benefit-icon"><i class="fas fa-life-ring"></i></div>
+        <h3>Expert Support</h3>
+        <p>Access to Salesboom CRM specialists who understand both systems ensures quick resolution of any issues that arise.</p>
+      </div>
+      
+      <div class="benefit-item">
+        <div class="benefit-icon"><i class="fas fa-shield-alt"></i></div>
+        <h3>Reliable Security</h3>
+        <p>SOC 2 Type II certified infrastructure with encryption ensures your financial and customer data remains secure and compliant.</p>
+      </div>
+      
+      <div class="benefit-item">
+        <div class="benefit-icon"><i class="fas fa-code-branch"></i></div>
+        <h3>Flexible Architecture</h3>
+        <p>Extensible platform grows with your business, supporting custom fields, workflows, and additional integrations as needs evolve.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Pricing Section -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Simple, Transparent Pricing</h2>
+      <p>No hidden fees. No surprises. Just straightforward pricing that delivers immediate ROI.</p>
+    </div>
+    
+    <div class="pricing-card">
+      <div class="pricing-badge">QUICKBOOKS INTEGRATION</div>
+      
+      <div style="border-bottom: 2px solid var(--border-color); padding-bottom: 30px; margin-bottom: 30px;">
+        <h3 style="color: var(--primary-color); margin-bottom: 15px;">One-Time Setup Fee</h3>
+        <div class="price-small">$495</div>
+        <p style="color: var(--text-light); margin: 0;">Professional installation and configuration</p>
+      </div>
+      
+      <div>
+        <h3 style="color: var(--primary-color); margin-bottom: 15px;">Annual Subscription</h3>
+        <div class="price">$900<span style="font-size: 1.5rem;">/year</span></div>
+        <div class="price-period">Unlimited Users, Unlimited Transactions</div>
+      </div>
+      
+      <ul class="pricing-features">
+        <li>Bi-directional data synchronization</li>
+        <li>Accounts to QuickBooks Customers sync</li>
+        <li>Won Opportunities to Sales Orders/Invoices</li>
+        <li>Product and Inventory synchronization</li>
+        <li>Invoice details back to CRM</li>
+        <li>Real-time updates (no delays)</li>
+        <li>Remote installation within 48 hours</li>
+        <li>Zero disruption to daily operations</li>
+        <li>Dedicated integration specialist</li>
+        <li>Ongoing technical support included</li>
+        <li>Compatible with QuickBooks versions</li>
+        <li>SOC 2 Type II certified security</li>
+        <li>Extensible for custom requirements</li>
+      </ul>
+      
+      <a href="https://www.salesboom.com/request-crm-demo.html" class="btn-custom btn-primary-custom w-100 mt-4">Schedule Consultation</a>
+      
+      <div class="mt-4" style="padding: 20px; background: #d4edda; border-radius: 8px;">
+        <p style="margin: 0; color: #155724; font-weight: 600;"><i class="fas fa-calculator me-2"></i>ROI Calculator</p>
+        <p style="margin: 10px 0 0 0; color: #155724;">If your team saves just 5 hours per week on data entry (valued at $25/hour), the integration pays for itself in under 3 months.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Competitive Comparison Section -->
+<section class="content-section bg-light">
+  <div class="container">
+    <div class="section-header">
+      <h2>How Salesboom Compares to Alternatives</h2>
+      <p>Many solutions claim to connect CRM and QuickBooks. Salesboom delivers integration that actually works in the real world, backed by real support and proven results.</p>
+    </div>
+    
+    <div class="comparison-table">
+      <div class="comparison-row">
+        <div class="comparison-cell">
+          <h4>Salesboom QuickBooks Integration</h4>
+          <p>Turnkey solution with expert installation, configuration, and ongoing support. True bi-directional sync designed specifically for CRM-to-accounting workflows.</p>
+        </div>
+        <div class="comparison-cell">
+          <h4>Middleware Platforms</h4>
+          <p>Generic integration platforms require you to build and maintain your own integration logic. You become the integration expert, troubleshooting connection issues and mapping problems.</p>
+        </div>
+      </div>
+      
+      <div class="comparison-row">
+        <div class="comparison-cell">
+          <h4>Comprehensive Field Coverage</h4>
+          <p>Our architecture synchronizes all critical fields out-of-the-box with the ability to extend to custom fields and objects as needed.</p>
+        </div>
+        <div class="comparison-cell">
+          <h4>Limited QuickBooks Apps</h4>
+          <p>QuickBooks marketplace apps often provide one-way data flow or limited field mapping, forcing manual workarounds for common scenarios.</p>
+        </div>
+      </div>
+      
+      <div class="comparison-row">
+        <div class="comparison-cell">
+          <h4>Real-Time Automation</h4>
+          <p>Continuous background synchronization with validation and error handling built in. Data updates immediately across both systems.</p>
+        </div>
+        <div class="comparison-cell">
+          <h4>Manual Export/Import</h4>
+          <p>Periodic CSV exports and imports are error-prone, time-consuming, and provide no real-time visibility into customer data.</p>
+        </div>
+      </div>
+      
+      <div class="comparison-row">
+        <div class="comparison-cell">
+          <h4>Future-Proof Investment</h4>
+          <p>Salesboom absorbs maintenance costs and ensures compatibility across system updates. Your integration continues working as both platforms evolve.</p>
+        </div>
+        <div class="comparison-cell">
+          <h4>Custom Development Risk</h4>
+          <p>Building your own integration requires significant upfront investment plus expensive ongoing maintenance. System updates can break custom integrations.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Getting Started Section -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Take the First Step Toward Unified Operations</h2>
+      <p>Implementing the Salesboom QuickBooks integration is straightforward and low-risk. Most organizations are up and running within 48 hours, and the immediate benefits are obvious.</p>
+    </div>
+    
+    <div class="row">
+      <div class="col-lg-6 mb-4">
+        <div class="success-box">
+          <h4><i class="fas fa-clipboard-check me-2"></i>Prerequisites</h4>
+          <p style="margin-bottom: 15px;">Before beginning implementation, ensure you have:</p>
+          <ul>
+            <li>Active Salesboom CRM account (Professional, Enterprise, or Unlimited edition)</li>
+            <li>Active QuickBooks subscription or license (supported version)</li>
+            <li>Administrative access to both systems</li>
+            <li>Clear understanding of which data needs to synchronize</li>
+            <li>Identified internal stakeholder for decision-making</li>
+            <li>Budget approval for setup fee and annual subscription</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="col-lg-6 mb-4">
+        <div class="info-box">
+          <h4><i class="fas fa-list-ol me-2"></i>Implementation Steps</h4>
+          <p style="margin-bottom: 15px; color: #0c5460;">Follow these simple steps to get started:</p>
+          <ol style="list-style-position: inside; padding: 0; margin: 0; color: #0c5460;">
+            <li style="margin-bottom: 12px; line-height: 1.6;">Schedule a consultation with a Salesboom integration specialist</li>
+            <li style="margin-bottom: 12px; line-height: 1.6;">Review your specific requirements and desired synchronization rules</li>
+            <li style="margin-bottom: 12px; line-height: 1.6;">Receive a detailed implementation plan and timeline</li>
+            <li style="margin-bottom: 12px; line-height: 1.6;">Approve the project and schedule installation</li>
+            <li style="margin-bottom: 12px; line-height: 1.6;">Complete setup within 1-2 business days</li>
+            <li style="margin-bottom: 0; line-height: 1.6;">Begin enjoying the benefits of unified CRM and accounting data</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    
+    <div class="alert-box mt-4">
+      <h4><i class="fas fa-handshake me-2"></i>Risk-Free Evaluation</h4>
+      <p>Not sure if the integration is right for your business? Salesboom offers consultation calls to discuss your specific scenario and determine if the QuickBooks connector will deliver value for your organization. We'll honestly assess whether the integration makes sense for your use case and can provide references from similar businesses in your industry.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-content">
+      <h2>Ready to Unite Your CRM and QuickBooks?</h2>
+      <p>Stop wasting time on duplicate data entry and reconciliation. Schedule a consultation with our integration specialists to discuss your specific requirements and get your seamless CRM-QuickBooks integration live within 48 hours.</p>
+      <div class="hero-cta">
+        <a href="https://www.salesboom.com/request-crm-demo.html" class="btn-custom btn-primary-custom">Schedule Consultation</a>
+        <a href="https://www.salesboom.com/crm_trial.html" class="btn-custom btn-outline-custom">Start CRM Free Trial</a>
+      </div>
+      <div class="cta-contact">
+        <p>Questions? Call us: <a href="tel:18552292043">1.855.229.2043</a> | Email: <a href="mailto:sales@salesboom.com">sales@salesboom.com</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Scroll to Top Button -->
+<button id="scroll-to-top" aria-label="Scroll to top">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-2">
+      <h3 class="fw-bold text-color">
+        <i class="fa-solid fa-layer-group me-2"></i>
+        Explore Salesboom Editions
+      </h3>
+      <p class="text-muted">Discover powerful CRM editions to scale your business efficiently.</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-lg border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-briefcase fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Professional Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              A complete CRM suite with Marketing Automation, ERP integration, and Support tools — built for performance and value.
+            </p>
+            <a href="https://www.salesboom.com/editions/professional-edition.html" class="btn btn-color mt-auto">
+              Explore Professional <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-lg border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-building fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Enterprise Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              For large enterprises — automate workflows, unify data, and leverage analytics to drive strategic growth.
+            </p>
+            <a href="https://www.salesboom.com/editions/enterprise-edition.html" class="btn btn-color mt-auto">
+              View Enterprise <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-lg border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-users fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Team Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              Perfect for small teams starting with CRM — manage leads, track sales, and boost productivity with simplicity.
+            </p>
+            <a href="https://www.salesboom.com/editions/team-edition.html" class="btn btn-color mt-auto">
+           Discover Team<i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="container py-5">
+  <h2 class="text-center mb-5 text-color">CRM Integrations, ERP & Unified Platform</h2>
+
+  <div class="row g-4">
+
+    <!-- Card 1: QuickBooks Data Sheet -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-file-csv text-color fa-2x mb-3"></i>
+        <h4>QuickBooks Connector Data Sheet</h4>
+        <p>
+          Learn how Salesboom CRM bi-directionally syncs with QuickBooks for real-time data, eliminating manual entry and improving accuracy — see the
+          <a href="https://www.salesboom.com/products/CRM-data-sheets/crm-data-sheet-quickbooks-connector.html" class="text-color fw-bold">
+            QuickBooks Connector data sheet
+          </a>. 
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 2: CRM for QuickBooks Integration -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-sync-alt text-color fa-2x mb-3"></i>
+        <h4>CRM & QuickBooks Integration</h4>
+        <p>
+          Unite your sales and accounting by syncing customer info, quotes, invoices, products, and payments in real time with
+          <a href="https://www.salesboom.com/products/crm-for-quickbooks.html" class="text-color fw-bold">
+            CRM for QuickBooks
+          </a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 3: Property Management + QuickBooks -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-building text-color fa-2x mb-3"></i>
+        <h4>Property Management + QuickBooks</h4>
+        <p>
+          Manage properties and financials together — including tenant records, lease cash flows, and reporting — using Salesboom CRM integrated with QuickBooks.
+          <a href="https://www.salesboom.com/products/crm-property-management-software-with-quickbooks.html" class="text-color fw-bold">
+            CRM Property Management with QuickBooks
+          </a>. 
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 4: Epicor ERP & Bistrack Integration -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-industry text-color fa-2x mb-3"></i>
+        <h4>Epicor ERP & Bistrack Integration</h4>
+        <p>
+          Eliminate data silos and automate workflows across sales, inventory, and finance by integrating Salesboom CRM with Epicor ERP and Bistrack.
+          <a href="https://www.salesboom.com/products/new/Epicor-ERP-Bistrack.html" class="text-color fw-bold">
+            ERP & Bistrack integration
+          </a>. 
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 5: Outlook Integration -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-envelope text-color fa-2x mb-3"></i>
+        <h4>CRM Outlook Integration</h4>
+        <p>
+          Sync contacts, calendars, tasks, email threads, and activity history automatically between Microsoft Outlook and Salesboom CRM.
+          <a href="https://www.salesboom.com/products/tools-outlook_integration.html" class="text-color fw-bold">
+            Outlook integration
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 6: Integrations & Data Migration -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-database text-color fa-2x mb-3"></i>
+        <h4>CRM Integrations & Migration</h4>
+        <p>
+          Connect your CRM to external systems, migrate legacy data, and automate workflows across platforms using the
+          <a href="https://www.salesboom.com/products/crm-integrations-data-migration-software.html" class="text-color fw-bold">
+            CRM integrations & data migration
+          </a> tools.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 7: Platform Customization & Integration -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-tools text-color fa-2x mb-3"></i>
+        <h4>Platform Customization & Integration</h4>
+        <p>
+          Tailor your CRM, extend functionality, and connect external business systems with flexible
+          <a href="https://www.salesboom.com/products/crm-platform-customization-integration.html" class="text-color fw-bold">
+            platform customization & integration
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 8: Sales Intelligence Analytics -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-chart-pie text-color fa-2x mb-3"></i>
+        <h4>Sales Intelligence & Analytics</h4>
+        <p>
+          Get actionable dashboards, trend insights, and reporting to improve decision-making with
+          <a href="https://www.salesboom.com/integrated-crm/sales_intelligence_content.html" class="text-color fw-bold">
+            integrated sales intelligence
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 9: Unified CRM Platform -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-layer-group text-color fa-2x mb-3"></i>
+        <h4>Unified CRM Platform</h4>
+        <p>
+          Manage customer data, integrations, ERP systems, analytics, and daily operations in one unified system with
+          <a href="https://www.salesboom.com/unified-crm/comprehensive-crm-platform.html" class="text-color fw-bold">
+            the unified CRM platform
+          </a>.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="mt-5 footer">
+  <div class="container mt-5 pt-5">
+    <div class="footer-grid">
+      <div class="footer-section">
+        <h3>Products</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/products/tools-sfa.html">Sales Force Automation</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-marketing.html">Marketing Automation</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-casemanagement.html">Case Management</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-reporting.html">Business Intelligence</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-emailintegration.html">Email Integration</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Solutions</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/products/edition-team.html">Team Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/edition-professional.html">Professional Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/edition-enterprise.html">Enterprise Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/industry-solutions.html">Industry Solutions</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/company/index.html">About Us</a></li>
+          <li><a href="https://www.salesboom.com/company/company-contact.html">Contact Us</a></li>
+          <li><a href="https://www.salesboom.com/customers/index.html">Customers</a></li>
+          <li><a href="https://www.salesboom.com/partners/index.html">Partners</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/support/index.html">Support Center</a></li>
+          <li><a href="https://www.salesboom.com/crm_supportcenter/overview/index.html">Documentation</a></li>
+          <li><a href="https://www.salesboom.com/whitepapers/index.html">White Papers</a></li>
+          <li><a href="https://www.salesboom.com/pop-privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="bg-color">
+    <div class="container">
+     <div class="footer-bottom pb-3 mt-3">
+      <p>&copy; 2003-2025 <a class="text-white fw-bold" href="https://www.salesboom.com">Salesboom.com</a> Inc. All rights reserved. | Call: 1-855-229-2043</p>
+      <p style="margin-top: 10px;">Salesboom's color-coded CRM lead management software helps businesses visually prioritize sales opportunities with automated workflow rules. Contact us to learn how color coding can transform your lead management process and increase sales productivity.</p>
+    </div>
+    </div>
+  </div>
+ 
+</footer>
+
+<!-- Common JavaScript -->
+<script src="content/js/bootstrap.bundle.min.js"></script>
+
+
+<script>
+// Loading Screen
+window.addEventListener('load', function() {
+  setTimeout(function() {
+    document.getElementById('loading-screen').classList.add('fade-out');
+  }, 800);
+});
+
+// Scroll to Top Button
+const scrollToTopBtn = document.getElementById('scroll-to-top');
+
+window.addEventListener('scroll', function() {
+  if (window.pageYOffset > 300) {
+    scrollToTopBtn.classList.add('show');
+  } else {
+    scrollToTopBtn.classList.remove('show');
+  }
+});
+
+scrollToTopBtn.addEventListener('click', function() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+
+// Smooth scrolling for all anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
+  });
+});
+</script>
+
+</body>
+</html>

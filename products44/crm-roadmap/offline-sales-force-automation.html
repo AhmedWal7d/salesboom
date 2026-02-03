@@ -1,0 +1,1482 @@
+
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+<!-- Primary Meta Tags -->
+<title>Offline Sales Force Automation | Stay Connected On-the-Go</title>
+<meta name="description" content="Empower your mobile sales team with Salesboom's Offline Sales Force Automation. Sync seamlessly, capture data anywhere, and access CRM tools without connectivity.">
+<meta name="keywords" content="Offline sales force automation, Mobile CRM, Sales force automation software, Offline CRM sync, Field sales automation, Mobile sales tools, Disconnected CRM access, Sales rep productivity tools">
+<link rel="canonical" href="https://www.salesboom.com/products/crm-roadmap/offline-sales-force-automation.html">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.salesboom.com/products/crm-roadmap/offline-sales-force-automation.html">
+<meta property="og:title" content="Offline Sales Force Automation | Stay Connected On-the-Go">
+<meta property="og:description" content="Empower your mobile sales team with Salesboom's Offline Sales Force Automation. Sync seamlessly, capture data anywhere, and access CRM tools without connectivity.">
+<meta property="og:image" content="https://www.salesboom.com/img/offline-sales-force-automation-og.jpg">
+<meta property="og:site_name" content="Salesboom CRM">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://www.salesboom.com/products/crm-roadmap/offline-sales-force-automation.html">
+<meta name="twitter:title" content="Offline Sales Force Automation | Stay Connected On-the-Go">
+<meta name="twitter:description" content="Empower your mobile sales team with Salesboom's Offline Sales Force Automation. Sync seamlessly, capture data anywhere, and access CRM tools without connectivity.">
+<meta name="twitter:image" content="https://www.salesboom.com/img/offline-sales-force-automation-og.jpg">
+<meta name="twitter:site" content="@SalesboomCloud">
+
+<!-- Schema.org structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Salesboom Offline Sales Force Automation",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web-based, Cloud, iOS, Android",
+  "offers": {
+    "@type": "Offer",
+    "price": "14.00",
+    "priceCurrency": "USD",
+    "priceValidUntil": "2026-12-31"
+  },
+  "featureList": [
+    "Automatic synchronization with zero manual effort",
+    "Full CRM functionality in offline mode",
+    "Complete customer records access without internet",
+    "Activity logging and task management offline",
+    "Opportunity management and quote creation",
+    "Mobile-optimized interface for field sales teams"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.5",
+    "ratingCount": "3500"
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "Salesboom",
+    "url": "https://www.salesboom.com",
+    "logo": "https://www.salesboom.com/img/salesboom-logo-252x67.png",
+    "foundingDate": "2003",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-855-229-2043",
+      "contactType": "Customer Service"
+    }
+  }
+}
+</script>
+
+<link rel="shortcut icon" href="https://www.salesboom.com/favicon.ico">
+
+ <link rel="stylesheet" href="../content/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../content/css/salesboom-common.css">
+    <link rel="shortcut icon" href="../content/image/salesboom-logo-252x67.png" type="image/x-icon"> 
+
+    
+<!-- Font Awesome 6 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+/* CSS Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #002f6c;
+  --secondary-color: #004a9f;
+  --accent-color: #0066cc;
+  --success-color: #27ae60;
+  --text-color: #333;
+  --text-light: #666;
+  --border-color: #e0e0e0;
+  --bg-light: #f8f9fa;
+  --bg-white: #ffffff;
+  --shadow: 0 2px 10px rgba(0,0,0,0.1);
+  --shadow-hover: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background: var(--bg-white);
+  overflow-x: hidden;
+}
+
+/* Loading Screen */
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#loading-screen.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader {
+  width: 60px;
+  height: 60px;
+  border: 6px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Scroll to Top Button */
+#scroll-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 47, 108, 0.3);
+}
+
+#scroll-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+#scroll-top:hover {
+  background: var(--secondary-color);
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 47, 108, 0.4);
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: white;
+  padding: 100px 0 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+  opacity: 0.3;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 25px;
+  line-height: 1.2;
+}
+
+.hero .subtitle {
+  font-size: 1.3rem;
+  margin-bottom: 35px;
+  opacity: 0.95;
+  line-height: 1.5;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Button Styles */
+.btn-custom {
+  padding: 16px 40px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.btn-primary-custom {
+  background: white;
+  color: var(--primary-color);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+}
+
+.btn-primary-custom:hover {
+  background: var(--bg-light);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 255, 255, 0.4);
+  color: var(--primary-color);
+}
+
+.btn-outline-custom {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-outline-custom:hover {
+  background: white;
+  color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+/* Badge */
+.badge-top {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  margin-bottom: 20px;
+  display: inline-block;
+  backdrop-filter: blur(10px);
+}
+
+/* Content Sections */
+.content-section {
+  padding: 80px 0;
+}
+
+.content-section.bg-light {
+  background: var(--bg-light);
+}
+
+.section-title-center {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 60px;
+}
+
+.section-title-center h2 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.section-title-center p {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  line-height: 1.8;
+}
+
+/* Stats Section */
+.stats-section {
+  background: var(--primary-color);
+  color: white;
+  padding: 60px 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+  text-align: center;
+}
+
+.stat-item h3 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.stat-item p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* Feature Cards */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 60px;
+}
+
+.feature-card {
+  background: var(--bg-white);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  transition: all 0.3s;
+  border-top: 4px solid var(--primary-color);
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.feature-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.feature-card h3 {
+  font-size: 1.4rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.feature-card p {
+  color: var(--text-light);
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.feature-card ul {
+  list-style: none;
+  margin-top: 15px;
+}
+
+.feature-card li {
+  padding-left: 25px;
+  position: relative;
+  margin-bottom: 10px;
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+.feature-card li::before {
+  content: "•";
+  position: absolute;
+  left: 8px;
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Info Section */
+.info-section {
+  background: var(--bg-white);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  margin-top: 40px;
+}
+
+.info-section h3 {
+  color: var(--primary-color);
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.info-section h4 {
+  color: var(--primary-color);
+  font-size: 1.3rem;
+  margin: 25px 0 15px 0;
+  font-weight: 600;
+}
+
+.info-section p {
+  color: var(--text-light);
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.info-section ul {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.info-section li {
+  padding-left: 30px;
+  position: relative;
+  margin-bottom: 12px;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+.info-section li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--success-color);
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+/* Benefits Grid */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.benefit-card {
+  background: var(--bg-white);
+  padding: 35px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  transition: all 0.3s;
+  text-align: center;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.benefit-icon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: white;
+  margin: 0 auto 20px;
+}
+
+.benefit-card h3 {
+  font-size: 1.3rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.benefit-card p {
+  color: var(--text-light);
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+/* Process Steps */
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 60px;
+}
+
+.process-step {
+  position: relative;
+  padding: 40px 30px;
+  background: var(--bg-white);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.step-number {
+  width: 50px;
+  height: 50px;
+  background: var(--primary-color);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0 auto 20px;
+}
+
+.process-step h3 {
+  font-size: 1.3rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.process-step p {
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+/* Industry Cards */
+.industry-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.industry-card {
+  background: var(--bg-white);
+  padding: 35px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  transition: all 0.3s;
+}
+
+.industry-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.industry-card h3 {
+  color: var(--primary-color);
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.industry-card h3 i {
+  font-size: 1.8rem;
+}
+
+.industry-card p {
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+/* CTA Section */
+.cta-section {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid2" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid2)"/></svg>');
+  opacity: 0.3;
+}
+
+.cta-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.cta-content p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  opacity: 0.95;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  
+  .section-title-center h2 {
+    font-size: 2rem;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 60px 0;
+  }
+  
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+  
+  .hero .subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .hero-cta {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .btn-custom {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .content-section {
+    padding: 60px 0;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .section-title-center h2 {
+    font-size: 1.8rem;
+  }
+  
+  #scroll-top {
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .cta-content h2 {
+    font-size: 1.8rem;
+  }
+  
+  .process-steps {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Utility Classes */
+.text-center { text-align: center; }
+.mt-40 { margin-top: 40px; }
+.mb-40 { margin-bottom: 40px; }
+</style>
+</head>
+
+<body>
+
+<!-- Loading Screen -->
+<div id="loading-screen">
+  <div class="loader"></div>
+</div>
+
+<!-- Scroll to Top Button -->
+<button id="scroll-top" aria-label="Scroll to top">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+    <!-- Top Bar -->
+<div class="top-bar">
+  <div class="container">
+    <div class="top-bar-left text-color">
+      <span>✓ Award-Winning Cloud CRM Software Since 2003</span>
+    </div>
+    <ul class="top-bar-nav">
+      <li><a href="https://www.salesboom.com/crm_supportcenter/overview/index.html">Support Center</a></li>
+      <li><a href="https://www.salesboom.com/crm_trial.html">Free Trial</a></li>
+      <li><a href="https://www.salesboom.com/login.html">Login</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Main Header -->
+<header>
+  <div class="main-header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <a href="https://www.salesboom.com" aria-label="Salesboom CRM Home">
+            <img src="https://www.salesboom.com/img/salesboom-logo-252x67.png" alt="Salesboom Cloud CRM Logo" width="252" height="67">
+          </a>
+        </div>
+        <div class="header-phone">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          <a href="tel:+18552292043">1-855-229-2043</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="badge-top">
+        <i class="fas fa-mobile-alt"></i> Mobile CRM That Works Anywhere - Online or Offline
+      </div>
+      <h1>Empower Your Mobile Sales Team - Online or Offline</h1>
+      <p class="subtitle">Keep your sales representatives productive in the field with automatic synchronization, offline access to critical data, and seamless CRM connectivity wherever business takes them.</p>
+      <div class="hero-cta">
+        <a href="https://www.salesboom.com/crm_trial.html" class="btn-custom btn-primary-custom">Start Free 30-Day Trial</a>
+        <a href="https://www.salesboom.com/request-crm-demo.html" class="btn-custom btn-outline-custom">Request Demo</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Section -->
+<section class="stats-section">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <h3>22+</h3>
+        <p>Years of CRM Innovation</p>
+      </div>
+      <div class="stat-item">
+        <h3>100%</h3>
+        <p>Offline Functionality</p>
+      </div>
+      <div class="stat-item">
+        <h3>Auto</h3>
+        <p>Sync Technology</p>
+      </div>
+      <div class="stat-item">
+        <h3>24/7</h3>
+        <p>Mobile Access</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Problem Statement Section -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-title-center">
+      <h2>The Mobile Sales Challenge: Productivity Without Connectivity</h2>
+      <p>Modern sales representatives spend most of their time away from their desks, meeting clients face-to-face, traveling between appointments, and building relationships in the field. This mobility is essential for sales success, but it creates a critical business challenge: how do you keep your sales team connected to your CRM when they're frequently offline?</p>
+    </div>
+    
+    <div class="info-section">
+      <h3>The dilemma is real and costly:</h3>
+      <ul>
+        <li>Sales reps need freedom to sell the way they work best - in person, through established networks, and on their own terms</li>
+        <li>Management needs real-time sales metrics and data to make informed decisions and forecast accurately</li>
+        <li>Without connectivity, critical sales information sits trapped on laptops and mobile devices, invisible to leadership</li>
+        <li>By the time disconnected data reaches the system, opportunities may be lost and problems may have escalated</li>
+        <li>Traditional CRM solutions force an impossible choice: either chain sales reps to their desks or operate blind</li>
+      </ul>
+      
+      <p>In today's competitive business environment, reactive management is a recipe for failure. Small businesses and enterprises alike need proactive decision-making based on current data, not yesterday's reports. The solution isn't restricting your sales team's mobility - it's implementing proper Offline Sales Force Automation that works with how your team actually sells.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Solution Overview Section -->
+<section class="content-section bg-light">
+  <div class="container">
+    <div class="section-title-center">
+      <h2>Offline Sales Force Automation: The Best of Both Worlds</h2>
+      <p>Salesboom's Offline Sales Force Automation delivers the perfect balance between sales rep freedom and management visibility. Your sales representatives get full access to powerful CRM tools wherever they work, while your leadership team receives the real-time data they need for strategic decision-making.</p>
+    </div>
+    
+    <div class="info-section">
+      <p>The solution centers on intelligent, automatic synchronization that works seamlessly in the background. When sales representatives connect to the internet - even briefly - all their offline work automatically uploads to your cloud-hosted CRM database. Customer interactions, updated contact information, logged activities, new opportunities, and completed tasks all sync instantly without manual intervention or hassle.</p>
+      
+      <h3>This means:</h3>
+      <ul>
+        <li>Sales reps work productively whether they have connectivity or not</li>
+        <li>Management sees critical sales metrics flow in continuously as reps come online</li>
+        <li>No data is lost, delayed, or requires manual entry</li>
+        <li>The sales team stays focused on selling, not on administrative synchronization tasks</li>
+        <li>Leadership can make informed decisions based on comprehensive, up-to-date information</li>
+      </ul>
+      
+      <p>Your sales representatives gain portable, powerful Sales Force Automation tools that help them succeed in the field. Your management team gets the information they need to guide the business proactively. It's a true win-win solution.</p>
+    </div>
+  </div>
+</section>
+
+<!-- How Sync Works Section -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-title-center">
+      <h2>Seamless Automatic Sync: Technology That Just Works</h2>
+      <p>Salesboom's offline synchronization technology operates invisibly in the background, requiring zero effort from your sales team. The system is designed for simplicity and reliability, ensuring your data flows smoothly regardless of connectivity challenges.</p>
+    </div>
+    
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-sync-alt"></i>
+        </div>
+        <h3>Automatic Detection and Sync</h3>
+        <p>The moment a sales representative's device detects an internet connection, the synchronization process begins automatically. Whether they're connecting to office WiFi, hotel internet, mobile hotspot, or cellular data, the system recognizes the connection and immediately starts uploading any changes made while offline.</p>
+ 
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-shield-alt"></i>
+        </div>
+        <h3>Conflict Resolution and Data Integrity</h3>
+        <p>The system includes sophisticated conflict resolution to handle situations where multiple team members update the same record offline. Built-in logic automatically reconciles most conflicts, while flagging complex situations for review. This ensures data integrity and prevents information loss even in complex, multi-user scenarios.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-signal"></i>
+        </div>
+        <h3>Minimal Connectivity Requirements</h3>
+        <p>Your sales representatives don't need sustained high-speed internet to stay synchronized. Even a brief connection - stopping at a coffee shop, checking email at an airport, or connecting via mobile data for just a minute - is sufficient for the system to upload critical updates. This flexibility means even the most mobile sales teams stay connected to the hub of information.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Offline Capabilities Section -->
+<section class="content-section bg-light">
+  <div class="container">
+    <div class="section-title-center">
+      <h2>Full CRM Functionality Without Internet Connection</h2>
+      <p>When offline, your sales representatives aren't limited to viewing static information. Salesboom's Offline Sales Force Automation provides comprehensive CRM functionality that lets reps work productively regardless of connectivity status.</p>
+    </div>
+    
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-user-circle"></i>
+        </div>
+        <h3>Complete Customer Records Access</h3>
+        <p>Sales reps can view and update full customer profiles including contact information, account history, previous interactions, purchase history, preferences, and notes. All information remains accessible offline and updates sync automatically when connection is restored.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-tasks"></i>
+        </div>
+        <h3>Activity Logging and Task Management</h3>
+        <p>Log calls, meetings, emails, and other customer touchpoints immediately after they occur, even without internet access. Create follow-up tasks, set reminders, and schedule future activities. Everything syncs seamlessly once online, ensuring no customer interaction goes unrecorded.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-funnel-dollar"></i>
+        </div>
+        <h3>Opportunity Management</h3>
+        <p>Create new opportunities, update deal stages, adjust probability and close dates, and add detailed notes about sales progress. Sales reps can manage their entire pipeline offline, with all changes automatically reflected in management dashboards when they reconnect.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-file-invoice-dollar"></i>
+        </div>
+        <h3>Quote and Proposal Creation</h3>
+        <p>Access product catalogs, pricing information, and proposal templates offline. Create professional quotes and proposals during customer meetings without internet access. Generate PDFs for immediate presentation or email delivery once back online.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-calendar-alt"></i>
+        </div>
+        <h3>Calendar and Scheduling</h3>
+        <p>View your complete schedule, check availability, and schedule appointments with customers without connectivity. Offline calendar access ensures you never miss a meeting or double-book yourself, regardless of where you're working.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-search"></i>
+        </div>
+        <h3>Search and Filter</h3>
+        <p>Search your entire CRM database, filter contacts by territory or industry, and find information quickly even when offline. Powerful search capabilities remain fully functional without internet, ensuring sales reps always find the information they need.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Benefits Section -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-title-center">
+      <h2>Business Benefits of Offline Sales Force Automation</h2>
+      <p>Implementing offline capabilities delivers measurable improvements across your entire sales organization.</p>
+    </div>
+    
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <i class="fas fa-chart-line"></i>
+        </div>
+        <h3>Increased Sales Productivity</h3>
+        <p>Sales representatives spend more time selling and less time dealing with technology frustrations. Elimination of connectivity barriers removes a major productivity obstacle, allowing reps to focus entirely on customer relationships and revenue generation.</p>
+      </div>
+      
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <i class="fas fa-database"></i>
+        </div>
+        <h3>Better Data Quality</h3>
+        <p>When reps can log information immediately after customer interactions, data freshness and accuracy improve dramatically. No more relying on memory hours or days later. Complete, timely information leads to better decision-making throughout your organization.</p>
+      </div>
+      
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <i class="fas fa-users"></i>
+        </div>
+        <h3>Higher CRM Adoption</h3>
+        <p>Sales reps actually use the system when it works seamlessly regardless of connectivity. Offline capability removes a major adoption barrier, transforming your CRM from an administrative burden into a genuine productivity tool.</p>
+      </div>
+      
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <i class="fas fa-clock"></i>
+        </div>
+        <h3>Real-Time Management Visibility</h3>
+        <p>Leadership sees pipeline changes, customer interactions, and forecast updates as they happen throughout the day. This continuous data flow enables proactive management and rapid response to both opportunities and challenges.</p>
+      </div>
+      
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <i class="fas fa-smile"></i>
+        </div>
+        <h3>Improved Customer Experience</h3>
+        <p>Sales reps with immediate access to complete customer history provide more professional, personalized service. Customers notice when reps have information at their fingertips versus scrambling to look things up later.</p>
+      </div>
+      
+      <div class="benefit-card">
+        <div class="benefit-icon">
+          <i class="fas fa-trophy"></i>
+        </div>
+        <h3>Competitive Advantage</h3>
+        <p>Organizations with mobile-enabled sales teams respond faster to market changes, capitalize on opportunities more quickly, and maintain better customer relationships. This agility creates sustainable competitive differentiation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Implementation Section -->
+<section class="content-section bg-light">
+  <div class="container">
+    <div class="section-title-center">
+      <h2>Simple Implementation, Rapid Adoption</h2>
+      <p>Getting your sales team up and running with Offline Sales Force Automation is straightforward and fast.</p>
+    </div>
+    
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="step-number">1</div>
+        <h3>Install Mobile App</h3>
+        <p>Sales reps download the Salesboom mobile app from iOS App Store or Google Play. Simple installation takes minutes.</p>
+      </div>
+      
+      <div class="process-step">
+        <div class="step-number">2</div>
+        <h3>Initial Sync</h3>
+        <p>First login downloads essential CRM data to the device. The system intelligently determines what information each rep needs based on their territory and role.</p>
+      </div>
+      
+      <div class="process-step">
+        <div class="step-number">3</div>
+        <h3>Start Working</h3>
+        <p>Sales reps immediately begin using full CRM functionality. The system works identically whether online or offline, eliminating training complexity.</p>
+      </div>
+      
+      <div class="process-step">
+        <div class="step-number">4</div>
+        <h3>Automatic Ongoing Sync</h3>
+        <p>As reps work throughout the day, the system automatically syncs whenever connectivity is available. No manual processes or extra steps required.</p>
+      </div>
+    </div>
+    
+    <div class="info-section mt-40">
+      <h3>What Makes Implementation Fast:</h3>
+      <ul>
+        <li><strong>No complex configuration:</strong> Offline capability is built-in and enabled by default</li>
+        <li><strong>Minimal training required:</strong> The system works the same way online or offline</li>
+        <li><strong>No special hardware:</strong> Works on standard iOS and Android devices your team already uses</li>
+        <li><strong>No IT infrastructure changes:</strong> Cloud-hosted solution requires no server setup or network modifications</li>
+        <li><strong>Gradual rollout option:</strong> Pilot with a small team and expand based on proven success</li>
+      </ul>
+      
+      <p>Most organizations have their sales teams fully productive with offline capability within 1-2 weeks of deciding to implement. The combination of simple technology and intuitive design eliminates the lengthy implementation cycles typical of enterprise software.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Industry Applications Section -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-title-center">
+      <h2>Industry Applications and Use Cases</h2>
+      <p>Salesboom's Offline Sales Force Automation serves diverse industries where sales teams work in the field, travel frequently, or operate in areas with limited connectivity.</p>
+    </div>
+    
+    <div class="industry-grid">
+      <div class="industry-card">
+        <h3><i class="fas fa-road"></i> Field Sales Representatives</h3>
+        <p>Territory-based sales reps who spend entire days traveling between customer sites. Access customer information during commutes, update opportunities between meetings, and log activities without returning to the office. Maximize selling time while keeping CRM data current.</p>
+      </div>
+      
+      <div class="industry-card">
+        <h3><i class="fas fa-store"></i> Trade Show and Event Sales</h3>
+        <p>Capture leads, qualify prospects, and log interactions at trade shows and conferences where WiFi is unreliable or unavailable. Collect business card information, record conversations, and schedule follow-ups in real-time. Sync all data once you return to the hotel or office.</p>
+      </div>
+      
+      <div class="industry-card">
+        <h3><i class="fas fa-mountain"></i> Remote and Rural Sales</h3>
+        <p>Serve customers in remote areas, rural territories, or developing markets where internet connectivity is sporadic or non-existent. Maintain full CRM functionality regardless of infrastructure limitations, ensuring these markets receive the same professional service as urban areas.</p>
+      </div>
+      
+      <div class="industry-card">
+        <h3><i class="fas fa-industry"></i> Manufacturing and Distribution</h3>
+        <p>Sales engineers and technical sales reps who work in customer facilities with restricted network access. Access product specifications, pricing, and technical documentation offline. Create quotes and proposals on-site without connectivity.</p>
+      </div>
+      
+      <div class="industry-card">
+        <h3><i class="fas fa-heartbeat"></i> Medical and Pharmaceutical Sales</h3>
+        <p>Healthcare facilities often restrict outside network access for security and privacy reasons. Medical sales reps can access product information, log physician interactions, and manage samples inventory offline, syncing when they leave the facility.</p>
+      </div>
+      
+      <div class="industry-card">
+        <h3><i class="fas fa-globe"></i> International Sales</h3>
+        <p>Sales teams traveling internationally face expensive roaming charges and connectivity challenges. Work offline to avoid data charges, syncing only when connected to WiFi. Access customer information and sales materials anywhere in the world without connectivity concerns.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Success Metrics Section -->
+<section class="content-section bg-light">
+  <div class="container">
+    <div class="section-title-center">
+      <h2>Track the Impact of Offline Sales Force Automation</h2>
+      <p>Implementing Offline Sales Force Automation delivers measurable improvements across multiple business metrics. Organizations typically see positive impact within weeks of deployment.</p>
+    </div>
+    
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-clock"></i>
+        </div>
+        <h3>Data Entry Timeliness</h3>
+        <p>Measure the lag between customer interactions and CRM updates. With offline capability, this metric improves dramatically as reps log activities immediately rather than hours or days later. Fresher data enables better management decisions.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-rocket"></i>
+        </div>
+        <h3>Sales Rep Productivity</h3>
+        <p>Track activities per day, customer interactions per week, and selling time percentage. Eliminating connectivity barriers and manual sync tasks frees substantial time for revenue-generating activities. Most organizations see 10-20% productivity gains.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-user-check"></i>
+        </div>
+        <h3>CRM Adoption Rates</h3>
+        <p>Monitor login frequency, feature usage, and data quality metrics. When the CRM works seamlessly offline, adoption resistance disappears. Sales reps use the system consistently because it helps rather than hinders their work.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-chart-pie"></i>
+        </div>
+        <h3>Forecast Accuracy</h3>
+        <p>Compare predicted versus actual revenue outcomes. More timely and complete pipeline data leads to better forecasting. Many organizations improve forecast accuracy by 15-25% with better field data capture.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-tachometer-alt"></i>
+        </div>
+        <h3>Sales Cycle Length</h3>
+        <p>Track average time from first contact to closed deal. When reps access information faster and respond to customers more quickly, sales cycles compress. Faster information flow enables faster decision-making throughout the sales process.</p>
+      </div>
+      
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-star"></i>
+        </div>
+        <h3>Customer Satisfaction</h3>
+        <p>Survey customers on sales experience quality. Sales reps with complete customer history and immediate information access deliver more professional, responsive service. Customer satisfaction scores typically improve significantly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-content">
+      <h2>Ready to Unleash Your Mobile Sales Team?</h2>
+      <p>Stop shackling your sales representatives to their desks. Experience Salesboom's Offline Sales Force Automation free for 30 days and discover how seamless synchronization and mobile CRM tools can transform your sales productivity.</p>
+      <div class="hero-cta">
+        <a href="https://www.salesboom.com/crm_trial.html" class="btn-custom btn-primary-custom">Start Your Free 30-Day Trial</a>
+        <a href="https://www.salesboom.com/request-crm-demo.html" class="btn-custom btn-outline-custom">Schedule a Demo</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-2">
+      <h3 class="fw-bold text-color">
+        <i class="fa-solid fa-layer-group me-2"></i>
+        Explore Salesboom Editions
+      </h3>
+      <p class="text-muted">Discover powerful CRM editions to scale your business efficiently.</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-lg border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-briefcase fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Professional Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              A complete CRM suite with Marketing Automation, ERP integration, and Support tools — built for performance and value.
+            </p>
+            <a href="https://www.salesboom.com/editions/professional-edition.html" class="btn btn-color mt-auto">
+              Explore Professional <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-lg border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-building fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Enterprise Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              For large enterprises — automate workflows, unify data, and leverage analytics to drive strategic growth.
+            </p>
+            <a href="https://www.salesboom.com/editions/enterprise-edition.html" class="btn btn-color mt-auto">
+              View Enterprise <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-lg border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-users fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Team Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              Perfect for small teams starting with CRM — manage leads, track sales, and boost productivity with simplicity.
+            </p>
+            <a href="https://www.salesboom.com/editions/team-edition.html" class="btn btn-color mt-auto">
+           Discover Team<i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container py-5">
+  <h2 class="text-center mb-5 text-color">CRM Data Sheets, Tools & Guides</h2>
+
+  <div class="row g-4">
+
+    <!-- Card 1: Offline CRM Software -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-laptop fa-3x text-color mb-3"></i>
+        <h4>Offline CRM Software</h4>
+        <p>
+          Access CRM data even without internet connection using the
+          <a href="https://www.salesboom.com/products/CRM-data-sheets/offline-crm-software.html" class="text-color fw-bold">
+            offline CRM software datasheet
+          </a>.     
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 2: Salesforce CRM Migration -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-magic fa-3x text-color mb-3"></i>
+        <h4>Salesforce Migration Magic</h4>
+        <p>
+          Learn how to migrate from Salesforce seamlessly with the
+          <a href="https://www.salesboom.com/products/CRM-data-sheets/salesforce-crm-migration-magic.html" class="text-color fw-bold">
+            Salesforce CRM Migration Magic
+          </a>. 
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 3: CRM Customization -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-sliders fa-3x text-color mb-3"></i>
+        <h4>CRM Application Customization</h4>
+        <p>
+          Tailor your CRM with configurable pages, menus and workflows via
+          <a href="https://www.salesboom.com/products/application-crm-customization.html" class="text-color fw-bold">
+            CRM application customization
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 4: Lead Management Datasheet -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-lightbulb fa-3x text-color mb-3"></i>
+        <h4>Lead Management Datasheet</h4>
+        <p>
+          Explore lead capture, scoring and funnel processes in the
+          <a href="https://www.salesboom.com/products/CRM-data-sheets/lead-management-software-datasheet.html" class="text-color fw-bold">
+            lead management software datasheet
+          </a>. 
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 5: Cloud CRM Overview (Legacy) -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-cloud fa-3x text-color mb-3"></i>
+        <h4>Cloud CRM Overview</h4>
+        <p>
+          Get insights into web-based CRM functionality from the
+          <a href="https://www.salesboom.com/products/old_Cloud-Based-CRM-Software.html" class="text-color fw-bold">
+            cloud CRM overview
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 6: Edition Comparison -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-layer-group fa-3x text-color mb-3"></i>
+        <h4>CRM Edition Comparison</h4>
+        <p>
+          Compare CRM feature sets and packages on the
+          <a href="https://www.salesboom.com/products/edition-comparison.html" class="text-color fw-bold">
+            edition comparison
+          </a> page.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 7: Real Time Reporting -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-chart-line fa-3x text-color mb-3"></i>
+        <h4>Real-Time Reporting</h4>
+        <p>
+          Explore CRM reporting capabilities and live insights in
+          <a href="https://www.salesboom.com/products/crm-roadmap/real-time-reporting.html" class="text-color fw-bold">
+            real-time reporting
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 8: Sales Automation Guide -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-robot text-color fa-3x mb-3"></i>
+        <h4>Sales Automation Content</h4>
+        <p>
+          Learn automation techniques, alerts and workflows with the
+          <a href="https://www.salesboom.com/sales-automation/sales_automation_content.html" class="text-color fw-bold">
+            sales automation guide
+          </a>. 
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 9: Unified CRM Platform -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-layer-group text-color fa-3x mb-3"></i>
+        <h4>Unified CRM Platform</h4>
+        <p>
+          Operate all CRM tools, workflows and analytics from one central system via the
+          <a href="https://www.salesboom.com/unified-crm/comprehensive-crm-platform.html" class="text-color fw-bold">
+            unified CRM platform
+          </a>. 
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- Footer -->
+<footer class="mt-5 footer">
+  <div class="container mt-5 pt-5">
+    <div class="footer-grid">
+      <div class="footer-section">
+        <h3>Products</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/products/tools-sfa.html">Sales Force Automation</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-marketing.html">Marketing Automation</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-casemanagement.html">Case Management</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-reporting.html">Business Intelligence</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-emailintegration.html">Email Integration</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Solutions</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/products/edition-team.html">Team Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/edition-professional.html">Professional Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/edition-enterprise.html">Enterprise Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/industry-solutions.html">Industry Solutions</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/company/index.html">About Us</a></li>
+          <li><a href="https://www.salesboom.com/company/company-contact.html">Contact Us</a></li>
+          <li><a href="https://www.salesboom.com/customers/index.html">Customers</a></li>
+          <li><a href="https://www.salesboom.com/partners/index.html">Partners</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/support/index.html">Support Center</a></li>
+          <li><a href="https://www.salesboom.com/crm_supportcenter/overview/index.html">Documentation</a></li>
+          <li><a href="https://www.salesboom.com/whitepapers/index.html">White Papers</a></li>
+          <li><a href="https://www.salesboom.com/pop-privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="bg-color">
+    <div class="container">
+     <div class="footer-bottom pb-3 mt-3">
+      <p>&copy; 2003-2025 <a class="text-white fw-bold" href="https://www.salesboom.com">Salesboom.com</a> Inc. All rights reserved. | Call: 1-855-229-2043</p>
+      <p style="margin-top: 10px;">Salesboom's color-coded CRM lead management software helps businesses visually prioritize sales opportunities with automated workflow rules. Contact us to learn how color coding can transform your lead management process and increase sales productivity.</p>
+    </div>
+    </div>
+  </div>
+ 
+</footer>
+
+<!-- Common JavaScript -->
+<script src="content/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+<!-- Custom JavaScript -->
+<script>
+// Loading Screen
+window.addEventListener('load', function() {
+  setTimeout(function() {
+    document.getElementById('loading-screen').classList.add('fade-out');
+  }, 500);
+});
+
+// Scroll to Top Button
+const scrollTopBtn = document.getElementById('scroll-top');
+
+window.addEventListener('scroll', function() {
+  if (window.pageYOffset > 300) {
+    scrollTopBtn.classList.add('show');
+  } else {
+    scrollTopBtn.classList.remove('show');
+  }
+});
+
+scrollTopBtn.addEventListener('click', function() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  });
+});
+</script>
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    
+    <!-- Primary Meta Tags -->
+    <title>Customer Lifecycle Management Software | Salesboom CLM</title>
+    <meta name="description" content="Maximize customer lifetime value with Salesboom's Customer Lifecycle Management (CLM) software. Track customer value, reduce churn, and boost repeat sales.">
+    <meta name="keywords" content="Customer Lifecycle Management, CLM software, Customer lifetime value, Customer churn analysis, Repeat customer tracking, CRM analytics, Customer value metrics, Business intelligence CRM, Hosted CRM solutions">
+    <link rel="canonical" href="https://www.salesboom.com/products/web-based_clm_software.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.salesboom.com/products/web-based_clm_software.html">
+    <meta property="og:title" content="Customer Lifecycle Management Software | Salesboom CLM">
+    <meta property="og:description" content="Maximize customer lifetime value with Salesboom's Customer Lifecycle Management (CLM) software. Track customer value, reduce churn, and boost repeat sales.">
+    <meta property="og:image" content="https://www.salesboom.com/img/web-based_clm_software-og.jpg">
+    <meta property="og:site_name" content="Salesboom CRM">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.salesboom.com/products/web-based_clm_software.html">
+    <meta name="twitter:title" content="Customer Lifecycle Management Software | Salesboom CLM">
+    <meta name="twitter:description" content="Maximize customer lifetime value with Salesboom's Customer Lifecycle Management (CLM) software. Track customer value, reduce churn, and boost repeat sales.">
+    <meta name="twitter:image" content="https://www.salesboom.com/img/web-based_clm_software-og.jpg">
+    <meta name="twitter:site" content="@SalesboomCloud">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Salesboom Customer Lifecycle Management Software",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web-based, Cloud",
+      "offers": {
+        "@type": "Offer",
+        "price": "14.00",
+        "priceCurrency": "USD",
+        "priceValidUntil": "2026-12-31"
+      },
+      "featureList": [
+        "Customer lifetime value tracking",
+        "Customer churn analysis and prediction",
+        "Repeat purchase pattern analytics",
+        "Real-time lifecycle metrics",
+        "Predictive customer intelligence",
+        "Campaign attribution to CLV"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.5",
+        "ratingCount": "3500"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Salesboom",
+        "url": "https://www.salesboom.com",
+        "logo": "https://www.salesboom.com/img/salesboom-logo-252x67.png",
+        "foundingDate": "2003",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+1-855-229-2043",
+          "contactType": "Customer Service"
+        }
+      }
+    }
+    </script>
+    
+    <link rel="shortcut icon" href="https://www.salesboom.com/favicon.ico">
+    
+
+    <link rel="stylesheet" href="content/css/bootstrap.min.css">
+    <link rel="stylesheet" href="content/css/salesboom-common.css">
+    <link rel="shortcut icon" href="content/image/salesboom-logo-252x67.png" type="image/x-icon"> 
+    
+    
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #002f6c;
+            --secondary-color: #0a4b8f;
+            --accent-color: #1e88e5;
+            --text-dark: #1a1a1a;
+            --text-light: #666;
+            --bg-light: #f8f9fa;
+            --white: #ffffff;
+            --success-color: #27ae60;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Loading Screen */
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--primary-color);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease-out;
+        }
+        
+        #loading-screen.fade-out {
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        .spinner {
+            width: 60px;
+            height: 60px;
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-top-color: var(--white);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        .loading-text {
+            color: var(--white);
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: 500;
+        }
+        
+        /* Scroll to Top Button */
+        #scrollToTop {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            color: var(--white);
+            border: none;
+            border-radius: 50%;
+            font-size: 20px;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0, 47, 108, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        #scrollToTop:hover {
+            background: var(--secondary-color);
+            transform: translateY(-5px);
+            box-shadow: 0 6px 16px rgba(0, 47, 108, 0.4);
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--white);
+            padding: 100px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.5;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .hero-section h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 25px;
+            line-height: 1.2;
+        }
+        
+        .hero-section .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            line-height: 1.6;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn-primary-custom {
+            background: var(--white);
+            color: var(--primary-color);
+            padding: 16px 40px;
+            font-size: 16px;
+            font-weight: 600;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+        }
+        
+        .btn-primary-custom:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(255, 255, 255, 0.3);
+            color: var(--primary-color);
+        }
+        
+        .btn-outline-custom {
+            background: transparent;
+            color: var(--white);
+            padding: 16px 40px;
+            font-size: 16px;
+            font-weight: 600;
+            border: 2px solid var(--white);
+            border-radius: 8px;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-outline-custom:hover {
+            background: var(--white);
+            color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+        
+        /* Stats Section */
+        .stats-section {
+            background: var(--text-dark);
+            color: var(--white);
+            padding: 60px 0;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .stat-item h3 {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--accent-color);
+            margin-bottom: 10px;
+        }
+        
+        .stat-item p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        /* Content Sections */
+        .content-section {
+            padding: 80px 0;
+        }
+        
+        .content-section.bg-light {
+            background: var(--bg-light);
+        }
+        
+        .section-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 60px;
+        }
+        
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .section-header p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+        
+        /* Feature Cards */
+        .feature-card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--primary-color);
+            height: 100%;
+            margin-bottom: 30px;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0, 47, 108, 0.15);
+        }
+        
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            color: var(--white);
+            margin-bottom: 25px;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .feature-card h4 {
+            font-size: 1.3rem;
+            color: var(--primary-color);
+            margin: 25px 0 15px 0;
+            font-weight: 600;
+        }
+        
+        .feature-card p, .feature-card ul {
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+        
+        .feature-card ul {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 15px;
+        }
+        
+        .feature-card li {
+            padding-left: 30px;
+            position: relative;
+            margin-bottom: 12px;
+        }
+        
+        .feature-card li::before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-size: 16px;
+        }
+        
+        /* Two Column Layout */
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+        
+        .two-column.reverse {
+            direction: rtl;
+        }
+        
+        .two-column.reverse > * {
+            direction: ltr;
+        }
+        
+        .column-content h3 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .column-content h4 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin: 30px 0 15px 0;
+            font-weight: 600;
+        }
+        
+        .column-content p {
+            color: var(--text-light);
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+        
+        .column-content ul {
+            list-style: none;
+            margin: 20px 0;
+            padding-left: 0;
+        }
+        
+        .column-content li {
+            padding-left: 35px;
+            position: relative;
+            margin-bottom: 15px;
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+        
+        .column-content li::before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-size: 18px;
+        }
+        
+        .column-image img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Highlight Box */
+        .highlight-box {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: var(--white);
+            padding: 40px;
+            border-radius: 12px;
+            margin: 40px 0;
+            box-shadow: 0 4px 20px rgba(0, 47, 108, 0.2);
+        }
+        
+        .highlight-box h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .highlight-box p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            opacity: 0.95;
+        }
+        
+        .highlight-box ul {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 20px;
+        }
+        
+        .highlight-box li {
+            padding-left: 35px;
+            position: relative;
+            margin-bottom: 15px;
+            opacity: 0.95;
+        }
+        
+        .highlight-box li::before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            font-size: 18px;
+        }
+        
+        /* Industry Box */
+        .industry-box {
+            background: var(--bg-light);
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            border-left: 5px solid var(--primary-color);
+        }
+        
+        .industry-box h4 {
+            color: var(--primary-color);
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .industry-box p {
+            color: var(--text-light);
+            line-height: 1.8;
+            margin: 0;
+        }
+        
+        /* Benefits Section */
+        .benefits-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+            color: var(--white);
+            padding: 80px 0;
+            position: relative;
+        }
+        
+        .benefit-item {
+            text-align: center;
+            padding: 40px 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            height: 100%;
+            margin-bottom: 30px;
+        }
+        
+        .benefit-item:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-5px);
+        }
+        
+        .benefit-item i {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: var(--white);
+        }
+        
+        .benefit-item h3 {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .benefit-item p {
+            opacity: 0.95;
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: var(--text-dark);
+            color: var(--white);
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .cta-content h2 {
+            font-size: 2.8rem;
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+        
+        .cta-content p {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            line-height: 1.7;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero-section h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-section .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .two-column {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .two-column.reverse {
+                direction: ltr;
+            }
+            
+            .section-header h2 {
+                font-size: 2rem;
+            }
+            
+            .column-content h3 {
+                font-size: 1.7rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 80px 0 60px;
+            }
+            
+            .hero-section h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-section .subtitle {
+                font-size: 1rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn-primary-custom,
+            .btn-outline-custom {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .content-section {
+                padding: 60px 0;
+            }
+            
+            .stat-item h3 {
+                font-size: 2.5rem;
+            }
+            
+            .feature-card {
+                padding: 30px 20px;
+            }
+            
+            .industry-box {
+                padding: 20px;
+            }
+            
+            #scrollToTop {
+                bottom: 20px;
+                right: 20px;
+                width: 45px;
+                height: 45px;
+                font-size: 18px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero-section h1 {
+                font-size: 1.75rem;
+            }
+            
+            .section-header h2 {
+                font-size: 1.75rem;
+            }
+            
+            .cta-content h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="spinner"></div>
+        <div class="loading-text">Customer Lifecycle Management Excellence Since 2003</div>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+
+      <!-- Top Bar -->
+<div class="top-bar">
+  <div class="container">
+    <div class="top-bar-left text-color">
+      <span>✓ Award-Winning Cloud CRM Software Since 2003</span>
+    </div>
+    <ul class="top-bar-nav">
+      <li><a href="https://www.salesboom.com/crm_supportcenter/overview/index.html">Support Center</a></li>
+      <li><a href="https://www.salesboom.com/crm_trial.html">Free Trial</a></li>
+      <li><a href="https://www.salesboom.com/login.html">Login</a></li>
+    </ul>
+  </div>
+</div>
+
+<!-- Main Header -->
+<header>
+  <div class="main-header">
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <a href="https://www.salesboom.com" aria-label="Salesboom CRM Home">
+            <img src="https://www.salesboom.com/img/salesboom-logo-252x67.png" alt="Salesboom Cloud CRM Logo" width="252" height="67">
+          </a>
+        </div>
+        <div class="header-phone">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+          </svg>
+          <a href="tel:+18552292043">1-855-229-2043</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Maximize Customer Lifetime Value with Intelligent CLM Software</h1>
+                <p class="subtitle">Transform one-time buyers into lifelong customers. Track, measure, and optimize every stage of the customer journey with real-time analytics and actionable insights.</p>
+                <div class="hero-buttons">
+                    <a href="https://www.salesboom.com/crm_trial.html" class="btn-primary-custom">Start Free 30-Day Trial</a>
+                    <a href="https://www.salesboom.com/request-crm-demo.html" class="btn-outline-custom">Schedule Demo</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-item">
+                        <h3>20+</h3>
+                        <p>Years of CRM Innovation</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-item">
+                        <h3>3,500+</h3>
+                        <p>Businesses Worldwide</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-item">
+                        <h3>159</h3>
+                        <p>Countries Served</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="stat-item">
+                        <h3>89+</h3>
+                        <p>Lifecycle Analytics</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 1: What is CLM -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Understanding Customer Lifecycle Management (CLM)</h2>
+                <p>Customer Lifecycle Management (CLM) goes beyond traditional CRM by adding the critical dimension of time to customer value analysis. While standard CRM tracks individual interactions, CLM measures how much value each customer brings to your business throughout their entire relationship with your company.</p>
+            </div>
+            <div class="two-column">
+                <div class="column-content">
+                    <h3>The CLM Advantage</h3>
+                    <p>The CLM approach recognizes that customer relationships evolve through distinct stages, from initial awareness and first purchase through repeat buying, loyalty, and advocacy. By measuring and optimizing each stage, businesses can dramatically increase customer lifetime value while reducing acquisition costs and churn rates.</p>
+                    <p>Most CRM systems focus on capturing data. Salesboom's CLM software transforms that data into strategic intelligence, showing you exactly where customers are in their lifecycle, which customers are most valuable over time, and how to maximize long-term revenue from every relationship.</p>
+                </div>
+                <div class="column-image">
+                    <img src="content/image/image1.jpg" alt="Customer lifecycle management stages visualization" loading="lazy">
+                </div>
+            </div>
+            <div class="highlight-box">
+                <h3><i class="fas fa-lightbulb"></i> The Fundamental Shift CLM Brings</h3>
+                <p><strong>Traditional CRM asks:</strong> "What did this customer buy?"</p>
+                <p><strong>CLM asks:</strong> "What is this customer worth over their lifetime, and how do we increase that value?"</p>
+                <p class="mt-3">This perspective shift changes everything about how you approach customer relationships, marketing campaigns, and business strategy.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Problems with Traditional CRM -->
+    <section class="content-section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Traditional CRM Falls Short on Customer Value</h2>
+                <p>Most businesses track customer interactions without understanding the bigger picture of customer lifetime value. This creates significant blind spots that cost companies millions in lost revenue and wasted marketing spend.</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-money-bill-wave"></i>
+                        </div>
+                        <h3>Short-Term Transaction Focus</h3>
+                        <p>Traditional CRM systems record sales transactions but fail to calculate the cumulative value of customers over time. A customer who makes small frequent purchases may be far more valuable than one who makes a single large purchase, but standard CRM systems don't make this distinction clear.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                          <i class="fa-solid fa-cloud"></i>
+                        </div>
+                        <h3>Inability to Predict Customer Behavior</h3>
+                        <p>Without lifecycle analysis, businesses cannot identify which customers are likely to make repeat purchases, which are at risk of churning, or which segments offer the highest lifetime value potential. This makes marketing and retention efforts essentially guesswork.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-puzzle-piece"></i>
+                        </div>
+                        <h3>Fragmented Customer View</h3>
+                        <p>When customer data exists in silos without lifecycle context, teams cannot see patterns in customer behavior across time. Marketing doesn't know which campaigns generate high-lifetime-value customers. Sales doesn't know which prospects resemble your best long-term customers.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>Wasted Marketing Investment</h3>
+                        <p>Without CLM metrics, businesses spend equally to acquire all customers, regardless of their potential lifetime value. This means treating customers who will buy once identically to those who will become loyal advocates, resulting in misallocated marketing budgets and poor ROI.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="highlight-box mt-5">
+                <h3><i class="fas fa-exclamation-triangle"></i> Reactive Rather Than Proactive Management</h3>
+                <p>Traditional systems tell you when a customer has already churned, but CLM software predicts churn risk before it happens, allowing intervention at the right moment to save valuable relationships. Salesboom's CLM solution addresses all these shortcomings by integrating lifecycle measurement directly into your CRM workflow.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: How Salesboom CLM Works -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>The Salesboom Approach to Customer Lifecycle Management</h2>
+                <p>Salesboom delivers the only fully integrated Customer Lifecycle Management measurement system built directly into hosted CRM software. Our platform doesn't just track customer interactions—it analyzes them across time to reveal true customer value and lifecycle patterns.</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <h3>Real-Time Lifecycle Analytics</h3>
+                        <p>Salesboom's Reporting and Analytics system provides instant access to critical lifecycle metrics that reveal the health and value of your customer relationships. Unlike systems that require manual calculation or delayed batch processing, Salesboom delivers real-time insights you can act on immediately.</p>
+                        <h4>Access Comprehensive Metrics:</h4>
+                        <ul>
+                            <li>Customer lifetime value (CLV) calculations updated with each transaction</li>
+                            <li>Customer churn rates by segment, product line, and time period</li>
+                            <li>Repeat purchase frequency and patterns by customer cohort</li>
+                            <li>Time between purchases and purchasing cycle analysis</li>
+                            <li>Revenue contribution trends showing customer value trajectory</li>
+                            <li>Customer acquisition cost versus lifetime value ratios</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>Predictive Customer Intelligence</h3>
+                        <p>Salesboom goes beyond historical reporting to deliver predictive analytics that identify which customers are most likely to become high-value, long-term relationships. The system analyzes purchasing patterns, engagement metrics, and behavioral indicators to score each customer's lifetime value potential.</p>
+                        <h4>Predictive Capabilities:</h4>
+                        <ul>
+                            <li>Churn risk scoring identifying at-risk customers before they leave</li>
+                            <li>Next-best-action recommendations to increase customer value</li>
+                            <li>Lifetime value forecasting based on current behavior patterns</li>
+                            <li>Upsell and cross-sell opportunity identification</li>
+                            <li>Optimal contact timing based on purchase cycle analysis</li>
+                            <li>Customer segment evolution tracking</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="two-column mt-5">
+                <div class="column-content">
+                    <h3>Actionable Lifecycle Insights</h3>
+                    <p>CLM metrics are only valuable if they drive action. Salesboom transforms lifecycle data into clear, actionable recommendations that guide your team's daily activities.</p>
+                    <p>The system automatically identifies customers who need attention, suggests optimal interventions, and tracks the impact of your actions on customer lifetime value. This closed-loop approach ensures continuous improvement in how you manage customer relationships.</p>
+                </div>
+                <div class="column-image">
+                    <img src="content/image/image2.jpg" alt="Real-time CLM analytics dashboard" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Industry Applications -->
+    <section class="content-section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>CLM Across Industries: Universal Benefits, Specific Applications</h2>
+                <p>While Customer Lifecycle Management principles apply universally, specific applications vary by industry. Salesboom's flexible CLM tools adapt to industry-specific needs while maintaining consistent measurement across customer lifecycles.</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="industry-box">
+                        <h4><i class="fas fa-shopping-cart"></i> Retail and E-Commerce</h4>
+                        <p>Track customer purchase frequency, basket size evolution, category preferences, and seasonal patterns. Identify customers trending toward lapsing and trigger re-engagement. Calculate CLV by acquisition channel to optimize marketing spend. Segment customers for personalized product recommendations that increase repeat purchase rates.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="industry-box">
+                        <h4><i class="fas fa-briefcase"></i> Professional Services</h4>
+                        <p>Measure client engagement levels, project frequency, service expansion patterns, and relationship duration. Identify cross-sell opportunities for additional services. Track client satisfaction through lifecycle stages from onboarding through mature partnership. Calculate profitability by client to focus BD efforts on high-value relationships.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="industry-box">
+                        <h4><i class="fas fa-laptop-code"></i> Software and SaaS</h4>
+                        <p>Monitor subscription renewal rates, usage patterns, feature adoption, and expansion revenue. Identify churning customers through engagement decline. Calculate monthly recurring revenue (MRR) and annual recurring revenue (ARR) at customer and cohort levels. Track customer acquisition cost payback periods to optimize growth spending.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="industry-box">
+                        <h4><i class="fas fa-industry"></i> Manufacturing and Distribution</h4>
+                        <p>Analyze customer ordering patterns, product mix evolution, and account growth trajectories. Identify customers at risk of switching to competitors. Calculate customer profitability including all service and support costs. Optimize inventory and production planning based on customer lifecycle forecasting.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="industry-box">
+                        <h4><i class="fas fa-heartbeat"></i> Healthcare and Medical Services</h4>
+                        <p>Track patient engagement, appointment frequency, treatment adherence, and preventive care participation. Identify patients at risk of non-compliance or disengagement. Measure patient lifetime value to optimize care program investments. Analyze referral patterns and acquisition sources.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="industry-box">
+                        <h4><i class="fas fa-university"></i> Financial Services</h4>
+                        <p>Monitor product adoption depth, cross-sell success rates, asset growth, and relationship maturity. Identify at-risk relationships showing declining engagement or assets under management. Calculate customer lifetime profitability accounting for all products and services. Optimize marketing spend toward acquisition of high-net-worth customer profiles.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits-section">
+        <div class="container">
+            <div class="section-header" style="color: white;">
+                <h2 style="color: white;">Transform Your Customer Management Strategy</h2>
+                <p style="color: rgba(255,255,255,0.95)">Experience measurable improvements across every customer metric that drives business growth</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="benefit-item">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Increase Customer Lifetime Value</h3>
+                        <p>Identify and implement strategies to maximize revenue from each customer relationship over time through targeted interventions.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="benefit-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Reduce Customer Churn</h3>
+                        <p>Predict which customers are at risk of leaving and implement retention strategies before they churn, protecting revenue.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="benefit-item">
+                        <i class="fas fa-redo-alt"></i>
+                        <h3>Boost Repeat Purchase Rates</h3>
+                        <p>Optimize timing and messaging to increase the frequency of customer purchases and extend customer lifecycles.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="benefit-item">
+                        <i class="fas fa-bullseye"></i>
+                        <h3>Optimize Marketing ROI</h3>
+                        <p>Focus acquisition spending on customer segments with highest lifetime value potential rather than one-time buyers.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="benefit-item">
+                        <i class="fas fa-users"></i>
+                        <h3>Segment by True Value</h3>
+                        <p>Identify your most valuable customer segments based on lifetime contribution, not just transaction size.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="benefit-item">
+                        <i class="fas fa-lightbulb"></i>
+                        <h3>Data-Driven Decisions</h3>
+                        <p>Replace gut feelings with concrete lifecycle data showing exactly which strategies drive long-term customer value.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Maximize Customer Lifetime Value?</h2>
+                <p>Start your free 30-day trial today and discover how Salesboom's Customer Lifecycle Management tools can increase retention, reduce churn, and boost customer lifetime value. No credit card required—experience the full power of CLM with no strings attached.</p>
+                <div class="hero-buttons">
+                    <a href="https://www.salesboom.com/crm_trial.html" class="btn-primary-custom">Start Free Trial Now</a>
+                    <a href="https://www.salesboom.com/request-crm-demo.html" class="btn-outline-custom">Schedule Live Demo</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-2">
+      <h3 class="fw-bold text-color">
+        <i class="fa-solid fa-layer-group me-2"></i>
+        Explore Salesboom Editions
+      </h3>
+      <p class="text-muted">Discover powerful CRM editions to scale your business efficiently.</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-lg border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-briefcase fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Professional Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              A complete CRM suite with Marketing Automation, ERP integration, and Support tools — built for performance and value.
+            </p>
+            <a href="https://www.salesboom.com/editions/professional-edition.html" class="btn btn-color mt-auto">
+              Explore Professional <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-lg border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-building fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Enterprise Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              For large enterprises — automate workflows, unify data, and leverage analytics to drive strategic growth.
+            </p>
+            <a href="https://www.salesboom.com/editions/enterprise-edition.html" class="btn btn-color mt-auto">
+              View Enterprise <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-lg border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-users fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Team Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              Perfect for small teams starting with CRM — manage leads, track sales, and boost productivity with simplicity.
+            </p>
+            <a href="https://www.salesboom.com/editions/team-edition.html" class="btn btn-color mt-auto">
+           Discover Team<i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container py-5">
+  <h2 class="text-center mb-5">Customer Service & Support Solutions</h2>
+
+  <div class="row g-4">
+
+    <!-- Card 1 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-headset fa-3x mb-3 text-color"></i>
+        <h4>Customer Service & Support</h4>
+        <p>
+          Streamline your service operations with
+          <a href="https://www.salesboom.com/products/customer-service-and-support.html" class="fw-bold text-color">
+            customer support tools
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-chart-line fa-3x mb-3 text-color"></i>
+        <h4>Customer Lifecycle Management</h4>
+        <p>
+          Optimize relationships and retention with
+          <a href="https://www.salesboom.com/products/customer_lifecycle_management_clm_solutions.html" class="fw-bold text-color">
+            CLM solutions
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-smile fa-3x mb-3 text-color"></i>
+        <h4>Improve Customer Satisfaction</h4>
+        <p>
+          Enhance client experiences and loyalty with
+          <a href="https://www.salesboom.com/products/crm-improve-customer-satisfaction.html" class="fw-bold text-color">
+            CRM satisfaction tools
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-users fa-3x mb-3 text-color"></i>
+        <h4>Better Customer Service, Less Training</h4>
+        <p>
+          Deliver exceptional support quickly with
+          <a href="https://www.salesboom.com/products/crm-better-customer-service-less-training.html" class="fw-bold text-color">
+            simplified CRM tools
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-clock fa-3x mb-3 text-color"></i>
+        <h4>Support Hours Management</h4>
+        <p>
+          Track and manage support schedules efficiently using
+          <a href="https://www.salesboom.com/products/feature-support-hours-management.html" class="fw-bold text-color">
+            support hours features
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-signal fa-3x mb-3 text-color"></i>
+        <h4>Service Status Monitoring</h4>
+        <p>
+          Monitor service performance and uptime with
+          <a href="https://www.salesboom.com/products/feat-service-status.html" class="fw-bold text-color">
+            real-time status tools
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 7 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-laptop fa-3x mb-3 text-color"></i>
+        <h4>Self-Service Portal</h4>
+        <p>
+          Empower customers with a
+          <a href="https://www.salesboom.com/products/web-based_self_service_portal_software.html" class="fw-bold text-color">
+            web-based portal
+          </a> for faster resolutions.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 8 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-rocket fa-3x mb-3 text-color"></i>
+        <h4>Revenue Lifecycle Management</h4>
+        <p>
+          Optimize your business revenue streams with
+          <a href="https://www.salesboom.com/ai-rlm/revenue-lifecycle-management-guide.html" class="fw-bold text-color">
+            RLM guidance
+          </a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 9 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-chart-pie fa-3x mb-3 text-color"></i>
+        <h4>Revenue Operations for SMEs</h4>
+        <p>
+          Improve profitability and operational efficiency with
+          <a href="https://www.salesboom.com/revenue-operations/revenue-operations-guide-for-smes.html" class="fw-bold text-color">
+            SME-focused revenue operations
+          </a>.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="mt-5 footer">
+  <div class="container mt-5 pt-5">
+    <div class="footer-grid">
+      <div class="footer-section">
+        <h3>Products</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/products/tools-sfa.html">Sales Force Automation</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-marketing.html">Marketing Automation</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-casemanagement.html">Case Management</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-reporting.html">Business Intelligence</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-emailintegration.html">Email Integration</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Solutions</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/products/edition-team.html">Team Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/edition-professional.html">Professional Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/edition-enterprise.html">Enterprise Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/industry-solutions.html">Industry Solutions</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/company/index.html">About Us</a></li>
+          <li><a href="https://www.salesboom.com/company/company-contact.html">Contact Us</a></li>
+          <li><a href="https://www.salesboom.com/customers/index.html">Customers</a></li>
+          <li><a href="https://www.salesboom.com/partners/index.html">Partners</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/support/index.html">Support Center</a></li>
+          <li><a href="https://www.salesboom.com/crm_supportcenter/overview/index.html">Documentation</a></li>
+          <li><a href="https://www.salesboom.com/whitepapers/index.html">White Papers</a></li>
+          <li><a href="https://www.salesboom.com/pop-privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="bg-color">
+    <div class="container">
+     <div class="footer-bottom pb-3 mt-3">
+      <p>&copy; 2003-2025 <a class="text-white fw-bold" href="https://www.salesboom.com">Salesboom.com</a> Inc. All rights reserved. | Call: 1-855-229-2043</p>
+      <p style="margin-top: 10px;">Salesboom's color-coded CRM lead management software helps businesses visually prioritize sales opportunities with automated workflow rules. Contact us to learn how color coding can transform your lead management process and increase sales productivity.</p>
+    </div>
+    </div>
+  </div>
+ 
+</footer>
+
+<!-- Common JavaScript -->
+<script src="content/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+    <script>
+        // Loading Screen
+        window.addEventListener('load', function() {
+            const loadingScreen = document.getElementById('loading-screen');
+            setTimeout(() => {
+                loadingScreen.classList.add('fade-out');
+                setTimeout(() => {
+                    loadingScreen.style.display = 'none';
+                }, 500);
+            }, 1000);
+        });
+
+        // Scroll to Top Button
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.style.display = 'flex';
+            } else {
+                scrollToTopBtn.style.display = 'none';
+            }
+        });
+        
+        scrollToTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
