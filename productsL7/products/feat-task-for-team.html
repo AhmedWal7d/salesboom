@@ -1,0 +1,1835 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+<!-- Primary Meta Tags -->
+<title>Create Team Tasks in One Click | Salesboom CRM</title>
+<meta name="description" content="Mass create identical tasks for your entire team instantly. Salesboom's team task creation eliminates repetitive work and streamlines task management for sales teams.">
+<meta name="keywords" content="team task management, bulk task creation CRM, sales team task assignment, CRM task automation, mass task creation, team productivity tools, sales manager CRM tools">
+<link rel="canonical" href="https://www.salesboom.com/products/feat-task-for-team.html">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.salesboom.com/products/feat-task-for-team.html">
+<meta property="og:title" content="Create Team Tasks in One Click | Salesboom CRM">
+<meta property="og:description" content="Mass create identical tasks for your entire team instantly. Salesboom's team task creation eliminates repetitive work and streamlines task management for sales teams.">
+<meta property="og:image" content="https://www.salesboom.com/img/feat-task-for-team-og.jpg">
+<meta property="og:site_name" content="Salesboom CRM">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://www.salesboom.com/products/feat-task-for-team.html">
+<meta name="twitter:title" content="Create Team Tasks in One Click | Salesboom CRM">
+<meta name="twitter:description" content="Mass create identical tasks for your entire team instantly. Salesboom's team task creation eliminates repetitive work and streamlines task management for sales teams.">
+<meta name="twitter:image" content="https://www.salesboom.com/img/feat-task-for-team-og.jpg">
+<meta name="twitter:site" content="@SalesboomCloud">
+
+<!-- Schema.org structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Team Task Creation - Salesboom CRM",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web-based, Cloud",
+  "offers": {
+    "@type": "Offer",
+    "price": "14.00",
+    "priceCurrency": "USD",
+    "priceValidUntil": "2026-12-31"
+  },
+  "featureList": [
+    "Mass create identical tasks for entire team in one click",
+    "Select specific team members or groups for task assignment",
+    "Automatic notifications and reminders for all team members",
+    "Complete task tracking and visibility across the team",
+    "Seamless integration with comprehensive CRM task management",
+    "Mobile access for task viewing and completion"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.5",
+    "ratingCount": "3500"
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "Salesboom",
+    "url": "https://www.salesboom.com",
+    "logo": "https://www.salesboom.com/img/salesboom-logo-252x67.png",
+    "foundingDate": "2003",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-855-229-2043",
+      "contactType": "Customer Service"
+    }
+  }
+}
+</script>
+
+<link rel="shortcut icon" href="https://www.salesboom.com/favicon.ico">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="Content/css/all.min.css">
+    <link rel="stylesheet" href="Content/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Content/css/style.css">
+    <link rel="stylesheet" href="Content/css/salesboom-common.css">
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="shortcut icon" href="Content/image/salesboom-mobile-logo.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="Content/css/navbar-salsebom.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+/* Loading Screen */
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #002f6c;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+#loading-screen.fade-out {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader {
+  width: 60px;
+  height: 60px;
+  border: 5px solid rgba(255, 255, 255, 0.3);
+  border-top: 5px solid #fff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-text {
+  color: white;
+  font-size: 18px;
+  margin-top: 20px;
+  font-weight: 500;
+}
+
+/* Scroll to Top Button */
+#scrollToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: #002f6c;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 47, 108, 0.4);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+#scrollToTop:hover {
+  background: #004080;
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 47, 108, 0.6);
+}
+
+#scrollToTop.show {
+  display: flex;
+}
+
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #002f6c;
+  --secondary-color: #004080;
+  --accent-color: #0066cc;
+  --success-color: #28a745;
+  --warning-color: #ffc107;
+  --info-color: #17a2b8;
+  --text-color: #333;
+  --text-light: #666;
+  --border-color: #e0e0e0;
+  --bg-light: #f8f9fa;
+  --bg-white: #ffffff;
+  --shadow: 0 2px 10px rgba(0,0,0,0.1);
+  --shadow-hover: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background: var(--bg-white);
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #002f6c 0%, #004080 100%);
+  color: white;
+  padding: 100px 0 80px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+  opacity: 0.3;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 25px;
+  line-height: 1.2;
+}
+
+.hero .subtitle {
+  font-size: 1.4rem;
+  margin-bottom: 40px;
+  opacity: 0.95;
+  line-height: 1.6;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 16px 40px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: white;
+  color: #002f6c;
+  box-shadow: 0 4px 12px rgba(111, 66, 193, 0.3);
+}
+
+.btn-primary:hover {
+  background: #002f6c;
+  color: #002f6c;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(111, 66, 193, 0.4);
+}
+
+.btn-outline {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-outline:hover {
+  background: white;
+  color: var(--primary-color);
+}
+
+/* Stats Section */
+.stats-section {
+  background: var(--primary-color);
+  color: white;
+  padding: 60px 0;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-item h3 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.stat-item p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* Content Sections */
+.content-section {
+  padding: 80px 0;
+}
+
+.content-section.bg-light {
+  background: var(--bg-light);
+}
+
+.section-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 60px;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.section-header p {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  line-height: 1.8;
+}
+
+/* Feature Cards */
+.feature-card {
+  background: var(--bg-white);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  transition: all 0.3s;
+  border-top: 4px solid var(--primary-color);
+  height: 100%;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.feature-icon {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.feature-card h3 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.feature-card p {
+  color: var(--text-light);
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+/* Use Case Cards */
+.use-case-card {
+  background: var(--bg-white);
+  padding: 35px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  border-left: 5px solid #002f6c;
+  height: 100%;
+  transition: all 0.3s;
+}
+
+.use-case-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.use-case-card h4 {
+  color: var(--primary-color);
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.use-case-card p {
+  color: var(--text-light);
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+/* Benefit Cards */
+.benefit-card {
+  background: var(--bg-white);
+  padding: 35px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  border-left: 5px solid var(--success-color);
+  height: 100%;
+  transition: all 0.3s;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.benefit-card h4 {
+  color: var(--primary-color);
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.benefit-card p {
+  color: var(--text-light);
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+/* Two Column Layout */
+.two-column-content h3 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.two-column-content h4 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin: 30px 0 15px 0;
+  font-weight: 600;
+}
+
+.two-column-content p {
+  color: var(--text-light);
+  margin-bottom: 20px;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.two-column-content ul {
+  list-style: none;
+  margin: 20px 0;
+  padding-left: 0;
+}
+
+.two-column-content li {
+  padding-left: 30px;
+  position: relative;
+  margin-bottom: 15px;
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+.two-column-content li::before {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  color: var(--success-color);
+  font-size: 1.2rem;
+}
+
+.two-column-content strong {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* Benefits Section */
+.benefits-section {
+  background: linear-gradient(135deg, #002f6c 0%, #004080 100%);
+  color: white;
+  padding: 80px 0;
+  position: relative;
+}
+
+.benefit-item {
+  text-align: center;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s;
+  height: 100%;
+}
+
+.benefit-item:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-5px);
+}
+
+.benefit-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #6f42c1;
+}
+
+.benefit-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.benefit-item p {
+  opacity: 0.9;
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+/* Info Box */
+.info-box {
+  background: #d1ecf1;
+  border-left: 5px solid #17a2b8;
+  padding: 25px;
+  border-radius: 8px;
+  margin: 30px 0;
+}
+
+.info-box h5 {
+  color: #0c5460;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.info-box p {
+  color: #0c5460;
+  margin-bottom: 0;
+  line-height: 1.7;
+}
+
+/* Warning Box */
+.warning-box {
+  background: #fff3cd;
+  border-left: 5px solid #ffc107;
+  padding: 25px;
+  border-radius: 8px;
+  margin: 30px 0;
+}
+
+.warning-box h5 {
+  color: #856404;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.warning-box ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.warning-box li {
+  padding-left: 30px;
+  position: relative;
+  margin-bottom: 12px;
+  color: #856404;
+  line-height: 1.7;
+}
+
+.warning-box li::before {
+  content: "\f071";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  left: 0;
+  color: #ffc107;
+  font-size: 1.1rem;
+}
+
+/* Steps Section */
+.step-card {
+  background: var(--bg-white);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  text-align: center;
+  height: 100%;
+  transition: all 0.3s;
+}
+
+.step-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.step-number {
+  width: 60px;
+  height: 60px;
+  background: var(--primary-color);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0 auto 20px;
+}
+
+.step-card h4 {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.step-card p {
+  color: var(--text-light);
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* CTA Section */
+.cta-section {
+  background: var(--primary-color);
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.cta-content h2 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.cta-content p {
+  font-size: 1.3rem;
+  margin-bottom: 40px;
+  opacity: 0.9;
+  line-height: 1.6;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  
+  .hero .subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .section-header h2 {
+    font-size: 2rem;
+  }
+  
+  .content-section {
+    padding: 60px 0;
+  }
+  
+  .stat-item h3 {
+    font-size: 2.5rem;
+  }
+  
+  #scrollToTop {
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+  }
+  
+  .hero-cta {
+    flex-direction: column;
+  }
+  
+  .btn {
+    width: 100%;
+  }
+}
+
+/* Utility Classes */
+.text-center { text-align: center; }
+.mb-4 { margin-bottom: 1.5rem; }
+.mb-5 { margin-bottom: 3rem; }
+.mt-4 { margin-top: 1.5rem; }
+.mt-5 { margin-top: 3rem; }
+</style>
+</head>
+
+<body>
+<!-- Loading Screen -->
+<div id="loading-screen">
+  <div class="loader"></div>
+  <div class="loading-text">Loading...</div>
+</div>
+
+<!-- Scroll to Top Button -->
+<button id="scrollToTop" aria-label="Scroll to top">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+
+<!-- Top Bar -->
+<div class="top-bar">
+    <div class="container">
+        <div class="top-bar-content d-flex justify-content-between w-100">
+            <div class="contact-info">
+                <a href="tel:+18885434769">
+                    <i class="bi bi-telephone-fill"></i> 1-855-229-2043
+                </a>
+                <a href="mailto:sales@salesboom.com">
+                    <i class="bi bi-envelope-fill"></i> sales@salesboom.com
+                </a>
+        
+                
+            </div>
+            <div class="top-bar-right">
+                <a href="https://www.salesboom.com/login" class="top-bar-btn">
+                    <i class="bi bi-box-arrow-in-right"></i> Login
+                </a>
+                <a href="https://www.salesboom.com/free_trial/index.html" class="top-bar-btn">
+                    <i class="bi bi-rocket-takeoff"></i> Free Trial
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Header with Logo and Social -->
+<div class="header-section">
+    <div class="container">
+        <div class="header-content">
+            <div class="logo-container">
+                <a href="https://www.salesboom.com/">
+                    <img src="Content/image/salesboom-logo-252x67.png" alt="Salesboom Cloud CRM Vendor">
+                </a>
+            </div>
+            <div class="social-contact">
+                <ul class="social-icons">
+                    <li>
+                        <a href="https://www.facebook.com/SBDC.CloudCRM" rel="nofollow" target="_blank" title="Facebook">
+                            <img src="Content/image/fase.png" alt="Facebook">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/SalesboomCloud" rel="nofollow" target="_blank" title="Twitter">
+                            <img src="Content/image/savexxx.png" alt="Twitter">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/user/cloudcrm" rel="nofollow" target="_blank" title="YouTube">
+                            <img src="https://www.salesboom.com/img/youtube_circle.png" alt="YouTube">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/crmsoftware" rel="nofollow" target="_blank" title="LinkedIn">
+                            <img src="https://www.salesboom.com/img/linkedin_circle.png" alt="LinkedIn">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Main Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark main-navbar">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="mainNavbar">
+            <ul class="navbar-nav">
+                
+                <!-- Products Mega Menu -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="https://www.salesboom.com/products/index.html">
+                        <i class="bi bi-grid-3x3-gap"></i> Products
+                    </a>
+                    <div class="dropdown-menu mega-menu mega-menu-ultra-wide " sttle="over">
+                        <div class="mega-menu-header">
+                            <h5 class="text-center mb-4">
+                                <i class="bi bi-grid-3x3-gap-fill text-primary"></i> 
+                                CRM Solutions & Products
+                            </h5>
+                        </div>
+                        <div class="row g-4">
+                            <!-- Column 1: Introduction & Marketing -->
+                            <div class="col-lg-3 col-md-6">
+                                <div class="menu-section">
+                                    <h6 class="section-title">
+                                        <i class="bi bi-star-fill"></i> Introduction To CRM
+                                    </h6>
+                                    <a class="dropdown-item" href="https://www.salesboom.com/products/">
+                                        <i class="bi bi-house-door"></i> All Products
+                                    </a>
+                                    <a class="dropdown-item" href="https://www.salesboom.com/products/intro-intro.html">
+                                        <i class="bi bi-award"></i> Best CRM Software Solution
+                                    </a>
+                                </div>
+                                
+                                <div class="menu-section">
+                                    <h6 class="section-title">
+                                        <i class="bi bi-megaphone-fill"></i> Marketing Automation
+                                    </h6>
+                                    <a class="dropdown-item" href="https://www.salesboom.com/products/tools-campaign.html">
+                                        <i class="bi bi-bullseye"></i> Campaign Management
+                                    </a>
+                                    <a class="dropdown-item" href="https://www.salesboom.com/products/web-based_mass_email_marketing_software.html">
+                                        <i class="bi bi-envelope-at"></i> Mass Email Marketing
+                                    </a>
+                                    <a class="dropdown-item" href="https://www.salesboom.com/products/marketing-collateral.html">
+                                        <i class="bi bi-file-earmark-richtext"></i> Marketing Collateral
+                                    </a>
+                                    <a class="dropdown-item" href="https://www.salesboom.com/products/auto-response-email.html">
+                                        <i class="bi bi-reply-all"></i> Auto Response Email
+                                    </a>
+                                </div>
+                                
+                                <div class="menu-section">
+                                    <h6 class="section-title">
+                                        <i class="bi bi-headset"></i> Customer Service & Support
+                                    </h6>
+                                    <a class="dropdown-item" href="https://www.salesboom.com/products/tools-casemanagement.html">
+                                        <i class="bi bi-clipboard-check"></i> Case & Incident Management
+                                    </a>
+                                    <a class="dropdown-item" href="https://www.salesboom.com/products/solution-management.html">
+                                        <i class="bi bi-lightbulb"></i> Solution Management
+                                    </a>
+                                    <a class="dropdown-item" href="https://www.salesboom.com/products/knowledge-base-management.html">
+                                        <i class="bi bi-book"></i> Knowledge Base Management
+                                    </a>
+                                        <a class="dropdown-item" href="https://www.salesboom.com/products/web-based_self_service_portal_software.html">
+                                        <i class="bi bi-door-open"></i> CRM Self Service Portal
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <!-- Column 2: Sales Force Automation -->
+                            <div class="col-lg-3 col-md-6">
+                                <div class="menu-section">
+                                    <h6 class="section-title">
+                                        <i class="bi bi-graph-up-arrow"></i> Sales Force Automation
+                                    </h6>
+                                    <a class="dropdown-item" href="https://www.salesboom.com/products/web-based_lead_management_software.html">
+                                        <i class="bi bi-funnel"></i> Lead Management
+                                    </a>
+                                    <a class="dropdown-item" href="https://www.salesboom.com/products/tools-contact.html">
+                                        <i class="bi bi-person-lines-fill"></i> Contact Management
+                                    </a>
+                                    <a class="dropdown-item" href="https://www.salesboom.com/products/sfa-account-management.html">
+                                        <i class="bi bi-building"></i> Account Management
+                                    </a>
+                                    <a class="dropdown-item" href="https://www.salesboom.com/products/sfa-opportunity.html">
+                                        <i class="bi bi-briefcase"></i> Opportunity Management
+                                    </a>
+                                    <a class="dropdown-item" href="https://www.salesboom.com/products/web-based_sales_quote_management_software.html">
+                                        <i class="bi bi-file-earmark-text"></i> Quote Management
+                                    </a>
+                                    <a class="dropdown-item" href="https://www.salesboom.com/products/tools-product.html">
+                                        <i class="bi bi-box-seam"></i> Product Database
+                                    </a>
+                                    <a class="dropdown-item" href="https://www.salesboom.com/products/tools-contract.html">
+                                        <i class="bi bi-file-earmark-check"></i> Contract Management
+                                    </a>
+                                    <a class="dropdown-item" href="https://www.salesboom.com/products/sfa-forecasting.html">
+                                        <i class="bi bi-graph-up"></i> Sales Forecasting
+                                    </a>
+                                    <a class="dropdown-item" href="https://www.salesboom.com/products/sfa-commissions-management.html">
+                                        <i class="bi bi-cash-stack"></i> Commissions Management
+                                    </a>
+                                    <a class="dropdown-item" href="https://www.salesboom.com/salesboom_salesforce_compared/inventory_management.html">
+                                        <i class="bi bi-boxes"></i> CRM Inventory Management
+                                    </a>
+                                    <a class="dropdown-item" href="https://www.salesboom.com/products/feature-zip-code-proximity-search.html">
+                                        <i class="bi bi-geo-alt"></i> Zip Code Proximity Search
+                                    </a>
+                                       <a class="dropdown-item" href="https://www.salesboom.com/email.html">
+                                        <i class="bi bi-shield-check"></i> Email Supervision & Retention
+                                    </a>
+                              
+                                
+                                </div>
+                            </div>
+                            
+                            <!-- Column 3: Business Intelligence & Collaboration -->
+                            <div class="col-lg-3 col-md-6">
+                                <div class="menu-section">
+                                    <h6 class="section-title">
+                                        <i class="bi bi-bar-chart-line-fill"></i> Business Intelligence & Analytics
+                                    </h6>
+                                    <a class="dropdown-item" href="https://www.salesboom.com/products/sfa-reporting.html">
+                                        <i class="bi bi-bar-chart"></i> Custom Reporting & Analytics
+                                    </a>
+                                    <a class="dropdown-item" href="https://www.salesboom.com/products/tools-dashboard.html">
+                                        <i class="bi bi-speedometer2"></i> Dashboard Reporting
+                                    </a>
+                                    <a class="dropdown-item" href="https://www.salesboom.com/products/custom-reports.html">
+                                        <i class="bi bi-columns-gap"></i> Custom Dashboard
+                                    </a>
+                                    <a class="dropdown-item" href="https://www.salesboom.com/products/color-coding-leads-crm-software.html">
+                                        <i class="bi bi-palette"></i> Color Coding Leads
+                                    </a>
+                                    <a class="dropdown-item" href="https://www.salesboom.com/products/crm-audit-trail.html">
+                                        <i class="bi bi-clock-history"></i> CRM Audit Trail
+                                    </a>
+                                </div>
+                                
+                                <div class="menu-section">
+                                    <h6 class="section-title">
+                                        <i class="bi bi-diagram-3-fill"></i> CRM Workflow Automation
+                                    </h6>
+                                    <a class="dropdown-item" href="https://www.salesboom.com/products/feat-workflow.html">
+                                        <i class="bi bi-gear-wide-connected"></i> Workflow & Process Automation
+                                    </a>
+                                </div>
+                                
+                                <div class="menu-section">
+                                    <h6 class="section-title">
+                                        <i class="bi bi-people-fill"></i> Collaboration Tools
+                                    </h6>
+                                    <a class="dropdown-item" href="https://www.salesboom.com/crm-collaboration/benefits-of-crm-online-calendar.html">
+                                        <i class="bi bi-calendar-event"></i> Event Management
+                                    </a>
+                                    <a class="dropdown-item" href="https://www.salesboom.com/products/crm-shared-calendar-software.html">
+                                        <i class="bi bi-calendar3"></i> Shared Calendar
+                                    </a>
+                                    <a class="dropdown-item" href="https://www.salesboom.com/products/tools-messenger.html">
+                                        <i class="bi bi-chat-dots"></i> Instant Messaging
+                                    </a>
+                                    <a class="dropdown-item" href=" https://www.salesboom.com/products/tools-webcapture.html ">
+                                        <i class="bi bi-globe"></i> Web Self-Service
+                                    </a>
+                                 
+                                </div>
+                            </div>
+                            
+                            <!-- Column 4: Integrations -->
+                            <div class="col-lg-3 col-md-6">
+                                <div class="menu-section">
+                                    <h6 class="section-title">
+                                        <i class="bi bi-currency-dollar"></i> CRM For QuickBooks Online
+                                    </h6>
+                                    <a class="dropdown-item" href="https://www.salesboom.com/products/CRM-data-sheets/crm-data-sheet-quickbooks-connector.html">
+                                        <i class="bi bi-link-45deg"></i> QuickBooks CRM Integration
+                                    </a>
+                                    <a class="dropdown-item" href="https://www.salesboom.com/products/crm-property-management-software-with-quickbooks.html">
+                                        <i class="bi bi-building"></i>QuickBooks Property Solutions
+
+                                    </a>
+                                </div>
+                                
+                                <div class="menu-section">
+                                    <h6 class="section-title">
+                                        <i class="bi bi-google"></i> Google Apps Integration
+                                    </h6>
+                                    <a class="dropdown-item" href="https://www.salesboom.com/products/google/google-contacts-crm-integration.html">
+                                        <i class="bi bi-person-vcard"></i> CRM for Google Contacts
+                                    </a>
+                                </div>
+                                
+                                <div class="menu-section">
+                                    <h6 class="section-title">
+                                        <i class="bi bi-microsoft"></i> Microsoft Outlook CRM
+                                    </h6>
+                                    <a class="dropdown-item" href="https://www.salesboom.com/products/microsoft-outlook-as-crm.html">
+                                        <i class="bi bi-envelope-fill"></i> Microsoft Outlook As CRM?
+                                    </a>
+                                          <a class="dropdown-item" href="https://www.salesboom.com/products/crm-skype-integration.html">
+                                        <i class="bi bi-skype"></i> CRM Skype Integration
+                                    </a>
+                                </div>
+                                
+                                <div class="" style="background-color: #1e3c72;z-index: 25555;">
+                                    <div class="alert alert-info mb-0" style="background-color: #1e3c72;z-index: 25555;">
+                                        <h6 class="alert-heading text-white">
+                                            <i class="bi bi-rocket-takeoff"></i> Need Help?
+                                        </h6>
+                                        <p class="small mb-2 text-white">Our CRM experts are ready to help you find the perfect solution.</p>
+                                        <a href="https://www.salesboom.com/company/company-contact.html" class="btn text-white btn-sm btn-primary w-100" style="background-color: white;color: #1e3c72 !important;">
+                                            <i class="bi bi-telephone"></i> Contact Sales
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                
+                <!-- Customers -->
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.salesboom.com/customers/index.html">
+                        <i class="bi bi-people"></i> Customers
+                    </a>
+                </li>
+                
+                <!-- Partners -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="https://www.salesboom.com/partners/index.html">
+                        <i class="bi bi-handshake"></i> Partners
+                    </a>
+                    <div class="dropdown-menu" style="left: 660px !important;width: 50px !important;">
+                        <h6 class="dropdown-header">CRM Partners & Affiliates</h6>
+                        <a class="dropdown-item" href="https://www.salesboom.com/partners/">
+                            <i class="bi bi-grid"></i> All Partners
+                        </a>
+                        <a class="dropdown-item" href="https://www.salesboom.com/partners/programs.html">
+                            <i class="bi bi-person-plus"></i> Become a Partner
+                        </a>
+                        <a class="dropdown-item" href="https://www.salesboom.com/partners/resellers-consulting-partners.html">
+                            <i class="bi bi-shop"></i> Resellers & Consulting Partners
+                        </a>
+                        <a class="dropdown-item" href="https://www.salesboom.com/partners/advertising-affiliate.html">
+                            <i class="bi bi-badge-ad"></i> Advertising Affiliate
+                        </a>
+                        <a class="dropdown-item" href="https://www.salesboom.com/partners/integration-partner.html">
+                            <i class="bi bi-puzzle"></i> Integration Partner
+                        </a>
+                        <a class="dropdown-item" href="https://www.salesboom.com/Private-Label-CRM/private-label-crm-software-rebrand.html">
+                            <i class="bi bi-tag"></i> White Label CRM
+                        </a>
+                    </div>
+                </li>
+                
+                <!-- Industries Mega Menu -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="https://www.salesboom.com/products/industry-solutions.html">
+                        <i class="bi bi-building"></i> Industries
+                    </a>
+                    <div class="dropdown-menu mega-menu mega-menu-ultra-wide">
+                        <div class="mega-menu-header">
+                            <h5 class="text-center mb-4">
+                                <i class="bi bi-building-fill text-primary"></i>
+                                CRM Software Solutions By Industry
+                            </h5>
+                        </div>
+                        <div class="row g-4">
+                            <div class="col-lg-3 col-md-6">
+                                <div class="menu-section">
+                                    <a class="dropdown-item" href="https://www.salesboom.com/products/industry-solutions.html">
+                                        <i class="bi bi-collection"></i> <strong>All Industries</strong>
+                                    </a>
+                                </div>
+                                <div class="menu-section">
+                                    <a class="dropdown-item" href="https://www.salesboom.com/products/web-based_aerospaceanddefense_crm_software_solution.html">
+                                        <i class="bi bi-airplane"></i> Aerospace Defense CRM
+                                    </a>
+                                    <a class="dropdown-item" href="https://www.salesboom.com/products/web-based_automotive_crm_software_solution.html">
+                                        <i class="bi bi-car-front"></i> Automotive CRM
+                                    </a>
+                                    <a class="dropdown-item" href="https://www.salesboom.com/products/web_based_call_center_software_solution.html">
+                                        <i class="bi bi-telephone"></i> Call Centers
+                                    </a>
+                                    <a class="dropdown-item" href="https://www.salesboom.com/products/clinicalpractice-crm-software-solution.html">
+                                        <i class="bi bi-heart-pulse"></i> Clinical Practice CRM
+                                    </a>
+                                    <a class="dropdown-item" href="https://www.salesboom.com/products/clinicalresearch-crm-software-solution.html">
+                                        <i class="bi bi-clipboard-data"></i> Clinical Research CRM
+                                    </a>
+                                    <a class="dropdown-item" href="https://www.salesboom.com/products/communications-crm-software-solution.html">
+                                        <i class="bi bi-broadcast"></i> Communications CRM
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-3 col-md-6">
+                                <div class="menu-section">
+                                    <a class="dropdown-item" href="https://www.salesboom.com/crm/crm-software/construction-management-software.html">
+                                        <i class="bi bi-hammer"></i> Construction Management
+                                    </a>
+                                    <a class="dropdown-item" href="https://www.salesboom.com/products/ConsumerGoods-crm-software-solution.html">
+                                        <i class="bi bi-cart"></i> Consumer Goods
+                                    </a>
+                                    <a class="dropdown-item" href="https://www.salesboom.com/products/electronics-crm-software-solution.html">
+                                        <i class="bi bi-cpu"></i> Electronics
+                                    </a>
+                                    <a class="dropdown-item" href="https://www.salesboom.com/products/EnergySector-crm-software-solution.html">
+                                        <i class="bi bi-lightning"></i> Energy
+                                    </a>
+                                    <a class="dropdown-item" href="https://www.salesboom.com/products/Banking-crm-software-solution.html">
+                                        <i class="bi bi-bank"></i> Financial Services - Banking
+                                    </a>
+                                    <a class="dropdown-item" href="https://www.salesboom.com/products/Insurance-crm-software-solution.html">
+                                        <i class="bi bi-shield"></i> Financial Services - Insurance
+                                    </a>
+                                    <a class="dropdown-item" href="https://www.salesboom.com/crm/window-cleaning-crm-software-program.html">
+                                        <i class="bi bi-window"></i> Window Cleaning CRM
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-3 col-md-6">
+                                <div class="menu-section">
+                                    <a class="dropdown-item" href="https://www.salesboom.com/products/government-crm-software-solution.html">
+                                        <i class="bi bi-flag"></i> Government Services
+                                    </a>
+                                    <a class="dropdown-item" href="https://www.salesboom.com/products/Hospital-crm-software-solution.html">
+                                        <i class="bi bi-hospital"></i> Healthcare CRM Software
+                                    </a>
+                                    <a class="dropdown-item" href="https://www.salesboom.com/products/Hospitality-crm-software-solution.html">
+                                        <i class="bi bi-building"></i> Hospitality CRM
+                                    </a>
+                                    <a class="dropdown-item" href="https://www.salesboom.com/crm/legal-crm-software.html">
+                                        <i class="bi bi-file-earmark-ruled"></i> Legal CRM Software
+                                    </a>
+                                    <a class="dropdown-item" href="https://www.salesboom.com/products/manufacturing-crm-software-solution.html">
+                                        <i class="bi bi-gear"></i> Manufacturing CRM
+                                    </a>
+                                    <a class="dropdown-item" href="https://www.salesboom.com/products/pharmaceutical_crm_software_solution.html">
+                                        <i class="bi bi-capsule"></i> Pharmaceuticals
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-3 col-md-6">
+                                <div class="menu-section">
+                                    <a class="dropdown-item" href="https://www.salesboom.com/crm/crm-real-estate-software.html">
+                                        <i class="bi bi-house"></i> Real Estate CRM Software
+                                    </a>
+                                    <a class="dropdown-item" href="https://www.salesboom.com/products/retail-crm-software-solution.html">
+                                        <i class="bi bi-shop"></i> Retail CRM
+                                    </a>
+                                    <a class="dropdown-item" href="https://www.salesboom.com/products/staffing-crm-software-solution.html">
+                                        <i class="bi bi-person-badge"></i> Staffing CRM
+                                    </a>
+                                    <a class="dropdown-item" href="https://www.salesboom.com/products/transportation-crm-software-solution.html">
+                                        <i class="bi bi-truck"></i> Transportation CRM
+                                    </a>
+                                    <a class="dropdown-item" href="https://www.salesboom.com/products/Travel-crm-software-solution.html">
+                                        <i class="bi bi-airplane-engines"></i> Travel CRM
+                                    </a>
+                                    <a class="dropdown-item" href="https://www.salesboom.com/products/chemical-crm-software-solution.html">
+                                        <i class="bi bi-droplet"></i> Chemical
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                
+                <!-- Company -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="https://www.salesboom.com/company/index.html">
+                        <i class="bi bi-info-circle"></i> Company
+                    </a>
+                    <div class="dropdown-menu mega-menu mega-menu-ultra-wide">
+                        <div class="mega-menu-header">
+                            <h5 class="text-center mb-4">
+                                <i class="bi bi-building-fill text-primary"></i>
+                                About Salesboom CRM Company
+                            </h5>
+                        </div>
+                        <div class="row g-4">
+                            <div class="col-lg-6 col-md-6">
+                                <div class="menu-section">
+                                    <h6 class="section-title">
+                                        <i class="bi bi-info-circle-fill"></i> Company Information
+                                    </h6>
+                                    <a class="dropdown-item" href="https://www.salesboom.com/company/index.html">
+                                        <i class="bi bi-building"></i> About Us
+                                    </a>
+                                    <a class="dropdown-item" href="https://www.salesboom.com/news/index.html">
+                                        <i class="bi bi-newspaper"></i> News & Updates
+                                    </a>
+                                    <a class="dropdown-item" href="https://www.salesboom.com/products/how-to-buy-crm.html">
+                                        <i class="bi bi-cart-check"></i> How to Buy CRM
+                                    </a>
+                                    <a class="dropdown-item" href="https://www.salesboom.com/crm/crm-software/crm-software-programs.html">
+                                        <i class="bi bi-app"></i> CRM Software Programs
+                                    </a>
+                                    <a class="dropdown-item" href="https://www.salesboom.com/crm/crm-software/crm-software-solutions.html">
+                                        <i class="bi bi-puzzle"></i> CRM Software Solutions
+                                    </a>
+                                    <a class="dropdown-item" href="https://www.salesboom.com/company/company-contact.html">
+                                        <i class="bi bi-envelope"></i> Contact Us
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-6 col-md-6">
+                                <div class="menu-section">
+                                    <h6 class="section-title">
+                                        <i class="bi bi-shield-check"></i> Legal & Support
+                                    </h6>
+                                    <a class="dropdown-item" href="https://www.salesboom.com/pop-privacy.html">
+                                        <i class="bi bi-shield-lock"></i> Privacy Policy
+                                    </a>
+                                    <a class="dropdown-item" href="https://www.salesboom.com/support/crm_service_level_agreement.html">
+                                        <i class="bi bi-file-earmark-text"></i> Service Level Agreement
+                                    </a>
+                                    <a class="dropdown-item" href="https://www.salesboom.com/crm/reviews.html">
+                                        <i class="bi bi-star-fill"></i> CRM Reviews
+                                    </a>
+                                    <a class="dropdown-item" href="https://www.salesboom.com/crm/complaints.html">
+                                        <i class="bi bi-chat-square-text"></i> Customer Complaints
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                
+                <!-- Pricing -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="https://www.salesboom.com/products/editions/">
+                        <i class="bi bi-currency-dollar"></i> Pricing
+                    </a>
+                    <div class="dropdown-menu" style="width: 50px ;">
+                        <h6 class="dropdown-header">CRM Editions & Pricing</h6>
+                        <a class="dropdown-item" href="https://www.salesboom.com/products/editions/">
+                            <i class="bi bi-columns-gap"></i> Compare Editions
+                        </a>
+                        <a class="dropdown-item" href="https://www.salesboom.com/products/edition-team.html">
+                            <i class="bi bi-people"></i> Team Edition
+                        </a>
+                        <a class="dropdown-item" href="https://www.salesboom.com/professional_edition.html">
+                            <i class="bi bi-briefcase"></i> Professional Edition
+                        </a>
+                        <a class="dropdown-item" href="https://www.salesboom.com/products/edition-enterprise.html">
+                            <i class="bi bi-building"></i> Enterprise Edition
+                        </a>
+                    </div>
+                </li>
+                
+                <!-- Blog -->
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.salesboom.com/blog/" target="_blank">
+                        <i class="bi bi-journal-text"></i> Blog
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <h1>Assign Tasks to Your Entire Team in Seconds</h1>
+      <p class="subtitle">Stop creating tasks one by one. Mass assign identical tasks to selected team members instantly with Salesboom's time-saving team task creation tool.</p>
+      <div class="hero-cta">
+        <a href="https://www.salesboom.com/crm_trial.html" class="btn btn-primary">
+          <i class="fas fa-rocket me-2"></i>Start Free 30-Day Trial
+        </a>
+        <a href="https://www.salesboom.com/request-crm-demo.html" class="btn btn-outline">
+          <i class="fas fa-play-circle me-2"></i>Watch Demo
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Section -->
+<section class="stats-section">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-3 col-sm-6">
+        <div class="stat-item">
+          <h3>98+</h3>
+          <p>Team Task Creation Time</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="stat-item">
+          <h3>20+</h3>
+          <p>Faster Than Manual</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="stat-item">
+          <h3>Zero</h3>
+          <p>Setup Required</p>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="stat-item">
+          <h3>100+</h3>
+          <p>Task Consistency</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Problem Statement Section -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>The Time-Consuming Challenge of Managing Team Tasks</h2>
+      <p>Sales managers and executives frequently face scenarios where they need to assign identical tasks to multiple team members. The traditional approach is painfully inefficient.</p>
+    </div>
+    
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-6">
+        <div class="two-column-content">
+          <p>Whether it's requiring the entire sales team to review materials before a meeting, complete training modules, or submit weekly reports, most CRM systems force managers through a tedious manual process.</p>
+          
+          <h4><i class="fas fa-hourglass-half text-warning me-2"></i>The Typical Process Requires:</h4>
+          <ul>
+            <li>Create individual tasks one user at a time</li>
+            <li>Manually enter the same subject, description, and due date repeatedly</li>
+            <li>Navigate through multiple screens for each team member</li>
+            <li>Risk inconsistencies in task details across different assignments</li>
+            <li>Waste valuable management time on administrative busywork</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="warning-box">
+          <h5><i class="fas fa-clock me-2"></i>The Time Drain</h5>
+          <ul>
+            <li>For a sales manager overseeing 10-20 team members</li>
+            <li>What should take one minute can consume 20-30 minutes</li>
+            <li>This repetitive, manual process is frustrating and error-prone</li>
+            <li>Completely unnecessary in modern CRM systems</li>
+          </ul>
+          <p style="color: #856404; margin-top: 15px;">Most CRM solutions overlook this common need, forcing managers to choose between comprehensive task assignment and efficient time management. Salesboom recognized this gap and built a better solution.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Solution Overview Section -->
+<section class="content-section bg-light">
+  <div class="container">
+    <div class="section-header">
+      <h2>One-Click Team Task Creation That Saves Hours</h2>
+      <p>Salesboom's Team Task Creation feature transforms a tedious multi-step process into a single, streamlined action.</p>
+    </div>
+    
+    <div class="row g-4">
+      <div class="col-12">
+        <div class="two-column-content">
+          <p>Instead of creating tasks user by user, managers can now assign identical tasks to their entire team—or any selected group of active users—in one efficient step. This powerful time-saving tool is designed specifically for the real-world scenarios that sales managers face daily.</p>
+          
+          <h4><i class="fas fa-magic me-2"></i>How It Works:</h4>
+          <ul>
+            <li>Select the team members who need to receive the task</li>
+            <li>Enter the task subject, description, and due date once</li>
+            <li>Click to create—the system instantly generates individual tasks for each selected user</li>
+            <li>Each team member receives their own task notification and reminder</li>
+            <li>All tasks appear in individual user task lists for tracking and completion</li>
+            <li>Managers maintain visibility over task completion across the entire team</li>
+          </ul>
+          
+          <p class="mt-3"><strong>The result is a dramatic reduction in administrative time, eliminating the repetitive data entry that plagues traditional CRM task management.</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Use Cases Section -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Real-World Scenarios Where Team Task Creation Excels</h2>
+      <p>Team task creation isn't just a convenience feature—it's a critical productivity tool for common sales management situations.</p>
+    </div>
+    
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <div class="use-case-card">
+          <h4><i class="fas fa-calendar-check me-2"></i>Pre-Meeting Preparation</h4>
+          <p>Sales managers often need their entire team to review documents, presentations, or reports before important meetings. Instead of emailing reminders that get lost in crowded inboxes, create a task for all attendees with the same due date. Team members receive CRM notifications, and managers can track who has completed their preparation at a glance.</p>
+        </div>
+      </div>
+      
+      <div class="col-lg-6">
+        <div class="use-case-card">
+          <h4><i class="fas fa-graduation-cap me-2"></i>Training and Onboarding</h4>
+          <p>When rolling out new products, processes, or compliance training, assign completion tasks to relevant team members instantly. Set consistent due dates across the team, ensuring everyone completes required training on schedule. Track completion rates without chasing individuals for status updates.</p>
+        </div>
+      </div>
+      
+      <div class="col-lg-6">
+        <div class="use-case-card">
+          <h4><i class="fas fa-chart-line me-2"></i>Regular Reporting Requirements</h4>
+          <p>Weekly pipeline reviews, monthly forecast submissions, or quarterly planning exercises require consistent input from team members. Create recurring tasks for the entire team with standardized deadlines, ensuring accountability and timely completion across the organization.</p>
+        </div>
+      </div>
+      
+      <div class="col-lg-6">
+        <div class="use-case-card">
+          <h4><i class="fas fa-map-marked-alt me-2"></i>Territory Updates and Data Hygiene</h4>
+          <p>Maintaining clean, accurate CRM data requires regular attention from sales reps. Assign data review tasks to specific team segments—regional teams, product specialists, or account managers—ensuring everyone updates their accounts and opportunities on the same schedule.</p>
+        </div>
+      </div>
+      
+      <div class="col-lg-12">
+        <div class="use-case-card">
+          <h4><i class="fas fa-bullhorn me-2"></i>Campaign Follow-Up Activities</h4>
+          <p>After marketing campaigns or trade shows, sales teams need to follow up on leads within specific timeframes. Assign follow-up tasks to all team members who received leads, with consistent deadlines that align with campaign goals and lead temperature.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Benefits Section -->
+<section class="content-section bg-light">
+  <div class="container">
+    <div class="section-header">
+      <h2>Why Team Task Creation Transforms Sales Management</h2>
+      <p>Beyond the obvious time savings, team task creation delivers strategic advantages that improve overall sales operations and team performance.</p>
+    </div>
+    
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6">
+        <div class="benefit-card">
+          <h4><i class="fas fa-clock me-2"></i>Dramatic Time Savings</h4>
+          <p>Reduce task creation time from 20-30 minutes to under one minute. Managers reclaim hours each week to focus on coaching, strategy, and revenue-generating activities instead of administrative busywork.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="benefit-card">
+          <h4><i class="fas fa-equals me-2"></i>Perfect Consistency</h4>
+          <p>Eliminate inconsistencies that occur when manually creating multiple tasks. Every team member receives identical instructions, due dates, and expectations, reducing confusion and miscommunication.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="benefit-card">
+          <h4><i class="fas fa-shield-check me-2"></i>Enhanced Accountability</h4>
+          <p>When everyone receives the same task simultaneously, it creates team-wide accountability. No one can claim they weren't informed or didn't receive instructions that others received.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="benefit-card">
+          <h4><i class="fas fa-eye me-2"></i>Improved Visibility</h4>
+          <p>Track team-wide task completion at a glance. Quickly identify who has completed assigned work and who needs follow-up, enabling proactive management rather than reactive firefighting.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="benefit-card">
+          <h4><i class="fas fa-users me-2"></i>Better Team Coordination</h4>
+          <p>When everyone receives tasks at the same time with the same information, team coordination improves naturally. No delays from sequential task creation or information gaps between team members.</p>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="benefit-card">
+          <h4><i class="fas fa-mobile-alt me-2"></i>Anywhere Access</h4>
+          <p>Team members receive task notifications on desktop and mobile, ensuring critical assignments reach them wherever they work. Mobile access enables task completion from anywhere.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Integration Section -->
+<section class="content-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Seamless Integration with Complete Task Management</h2>
+      <p>Team task creation isn't an isolated feature—it's fully integrated with Salesboom's comprehensive task management system.</p>
+    </div>
+    
+    <div class="row g-4">
+      <div class="col-12">
+        <div class="info-box">
+          <h5><i class="fas fa-puzzle-piece me-2"></i>Complete Task Management Capabilities:</h5>
+          <ul style="list-style: none; padding-left: 0; margin-top: 15px;">
+            <li style="padding-left: 25px; position: relative; margin-bottom: 10px; color: #0c5460;">
+              <i class="fas fa-check" style="position: absolute; left: 0; color: #17a2b8;"></i>
+              Individual and team task creation from a unified interface
+            </li>
+            <li style="padding-left: 25px; position: relative; margin-bottom: 10px; color: #0c5460;">
+              <i class="fas fa-check" style="position: absolute; left: 0; color: #17a2b8;"></i>
+              Task assignment with priority levels, due dates, and detailed descriptions
+            </li>
+            <li style="padding-left: 25px; position: relative; margin-bottom: 10px; color: #0c5460;">
+              <i class="fas fa-check" style="position: absolute; left: 0; color: #17a2b8;"></i>
+              Automatic email and in-app notifications when tasks are assigned
+            </li>
+            <li style="padding-left: 25px; position: relative; margin-bottom: 10px; color: #0c5460;">
+              <i class="fas fa-check" style="position: absolute; left: 0; color: #17a2b8;"></i>
+              Customizable reminder schedules to ensure nothing falls through the cracks
+            </li>
+            <li style="padding-left: 25px; position: relative; margin-bottom: 10px; color: #0c5460;">
+              <i class="fas fa-check" style="position: absolute; left: 0; color: #17a2b8;"></i>
+              Task completion tracking with date stamps and completion notes
+            </li>
+            <li style="padding-left: 25px; position: relative; margin-bottom: 10px; color: #0c5460;">
+              <i class="fas fa-check" style="position: absolute; left: 0; color: #17a2b8;"></i>
+              Reassignment capabilities when workload needs to shift
+            </li>
+            <li style="padding-left: 25px; position: relative; margin-bottom: 10px; color: #0c5460;">
+              <i class="fas fa-check" style="position: absolute; left: 0; color: #17a2b8;"></i>
+              Task linking to accounts, contacts, opportunities, and cases for complete context
+            </li>
+            <li style="padding-left: 25px; position: relative; margin-bottom: 10px; color: #0c5460;">
+              <i class="fas fa-check" style="position: absolute; left: 0; color: #17a2b8;"></i>
+              Calendar integration showing tasks alongside meetings and appointments
+            </li>
+            <li style="padding-left: 25px; position: relative; margin-bottom: 10px; color: #0c5460;">
+              <i class="fas fa-check" style="position: absolute; left: 0; color: #17a2b8;"></i>
+              Mobile access so team members can view and complete tasks anywhere
+            </li>
+            <li style="padding-left: 25px; position: relative; margin-bottom: 10px; color: #0c5460;">
+              <i class="fas fa-check" style="position: absolute; left: 0; color: #17a2b8;"></i>
+              Reporting and analytics on task completion rates and team productivity
+            </li>
+          </ul>
+          <p style="margin-top: 15px;">Whether managers are creating tasks for individuals or entire teams, the experience is consistent, intuitive, and designed for maximum efficiency.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Getting Started Section -->
+<section class="content-section bg-light">
+  <div class="container">
+    <div class="section-header">
+      <h2>Start Saving Time Today with Team Task Creation</h2>
+      <p>Team task creation is available immediately to all Salesboom users with appropriate permissions. There's no special setup required, no add-ons to purchase, and no technical configuration needed.</p>
+    </div>
+    
+    <div class="row g-4">
+      <div class="col-lg-3 col-md-6">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <h4>Navigate to Tasks</h4>
+          <p>Navigate to the task creation area within your Salesboom CRM</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <h4>Select Team Members</h4>
+          <p>Choose which team members should receive the task</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <h4>Enter Task Details</h4>
+          <p>Enter the task subject, description, priority, and due date</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="step-card">
+          <div class="step-number">4</div>
+          <h4>Create & Track</h4>
+          <p>Review your selections and click to create instant team tasks</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="info-box mt-5">
+      <h5><i class="fas fa-rocket me-2"></i>Instant Results</h5>
+      <p>Managers can begin using team task creation immediately, and the time savings are apparent from the first use. What previously required 20-30 minutes of repetitive clicking now takes less than one minute. For organizations considering Salesboom, team task creation is included in all plans as part of our comprehensive CRM functionality. Experience the difference during your free 30-day trial and discover how much time you can reclaim for higher-value activities.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-content">
+      <h2 class="text-white">Stop Wasting Time on Repetitive Task Creation</h2>
+      <p>Experience the efficiency of one-click team task creation with a free 30-day trial of Salesboom CRM. Discover how much time you can save when your CRM works the way managers actually work.</p>
+      <div class="hero-cta">
+        <a href="https://www.salesboom.com/crm_trial.html" class="btn btn-primary">
+          <i class="fas fa-rocket me-2"></i>Start Free 30-Day Trial
+        </a>
+        <a href="https://www.salesboom.com/request-crm-demo.html" class="btn btn-outline">
+          <i class="fas fa-play-circle me-2"></i>Schedule Demo
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-2">
+      <h3 class="fw-bold text-color">
+        <i class="fa-solid fa-layer-group me-2"></i>
+        Explore Salesboom Editions
+      </h3>
+      <p class="text-muted">Discover powerful CRM editions to scale your business efficiently.</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-briefcase fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Professional Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              A complete CRM suite with Marketing Automation, ERP integration, and Support tools — built for performance and value.
+            </p>
+            <a href="https://www.salesboom.com/editions/professional-edition.html" class="btn btn-color mt-auto">
+              Explore Professional <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-building fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Enterprise Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              For large enterprises — automate workflows, unify data, and leverage analytics to drive strategic growth.
+            </p>
+            <a href="https://www.salesboom.com/editions/enterprise-edition.html" class="btn btn-color mt-auto">
+              View Enterprise <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-users fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Team Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              Perfect for small teams starting with CRM — manage leads, track sales, and boost productivity with simplicity.
+            </p>
+            <a href="https://www.salesboom.com/editions/team-edition.html" class="btn btn-color mt-auto">
+           Discover Team<i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container py-5">
+  <h2 class="d-center mb-5 text-color">Task & Workflow Management + CRM Intelligence</h2>
+  <div class="row g-4">
+
+    <!-- Card 1 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-calendar-check text-color fa-3x mb-3 mx-auto"></i>
+        <h4>Event & Task Management</h4>
+        <p>
+          Manage events and tasks efficiently with the built-in <a href="https://www.salesboom.com/products/tools-event_task_management.html" class="text-color fw-bold">Event & Task Management</a> module.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-list-check text-color fa-3x mb-3 mx-auto"></i>
+        <h4>Custom Workflow Tasks</h4>
+        <p>
+          Define and manage custom tasks tied to workflows using the <a href="https://www.salesboom.com/products/custom-workflow-tasks.html" class="text-color fw-bold">Custom Workflow Tasks</a> feature.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-cogs text-color fa-3x mb-3 mx-auto"></i>
+        <h4>Custom CRM Workflow Engine</h4>
+        <p>
+          Automate business logic and workflow rules with the <a href="https://www.salesboom.com/products/custom-crm-workflow-engine.html" class="text-color fw-bold">CRM Workflow Engine</a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-rocket text-color fa-3x mb-3 mx-auto"></i>
+        <h4>Sales Automation Tools</h4>
+        <p>
+          Streamline leads, sales pipeline, and follow-ups automatically via <a href="https://www.salesboom.com/sales-automation/sales_automation_content.html" class="text-color fw-bold">Sales Automation Tools</a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-chart-pie text-color fa-3x mb-3 mx-auto"></i>
+        <h4>Sales Intelligence & Analytics</h4>
+        <p>
+          Gain insights and make data-driven decisions using the <a href="https://www.salesboom.com/integrated-crm/sales_intelligence_content.html" class="text-color fw-bold">Sales Intelligence Features</a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-layer-group text-color fa-3x mb-3 mx-auto"></i>
+        <h4>SMB Unified CRM Platform</h4>
+        <p>
+          A full-featured CRM solution for small and medium businesses — explore the <a href="https://www.salesboom.com/smb-crm/unified_crm_content.html" class="text-color fw-bold">SMB CRM Platform</a>.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="mt-5 footer">
+  <div class="container mt-5 pt-5">
+    <div class="footer-grid">
+      <div class="footer-section">
+        <h3>Products</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/products/tools-sfa.html">Sales Force Automation</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-marketing.html">Marketing Automation</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-casemanagement.html">Case Management</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-reporting.html">Business Intelligence</a></li>
+          <li><a href="https://www.salesboom.com/products/tools-emailintegration.html">Email Integration</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Solutions</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/products/edition-team.html">Team Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/edition-professional.html">Professional Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/edition-enterprise.html">Enterprise Edition</a></li>
+          <li><a href="https://www.salesboom.com/products/industry-solutions.html">Industry Solutions</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/company/index.html">About Us</a></li>
+          <li><a href="https://www.salesboom.com/company/company-contact.html">Contact Us</a></li>
+          <li><a href="https://www.salesboom.com/customers/index.html">Customers</a></li>
+          <li><a href="https://www.salesboom.com/partners/index.html">Partners</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="https://www.salesboom.com/support/index.html">Support Center</a></li>
+          <li><a href="https://www.salesboom.com/crm_supportcenter/overview/index.html">Documentation</a></li>
+          <li><a href="https://www.salesboom.com/whitepapers/index.html">White Papers</a></li>
+          <li><a href="https://www.salesboom.com/pop-privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="bg-color">
+    <div class="container">
+     <div class="footer-bottom pb-3 mt-3">
+      <p>&copy; 2003-2025 <a class="text-white fw-bold" href="https://www.salesboom.com">Salesboom.com</a> Inc. All rights reserved. | Call: 1-855-229-2043</p>
+      <p style="margin-top: 10px;">Salesboom's color-coded CRM lead management software helps businesses visually prioritize sales opportunities with automated workflow rules. Contact us to learn how color coding can transform your lead management process and increase sales productivity.</p>
+    </div>
+    </div>
+  </div>
+ 
+</footer>
+
+<!-- Common JavaScript -->
+<script src="content/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+
+
+
+<script>
+// Loading Screen
+window.addEventListener('load', function() {
+  const loadingScreen = document.getElementById('loading-screen');
+  setTimeout(function() {
+    loadingScreen.classList.add('fade-out');
+  }, 500);
+});
+
+// Scroll to Top Button
+const scrollToTopBtn = document.getElementById('scrollToTop');
+
+window.addEventListener('scroll', function() {
+  if (window.pageYOffset > 300) {
+    scrollToTopBtn.classList.add('show');
+  } else {
+    scrollToTopBtn.classList.remove('show');
+  }
+});
+
+scrollToTopBtn.addEventListener('click', function() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+
+// Smooth Scroll for All Links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  });
+});
+</script>
+
+</body>
+</html>

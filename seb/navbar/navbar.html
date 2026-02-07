@@ -5,601 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salesboom CRM - Professional Navigation</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="shortcut icon" href="Content/image/salesboom-logo-252x67.png" type="image/x-icon">
+    
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            overflow-x: hidden;
-        }
-
-        /* ============ Top Bar ============ */
-        .top-bar {
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-            color: #fff;
-            padding: 0.6rem 0;
-            font-size: 0.85rem;
-            border-bottom: 2px solid #FF3300;
-        }
-
-        .top-bar-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        .contact-info {
-            display: flex;
-            gap: 1.5rem;
-            align-items: center;
-        }
-
-        .contact-info a,
-        .contact-info span {
-            color: #fff;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 0.4rem;
-        }
-
-        .contact-info a:hover {
-            color: #ffd700;
-            transform: translateY(-2px);
-        }
-
-        .top-bar-right {
-            display: flex;
-            gap: 1rem;
-            align-items: center;
-        }
-
-        .top-bar-btn {
-            background: #FF3300;
-            color: #fff;
-            padding: 0.4rem 1rem;
-            border-radius: 20px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: 2px solid #FF3300;
-        }
-
-        .top-bar-btn:hover {
-            background: #fff;
-            color: #FF3300;
-            transform: scale(1.05);
-        }
-
-        /* ============ Header with Logo ============ */
-        .header-section {
-            background: #fff;
-            padding: 1rem 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-        }
-
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo-container img {
-            max-height: 60px;
-            transition: transform 0.3s ease;
-        }
-
-        .logo-container img:hover {
-            transform: scale(1.05);
-        }
-
-        .social-icons {
-            display: flex;
-            gap: 1rem;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        .social-icons li a {
-            display: inline-block;
-            transition: all 0.3s ease;
-        }
-
-        .social-icons li a img {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            transition: all 0.3s ease;
-        }
-
-        .social-icons li a:hover img {
-            transform: translateY(-5px) rotate(360deg);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-        }
-
-        /* ============ Main Navigation ============ */
-        .main-navbar {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            padding: 0;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .navbar-nav {
-            width: 100%;
-            justify-content: center;
-        }
-
-        .nav-item {
-            position: relative;
-        }
-
-        .nav-link {
-            color: #fff !important;
-            font-weight: 600;
-            padding: 1.2rem 1.5rem !important;
-            text-transform: uppercase;
-            font-size: 0.9rem;
-            letter-spacing: 0.5px;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        /* Hover Effect - Underline Animation */
-        .nav-link::before {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 3px;
-            background: #ffd700;
-            transition: width 0.4s ease;
-        }
-
-        .nav-link:hover::before {
-            width: 100%;
-        }
-
-        .nav-link:hover {
-            background: rgba(255,255,255,0.1);
-            color: #ffd700 !important;
-            transform: translateY(-2px);
-        }
-
-        /* Active State */
-        .nav-link.active {
-            background: rgba(255,255,255,0.15);
-        }
-
-        /* ============ Dropdown Menus - HOVER ENABLED ============ */
-        .dropdown-menu {
-            border: none;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            border-radius: 12px;
-            padding: 1.5rem;
-            min-width: 320px;
-            margin-top: 0;
-            background: #fff;
-            display: none;
-            opacity: 0;
-            transition: opacity 0.3s ease, transform 0.3s ease;
-            transform: translateY(-10px);
-        }
-
-        /* Show dropdown on hover */
-        .nav-item:hover > .dropdown-menu {
-            display: block;
-            opacity: 1;
-            transform: translateY(0);
-            animation: fadeInDown 0.4s ease;
-        }
-
-        /* Keep dropdown open when hovering over it */
-        .dropdown-menu:hover {
-            display: block;
-            opacity: 1;
-        }
-
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-
-
-
-
-
-
-
-
-/* ============ Ultra Wide Mega Menu - FIXED POSITIONING ============ */
-.mega-menu-ultra-wide {
-    min-width: 1400px !important;
-    max-width: 1500px;
-    padding: 2rem 2.5rem !important;
-    border-radius: 15px;
-    box-shadow: 0 15px 50px rgba(0,0,0,0.25);
-    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-    border: none;
-    margin-top: 0.5rem;
-    /* FIX: Position in center */
-    position: absolute !important;
-    left: 50% !important;
-    right: auto !important;
-    transform: translateX(-50%) !important;
-}
-
-/* Ensure parent dropdown has proper positioning */
-.nav-item.dropdown {
-    position: static !important;
-}
-
-/* For regular dropdowns (not mega menus) */
-.dropdown-menu:not(.mega-menu) {
-    position: absolute !important;
-    left: 250px !important;
-    right: auto !important;
-}
-
-/* Auto Direction for last items - Regular Dropdowns Only */
-.nav-item:nth-last-child(-n+2) .dropdown-menu:not(.mega-menu) {
-    right: 328px !important;
-    left: auto !important;
-}
-        .menu-section:hover {
-            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.15);
-            transform: translateY(-3px);
-        }
-
-        .menu-section:last-child {
-            margin-bottom: 0;
-        }
-
-        /* Section Titles */
-        .section-title {
-            color: #2a5298;
-            font-weight: 700;
-            font-size: 1.05rem;
-            margin-bottom: 1rem;
-            padding-bottom: 0.75rem;
-            border-bottom: 2px solid #e9ecef;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .section-title i {
-            color: #FF3300;
-            font-size: 1.1rem;
-        }
-
-        /* Dropdown Items - More Spacious */
-        .mega-menu-ultra-wide .dropdown-item,
-        .dropdown-menu .dropdown-item {
-            padding: 0.75rem 1rem;
-            margin-bottom: 0.4rem;
-            border-radius: 8px;
-            font-size: 0.95rem;
-            color: #495057;
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            transition: all 0.3s ease;
-            border: 1px solid transparent;
-        }
-
-        .mega-menu-ultra-wide .dropdown-item i,
-        .dropdown-menu .dropdown-item i {
-            color: #667eea;
-            font-size: 1rem;
-            min-width: 20px;
-            transition: all 0.3s ease;
-        }
-
-        .mega-menu-ultra-wide .dropdown-item:hover,
-        .dropdown-menu .dropdown-item:hover {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: #fff;
-            transform: translateX(8px);
-            border: 1px solid #667eea;
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
-        }
-
-        .mega-menu-ultra-wide .dropdown-item:hover i,
-        .dropdown-menu .dropdown-item:hover i {
-            color: #ffd700;
-            transform: scale(1.2);
-        }
-
-        /* Regular Dropdown Menu Styling */
-        .dropdown-menu {
-            min-width: 350px;
-        }
-
-        .dropdown-header {
-            color: #FF3300;
-            font-weight: bold;
-            font-size: 1.2rem;
-            padding: 0.5rem 1rem 1rem 1rem;
-            margin-bottom: 1rem;
-            border-bottom: 3px solid #FF3300;
-            text-align: center;
-        }
-
-        .dropdown-divider {
-            margin: 1rem 0;
-            border-color: #e9ecef;
-        }
-
-        /* CTA Section */
-        .cta-section {
-            margin-top: 2rem;
-        }
-
-        .cta-section .alert {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: #fff;
-            border: none;
-            border-radius: 12px;
-            padding: 1.5rem;
-        }
-
-        .cta-section .alert-heading {
-            color: #ffd700;
-            font-size: 1.1rem;
-            margin-bottom: 0.75rem;
-        }
-
-        .cta-section .btn-primary {
-            background: #fff;
-            color: #667eea;
-            border: 2px solid #fff;
-            font-weight: 600;
-            padding: 0.6rem 1rem;
-            transition: all 0.3s ease;
-        }
-
-        .cta-section .btn-primary:hover {
-            background: #ffd700;
-            color: #333;
-            border-color: #ffd700;
-            transform: scale(1.05);
-        }
-
-        /* Row Gap */
-        .mega-menu-ultra-wide .row {
-            row-gap: 0;
-        }
-
-        /* Column Padding */
-        .mega-menu-ultra-wide [class*="col-"] {
-            padding-left: 1rem;
-            padding-right: 1rem;
-        }
-
-        /* Scrollbar for Overflow */
-        .mega-menu-ultra-wide {
-            max-height: 650px;
-            overflow-y: auto;
-        }
-
-        .mega-menu-ultra-wide::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        .mega-menu-ultra-wide::-webkit-scrollbar-track {
-            background: #f1f1f1;
-            border-radius: 10px;
-        }
-
-        .mega-menu-ultra-wide::-webkit-scrollbar-thumb {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 10px;
-        }
-
-        .mega-menu-ultra-wide::-webkit-scrollbar-thumb:hover {
-            background: #FF3300;
-        }
-
-        /* ============ Responsive Design ============ */
-        @media (max-width: 1600px) {
-            .mega-menu-ultra-wide {
-                min-width: 1200px !important;
-                padding: 1.5rem 2rem !important;
-            }
-        }
-
-        @media (max-width: 1399px) {
-            .mega-menu-ultra-wide {
-                min-width: 1000px !important;
-            }
-            
-            .menu-section {
-                padding: 1.25rem;
-            }
-        }
-
-        @media (max-width: 1199px) {
-            .mega-menu-ultra-wide {
-                min-width: 95vw !important;
-                max-width: 95vw;
-            }
-        }
-
-        @media (max-width: 991px) {
-            .top-bar-content {
-                justify-content: center;
-                text-align: center;
-            }
-
-            .contact-info {
-                flex-direction: column;
-                gap: 0.5rem;
-                margin-bottom: 0.5rem;
-            }
-
-            .header-content {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .social-icons {
-                justify-content: center;
-            }
-
-            .mega-menu-ultra-wide {
-                min-width: 100% !important;
-                max-height: 75vh;
-                padding: 1.5rem !important;
-            }
-            
-            .mega-menu-ultra-wide [class*="col-"] {
-                margin-bottom: 1rem;
-            }
-            
-            .menu-section {
-                margin-bottom: 1rem;
-            }
-
-            .nav-link {
-                padding: 1rem !important;
-            }
-
-            /* Disable hover on mobile, use click */
-            .nav-item:hover > .dropdown-menu {
-                display: none;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .top-bar {
-                font-size: 0.75rem;
-            }
-
-            .social-icons li a img {
-                width: 32px;
-                height: 32px;
-            }
-
-            .logo-container img {
-                max-height: 50px;
-            }
-
-            .mega-menu-ultra-wide {
-                padding: 1rem !important;
-            }
-            
-            .menu-section {
-                padding: 1rem;
-            }
-            
-            .mega-menu-ultra-wide .dropdown-item,
-            .dropdown-menu .dropdown-item {
-                padding: 0.6rem 0.8rem;
-                font-size: 0.9rem;
-            }
-            
-            .section-title {
-                font-size: 0.95rem;
-            }
-
-            .nav-link {
-                font-size: 0.85rem;
-            }
-
-            .dropdown-header {
-                font-size: 1rem;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .mega-menu-header h5 {
-                font-size: 1.1rem;
-            }
-            
-            .cta-section {
-                margin-top: 1rem;
-            }
-        }
-
-        /* ============ Additional Enhancements ============ */
-        .navbar-toggler {
-            border: 2px solid #fff;
-            padding: 0.5rem 0.75rem;
-        }
-
-        .navbar-toggler:focus {
-            box-shadow: 0 0 0 0.2rem rgba(255,255,255,0.5);
-        }
-
-        .navbar-toggler-icon {
-            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-        }
-
-        /* Dropdown Arrow Indicator */
-        .dropdown-toggle::after {
-            transition: transform 0.3s ease;
-        }
-
-        .nav-item:hover .dropdown-toggle::after {
-            transform: rotate(180deg);
-        }
-
-        /* Animation for Mega Menu */
-        @keyframes slideDown {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    </style>
+    <link rel="shortcut icon" href="Content/image/salesboom-mobile-logo.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="Content/css/navbar-salsebom.css">
+  
 </head>
 <body>
+
 
 <!-- Top Bar -->
 <div class="top-bar">
     <div class="container">
-        <div class="top-bar-content">
+        <div class="top-bar-content d-flex justify-content-between w-100">
             <div class="contact-info">
                 <a href="tel:+18885434769">
-                    <i class="bi bi-telephone-fill"></i> +1 (888) 543-4769
+                    <i class="bi bi-telephone-fill"></i> 1-855-229-2043
                 </a>
                 <a href="mailto:sales@salesboom.com">
                     <i class="bi bi-envelope-fill"></i> sales@salesboom.com
                 </a>
-                <span>
-                    <i class="bi bi-clock-fill"></i> Mon-Fri: 9AM - 6PM EST
-                </span>
+        
+                
             </div>
             <div class="top-bar-right">
                 <a href="https://www.salesboom.com/login" class="top-bar-btn">
                     <i class="bi bi-box-arrow-in-right"></i> Login
                 </a>
-                <a href="https://www.salesboom.com/trial" class="top-bar-btn">
+                <a href="https://www.salesboom.com/free_trial/index.html" class="top-bar-btn">
                     <i class="bi bi-rocket-takeoff"></i> Free Trial
                 </a>
             </div>
@@ -620,12 +54,12 @@
                 <ul class="social-icons">
                     <li>
                         <a href="https://www.facebook.com/SBDC.CloudCRM" rel="nofollow" target="_blank" title="Facebook">
-                            <img src="https://www.salesboom.com/img/facebook-circle.png" alt="Facebook">
+                            <img src="Content/image/fase.png" alt="Facebook">
                         </a>
                     </li>
                     <li>
                         <a href="https://twitter.com/SalesboomCloud" rel="nofollow" target="_blank" title="Twitter">
-                            <img src="https://www.salesboom.com/img/twitter-circle.png" alt="Twitter">
+                            <img src="Content/image/savexxx.png" alt="Twitter">
                         </a>
                     </li>
                     <li>
@@ -659,7 +93,7 @@
                     <a class="nav-link dropdown-toggle" href="https://www.salesboom.com/products/index.html">
                         <i class="bi bi-grid-3x3-gap"></i> Products
                     </a>
-                    <div class="dropdown-menu mega-menu mega-menu-ultra-wide">
+                    <div class="dropdown-menu mega-menu mega-menu-ultra-wide overflow-hidden" sttle="over">
                         <div class="mega-menu-header">
                             <h5 class="text-center mb-4">
                                 <i class="bi bi-grid-3x3-gap-fill text-primary"></i> 
@@ -712,6 +146,9 @@
                                     <a class="dropdown-item" href="https://www.salesboom.com/products/knowledge-base-management.html">
                                         <i class="bi bi-book"></i> Knowledge Base Management
                                     </a>
+                                        <a class="dropdown-item" href="https://www.salesboom.com/products/web-based_self_service_portal_software.html">
+                                        <i class="bi bi-door-open"></i> CRM Self Service Portal
+                                    </a>
                                 </div>
                             </div>
                             
@@ -754,6 +191,11 @@
                                     <a class="dropdown-item" href="https://www.salesboom.com/products/feature-zip-code-proximity-search.html">
                                         <i class="bi bi-geo-alt"></i> Zip Code Proximity Search
                                     </a>
+                                       <a class="dropdown-item" href="https://www.salesboom.com/email.html">
+                                        <i class="bi bi-shield-check"></i> Email Supervision & Retention
+                                    </a>
+                              
+                                
                                 </div>
                             </div>
                             
@@ -769,7 +211,7 @@
                                     <a class="dropdown-item" href="https://www.salesboom.com/products/tools-dashboard.html">
                                         <i class="bi bi-speedometer2"></i> Dashboard Reporting
                                     </a>
-                                    <a class="dropdown-item" href="#">
+                                    <a class="dropdown-item" href="https://www.salesboom.com/products/custom-reports.html">
                                         <i class="bi bi-columns-gap"></i> Custom Dashboard
                                     </a>
                                     <a class="dropdown-item" href="https://www.salesboom.com/products/color-coding-leads-crm-software.html">
@@ -802,18 +244,10 @@
                                     <a class="dropdown-item" href="https://www.salesboom.com/products/tools-messenger.html">
                                         <i class="bi bi-chat-dots"></i> Instant Messaging
                                     </a>
-                                    <a class="dropdown-item" href="#">
+                                    <a class="dropdown-item" href=" https://www.salesboom.com/products/tools-webcapture.html ">
                                         <i class="bi bi-globe"></i> Web Self-Service
                                     </a>
-                                    <a class="dropdown-item" href="https://www.salesboom.com/email.html">
-                                        <i class="bi bi-shield-check"></i> Email Supervision & Retention
-                                    </a>
-                                    <a class="dropdown-item" href="https://www.salesboom.com/products/crm-skype-integration.html">
-                                        <i class="bi bi-skype"></i> CRM Skype Integration
-                                    </a>
-                                    <a class="dropdown-item" href="https://www.salesboom.com/products/web-based_self_service_portal_software.html">
-                                        <i class="bi bi-door-open"></i> CRM Self Service Portal
-                                    </a>
+                                 
                                 </div>
                             </div>
                             
@@ -827,7 +261,8 @@
                                         <i class="bi bi-link-45deg"></i> QuickBooks CRM Integration
                                     </a>
                                     <a class="dropdown-item" href="https://www.salesboom.com/products/crm-property-management-software-with-quickbooks.html">
-                                        <i class="bi bi-building"></i> Property Management With QuickBooks
+                                        <i class="bi bi-building"></i>QuickBooks Property Solutions
+
                                     </a>
                                 </div>
                                 
@@ -847,15 +282,18 @@
                                     <a class="dropdown-item" href="https://www.salesboom.com/products/microsoft-outlook-as-crm.html">
                                         <i class="bi bi-envelope-fill"></i> Microsoft Outlook As CRM?
                                     </a>
+                                          <a class="dropdown-item" href="https://www.salesboom.com/products/crm-skype-integration.html">
+                                        <i class="bi bi-skype"></i> CRM Skype Integration
+                                    </a>
                                 </div>
                                 
-                                <div class="cta-section">
-                                    <div class="alert alert-info mb-0">
-                                        <h6 class="alert-heading">
+                                <div class="" style="background-color: #1e3c72;z-index: 25555;">
+                                    <div class="alert alert-info mb-0" style="background-color: #1e3c72;z-index: 25555;">
+                                        <h6 class="alert-heading text-white">
                                             <i class="bi bi-rocket-takeoff"></i> Need Help?
                                         </h6>
-                                        <p class="small mb-2">Our CRM experts are ready to help you find the perfect solution.</p>
-                                        <a href="https://www.salesboom.com/company/company-contact.html" class="btn btn-sm btn-primary w-100">
+                                        <p class="small mb-2 text-white">Our CRM experts are ready to help you find the perfect solution.</p>
+                                        <a href="https://www.salesboom.com/company/company-contact.html" class="btn text-white btn-sm btn-primary w-100" style="background-color: white;color: #1e3c72 !important;">
                                             <i class="bi bi-telephone"></i> Contact Sales
                                         </a>
                                     </div>
@@ -944,7 +382,7 @@
                             <div class="col-lg-3 col-md-6">
                                 <div class="menu-section">
                                     <a class="dropdown-item" href="https://www.salesboom.com/crm/crm-software/construction-management-software.html">
-                                        <i class="bi bi-hammer"></i> Construction Management CRM
+                                        <i class="bi bi-hammer"></i> Construction Management
                                     </a>
                                     <a class="dropdown-item" href="https://www.salesboom.com/products/ConsumerGoods-crm-software-solution.html">
                                         <i class="bi bi-cart"></i> Consumer Goods
@@ -1112,21 +550,153 @@
     </div>
 </nav>
 
-<!-- Demo Content -->
-<div class="container mt-5 mb-5">
-    <div class="text-center">
-        <h1 class="display-4 mb-4">Welcome to Salesboom CRM</h1>
-        <p class="lead">Cloud-Based Customer Relationship Management Solutions</p>
-        <div class="mt-4">
-            <a href="https://www.salesboom.com/trial" class="btn btn-primary btn-lg me-3">
-                <i class="bi bi-rocket-takeoff"></i> Start Free Trial
-            </a>
-            <a href="https://www.salesboom.com/company/company-contact.html" class="btn btn-outline-primary btn-lg">
-                <i class="bi bi-telephone"></i> Contact Sales
-            </a>
+
+
+
+
+
+
+
+
+
+
+
+    
+<!-- ====== Footer ====== -->
+<footer>
+  <div class="container">
+    <div class="row gy-4 text-md-start text-center">
+
+      <!-- Logo + Social -->
+  
+    
+    <!-- Logo + Social -->
+      <div class="col-lg-3 col-md-6">
+        <div class="footer-logo text-center">
+          <a href="https://www.salesboom.com/crm-live-demo.html">
+            <img src="https://www.salesboom.com/img/salesboom-logo-252x67.png" alt="Salesboom Logo">
+          </a>
         </div>
+        <p class="mt-4 "><strong>Follow Us On Social Media:</strong></p>
+        <div class="social-icons text-center mb-4">
+          <a href="https://www.facebook.com/SBDC.CloudCRM" target="_blank"><img src="https://www.salesboom.com/img/social/facebook-circle.png" alt="Facebook"></a>
+          <a href="https://twitter.com/SalesboomCloud" target="_blank"><img src="Content/image/savexxx.png" style="border-radius: 50%;" alt="Twitter"></a>
+          <a href="https://www.youtube.com/cloudcrm" target="_blank"><img src="https://www.salesboom.com/img/social/youtube_circle.png" alt="YouTube"></a>
+          <a href="https://www.linkedin.com/in/crmsoftware" target="_blank"><img src="https://www.salesboom.com/img/social/linkedin_circle.png" alt="LinkedIn"></a>
+        </div>
+        <p class="mt-4 "><strong>Call Us Now At:</strong></p>
+        <p class="fw-bold fs-4 text-center text-color d-flex">
+          <i class="bi bi-telephone-fill me-2"></i>
+          <a href="tel:1.855.229.2043" class="text-color text-decoration-none pt-2">1.855.229.2043</a>
+        </p>
+      </div>
+
+
+
+      <!-- New To Salesboom -->
+      <div class="col-lg-3 col-md-6">
+        <h5>New To Salesboom?</h5>
+        <a href="https://www.salesboom.com/about-us.html">About Us</a>
+        <a href="https://www.salesboom.com/about-us.html#WhatIsSalesboom">Company</a>
+        <a href="https://www.salesboom.com/about-us.html#ourStory">Our Story</a>
+        <a href="https://www.salesboom.com/about-us.html#ourMission">Our Mission</a>
+        <a href="https://www.salesboom.com/editions/">Our Pricing</a>
+
+        <h5 class="mt-4">New To CRM?</h5>
+        <a href="https://www.salesboom.com/whitepapers/">White Papers</a>
+        <a href="https://www.salesboom.com/crm_supportcenter/overview/index.html">Support Center</a>
+        <a href="https://www.salesboom.com/products/crm-product-data-sheets.html">Data Sheets</a>
+        <a href="https://www.salesboom.com/crm_supportcenter/education/crm-glossary.html">CRM Glossary</a>
+      </div>
+
+      <!-- Our Editions -->
+      <div class="col-lg-3 col-md-6">
+        <h5>Our Editions</h5>
+        <a href="https://www.salesboom.com/editions/team-edition.html">Team Edition</a>
+        <a href="https://www.salesboom.com/editions/professional-edition.html">Professional Edition</a>
+        <a href="https://www.salesboom.com/editions/enterprise-edition.html">Enterprise Edition</a>
+        <a href="https://www.salesboom.com/apps/sales.html">Sales</a>
+        <a href="https://www.salesboom.com/apps/fast-track.html">Fast Track</a>
+        <a href="https://www.salesboom.com/apps/marketing.html">Marketing</a>
+        <a href="https://www.salesboom.com/apps/support.html">Support</a>
+        <a href="https://www.salesboom.com/apps/developer.html">Platform</a>
+        <a href="https://www.salesboom.com/apps/mobile.html">Mobile</a>
+      </div>
+
+      <!-- Popular Links -->
+      <div class="col-lg-3 col-md-6">
+        <h5>Popular Links</h5>
+        <a href="https://www.salesboom.com/sales/sales-management-software.html">Sales Management</a>
+        <a href="https://www.salesboom.com/crm/crm-software/hosted-sfa-software.html">Hosted SFA CRM Software</a>
+        <a href="https://www.salesboom.com/crm/crm-software/crm-marketing.html">CRM Marketing</a>
+        <a href="https://www.salesboom.com/crm/crm-software/inexpensive-crm-software.html">Inexpensive CRM</a>
+        <a href="https://www.salesboom.com/crm/crm-software/best-crm-software.html">Best CRM Solutions</a>
+        <a href="https://www.salesboom.com/products/industry-solutions.html">Industries</a>
+        <a href="https://www.salesboom.com/salesboom_salesforce_compared/9-reasons-to-leave-salesforce.html">9 Reasons to Leave Salesforce.com</a>
+        <a href="https://www.salesboom.com/salesforce.com-crm-product-limitations.html">Salesforce.com Limitations</a>
+        <a href="https://www.salesboom.com/whitepapers/Choosing-CRM/microsoft-dynamics-vs-salesforce-crm.html">Microsoft Dynamics VS Salesforce.com</a>
+      </div>
+
     </div>
-</div>
+  </div>
+
+  <!-- Footer Bottom -->
+  <div class="footer-bottom mt-4">
+    <div class="container">
+      <div class="d-flex flex-wrap justify-content-center align-items-center gap-3 mb-3">
+        <a href="https://www.salesboom.com/products/index.html" class="text-white">Products</a>
+        <span class="text-white">|</span>
+        <a href="https://www.salesboom.com/products/editions.html" class="text-white">Pricing</a>
+        <span class="text-white">|</span>
+        <a href="https://www.salesboom.com/contact-us.html" class="text-white">Contact Us</a>
+        <span class="text-white">|</span>
+        <a href="https://www.salesboom.com/crm-live-demo.html" class="text-white">Schedule A Demo</a>
+      </div>
+      <div class="text-center">
+        <p class="mb-0 text-white">
+          &copy; 2025 Salesboom.com. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 

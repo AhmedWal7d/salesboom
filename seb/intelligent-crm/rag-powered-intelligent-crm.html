@@ -1,0 +1,2018 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    
+    <!-- Primary Meta Tags -->
+    <title>RAG-Powered CRM: AI That Knows Your Business | Salesboom</title>
+    <meta name="description" content="Discover how Salesboom's Retrieval-Augmented Generation transforms CRM into an intelligent system that reasons with live data, respects permissions, and drives results.">
+    <meta name="keywords" content="Retrieval-Augmented Generation CRM, RAG AI technology, Intelligent CRM systems, AI-powered CRM architecture, Enterprise AI governance, Real-time CRM intelligence, Agentic CRM, LLM-powered business systems">
+    <link rel="canonical" href="https://www.salesboom.com/intelligent-crm/rag-powered-intelligent-crm.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.salesboom.com/intelligent-crm/rag-powered-intelligent-crm.html">
+    <meta property="og:title" content="RAG-Powered CRM: AI That Knows Your Business | Salesboom">
+    <meta property="og:description" content="Discover how Salesboom's Retrieval-Augmented Generation transforms CRM into an intelligent system that reasons with live data, respects permissions, and drives results.">
+    <meta property="og:image" content="https://www.salesboom.com/img/rag-powered-intelligent-crm-og.jpg">
+    <meta property="og:site_name" content="Salesboom CRM">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.salesboom.com/intelligent-crm/rag-powered-intelligent-crm.html">
+    <meta name="twitter:title" content="RAG-Powered CRM: AI That Knows Your Business | Salesboom">
+    <meta name="twitter:description" content="Discover how Salesboom's Retrieval-Augmented Generation transforms CRM into an intelligent system that reasons with live data, respects permissions, and drives results.">
+    <meta name="twitter:image" content="https://www.salesboom.com/img/rag-powered-intelligent-crm-og.jpg">
+    <meta name="twitter:site" content="@SalesboomCloud">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "RAG-Powered CRM: AI That Knows Your Business",
+      "description": "Comprehensive guide to Retrieval-Augmented Generation architecture in CRM systems",
+      "author": {
+        "@type": "Organization",
+        "name": "Salesboom",
+        "url": "https://www.salesboom.com"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Salesboom",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.salesboom.com/img/salesboom-logo-252x67.png"
+        }
+      },
+      "datePublished": "2025-01-09"
+    }
+    </script>
+    
+    <link rel="shortcut icon" href="https://www.salesboom.com/favicon.ico">
+    
+
+    <link rel="stylesheet" href="content/css/bootstrap.min.css">
+    <link rel="stylesheet" href="content/css/salesboom-common.css">
+    <link rel="stylesheet" href="content/css/style.css">
+     <link rel="shortcut icon" href="content/image/salesboom-mobile-logo.jpg" type="image/x-icon"> 
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #002f6c;
+            --primary-dark: #001f47;
+            --primary-light: #003d8f;
+            --accent-color: #0056b3;
+            --rag-gradient-1: #002f6c;
+            --rag-gradient-2: #002f6c;
+            --text-dark: #1a1a1a;
+            --text-light: #4a5568;
+            --bg-light: #f7fafc;
+            --bg-white: #ffffff;
+            --border-color: #e2e8f0;
+            --success-color: #10b981;
+            --warning-color: #f59e0b;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.7;
+            color: var(--text-dark);
+            background: var(--bg-white);
+            overflow-x: hidden;
+        }
+        
+        /* Loading Screen */
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+        
+        #loading-screen.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+        
+        .loader {
+            width: 60px;
+            height: 60px;
+            border: 5px solid rgba(255, 255, 255, 0.2);
+            border-top: 5px solid #ffffff;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .loading-text {
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-top: 20px;
+            letter-spacing: 1px;
+        }
+        
+        /* Scroll to Top Button */
+        #scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 20px;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0, 47, 108, 0.3);
+        }
+        
+        #scroll-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        #scroll-top:hover {
+            background: var(--primary-dark);
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0, 47, 108, 0.4);
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, var(--rag-gradient-1) 0%, var(--rag-gradient-2) 100%);
+            color: white;
+            padding: 100px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.4;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 25px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 30px;
+            line-height: 1.2;
+            letter-spacing: -1px;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.4rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            line-height: 1.6;
+            font-weight: 400;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn-hero {
+            padding: 16px 40px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .btn-hero-primary {
+            background: white;
+            color: var(--primary-color);
+            box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+        }
+        
+        .btn-hero-primary:hover {
+            background: var(--bg-light);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
+        }
+        
+        .btn-hero-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .btn-hero-outline:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        /* Content Sections */
+        .content-section {
+            padding: 80px 0;
+        }
+        
+        .content-section.bg-light {
+            background: var(--bg-light);
+        }
+        
+        .section-header {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto 60px;
+        }
+        
+        .section-title {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+        
+        /* RAG Pipeline Visual */
+        .rag-pipeline {
+            background: white;
+            border-radius: 16px;
+            padding: 50px 40px;
+            box-shadow: 0 8px 30px rgba(0, 47, 108, 0.1);
+            margin: 60px 0;
+        }
+        
+        .pipeline-step {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            padding: 25px;
+            background: var(--bg-light);
+            border-radius: 12px;
+            border-left: 5px solid var(--primary-color);
+            transition: all 0.3s ease;
+        }
+        
+        .pipeline-step:hover {
+            transform: translateX(10px);
+            box-shadow: 0 4px 15px rgba(0, 47, 108, 0.1);
+        }
+        
+        .pipeline-number {
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-right: 25px;
+            flex-shrink: 0;
+        }
+        
+        .pipeline-content h4 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .pipeline-content p {
+            margin: 0;
+            color: var(--text-light);
+        }
+        
+        /* Feature Cards */
+        .feature-card {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            height: 100%;
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 28px rgba(0, 47, 108, 0.15);
+            border-color: var(--primary-color);
+        }
+        
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--rag-gradient-1) 0%, var(--rag-gradient-2) 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            color: white;
+            margin-bottom: 25px;
+        }
+        
+        .feature-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        .feature-description {
+            color: var(--text-light);
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+        
+        /* Highlight Box */
+        .highlight-box {
+            background: linear-gradient(135deg, var(--rag-gradient-1) 0%, var(--rag-gradient-2) 100%);
+            color: white;
+            padding: 60px 40px;
+            border-radius: 16px;
+            margin: 60px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .highlight-box::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: pulse 15s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.3; }
+            50% { transform: scale(1.1); opacity: 0.5; }
+        }
+        
+        .highlight-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .highlight-title {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+        
+        .highlight-text {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            opacity: 0.95;
+        }
+        
+        /* Benefit List */
+        .benefit-list {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        
+        .benefit-list li {
+            padding: 18px 20px 18px 55px;
+            position: relative;
+            margin-bottom: 15px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid var(--success-color);
+            transition: all 0.3s ease;
+        }
+        
+        .benefit-list li:hover {
+            transform: translateX(8px);
+            box-shadow: 0 4px 15px rgba(0, 47, 108, 0.1);
+        }
+        
+        .benefit-list li::before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--success-color);
+            font-size: 1.2rem;
+        }
+        
+        .benefit-list li strong {
+            color: var(--primary-color);
+            font-weight: 700;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        /* Comparison Table */
+        .comparison-table {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 47, 108, 0.1);
+            margin: 40px 0;
+        }
+        
+        .comparison-table table {
+            width: 100%;
+            margin: 0;
+        }
+        
+        .comparison-table th {
+            background: var(--primary-color);
+            color: white;
+            padding: 20px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-align: left;
+        }
+        
+        .comparison-table td {
+            padding: 20px;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-light);
+        }
+        
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .comparison-table .highlight {
+            background: linear-gradient(90deg, rgba(102, 126, 234, 0.05) 0%, transparent 100%);
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        
+        .comparison-table .check {
+            color: var(--success-color);
+            font-size: 1.3rem;
+        }
+        
+        .comparison-table .times {
+            color: #dc2626;
+            font-size: 1.3rem;
+        }
+        
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 35px 30px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 47, 108, 0.08);
+            transition: all 0.3s ease;
+            border-top: 4px solid var(--rag-gradient-1);
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 47, 108, 0.15);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            font-size: 1rem;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+        
+        /* Architecture Box */
+        .architecture-box {
+            background: white;
+            border: 3px solid var(--primary-color);
+            border-radius: 16px;
+            padding: 50px 40px;
+            margin: 40px 0;
+            box-shadow: 0 8px 30px rgba(0, 47, 108, 0.12);
+        }
+        
+        .architecture-box h3 {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .cta-title {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 25px;
+        }
+        
+        .cta-description {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            opacity: 0.95;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
+            }
+            
+            .pipeline-step {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .pipeline-number {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 60px 0 50px;
+            }
+            
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .btn-hero {
+                justify-content: center;
+            }
+            
+            .content-section {
+                padding: 60px 0;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .cta-title {
+                font-size: 2rem;
+            }
+            
+            .cta-description {
+                font-size: 1.1rem;
+            }
+            
+            #scroll-top {
+                width: 45px;
+                height: 45px;
+                bottom: 20px;
+                right: 20px;
+            }
+            
+            .comparison-table {
+                overflow-x: auto;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero-title {
+                font-size: 1.7rem;
+            }
+            
+            .section-title {
+                font-size: 1.6rem;
+            }
+            
+            .feature-card {
+                padding: 25px 20px;
+            }
+            
+            .rag-pipeline {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader"></div>
+        <p class="loading-text">Loading...</p>
+    </div>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+           
+    <!-- Top Bar -->
+    <div class="top-bar py-2">
+        <div class="container">
+            <div class="row align-items-center text-center text-lg-start w-100">
+                <!-- Left -->
+                <div class="col-12 col-lg-6 mb-2 mb-lg-0">
+                    <a href="mailto:sales@salesboom.com" class="me-3 d-inline-block">
+                        <i class="fas fa-envelope"></i> Email Us
+                    </a>
+                    <a href="tel:1.855.229.2043" class="d-inline-block">
+                        <i class="fas fa-phone"></i> 1.855.229.2043
+                    </a>
+                </div>
+                <!-- Right -->
+                <div class="col-12 col-lg-6 text-center text-lg-end">
+                    <div class="d-inline-block me-3">
+                        <a href="https://www.salesboom.com/contact-us.html" class="me-2">Contact Us</a>
+                        <a href="https://www.salesboom.com/login/">Login</a>
+                    </div>
+                    <div class="social-links d-inline-block mt-2 mt-lg-0">
+                        <a href="https://www.facebook.com/SBDC.CloudCRM" target="_blank" class="me-2">
+                            <img src="https://www.salesboom.com/img/social/facebook-circle.png" width="22"
+                                alt="Facebook">
+                        </a>
+                        <a href="https://twitter.com/SalesboomCloud" target="_blank" class="me-2">
+                              <img src="Content/image/savexxx.png" width="22" alt="Twitter">
+                        </a>
+                        <a href="https://www.youtube.com/cloudcrm" target="_blank" class="me-2">
+                            <img src="https://www.salesboom.com/img/social/youtube_circle.png" width="22" alt="YouTube">
+                        </a>
+                        <a href="https://www.linkedin.com/in/crmsoftware" target="_blank">
+                            <img src="https://www.salesboom.com/img/social/linkedin_circle.png" width="22"
+                                alt="LinkedIn">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="https://www.salesboom.com/">
+                <img src="https://www.salesboom.com/img/salesboom-logo-252x67.png" alt="Salesboom Logo" />
+            </a>
+
+            <!-- Mobile Toggle -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navigation Menu -->
+            <div class="collapse navbar-collapse justify-content-center" id="mainNav">
+                <ul class="navbar-nav align-items-lg-center">
+
+                    <!-- Products Dropdown -->
+                    <li class="nav-item dropdown position-static">
+                        <a class="nav-link dropdown-toggle" href="https://www.salesboom.com/products/index.html"
+                            id="productsDropdown" role="button" data-bs-toggle="dropdown">
+                            Products
+                        </a>
+                        <ul class="dropdown-menu products-menu text-center bg-light" aria-labelledby="productsDropdown">
+                            <div class="product-icons">
+                                <a href="https://www.salesboom.com/editions/team-edition.html">
+                                    <div class="product-item">
+                                        <img src="https://www.salesboom.com/img/apps/team-edition-icon.png"
+                                            alt="Team Edition">
+                                        <p>Team Edition</p>
+                                    </div>
+                                </a>
+                                <a href="https://www.salesboom.com/editions/professional-edition.html">
+                                    <div class="product-item">
+                                        <img src="https://www.salesboom.com/img/apps/professional-edition-icon.png"
+                                            alt="Professional">
+                                        <p>Professional</p>
+                                    </div>
+                                </a>
+                                <a href="https://www.salesboom.com/editions/enterprise-edition.html">
+                                    <div class="product-item">
+                                        <img src="https://www.salesboom.com/img/apps/enterprise-edition-icon.png"
+                                            alt="Enterprise">
+                                        <p>Enterprise</p>
+                                    </div>
+                                </a>
+                                <a href="https://www.salesboom.com/products/new/AI-work-for-you.html">
+                                    <div class="product-item">
+                                        <img src="https://www.salesboom.com/img/apps/ai-logo.png" alt="AI Support">
+                                        <p>AI Support</p>
+                                    </div>
+                                </a>
+                                <a href="https://www.salesboom.com/apps/sales.html">
+                                    <div class="product-item">
+                                        <img src="https://www.salesboom.com/img/apps/sales-icon.png" alt="Sales">
+                                        <p>Sales</p>
+                                    </div>
+                                </a>
+                                <a href="https://www.salesboom.com/apps/marketing.html">
+                                    <div class="product-item">
+                                        <img src="https://www.salesboom.com/img/apps/marketing-icon.png"
+                                            alt="Marketing">
+                                        <p>Marketing</p>
+                                    </div>
+                                </a>
+                                <a href="https://www.salesboom.com/apps/support.html">
+                                    <div class="product-item">
+                                        <img src="https://www.salesboom.com/img/apps/support-icon.png" alt="Support">
+                                        <p>Support</p>
+                                    </div>
+                                </a>
+                                <a href="https://www.salesboom.com/apps/fast-track.html">
+                                    <div class="product-item">
+                                        <img src="https://www.salesboom.com/img/apps/fast-track-icon.png" alt="Support">
+                                        <p>fast track</p>
+                                    </div>
+                                </a>
+                                <a href="https://www.salesboom.com/apps/mobile.html">
+                                    <div class="product-item">
+                                        <img src="https://www.salesboom.com/img/apps/mobile-icon.png" alt="Support">
+                                        <p>Mobile</p>
+                                    </div>
+                                </a>
+                                <a href="https://www.salesboom.com/apps/developer.html">
+                                    <div class="product-item">
+                                        <img src="https://www.salesboom.com/img/apps/developer-icon.png" alt="Support">
+                                        <p>Developer</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </ul>
+                    </li>
+
+                    <!-- Solutions Dropdown -->
+                    <li class="nav-item dropdown position-static">
+                        <a class="nav-link dropdown-toggle"
+                            href="https://www.salesboom.com/products/industry-solutions.html" id="solutionsDropdown"
+                            role="button" data-bs-toggle="dropdown">
+                            Solutions
+                        </a>
+                        <ul class="dropdown-menu mega-menu bg-light" aria-labelledby="solutionsDropdown">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <h6 class="dropdown-header">By Business Type</h6>
+                                    <a class="dropdown-item"
+                                        href="https://www.salesboom.com/editions/team-edition.html">Small Business</a>
+                                    <a class="dropdown-item"
+                                        href="https://www.salesboom.com/editions/team-edition.html">Startups</a>
+                                    <a class="dropdown-item"
+                                        href="https://www.salesboom.com/editions/professional-edition.html">Midsize
+                                        Business</a>
+                                    <a class="dropdown-item"
+                                        href="https://www.salesboom.com/editions/enterprise-edition.html">Large
+                                        Enterprises</a>
+                                </div>
+                                <div class="col-md-3">
+                                    <h6 class="dropdown-header">By Industry</h6>
+                                    <a class="dropdown-item"
+                                        href="https://www.salesboom.com/products/web-based_aerospaceanddefense_crm_software_solution.html">Aerospace
+                                        Defense</a>
+                                    <a class="dropdown-item"
+                                        href="https://www.salesboom.com/products/web-based_automotive_crm_software_solution.html">Automotive</a>
+                                    <a class="dropdown-item"
+                                        href="https://www.salesboom.com/products/web_based_call_center_software_solution.html">Call
+                                        Centres</a>
+                                    <a class="dropdown-item"
+                                        href="https://www.salesboom.com/products/clinicalpractice-crm-software-solution.html">Clinical
+                                        Practice</a>
+                                    <a class="dropdown-item"
+                                        href="https://www.salesboom.com/products/communications-crm-software-solution.html">Communications</a>
+                                    <a class="dropdown-item"
+                                        href="https://www.salesboom.com/crm/crm-software/construction-management-software.html">Construction</a>
+                                    <a class="dropdown-item"
+                                        href="https://www.salesboom.com/products/ConsumerGoods-crm-software-solution.html">Consumer
+                                        Goods</a>
+                                    <a class="dropdown-item"
+                                        href="https://www.salesboom.com/products/electronics-crm-software-solution.html">Electronics</a>
+                                </div>
+                                <div class="col-md-3">
+                                    <h6 class="dropdown-header">&nbsp;</h6>
+                                    <a class="dropdown-item"
+                                        href="https://www.salesboom.com/products/Banking-crm-software-solution.html">Financial
+                                        Services</a>
+                                    <a class="dropdown-item"
+                                        href="https://www.salesboom.com/products/government-crm-software-solution.html">Government</a>
+                                    <a class="dropdown-item"
+                                        href="https://www.salesboom.com/products/Hospital-crm-software-solution.html">Healthcare</a>
+                                    <a class="dropdown-item"
+                                        href="https://www.salesboom.com/products/Hospitality-crm-software-solution.html">Hospitality</a>
+                                    <a class="dropdown-item"
+                                        href="https://www.salesboom.com/crm/legal-crm-software.html">Legal Services</a>
+                                    <a class="dropdown-item"
+                                        href="https://www.salesboom.com/products/manufacturing-crm-software-solution.html">Manufacturing</a>
+                                    <a class="dropdown-item"
+                                        href="https://www.salesboom.com/products/pharmaceutical_crm_software_solution.html">Pharmaceuticals</a>
+                                    <a class="dropdown-item"
+                                        href="https://www.salesboom.com/crm/crm-real-estate-software.html">Real
+                                        Estate</a>
+                                </div>
+                                <div class="col-md-3">
+                                    <h6 class="dropdown-header">By Role</h6>
+                                    <a class="dropdown-item" href="https://www.salesboom.com/apps/sales.html">Sales</a>
+                                    <a class="dropdown-item"
+                                        href="https://www.salesboom.com/apps/fast-track.html">Service</a>
+                                    <a class="dropdown-item"
+                                        href="https://www.salesboom.com/apps/marketing.html">Marketing</a>
+                                    <a class="dropdown-item"
+                                        href="https://www.salesboom.com/products/tools-customization.html">Customizable
+                                        Platform</a>
+                                </div>
+                            </div>
+                        </ul>
+                    </li>
+
+                    <!-- About Us Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="https://www.salesboom.com/about-us.html"
+                            id="aboutDropdown" role="button" data-bs-toggle="dropdown">
+                            About Us
+                        </a>
+                        <ul class="dropdown-menu about-menu bg-light" aria-labelledby="aboutDropdown">
+                            <li><a class="dropdown-item" href="https://www.salesboom.com/about-us.html">Company</a></li>
+                            <li><a class="dropdown-item" href="https://www.salesboom.com/about-us.html">Our Story</a>
+                            </li>
+                            <li><a class="dropdown-item" href="https://www.salesboom.com/about-us.html">Our Mission</a>
+                            </li>
+                            <li><a class="dropdown-item" href="https://www.salesboom.com/about-us.html">Our Vision</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link"
+                            href="https://www.salesboom.com/support/index.html">Support</a></li>
+                    <li class="nav-item"><a class="nav-link"
+                            href="https://www.salesboom.com/partners/index.html">Partners</a></li>
+                    <li class="nav-item"><a class="nav-link"
+                            href="https://www.salesboom.com/products/editions.html">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://blog.salesboom.com">Blog</a></li>
+                </ul>
+            </div>
+
+            <!-- Free Demo Button -->
+            <div class="d-none d-lg-block">
+                <a href="https://www.salesboom.com/apps/sales.html" class="btn bg-color text-white">Free Demo</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-brain"></i> RAG-Powered CRM Intelligence Since 2003
+                </div>
+                <h1 class="hero-title text-white">CRM That Thinks With Your Data, Not Against It</h1>
+                <p class="hero-subtitle">Salesboom's Retrieval-Augmented Generation architecture connects AI to your live business data—delivering accurate, secure, and permission-aware intelligence across sales, service, and marketing.</p>
+                <div class="hero-buttons">
+                    <a href="https://www.salesboom.com/request-crm-demo.html" class="btn-hero btn-hero-primary">
+                        <i class="fas fa-calendar-check"></i> Schedule Demo
+                    </a>
+                    <a href="https://www.salesboom.com/crm_trial.html" class="btn-hero btn-hero-outline text-white">
+                        <i class="fas fa-rocket"></i> Start Free Trial
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 1: The Intelligence Gap -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Your CRM Needs More Than Just AI—It Needs RAG</h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 mx-auto">
+                    <p class="section-subtitle" style="text-align: left; margin-bottom: 30px;">
+                        Customer Relationship Management systems are undergoing a fundamental transformation. What began as digital address books evolved into systems of record, then into systems of analytics and prediction. Today, with the rise of Generative AI, CRM is entering a new era: <strong>systems of cognition</strong>—platforms that can reason, contextualize, and act using the full breadth of enterprise knowledge in real time.
+                    </p>
+                    
+                    <div class="highlight-box">
+                        <div class="highlight-content">
+                            <h3 class="highlight-title text-white"><i class="fas fa-exclamation-triangle"></i> The Critical Problem</h3>
+                            <p class="highlight-text">
+                                Generative AI introduced powerful new capabilities for natural language reasoning and content generation, but early enterprise attempts to embed Large Language Models (LLMs) into CRM quickly exposed a fatal limitation: <strong>LLMs do not know your business.</strong>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="architecture-box">
+                        <h3><i class="fas fa-eye-slash"></i> What LLMs Cannot See</h3>
+                        <ul class="benefit-list">
+                            <li>A customer ticket opened five minutes ago</li>
+                            <li>A pricing exception negotiated yesterday</li>
+                            <li>A contract clause unique to a single account</li>
+                            <li>Real-time inventory levels or service schedules</li>
+                            <li>Customer interaction history across all touchpoints</li>
+                        </ul>
+                    </div>
+                    
+                    <p style="text-align: center; font-size: 1.3rem; color: var(--primary-color); font-weight: 700; margin-top: 40px;">
+                        <i class="fas fa-lightbulb"></i> Retrieval-Augmented Generation (RAG) resolves this by decoupling reasoning from knowledge. The LLM becomes the reasoning engine, while the CRM becomes the live memory.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    
+
+
+
+
+
+    <!-- Section 2: Understanding RAG -->
+    <section class="content-section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What Is RAG and Why It's the Future of Enterprise AI</h2>
+                <p class="section-subtitle">Retrieval-Augmented Generation is an architectural pattern that connects Large Language Models to live, governed enterprise data at the moment of inference.</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-12 mx-auto">
+                    <div class="rag-pipeline">
+                        <h3 style="text-align: center; font-size: 2rem; font-weight: 800; color: var(--primary-color); margin-bottom: 40px;">
+                            <i class="fas fa-project-diagram"></i> The RAG Advantage Over Traditional AI
+                        </h3>
+                        
+                        <ul class="benefit-list">
+                            <li>
+                                <strong>Real-Time Accuracy:</strong> RAG retrieves current data at query time, ensuring AI responses reflect your business reality today, not months ago when a model was last trained.
+                            </li>
+                            <li>
+                                <strong>Strong Access Control:</strong> RAG retrieves only the data a user is authorized to see, enforcing your existing permission structures automatically.
+                            </li>
+                            <li>
+                                <strong>Reduced Hallucinations:</strong> By grounding responses in actual retrieved documents, RAG dramatically reduces AI "making things up" and provides source attribution for verification.
+                            </li>
+                            <li>
+                                <strong>Cost Efficiency:</strong> Unlike fine-tuning which requires expensive retraining cycles, RAG works with standard models and scales economically.
+                            </li>
+                            <li>
+                                <strong>Security and Compliance:</strong> Data never gets embedded into model weights—it's retrieved, used, and discarded, maintaining strict data governance.
+                            </li>
+                            <li>
+                                <strong>Explainability:</strong> Every AI response can be traced back to specific source documents, creating clear audit trails for compliance and trust.
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="comparison-table" style="margin-top: 60px;">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Approach</th>
+                                    <th>RAG Architecture</th>
+                                    <th>Fine-Tuning</th>
+                                    <th>Raw LLMs</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Real-Time Data</strong></td>
+                                    <td class="highlight"><i class="fas fa-check check"></i> Live retrieval</td>
+                                    <td><i class="fas fa-times times"></i> Stale training data</td>
+                                    <td><i class="fas fa-times times"></i> No business data</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Access Control</strong></td>
+                                    <td class="highlight"><i class="fas fa-check check"></i> Permission-aware</td>
+                                    <td><i class="fas fa-times times"></i> Embedded in weights</td>
+                                    <td><i class="fas fa-times times"></i> No control</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Cost</strong></td>
+                                    <td class="highlight"><i class="fas fa-check check"></i> Economical</td>
+                                    <td><i class="fas fa-times times"></i> Expensive retraining</td>
+                                    <td><i class="fas fa-check check"></i> Base model only</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Explainability</strong></td>
+                                    <td class="highlight"><i class="fas fa-check check"></i> Source attribution</td>
+                                    <td><i class="fas fa-times times"></i> Black box</td>
+                                    <td><i class="fas fa-times times"></i> Generic answers</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Governance</strong></td>
+                                    <td class="highlight"><i class="fas fa-check check"></i> Full audit trail</td>
+                                    <td><i class="fas fa-times times"></i> No data control</td>
+                                    <td><i class="fas fa-times times"></i> No enterprise data</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Salesboom's RAG Architecture -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">How Salesboom Implements Enterprise-Grade RAG</h2>
+                <p class="section-subtitle">Salesboom's AI-Powered CRM doesn't treat RAG as an isolated feature—it's the core operating layer spanning sales, service, marketing, and revenue operations.</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-11 mx-auto">
+                    <div class="rag-pipeline">
+                        <h3 style="text-align: center; font-size: 2rem; font-weight: 800; color: var(--primary-color); margin-bottom: 40px;">
+                            <i class="fas fa-sitemap"></i> Three Critical Pipelines
+                        </h3>
+                        
+                        <div class="pipeline-step">
+                            <div class="pipeline-number">1</div>
+                            <div class="pipeline-content">
+                                <h4><i class="fas fa-download"></i> Ingestion Pipeline: Turning Business Reality into AI-Readable Context</h4>
+                                <p>CRM data is inherently messy and diverse—emails, PDFs, contracts, call transcripts, support tickets, and structured database objects. Salesboom ingests all of these into a governed semantic layer through semantic chunking, parent-child indexing, domain-aware embeddings, and metadata enrichment.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="pipeline-step">
+                            <div class="pipeline-number">2</div>
+                            <div class="pipeline-content">
+                                <h4><i class="fas fa-search"></i> Retrieval Pipeline: Precision Over Volume</h4>
+                                <p>In CRM environments, wrong answers are worse than no answers. Salesboom employs hybrid retrieval combining dense vector search, sparse keyword search, metadata pre-filtering, and reranking models. Critically, access control is enforced before retrieval, not after.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="pipeline-step">
+                            <div class="pipeline-number">3</div>
+                            <div class="pipeline-content">
+                                <h4><i class="fas fa-cogs"></i> Generation Pipeline: Grounded, Governed, and Explainable</h4>
+                                <p>The generation layer follows strict grounding rules: mandatory grounding to retrieved context, explicit uncertainty statements, source citation, and confidence scoring. This transforms AI from a speculative assistant into a trustworthy enterprise copilot.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- CRM Implementation & Best Practices Blog Cards -->
+<section class="container py-5">
+  <h2 class="text-center mb-5 text-color">
+    CRM Insights, Best Practices & Industry Guides
+  </h2>
+
+  <div class="row g-4">
+
+    <!-- 1 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-cloud text-color fa-2x mb-3"></i>
+        <h4>CRM Implementation Success</h4>
+        <p>
+          Learn proven strategies for achieving
+          <a href="https://blog.salesboom.com/CRM-implementation-Success" class="text-color fw-bold">
+            CRM implementation success
+          </a>
+          that drives adoption and measurable business outcomes.
+        </p>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-users-cog text-color fa-2x mb-3"></i>
+        <h4>CRM Without an IT Team</h4>
+        <p>
+          Discover how to execute
+          <a href="https://blog.salesboom.com/crm-implementation-without-it-team" class="text-color fw-bold">
+            CRM implementation without an IT team
+          </a>
+          using user-friendly tools and expert guidance.
+        </p>
+      </div>
+    </div>
+
+
+
+
+    <!-- 10 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-cloud text-color fa-2x mb-3"></i>
+        <h4>Cloud-Based CRM</h4>
+        <p>
+          Learn about the benefits of
+          <a href="https://blog.salesboom.com/Cloud-Based-CRM" class="text-color fw-bold">
+            cloud-based CRM
+          </a>
+          for agility, accessibility, and remote collaboration.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+    <!-- Section 4: RAG in Sales Operations -->
+    <section class="content-section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Real-Time Sales Intelligence That Wins Deals</h2>
+                <p class="section-subtitle">Static sales enablement materials fail in dynamic markets. Salesboom's RAG layer transforms sales operations by making everything instantly retrievable.</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h3 class="feature-title">Live Competitive Intelligence</h3>
+                        <p class="feature-description">
+                            Sales reps can query the system during live customer calls with questions like "How do we compare to Competitor X on security?" The AI retrieves current, sourced answers from your knowledge base—no more scrambling through folders or outdated slides.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <h3 class="feature-title">RFP Response Automation</h3>
+                        <p class="feature-description">
+                            RAG dramatically reduces sales cycle friction by auto-filling RFP responses using past wins, grounding claims in approved documentation, and maintaining brand and legal consistency.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-edit"></i>
+                        </div>
+                        <h3 class="feature-title">Contextual Proposals</h3>
+                        <p class="feature-description">
+                            Generate customer-specific proposals that pull from approved content libraries, past statements of work, pricing templates, and success stories relevant to the prospect's industry and challenges.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-2">
+      <h3 class="fw-bold text-color">
+        <i class="fa-solid fa-layer-group me-2"></i>
+        Explore Salesboom Editions
+      </h3>
+      <p class="text-muted">Discover powerful CRM editions to scale your business efficiently.</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-briefcase fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Professional Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              A complete CRM suite with Marketing Automation, ERP integration, and Support tools — built for performance and value.
+            </p>
+            <a href="https://www.salesboom.com/editions/professional-edition.html" class="btn btn-color mt-auto">
+              Explore Professional <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-building fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Enterprise Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              For large enterprises — automate workflows, unify data, and leverage analytics to drive strategic growth.
+            </p>
+            <a href="https://www.salesboom.com/editions/enterprise-edition.html" class="btn btn-color mt-auto">
+              View Enterprise <i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm border-0 text-center">
+          <div class="pt-4">
+            <i class="fa-solid fa-users fa-4x text-color mb-3"></i>
+          </div>
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title text-uppercase fw-bold">Team Edition</h5>
+            <p class="card-text flex-grow-1 text-muted">
+              Perfect for small teams starting with CRM — manage leads, track sales, and boost productivity with simplicity.
+            </p>
+            <a href="https://www.salesboom.com/editions/team-edition.html" class="btn btn-color mt-auto">
+           Discover Team<i class="fa-solid fa-arrow-right ms-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Section 5: RAG in Customer Support -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">From Ticket Deflection to Resolution Intelligence</h2>
+                <p class="section-subtitle">RAG delivers its fastest ROI in customer support by transforming how issues are resolved and how knowledge is leveraged.</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3 class="feature-title">Automated Resolution</h3>
+                        <p class="feature-description">
+                            The system automatically resolves common issues using live knowledge bases, historical case data, and current policies—without human intervention. For complex issues, it drafts detailed resolution paths for agents to review and send.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3 class="feature-title">Agent Copilot</h3>
+                        <p class="feature-description">
+                            As agents work on tickets, the AI surfaces previously solved cases, relevant documentation, and suggested next steps in real-time. Agents gain the collective intelligence of your entire support history.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-file-contract"></i>
+                        </div>
+                        <h3 class="feature-title">Contractual Grounding</h3>
+                        <p class="feature-description">
+                            When responding about warranties, SLAs, or terms of service, the AI grounds responses in actual contractual language—reducing liability and ensuring accuracy.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-level-up-alt"></i>
+                        </div>
+                        <h3 class="feature-title">Intelligent Escalation</h3>
+                        <p class="feature-description">
+                            The system automatically escalates when confidence thresholds aren't met, ensuring customers receive accurate information or human attention when AI isn't certain.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="stats-grid" style="margin-top: 60px;">
+                <div class="stat-card">
+                    <div class="stat-number">40-60%</div>
+                    <div class="stat-label">Reduction in handle time</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">30-45%</div>
+                    <div class="stat-label">Increase in first-call resolution</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">70%</div>
+                    <div class="stat-label">Reduction in escalations</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">3-5x</div>
+                    <div class="stat-label">Support capacity increase</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Enterprise Governance -->
+    <section class="content-section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">RAG Success Depends on Governance, Not Just Models</h2>
+                <p class="section-subtitle">The most powerful AI architecture fails without proper governance. Salesboom addresses the major enterprise risks that prevent AI adoption.</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-12 mx-auto">
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-user-shield"></i>
+                                </div>
+                                <h3 class="feature-title">Permission-Aware Retrieval</h3>
+                                <p class="feature-description">
+                                    Access control is enforced at every layer. If you can't access a document in the CRM, you can't retrieve it through AI. No post-filtering loopholes.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-lock"></i>
+                                </div>
+                                <h3 class="feature-title">PII Protection</h3>
+                                <p class="feature-description">
+                                    Field-level masking, private deployment options, complete audit logging, and data retention controls ensure sensitive data handling is built into the architecture.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <div class="feature-card">
+                                <div class="feature-icon">
+                          <i class="fa-solid fa-bell"></i>
+                                </div>
+                                <h3 class="feature-title">Hallucination Control</h3>
+                                <p class="feature-description">
+                                    Strict grounding instructions, source citation requirements, knowledge lifecycle management, and human review workflows prevent false information.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7: The Future - Agentic RAG -->
+    <section class="content-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Beyond Answering Questions to Executing Workflows</h2>
+                <p class="section-subtitle">The next evolution of RAG is agentic systems—AI that doesn't just answer questions but autonomously executes multi-step workflows within your CRM.</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-12 mx-auto">
+                    <div class="highlight-box">
+                        <div class="highlight-content">
+                            <h3 class="highlight-title text-white"><i class="fas fa-robot"></i> Salesboom is Architecturally Prepared</h3>
+                            <p class="highlight-text" style="margin-bottom: 25px;">
+                                <strong>Multi-Step Reasoning:</strong> AI agents that retrieve data, reason about next steps, and trigger actions across the CRM—like identifying at-risk accounts, pulling renewal history, drafting retention offers, and scheduling follow-ups.
+                            </p>
+                            <p class="highlight-text" style="margin-bottom: 25px;">
+                                <strong>ReAct Patterns:</strong> Implementing Reasoning and Acting loops where the AI iteratively gathers information, evaluates options, and takes actions until a workflow completes.
+                            </p>
+                            <p class="highlight-text" style="margin-bottom: 25px;">
+                                <strong>Human-in-the-Loop Controls:</strong> For sensitive operations like pricing approvals or contract amendments, the system pauses for human verification before executing final steps.
+                            </p>
+                            <p class="highlight-text">
+                                <strong>Cross-Functional Orchestration:</strong> Agents that coordinate across sales, service, and finance—automatically processing complex requests end-to-end.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 8: Why Salesboom -->
+    <section class="content-section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">The Salesboom Advantage in Intelligent CRM</h2>
+                <p class="section-subtitle">Not all RAG implementations are created equal. Salesboom's approach is distinguished by comprehensive, enterprise-grade capabilities.</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-layer-group"></i>
+                        </div>
+                        <h3 class="feature-title">RAG as Core Architecture</h3>
+                        <p class="feature-description">
+                            Unlike vendors bolting AI onto existing platforms, Salesboom architected RAG as the foundational intelligence layer from the ground up.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <h3 class="feature-title">22+ Years of CRM Expertise</h3>
+                        <p class="feature-description">
+                            Deep CRM domain knowledge ensures the AI understands CRM workflows, not just document retrieval. Experience matters.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-sync-alt"></i>
+                        </div>
+                        <h3 class="feature-title">Continuous Model Advancement</h3>
+                        <p class="feature-description">
+                            As LLM technology evolves, seamlessly integrate better models without requiring customer data migration or reconfiguration.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3 class="feature-title">Transparent, Explainable AI</h3>
+                        <p class="feature-description">
+                            Every AI decision can be traced to source documents. No black boxes, no "trust us" responses. Critical for regulated industries.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="feature-title">Enterprise-Grade Security</h3>
+                        <p class="feature-description">
+                            Built from day one for financial services, healthcare, and other highly regulated industries that cannot compromise on data governance.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <h3 class="feature-title">Economic Efficiency</h3>
+                        <p class="feature-description">
+                            RAG's architecture is inherently more cost-effective than fine-tuning approaches, with optimizations that further reduce operational costs.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="cta-title text-white">Experience the Power of RAG-Powered Intelligence</h2>
+                <p class="cta-description">
+                    See how Salesboom's Retrieval-Augmented Generation architecture transforms your CRM into an intelligent system that reasons with your live business data. Schedule a personalized demo to discover how RAG delivers accurate, secure, and permission-aware AI across your organization.
+                </p>
+                <div class="hero-buttons">
+                    <a href="https://www.salesboom.com/request-crm-demo.html" class="btn-hero btn-hero-primary">
+                        <i class="fas fa-calendar-check"></i> Schedule Demo
+                    </a>
+                    <a href="https://www.salesboom.com/crm_trial.html" class="btn-hero btn-hero-outline">
+                        <i class="fas fa-rocket"></i> Start Free Trial
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- Local Links -->
+<!-- Strategic CRM & Cloud Architecture Section -->
+<section class="container py-5">
+  <h2 class="text-center mb-5 text-color">
+    Strategic CRM, Cloud & AI Architecture Insights
+  </h2>
+
+  <div class="row g-4">
+
+    <!-- Card 1 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-sitemap text-color fa-2x mb-3"></i>
+        <h4>Build-to-Suit CRM Strategy</h4>
+        <p>
+          Learn how a
+          <a href="build-to-suit-crm-strategic-evolution.html" class="text-color fw-bold">
+            build-to-suit CRM approach
+          </a>
+          enables enterprises to evolve CRM systems aligned with long-term business strategy.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-cloud text-color fa-2x mb-3"></i>
+        <h4>Cloud CRM Platform as a Service</h4>
+        <p>
+          Discover how a
+          <a href="cloud-crm-platform-as-a-service.html" class="text-color fw-bold">
+            cloud CRM platform as a service
+          </a>
+          delivers scalability, flexibility, and faster innovation across teams.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-robot text-color fa-2x mb-3"></i>
+        <h4>Service as Software AI Agents</h4>
+        <p>
+          Explore how
+          <a href="service-as-software-ai-agents.html" class="text-color fw-bold">
+            service-as-software AI agents
+          </a>
+          automate enterprise services with intelligence, autonomy, and real-time execution.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-layer-group text-color fa-2x mb-3"></i>
+        <h4>Five Layers of Operational Excellence</h4>
+        <p>
+          Understand the
+          <a href="five-layers-operational-excellence.html" class="text-color fw-bold">
+            five-layer operational excellence model
+          </a>
+          for building resilient, scalable, and high-performance organizations.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-shield-halved text-color fa-2x mb-3"></i>
+        <h4>Canadian CRM Data Sovereignty</h4>
+        <p>
+          Learn how
+          <a href="canadian-crm-data-sovereignty.html" class="text-color fw-bold">
+            Canadian CRM data sovereignty
+          </a>
+          ensures compliance, security, and localized data governance for enterprises.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+<!-- Old content page -->
+<!-- Salesboom Products, Services & Guides Section -->
+<section class="container py-5">
+  <h2 class="text-center mb-5 text-color">
+    Salesboom Guides, Services & AI Products
+  </h2>
+
+  <div class="row g-4">
+
+    <!-- Card 1 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-question-circle text-color fa-2x mb-3"></i>
+        <h4>Why Salesboom?</h4>
+        <p>
+          Understand the core advantages and value of using
+          <a href="https://www.salesboom.com/products/why-salesboom.html" class="text-color fw-bold">
+            Salesboom
+          </a>
+          for your CRM, sales, and business growth needs.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-calculator text-color fa-2x mb-3"></i>
+        <h4>CRM Build vs Buy Cost Analysis</h4>
+        <p>
+          Explore the
+          <a href="https://www.salesboom.com/cloud-crm-guide/cloud-crm-guide/crm-build-vs-buy-cost-analysis.html" class="text-color fw-bold">
+            CRM build vs buy cost analysis
+          </a>
+          to make smarter investment decisions for your business.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-briefcase text-color fa-2x mb-3"></i>
+        <h4>Business CRM Consulting</h4>
+        <p>
+          Learn how
+          <a href="https://www.salesboom.com/services/business_crm_consulting_services.html" class="text-color fw-bold">
+            CRM consulting services
+          </a>
+          help tailor CRM strategy, tools, and adoption for your organization.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-rocket text-color fa-2x mb-3"></i>
+        <h4>FastTrack Services</h4>
+        <p>
+          Accelerate your CRM deployment and user success with
+          <a href="https://www.salesboom.com/services/fasttrack.html" class="text-color fw-bold">
+            FastTrack services
+          </a>
+          designed for rapid implementation and ROI.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-chalkboard-user text-color fa-2x mb-3"></i>
+        <h4>CRM Training</h4>
+        <p>
+          Improve adoption and performance with
+          <a href="https://www.salesboom.com/services/training.html" class="text-color fw-bold">
+            Salesboom training
+          </a>
+          for teams, administrators, and executives.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-chart-line text-color fa-2x mb-3"></i>
+        <h4>Sales Automation Content</h4>
+        <p>
+          Discover key strategies in
+          <a href="https://www.salesboom.com/sales-automation/sales_automation_content.html" class="text-color fw-bold">
+            sales automation
+          </a>
+          to streamline sales processes and boost productivity.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 7 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-robot text-color fa-2x mb-3"></i>
+        <h4>AI Work For You</h4>
+        <p>
+          Discover how
+          <a href="https://www.salesboom.com/products/new/AI-work-for-you.html" class="text-color fw-bold">
+            AI Work For You
+          </a>
+          automates daily tasks and enables teams to focus on strategic goals.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 8 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-people-arrows text-color fa-2x mb-3"></i>
+        <h4>Agentic Workforce</h4>
+        <p>
+          Explore the power of the
+          <a href="https://www.salesboom.com/products/new/Agentic-Workforce.html" class="text-color fw-bold">
+            Agentic Workforce
+          </a>
+          where AI-driven agents augment teams to execute workflows autonomously.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 9 -->
+    <div class="col-md-4">
+      <div class="card shadow-lg border-0 text-center p-4 h-100">
+        <i class="fa-solid fa-globe text-color fa-2x mb-3"></i>
+        <h4>AI People Economy</h4>
+        <p>
+          Learn how the
+          <a href="https://www.salesboom.com/products/new/AI-People-Economy.html" class="text-color fw-bold">
+            AI People Economy
+          </a>
+          redefines collaboration by combining human expertise with intelligent automation.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+    
+<!-- ====== Footer ====== -->
+<footer>
+  <div class="container">
+    <div class="row gy-4 text-md-start text-center">
+
+      <!-- Logo + Social -->
+  
+    
+    <!-- Logo + Social -->
+      <div class="col-lg-3 col-md-6">
+        <div class="footer-logo text-center">
+          <a href="https://www.salesboom.com/crm-live-demo.html">
+            <img src="https://www.salesboom.com/img/salesboom-logo-252x67.png" alt="Salesboom Logo">
+          </a>
+        </div>
+        <p class="mt-4 "><strong>Follow Us On Social Media:</strong></p>
+        <div class="social-icons text-center mb-4">
+          <a href="https://www.facebook.com/SBDC.CloudCRM" target="_blank"><img src="https://www.salesboom.com/img/social/facebook-circle.png" alt="Facebook"></a>
+          <a href="https://twitter.com/SalesboomCloud" target="_blank"><img src="Content/image/savexxx.png" style="border-radius: 50%;" alt="Twitter"></a>
+          <a href="https://www.youtube.com/cloudcrm" target="_blank"><img src="https://www.salesboom.com/img/social/youtube_circle.png" alt="YouTube"></a>
+          <a href="https://www.linkedin.com/in/crmsoftware" target="_blank"><img src="https://www.salesboom.com/img/social/linkedin_circle.png" alt="LinkedIn"></a>
+        </div>
+        <p class="mt-4 "><strong>Call Us Now At:</strong></p>
+        <p class="fw-bold fs-4 text-center text-color d-flex">
+          <i class="bi bi-telephone-fill me-2"></i>
+          <a href="tel:1.855.229.2043" class="text-color text-decoration-none pt-2">1.855.229.2043</a>
+        </p>
+      </div>
+
+
+
+      <!-- New To Salesboom -->
+      <div class="col-lg-3 col-md-6">
+        <h5>New To Salesboom?</h5>
+        <a href="https://www.salesboom.com/about-us.html">About Us</a>
+        <a href="https://www.salesboom.com/about-us.html#WhatIsSalesboom">Company</a>
+        <a href="https://www.salesboom.com/about-us.html#ourStory">Our Story</a>
+        <a href="https://www.salesboom.com/about-us.html#ourMission">Our Mission</a>
+        <a href="https://www.salesboom.com/editions/">Our Pricing</a>
+
+        <h5 class="mt-4">New To CRM?</h5>
+        <a href="https://www.salesboom.com/whitepapers/">White Papers</a>
+        <a href="https://www.salesboom.com/crm_supportcenter/overview/index.html">Support Center</a>
+        <a href="https://www.salesboom.com/products/crm-product-data-sheets.html">Data Sheets</a>
+        <a href="https://www.salesboom.com/crm_supportcenter/education/crm-glossary.html">CRM Glossary</a>
+      </div>
+
+      <!-- Our Editions -->
+      <div class="col-lg-3 col-md-6">
+        <h5>Our Editions</h5>
+        <a href="https://www.salesboom.com/editions/team-edition.html">Team Edition</a>
+        <a href="https://www.salesboom.com/editions/professional-edition.html">Professional Edition</a>
+        <a href="https://www.salesboom.com/editions/enterprise-edition.html">Enterprise Edition</a>
+        <a href="https://www.salesboom.com/apps/sales.html">Sales</a>
+        <a href="https://www.salesboom.com/apps/fast-track.html">Fast Track</a>
+        <a href="https://www.salesboom.com/apps/marketing.html">Marketing</a>
+        <a href="https://www.salesboom.com/apps/support.html">Support</a>
+        <a href="https://www.salesboom.com/apps/developer.html">Platform</a>
+        <a href="https://www.salesboom.com/apps/mobile.html">Mobile</a>
+      </div>
+
+      <!-- Popular Links -->
+      <div class="col-lg-3 col-md-6">
+        <h5>Popular Links</h5>
+        <a href="https://www.salesboom.com/sales/sales-management-software.html">Sales Management</a>
+        <a href="https://www.salesboom.com/crm/crm-software/hosted-sfa-software.html">Hosted SFA CRM Software</a>
+        <a href="https://www.salesboom.com/crm/crm-software/crm-marketing.html">CRM Marketing</a>
+        <a href="https://www.salesboom.com/crm/crm-software/inexpensive-crm-software.html">Inexpensive CRM</a>
+        <a href="https://www.salesboom.com/crm/crm-software/best-crm-software.html">Best CRM Solutions</a>
+        <a href="https://www.salesboom.com/products/industry-solutions.html">Industries</a>
+        <a href="https://www.salesboom.com/salesboom_salesforce_compared/9-reasons-to-leave-salesforce.html">9 Reasons to Leave Salesforce.com</a>
+        <a href="https://www.salesboom.com/salesforce.com-crm-product-limitations.html">Salesforce.com Limitations</a>
+        <a href="https://www.salesboom.com/whitepapers/Choosing-CRM/microsoft-dynamics-vs-salesforce-crm.html">Microsoft Dynamics VS Salesforce.com</a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer Bottom -->
+  <div class="footer-bottom mt-4">
+    <div class="container">
+      <div class="d-flex flex-wrap justify-content-center align-items-center gap-3 mb-3">
+        <a href="https://www.salesboom.com/products/index.html" class="text-white">Products</a>
+        <span class="text-white">|</span>
+        <a href="https://www.salesboom.com/products/editions.html" class="text-white">Pricing</a>
+        <span class="text-white">|</span>
+        <a href="https://www.salesboom.com/contact-us.html" class="text-white">Contact Us</a>
+        <span class="text-white">|</span>
+        <a href="https://www.salesboom.com/crm-live-demo.html" class="text-white">Schedule A Demo</a>
+      </div>
+      <div class="text-center">
+        <p class="mb-0 text-white">
+          &copy; 2025 Salesboom.com. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+
+
+
+<!-- Common JavaScript -->
+<script src="content/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+
+    <script>
+        // Loading Screen
+        window.addEventListener('load', function() {
+            const loadingScreen = document.getElementById('loading-screen');
+            setTimeout(function() {
+                loadingScreen.classList.add('hidden');
+            }, 800);
+        });
+        
+        // Scroll to Top Button
+        const scrollTopBtn = document.getElementById('scroll-top');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                scrollTopBtn.classList.add('show');
+            } else {
+                scrollTopBtn.classList.remove('show');
+            }
+        });
+        
+        scrollTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
